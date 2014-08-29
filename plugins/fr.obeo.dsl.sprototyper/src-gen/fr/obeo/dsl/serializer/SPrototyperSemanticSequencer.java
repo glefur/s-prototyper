@@ -180,7 +180,7 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     (eClass=STRING expression=SPExpression canCreate?='create'? subElements+=TableElement*)
+	 *     (creatable?='creatable'? recursive?='recursive'? eClass=STRING expression=SPExpression subElements+=TableElement*)
 	 */
 	protected void sequence_TableElement(EObject context, TableElement semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

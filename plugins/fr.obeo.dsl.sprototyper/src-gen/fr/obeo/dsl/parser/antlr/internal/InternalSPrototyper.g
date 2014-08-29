@@ -482,15 +482,45 @@ ruleTableElement returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='element' 
+((
+(
+		lv_creatable_0_0=	'creatable' 
     {
-    	newLeafNode(otherlv_0, grammarAccess.getTableElementAccess().getElementKeyword_0());
+        newLeafNode(lv_creatable_0_0, grammarAccess.getTableElementAccess().getCreatableCreatableKeyword_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getTableElementRule());
+	        }
+       		setWithLastConsumed($current, "creatable", true, "creatable");
+	    }
+
+)
+)?(
+(
+		lv_recursive_1_0=	'recursive' 
+    {
+        newLeafNode(lv_recursive_1_0, grammarAccess.getTableElementAccess().getRecursiveRecursiveKeyword_1_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getTableElementRule());
+	        }
+       		setWithLastConsumed($current, "recursive", true, "recursive");
+	    }
+
+)
+)?	otherlv_2='element' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getTableElementAccess().getElementKeyword_2());
     }
 (
 (
-		lv_eClass_1_0=RULE_STRING
+		lv_eClass_3_0=RULE_STRING
 		{
-			newLeafNode(lv_eClass_1_0, grammarAccess.getTableElementAccess().getEClassSTRINGTerminalRuleCall_1_0()); 
+			newLeafNode(lv_eClass_3_0, grammarAccess.getTableElementAccess().getEClassSTRINGTerminalRuleCall_3_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -499,73 +529,58 @@ ruleTableElement returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"eClass",
-        		lv_eClass_1_0, 
+        		lv_eClass_3_0, 
         		"STRING");
 	    }
 
 )
-)	otherlv_2='accessibleThrough' 
+)	otherlv_4='accessibleThrough' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getTableElementAccess().getAccessibleThroughKeyword_2());
+    	newLeafNode(otherlv_4, grammarAccess.getTableElementAccess().getAccessibleThroughKeyword_4());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getTableElementAccess().getExpressionSPExpressionParserRuleCall_3_0()); 
+	        newCompositeNode(grammarAccess.getTableElementAccess().getExpressionSPExpressionParserRuleCall_5_0()); 
 	    }
-		lv_expression_3_0=ruleSPExpression		{
+		lv_expression_5_0=ruleSPExpression		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getTableElementRule());
 	        }
        		set(
        			$current, 
        			"expression",
-        		lv_expression_3_0, 
+        		lv_expression_5_0, 
         		"SPExpression");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)(
-(
-		lv_canCreate_4_0=	'create' 
+)(	otherlv_6='{' 
     {
-        newLeafNode(lv_canCreate_4_0, grammarAccess.getTableElementAccess().getCanCreateCreateKeyword_4_0());
-    }
- 
-	    {
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getTableElementRule());
-	        }
-       		setWithLastConsumed($current, "canCreate", true, "create");
-	    }
-
-)
-)?(	otherlv_5='{' 
-    {
-    	newLeafNode(otherlv_5, grammarAccess.getTableElementAccess().getLeftCurlyBracketKeyword_5_0());
+    	newLeafNode(otherlv_6, grammarAccess.getTableElementAccess().getLeftCurlyBracketKeyword_6_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getTableElementAccess().getSubElementsTableElementParserRuleCall_5_1_0()); 
+	        newCompositeNode(grammarAccess.getTableElementAccess().getSubElementsTableElementParserRuleCall_6_1_0()); 
 	    }
-		lv_subElements_6_0=ruleTableElement		{
+		lv_subElements_7_0=ruleTableElement		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getTableElementRule());
 	        }
        		add(
        			$current, 
        			"subElements",
-        		lv_subElements_6_0, 
+        		lv_subElements_7_0, 
         		"TableElement");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)+	otherlv_7='}' 
+)+	otherlv_8='}' 
     {
-    	newLeafNode(otherlv_7, grammarAccess.getTableElementAccess().getRightCurlyBracketKeyword_5_2());
+    	newLeafNode(otherlv_8, grammarAccess.getTableElementAccess().getRightCurlyBracketKeyword_6_2());
     }
 )?)
 ;

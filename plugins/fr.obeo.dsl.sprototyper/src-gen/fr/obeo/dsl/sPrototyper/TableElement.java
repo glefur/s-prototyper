@@ -14,9 +14,10 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link fr.obeo.dsl.sPrototyper.TableElement#isCreatable <em>Creatable</em>}</li>
+ *   <li>{@link fr.obeo.dsl.sPrototyper.TableElement#isRecursive <em>Recursive</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.TableElement#getEClass <em>EClass</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.TableElement#getExpression <em>Expression</em>}</li>
- *   <li>{@link fr.obeo.dsl.sPrototyper.TableElement#isCanCreate <em>Can Create</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.TableElement#getSubElements <em>Sub Elements</em>}</li>
  * </ul>
  * </p>
@@ -27,6 +28,58 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface TableElement extends EObject
 {
+  /**
+   * Returns the value of the '<em><b>Creatable</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Creatable</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Creatable</em>' attribute.
+   * @see #setCreatable(boolean)
+   * @see fr.obeo.dsl.sPrototyper.SPrototyperPackage#getTableElement_Creatable()
+   * @model
+   * @generated
+   */
+  boolean isCreatable();
+
+  /**
+   * Sets the value of the '{@link fr.obeo.dsl.sPrototyper.TableElement#isCreatable <em>Creatable</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Creatable</em>' attribute.
+   * @see #isCreatable()
+   * @generated
+   */
+  void setCreatable(boolean value);
+
+  /**
+   * Returns the value of the '<em><b>Recursive</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Recursive</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Recursive</em>' attribute.
+   * @see #setRecursive(boolean)
+   * @see fr.obeo.dsl.sPrototyper.SPrototyperPackage#getTableElement_Recursive()
+   * @model
+   * @generated
+   */
+  boolean isRecursive();
+
+  /**
+   * Sets the value of the '{@link fr.obeo.dsl.sPrototyper.TableElement#isRecursive <em>Recursive</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Recursive</em>' attribute.
+   * @see #isRecursive()
+   * @generated
+   */
+  void setRecursive(boolean value);
+
   /**
    * Returns the value of the '<em><b>EClass</b></em>' attribute.
    * <!-- begin-user-doc -->
@@ -78,32 +131,6 @@ public interface TableElement extends EObject
    * @generated
    */
   void setExpression(SPExpression value);
-
-  /**
-   * Returns the value of the '<em><b>Can Create</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Can Create</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Can Create</em>' attribute.
-   * @see #setCanCreate(boolean)
-   * @see fr.obeo.dsl.sPrototyper.SPrototyperPackage#getTableElement_CanCreate()
-   * @model
-   * @generated
-   */
-  boolean isCanCreate();
-
-  /**
-   * Sets the value of the '{@link fr.obeo.dsl.sPrototyper.TableElement#isCanCreate <em>Can Create</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Can Create</em>' attribute.
-   * @see #isCanCreate()
-   * @generated
-   */
-  void setCanCreate(boolean value);
 
   /**
    * Returns the value of the '<em><b>Sub Elements</b></em>' containment reference list.

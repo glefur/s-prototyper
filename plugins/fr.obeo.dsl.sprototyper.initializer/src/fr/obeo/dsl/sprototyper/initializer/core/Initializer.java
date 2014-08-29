@@ -6,11 +6,15 @@ package fr.obeo.dsl.sprototyper.initializer.core;
 import java.io.IOException;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Map;
 
 import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.xmi.XMLOptions;
+import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.edit.command.CommandParameter;
 import org.eclipse.emf.edit.command.CreateChildCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
@@ -20,9 +24,11 @@ import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import com.google.common.base.Splitter;
 import com.google.common.base.Strings;
 import com.google.common.collect.Iterables;
+import com.google.common.collect.Maps;
 
 import fr.obeo.dsl.sPrototyper.AcceleoExpression;
 import fr.obeo.dsl.sPrototyper.FeatureRef;
+import fr.obeo.dsl.sPrototyper.MetamodelRef;
 import fr.obeo.dsl.sPrototyper.SPExpression;
 import fr.obeo.dsl.sPrototyper.SPRepresentation;
 import fr.obeo.dsl.sPrototyper.SPTable;
@@ -66,7 +72,10 @@ public class Initializer {
 			Viewpoint viewpoint = createViewpoint(spViewpoint);
 			group.getOwnedViewpoints().add(viewpoint);
 		}
-		resource.save(Collections.emptyMap());
+		Map<Object, Object> options = Maps.newHashMap();
+		options.put(XMLResource.OPTION_ENCODING, "UTF-8");
+		
+		resource.save(options);
 
 	}
 
@@ -100,6 +109,14 @@ public class Initializer {
 		if (!Strings.isNullOrEmpty(spTable.getTitle())) {
 			editionTableDescription.setTitleExpression(spTable.getTitle());
 		}
+		for (MetamodelRef mmRef : spTable.getMetamodels()) {
+			EPackage ePackage = EPackage.Registry.INSTANCE.getEPackage(mmRef.getMetamodel());
+			if (ePackage != null) {
+				editionTableDescription.getMetamodel().add(ePackage);
+			} else {
+				//TODO log
+			}
+		}
 		for (TableElement element : spTable.getElements()) {
 			LineMapping lm = createLineMapping(spViewpoint, spTable, element, editionTableDescription);
 			editionTableDescription.getOwnedLineMappings().add(lm);
@@ -121,8 +138,11 @@ public class Initializer {
 		String mappingName = representationQualifier  + ".line." + elementName;
 		lm.setName(mappingName);
 		lm.setSemanticCandidatesExpression(generateVPExpression(element.getExpression()));
+		if (element.isRecursive()) {
+			lm.getReusedSubLines().add(lm);
+		}
 
-		if (element.isCanCreate()) {
+		if (element.isCreatable()) {
 			if (element.getExpression() instanceof FeatureRef) {
 				CommandParameter creationParameter = null;
 				IEditingDomainItemProvider provider = (IEditingDomainItemProvider)((AdapterFactoryEditingDomain)editingDomain).getAdapterFactory().adapt(parent, IEditingDomainItemProvider.class);

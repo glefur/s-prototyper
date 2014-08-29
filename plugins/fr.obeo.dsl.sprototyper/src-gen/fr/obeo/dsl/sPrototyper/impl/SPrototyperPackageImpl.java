@@ -366,7 +366,7 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getTableElement_EClass()
+  public EAttribute getTableElement_Creatable()
   {
     return (EAttribute)tableElementEClass.getEStructuralFeatures().get(0);
   }
@@ -376,9 +376,9 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getTableElement_Expression()
+  public EAttribute getTableElement_Recursive()
   {
-    return (EReference)tableElementEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)tableElementEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -386,7 +386,7 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getTableElement_CanCreate()
+  public EAttribute getTableElement_EClass()
   {
     return (EAttribute)tableElementEClass.getEStructuralFeatures().get(2);
   }
@@ -396,9 +396,19 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getTableElement_SubElements()
+  public EReference getTableElement_Expression()
   {
     return (EReference)tableElementEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTableElement_SubElements()
+  {
+    return (EReference)tableElementEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -564,9 +574,10 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
     createEReference(spTableEClass, SP_TABLE__PROPERTIES);
 
     tableElementEClass = createEClass(TABLE_ELEMENT);
+    createEAttribute(tableElementEClass, TABLE_ELEMENT__CREATABLE);
+    createEAttribute(tableElementEClass, TABLE_ELEMENT__RECURSIVE);
     createEAttribute(tableElementEClass, TABLE_ELEMENT__ECLASS);
     createEReference(tableElementEClass, TABLE_ELEMENT__EXPRESSION);
-    createEAttribute(tableElementEClass, TABLE_ELEMENT__CAN_CREATE);
     createEReference(tableElementEClass, TABLE_ELEMENT__SUB_ELEMENTS);
 
     tablePropertyEClass = createEClass(TABLE_PROPERTY);
@@ -645,9 +656,10 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
     initEReference(getSPTable_Properties(), this.getTableProperty(), null, "properties", null, 0, -1, SPTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(tableElementEClass, TableElement.class, "TableElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTableElement_Creatable(), ecorePackage.getEBoolean(), "creatable", null, 0, 1, TableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTableElement_Recursive(), ecorePackage.getEBoolean(), "recursive", null, 0, 1, TableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTableElement_EClass(), ecorePackage.getEString(), "eClass", null, 0, 1, TableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTableElement_Expression(), this.getSPExpression(), null, "expression", null, 0, 1, TableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTableElement_CanCreate(), ecorePackage.getEBoolean(), "canCreate", null, 0, 1, TableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTableElement_SubElements(), this.getTableElement(), null, "subElements", null, 0, -1, TableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(tablePropertyEClass, TableProperty.class, "TableProperty", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

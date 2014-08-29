@@ -29,9 +29,10 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link fr.obeo.dsl.sPrototyper.impl.TableElementImpl#isCreatable <em>Creatable</em>}</li>
+ *   <li>{@link fr.obeo.dsl.sPrototyper.impl.TableElementImpl#isRecursive <em>Recursive</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.impl.TableElementImpl#getEClass <em>EClass</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.impl.TableElementImpl#getExpression <em>Expression</em>}</li>
- *   <li>{@link fr.obeo.dsl.sPrototyper.impl.TableElementImpl#isCanCreate <em>Can Create</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.impl.TableElementImpl#getSubElements <em>Sub Elements</em>}</li>
  * </ul>
  * </p>
@@ -40,6 +41,46 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class TableElementImpl extends MinimalEObjectImpl.Container implements TableElement
 {
+  /**
+   * The default value of the '{@link #isCreatable() <em>Creatable</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isCreatable()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean CREATABLE_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isCreatable() <em>Creatable</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isCreatable()
+   * @generated
+   * @ordered
+   */
+  protected boolean creatable = CREATABLE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #isRecursive() <em>Recursive</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isRecursive()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean RECURSIVE_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isRecursive() <em>Recursive</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isRecursive()
+   * @generated
+   * @ordered
+   */
+  protected boolean recursive = RECURSIVE_EDEFAULT;
+
   /**
    * The default value of the '{@link #getEClass() <em>EClass</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -71,26 +112,6 @@ public class TableElementImpl extends MinimalEObjectImpl.Container implements Ta
   protected SPExpression expression;
 
   /**
-   * The default value of the '{@link #isCanCreate() <em>Can Create</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isCanCreate()
-   * @generated
-   * @ordered
-   */
-  protected static final boolean CAN_CREATE_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isCanCreate() <em>Can Create</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isCanCreate()
-   * @generated
-   * @ordered
-   */
-  protected boolean canCreate = CAN_CREATE_EDEFAULT;
-
-  /**
    * The cached value of the '{@link #getSubElements() <em>Sub Elements</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -119,6 +140,52 @@ public class TableElementImpl extends MinimalEObjectImpl.Container implements Ta
   protected EClass eStaticClass()
   {
     return SPrototyperPackage.Literals.TABLE_ELEMENT;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public boolean isCreatable()
+  {
+    return creatable;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setCreatable(boolean newCreatable)
+  {
+    boolean oldCreatable = creatable;
+    creatable = newCreatable;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SPrototyperPackage.TABLE_ELEMENT__CREATABLE, oldCreatable, creatable));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public boolean isRecursive()
+  {
+    return recursive;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setRecursive(boolean newRecursive)
+  {
+    boolean oldRecursive = recursive;
+    recursive = newRecursive;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SPrototyperPackage.TABLE_ELEMENT__RECURSIVE, oldRecursive, recursive));
   }
 
   /**
@@ -197,29 +264,6 @@ public class TableElementImpl extends MinimalEObjectImpl.Container implements Ta
    * <!-- end-user-doc -->
    * @generated
    */
-  public boolean isCanCreate()
-  {
-    return canCreate;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setCanCreate(boolean newCanCreate)
-  {
-    boolean oldCanCreate = canCreate;
-    canCreate = newCanCreate;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SPrototyperPackage.TABLE_ELEMENT__CAN_CREATE, oldCanCreate, canCreate));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EList<TableElement> getSubElements()
   {
     if (subElements == null)
@@ -257,12 +301,14 @@ public class TableElementImpl extends MinimalEObjectImpl.Container implements Ta
   {
     switch (featureID)
     {
+      case SPrototyperPackage.TABLE_ELEMENT__CREATABLE:
+        return isCreatable();
+      case SPrototyperPackage.TABLE_ELEMENT__RECURSIVE:
+        return isRecursive();
       case SPrototyperPackage.TABLE_ELEMENT__ECLASS:
         return getEClass();
       case SPrototyperPackage.TABLE_ELEMENT__EXPRESSION:
         return getExpression();
-      case SPrototyperPackage.TABLE_ELEMENT__CAN_CREATE:
-        return isCanCreate();
       case SPrototyperPackage.TABLE_ELEMENT__SUB_ELEMENTS:
         return getSubElements();
     }
@@ -280,14 +326,17 @@ public class TableElementImpl extends MinimalEObjectImpl.Container implements Ta
   {
     switch (featureID)
     {
+      case SPrototyperPackage.TABLE_ELEMENT__CREATABLE:
+        setCreatable((Boolean)newValue);
+        return;
+      case SPrototyperPackage.TABLE_ELEMENT__RECURSIVE:
+        setRecursive((Boolean)newValue);
+        return;
       case SPrototyperPackage.TABLE_ELEMENT__ECLASS:
         setEClass((String)newValue);
         return;
       case SPrototyperPackage.TABLE_ELEMENT__EXPRESSION:
         setExpression((SPExpression)newValue);
-        return;
-      case SPrototyperPackage.TABLE_ELEMENT__CAN_CREATE:
-        setCanCreate((Boolean)newValue);
         return;
       case SPrototyperPackage.TABLE_ELEMENT__SUB_ELEMENTS:
         getSubElements().clear();
@@ -307,14 +356,17 @@ public class TableElementImpl extends MinimalEObjectImpl.Container implements Ta
   {
     switch (featureID)
     {
+      case SPrototyperPackage.TABLE_ELEMENT__CREATABLE:
+        setCreatable(CREATABLE_EDEFAULT);
+        return;
+      case SPrototyperPackage.TABLE_ELEMENT__RECURSIVE:
+        setRecursive(RECURSIVE_EDEFAULT);
+        return;
       case SPrototyperPackage.TABLE_ELEMENT__ECLASS:
         setEClass(ECLASS_EDEFAULT);
         return;
       case SPrototyperPackage.TABLE_ELEMENT__EXPRESSION:
         setExpression((SPExpression)null);
-        return;
-      case SPrototyperPackage.TABLE_ELEMENT__CAN_CREATE:
-        setCanCreate(CAN_CREATE_EDEFAULT);
         return;
       case SPrototyperPackage.TABLE_ELEMENT__SUB_ELEMENTS:
         getSubElements().clear();
@@ -333,12 +385,14 @@ public class TableElementImpl extends MinimalEObjectImpl.Container implements Ta
   {
     switch (featureID)
     {
+      case SPrototyperPackage.TABLE_ELEMENT__CREATABLE:
+        return creatable != CREATABLE_EDEFAULT;
+      case SPrototyperPackage.TABLE_ELEMENT__RECURSIVE:
+        return recursive != RECURSIVE_EDEFAULT;
       case SPrototyperPackage.TABLE_ELEMENT__ECLASS:
         return ECLASS_EDEFAULT == null ? eClass != null : !ECLASS_EDEFAULT.equals(eClass);
       case SPrototyperPackage.TABLE_ELEMENT__EXPRESSION:
         return expression != null;
-      case SPrototyperPackage.TABLE_ELEMENT__CAN_CREATE:
-        return canCreate != CAN_CREATE_EDEFAULT;
       case SPrototyperPackage.TABLE_ELEMENT__SUB_ELEMENTS:
         return subElements != null && !subElements.isEmpty();
     }
@@ -356,10 +410,12 @@ public class TableElementImpl extends MinimalEObjectImpl.Container implements Ta
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (eClass: ");
+    result.append(" (creatable: ");
+    result.append(creatable);
+    result.append(", recursive: ");
+    result.append(recursive);
+    result.append(", eClass: ");
     result.append(eClass);
-    result.append(", canCreate: ");
-    result.append(canCreate);
     result.append(')');
     return result.toString();
   }

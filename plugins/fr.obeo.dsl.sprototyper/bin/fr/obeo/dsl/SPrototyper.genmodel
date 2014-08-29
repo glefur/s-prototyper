@@ -29,9 +29,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//SPTable/properties"/>
     </genClasses>
     <genClasses ecoreClass="SPrototyper.ecore#//TableElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//TableElement/creatable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//TableElement/recursive"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//TableElement/eClass"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//TableElement/expression"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//TableElement/canCreate"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//TableElement/subElements"/>
     </genClasses>
     <genClasses ecoreClass="SPrototyper.ecore#//TableProperty">

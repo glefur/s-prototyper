@@ -269,13 +269,31 @@ public interface SPrototyperPackage extends EPackage
   int TABLE_ELEMENT = 4;
 
   /**
+   * The feature id for the '<em><b>Creatable</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TABLE_ELEMENT__CREATABLE = 0;
+
+  /**
+   * The feature id for the '<em><b>Recursive</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TABLE_ELEMENT__RECURSIVE = 1;
+
+  /**
    * The feature id for the '<em><b>EClass</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TABLE_ELEMENT__ECLASS = 0;
+  int TABLE_ELEMENT__ECLASS = 2;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -284,16 +302,7 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TABLE_ELEMENT__EXPRESSION = 1;
-
-  /**
-   * The feature id for the '<em><b>Can Create</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TABLE_ELEMENT__CAN_CREATE = 2;
+  int TABLE_ELEMENT__EXPRESSION = 3;
 
   /**
    * The feature id for the '<em><b>Sub Elements</b></em>' containment reference list.
@@ -302,7 +311,7 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TABLE_ELEMENT__SUB_ELEMENTS = 3;
+  int TABLE_ELEMENT__SUB_ELEMENTS = 4;
 
   /**
    * The number of structural features of the '<em>Table Element</em>' class.
@@ -311,7 +320,7 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TABLE_ELEMENT_FEATURE_COUNT = 4;
+  int TABLE_ELEMENT_FEATURE_COUNT = 5;
 
   /**
    * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.TablePropertyImpl <em>Table Property</em>}' class.
@@ -705,6 +714,28 @@ public interface SPrototyperPackage extends EPackage
   EClass getTableElement();
 
   /**
+   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.TableElement#isCreatable <em>Creatable</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Creatable</em>'.
+   * @see fr.obeo.dsl.sPrototyper.TableElement#isCreatable()
+   * @see #getTableElement()
+   * @generated
+   */
+  EAttribute getTableElement_Creatable();
+
+  /**
+   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.TableElement#isRecursive <em>Recursive</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Recursive</em>'.
+   * @see fr.obeo.dsl.sPrototyper.TableElement#isRecursive()
+   * @see #getTableElement()
+   * @generated
+   */
+  EAttribute getTableElement_Recursive();
+
+  /**
    * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.TableElement#getEClass <em>EClass</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -725,17 +756,6 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    */
   EReference getTableElement_Expression();
-
-  /**
-   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.TableElement#isCanCreate <em>Can Create</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Can Create</em>'.
-   * @see fr.obeo.dsl.sPrototyper.TableElement#isCanCreate()
-   * @see #getTableElement()
-   * @generated
-   */
-  EAttribute getTableElement_CanCreate();
 
   /**
    * Returns the meta object for the containment reference list '{@link fr.obeo.dsl.sPrototyper.TableElement#getSubElements <em>Sub Elements</em>}'.
@@ -1049,6 +1069,22 @@ public interface SPrototyperPackage extends EPackage
     EClass TABLE_ELEMENT = eINSTANCE.getTableElement();
 
     /**
+     * The meta object literal for the '<em><b>Creatable</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TABLE_ELEMENT__CREATABLE = eINSTANCE.getTableElement_Creatable();
+
+    /**
+     * The meta object literal for the '<em><b>Recursive</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TABLE_ELEMENT__RECURSIVE = eINSTANCE.getTableElement_Recursive();
+
+    /**
      * The meta object literal for the '<em><b>EClass</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1063,14 +1099,6 @@ public interface SPrototyperPackage extends EPackage
      * @generated
      */
     EReference TABLE_ELEMENT__EXPRESSION = eINSTANCE.getTableElement_Expression();
-
-    /**
-     * The meta object literal for the '<em><b>Can Create</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TABLE_ELEMENT__CAN_CREATE = eINSTANCE.getTableElement_CanCreate();
 
     /**
      * The meta object literal for the '<em><b>Sub Elements</b></em>' containment reference list feature.

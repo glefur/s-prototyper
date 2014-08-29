@@ -47,7 +47,7 @@ public class SPrototyperParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSPTableAccess().getGroup_3(), "rule__SPTable__Group_3__0");
 					put(grammarAccess.getSPTableAccess().getGroup_4(), "rule__SPTable__Group_4__0");
 					put(grammarAccess.getTableElementAccess().getGroup(), "rule__TableElement__Group__0");
-					put(grammarAccess.getTableElementAccess().getGroup_5(), "rule__TableElement__Group_5__0");
+					put(grammarAccess.getTableElementAccess().getGroup_6(), "rule__TableElement__Group_6__0");
 					put(grammarAccess.getTablePropertyAccess().getGroup(), "rule__TableProperty__Group__0");
 					put(grammarAccess.getTablePropertyAccess().getGroup_2(), "rule__TableProperty__Group_2__0");
 					put(grammarAccess.getTablePropertyAccess().getGroup_3(), "rule__TableProperty__Group_3__0");
@@ -69,10 +69,11 @@ public class SPrototyperParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSPTableAccess().getRootAssignment_7(), "rule__SPTable__RootAssignment_7");
 					put(grammarAccess.getSPTableAccess().getElementsAssignment_8(), "rule__SPTable__ElementsAssignment_8");
 					put(grammarAccess.getSPTableAccess().getPropertiesAssignment_9(), "rule__SPTable__PropertiesAssignment_9");
-					put(grammarAccess.getTableElementAccess().getEClassAssignment_1(), "rule__TableElement__EClassAssignment_1");
-					put(grammarAccess.getTableElementAccess().getExpressionAssignment_3(), "rule__TableElement__ExpressionAssignment_3");
-					put(grammarAccess.getTableElementAccess().getCanCreateAssignment_4(), "rule__TableElement__CanCreateAssignment_4");
-					put(grammarAccess.getTableElementAccess().getSubElementsAssignment_5_1(), "rule__TableElement__SubElementsAssignment_5_1");
+					put(grammarAccess.getTableElementAccess().getCreatableAssignment_0(), "rule__TableElement__CreatableAssignment_0");
+					put(grammarAccess.getTableElementAccess().getRecursiveAssignment_1(), "rule__TableElement__RecursiveAssignment_1");
+					put(grammarAccess.getTableElementAccess().getEClassAssignment_3(), "rule__TableElement__EClassAssignment_3");
+					put(grammarAccess.getTableElementAccess().getExpressionAssignment_5(), "rule__TableElement__ExpressionAssignment_5");
+					put(grammarAccess.getTableElementAccess().getSubElementsAssignment_6_1(), "rule__TableElement__SubElementsAssignment_6_1");
 					put(grammarAccess.getTablePropertyAccess().getFeatureAssignment_1(), "rule__TableProperty__FeatureAssignment_1");
 					put(grammarAccess.getTablePropertyAccess().getLabelAssignment_2_1(), "rule__TableProperty__LabelAssignment_2_1");
 					put(grammarAccess.getTablePropertyAccess().getExpressionAssignment_3_1(), "rule__TableProperty__ExpressionAssignment_3_1");

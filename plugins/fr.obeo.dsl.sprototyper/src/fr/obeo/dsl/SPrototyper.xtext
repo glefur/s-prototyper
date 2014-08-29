@@ -33,7 +33,7 @@ SPTable:
 ;
 
 TableElement:
-	'element' eClass=STRING 'accessibleThrough' expression=SPExpression (canCreate ?= 'create')? ('{'
+	(creatable ?= 'creatable')? (recursive ?= 'recursive')? 'element' eClass=STRING 'accessibleThrough' expression=SPExpression ('{'
 		subElements +=TableElement+
 	'}')?
 ;

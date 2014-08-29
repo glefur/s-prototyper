@@ -28,10 +28,11 @@
         eType="#//TableProperty" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TableElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="creatable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="recursive" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="eClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//SPExpression"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="canCreate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="subElements" upperBound="-1"
         eType="#//TableElement" containment="true"/>
   </eClassifiers>

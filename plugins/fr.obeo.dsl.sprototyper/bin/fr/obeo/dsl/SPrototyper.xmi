@@ -103,6 +103,12 @@
         <classifier xsi:type="ecore:EClass" href="http://www.obeo.fr/dsl/SPrototyper#//TableElement"/>
       </type>
       <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="creatable" operator="?=">
+          <terminal xsi:type="xtext:Keyword" value="creatable"/>
+        </elements>
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="recursive" operator="?=">
+          <terminal xsi:type="xtext:Keyword" value="recursive"/>
+        </elements>
         <elements xsi:type="xtext:Keyword" value="element"/>
         <elements xsi:type="xtext:Assignment" feature="eClass" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
@@ -110,9 +116,6 @@
         <elements xsi:type="xtext:Keyword" value="accessibleThrough"/>
         <elements xsi:type="xtext:Assignment" feature="expression" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.6"/>
-        </elements>
-        <elements xsi:type="xtext:Assignment" cardinality="?" feature="canCreate" operator="?=">
-          <terminal xsi:type="xtext:Keyword" value="create"/>
         </elements>
         <elements xsi:type="xtext:Group" cardinality="?">
           <elements xsi:type="xtext:Keyword" value="{"/>
