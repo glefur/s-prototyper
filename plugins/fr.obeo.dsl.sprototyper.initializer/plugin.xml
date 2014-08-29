@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            id="fr.obeo.dsl.sprototyper.initializer.contribution1"
+            nameFilter="*.sproto"
+            objectClass="org.eclipse.core.resources.IFile">
+         <menu
+               label="S-Prototyper"
+               path="additions"
+               id="fr.obeo.dsl.sprototyper.initializer.menu1">
+            <separator
+                  name="group1">
+            </separator>
+         </menu>
+         <action
+               label="Initialize ODesign"
+               class="fr.obeo.dsl.sprototyper.initializer.actions.InitializerAction"
+               menubarPath="fr.obeo.dsl.sprototyper.initializer.menu1/group1"
+               enablesFor="1"
+               id="fr.obeo.dsl.sprototyper.initializer.newAction">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>

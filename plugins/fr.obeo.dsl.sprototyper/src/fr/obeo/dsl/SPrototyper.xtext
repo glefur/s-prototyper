@@ -1,0 +1,67 @@
+grammar fr.obeo.dsl.SPrototyper with org.eclipse.xtext.common.Terminals
+
+generate sPrototyper "http://www.obeo.fr/dsl/SPrototyper"
+
+SPrototyper:
+	'proto' name=ID '{'
+		('qualifier' qualifier=STRING)?
+		viewpoints+=SPViewpoint*
+	'}'
+;
+
+SPViewpoint:
+	'viewpoint' name=ID  '{'
+		('shortcut' shortcut=STRING)?
+		('ext' extension=STRING)?
+		representations+=SPRepresentation*	
+	'}'
+;
+
+SPRepresentation:
+	SPTable
+;
+
+SPTable:
+	'table' name=ID '{'
+		('label' label=STRING)? 
+		('title' title=STRING)? 
+		metamodels+=MetamodelRef+
+		'root' root=STRING
+		elements+=TableElement+
+		properties+=TableProperty+
+	'}'
+;
+
+TableElement:
+	'element' eClass=STRING 'accessibleThrough' expression=SPExpression (canCreate ?= 'create')? ('{'
+		subElements +=TableElement+
+	'}')?
+;
+
+TableProperty:
+	'property' feature=STRING 
+	('label' label=STRING)? 
+	('expression' expression=SPExpression)?
+;
+
+
+SPExpression:
+	AcceleoExpression | VarRef | FeatureRef
+;
+
+
+AcceleoExpression:
+	'acc:' value=STRING
+;
+
+VarRef:
+	'var:' value=STRING
+;
+
+FeatureRef:
+	'feature:' value=STRING
+;
+
+MetamodelRef:
+	'use' metamodel=STRING
+;
