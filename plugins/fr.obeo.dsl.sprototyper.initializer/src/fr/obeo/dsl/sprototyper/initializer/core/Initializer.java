@@ -13,7 +13,6 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.xmi.XMLOptions;
 import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.edit.command.CommandParameter;
 import org.eclipse.emf.edit.command.CreateChildCommand;
@@ -144,34 +143,32 @@ public class Initializer {
 
 		if (element.isCreatable()) {
 			if (element.getExpression() instanceof FeatureRef) {
-				CommandParameter creationParameter = null;
-				IEditingDomainItemProvider provider = (IEditingDomainItemProvider)((AdapterFactoryEditingDomain)editingDomain).getAdapterFactory().adapt(parent, IEditingDomainItemProvider.class);
-				Collection<?> descriptors = provider.getNewChildDescriptors(parent, editingDomain, Collections.EMPTY_LIST);
-				for (Object object : descriptors) {
-					if (object instanceof CommandParameter) {
-						CommandParameter param = (CommandParameter) object;
-						if (param.getValue() instanceof CreateLineTool) {
-							creationParameter = param;
-						}
-					}
-				}
+				CommandParameter creationParameter = getCreateLineToolCreationParameter(parent);
 				if (creationParameter != null) {
-					creationParameter.setOwner(parent);
 					CreateLineTool tool = (CreateLineTool) creationParameter.getValue();
 					tool.setForceRefresh(true);
 					tool.setMapping(lm);
 					tool.setName(representationQualifier + ".tool." + elementName);
 					tool.setLabel("new " + elementName);
 
-					ChangeContext changeContext = ToolFactory.eINSTANCE.createChangeContext();
-					changeContext.setBrowseExpression("var:element");
-					CreateInstance createInstance = ToolFactory.eINSTANCE.createCreateInstance();
-					createInstance.setReferenceName(element.getExpression().getValue());
-					createInstance.setTypeName(element.getEClass());
-					changeContext.getSubModelOperations().add(createInstance);
+					ChangeContext changeContext = createToolModelOperation(element);
 					tool.setFirstModelOperation(changeContext);
 					Command cmd = CreateChildCommand.create(editingDomain, parent, creationParameter, Collections.emptyList());
 					editingDomain.getCommandStack().execute(cmd);
+				}
+				if (element.isRecursive()) {
+					CommandParameter subToolCreationParameter = getCreateLineToolCreationParameter(lm);
+					if (subToolCreationParameter != null) {
+						CreateLineTool subtool = (CreateLineTool) subToolCreationParameter.getValue();
+						subtool.setForceRefresh(true);
+						subtool.setMapping(lm);
+						subtool.setName(representationQualifier + ".subtool." + elementName);
+						subtool.setLabel("new " + elementName);
+						ChangeContext changeContext = createToolModelOperation(element);
+						subtool.setFirstModelOperation(changeContext);
+						Command cmd = CreateChildCommand.create(editingDomain, lm, subToolCreationParameter, Collections.emptyList());
+						editingDomain.getCommandStack().execute(cmd);
+					}
 				}
 			} else {
 				//Not enough information to automatically create a tool.
@@ -186,9 +183,34 @@ public class Initializer {
 		return lm;
 	}
 
+	private CommandParameter getCreateLineToolCreationParameter(EObject parent) {
+		CommandParameter creationParameter = null;
+		IEditingDomainItemProvider provider = (IEditingDomainItemProvider)((AdapterFactoryEditingDomain)editingDomain).getAdapterFactory().adapt(parent, IEditingDomainItemProvider.class);
+		Collection<?> descriptors = provider.getNewChildDescriptors(parent, editingDomain, Collections.EMPTY_LIST);
+		for (Object object : descriptors) {
+			if (object instanceof CommandParameter) {
+				CommandParameter param = (CommandParameter) object;
+				if (param.getValue() instanceof CreateLineTool) {
+					creationParameter = param;
+				}
+			}
+		}
+		return creationParameter;
+	}
+
+	private ChangeContext createToolModelOperation(TableElement element) {
+		ChangeContext changeContext = ToolFactory.eINSTANCE.createChangeContext();
+		changeContext.setBrowseExpression("var:element");
+		CreateInstance createInstance = ToolFactory.eINSTANCE.createCreateInstance();
+		createInstance.setReferenceName(element.getExpression().getValue());
+		createInstance.setTypeName(element.getEClass());
+		changeContext.getSubModelOperations().add(createInstance);
+		return changeContext;
+	}
+
 	private FeatureColumnMapping createPropertyMapping(SPViewpoint spViewpoint, SPTable spTable, TableProperty property) {
 		FeatureColumnMapping cm = fr.obeo.dsl.viewpoint.table.metamodel.table.description.DescriptionFactory.eINSTANCE.createFeatureColumnMapping();
-		cm.setName(computeRepresentationQualifier(spViewpoint, spTable) + ".column." + property.getFeature().toLowerCase());
+ 		cm.setName(computeRepresentationQualifier(spViewpoint, spTable) + ".column." + property.getFeature().toLowerCase());
 		cm.setFeatureName(property.getFeature());
 		if (!Strings.isNullOrEmpty(property.getLabel())) {
 			cm.setHeaderLabelExpression(property.getLabel());

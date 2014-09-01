@@ -6,8 +6,6 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.emf.common.command.BasicCommandStack;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
@@ -35,7 +33,14 @@ public class InitializerAction implements IObjectActionDelegate {
 	 * Constructor for Action1.
 	 */
 	public InitializerAction() {
-		editingDomain = new AdapterFactoryEditingDomain(new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE) , new BasicCommandStack());
+		editingDomain = getEditingDomain();
+	}
+
+	private EditingDomain getEditingDomain() {
+		if (editingDomain == null) {
+			editingDomain = new AdapterFactoryEditingDomain(new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE) , new BasicCommandStack());
+		}
+		return editingDomain;
 	}
 
 	/**
@@ -51,7 +56,7 @@ public class InitializerAction implements IObjectActionDelegate {
 	public void run(IAction action) {
 		if (sPrototyper != null) {
 			try {
-				new Initializer(editingDomain, sPrototyper).run();
+				new Initializer(getEditingDomain(), sPrototyper).run();
 				MessageDialog.openInformation(
 						shell,
 						"SPrototyper Transformer",
@@ -61,6 +66,8 @@ public class InitializerAction implements IObjectActionDelegate {
 						shell,
 						"SPrototyper Transformer",
 						"Error:\n" + e.toString());
+			} finally {
+				editingDomain = null;
 			}
 		}
 	}
@@ -72,7 +79,7 @@ public class InitializerAction implements IObjectActionDelegate {
 		if (selection instanceof IStructuredSelection) {
 			IFile selectedFile = (IFile) ((IStructuredSelection) selection).getFirstElement();
 			URI uri = URI.createPlatformResourceURI(selectedFile.getFullPath().toString(), true);
-			Resource resource = editingDomain.getResourceSet().getResource(uri, true);
+			Resource resource = getEditingDomain().getResourceSet().getResource(uri, true);
 			if (resource.getContents() != null && !resource.getContents().isEmpty()) {
 				if (resource.getContents().get(0) instanceof SPrototyper) {
 					sPrototyper = (SPrototyper) resource.getContents().get(0);
