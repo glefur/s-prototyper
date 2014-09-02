@@ -281,9 +281,9 @@ ruleSPRepresentation returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-
+(
     { 
-        newCompositeNode(grammarAccess.getSPRepresentationAccess().getSPTableParserRuleCall()); 
+        newCompositeNode(grammarAccess.getSPRepresentationAccess().getSPTableParserRuleCall_0()); 
     }
     this_SPTable_0=ruleSPTable
     { 
@@ -291,6 +291,16 @@ ruleSPRepresentation returns [EObject current=null]
         afterParserOrEnumRuleCall();
     }
 
+    |
+    { 
+        newCompositeNode(grammarAccess.getSPRepresentationAccess().getSPDiagramParserRuleCall_1()); 
+    }
+    this_SPDiagram_1=ruleSPDiagram
+    { 
+        $current = $this_SPDiagram_1.current; 
+        afterParserOrEnumRuleCall();
+    }
+)
 ;
 
 
@@ -676,6 +686,694 @@ ruleTableProperty returns [EObject current=null]
 
 
 
+// Entry rule entryRuleSPDiagram
+entryRuleSPDiagram returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getSPDiagramRule()); }
+	 iv_ruleSPDiagram=ruleSPDiagram 
+	 { $current=$iv_ruleSPDiagram.current; } 
+	 EOF 
+;
+
+// Rule SPDiagram
+ruleSPDiagram returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='diagram' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getSPDiagramAccess().getDiagramKeyword_0());
+    }
+(
+(
+		lv_name_1_0=RULE_ID
+		{
+			newLeafNode(lv_name_1_0, grammarAccess.getSPDiagramAccess().getNameIDTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getSPDiagramRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_1_0, 
+        		"ID");
+	    }
+
+)
+)	otherlv_2='{' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getSPDiagramAccess().getLeftCurlyBracketKeyword_2());
+    }
+(	otherlv_3='label' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getSPDiagramAccess().getLabelKeyword_3_0());
+    }
+(
+(
+		lv_label_4_0=RULE_STRING
+		{
+			newLeafNode(lv_label_4_0, grammarAccess.getSPDiagramAccess().getLabelSTRINGTerminalRuleCall_3_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getSPDiagramRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"label",
+        		lv_label_4_0, 
+        		"STRING");
+	    }
+
+)
+))?(	otherlv_5='title' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getSPDiagramAccess().getTitleKeyword_4_0());
+    }
+(
+(
+		lv_title_6_0=RULE_STRING
+		{
+			newLeafNode(lv_title_6_0, grammarAccess.getSPDiagramAccess().getTitleSTRINGTerminalRuleCall_4_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getSPDiagramRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"title",
+        		lv_title_6_0, 
+        		"STRING");
+	    }
+
+)
+))?(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getSPDiagramAccess().getMetamodelsMetamodelRefParserRuleCall_5_0()); 
+	    }
+		lv_metamodels_7_0=ruleMetamodelRef		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getSPDiagramRule());
+	        }
+       		add(
+       			$current, 
+       			"metamodels",
+        		lv_metamodels_7_0, 
+        		"MetamodelRef");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)+	otherlv_8='root' 
+    {
+    	newLeafNode(otherlv_8, grammarAccess.getSPDiagramAccess().getRootKeyword_6());
+    }
+(
+(
+		lv_root_9_0=RULE_STRING
+		{
+			newLeafNode(lv_root_9_0, grammarAccess.getSPDiagramAccess().getRootSTRINGTerminalRuleCall_7_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getSPDiagramRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"root",
+        		lv_root_9_0, 
+        		"STRING");
+	    }
+
+)
+)(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getSPDiagramAccess().getElementsDiagramElementParserRuleCall_8_0()); 
+	    }
+		lv_elements_10_0=ruleDiagramElement		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getSPDiagramRule());
+	        }
+       		add(
+       			$current, 
+       			"elements",
+        		lv_elements_10_0, 
+        		"DiagramElement");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)+	otherlv_11='}' 
+    {
+    	newLeafNode(otherlv_11, grammarAccess.getSPDiagramAccess().getRightCurlyBracketKeyword_9());
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleDiagramElement
+entryRuleDiagramElement returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getDiagramElementRule()); }
+	 iv_ruleDiagramElement=ruleDiagramElement 
+	 { $current=$iv_ruleDiagramElement.current; } 
+	 EOF 
+;
+
+// Rule DiagramElement
+ruleDiagramElement returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+
+    { 
+        newCompositeNode(grammarAccess.getDiagramElementAccess().getContainerParserRuleCall()); 
+    }
+    this_Container_0=ruleContainer
+    { 
+        $current = $this_Container_0.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+;
+
+
+
+
+
+// Entry rule entryRuleContainer
+entryRuleContainer returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getContainerRule()); }
+	 iv_ruleContainer=ruleContainer 
+	 { $current=$iv_ruleContainer.current; } 
+	 EOF 
+;
+
+// Rule Container
+ruleContainer returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((
+(
+		{ 
+	        newCompositeNode(grammarAccess.getContainerAccess().getContainerTypeContainerTypeParserRuleCall_0_0()); 
+	    }
+		lv_containerType_0_0=ruleContainerType		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getContainerRule());
+	        }
+       		set(
+       			$current, 
+       			"containerType",
+        		lv_containerType_0_0, 
+        		"ContainerType");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)?	otherlv_1='container' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getContainerAccess().getContainerKeyword_1());
+    }
+(
+(
+		lv_eClass_2_0=RULE_STRING
+		{
+			newLeafNode(lv_eClass_2_0, grammarAccess.getContainerAccess().getEClassSTRINGTerminalRuleCall_2_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getContainerRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"eClass",
+        		lv_eClass_2_0, 
+        		"STRING");
+	    }
+
+)
+)	otherlv_3='accessibleThrough' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getContainerAccess().getAccessibleThroughKeyword_3());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getContainerAccess().getExpressionSPExpressionParserRuleCall_4_0()); 
+	    }
+		lv_expression_4_0=ruleSPExpression		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getContainerRule());
+	        }
+       		set(
+       			$current, 
+       			"expression",
+        		lv_expression_4_0, 
+        		"SPExpression");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_5='style {' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getContainerAccess().getStyleKeyword_5());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getContainerAccess().getColorContainerColorDefinitionParserRuleCall_6_0()); 
+	    }
+		lv_color_6_0=ruleContainerColorDefinition		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getContainerRule());
+	        }
+       		set(
+       			$current, 
+       			"color",
+        		lv_color_6_0, 
+        		"ContainerColorDefinition");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getContainerAccess().getLabelLabelStyleDefinitionParserRuleCall_7_0()); 
+	    }
+		lv_label_7_0=ruleLabelStyleDefinition		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getContainerRule());
+	        }
+       		set(
+       			$current, 
+       			"label",
+        		lv_label_7_0, 
+        		"LabelStyleDefinition");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)?(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getContainerAccess().getBorderBorderStyleDefinitionParserRuleCall_8_0()); 
+	    }
+		lv_border_8_0=ruleBorderStyleDefinition		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getContainerRule());
+	        }
+       		set(
+       			$current, 
+       			"border",
+        		lv_border_8_0, 
+        		"BorderStyleDefinition");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)?	otherlv_9='}' 
+    {
+    	newLeafNode(otherlv_9, grammarAccess.getContainerAccess().getRightCurlyBracketKeyword_9());
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleContainerType
+entryRuleContainerType returns [String current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getContainerTypeRule()); } 
+	 iv_ruleContainerType=ruleContainerType 
+	 { $current=$iv_ruleContainerType.current.getText(); }  
+	 EOF 
+;
+
+// Rule ContainerType
+ruleContainerType returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(
+	kw='freeform' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getContainerTypeAccess().getFreeformKeyword_0()); 
+    }
+
+    |
+	kw='list' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getContainerTypeAccess().getListKeyword_1()); 
+    }
+)
+    ;
+
+
+
+
+
+// Entry rule entryRuleSolidColorDefinition
+entryRuleSolidColorDefinition returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getSolidColorDefinitionRule()); }
+	 iv_ruleSolidColorDefinition=ruleSolidColorDefinition 
+	 { $current=$iv_ruleSolidColorDefinition.current; } 
+	 EOF 
+;
+
+// Rule SolidColorDefinition
+ruleSolidColorDefinition returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='color' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getSolidColorDefinitionAccess().getColorKeyword_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getSolidColorDefinitionAccess().getColorColorParserRuleCall_1_0()); 
+	    }
+		lv_color_1_0=ruleColor		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getSolidColorDefinitionRule());
+	        }
+       		set(
+       			$current, 
+       			"color",
+        		lv_color_1_0, 
+        		"Color");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))
+;
+
+
+
+
+
+// Entry rule entryRuleContainerColorDefinition
+entryRuleContainerColorDefinition returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getContainerColorDefinitionRule()); }
+	 iv_ruleContainerColorDefinition=ruleContainerColorDefinition 
+	 { $current=$iv_ruleContainerColorDefinition.current; } 
+	 EOF 
+;
+
+// Rule ContainerColorDefinition
+ruleContainerColorDefinition returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(
+    { 
+        newCompositeNode(grammarAccess.getContainerColorDefinitionAccess().getSolidColorDefinitionParserRuleCall_0()); 
+    }
+    this_SolidColorDefinition_0=ruleSolidColorDefinition
+    { 
+        $current = $this_SolidColorDefinition_0.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getContainerColorDefinitionAccess().getGradientColorDefinitionParserRuleCall_1()); 
+    }
+    this_GradientColorDefinition_1=ruleGradientColorDefinition
+    { 
+        $current = $this_GradientColorDefinition_1.current; 
+        afterParserOrEnumRuleCall();
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleGradientColorDefinition
+entryRuleGradientColorDefinition returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getGradientColorDefinitionRule()); }
+	 iv_ruleGradientColorDefinition=ruleGradientColorDefinition 
+	 { $current=$iv_ruleGradientColorDefinition.current; } 
+	 EOF 
+;
+
+// Rule GradientColorDefinition
+ruleGradientColorDefinition returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='gradient from' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getGradientColorDefinitionAccess().getGradientFromKeyword_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getGradientColorDefinitionAccess().getFromColorParserRuleCall_1_0()); 
+	    }
+		lv_from_1_0=ruleColor		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getGradientColorDefinitionRule());
+	        }
+       		set(
+       			$current, 
+       			"from",
+        		lv_from_1_0, 
+        		"Color");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)	otherlv_2='to' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getGradientColorDefinitionAccess().getToKeyword_2());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getGradientColorDefinitionAccess().getToColorParserRuleCall_3_0()); 
+	    }
+		lv_to_3_0=ruleColor		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getGradientColorDefinitionRule());
+	        }
+       		set(
+       			$current, 
+       			"to",
+        		lv_to_3_0, 
+        		"Color");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))
+;
+
+
+
+
+
+// Entry rule entryRuleLabelStyleDefinition
+entryRuleLabelStyleDefinition returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getLabelStyleDefinitionRule()); }
+	 iv_ruleLabelStyleDefinition=ruleLabelStyleDefinition 
+	 { $current=$iv_ruleLabelStyleDefinition.current; } 
+	 EOF 
+;
+
+// Rule LabelStyleDefinition
+ruleLabelStyleDefinition returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='label' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getLabelStyleDefinitionAccess().getLabelKeyword_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getLabelStyleDefinitionAccess().getExpressionSPExpressionParserRuleCall_1_0()); 
+	    }
+		lv_expression_1_0=ruleSPExpression		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getLabelStyleDefinitionRule());
+	        }
+       		set(
+       			$current, 
+       			"expression",
+        		lv_expression_1_0, 
+        		"SPExpression");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)?(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getLabelStyleDefinitionAccess().getColorSolidColorDefinitionParserRuleCall_2_0()); 
+	    }
+		lv_color_2_0=ruleSolidColorDefinition		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getLabelStyleDefinitionRule());
+	        }
+       		set(
+       			$current, 
+       			"color",
+        		lv_color_2_0, 
+        		"SolidColorDefinition");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(	otherlv_3='size' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getLabelStyleDefinitionAccess().getSizeKeyword_3_0());
+    }
+(
+(
+		lv_size_4_0=RULE_INT
+		{
+			newLeafNode(lv_size_4_0, grammarAccess.getLabelStyleDefinitionAccess().getSizeINTTerminalRuleCall_3_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getLabelStyleDefinitionRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"size",
+        		lv_size_4_0, 
+        		"INT");
+	    }
+
+)
+))?(
+(
+		lv_bold_5_0=	'bold' 
+    {
+        newLeafNode(lv_bold_5_0, grammarAccess.getLabelStyleDefinitionAccess().getBoldBoldKeyword_4_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getLabelStyleDefinitionRule());
+	        }
+       		setWithLastConsumed($current, "bold", true, "bold");
+	    }
+
+)
+)?(
+(
+		lv_italic_6_0=	'italic' 
+    {
+        newLeafNode(lv_italic_6_0, grammarAccess.getLabelStyleDefinitionAccess().getItalicItalicKeyword_5_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getLabelStyleDefinitionRule());
+	        }
+       		setWithLastConsumed($current, "italic", true, "italic");
+	    }
+
+)
+)?)
+;
+
+
+
+
+
+// Entry rule entryRuleBorderStyleDefinition
+entryRuleBorderStyleDefinition returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getBorderStyleDefinitionRule()); }
+	 iv_ruleBorderStyleDefinition=ruleBorderStyleDefinition 
+	 { $current=$iv_ruleBorderStyleDefinition.current; } 
+	 EOF 
+;
+
+// Rule BorderStyleDefinition
+ruleBorderStyleDefinition returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='border ' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getBorderStyleDefinitionAccess().getBorderKeyword_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getBorderStyleDefinitionAccess().getColorSolidColorDefinitionParserRuleCall_1_0()); 
+	    }
+		lv_color_1_0=ruleSolidColorDefinition		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getBorderStyleDefinitionRule());
+	        }
+       		set(
+       			$current, 
+       			"color",
+        		lv_color_1_0, 
+        		"SolidColorDefinition");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(	otherlv_2='size' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getBorderStyleDefinitionAccess().getSizeKeyword_2_0());
+    }
+(
+(
+		lv_size_3_0=RULE_INT
+		{
+			newLeafNode(lv_size_3_0, grammarAccess.getBorderStyleDefinitionAccess().getSizeINTTerminalRuleCall_2_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getBorderStyleDefinitionRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"size",
+        		lv_size_3_0, 
+        		"INT");
+	    }
+
+)
+))?)
+;
+
+
+
+
+
 // Entry rule entryRuleSPExpression
 entryRuleSPExpression returns [EObject current=null] 
 	:
@@ -893,6 +1591,240 @@ ruleMetamodelRef returns [EObject current=null]
 )
 ))
 ;
+
+
+
+
+
+// Entry rule entryRuleColor
+entryRuleColor returns [String current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getColorRule()); } 
+	 iv_ruleColor=ruleColor 
+	 { $current=$iv_ruleColor.current.getText(); }  
+	 EOF 
+;
+
+// Rule Color
+ruleColor returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+
+    { 
+        newCompositeNode(grammarAccess.getColorAccess().getPreDefinedColorParserRuleCall()); 
+    }
+    this_PreDefinedColor_0=rulePreDefinedColor    {
+		$current.merge(this_PreDefinedColor_0);
+    }
+
+    { 
+        afterParserOrEnumRuleCall();
+    }
+
+    ;
+
+
+
+
+
+// Entry rule entryRulePreDefinedColor
+entryRulePreDefinedColor returns [String current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getPreDefinedColorRule()); } 
+	 iv_rulePreDefinedColor=rulePreDefinedColor 
+	 { $current=$iv_rulePreDefinedColor.current.getText(); }  
+	 EOF 
+;
+
+// Rule PreDefinedColor
+rulePreDefinedColor returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(
+	kw='white' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getPreDefinedColorAccess().getWhiteKeyword_0()); 
+    }
+
+    |
+	kw='black' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getPreDefinedColorAccess().getBlackKeyword_1()); 
+    }
+
+    |
+	kw='blue' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getPreDefinedColorAccess().getBlueKeyword_2()); 
+    }
+
+    |
+	kw='light blue' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getPreDefinedColorAccess().getLightBlueKeyword_3()); 
+    }
+
+    |
+	kw='dark blue' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getPreDefinedColorAccess().getDarkBlueKeyword_4()); 
+    }
+
+    |
+	kw='chocolate' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getPreDefinedColorAccess().getChocolateKeyword_5()); 
+    }
+
+    |
+	kw='light chocolate' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getPreDefinedColorAccess().getLightChocolateKeyword_6()); 
+    }
+
+    |
+	kw='dark chocolate' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getPreDefinedColorAccess().getDarkChocolateKeyword_7()); 
+    }
+
+    |
+	kw='gray' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getPreDefinedColorAccess().getGrayKeyword_8()); 
+    }
+
+    |
+	kw='light gray' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getPreDefinedColorAccess().getLightGrayKeyword_9()); 
+    }
+
+    |
+	kw='dark gray' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getPreDefinedColorAccess().getDarkGrayKeyword_10()); 
+    }
+
+    |
+	kw='green' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getPreDefinedColorAccess().getGreenKeyword_11()); 
+    }
+
+    |
+	kw='light green' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getPreDefinedColorAccess().getLightGreenKeyword_12()); 
+    }
+
+    |
+	kw='dark green' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getPreDefinedColorAccess().getDarkGreenKeyword_13()); 
+    }
+
+    |
+	kw='orange' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getPreDefinedColorAccess().getOrangeKeyword_14()); 
+    }
+
+    |
+	kw='light orange' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getPreDefinedColorAccess().getLightOrangeKeyword_15()); 
+    }
+
+    |
+	kw='dark orange' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getPreDefinedColorAccess().getDarkOrangeKeyword_16()); 
+    }
+
+    |
+	kw='purple' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getPreDefinedColorAccess().getPurpleKeyword_17()); 
+    }
+
+    |
+	kw='light purple' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getPreDefinedColorAccess().getLightPurpleKeyword_18()); 
+    }
+
+    |
+	kw='dark purple' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getPreDefinedColorAccess().getDarkPurpleKeyword_19()); 
+    }
+
+    |
+	kw='red' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getPreDefinedColorAccess().getRedKeyword_20()); 
+    }
+
+    |
+	kw='light red' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getPreDefinedColorAccess().getLightRedKeyword_21()); 
+    }
+
+    |
+	kw='dark red' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getPreDefinedColorAccess().getDarkRedKeyword_22()); 
+    }
+
+    |
+	kw='yellow' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getPreDefinedColorAccess().getYellowKeyword_23()); 
+    }
+
+    |
+	kw='light yellow' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getPreDefinedColorAccess().getLightYellowKeyword_24()); 
+    }
+
+    |
+	kw='dark yellow' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getPreDefinedColorAccess().getDarkYellowKeyword_25()); 
+    }
+)
+    ;
 
 
 

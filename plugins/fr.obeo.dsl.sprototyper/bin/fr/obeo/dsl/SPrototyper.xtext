@@ -18,7 +18,7 @@ SPViewpoint:
 ;
 
 SPRepresentation:
-	SPTable
+	SPTable | SPDiagram
 ;
 
 SPTable:
@@ -45,10 +45,57 @@ TableProperty:
 ;
 
 
+SPDiagram:
+	'diagram' name=ID '{'
+		('label' label=STRING)? 
+		('title' title=STRING)? 
+		metamodels+=MetamodelRef+
+		'root' root=STRING
+		elements+=DiagramElement+	
+	'}'
+;
+
+DiagramElement:
+	Container
+;
+
+
+Container:
+	(containerType=ContainerType)? 'container' eClass=STRING 'accessibleThrough' expression=SPExpression 
+	'style {' 
+		color=ContainerColorDefinition
+		(label=LabelStyleDefinition)?
+		(border=BorderStyleDefinition)?
+	'}'
+;
+
+ContainerType:
+	'freeform' | 'list'
+;
+
+SolidColorDefinition:
+	'color' color=Color
+;
+
+ContainerColorDefinition:
+	SolidColorDefinition | GradientColorDefinition
+;
+
+GradientColorDefinition:
+	'gradient from' from=Color 'to' to=Color
+;
+
+LabelStyleDefinition:
+	'label' (expression=SPExpression)? color=SolidColorDefinition ('size' size=INT)? (bold?='bold')? (italic?='italic')? 
+;
+
+BorderStyleDefinition:
+	'border ' color=SolidColorDefinition ('size' size=INT)?
+;
+
 SPExpression:
 	AcceleoExpression | VarRef | FeatureRef
 ;
-
 
 AcceleoExpression:
 	'acc:' value=STRING
@@ -64,4 +111,21 @@ FeatureRef:
 
 MetamodelRef:
 	'use' metamodel=STRING
+;
+
+Color:
+	PreDefinedColor	
+;
+
+PreDefinedColor:
+	'white' 
+	| 'black' 
+	| 'blue' | 'light blue' | 'dark blue'  
+	| 'chocolate' | 'light chocolate' | 'dark chocolate' 
+	| 'gray' | 'light gray' | 'dark gray'
+	| 'green' | 'light green' | 'dark green'
+	| 'orange' | 'light orange' | 'dark orange'
+	| 'purple' | 'light purple' | 'dark purple'
+	| 'red' | 'light red' | 'dark red'
+	| 'yellow' | 'light yellow' | 'dark yellow'
 ;

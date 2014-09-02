@@ -18,13 +18,14 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//SPViewpoint/extension"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//SPViewpoint/representations"/>
     </genClasses>
-    <genClasses ecoreClass="SPrototyper.ecore#//SPRepresentation"/>
+    <genClasses ecoreClass="SPrototyper.ecore#//SPRepresentation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//SPRepresentation/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//SPRepresentation/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//SPRepresentation/title"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//SPRepresentation/metamodels"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//SPRepresentation/root"/>
+    </genClasses>
     <genClasses ecoreClass="SPrototyper.ecore#//SPTable">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//SPTable/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//SPTable/label"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//SPTable/title"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//SPTable/metamodels"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//SPTable/root"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//SPTable/elements"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//SPTable/properties"/>
     </genClasses>
@@ -39,6 +40,37 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//TableProperty/feature"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//TableProperty/label"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//TableProperty/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="SPrototyper.ecore#//SPDiagram">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//SPDiagram/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="SPrototyper.ecore#//DiagramElement"/>
+    <genClasses ecoreClass="SPrototyper.ecore#//Container">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//Container/containerType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//Container/eClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//Container/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//Container/color"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//Container/label"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//Container/border"/>
+    </genClasses>
+    <genClasses ecoreClass="SPrototyper.ecore#//SolidColorDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//SolidColorDefinition/color"/>
+    </genClasses>
+    <genClasses ecoreClass="SPrototyper.ecore#//ContainerColorDefinition"/>
+    <genClasses ecoreClass="SPrototyper.ecore#//GradientColorDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//GradientColorDefinition/from"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//GradientColorDefinition/to"/>
+    </genClasses>
+    <genClasses ecoreClass="SPrototyper.ecore#//LabelStyleDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//LabelStyleDefinition/expression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//LabelStyleDefinition/color"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//LabelStyleDefinition/size"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//LabelStyleDefinition/bold"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//LabelStyleDefinition/italic"/>
+    </genClasses>
+    <genClasses ecoreClass="SPrototyper.ecore#//BorderStyleDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//BorderStyleDefinition/color"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//BorderStyleDefinition/size"/>
     </genClasses>
     <genClasses ecoreClass="SPrototyper.ecore#//SPExpression">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//SPExpression/value"/>

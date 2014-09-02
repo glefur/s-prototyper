@@ -3,12 +3,18 @@ package fr.obeo.dsl.serializer;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import fr.obeo.dsl.sPrototyper.AcceleoExpression;
+import fr.obeo.dsl.sPrototyper.BorderStyleDefinition;
+import fr.obeo.dsl.sPrototyper.Container;
 import fr.obeo.dsl.sPrototyper.FeatureRef;
+import fr.obeo.dsl.sPrototyper.GradientColorDefinition;
+import fr.obeo.dsl.sPrototyper.LabelStyleDefinition;
 import fr.obeo.dsl.sPrototyper.MetamodelRef;
+import fr.obeo.dsl.sPrototyper.SPDiagram;
 import fr.obeo.dsl.sPrototyper.SPTable;
 import fr.obeo.dsl.sPrototyper.SPViewpoint;
 import fr.obeo.dsl.sPrototyper.SPrototyper;
 import fr.obeo.dsl.sPrototyper.SPrototyperPackage;
+import fr.obeo.dsl.sPrototyper.SolidColorDefinition;
 import fr.obeo.dsl.sPrototyper.TableElement;
 import fr.obeo.dsl.sPrototyper.TableProperty;
 import fr.obeo.dsl.sPrototyper.VarRef;
@@ -40,6 +46,19 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 					return; 
 				}
 				else break;
+			case SPrototyperPackage.BORDER_STYLE_DEFINITION:
+				if(context == grammarAccess.getBorderStyleDefinitionRule()) {
+					sequence_BorderStyleDefinition(context, (BorderStyleDefinition) semanticObject); 
+					return; 
+				}
+				else break;
+			case SPrototyperPackage.CONTAINER:
+				if(context == grammarAccess.getContainerRule() ||
+				   context == grammarAccess.getDiagramElementRule()) {
+					sequence_Container(context, (Container) semanticObject); 
+					return; 
+				}
+				else break;
 			case SPrototyperPackage.FEATURE_REF:
 				if(context == grammarAccess.getFeatureRefRule() ||
 				   context == grammarAccess.getSPExpressionRule()) {
@@ -47,9 +66,29 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 					return; 
 				}
 				else break;
+			case SPrototyperPackage.GRADIENT_COLOR_DEFINITION:
+				if(context == grammarAccess.getContainerColorDefinitionRule() ||
+				   context == grammarAccess.getGradientColorDefinitionRule()) {
+					sequence_GradientColorDefinition(context, (GradientColorDefinition) semanticObject); 
+					return; 
+				}
+				else break;
+			case SPrototyperPackage.LABEL_STYLE_DEFINITION:
+				if(context == grammarAccess.getLabelStyleDefinitionRule()) {
+					sequence_LabelStyleDefinition(context, (LabelStyleDefinition) semanticObject); 
+					return; 
+				}
+				else break;
 			case SPrototyperPackage.METAMODEL_REF:
 				if(context == grammarAccess.getMetamodelRefRule()) {
 					sequence_MetamodelRef(context, (MetamodelRef) semanticObject); 
+					return; 
+				}
+				else break;
+			case SPrototyperPackage.SP_DIAGRAM:
+				if(context == grammarAccess.getSPDiagramRule() ||
+				   context == grammarAccess.getSPRepresentationRule()) {
+					sequence_SPDiagram(context, (SPDiagram) semanticObject); 
 					return; 
 				}
 				else break;
@@ -69,6 +108,13 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 			case SPrototyperPackage.SPROTOTYPER:
 				if(context == grammarAccess.getSPrototyperRule()) {
 					sequence_SPrototyper(context, (SPrototyper) semanticObject); 
+					return; 
+				}
+				else break;
+			case SPrototyperPackage.SOLID_COLOR_DEFINITION:
+				if(context == grammarAccess.getContainerColorDefinitionRule() ||
+				   context == grammarAccess.getSolidColorDefinitionRule()) {
+					sequence_SolidColorDefinition(context, (SolidColorDefinition) semanticObject); 
 					return; 
 				}
 				else break;
@@ -113,6 +159,31 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 	
 	/**
 	 * Constraint:
+	 *     (color=SolidColorDefinition size=INT?)
+	 */
+	protected void sequence_BorderStyleDefinition(EObject context, BorderStyleDefinition semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         containerType=ContainerType? 
+	 *         eClass=STRING 
+	 *         expression=SPExpression 
+	 *         color=ContainerColorDefinition 
+	 *         label=LabelStyleDefinition? 
+	 *         border=BorderStyleDefinition?
+	 *     )
+	 */
+	protected void sequence_Container(EObject context, Container semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     value=STRING
 	 */
 	protected void sequence_FeatureRef(EObject context, FeatureRef semanticObject) {
@@ -129,6 +200,34 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 	
 	/**
 	 * Constraint:
+	 *     (from=Color to=Color)
+	 */
+	protected void sequence_GradientColorDefinition(EObject context, GradientColorDefinition semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, SPrototyperPackage.Literals.GRADIENT_COLOR_DEFINITION__FROM) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SPrototyperPackage.Literals.GRADIENT_COLOR_DEFINITION__FROM));
+			if(transientValues.isValueTransient(semanticObject, SPrototyperPackage.Literals.GRADIENT_COLOR_DEFINITION__TO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SPrototyperPackage.Literals.GRADIENT_COLOR_DEFINITION__TO));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getGradientColorDefinitionAccess().getFromColorParserRuleCall_1_0(), semanticObject.getFrom());
+		feeder.accept(grammarAccess.getGradientColorDefinitionAccess().getToColorParserRuleCall_3_0(), semanticObject.getTo());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (expression=SPExpression? color=SolidColorDefinition size=INT? bold?='bold'? italic?='italic'?)
+	 */
+	protected void sequence_LabelStyleDefinition(EObject context, LabelStyleDefinition semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     metamodel=STRING
 	 */
 	protected void sequence_MetamodelRef(EObject context, MetamodelRef semanticObject) {
@@ -140,6 +239,22 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getMetamodelRefAccess().getMetamodelSTRINGTerminalRuleCall_1_0(), semanticObject.getMetamodel());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         name=ID 
+	 *         label=STRING? 
+	 *         title=STRING? 
+	 *         metamodels+=MetamodelRef+ 
+	 *         root=STRING 
+	 *         elements+=DiagramElement+
+	 *     )
+	 */
+	protected void sequence_SPDiagram(EObject context, SPDiagram semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -175,6 +290,22 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 */
 	protected void sequence_SPrototyper(EObject context, SPrototyper semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     color=Color
+	 */
+	protected void sequence_SolidColorDefinition(EObject context, SolidColorDefinition semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, SPrototyperPackage.Literals.SOLID_COLOR_DEFINITION__COLOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SPrototyperPackage.Literals.SOLID_COLOR_DEFINITION__COLOR));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getSolidColorDefinitionAccess().getColorColorParserRuleCall_1_0(), semanticObject.getColor());
+		feeder.finish();
 	}
 	
 	

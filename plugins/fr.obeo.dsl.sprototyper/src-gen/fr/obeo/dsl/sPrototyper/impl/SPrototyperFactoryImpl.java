@@ -70,6 +70,14 @@ public class SPrototyperFactoryImpl extends EFactoryImpl implements SPrototyperF
       case SPrototyperPackage.SP_TABLE: return createSPTable();
       case SPrototyperPackage.TABLE_ELEMENT: return createTableElement();
       case SPrototyperPackage.TABLE_PROPERTY: return createTableProperty();
+      case SPrototyperPackage.SP_DIAGRAM: return createSPDiagram();
+      case SPrototyperPackage.DIAGRAM_ELEMENT: return createDiagramElement();
+      case SPrototyperPackage.CONTAINER: return createContainer();
+      case SPrototyperPackage.SOLID_COLOR_DEFINITION: return createSolidColorDefinition();
+      case SPrototyperPackage.CONTAINER_COLOR_DEFINITION: return createContainerColorDefinition();
+      case SPrototyperPackage.GRADIENT_COLOR_DEFINITION: return createGradientColorDefinition();
+      case SPrototyperPackage.LABEL_STYLE_DEFINITION: return createLabelStyleDefinition();
+      case SPrototyperPackage.BORDER_STYLE_DEFINITION: return createBorderStyleDefinition();
       case SPrototyperPackage.SP_EXPRESSION: return createSPExpression();
       case SPrototyperPackage.ACCELEO_EXPRESSION: return createAcceleoExpression();
       case SPrototyperPackage.VAR_REF: return createVarRef();
@@ -144,6 +152,94 @@ public class SPrototyperFactoryImpl extends EFactoryImpl implements SPrototyperF
   {
     TablePropertyImpl tableProperty = new TablePropertyImpl();
     return tableProperty;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SPDiagram createSPDiagram()
+  {
+    SPDiagramImpl spDiagram = new SPDiagramImpl();
+    return spDiagram;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DiagramElement createDiagramElement()
+  {
+    DiagramElementImpl diagramElement = new DiagramElementImpl();
+    return diagramElement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public fr.obeo.dsl.sPrototyper.Container createContainer()
+  {
+    ContainerImpl container = new ContainerImpl();
+    return container;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SolidColorDefinition createSolidColorDefinition()
+  {
+    SolidColorDefinitionImpl solidColorDefinition = new SolidColorDefinitionImpl();
+    return solidColorDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ContainerColorDefinition createContainerColorDefinition()
+  {
+    ContainerColorDefinitionImpl containerColorDefinition = new ContainerColorDefinitionImpl();
+    return containerColorDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public GradientColorDefinition createGradientColorDefinition()
+  {
+    GradientColorDefinitionImpl gradientColorDefinition = new GradientColorDefinitionImpl();
+    return gradientColorDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public LabelStyleDefinition createLabelStyleDefinition()
+  {
+    LabelStyleDefinitionImpl labelStyleDefinition = new LabelStyleDefinitionImpl();
+    return labelStyleDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public BorderStyleDefinition createBorderStyleDefinition()
+  {
+    BorderStyleDefinitionImpl borderStyleDefinition = new BorderStyleDefinitionImpl();
+    return borderStyleDefinition;
   }
 
   /**

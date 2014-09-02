@@ -37,7 +37,11 @@ public class SPrototyperParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
+					put(grammarAccess.getSPRepresentationAccess().getAlternatives(), "rule__SPRepresentation__Alternatives");
+					put(grammarAccess.getContainerTypeAccess().getAlternatives(), "rule__ContainerType__Alternatives");
+					put(grammarAccess.getContainerColorDefinitionAccess().getAlternatives(), "rule__ContainerColorDefinition__Alternatives");
 					put(grammarAccess.getSPExpressionAccess().getAlternatives(), "rule__SPExpression__Alternatives");
+					put(grammarAccess.getPreDefinedColorAccess().getAlternatives(), "rule__PreDefinedColor__Alternatives");
 					put(grammarAccess.getSPrototyperAccess().getGroup(), "rule__SPrototyper__Group__0");
 					put(grammarAccess.getSPrototyperAccess().getGroup_3(), "rule__SPrototyper__Group_3__0");
 					put(grammarAccess.getSPViewpointAccess().getGroup(), "rule__SPViewpoint__Group__0");
@@ -51,6 +55,16 @@ public class SPrototyperParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTablePropertyAccess().getGroup(), "rule__TableProperty__Group__0");
 					put(grammarAccess.getTablePropertyAccess().getGroup_2(), "rule__TableProperty__Group_2__0");
 					put(grammarAccess.getTablePropertyAccess().getGroup_3(), "rule__TableProperty__Group_3__0");
+					put(grammarAccess.getSPDiagramAccess().getGroup(), "rule__SPDiagram__Group__0");
+					put(grammarAccess.getSPDiagramAccess().getGroup_3(), "rule__SPDiagram__Group_3__0");
+					put(grammarAccess.getSPDiagramAccess().getGroup_4(), "rule__SPDiagram__Group_4__0");
+					put(grammarAccess.getContainerAccess().getGroup(), "rule__Container__Group__0");
+					put(grammarAccess.getSolidColorDefinitionAccess().getGroup(), "rule__SolidColorDefinition__Group__0");
+					put(grammarAccess.getGradientColorDefinitionAccess().getGroup(), "rule__GradientColorDefinition__Group__0");
+					put(grammarAccess.getLabelStyleDefinitionAccess().getGroup(), "rule__LabelStyleDefinition__Group__0");
+					put(grammarAccess.getLabelStyleDefinitionAccess().getGroup_3(), "rule__LabelStyleDefinition__Group_3__0");
+					put(grammarAccess.getBorderStyleDefinitionAccess().getGroup(), "rule__BorderStyleDefinition__Group__0");
+					put(grammarAccess.getBorderStyleDefinitionAccess().getGroup_2(), "rule__BorderStyleDefinition__Group_2__0");
 					put(grammarAccess.getAcceleoExpressionAccess().getGroup(), "rule__AcceleoExpression__Group__0");
 					put(grammarAccess.getVarRefAccess().getGroup(), "rule__VarRef__Group__0");
 					put(grammarAccess.getFeatureRefAccess().getGroup(), "rule__FeatureRef__Group__0");
@@ -77,6 +91,28 @@ public class SPrototyperParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTablePropertyAccess().getFeatureAssignment_1(), "rule__TableProperty__FeatureAssignment_1");
 					put(grammarAccess.getTablePropertyAccess().getLabelAssignment_2_1(), "rule__TableProperty__LabelAssignment_2_1");
 					put(grammarAccess.getTablePropertyAccess().getExpressionAssignment_3_1(), "rule__TableProperty__ExpressionAssignment_3_1");
+					put(grammarAccess.getSPDiagramAccess().getNameAssignment_1(), "rule__SPDiagram__NameAssignment_1");
+					put(grammarAccess.getSPDiagramAccess().getLabelAssignment_3_1(), "rule__SPDiagram__LabelAssignment_3_1");
+					put(grammarAccess.getSPDiagramAccess().getTitleAssignment_4_1(), "rule__SPDiagram__TitleAssignment_4_1");
+					put(grammarAccess.getSPDiagramAccess().getMetamodelsAssignment_5(), "rule__SPDiagram__MetamodelsAssignment_5");
+					put(grammarAccess.getSPDiagramAccess().getRootAssignment_7(), "rule__SPDiagram__RootAssignment_7");
+					put(grammarAccess.getSPDiagramAccess().getElementsAssignment_8(), "rule__SPDiagram__ElementsAssignment_8");
+					put(grammarAccess.getContainerAccess().getContainerTypeAssignment_0(), "rule__Container__ContainerTypeAssignment_0");
+					put(grammarAccess.getContainerAccess().getEClassAssignment_2(), "rule__Container__EClassAssignment_2");
+					put(grammarAccess.getContainerAccess().getExpressionAssignment_4(), "rule__Container__ExpressionAssignment_4");
+					put(grammarAccess.getContainerAccess().getColorAssignment_6(), "rule__Container__ColorAssignment_6");
+					put(grammarAccess.getContainerAccess().getLabelAssignment_7(), "rule__Container__LabelAssignment_7");
+					put(grammarAccess.getContainerAccess().getBorderAssignment_8(), "rule__Container__BorderAssignment_8");
+					put(grammarAccess.getSolidColorDefinitionAccess().getColorAssignment_1(), "rule__SolidColorDefinition__ColorAssignment_1");
+					put(grammarAccess.getGradientColorDefinitionAccess().getFromAssignment_1(), "rule__GradientColorDefinition__FromAssignment_1");
+					put(grammarAccess.getGradientColorDefinitionAccess().getToAssignment_3(), "rule__GradientColorDefinition__ToAssignment_3");
+					put(grammarAccess.getLabelStyleDefinitionAccess().getExpressionAssignment_1(), "rule__LabelStyleDefinition__ExpressionAssignment_1");
+					put(grammarAccess.getLabelStyleDefinitionAccess().getColorAssignment_2(), "rule__LabelStyleDefinition__ColorAssignment_2");
+					put(grammarAccess.getLabelStyleDefinitionAccess().getSizeAssignment_3_1(), "rule__LabelStyleDefinition__SizeAssignment_3_1");
+					put(grammarAccess.getLabelStyleDefinitionAccess().getBoldAssignment_4(), "rule__LabelStyleDefinition__BoldAssignment_4");
+					put(grammarAccess.getLabelStyleDefinitionAccess().getItalicAssignment_5(), "rule__LabelStyleDefinition__ItalicAssignment_5");
+					put(grammarAccess.getBorderStyleDefinitionAccess().getColorAssignment_1(), "rule__BorderStyleDefinition__ColorAssignment_1");
+					put(grammarAccess.getBorderStyleDefinitionAccess().getSizeAssignment_2_1(), "rule__BorderStyleDefinition__SizeAssignment_2_1");
 					put(grammarAccess.getAcceleoExpressionAccess().getValueAssignment_1(), "rule__AcceleoExpression__ValueAssignment_1");
 					put(grammarAccess.getVarRefAccess().getValueAssignment_1(), "rule__VarRef__ValueAssignment_1");
 					put(grammarAccess.getFeatureRefAccess().getValueAssignment_1(), "rule__FeatureRef__ValueAssignment_1");

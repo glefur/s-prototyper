@@ -26,19 +26,38 @@ import com.google.common.collect.Iterables;
 import com.google.common.collect.Maps;
 
 import fr.obeo.dsl.sPrototyper.AcceleoExpression;
+import fr.obeo.dsl.sPrototyper.BorderStyleDefinition;
+import fr.obeo.dsl.sPrototyper.Container;
+import fr.obeo.dsl.sPrototyper.ContainerColorDefinition;
+import fr.obeo.dsl.sPrototyper.DiagramElement;
 import fr.obeo.dsl.sPrototyper.FeatureRef;
+import fr.obeo.dsl.sPrototyper.GradientColorDefinition;
+import fr.obeo.dsl.sPrototyper.LabelStyleDefinition;
 import fr.obeo.dsl.sPrototyper.MetamodelRef;
+import fr.obeo.dsl.sPrototyper.SPDiagram;
 import fr.obeo.dsl.sPrototyper.SPExpression;
 import fr.obeo.dsl.sPrototyper.SPRepresentation;
 import fr.obeo.dsl.sPrototyper.SPTable;
 import fr.obeo.dsl.sPrototyper.SPViewpoint;
 import fr.obeo.dsl.sPrototyper.SPrototyper;
+import fr.obeo.dsl.sPrototyper.SPrototyperPackage;
+import fr.obeo.dsl.sPrototyper.SolidColorDefinition;
 import fr.obeo.dsl.sPrototyper.TableElement;
 import fr.obeo.dsl.sPrototyper.TableProperty;
 import fr.obeo.dsl.sPrototyper.VarRef;
+import fr.obeo.dsl.viewpoint.ContainerLayout;
+import fr.obeo.dsl.viewpoint.FontFormat;
+import fr.obeo.dsl.viewpoint.description.ColorDescription;
+import fr.obeo.dsl.viewpoint.description.ContainerMapping;
 import fr.obeo.dsl.viewpoint.description.DescriptionFactory;
+import fr.obeo.dsl.viewpoint.description.DiagramDescription;
+import fr.obeo.dsl.viewpoint.description.Environment;
 import fr.obeo.dsl.viewpoint.description.Group;
+import fr.obeo.dsl.viewpoint.description.Layer;
+import fr.obeo.dsl.viewpoint.description.SystemColor;
 import fr.obeo.dsl.viewpoint.description.Viewpoint;
+import fr.obeo.dsl.viewpoint.description.style.FlatContainerStyleDescription;
+import fr.obeo.dsl.viewpoint.description.style.StyleFactory;
 import fr.obeo.dsl.viewpoint.description.tool.ChangeContext;
 import fr.obeo.dsl.viewpoint.description.tool.CreateInstance;
 import fr.obeo.dsl.viewpoint.description.tool.ToolFactory;
@@ -53,8 +72,10 @@ import fr.obeo.dsl.viewpoint.table.metamodel.table.description.LineMapping;
  */
 public class Initializer {
 
+	private static final String DEFAULT_LABEL_EXPRESSION = "feature:name";
 	private EditingDomain editingDomain;
 	private SPrototyper sPrototyper;
+	private Environment environment;
 
 	public Initializer(EditingDomain editingDomain, SPrototyper sPrototyper) {
 		this.editingDomain = editingDomain;
@@ -73,7 +94,7 @@ public class Initializer {
 		}
 		Map<Object, Object> options = Maps.newHashMap();
 		options.put(XMLResource.OPTION_ENCODING, "UTF-8");
-		
+
 		resource.save(options);
 
 	}
@@ -86,11 +107,12 @@ public class Initializer {
 		for (SPRepresentation spRepresentation : spViewpoint.getRepresentations()) {
 			if (spRepresentation instanceof SPTable) {
 				SPTable spTable = (SPTable) spRepresentation;
-				EditionTableDescription editionTableDescription = createEditionTable(
-						spViewpoint, spTable);
-
+				EditionTableDescription editionTableDescription = createEditionTable(spViewpoint, spTable);
 				viewpoint.getOwnedRepresentations().add(editionTableDescription);
-
+			} else if (spRepresentation instanceof SPDiagram) {
+				SPDiagram spDiagram = (SPDiagram)spRepresentation;
+				DiagramDescription diagramDescription = createDiagram(spViewpoint, spDiagram);
+				viewpoint.getOwnedRepresentations().add(diagramDescription);
 			}
 		}
 		return viewpoint;
@@ -133,7 +155,7 @@ public class Initializer {
 		LineMapping lm = fr.obeo.dsl.viewpoint.table.metamodel.table.description.DescriptionFactory.eINSTANCE.createLineMapping();
 		lm.setDomainClass(element.getEClass());
 		String elementName = Iterables.getLast(Splitter.on('.').split(element.getEClass()));
-		String representationQualifier = computeRepresentationQualifier(spViewpoint, spTable);
+		String representationQualifier = computeTableQualifier(spViewpoint, spTable);
 		String mappingName = representationQualifier  + ".line." + elementName;
 		lm.setName(mappingName);
 		lm.setSemanticCandidatesExpression(generateVPExpression(element.getExpression()));
@@ -210,7 +232,7 @@ public class Initializer {
 
 	private FeatureColumnMapping createPropertyMapping(SPViewpoint spViewpoint, SPTable spTable, TableProperty property) {
 		FeatureColumnMapping cm = fr.obeo.dsl.viewpoint.table.metamodel.table.description.DescriptionFactory.eINSTANCE.createFeatureColumnMapping();
- 		cm.setName(computeRepresentationQualifier(spViewpoint, spTable) + ".column." + property.getFeature().toLowerCase());
+		cm.setName(computeTableQualifier(spViewpoint, spTable) + ".column." + property.getFeature().toLowerCase());
 		cm.setFeatureName(property.getFeature());
 		if (!Strings.isNullOrEmpty(property.getLabel())) {
 			cm.setHeaderLabelExpression(property.getLabel());
@@ -219,6 +241,118 @@ public class Initializer {
 			cm.setLabelExpression(generateVPExpression(property.getExpression()));
 		}
 		return cm;
+	}
+
+
+	private DiagramDescription createDiagram(SPViewpoint spViewpoint, SPDiagram spDiagram) {
+		DiagramDescription diagramDescription = DescriptionFactory.eINSTANCE.createDiagramDescription();
+		diagramDescription.setDomainClass(spDiagram.getRoot());
+		diagramDescription.setName(sPrototyper.getQualifier() + "." + computeViewpointShortcut(spViewpoint) + ".rep." + spDiagram.getName());
+		if (!Strings.isNullOrEmpty(spDiagram.getLabel())) {
+			diagramDescription.setLabel(spDiagram.getLabel());
+		} else {
+			diagramDescription.setLabel(spDiagram.getName());
+		}
+		if (!Strings.isNullOrEmpty(spDiagram.getTitle())) {
+			diagramDescription.setTitleExpression(spDiagram.getTitle());
+		}
+		for (MetamodelRef mmRef : spDiagram.getMetamodels()) {
+			EPackage ePackage = EPackage.Registry.INSTANCE.getEPackage(mmRef.getMetamodel());
+			if (ePackage != null) {
+				diagramDescription.getMetamodel().add(ePackage);
+			} else {
+				//TODO log
+			}
+		}
+		Layer defaultLayer = DescriptionFactory.eINSTANCE.createLayer();
+		defaultLayer.setName("default");
+		diagramDescription.setDefaultLayer(defaultLayer);
+		for (DiagramElement element : spDiagram.getElements()) {
+			if (element instanceof Container) {
+				ContainerMapping mapping = createContainerMapping(spViewpoint, spDiagram, (Container)element, defaultLayer);
+			}
+		}
+		return diagramDescription;
+	}
+
+
+	private ContainerMapping createContainerMapping(SPViewpoint spViewpoint, SPDiagram spDiagram, Container containerDefinition, EObject parent) {
+		ContainerMapping containerMapping = DescriptionFactory.eINSTANCE.createContainerMapping();
+		containerMapping.setDomainClass(containerDefinition.getEClass());
+		String elementName = Iterables.getLast(Splitter.on('.').split(containerDefinition.getEClass()));
+		String representationQualifier = computeDiagramQualifier(spViewpoint, spDiagram);
+		String mappingName = representationQualifier  + ".container." + elementName;
+		containerMapping.setName(mappingName);
+		containerMapping.setSemanticCandidatesExpression(generateVPExpression(containerDefinition.getExpression()));
+		if (!Strings.isNullOrEmpty(containerDefinition.getContainerType()) && "list".equals(containerDefinition.getContainerType())) {
+			containerMapping.setChildrenPresentation(ContainerLayout.LIST);
+		}
+		FlatContainerStyleDescription containerStyle = StyleFactory.eINSTANCE.createFlatContainerStyleDescription();
+		containerStyle.setLabelFormat(FontFormat.BOLD_LITERAL);
+
+
+		ContainerColorDefinition colorDefinition = containerDefinition.getColor();
+		if (colorDefinition instanceof GradientColorDefinition) {
+			GradientColorDefinition gcd = (GradientColorDefinition) colorDefinition;
+			containerStyle.setBackgroundColor(getColor(gcd.getTo()));
+			containerStyle.setForegroundColor(getColor(gcd.getFrom()));			
+		} else if (colorDefinition instanceof SolidColorDefinition) {
+			SolidColorDefinition scd = (SolidColorDefinition) colorDefinition;
+			containerStyle.setBackgroundColor(getColor(scd.getColor()));
+			containerStyle.setForegroundColor(getColor(scd.getColor()));			
+		}
+
+
+		if (containerDefinition.getLabel() != null) {
+			LabelStyleDefinition labelDefinition = containerDefinition.getLabel(); 
+			if (labelDefinition.getExpression() != null) {
+				containerStyle.setLabelExpression(generateVPExpression(labelDefinition.getExpression()));
+			} else {
+				containerStyle.setLabelExpression(DEFAULT_LABEL_EXPRESSION);
+			}
+			if (labelDefinition.getColor() != null) {
+				containerStyle.setLabelColor(getColor(labelDefinition.getColor().getColor()));
+				if (labelDefinition.eIsSet(SPrototyperPackage.Literals.LABEL_STYLE_DEFINITION__SIZE)) {
+					containerStyle.setLabelSize(labelDefinition.getSize());
+				}
+				boolean bold = true; boolean italic = false;
+				if (labelDefinition.eIsSet(SPrototyperPackage.Literals.LABEL_STYLE_DEFINITION__BOLD)) {
+					bold = labelDefinition.isBold();
+				}
+				if (labelDefinition.eIsSet(SPrototyperPackage.Literals.LABEL_STYLE_DEFINITION__ITALIC)) {
+					italic = labelDefinition.isItalic();						
+				}
+				FontFormat fontFormat;
+				if (bold) {
+					if (italic) {
+						fontFormat = FontFormat.BOLD_ITALIC_LITERAL;
+					} else {
+						fontFormat = FontFormat.BOLD_LITERAL;
+					}
+				} else {
+					if (italic) {
+						fontFormat = FontFormat.ITALIC_LITERAL;
+					} else {
+						fontFormat = FontFormat.NORMAL_LITERAL;
+					}
+				}
+				containerStyle.setLabelFormat(fontFormat);
+			}
+		} else {
+			containerStyle.setLabelExpression(DEFAULT_LABEL_EXPRESSION);
+		}
+		if (containerDefinition.getBorder() != null) {
+			BorderStyleDefinition borderDefinition = containerDefinition.getBorder();
+			containerStyle.setBorderColor(getColor(borderDefinition.getColor().getColor()));			
+			if (borderDefinition.eIsSet(SPrototyperPackage.Literals.BORDER_STYLE_DEFINITION__SIZE)) {
+				containerStyle.setBorderSizeComputationExpression(String.valueOf(borderDefinition.getSize()));
+			}
+		}
+		containerMapping.setStyle(containerStyle);
+		if (parent instanceof Layer) {
+			((Layer) parent).getContainerMappings().add(containerMapping);
+		}
+		return containerMapping;
 	}
 
 
@@ -242,7 +376,11 @@ public class Initializer {
 		return shortcut;
 	}
 
-	private String computeRepresentationQualifier(SPViewpoint spViewpoint, SPTable spTable) {
+	private String computeDiagramQualifier(SPViewpoint spViewpoint, SPDiagram spDiagram) {
+		return sPrototyper.getQualifier() + "." + computeViewpointShortcut(spViewpoint) + "." + spDiagram.getName().toLowerCase();
+	}
+
+	private String computeTableQualifier(SPViewpoint spViewpoint, SPTable spTable) {
 		return sPrototyper.getQualifier() + "." + computeViewpointShortcut(spViewpoint) + "." + spTable.getName().toLowerCase();
 	}
 
@@ -251,7 +389,33 @@ public class Initializer {
 		URI rootURI = prototyperResource.getURI().trimSegments(1);
 		URI resourceURI = rootURI.appendSegment(sPrototyper.getName()).appendFileExtension("odesign");
 		return prototyperResource.getResourceSet().createResource(resourceURI);
+	}
 
+	private ColorDescription getColor(String color) {
+		Environment env = getEnvironment();
+		String zeColor = color.replaceAll(" ", "_");
+		for (SystemColor sysColor : env.getSystemColors().getEntries()) {
+			if (zeColor.equals(sysColor.getName())) {
+				return sysColor;
+			}
+		}
+		return null;
+	}
+
+
+	private Environment getEnvironment() {
+		if (environment == null) {
+			Resource viewpointEnvironmentResource = editingDomain.getResourceSet().getResource(URI.createURI("environment:/viewpoint"), true);
+			if (viewpointEnvironmentResource != null 
+					&& viewpointEnvironmentResource.getContents() != null 
+					&& !viewpointEnvironmentResource.getContents().isEmpty() 
+					&& viewpointEnvironmentResource.getContents().get(0) instanceof Environment) {
+				environment = (Environment) viewpointEnvironmentResource.getContents().get(0);
+			} else {
+				//TODO log
+			}
+		}
+		return environment;
 	}
 
 }

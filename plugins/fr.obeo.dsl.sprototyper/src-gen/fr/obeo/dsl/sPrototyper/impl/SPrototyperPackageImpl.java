@@ -3,8 +3,14 @@
 package fr.obeo.dsl.sPrototyper.impl;
 
 import fr.obeo.dsl.sPrototyper.AcceleoExpression;
+import fr.obeo.dsl.sPrototyper.BorderStyleDefinition;
+import fr.obeo.dsl.sPrototyper.ContainerColorDefinition;
+import fr.obeo.dsl.sPrototyper.DiagramElement;
 import fr.obeo.dsl.sPrototyper.FeatureRef;
+import fr.obeo.dsl.sPrototyper.GradientColorDefinition;
+import fr.obeo.dsl.sPrototyper.LabelStyleDefinition;
 import fr.obeo.dsl.sPrototyper.MetamodelRef;
+import fr.obeo.dsl.sPrototyper.SPDiagram;
 import fr.obeo.dsl.sPrototyper.SPExpression;
 import fr.obeo.dsl.sPrototyper.SPRepresentation;
 import fr.obeo.dsl.sPrototyper.SPTable;
@@ -12,6 +18,7 @@ import fr.obeo.dsl.sPrototyper.SPViewpoint;
 import fr.obeo.dsl.sPrototyper.SPrototyper;
 import fr.obeo.dsl.sPrototyper.SPrototyperFactory;
 import fr.obeo.dsl.sPrototyper.SPrototyperPackage;
+import fr.obeo.dsl.sPrototyper.SolidColorDefinition;
 import fr.obeo.dsl.sPrototyper.TableElement;
 import fr.obeo.dsl.sPrototyper.TableProperty;
 import fr.obeo.dsl.sPrototyper.VarRef;
@@ -72,6 +79,62 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * @generated
    */
   private EClass tablePropertyEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass spDiagramEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass diagramElementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass containerEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass solidColorDefinitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass containerColorDefinitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass gradientColorDefinitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass labelStyleDefinitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass borderStyleDefinitionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -276,6 +339,56 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getSPRepresentation_Name()
+  {
+    return (EAttribute)spRepresentationEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSPRepresentation_Label()
+  {
+    return (EAttribute)spRepresentationEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSPRepresentation_Title()
+  {
+    return (EAttribute)spRepresentationEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getSPRepresentation_Metamodels()
+  {
+    return (EReference)spRepresentationEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSPRepresentation_Root()
+  {
+    return (EAttribute)spRepresentationEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getSPTable()
   {
     return spTableEClass;
@@ -286,59 +399,9 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getSPTable_Name()
-  {
-    return (EAttribute)spTableEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getSPTable_Label()
-  {
-    return (EAttribute)spTableEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getSPTable_Title()
-  {
-    return (EAttribute)spTableEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getSPTable_Metamodels()
-  {
-    return (EReference)spTableEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getSPTable_Root()
-  {
-    return (EAttribute)spTableEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getSPTable_Elements()
   {
-    return (EReference)spTableEClass.getEStructuralFeatures().get(5);
+    return (EReference)spTableEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -348,7 +411,7 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    */
   public EReference getSPTable_Properties()
   {
-    return (EReference)spTableEClass.getEStructuralFeatures().get(6);
+    return (EReference)spTableEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -449,6 +512,256 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
   public EReference getTableProperty_Expression()
   {
     return (EReference)tablePropertyEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSPDiagram()
+  {
+    return spDiagramEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getSPDiagram_Elements()
+  {
+    return (EReference)spDiagramEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDiagramElement()
+  {
+    return diagramElementEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getContainer()
+  {
+    return containerEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getContainer_ContainerType()
+  {
+    return (EAttribute)containerEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getContainer_EClass()
+  {
+    return (EAttribute)containerEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getContainer_Expression()
+  {
+    return (EReference)containerEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getContainer_Color()
+  {
+    return (EReference)containerEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getContainer_Label()
+  {
+    return (EReference)containerEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getContainer_Border()
+  {
+    return (EReference)containerEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSolidColorDefinition()
+  {
+    return solidColorDefinitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSolidColorDefinition_Color()
+  {
+    return (EAttribute)solidColorDefinitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getContainerColorDefinition()
+  {
+    return containerColorDefinitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getGradientColorDefinition()
+  {
+    return gradientColorDefinitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getGradientColorDefinition_From()
+  {
+    return (EAttribute)gradientColorDefinitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getGradientColorDefinition_To()
+  {
+    return (EAttribute)gradientColorDefinitionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLabelStyleDefinition()
+  {
+    return labelStyleDefinitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLabelStyleDefinition_Expression()
+  {
+    return (EReference)labelStyleDefinitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLabelStyleDefinition_Color()
+  {
+    return (EReference)labelStyleDefinitionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLabelStyleDefinition_Size()
+  {
+    return (EAttribute)labelStyleDefinitionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLabelStyleDefinition_Bold()
+  {
+    return (EAttribute)labelStyleDefinitionEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLabelStyleDefinition_Italic()
+  {
+    return (EAttribute)labelStyleDefinitionEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getBorderStyleDefinition()
+  {
+    return borderStyleDefinitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getBorderStyleDefinition_Color()
+  {
+    return (EReference)borderStyleDefinitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getBorderStyleDefinition_Size()
+  {
+    return (EAttribute)borderStyleDefinitionEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -563,13 +876,13 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
     createEReference(spViewpointEClass, SP_VIEWPOINT__REPRESENTATIONS);
 
     spRepresentationEClass = createEClass(SP_REPRESENTATION);
+    createEAttribute(spRepresentationEClass, SP_REPRESENTATION__NAME);
+    createEAttribute(spRepresentationEClass, SP_REPRESENTATION__LABEL);
+    createEAttribute(spRepresentationEClass, SP_REPRESENTATION__TITLE);
+    createEReference(spRepresentationEClass, SP_REPRESENTATION__METAMODELS);
+    createEAttribute(spRepresentationEClass, SP_REPRESENTATION__ROOT);
 
     spTableEClass = createEClass(SP_TABLE);
-    createEAttribute(spTableEClass, SP_TABLE__NAME);
-    createEAttribute(spTableEClass, SP_TABLE__LABEL);
-    createEAttribute(spTableEClass, SP_TABLE__TITLE);
-    createEReference(spTableEClass, SP_TABLE__METAMODELS);
-    createEAttribute(spTableEClass, SP_TABLE__ROOT);
     createEReference(spTableEClass, SP_TABLE__ELEMENTS);
     createEReference(spTableEClass, SP_TABLE__PROPERTIES);
 
@@ -584,6 +897,39 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
     createEAttribute(tablePropertyEClass, TABLE_PROPERTY__FEATURE);
     createEAttribute(tablePropertyEClass, TABLE_PROPERTY__LABEL);
     createEReference(tablePropertyEClass, TABLE_PROPERTY__EXPRESSION);
+
+    spDiagramEClass = createEClass(SP_DIAGRAM);
+    createEReference(spDiagramEClass, SP_DIAGRAM__ELEMENTS);
+
+    diagramElementEClass = createEClass(DIAGRAM_ELEMENT);
+
+    containerEClass = createEClass(CONTAINER);
+    createEAttribute(containerEClass, CONTAINER__CONTAINER_TYPE);
+    createEAttribute(containerEClass, CONTAINER__ECLASS);
+    createEReference(containerEClass, CONTAINER__EXPRESSION);
+    createEReference(containerEClass, CONTAINER__COLOR);
+    createEReference(containerEClass, CONTAINER__LABEL);
+    createEReference(containerEClass, CONTAINER__BORDER);
+
+    solidColorDefinitionEClass = createEClass(SOLID_COLOR_DEFINITION);
+    createEAttribute(solidColorDefinitionEClass, SOLID_COLOR_DEFINITION__COLOR);
+
+    containerColorDefinitionEClass = createEClass(CONTAINER_COLOR_DEFINITION);
+
+    gradientColorDefinitionEClass = createEClass(GRADIENT_COLOR_DEFINITION);
+    createEAttribute(gradientColorDefinitionEClass, GRADIENT_COLOR_DEFINITION__FROM);
+    createEAttribute(gradientColorDefinitionEClass, GRADIENT_COLOR_DEFINITION__TO);
+
+    labelStyleDefinitionEClass = createEClass(LABEL_STYLE_DEFINITION);
+    createEReference(labelStyleDefinitionEClass, LABEL_STYLE_DEFINITION__EXPRESSION);
+    createEReference(labelStyleDefinitionEClass, LABEL_STYLE_DEFINITION__COLOR);
+    createEAttribute(labelStyleDefinitionEClass, LABEL_STYLE_DEFINITION__SIZE);
+    createEAttribute(labelStyleDefinitionEClass, LABEL_STYLE_DEFINITION__BOLD);
+    createEAttribute(labelStyleDefinitionEClass, LABEL_STYLE_DEFINITION__ITALIC);
+
+    borderStyleDefinitionEClass = createEClass(BORDER_STYLE_DEFINITION);
+    createEReference(borderStyleDefinitionEClass, BORDER_STYLE_DEFINITION__COLOR);
+    createEAttribute(borderStyleDefinitionEClass, BORDER_STYLE_DEFINITION__SIZE);
 
     spExpressionEClass = createEClass(SP_EXPRESSION);
     createEAttribute(spExpressionEClass, SP_EXPRESSION__VALUE);
@@ -628,6 +974,10 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
 
     // Add supertypes to classes
     spTableEClass.getESuperTypes().add(this.getSPRepresentation());
+    spDiagramEClass.getESuperTypes().add(this.getSPRepresentation());
+    containerEClass.getESuperTypes().add(this.getDiagramElement());
+    solidColorDefinitionEClass.getESuperTypes().add(this.getContainerColorDefinition());
+    gradientColorDefinitionEClass.getESuperTypes().add(this.getContainerColorDefinition());
     acceleoExpressionEClass.getESuperTypes().add(this.getSPExpression());
     varRefEClass.getESuperTypes().add(this.getSPExpression());
     featureRefEClass.getESuperTypes().add(this.getSPExpression());
@@ -645,13 +995,13 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
     initEReference(getSPViewpoint_Representations(), this.getSPRepresentation(), null, "representations", null, 0, -1, SPViewpoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(spRepresentationEClass, SPRepresentation.class, "SPRepresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSPRepresentation_Name(), ecorePackage.getEString(), "name", null, 0, 1, SPRepresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getSPRepresentation_Label(), ecorePackage.getEString(), "label", null, 0, 1, SPRepresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getSPRepresentation_Title(), ecorePackage.getEString(), "title", null, 0, 1, SPRepresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSPRepresentation_Metamodels(), this.getMetamodelRef(), null, "metamodels", null, 0, -1, SPRepresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getSPRepresentation_Root(), ecorePackage.getEString(), "root", null, 0, 1, SPRepresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(spTableEClass, SPTable.class, "SPTable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getSPTable_Name(), ecorePackage.getEString(), "name", null, 0, 1, SPTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getSPTable_Label(), ecorePackage.getEString(), "label", null, 0, 1, SPTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getSPTable_Title(), ecorePackage.getEString(), "title", null, 0, 1, SPTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getSPTable_Metamodels(), this.getMetamodelRef(), null, "metamodels", null, 0, -1, SPTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getSPTable_Root(), ecorePackage.getEString(), "root", null, 0, 1, SPTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getSPTable_Elements(), this.getTableElement(), null, "elements", null, 0, -1, SPTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getSPTable_Properties(), this.getTableProperty(), null, "properties", null, 0, -1, SPTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -666,6 +1016,39 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
     initEAttribute(getTableProperty_Feature(), ecorePackage.getEString(), "feature", null, 0, 1, TableProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTableProperty_Label(), ecorePackage.getEString(), "label", null, 0, 1, TableProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTableProperty_Expression(), this.getSPExpression(), null, "expression", null, 0, 1, TableProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(spDiagramEClass, SPDiagram.class, "SPDiagram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getSPDiagram_Elements(), this.getDiagramElement(), null, "elements", null, 0, -1, SPDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(diagramElementEClass, DiagramElement.class, "DiagramElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(containerEClass, fr.obeo.dsl.sPrototyper.Container.class, "Container", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getContainer_ContainerType(), ecorePackage.getEString(), "containerType", null, 0, 1, fr.obeo.dsl.sPrototyper.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getContainer_EClass(), ecorePackage.getEString(), "eClass", null, 0, 1, fr.obeo.dsl.sPrototyper.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getContainer_Expression(), this.getSPExpression(), null, "expression", null, 0, 1, fr.obeo.dsl.sPrototyper.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getContainer_Color(), this.getContainerColorDefinition(), null, "color", null, 0, 1, fr.obeo.dsl.sPrototyper.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getContainer_Label(), this.getLabelStyleDefinition(), null, "label", null, 0, 1, fr.obeo.dsl.sPrototyper.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getContainer_Border(), this.getBorderStyleDefinition(), null, "border", null, 0, 1, fr.obeo.dsl.sPrototyper.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(solidColorDefinitionEClass, SolidColorDefinition.class, "SolidColorDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSolidColorDefinition_Color(), ecorePackage.getEString(), "color", null, 0, 1, SolidColorDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(containerColorDefinitionEClass, ContainerColorDefinition.class, "ContainerColorDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(gradientColorDefinitionEClass, GradientColorDefinition.class, "GradientColorDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getGradientColorDefinition_From(), ecorePackage.getEString(), "from", null, 0, 1, GradientColorDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getGradientColorDefinition_To(), ecorePackage.getEString(), "to", null, 0, 1, GradientColorDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(labelStyleDefinitionEClass, LabelStyleDefinition.class, "LabelStyleDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getLabelStyleDefinition_Expression(), this.getSPExpression(), null, "expression", null, 0, 1, LabelStyleDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getLabelStyleDefinition_Color(), this.getSolidColorDefinition(), null, "color", null, 0, 1, LabelStyleDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getLabelStyleDefinition_Size(), ecorePackage.getEInt(), "size", null, 0, 1, LabelStyleDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getLabelStyleDefinition_Bold(), ecorePackage.getEBoolean(), "bold", null, 0, 1, LabelStyleDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getLabelStyleDefinition_Italic(), ecorePackage.getEBoolean(), "italic", null, 0, 1, LabelStyleDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(borderStyleDefinitionEClass, BorderStyleDefinition.class, "BorderStyleDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getBorderStyleDefinition_Color(), this.getSolidColorDefinition(), null, "color", null, 0, 1, BorderStyleDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getBorderStyleDefinition_Size(), ecorePackage.getEInt(), "size", null, 0, 1, BorderStyleDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(spExpressionEClass, SPExpression.class, "SPExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getSPExpression_Value(), ecorePackage.getEString(), "value", null, 0, 1, SPExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

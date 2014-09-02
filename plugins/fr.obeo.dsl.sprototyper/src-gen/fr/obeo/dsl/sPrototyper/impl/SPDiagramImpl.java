@@ -2,10 +2,9 @@
  */
 package fr.obeo.dsl.sPrototyper.impl;
 
-import fr.obeo.dsl.sPrototyper.SPTable;
+import fr.obeo.dsl.sPrototyper.DiagramElement;
+import fr.obeo.dsl.sPrototyper.SPDiagram;
 import fr.obeo.dsl.sPrototyper.SPrototyperPackage;
-import fr.obeo.dsl.sPrototyper.TableElement;
-import fr.obeo.dsl.sPrototyper.TableProperty;
 
 import java.util.Collection;
 
@@ -21,19 +20,18 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>SP Table</b></em>'.
+ * An implementation of the model object '<em><b>SP Diagram</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link fr.obeo.dsl.sPrototyper.impl.SPTableImpl#getElements <em>Elements</em>}</li>
- *   <li>{@link fr.obeo.dsl.sPrototyper.impl.SPTableImpl#getProperties <em>Properties</em>}</li>
+ *   <li>{@link fr.obeo.dsl.sPrototyper.impl.SPDiagramImpl#getElements <em>Elements</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class SPTableImpl extends SPRepresentationImpl implements SPTable
+public class SPDiagramImpl extends SPRepresentationImpl implements SPDiagram
 {
   /**
    * The cached value of the '{@link #getElements() <em>Elements</em>}' containment reference list.
@@ -43,24 +41,14 @@ public class SPTableImpl extends SPRepresentationImpl implements SPTable
    * @generated
    * @ordered
    */
-  protected EList<TableElement> elements;
-
-  /**
-   * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getProperties()
-   * @generated
-   * @ordered
-   */
-  protected EList<TableProperty> properties;
+  protected EList<DiagramElement> elements;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected SPTableImpl()
+  protected SPDiagramImpl()
   {
     super();
   }
@@ -73,7 +61,7 @@ public class SPTableImpl extends SPRepresentationImpl implements SPTable
   @Override
   protected EClass eStaticClass()
   {
-    return SPrototyperPackage.Literals.SP_TABLE;
+    return SPrototyperPackage.Literals.SP_DIAGRAM;
   }
 
   /**
@@ -81,27 +69,13 @@ public class SPTableImpl extends SPRepresentationImpl implements SPTable
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<TableElement> getElements()
+  public EList<DiagramElement> getElements()
   {
     if (elements == null)
     {
-      elements = new EObjectContainmentEList<TableElement>(TableElement.class, this, SPrototyperPackage.SP_TABLE__ELEMENTS);
+      elements = new EObjectContainmentEList<DiagramElement>(DiagramElement.class, this, SPrototyperPackage.SP_DIAGRAM__ELEMENTS);
     }
     return elements;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<TableProperty> getProperties()
-  {
-    if (properties == null)
-    {
-      properties = new EObjectContainmentEList<TableProperty>(TableProperty.class, this, SPrototyperPackage.SP_TABLE__PROPERTIES);
-    }
-    return properties;
   }
 
   /**
@@ -114,10 +88,8 @@ public class SPTableImpl extends SPRepresentationImpl implements SPTable
   {
     switch (featureID)
     {
-      case SPrototyperPackage.SP_TABLE__ELEMENTS:
+      case SPrototyperPackage.SP_DIAGRAM__ELEMENTS:
         return ((InternalEList<?>)getElements()).basicRemove(otherEnd, msgs);
-      case SPrototyperPackage.SP_TABLE__PROPERTIES:
-        return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -132,10 +104,8 @@ public class SPTableImpl extends SPRepresentationImpl implements SPTable
   {
     switch (featureID)
     {
-      case SPrototyperPackage.SP_TABLE__ELEMENTS:
+      case SPrototyperPackage.SP_DIAGRAM__ELEMENTS:
         return getElements();
-      case SPrototyperPackage.SP_TABLE__PROPERTIES:
-        return getProperties();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -151,13 +121,9 @@ public class SPTableImpl extends SPRepresentationImpl implements SPTable
   {
     switch (featureID)
     {
-      case SPrototyperPackage.SP_TABLE__ELEMENTS:
+      case SPrototyperPackage.SP_DIAGRAM__ELEMENTS:
         getElements().clear();
-        getElements().addAll((Collection<? extends TableElement>)newValue);
-        return;
-      case SPrototyperPackage.SP_TABLE__PROPERTIES:
-        getProperties().clear();
-        getProperties().addAll((Collection<? extends TableProperty>)newValue);
+        getElements().addAll((Collection<? extends DiagramElement>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -173,11 +139,8 @@ public class SPTableImpl extends SPRepresentationImpl implements SPTable
   {
     switch (featureID)
     {
-      case SPrototyperPackage.SP_TABLE__ELEMENTS:
+      case SPrototyperPackage.SP_DIAGRAM__ELEMENTS:
         getElements().clear();
-        return;
-      case SPrototyperPackage.SP_TABLE__PROPERTIES:
-        getProperties().clear();
         return;
     }
     super.eUnset(featureID);
@@ -193,12 +156,10 @@ public class SPTableImpl extends SPRepresentationImpl implements SPTable
   {
     switch (featureID)
     {
-      case SPrototyperPackage.SP_TABLE__ELEMENTS:
+      case SPrototyperPackage.SP_DIAGRAM__ELEMENTS:
         return elements != null && !elements.isEmpty();
-      case SPrototyperPackage.SP_TABLE__PROPERTIES:
-        return properties != null && !properties.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-} //SPTableImpl
+} //SPDiagramImpl

@@ -77,6 +77,78 @@ public interface SPrototyperFactory extends EFactory
   TableProperty createTableProperty();
 
   /**
+   * Returns a new object of class '<em>SP Diagram</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>SP Diagram</em>'.
+   * @generated
+   */
+  SPDiagram createSPDiagram();
+
+  /**
+   * Returns a new object of class '<em>Diagram Element</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Diagram Element</em>'.
+   * @generated
+   */
+  DiagramElement createDiagramElement();
+
+  /**
+   * Returns a new object of class '<em>Container</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Container</em>'.
+   * @generated
+   */
+  Container createContainer();
+
+  /**
+   * Returns a new object of class '<em>Solid Color Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Solid Color Definition</em>'.
+   * @generated
+   */
+  SolidColorDefinition createSolidColorDefinition();
+
+  /**
+   * Returns a new object of class '<em>Container Color Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Container Color Definition</em>'.
+   * @generated
+   */
+  ContainerColorDefinition createContainerColorDefinition();
+
+  /**
+   * Returns a new object of class '<em>Gradient Color Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Gradient Color Definition</em>'.
+   * @generated
+   */
+  GradientColorDefinition createGradientColorDefinition();
+
+  /**
+   * Returns a new object of class '<em>Label Style Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Label Style Definition</em>'.
+   * @generated
+   */
+  LabelStyleDefinition createLabelStyleDefinition();
+
+  /**
+   * Returns a new object of class '<em>Border Style Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Border Style Definition</em>'.
+   * @generated
+   */
+  BorderStyleDefinition createBorderStyleDefinition();
+
+  /**
    * Returns a new object of class '<em>SP Expression</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

@@ -14,14 +14,15 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="representations" upperBound="-1"
         eType="#//SPRepresentation" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SPRepresentation"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SPTable" eSuperTypes="#//SPRepresentation">
+  <eClassifiers xsi:type="ecore:EClass" name="SPRepresentation">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="metamodels" upperBound="-1"
         eType="#//MetamodelRef" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="root" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SPTable" eSuperTypes="#//SPRepresentation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
         eType="#//TableElement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
@@ -41,6 +42,45 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//SPExpression"
         containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SPDiagram" eSuperTypes="#//SPRepresentation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//DiagramElement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DiagramElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Container" eSuperTypes="#//DiagramElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="containerType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//SPExpression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="color" eType="#//ContainerColorDefinition"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="label" eType="#//LabelStyleDefinition"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="border" eType="#//BorderStyleDefinition"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SolidColorDefinition" eSuperTypes="#//ContainerColorDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContainerColorDefinition"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GradientColorDefinition" eSuperTypes="#//ContainerColorDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="from" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="to" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LabelStyleDefinition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//SPExpression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="color" eType="#//SolidColorDefinition"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bold" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="italic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BorderStyleDefinition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="color" eType="#//SolidColorDefinition"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SPExpression">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

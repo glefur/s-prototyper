@@ -115,6 +115,66 @@ public class SPrototyperSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case SPrototyperPackage.SP_DIAGRAM:
+      {
+        SPDiagram spDiagram = (SPDiagram)theEObject;
+        T result = caseSPDiagram(spDiagram);
+        if (result == null) result = caseSPRepresentation(spDiagram);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SPrototyperPackage.DIAGRAM_ELEMENT:
+      {
+        DiagramElement diagramElement = (DiagramElement)theEObject;
+        T result = caseDiagramElement(diagramElement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SPrototyperPackage.CONTAINER:
+      {
+        Container container = (Container)theEObject;
+        T result = caseContainer(container);
+        if (result == null) result = caseDiagramElement(container);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SPrototyperPackage.SOLID_COLOR_DEFINITION:
+      {
+        SolidColorDefinition solidColorDefinition = (SolidColorDefinition)theEObject;
+        T result = caseSolidColorDefinition(solidColorDefinition);
+        if (result == null) result = caseContainerColorDefinition(solidColorDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SPrototyperPackage.CONTAINER_COLOR_DEFINITION:
+      {
+        ContainerColorDefinition containerColorDefinition = (ContainerColorDefinition)theEObject;
+        T result = caseContainerColorDefinition(containerColorDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SPrototyperPackage.GRADIENT_COLOR_DEFINITION:
+      {
+        GradientColorDefinition gradientColorDefinition = (GradientColorDefinition)theEObject;
+        T result = caseGradientColorDefinition(gradientColorDefinition);
+        if (result == null) result = caseContainerColorDefinition(gradientColorDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SPrototyperPackage.LABEL_STYLE_DEFINITION:
+      {
+        LabelStyleDefinition labelStyleDefinition = (LabelStyleDefinition)theEObject;
+        T result = caseLabelStyleDefinition(labelStyleDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SPrototyperPackage.BORDER_STYLE_DEFINITION:
+      {
+        BorderStyleDefinition borderStyleDefinition = (BorderStyleDefinition)theEObject;
+        T result = caseBorderStyleDefinition(borderStyleDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case SPrototyperPackage.SP_EXPRESSION:
       {
         SPExpression spExpression = (SPExpression)theEObject;
@@ -249,6 +309,134 @@ public class SPrototyperSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseTableProperty(TableProperty object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>SP Diagram</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>SP Diagram</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSPDiagram(SPDiagram object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Diagram Element</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Diagram Element</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDiagramElement(DiagramElement object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Container</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Container</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseContainer(Container object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Solid Color Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Solid Color Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSolidColorDefinition(SolidColorDefinition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Container Color Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Container Color Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseContainerColorDefinition(ContainerColorDefinition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Gradient Color Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Gradient Color Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseGradientColorDefinition(GradientColorDefinition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Label Style Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Label Style Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLabelStyleDefinition(LabelStyleDefinition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Border Style Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Border Style Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBorderStyleDefinition(BorderStyleDefinition object)
   {
     return null;
   }

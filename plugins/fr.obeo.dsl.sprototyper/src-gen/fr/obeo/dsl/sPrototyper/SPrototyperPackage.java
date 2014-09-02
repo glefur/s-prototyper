@@ -168,13 +168,58 @@ public interface SPrototyperPackage extends EPackage
   int SP_REPRESENTATION = 2;
 
   /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SP_REPRESENTATION__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SP_REPRESENTATION__LABEL = 1;
+
+  /**
+   * The feature id for the '<em><b>Title</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SP_REPRESENTATION__TITLE = 2;
+
+  /**
+   * The feature id for the '<em><b>Metamodels</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SP_REPRESENTATION__METAMODELS = 3;
+
+  /**
+   * The feature id for the '<em><b>Root</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SP_REPRESENTATION__ROOT = 4;
+
+  /**
    * The number of structural features of the '<em>SP Representation</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SP_REPRESENTATION_FEATURE_COUNT = 0;
+  int SP_REPRESENTATION_FEATURE_COUNT = 5;
 
   /**
    * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.SPTableImpl <em>SP Table</em>}' class.
@@ -193,7 +238,7 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SP_TABLE__NAME = SP_REPRESENTATION_FEATURE_COUNT + 0;
+  int SP_TABLE__NAME = SP_REPRESENTATION__NAME;
 
   /**
    * The feature id for the '<em><b>Label</b></em>' attribute.
@@ -202,7 +247,7 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SP_TABLE__LABEL = SP_REPRESENTATION_FEATURE_COUNT + 1;
+  int SP_TABLE__LABEL = SP_REPRESENTATION__LABEL;
 
   /**
    * The feature id for the '<em><b>Title</b></em>' attribute.
@@ -211,7 +256,7 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SP_TABLE__TITLE = SP_REPRESENTATION_FEATURE_COUNT + 2;
+  int SP_TABLE__TITLE = SP_REPRESENTATION__TITLE;
 
   /**
    * The feature id for the '<em><b>Metamodels</b></em>' containment reference list.
@@ -220,7 +265,7 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SP_TABLE__METAMODELS = SP_REPRESENTATION_FEATURE_COUNT + 3;
+  int SP_TABLE__METAMODELS = SP_REPRESENTATION__METAMODELS;
 
   /**
    * The feature id for the '<em><b>Root</b></em>' attribute.
@@ -229,7 +274,7 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SP_TABLE__ROOT = SP_REPRESENTATION_FEATURE_COUNT + 4;
+  int SP_TABLE__ROOT = SP_REPRESENTATION__ROOT;
 
   /**
    * The feature id for the '<em><b>Elements</b></em>' containment reference list.
@@ -238,7 +283,7 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SP_TABLE__ELEMENTS = SP_REPRESENTATION_FEATURE_COUNT + 5;
+  int SP_TABLE__ELEMENTS = SP_REPRESENTATION_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -247,7 +292,7 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SP_TABLE__PROPERTIES = SP_REPRESENTATION_FEATURE_COUNT + 6;
+  int SP_TABLE__PROPERTIES = SP_REPRESENTATION_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>SP Table</em>' class.
@@ -256,7 +301,7 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SP_TABLE_FEATURE_COUNT = SP_REPRESENTATION_FEATURE_COUNT + 7;
+  int SP_TABLE_FEATURE_COUNT = SP_REPRESENTATION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.TableElementImpl <em>Table Element</em>}' class.
@@ -369,6 +414,356 @@ public interface SPrototyperPackage extends EPackage
   int TABLE_PROPERTY_FEATURE_COUNT = 3;
 
   /**
+   * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.SPDiagramImpl <em>SP Diagram</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.obeo.dsl.sPrototyper.impl.SPDiagramImpl
+   * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getSPDiagram()
+   * @generated
+   */
+  int SP_DIAGRAM = 6;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SP_DIAGRAM__NAME = SP_REPRESENTATION__NAME;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SP_DIAGRAM__LABEL = SP_REPRESENTATION__LABEL;
+
+  /**
+   * The feature id for the '<em><b>Title</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SP_DIAGRAM__TITLE = SP_REPRESENTATION__TITLE;
+
+  /**
+   * The feature id for the '<em><b>Metamodels</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SP_DIAGRAM__METAMODELS = SP_REPRESENTATION__METAMODELS;
+
+  /**
+   * The feature id for the '<em><b>Root</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SP_DIAGRAM__ROOT = SP_REPRESENTATION__ROOT;
+
+  /**
+   * The feature id for the '<em><b>Elements</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SP_DIAGRAM__ELEMENTS = SP_REPRESENTATION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>SP Diagram</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SP_DIAGRAM_FEATURE_COUNT = SP_REPRESENTATION_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.DiagramElementImpl <em>Diagram Element</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.obeo.dsl.sPrototyper.impl.DiagramElementImpl
+   * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getDiagramElement()
+   * @generated
+   */
+  int DIAGRAM_ELEMENT = 7;
+
+  /**
+   * The number of structural features of the '<em>Diagram Element</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DIAGRAM_ELEMENT_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.ContainerImpl <em>Container</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.obeo.dsl.sPrototyper.impl.ContainerImpl
+   * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getContainer()
+   * @generated
+   */
+  int CONTAINER = 8;
+
+  /**
+   * The feature id for the '<em><b>Container Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONTAINER__CONTAINER_TYPE = DIAGRAM_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>EClass</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONTAINER__ECLASS = DIAGRAM_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONTAINER__EXPRESSION = DIAGRAM_ELEMENT_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Color</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONTAINER__COLOR = DIAGRAM_ELEMENT_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONTAINER__LABEL = DIAGRAM_ELEMENT_FEATURE_COUNT + 4;
+
+  /**
+   * The feature id for the '<em><b>Border</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONTAINER__BORDER = DIAGRAM_ELEMENT_FEATURE_COUNT + 5;
+
+  /**
+   * The number of structural features of the '<em>Container</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONTAINER_FEATURE_COUNT = DIAGRAM_ELEMENT_FEATURE_COUNT + 6;
+
+  /**
+   * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.ContainerColorDefinitionImpl <em>Container Color Definition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.obeo.dsl.sPrototyper.impl.ContainerColorDefinitionImpl
+   * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getContainerColorDefinition()
+   * @generated
+   */
+  int CONTAINER_COLOR_DEFINITION = 10;
+
+  /**
+   * The number of structural features of the '<em>Container Color Definition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONTAINER_COLOR_DEFINITION_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.SolidColorDefinitionImpl <em>Solid Color Definition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.obeo.dsl.sPrototyper.impl.SolidColorDefinitionImpl
+   * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getSolidColorDefinition()
+   * @generated
+   */
+  int SOLID_COLOR_DEFINITION = 9;
+
+  /**
+   * The feature id for the '<em><b>Color</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SOLID_COLOR_DEFINITION__COLOR = CONTAINER_COLOR_DEFINITION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Solid Color Definition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SOLID_COLOR_DEFINITION_FEATURE_COUNT = CONTAINER_COLOR_DEFINITION_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.GradientColorDefinitionImpl <em>Gradient Color Definition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.obeo.dsl.sPrototyper.impl.GradientColorDefinitionImpl
+   * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getGradientColorDefinition()
+   * @generated
+   */
+  int GRADIENT_COLOR_DEFINITION = 11;
+
+  /**
+   * The feature id for the '<em><b>From</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GRADIENT_COLOR_DEFINITION__FROM = CONTAINER_COLOR_DEFINITION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>To</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GRADIENT_COLOR_DEFINITION__TO = CONTAINER_COLOR_DEFINITION_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Gradient Color Definition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GRADIENT_COLOR_DEFINITION_FEATURE_COUNT = CONTAINER_COLOR_DEFINITION_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.LabelStyleDefinitionImpl <em>Label Style Definition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.obeo.dsl.sPrototyper.impl.LabelStyleDefinitionImpl
+   * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getLabelStyleDefinition()
+   * @generated
+   */
+  int LABEL_STYLE_DEFINITION = 12;
+
+  /**
+   * The feature id for the '<em><b>Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LABEL_STYLE_DEFINITION__EXPRESSION = 0;
+
+  /**
+   * The feature id for the '<em><b>Color</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LABEL_STYLE_DEFINITION__COLOR = 1;
+
+  /**
+   * The feature id for the '<em><b>Size</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LABEL_STYLE_DEFINITION__SIZE = 2;
+
+  /**
+   * The feature id for the '<em><b>Bold</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LABEL_STYLE_DEFINITION__BOLD = 3;
+
+  /**
+   * The feature id for the '<em><b>Italic</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LABEL_STYLE_DEFINITION__ITALIC = 4;
+
+  /**
+   * The number of structural features of the '<em>Label Style Definition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LABEL_STYLE_DEFINITION_FEATURE_COUNT = 5;
+
+  /**
+   * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.BorderStyleDefinitionImpl <em>Border Style Definition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.obeo.dsl.sPrototyper.impl.BorderStyleDefinitionImpl
+   * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getBorderStyleDefinition()
+   * @generated
+   */
+  int BORDER_STYLE_DEFINITION = 13;
+
+  /**
+   * The feature id for the '<em><b>Color</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BORDER_STYLE_DEFINITION__COLOR = 0;
+
+  /**
+   * The feature id for the '<em><b>Size</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BORDER_STYLE_DEFINITION__SIZE = 1;
+
+  /**
+   * The number of structural features of the '<em>Border Style Definition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BORDER_STYLE_DEFINITION_FEATURE_COUNT = 2;
+
+  /**
    * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.SPExpressionImpl <em>SP Expression</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -376,7 +771,7 @@ public interface SPrototyperPackage extends EPackage
    * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getSPExpression()
    * @generated
    */
-  int SP_EXPRESSION = 6;
+  int SP_EXPRESSION = 14;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -404,7 +799,7 @@ public interface SPrototyperPackage extends EPackage
    * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getAcceleoExpression()
    * @generated
    */
-  int ACCELEO_EXPRESSION = 7;
+  int ACCELEO_EXPRESSION = 15;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -432,7 +827,7 @@ public interface SPrototyperPackage extends EPackage
    * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getVarRef()
    * @generated
    */
-  int VAR_REF = 8;
+  int VAR_REF = 16;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -460,7 +855,7 @@ public interface SPrototyperPackage extends EPackage
    * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getFeatureRef()
    * @generated
    */
-  int FEATURE_REF = 9;
+  int FEATURE_REF = 17;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -488,7 +883,7 @@ public interface SPrototyperPackage extends EPackage
    * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getMetamodelRef()
    * @generated
    */
-  int METAMODEL_REF = 10;
+  int METAMODEL_REF = 18;
 
   /**
    * The feature id for the '<em><b>Metamodel</b></em>' attribute.
@@ -617,6 +1012,61 @@ public interface SPrototyperPackage extends EPackage
   EClass getSPRepresentation();
 
   /**
+   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.SPRepresentation#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see fr.obeo.dsl.sPrototyper.SPRepresentation#getName()
+   * @see #getSPRepresentation()
+   * @generated
+   */
+  EAttribute getSPRepresentation_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.SPRepresentation#getLabel <em>Label</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Label</em>'.
+   * @see fr.obeo.dsl.sPrototyper.SPRepresentation#getLabel()
+   * @see #getSPRepresentation()
+   * @generated
+   */
+  EAttribute getSPRepresentation_Label();
+
+  /**
+   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.SPRepresentation#getTitle <em>Title</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Title</em>'.
+   * @see fr.obeo.dsl.sPrototyper.SPRepresentation#getTitle()
+   * @see #getSPRepresentation()
+   * @generated
+   */
+  EAttribute getSPRepresentation_Title();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link fr.obeo.dsl.sPrototyper.SPRepresentation#getMetamodels <em>Metamodels</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Metamodels</em>'.
+   * @see fr.obeo.dsl.sPrototyper.SPRepresentation#getMetamodels()
+   * @see #getSPRepresentation()
+   * @generated
+   */
+  EReference getSPRepresentation_Metamodels();
+
+  /**
+   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.SPRepresentation#getRoot <em>Root</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Root</em>'.
+   * @see fr.obeo.dsl.sPrototyper.SPRepresentation#getRoot()
+   * @see #getSPRepresentation()
+   * @generated
+   */
+  EAttribute getSPRepresentation_Root();
+
+  /**
    * Returns the meta object for class '{@link fr.obeo.dsl.sPrototyper.SPTable <em>SP Table</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -625,61 +1075,6 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    */
   EClass getSPTable();
-
-  /**
-   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.SPTable#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see fr.obeo.dsl.sPrototyper.SPTable#getName()
-   * @see #getSPTable()
-   * @generated
-   */
-  EAttribute getSPTable_Name();
-
-  /**
-   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.SPTable#getLabel <em>Label</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Label</em>'.
-   * @see fr.obeo.dsl.sPrototyper.SPTable#getLabel()
-   * @see #getSPTable()
-   * @generated
-   */
-  EAttribute getSPTable_Label();
-
-  /**
-   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.SPTable#getTitle <em>Title</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Title</em>'.
-   * @see fr.obeo.dsl.sPrototyper.SPTable#getTitle()
-   * @see #getSPTable()
-   * @generated
-   */
-  EAttribute getSPTable_Title();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link fr.obeo.dsl.sPrototyper.SPTable#getMetamodels <em>Metamodels</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Metamodels</em>'.
-   * @see fr.obeo.dsl.sPrototyper.SPTable#getMetamodels()
-   * @see #getSPTable()
-   * @generated
-   */
-  EReference getSPTable_Metamodels();
-
-  /**
-   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.SPTable#getRoot <em>Root</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Root</em>'.
-   * @see fr.obeo.dsl.sPrototyper.SPTable#getRoot()
-   * @see #getSPTable()
-   * @generated
-   */
-  EAttribute getSPTable_Root();
 
   /**
    * Returns the meta object for the containment reference list '{@link fr.obeo.dsl.sPrototyper.SPTable#getElements <em>Elements</em>}'.
@@ -810,6 +1205,273 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    */
   EReference getTableProperty_Expression();
+
+  /**
+   * Returns the meta object for class '{@link fr.obeo.dsl.sPrototyper.SPDiagram <em>SP Diagram</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>SP Diagram</em>'.
+   * @see fr.obeo.dsl.sPrototyper.SPDiagram
+   * @generated
+   */
+  EClass getSPDiagram();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link fr.obeo.dsl.sPrototyper.SPDiagram#getElements <em>Elements</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Elements</em>'.
+   * @see fr.obeo.dsl.sPrototyper.SPDiagram#getElements()
+   * @see #getSPDiagram()
+   * @generated
+   */
+  EReference getSPDiagram_Elements();
+
+  /**
+   * Returns the meta object for class '{@link fr.obeo.dsl.sPrototyper.DiagramElement <em>Diagram Element</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Diagram Element</em>'.
+   * @see fr.obeo.dsl.sPrototyper.DiagramElement
+   * @generated
+   */
+  EClass getDiagramElement();
+
+  /**
+   * Returns the meta object for class '{@link fr.obeo.dsl.sPrototyper.Container <em>Container</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Container</em>'.
+   * @see fr.obeo.dsl.sPrototyper.Container
+   * @generated
+   */
+  EClass getContainer();
+
+  /**
+   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.Container#getContainerType <em>Container Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Container Type</em>'.
+   * @see fr.obeo.dsl.sPrototyper.Container#getContainerType()
+   * @see #getContainer()
+   * @generated
+   */
+  EAttribute getContainer_ContainerType();
+
+  /**
+   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.Container#getEClass <em>EClass</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>EClass</em>'.
+   * @see fr.obeo.dsl.sPrototyper.Container#getEClass()
+   * @see #getContainer()
+   * @generated
+   */
+  EAttribute getContainer_EClass();
+
+  /**
+   * Returns the meta object for the containment reference '{@link fr.obeo.dsl.sPrototyper.Container#getExpression <em>Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Expression</em>'.
+   * @see fr.obeo.dsl.sPrototyper.Container#getExpression()
+   * @see #getContainer()
+   * @generated
+   */
+  EReference getContainer_Expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link fr.obeo.dsl.sPrototyper.Container#getColor <em>Color</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Color</em>'.
+   * @see fr.obeo.dsl.sPrototyper.Container#getColor()
+   * @see #getContainer()
+   * @generated
+   */
+  EReference getContainer_Color();
+
+  /**
+   * Returns the meta object for the containment reference '{@link fr.obeo.dsl.sPrototyper.Container#getLabel <em>Label</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Label</em>'.
+   * @see fr.obeo.dsl.sPrototyper.Container#getLabel()
+   * @see #getContainer()
+   * @generated
+   */
+  EReference getContainer_Label();
+
+  /**
+   * Returns the meta object for the containment reference '{@link fr.obeo.dsl.sPrototyper.Container#getBorder <em>Border</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Border</em>'.
+   * @see fr.obeo.dsl.sPrototyper.Container#getBorder()
+   * @see #getContainer()
+   * @generated
+   */
+  EReference getContainer_Border();
+
+  /**
+   * Returns the meta object for class '{@link fr.obeo.dsl.sPrototyper.SolidColorDefinition <em>Solid Color Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Solid Color Definition</em>'.
+   * @see fr.obeo.dsl.sPrototyper.SolidColorDefinition
+   * @generated
+   */
+  EClass getSolidColorDefinition();
+
+  /**
+   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.SolidColorDefinition#getColor <em>Color</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Color</em>'.
+   * @see fr.obeo.dsl.sPrototyper.SolidColorDefinition#getColor()
+   * @see #getSolidColorDefinition()
+   * @generated
+   */
+  EAttribute getSolidColorDefinition_Color();
+
+  /**
+   * Returns the meta object for class '{@link fr.obeo.dsl.sPrototyper.ContainerColorDefinition <em>Container Color Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Container Color Definition</em>'.
+   * @see fr.obeo.dsl.sPrototyper.ContainerColorDefinition
+   * @generated
+   */
+  EClass getContainerColorDefinition();
+
+  /**
+   * Returns the meta object for class '{@link fr.obeo.dsl.sPrototyper.GradientColorDefinition <em>Gradient Color Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Gradient Color Definition</em>'.
+   * @see fr.obeo.dsl.sPrototyper.GradientColorDefinition
+   * @generated
+   */
+  EClass getGradientColorDefinition();
+
+  /**
+   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.GradientColorDefinition#getFrom <em>From</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>From</em>'.
+   * @see fr.obeo.dsl.sPrototyper.GradientColorDefinition#getFrom()
+   * @see #getGradientColorDefinition()
+   * @generated
+   */
+  EAttribute getGradientColorDefinition_From();
+
+  /**
+   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.GradientColorDefinition#getTo <em>To</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>To</em>'.
+   * @see fr.obeo.dsl.sPrototyper.GradientColorDefinition#getTo()
+   * @see #getGradientColorDefinition()
+   * @generated
+   */
+  EAttribute getGradientColorDefinition_To();
+
+  /**
+   * Returns the meta object for class '{@link fr.obeo.dsl.sPrototyper.LabelStyleDefinition <em>Label Style Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Label Style Definition</em>'.
+   * @see fr.obeo.dsl.sPrototyper.LabelStyleDefinition
+   * @generated
+   */
+  EClass getLabelStyleDefinition();
+
+  /**
+   * Returns the meta object for the containment reference '{@link fr.obeo.dsl.sPrototyper.LabelStyleDefinition#getExpression <em>Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Expression</em>'.
+   * @see fr.obeo.dsl.sPrototyper.LabelStyleDefinition#getExpression()
+   * @see #getLabelStyleDefinition()
+   * @generated
+   */
+  EReference getLabelStyleDefinition_Expression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link fr.obeo.dsl.sPrototyper.LabelStyleDefinition#getColor <em>Color</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Color</em>'.
+   * @see fr.obeo.dsl.sPrototyper.LabelStyleDefinition#getColor()
+   * @see #getLabelStyleDefinition()
+   * @generated
+   */
+  EReference getLabelStyleDefinition_Color();
+
+  /**
+   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.LabelStyleDefinition#getSize <em>Size</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Size</em>'.
+   * @see fr.obeo.dsl.sPrototyper.LabelStyleDefinition#getSize()
+   * @see #getLabelStyleDefinition()
+   * @generated
+   */
+  EAttribute getLabelStyleDefinition_Size();
+
+  /**
+   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.LabelStyleDefinition#isBold <em>Bold</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Bold</em>'.
+   * @see fr.obeo.dsl.sPrototyper.LabelStyleDefinition#isBold()
+   * @see #getLabelStyleDefinition()
+   * @generated
+   */
+  EAttribute getLabelStyleDefinition_Bold();
+
+  /**
+   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.LabelStyleDefinition#isItalic <em>Italic</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Italic</em>'.
+   * @see fr.obeo.dsl.sPrototyper.LabelStyleDefinition#isItalic()
+   * @see #getLabelStyleDefinition()
+   * @generated
+   */
+  EAttribute getLabelStyleDefinition_Italic();
+
+  /**
+   * Returns the meta object for class '{@link fr.obeo.dsl.sPrototyper.BorderStyleDefinition <em>Border Style Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Border Style Definition</em>'.
+   * @see fr.obeo.dsl.sPrototyper.BorderStyleDefinition
+   * @generated
+   */
+  EClass getBorderStyleDefinition();
+
+  /**
+   * Returns the meta object for the containment reference '{@link fr.obeo.dsl.sPrototyper.BorderStyleDefinition#getColor <em>Color</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Color</em>'.
+   * @see fr.obeo.dsl.sPrototyper.BorderStyleDefinition#getColor()
+   * @see #getBorderStyleDefinition()
+   * @generated
+   */
+  EReference getBorderStyleDefinition_Color();
+
+  /**
+   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.BorderStyleDefinition#getSize <em>Size</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Size</em>'.
+   * @see fr.obeo.dsl.sPrototyper.BorderStyleDefinition#getSize()
+   * @see #getBorderStyleDefinition()
+   * @generated
+   */
+  EAttribute getBorderStyleDefinition_Size();
 
   /**
    * Returns the meta object for class '{@link fr.obeo.dsl.sPrototyper.SPExpression <em>SP Expression</em>}'.
@@ -993,6 +1655,46 @@ public interface SPrototyperPackage extends EPackage
     EClass SP_REPRESENTATION = eINSTANCE.getSPRepresentation();
 
     /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SP_REPRESENTATION__NAME = eINSTANCE.getSPRepresentation_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Label</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SP_REPRESENTATION__LABEL = eINSTANCE.getSPRepresentation_Label();
+
+    /**
+     * The meta object literal for the '<em><b>Title</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SP_REPRESENTATION__TITLE = eINSTANCE.getSPRepresentation_Title();
+
+    /**
+     * The meta object literal for the '<em><b>Metamodels</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SP_REPRESENTATION__METAMODELS = eINSTANCE.getSPRepresentation_Metamodels();
+
+    /**
+     * The meta object literal for the '<em><b>Root</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SP_REPRESENTATION__ROOT = eINSTANCE.getSPRepresentation_Root();
+
+    /**
      * The meta object literal for the '{@link fr.obeo.dsl.sPrototyper.impl.SPTableImpl <em>SP Table</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1001,46 +1703,6 @@ public interface SPrototyperPackage extends EPackage
      * @generated
      */
     EClass SP_TABLE = eINSTANCE.getSPTable();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute SP_TABLE__NAME = eINSTANCE.getSPTable_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Label</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute SP_TABLE__LABEL = eINSTANCE.getSPTable_Label();
-
-    /**
-     * The meta object literal for the '<em><b>Title</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute SP_TABLE__TITLE = eINSTANCE.getSPTable_Title();
-
-    /**
-     * The meta object literal for the '<em><b>Metamodels</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference SP_TABLE__METAMODELS = eINSTANCE.getSPTable_Metamodels();
-
-    /**
-     * The meta object literal for the '<em><b>Root</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute SP_TABLE__ROOT = eINSTANCE.getSPTable_Root();
 
     /**
      * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
@@ -1141,6 +1803,222 @@ public interface SPrototyperPackage extends EPackage
      * @generated
      */
     EReference TABLE_PROPERTY__EXPRESSION = eINSTANCE.getTableProperty_Expression();
+
+    /**
+     * The meta object literal for the '{@link fr.obeo.dsl.sPrototyper.impl.SPDiagramImpl <em>SP Diagram</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.obeo.dsl.sPrototyper.impl.SPDiagramImpl
+     * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getSPDiagram()
+     * @generated
+     */
+    EClass SP_DIAGRAM = eINSTANCE.getSPDiagram();
+
+    /**
+     * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SP_DIAGRAM__ELEMENTS = eINSTANCE.getSPDiagram_Elements();
+
+    /**
+     * The meta object literal for the '{@link fr.obeo.dsl.sPrototyper.impl.DiagramElementImpl <em>Diagram Element</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.obeo.dsl.sPrototyper.impl.DiagramElementImpl
+     * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getDiagramElement()
+     * @generated
+     */
+    EClass DIAGRAM_ELEMENT = eINSTANCE.getDiagramElement();
+
+    /**
+     * The meta object literal for the '{@link fr.obeo.dsl.sPrototyper.impl.ContainerImpl <em>Container</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.obeo.dsl.sPrototyper.impl.ContainerImpl
+     * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getContainer()
+     * @generated
+     */
+    EClass CONTAINER = eINSTANCE.getContainer();
+
+    /**
+     * The meta object literal for the '<em><b>Container Type</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CONTAINER__CONTAINER_TYPE = eINSTANCE.getContainer_ContainerType();
+
+    /**
+     * The meta object literal for the '<em><b>EClass</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CONTAINER__ECLASS = eINSTANCE.getContainer_EClass();
+
+    /**
+     * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONTAINER__EXPRESSION = eINSTANCE.getContainer_Expression();
+
+    /**
+     * The meta object literal for the '<em><b>Color</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONTAINER__COLOR = eINSTANCE.getContainer_Color();
+
+    /**
+     * The meta object literal for the '<em><b>Label</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONTAINER__LABEL = eINSTANCE.getContainer_Label();
+
+    /**
+     * The meta object literal for the '<em><b>Border</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONTAINER__BORDER = eINSTANCE.getContainer_Border();
+
+    /**
+     * The meta object literal for the '{@link fr.obeo.dsl.sPrototyper.impl.SolidColorDefinitionImpl <em>Solid Color Definition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.obeo.dsl.sPrototyper.impl.SolidColorDefinitionImpl
+     * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getSolidColorDefinition()
+     * @generated
+     */
+    EClass SOLID_COLOR_DEFINITION = eINSTANCE.getSolidColorDefinition();
+
+    /**
+     * The meta object literal for the '<em><b>Color</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SOLID_COLOR_DEFINITION__COLOR = eINSTANCE.getSolidColorDefinition_Color();
+
+    /**
+     * The meta object literal for the '{@link fr.obeo.dsl.sPrototyper.impl.ContainerColorDefinitionImpl <em>Container Color Definition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.obeo.dsl.sPrototyper.impl.ContainerColorDefinitionImpl
+     * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getContainerColorDefinition()
+     * @generated
+     */
+    EClass CONTAINER_COLOR_DEFINITION = eINSTANCE.getContainerColorDefinition();
+
+    /**
+     * The meta object literal for the '{@link fr.obeo.dsl.sPrototyper.impl.GradientColorDefinitionImpl <em>Gradient Color Definition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.obeo.dsl.sPrototyper.impl.GradientColorDefinitionImpl
+     * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getGradientColorDefinition()
+     * @generated
+     */
+    EClass GRADIENT_COLOR_DEFINITION = eINSTANCE.getGradientColorDefinition();
+
+    /**
+     * The meta object literal for the '<em><b>From</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute GRADIENT_COLOR_DEFINITION__FROM = eINSTANCE.getGradientColorDefinition_From();
+
+    /**
+     * The meta object literal for the '<em><b>To</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute GRADIENT_COLOR_DEFINITION__TO = eINSTANCE.getGradientColorDefinition_To();
+
+    /**
+     * The meta object literal for the '{@link fr.obeo.dsl.sPrototyper.impl.LabelStyleDefinitionImpl <em>Label Style Definition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.obeo.dsl.sPrototyper.impl.LabelStyleDefinitionImpl
+     * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getLabelStyleDefinition()
+     * @generated
+     */
+    EClass LABEL_STYLE_DEFINITION = eINSTANCE.getLabelStyleDefinition();
+
+    /**
+     * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LABEL_STYLE_DEFINITION__EXPRESSION = eINSTANCE.getLabelStyleDefinition_Expression();
+
+    /**
+     * The meta object literal for the '<em><b>Color</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LABEL_STYLE_DEFINITION__COLOR = eINSTANCE.getLabelStyleDefinition_Color();
+
+    /**
+     * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LABEL_STYLE_DEFINITION__SIZE = eINSTANCE.getLabelStyleDefinition_Size();
+
+    /**
+     * The meta object literal for the '<em><b>Bold</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LABEL_STYLE_DEFINITION__BOLD = eINSTANCE.getLabelStyleDefinition_Bold();
+
+    /**
+     * The meta object literal for the '<em><b>Italic</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute LABEL_STYLE_DEFINITION__ITALIC = eINSTANCE.getLabelStyleDefinition_Italic();
+
+    /**
+     * The meta object literal for the '{@link fr.obeo.dsl.sPrototyper.impl.BorderStyleDefinitionImpl <em>Border Style Definition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.obeo.dsl.sPrototyper.impl.BorderStyleDefinitionImpl
+     * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getBorderStyleDefinition()
+     * @generated
+     */
+    EClass BORDER_STYLE_DEFINITION = eINSTANCE.getBorderStyleDefinition();
+
+    /**
+     * The meta object literal for the '<em><b>Color</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference BORDER_STYLE_DEFINITION__COLOR = eINSTANCE.getBorderStyleDefinition_Color();
+
+    /**
+     * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BORDER_STYLE_DEFINITION__SIZE = eINSTANCE.getBorderStyleDefinition_Size();
 
     /**
      * The meta object literal for the '{@link fr.obeo.dsl.sPrototyper.impl.SPExpressionImpl <em>SP Expression</em>}' class.

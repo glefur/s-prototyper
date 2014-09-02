@@ -150,14 +150,22 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class SPRepresentationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SPRepresentation");
-		private final RuleCall cSPTableParserRuleCall = (RuleCall)rule.eContents().get(1);
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cSPTableParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cSPDiagramParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//SPRepresentation:
-		//	SPTable;
+		//	SPTable | SPDiagram;
 		public ParserRule getRule() { return rule; }
 
+		//SPTable | SPDiagram
+		public Alternatives getAlternatives() { return cAlternatives; }
+
 		//SPTable
-		public RuleCall getSPTableParserRuleCall() { return cSPTableParserRuleCall; }
+		public RuleCall getSPTableParserRuleCall_0() { return cSPTableParserRuleCall_0; }
+
+		//SPDiagram
+		public RuleCall getSPDiagramParserRuleCall_1() { return cSPDiagramParserRuleCall_1; }
 	}
 
 	public class SPTableElements extends AbstractParserRuleElementFinder {
@@ -392,6 +400,394 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getExpressionSPExpressionParserRuleCall_3_1_0() { return cExpressionSPExpressionParserRuleCall_3_1_0; }
 	}
 
+	public class SPDiagramElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SPDiagram");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cDiagramKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cLabelKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cLabelAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cLabelSTRINGTerminalRuleCall_3_1_0 = (RuleCall)cLabelAssignment_3_1.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cTitleKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cTitleAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cTitleSTRINGTerminalRuleCall_4_1_0 = (RuleCall)cTitleAssignment_4_1.eContents().get(0);
+		private final Assignment cMetamodelsAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cMetamodelsMetamodelRefParserRuleCall_5_0 = (RuleCall)cMetamodelsAssignment_5.eContents().get(0);
+		private final Keyword cRootKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Assignment cRootAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cRootSTRINGTerminalRuleCall_7_0 = (RuleCall)cRootAssignment_7.eContents().get(0);
+		private final Assignment cElementsAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cElementsDiagramElementParserRuleCall_8_0 = (RuleCall)cElementsAssignment_8.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		
+		//SPDiagram:
+		//	"diagram" name=ID "{" ("label" label=STRING)? ("title" title=STRING)? metamodels+=MetamodelRef+ "root" root=STRING
+		//	elements+=DiagramElement+ "}";
+		public ParserRule getRule() { return rule; }
+
+		//"diagram" name=ID "{" ("label" label=STRING)? ("title" title=STRING)? metamodels+=MetamodelRef+ "root" root=STRING
+		//elements+=DiagramElement+ "}"
+		public Group getGroup() { return cGroup; }
+
+		//"diagram"
+		public Keyword getDiagramKeyword_0() { return cDiagramKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+
+		//("label" label=STRING)?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//"label"
+		public Keyword getLabelKeyword_3_0() { return cLabelKeyword_3_0; }
+
+		//label=STRING
+		public Assignment getLabelAssignment_3_1() { return cLabelAssignment_3_1; }
+
+		//STRING
+		public RuleCall getLabelSTRINGTerminalRuleCall_3_1_0() { return cLabelSTRINGTerminalRuleCall_3_1_0; }
+
+		//("title" title=STRING)?
+		public Group getGroup_4() { return cGroup_4; }
+
+		//"title"
+		public Keyword getTitleKeyword_4_0() { return cTitleKeyword_4_0; }
+
+		//title=STRING
+		public Assignment getTitleAssignment_4_1() { return cTitleAssignment_4_1; }
+
+		//STRING
+		public RuleCall getTitleSTRINGTerminalRuleCall_4_1_0() { return cTitleSTRINGTerminalRuleCall_4_1_0; }
+
+		//metamodels+=MetamodelRef+
+		public Assignment getMetamodelsAssignment_5() { return cMetamodelsAssignment_5; }
+
+		//MetamodelRef
+		public RuleCall getMetamodelsMetamodelRefParserRuleCall_5_0() { return cMetamodelsMetamodelRefParserRuleCall_5_0; }
+
+		//"root"
+		public Keyword getRootKeyword_6() { return cRootKeyword_6; }
+
+		//root=STRING
+		public Assignment getRootAssignment_7() { return cRootAssignment_7; }
+
+		//STRING
+		public RuleCall getRootSTRINGTerminalRuleCall_7_0() { return cRootSTRINGTerminalRuleCall_7_0; }
+
+		//elements+=DiagramElement+
+		public Assignment getElementsAssignment_8() { return cElementsAssignment_8; }
+
+		//DiagramElement
+		public RuleCall getElementsDiagramElementParserRuleCall_8_0() { return cElementsDiagramElementParserRuleCall_8_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
+	}
+
+	public class DiagramElementElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "DiagramElement");
+		private final RuleCall cContainerParserRuleCall = (RuleCall)rule.eContents().get(1);
+		
+		//DiagramElement:
+		//	Container;
+		public ParserRule getRule() { return rule; }
+
+		//Container
+		public RuleCall getContainerParserRuleCall() { return cContainerParserRuleCall; }
+	}
+
+	public class ContainerElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Container");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cContainerTypeAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cContainerTypeContainerTypeParserRuleCall_0_0 = (RuleCall)cContainerTypeAssignment_0.eContents().get(0);
+		private final Keyword cContainerKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cEClassAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cEClassSTRINGTerminalRuleCall_2_0 = (RuleCall)cEClassAssignment_2.eContents().get(0);
+		private final Keyword cAccessibleThroughKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cExpressionAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cExpressionSPExpressionParserRuleCall_4_0 = (RuleCall)cExpressionAssignment_4.eContents().get(0);
+		private final Keyword cStyleKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cColorAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cColorContainerColorDefinitionParserRuleCall_6_0 = (RuleCall)cColorAssignment_6.eContents().get(0);
+		private final Assignment cLabelAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cLabelLabelStyleDefinitionParserRuleCall_7_0 = (RuleCall)cLabelAssignment_7.eContents().get(0);
+		private final Assignment cBorderAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cBorderBorderStyleDefinitionParserRuleCall_8_0 = (RuleCall)cBorderAssignment_8.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		
+		//Container:
+		//	containerType=ContainerType? "container" eClass=STRING "accessibleThrough" expression=SPExpression "style {"
+		//	color=ContainerColorDefinition label=LabelStyleDefinition? border=BorderStyleDefinition? "}";
+		public ParserRule getRule() { return rule; }
+
+		//containerType=ContainerType? "container" eClass=STRING "accessibleThrough" expression=SPExpression "style {"
+		//color=ContainerColorDefinition label=LabelStyleDefinition? border=BorderStyleDefinition? "}"
+		public Group getGroup() { return cGroup; }
+
+		//containerType=ContainerType?
+		public Assignment getContainerTypeAssignment_0() { return cContainerTypeAssignment_0; }
+
+		//ContainerType
+		public RuleCall getContainerTypeContainerTypeParserRuleCall_0_0() { return cContainerTypeContainerTypeParserRuleCall_0_0; }
+
+		//"container"
+		public Keyword getContainerKeyword_1() { return cContainerKeyword_1; }
+
+		//eClass=STRING
+		public Assignment getEClassAssignment_2() { return cEClassAssignment_2; }
+
+		//STRING
+		public RuleCall getEClassSTRINGTerminalRuleCall_2_0() { return cEClassSTRINGTerminalRuleCall_2_0; }
+
+		//"accessibleThrough"
+		public Keyword getAccessibleThroughKeyword_3() { return cAccessibleThroughKeyword_3; }
+
+		//expression=SPExpression
+		public Assignment getExpressionAssignment_4() { return cExpressionAssignment_4; }
+
+		//SPExpression
+		public RuleCall getExpressionSPExpressionParserRuleCall_4_0() { return cExpressionSPExpressionParserRuleCall_4_0; }
+
+		//"style {"
+		public Keyword getStyleKeyword_5() { return cStyleKeyword_5; }
+
+		//color=ContainerColorDefinition
+		public Assignment getColorAssignment_6() { return cColorAssignment_6; }
+
+		//ContainerColorDefinition
+		public RuleCall getColorContainerColorDefinitionParserRuleCall_6_0() { return cColorContainerColorDefinitionParserRuleCall_6_0; }
+
+		//label=LabelStyleDefinition?
+		public Assignment getLabelAssignment_7() { return cLabelAssignment_7; }
+
+		//LabelStyleDefinition
+		public RuleCall getLabelLabelStyleDefinitionParserRuleCall_7_0() { return cLabelLabelStyleDefinitionParserRuleCall_7_0; }
+
+		//border=BorderStyleDefinition?
+		public Assignment getBorderAssignment_8() { return cBorderAssignment_8; }
+
+		//BorderStyleDefinition
+		public RuleCall getBorderBorderStyleDefinitionParserRuleCall_8_0() { return cBorderBorderStyleDefinitionParserRuleCall_8_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
+	}
+
+	public class ContainerTypeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ContainerType");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Keyword cFreeformKeyword_0 = (Keyword)cAlternatives.eContents().get(0);
+		private final Keyword cListKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
+		
+		//ContainerType:
+		//	"freeform" | "list";
+		public ParserRule getRule() { return rule; }
+
+		//"freeform" | "list"
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//"freeform"
+		public Keyword getFreeformKeyword_0() { return cFreeformKeyword_0; }
+
+		//"list"
+		public Keyword getListKeyword_1() { return cListKeyword_1; }
+	}
+
+	public class SolidColorDefinitionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SolidColorDefinition");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cColorKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cColorAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cColorColorParserRuleCall_1_0 = (RuleCall)cColorAssignment_1.eContents().get(0);
+		
+		//SolidColorDefinition:
+		//	"color" color=Color;
+		public ParserRule getRule() { return rule; }
+
+		//"color" color=Color
+		public Group getGroup() { return cGroup; }
+
+		//"color"
+		public Keyword getColorKeyword_0() { return cColorKeyword_0; }
+
+		//color=Color
+		public Assignment getColorAssignment_1() { return cColorAssignment_1; }
+
+		//Color
+		public RuleCall getColorColorParserRuleCall_1_0() { return cColorColorParserRuleCall_1_0; }
+	}
+
+	public class ContainerColorDefinitionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ContainerColorDefinition");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cSolidColorDefinitionParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cGradientColorDefinitionParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//ContainerColorDefinition:
+		//	SolidColorDefinition | GradientColorDefinition;
+		public ParserRule getRule() { return rule; }
+
+		//SolidColorDefinition | GradientColorDefinition
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//SolidColorDefinition
+		public RuleCall getSolidColorDefinitionParserRuleCall_0() { return cSolidColorDefinitionParserRuleCall_0; }
+
+		//GradientColorDefinition
+		public RuleCall getGradientColorDefinitionParserRuleCall_1() { return cGradientColorDefinitionParserRuleCall_1; }
+	}
+
+	public class GradientColorDefinitionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "GradientColorDefinition");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cGradientFromKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cFromAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cFromColorParserRuleCall_1_0 = (RuleCall)cFromAssignment_1.eContents().get(0);
+		private final Keyword cToKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cToAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cToColorParserRuleCall_3_0 = (RuleCall)cToAssignment_3.eContents().get(0);
+		
+		//GradientColorDefinition:
+		//	"gradient from" from=Color "to" to=Color;
+		public ParserRule getRule() { return rule; }
+
+		//"gradient from" from=Color "to" to=Color
+		public Group getGroup() { return cGroup; }
+
+		//"gradient from"
+		public Keyword getGradientFromKeyword_0() { return cGradientFromKeyword_0; }
+
+		//from=Color
+		public Assignment getFromAssignment_1() { return cFromAssignment_1; }
+
+		//Color
+		public RuleCall getFromColorParserRuleCall_1_0() { return cFromColorParserRuleCall_1_0; }
+
+		//"to"
+		public Keyword getToKeyword_2() { return cToKeyword_2; }
+
+		//to=Color
+		public Assignment getToAssignment_3() { return cToAssignment_3; }
+
+		//Color
+		public RuleCall getToColorParserRuleCall_3_0() { return cToColorParserRuleCall_3_0; }
+	}
+
+	public class LabelStyleDefinitionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "LabelStyleDefinition");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cLabelKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cExpressionAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cExpressionSPExpressionParserRuleCall_1_0 = (RuleCall)cExpressionAssignment_1.eContents().get(0);
+		private final Assignment cColorAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cColorSolidColorDefinitionParserRuleCall_2_0 = (RuleCall)cColorAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cSizeKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cSizeAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cSizeINTTerminalRuleCall_3_1_0 = (RuleCall)cSizeAssignment_3_1.eContents().get(0);
+		private final Assignment cBoldAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final Keyword cBoldBoldKeyword_4_0 = (Keyword)cBoldAssignment_4.eContents().get(0);
+		private final Assignment cItalicAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final Keyword cItalicItalicKeyword_5_0 = (Keyword)cItalicAssignment_5.eContents().get(0);
+		
+		//LabelStyleDefinition:
+		//	"label" expression=SPExpression? color=SolidColorDefinition ("size" size=INT)? bold?="bold"? italic?="italic"?;
+		public ParserRule getRule() { return rule; }
+
+		//"label" expression=SPExpression? color=SolidColorDefinition ("size" size=INT)? bold?="bold"? italic?="italic"?
+		public Group getGroup() { return cGroup; }
+
+		//"label"
+		public Keyword getLabelKeyword_0() { return cLabelKeyword_0; }
+
+		//expression=SPExpression?
+		public Assignment getExpressionAssignment_1() { return cExpressionAssignment_1; }
+
+		//SPExpression
+		public RuleCall getExpressionSPExpressionParserRuleCall_1_0() { return cExpressionSPExpressionParserRuleCall_1_0; }
+
+		//color=SolidColorDefinition
+		public Assignment getColorAssignment_2() { return cColorAssignment_2; }
+
+		//SolidColorDefinition
+		public RuleCall getColorSolidColorDefinitionParserRuleCall_2_0() { return cColorSolidColorDefinitionParserRuleCall_2_0; }
+
+		//("size" size=INT)?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//"size"
+		public Keyword getSizeKeyword_3_0() { return cSizeKeyword_3_0; }
+
+		//size=INT
+		public Assignment getSizeAssignment_3_1() { return cSizeAssignment_3_1; }
+
+		//INT
+		public RuleCall getSizeINTTerminalRuleCall_3_1_0() { return cSizeINTTerminalRuleCall_3_1_0; }
+
+		//bold?="bold"?
+		public Assignment getBoldAssignment_4() { return cBoldAssignment_4; }
+
+		//"bold"
+		public Keyword getBoldBoldKeyword_4_0() { return cBoldBoldKeyword_4_0; }
+
+		//italic?="italic"?
+		public Assignment getItalicAssignment_5() { return cItalicAssignment_5; }
+
+		//"italic"
+		public Keyword getItalicItalicKeyword_5_0() { return cItalicItalicKeyword_5_0; }
+	}
+
+	public class BorderStyleDefinitionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "BorderStyleDefinition");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cBorderKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cColorAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cColorSolidColorDefinitionParserRuleCall_1_0 = (RuleCall)cColorAssignment_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cSizeKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cSizeAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cSizeINTTerminalRuleCall_2_1_0 = (RuleCall)cSizeAssignment_2_1.eContents().get(0);
+		
+		//BorderStyleDefinition:
+		//	"border " color=SolidColorDefinition ("size" size=INT)?;
+		public ParserRule getRule() { return rule; }
+
+		//"border " color=SolidColorDefinition ("size" size=INT)?
+		public Group getGroup() { return cGroup; }
+
+		//"border "
+		public Keyword getBorderKeyword_0() { return cBorderKeyword_0; }
+
+		//color=SolidColorDefinition
+		public Assignment getColorAssignment_1() { return cColorAssignment_1; }
+
+		//SolidColorDefinition
+		public RuleCall getColorSolidColorDefinitionParserRuleCall_1_0() { return cColorSolidColorDefinitionParserRuleCall_1_0; }
+
+		//("size" size=INT)?
+		public Group getGroup_2() { return cGroup_2; }
+
+		//"size"
+		public Keyword getSizeKeyword_2_0() { return cSizeKeyword_2_0; }
+
+		//size=INT
+		public Assignment getSizeAssignment_2_1() { return cSizeAssignment_2_1; }
+
+		//INT
+		public RuleCall getSizeINTTerminalRuleCall_2_1_0() { return cSizeINTTerminalRuleCall_2_1_0; }
+	}
+
 	public class SPExpressionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SPExpression");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
@@ -511,6 +907,140 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getMetamodelSTRINGTerminalRuleCall_1_0() { return cMetamodelSTRINGTerminalRuleCall_1_0; }
 	}
+
+	public class ColorElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Color");
+		private final RuleCall cPreDefinedColorParserRuleCall = (RuleCall)rule.eContents().get(1);
+		
+		//Color:
+		//	PreDefinedColor;
+		public ParserRule getRule() { return rule; }
+
+		//PreDefinedColor
+		public RuleCall getPreDefinedColorParserRuleCall() { return cPreDefinedColorParserRuleCall; }
+	}
+
+	public class PreDefinedColorElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "PreDefinedColor");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Keyword cWhiteKeyword_0 = (Keyword)cAlternatives.eContents().get(0);
+		private final Keyword cBlackKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
+		private final Keyword cBlueKeyword_2 = (Keyword)cAlternatives.eContents().get(2);
+		private final Keyword cLightBlueKeyword_3 = (Keyword)cAlternatives.eContents().get(3);
+		private final Keyword cDarkBlueKeyword_4 = (Keyword)cAlternatives.eContents().get(4);
+		private final Keyword cChocolateKeyword_5 = (Keyword)cAlternatives.eContents().get(5);
+		private final Keyword cLightChocolateKeyword_6 = (Keyword)cAlternatives.eContents().get(6);
+		private final Keyword cDarkChocolateKeyword_7 = (Keyword)cAlternatives.eContents().get(7);
+		private final Keyword cGrayKeyword_8 = (Keyword)cAlternatives.eContents().get(8);
+		private final Keyword cLightGrayKeyword_9 = (Keyword)cAlternatives.eContents().get(9);
+		private final Keyword cDarkGrayKeyword_10 = (Keyword)cAlternatives.eContents().get(10);
+		private final Keyword cGreenKeyword_11 = (Keyword)cAlternatives.eContents().get(11);
+		private final Keyword cLightGreenKeyword_12 = (Keyword)cAlternatives.eContents().get(12);
+		private final Keyword cDarkGreenKeyword_13 = (Keyword)cAlternatives.eContents().get(13);
+		private final Keyword cOrangeKeyword_14 = (Keyword)cAlternatives.eContents().get(14);
+		private final Keyword cLightOrangeKeyword_15 = (Keyword)cAlternatives.eContents().get(15);
+		private final Keyword cDarkOrangeKeyword_16 = (Keyword)cAlternatives.eContents().get(16);
+		private final Keyword cPurpleKeyword_17 = (Keyword)cAlternatives.eContents().get(17);
+		private final Keyword cLightPurpleKeyword_18 = (Keyword)cAlternatives.eContents().get(18);
+		private final Keyword cDarkPurpleKeyword_19 = (Keyword)cAlternatives.eContents().get(19);
+		private final Keyword cRedKeyword_20 = (Keyword)cAlternatives.eContents().get(20);
+		private final Keyword cLightRedKeyword_21 = (Keyword)cAlternatives.eContents().get(21);
+		private final Keyword cDarkRedKeyword_22 = (Keyword)cAlternatives.eContents().get(22);
+		private final Keyword cYellowKeyword_23 = (Keyword)cAlternatives.eContents().get(23);
+		private final Keyword cLightYellowKeyword_24 = (Keyword)cAlternatives.eContents().get(24);
+		private final Keyword cDarkYellowKeyword_25 = (Keyword)cAlternatives.eContents().get(25);
+		
+		//PreDefinedColor:
+		//	"white" | "black" | "blue" | "light blue" | "dark blue" | "chocolate" | "light chocolate" | "dark chocolate" | "gray"
+		//	| "light gray" | "dark gray" | "green" | "light green" | "dark green" | "orange" | "light orange" | "dark orange" |
+		//	"purple" | "light purple" | "dark purple" | "red" | "light red" | "dark red" | "yellow" | "light yellow" |
+		//	"dark yellow";
+		public ParserRule getRule() { return rule; }
+
+		//"white" | "black" | "blue" | "light blue" | "dark blue" | "chocolate" | "light chocolate" | "dark chocolate" | "gray" |
+		//"light gray" | "dark gray" | "green" | "light green" | "dark green" | "orange" | "light orange" | "dark orange" |
+		//"purple" | "light purple" | "dark purple" | "red" | "light red" | "dark red" | "yellow" | "light yellow" |
+		//"dark yellow"
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//"white"
+		public Keyword getWhiteKeyword_0() { return cWhiteKeyword_0; }
+
+		//"black"
+		public Keyword getBlackKeyword_1() { return cBlackKeyword_1; }
+
+		//"blue"
+		public Keyword getBlueKeyword_2() { return cBlueKeyword_2; }
+
+		//"light blue"
+		public Keyword getLightBlueKeyword_3() { return cLightBlueKeyword_3; }
+
+		//"dark blue"
+		public Keyword getDarkBlueKeyword_4() { return cDarkBlueKeyword_4; }
+
+		//"chocolate"
+		public Keyword getChocolateKeyword_5() { return cChocolateKeyword_5; }
+
+		//"light chocolate"
+		public Keyword getLightChocolateKeyword_6() { return cLightChocolateKeyword_6; }
+
+		//"dark chocolate"
+		public Keyword getDarkChocolateKeyword_7() { return cDarkChocolateKeyword_7; }
+
+		//"gray"
+		public Keyword getGrayKeyword_8() { return cGrayKeyword_8; }
+
+		//"light gray"
+		public Keyword getLightGrayKeyword_9() { return cLightGrayKeyword_9; }
+
+		//"dark gray"
+		public Keyword getDarkGrayKeyword_10() { return cDarkGrayKeyword_10; }
+
+		//"green"
+		public Keyword getGreenKeyword_11() { return cGreenKeyword_11; }
+
+		//"light green"
+		public Keyword getLightGreenKeyword_12() { return cLightGreenKeyword_12; }
+
+		//"dark green"
+		public Keyword getDarkGreenKeyword_13() { return cDarkGreenKeyword_13; }
+
+		//"orange"
+		public Keyword getOrangeKeyword_14() { return cOrangeKeyword_14; }
+
+		//"light orange"
+		public Keyword getLightOrangeKeyword_15() { return cLightOrangeKeyword_15; }
+
+		//"dark orange"
+		public Keyword getDarkOrangeKeyword_16() { return cDarkOrangeKeyword_16; }
+
+		//"purple"
+		public Keyword getPurpleKeyword_17() { return cPurpleKeyword_17; }
+
+		//"light purple"
+		public Keyword getLightPurpleKeyword_18() { return cLightPurpleKeyword_18; }
+
+		//"dark purple"
+		public Keyword getDarkPurpleKeyword_19() { return cDarkPurpleKeyword_19; }
+
+		//"red"
+		public Keyword getRedKeyword_20() { return cRedKeyword_20; }
+
+		//"light red"
+		public Keyword getLightRedKeyword_21() { return cLightRedKeyword_21; }
+
+		//"dark red"
+		public Keyword getDarkRedKeyword_22() { return cDarkRedKeyword_22; }
+
+		//"yellow"
+		public Keyword getYellowKeyword_23() { return cYellowKeyword_23; }
+
+		//"light yellow"
+		public Keyword getLightYellowKeyword_24() { return cLightYellowKeyword_24; }
+
+		//"dark yellow"
+		public Keyword getDarkYellowKeyword_25() { return cDarkYellowKeyword_25; }
+	}
 	
 	
 	private SPrototyperElements pSPrototyper;
@@ -519,11 +1049,22 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 	private SPTableElements pSPTable;
 	private TableElementElements pTableElement;
 	private TablePropertyElements pTableProperty;
+	private SPDiagramElements pSPDiagram;
+	private DiagramElementElements pDiagramElement;
+	private ContainerElements pContainer;
+	private ContainerTypeElements pContainerType;
+	private SolidColorDefinitionElements pSolidColorDefinition;
+	private ContainerColorDefinitionElements pContainerColorDefinition;
+	private GradientColorDefinitionElements pGradientColorDefinition;
+	private LabelStyleDefinitionElements pLabelStyleDefinition;
+	private BorderStyleDefinitionElements pBorderStyleDefinition;
 	private SPExpressionElements pSPExpression;
 	private AcceleoExpressionElements pAcceleoExpression;
 	private VarRefElements pVarRef;
 	private FeatureRefElements pFeatureRef;
 	private MetamodelRefElements pMetamodelRef;
+	private ColorElements pColor;
+	private PreDefinedColorElements pPreDefinedColor;
 	
 	private final Grammar grammar;
 
@@ -585,7 +1126,7 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//SPRepresentation:
-	//	SPTable;
+	//	SPTable | SPDiagram;
 	public SPRepresentationElements getSPRepresentationAccess() {
 		return (pSPRepresentation != null) ? pSPRepresentation : (pSPRepresentation = new SPRepresentationElements());
 	}
@@ -624,6 +1165,98 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getTablePropertyRule() {
 		return getTablePropertyAccess().getRule();
+	}
+
+	//SPDiagram:
+	//	"diagram" name=ID "{" ("label" label=STRING)? ("title" title=STRING)? metamodels+=MetamodelRef+ "root" root=STRING
+	//	elements+=DiagramElement+ "}";
+	public SPDiagramElements getSPDiagramAccess() {
+		return (pSPDiagram != null) ? pSPDiagram : (pSPDiagram = new SPDiagramElements());
+	}
+	
+	public ParserRule getSPDiagramRule() {
+		return getSPDiagramAccess().getRule();
+	}
+
+	//DiagramElement:
+	//	Container;
+	public DiagramElementElements getDiagramElementAccess() {
+		return (pDiagramElement != null) ? pDiagramElement : (pDiagramElement = new DiagramElementElements());
+	}
+	
+	public ParserRule getDiagramElementRule() {
+		return getDiagramElementAccess().getRule();
+	}
+
+	//Container:
+	//	containerType=ContainerType? "container" eClass=STRING "accessibleThrough" expression=SPExpression "style {"
+	//	color=ContainerColorDefinition label=LabelStyleDefinition? border=BorderStyleDefinition? "}";
+	public ContainerElements getContainerAccess() {
+		return (pContainer != null) ? pContainer : (pContainer = new ContainerElements());
+	}
+	
+	public ParserRule getContainerRule() {
+		return getContainerAccess().getRule();
+	}
+
+	//ContainerType:
+	//	"freeform" | "list";
+	public ContainerTypeElements getContainerTypeAccess() {
+		return (pContainerType != null) ? pContainerType : (pContainerType = new ContainerTypeElements());
+	}
+	
+	public ParserRule getContainerTypeRule() {
+		return getContainerTypeAccess().getRule();
+	}
+
+	//SolidColorDefinition:
+	//	"color" color=Color;
+	public SolidColorDefinitionElements getSolidColorDefinitionAccess() {
+		return (pSolidColorDefinition != null) ? pSolidColorDefinition : (pSolidColorDefinition = new SolidColorDefinitionElements());
+	}
+	
+	public ParserRule getSolidColorDefinitionRule() {
+		return getSolidColorDefinitionAccess().getRule();
+	}
+
+	//ContainerColorDefinition:
+	//	SolidColorDefinition | GradientColorDefinition;
+	public ContainerColorDefinitionElements getContainerColorDefinitionAccess() {
+		return (pContainerColorDefinition != null) ? pContainerColorDefinition : (pContainerColorDefinition = new ContainerColorDefinitionElements());
+	}
+	
+	public ParserRule getContainerColorDefinitionRule() {
+		return getContainerColorDefinitionAccess().getRule();
+	}
+
+	//GradientColorDefinition:
+	//	"gradient from" from=Color "to" to=Color;
+	public GradientColorDefinitionElements getGradientColorDefinitionAccess() {
+		return (pGradientColorDefinition != null) ? pGradientColorDefinition : (pGradientColorDefinition = new GradientColorDefinitionElements());
+	}
+	
+	public ParserRule getGradientColorDefinitionRule() {
+		return getGradientColorDefinitionAccess().getRule();
+	}
+
+	//LabelStyleDefinition:
+	//	"label" expression=SPExpression? color=SolidColorDefinition ("size" size=INT)? bold?="bold"? italic?="italic"?;
+	public LabelStyleDefinitionElements getLabelStyleDefinitionAccess() {
+		return (pLabelStyleDefinition != null) ? pLabelStyleDefinition : (pLabelStyleDefinition = new LabelStyleDefinitionElements());
+	}
+	
+	public ParserRule getLabelStyleDefinitionRule() {
+		return getLabelStyleDefinitionAccess().getRule();
+	}
+
+	//BorderStyleDefinition:
+	//	"border " color=SolidColorDefinition ("size" size=INT)?;
+	public BorderStyleDefinitionElements getBorderStyleDefinitionAccess() {
+		return (pBorderStyleDefinition != null) ? pBorderStyleDefinition : (pBorderStyleDefinition = new BorderStyleDefinitionElements());
+	}
+	
+	public ParserRule getBorderStyleDefinitionRule() {
+		return getBorderStyleDefinitionAccess().getRule();
 	}
 
 	//SPExpression:
@@ -674,6 +1307,29 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getMetamodelRefRule() {
 		return getMetamodelRefAccess().getRule();
+	}
+
+	//Color:
+	//	PreDefinedColor;
+	public ColorElements getColorAccess() {
+		return (pColor != null) ? pColor : (pColor = new ColorElements());
+	}
+	
+	public ParserRule getColorRule() {
+		return getColorAccess().getRule();
+	}
+
+	//PreDefinedColor:
+	//	"white" | "black" | "blue" | "light blue" | "dark blue" | "chocolate" | "light chocolate" | "dark chocolate" | "gray"
+	//	| "light gray" | "dark gray" | "green" | "light green" | "dark green" | "orange" | "light orange" | "dark orange" |
+	//	"purple" | "light purple" | "dark purple" | "red" | "light red" | "dark red" | "yellow" | "light yellow" |
+	//	"dark yellow";
+	public PreDefinedColorElements getPreDefinedColorAccess() {
+		return (pPreDefinedColor != null) ? pPreDefinedColor : (pPreDefinedColor = new PreDefinedColorElements());
+	}
+	
+	public ParserRule getPreDefinedColorRule() {
+		return getPreDefinedColorAccess().getRule();
 	}
 
 	//terminal ID:

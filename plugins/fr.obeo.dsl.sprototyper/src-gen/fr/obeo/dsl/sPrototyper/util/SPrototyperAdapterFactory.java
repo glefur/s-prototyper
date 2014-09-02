@@ -105,6 +105,46 @@ public class SPrototyperAdapterFactory extends AdapterFactoryImpl
         return createTablePropertyAdapter();
       }
       @Override
+      public Adapter caseSPDiagram(SPDiagram object)
+      {
+        return createSPDiagramAdapter();
+      }
+      @Override
+      public Adapter caseDiagramElement(DiagramElement object)
+      {
+        return createDiagramElementAdapter();
+      }
+      @Override
+      public Adapter caseContainer(Container object)
+      {
+        return createContainerAdapter();
+      }
+      @Override
+      public Adapter caseSolidColorDefinition(SolidColorDefinition object)
+      {
+        return createSolidColorDefinitionAdapter();
+      }
+      @Override
+      public Adapter caseContainerColorDefinition(ContainerColorDefinition object)
+      {
+        return createContainerColorDefinitionAdapter();
+      }
+      @Override
+      public Adapter caseGradientColorDefinition(GradientColorDefinition object)
+      {
+        return createGradientColorDefinitionAdapter();
+      }
+      @Override
+      public Adapter caseLabelStyleDefinition(LabelStyleDefinition object)
+      {
+        return createLabelStyleDefinitionAdapter();
+      }
+      @Override
+      public Adapter caseBorderStyleDefinition(BorderStyleDefinition object)
+      {
+        return createBorderStyleDefinitionAdapter();
+      }
+      @Override
       public Adapter caseSPExpression(SPExpression object)
       {
         return createSPExpressionAdapter();
@@ -237,6 +277,126 @@ public class SPrototyperAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createTablePropertyAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.obeo.dsl.sPrototyper.SPDiagram <em>SP Diagram</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.obeo.dsl.sPrototyper.SPDiagram
+   * @generated
+   */
+  public Adapter createSPDiagramAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.obeo.dsl.sPrototyper.DiagramElement <em>Diagram Element</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.obeo.dsl.sPrototyper.DiagramElement
+   * @generated
+   */
+  public Adapter createDiagramElementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.obeo.dsl.sPrototyper.Container <em>Container</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.obeo.dsl.sPrototyper.Container
+   * @generated
+   */
+  public Adapter createContainerAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.obeo.dsl.sPrototyper.SolidColorDefinition <em>Solid Color Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.obeo.dsl.sPrototyper.SolidColorDefinition
+   * @generated
+   */
+  public Adapter createSolidColorDefinitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.obeo.dsl.sPrototyper.ContainerColorDefinition <em>Container Color Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.obeo.dsl.sPrototyper.ContainerColorDefinition
+   * @generated
+   */
+  public Adapter createContainerColorDefinitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.obeo.dsl.sPrototyper.GradientColorDefinition <em>Gradient Color Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.obeo.dsl.sPrototyper.GradientColorDefinition
+   * @generated
+   */
+  public Adapter createGradientColorDefinitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.obeo.dsl.sPrototyper.LabelStyleDefinition <em>Label Style Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.obeo.dsl.sPrototyper.LabelStyleDefinition
+   * @generated
+   */
+  public Adapter createLabelStyleDefinitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.obeo.dsl.sPrototyper.BorderStyleDefinition <em>Border Style Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.obeo.dsl.sPrototyper.BorderStyleDefinition
+   * @generated
+   */
+  public Adapter createBorderStyleDefinitionAdapter()
   {
     return null;
   }
