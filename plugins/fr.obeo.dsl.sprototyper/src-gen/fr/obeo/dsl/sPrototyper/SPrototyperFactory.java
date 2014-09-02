@@ -104,6 +104,15 @@ public interface SPrototyperFactory extends EFactory
   Container createContainer();
 
   /**
+   * Returns a new object of class '<em>Container Style Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Container Style Definition</em>'.
+   * @generated
+   */
+  ContainerStyleDefinition createContainerStyleDefinition();
+
+  /**
    * Returns a new object of class '<em>Solid Color Definition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -192,6 +201,24 @@ public interface SPrototyperFactory extends EFactory
    * @generated
    */
   MetamodelRef createMetamodelRef();
+
+  /**
+   * Returns a new object of class '<em>Color</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Color</em>'.
+   * @generated
+   */
+  Color createColor();
+
+  /**
+   * Returns a new object of class '<em>Pre Defined Color Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Pre Defined Color Definition</em>'.
+   * @generated
+   */
+  PreDefinedColorDefinition createPreDefinedColorDefinition();
 
   /**
    * Returns the package supported by this factory.

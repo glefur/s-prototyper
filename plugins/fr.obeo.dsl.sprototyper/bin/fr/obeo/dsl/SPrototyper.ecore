@@ -49,10 +49,17 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DiagramElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Container" eSuperTypes="#//DiagramElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="recursive" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="containerType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="eClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//SPExpression"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="style" eType="#//ContainerStyleDefinition"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//DiagramElement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContainerStyleDefinition">
     <eStructuralFeatures xsi:type="ecore:EReference" name="color" eType="#//ContainerColorDefinition"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="label" eType="#//LabelStyleDefinition"
@@ -61,12 +68,14 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SolidColorDefinition" eSuperTypes="#//ContainerColorDefinition">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="color" eType="#//Color"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ContainerColorDefinition"/>
   <eClassifiers xsi:type="ecore:EClass" name="GradientColorDefinition" eSuperTypes="#//ContainerColorDefinition">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="from" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="to" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="from" eType="#//Color"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="to" eType="#//Color" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LabelStyleDefinition">
     <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//SPExpression"
@@ -90,5 +99,37 @@
   <eClassifiers xsi:type="ecore:EClass" name="FeatureRef" eSuperTypes="#//SPExpression"/>
   <eClassifiers xsi:type="ecore:EClass" name="MetamodelRef">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="metamodel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Color"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PreDefinedColorDefinition" eSuperTypes="#//Color">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="#//PreDefinedColor"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="PreDefinedColor">
+    <eLiterals name="WHITE" literal="white"/>
+    <eLiterals name="BLACK" value="1" literal="black"/>
+    <eLiterals name="BLUE" value="2" literal="blue"/>
+    <eLiterals name="LIGHT_BLUE" value="3" literal="light blue"/>
+    <eLiterals name="DARK_BLUE" value="4" literal="dark blue"/>
+    <eLiterals name="CHOCOLATE" value="5" literal="chocolate"/>
+    <eLiterals name="LIGHT_CHOCOLATE" value="6" literal="light chocolate"/>
+    <eLiterals name="DARK_CHOCOLATE" value="7" literal="dark chocolate"/>
+    <eLiterals name="GRAY" value="8" literal="gray"/>
+    <eLiterals name="LIGHT_GRAY" value="9" literal="light gray"/>
+    <eLiterals name="DARK_GRAY" value="10" literal="dark gray"/>
+    <eLiterals name="GREEN" value="11" literal="green"/>
+    <eLiterals name="LIGHT_GREEN" value="12" literal="light green"/>
+    <eLiterals name="DARK_GREEN" value="13" literal="dark green"/>
+    <eLiterals name="ORANGE" value="14" literal="orange"/>
+    <eLiterals name="LIGHT_ORANGE" value="15" literal="light orange"/>
+    <eLiterals name="DARK_ORANGE" value="16" literal="dark orange"/>
+    <eLiterals name="PURPLE" value="17" literal="purple"/>
+    <eLiterals name="LIGHT_PURPLE" value="18" literal="light purple"/>
+    <eLiterals name="DARK_PURPLE" value="19" literal="dark purple"/>
+    <eLiterals name="RED" value="20" literal="red"/>
+    <eLiterals name="LIGHT_RED" value="21" literal="light red"/>
+    <eLiterals name="DARK_RED" value="22" literal="dark red"/>
+    <eLiterals name="YELLOW" value="23" literal="yellow"/>
+    <eLiterals name="LIGHT_YELLOW" value="24" literal="light yellow"/>
+    <eLiterals name="DARK_YELLOW" value="25" literal="dark yellow"/>
   </eClassifiers>
 </ecore:EPackage>

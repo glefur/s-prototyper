@@ -138,6 +138,13 @@ public class SPrototyperSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case SPrototyperPackage.CONTAINER_STYLE_DEFINITION:
+      {
+        ContainerStyleDefinition containerStyleDefinition = (ContainerStyleDefinition)theEObject;
+        T result = caseContainerStyleDefinition(containerStyleDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case SPrototyperPackage.SOLID_COLOR_DEFINITION:
       {
         SolidColorDefinition solidColorDefinition = (SolidColorDefinition)theEObject;
@@ -210,6 +217,21 @@ public class SPrototyperSwitch<T> extends Switch<T>
       {
         MetamodelRef metamodelRef = (MetamodelRef)theEObject;
         T result = caseMetamodelRef(metamodelRef);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SPrototyperPackage.COLOR:
+      {
+        Color color = (Color)theEObject;
+        T result = caseColor(color);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SPrototyperPackage.PRE_DEFINED_COLOR_DEFINITION:
+      {
+        PreDefinedColorDefinition preDefinedColorDefinition = (PreDefinedColorDefinition)theEObject;
+        T result = casePreDefinedColorDefinition(preDefinedColorDefinition);
+        if (result == null) result = caseColor(preDefinedColorDefinition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -357,6 +379,22 @@ public class SPrototyperSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseContainer(Container object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Container Style Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Container Style Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseContainerStyleDefinition(ContainerStyleDefinition object)
   {
     return null;
   }
@@ -517,6 +555,38 @@ public class SPrototyperSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseMetamodelRef(MetamodelRef object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Color</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Color</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseColor(Color object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Pre Defined Color Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Pre Defined Color Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePreDefinedColorDefinition(PreDefinedColorDefinition object)
   {
     return null;
   }

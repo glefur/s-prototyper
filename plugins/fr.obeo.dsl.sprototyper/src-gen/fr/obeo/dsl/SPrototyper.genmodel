@@ -7,6 +7,34 @@
     editorPluginID="fr.obeo.dsl.sprototyper.editor" runtimeVersion="2.8">
   <genPackages prefix="SPrototyper" basePackage="fr.obeo.dsl" disposableProviderFactory="true"
       ecorePackage="SPrototyper.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="SPrototyper.ecore#//PreDefinedColor">
+      <genEnumLiterals ecoreEnumLiteral="SPrototyper.ecore#//PreDefinedColor/WHITE"/>
+      <genEnumLiterals ecoreEnumLiteral="SPrototyper.ecore#//PreDefinedColor/BLACK"/>
+      <genEnumLiterals ecoreEnumLiteral="SPrototyper.ecore#//PreDefinedColor/BLUE"/>
+      <genEnumLiterals ecoreEnumLiteral="SPrototyper.ecore#//PreDefinedColor/LIGHT_BLUE"/>
+      <genEnumLiterals ecoreEnumLiteral="SPrototyper.ecore#//PreDefinedColor/DARK_BLUE"/>
+      <genEnumLiterals ecoreEnumLiteral="SPrototyper.ecore#//PreDefinedColor/CHOCOLATE"/>
+      <genEnumLiterals ecoreEnumLiteral="SPrototyper.ecore#//PreDefinedColor/LIGHT_CHOCOLATE"/>
+      <genEnumLiterals ecoreEnumLiteral="SPrototyper.ecore#//PreDefinedColor/DARK_CHOCOLATE"/>
+      <genEnumLiterals ecoreEnumLiteral="SPrototyper.ecore#//PreDefinedColor/GRAY"/>
+      <genEnumLiterals ecoreEnumLiteral="SPrototyper.ecore#//PreDefinedColor/LIGHT_GRAY"/>
+      <genEnumLiterals ecoreEnumLiteral="SPrototyper.ecore#//PreDefinedColor/DARK_GRAY"/>
+      <genEnumLiterals ecoreEnumLiteral="SPrototyper.ecore#//PreDefinedColor/GREEN"/>
+      <genEnumLiterals ecoreEnumLiteral="SPrototyper.ecore#//PreDefinedColor/LIGHT_GREEN"/>
+      <genEnumLiterals ecoreEnumLiteral="SPrototyper.ecore#//PreDefinedColor/DARK_GREEN"/>
+      <genEnumLiterals ecoreEnumLiteral="SPrototyper.ecore#//PreDefinedColor/ORANGE"/>
+      <genEnumLiterals ecoreEnumLiteral="SPrototyper.ecore#//PreDefinedColor/LIGHT_ORANGE"/>
+      <genEnumLiterals ecoreEnumLiteral="SPrototyper.ecore#//PreDefinedColor/DARK_ORANGE"/>
+      <genEnumLiterals ecoreEnumLiteral="SPrototyper.ecore#//PreDefinedColor/PURPLE"/>
+      <genEnumLiterals ecoreEnumLiteral="SPrototyper.ecore#//PreDefinedColor/LIGHT_PURPLE"/>
+      <genEnumLiterals ecoreEnumLiteral="SPrototyper.ecore#//PreDefinedColor/DARK_PURPLE"/>
+      <genEnumLiterals ecoreEnumLiteral="SPrototyper.ecore#//PreDefinedColor/RED"/>
+      <genEnumLiterals ecoreEnumLiteral="SPrototyper.ecore#//PreDefinedColor/LIGHT_RED"/>
+      <genEnumLiterals ecoreEnumLiteral="SPrototyper.ecore#//PreDefinedColor/DARK_RED"/>
+      <genEnumLiterals ecoreEnumLiteral="SPrototyper.ecore#//PreDefinedColor/YELLOW"/>
+      <genEnumLiterals ecoreEnumLiteral="SPrototyper.ecore#//PreDefinedColor/LIGHT_YELLOW"/>
+      <genEnumLiterals ecoreEnumLiteral="SPrototyper.ecore#//PreDefinedColor/DARK_YELLOW"/>
+    </genEnums>
     <genClasses ecoreClass="SPrototyper.ecore#//SPrototyper">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//SPrototyper/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//SPrototyper/qualifier"/>
@@ -46,20 +74,25 @@
     </genClasses>
     <genClasses ecoreClass="SPrototyper.ecore#//DiagramElement"/>
     <genClasses ecoreClass="SPrototyper.ecore#//Container">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//Container/recursive"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//Container/containerType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//Container/eClass"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//Container/expression"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//Container/color"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//Container/label"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//Container/border"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//Container/style"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//Container/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="SPrototyper.ecore#//ContainerStyleDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//ContainerStyleDefinition/color"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//ContainerStyleDefinition/label"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//ContainerStyleDefinition/border"/>
     </genClasses>
     <genClasses ecoreClass="SPrototyper.ecore#//SolidColorDefinition">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//SolidColorDefinition/color"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//SolidColorDefinition/color"/>
     </genClasses>
     <genClasses ecoreClass="SPrototyper.ecore#//ContainerColorDefinition"/>
     <genClasses ecoreClass="SPrototyper.ecore#//GradientColorDefinition">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//GradientColorDefinition/from"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//GradientColorDefinition/to"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//GradientColorDefinition/from"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//GradientColorDefinition/to"/>
     </genClasses>
     <genClasses ecoreClass="SPrototyper.ecore#//LabelStyleDefinition">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//LabelStyleDefinition/expression"/>
@@ -80,6 +113,10 @@
     <genClasses ecoreClass="SPrototyper.ecore#//FeatureRef"/>
     <genClasses ecoreClass="SPrototyper.ecore#//MetamodelRef">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//MetamodelRef/metamodel"/>
+    </genClasses>
+    <genClasses ecoreClass="SPrototyper.ecore#//Color"/>
+    <genClasses ecoreClass="SPrototyper.ecore#//PreDefinedColorDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//PreDefinedColorDefinition/color"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

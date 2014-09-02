@@ -61,13 +61,17 @@ DiagramElement:
 
 
 Container:
-	(containerType=ContainerType)? 'container' eClass=STRING 'accessibleThrough' expression=SPExpression 
-	'style {' 
-		color=ContainerColorDefinition
-		(label=LabelStyleDefinition)?
-		(border=BorderStyleDefinition)?
-	'}'
+	(recursive ?= 'recursive')? (containerType=ContainerType)? 'container' eClass=STRING 'accessibleThrough' expression=SPExpression (style=ContainerStyleDefinition)? (
+		'{'
+			elements+=DiagramElement+
+		'}'
+	)?
 ;
+
+ContainerStyleDefinition:
+	'[' color=ContainerColorDefinition (',' label=LabelStyleDefinition)? (',' border=BorderStyleDefinition)? ']'
+;
+
 
 ContainerType:
 	'freeform' | 'list'
@@ -114,18 +118,22 @@ MetamodelRef:
 ;
 
 Color:
-	PreDefinedColor	
+	PreDefinedColorDefinition
 ;
 
-PreDefinedColor:
-	'white' 
-	| 'black' 
-	| 'blue' | 'light blue' | 'dark blue'  
-	| 'chocolate' | 'light chocolate' | 'dark chocolate' 
-	| 'gray' | 'light gray' | 'dark gray'
-	| 'green' | 'light green' | 'dark green'
-	| 'orange' | 'light orange' | 'dark orange'
-	| 'purple' | 'light purple' | 'dark purple'
-	| 'red' | 'light red' | 'dark red'
-	| 'yellow' | 'light yellow' | 'dark yellow'
+PreDefinedColorDefinition:
+	color=PreDefinedColor
+;
+
+enum PreDefinedColor:
+	WHITE='white' 
+	| BLACK='black' 
+	| BLUE='blue' | LIGHT_BLUE='light blue' | DARK_BLUE='dark blue'  
+	| CHOCOLATE='chocolate' | LIGHT_CHOCOLATE='light chocolate' | DARK_CHOCOLATE='dark chocolate' 
+	| GRAY='gray' | LIGHT_GRAY='light gray' | DARK_GRAY='dark gray'
+	| GREEN='green' | LIGHT_GREEN='light green' | DARK_GREEN='dark green'
+	| ORANGE='orange' | LIGHT_ORANGE='light orange' | DARK_ORANGE='dark orange'
+	| PURPLE='purple' | LIGHT_PURPLE='light purple' | DARK_PURPLE='dark purple'
+	| RED='red' | LIGHT_RED='light red' | DARK_RED='dark red'
+	| YELLOW='yellow' | LIGHT_YELLOW='light yellow' | DARK_YELLOW='dark yellow'
 ;

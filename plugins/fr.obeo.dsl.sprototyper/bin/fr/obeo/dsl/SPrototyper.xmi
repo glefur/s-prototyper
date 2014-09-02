@@ -86,7 +86,7 @@
           </elements>
         </elements>
         <elements xsi:type="xtext:Assignment" cardinality="+" feature="metamodels" operator="+=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.20"/>
         </elements>
         <elements xsi:type="xtext:Keyword" value="root"/>
         <elements xsi:type="xtext:Assignment" feature="root" operator="=">
@@ -118,7 +118,7 @@
         </elements>
         <elements xsi:type="xtext:Keyword" value="accessibleThrough"/>
         <elements xsi:type="xtext:Assignment" feature="expression" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.15"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.16"/>
         </elements>
         <elements xsi:type="xtext:Group" cardinality="?">
           <elements xsi:type="xtext:Keyword" value="{"/>
@@ -147,7 +147,7 @@
         <elements xsi:type="xtext:Group" cardinality="?">
           <elements xsi:type="xtext:Keyword" value="expression"/>
           <elements xsi:type="xtext:Assignment" feature="expression" operator="=">
-            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.15"/>
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.16"/>
           </elements>
         </elements>
       </alternatives>
@@ -175,7 +175,7 @@
           </elements>
         </elements>
         <elements xsi:type="xtext:Assignment" cardinality="+" feature="metamodels" operator="+=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.20"/>
         </elements>
         <elements xsi:type="xtext:Keyword" value="root"/>
         <elements xsi:type="xtext:Assignment" feature="root" operator="=">
@@ -198,8 +198,11 @@
         <classifier xsi:type="ecore:EClass" href="http://www.obeo.fr/dsl/SPrototyper#//Container"/>
       </type>
       <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="recursive" operator="?=">
+          <terminal xsi:type="xtext:Keyword" value="recursive"/>
+        </elements>
         <elements xsi:type="xtext:Assignment" cardinality="?" feature="containerType" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.9"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.10"/>
         </elements>
         <elements xsi:type="xtext:Keyword" value="container"/>
         <elements xsi:type="xtext:Assignment" feature="eClass" operator="=">
@@ -207,19 +210,42 @@
         </elements>
         <elements xsi:type="xtext:Keyword" value="accessibleThrough"/>
         <elements xsi:type="xtext:Assignment" feature="expression" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.15"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.16"/>
         </elements>
-        <elements xsi:type="xtext:Keyword" value="style {"/>
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="style" operator="=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.9"/>
+        </elements>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value="{"/>
+          <elements xsi:type="xtext:Assignment" cardinality="+" feature="elements" operator="+=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.7"/>
+          </elements>
+          <elements xsi:type="xtext:Keyword" value="}"/>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="ContainerStyleDefinition">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EClass" href="http://www.obeo.fr/dsl/SPrototyper#//ContainerStyleDefinition"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Keyword" value="["/>
         <elements xsi:type="xtext:Assignment" feature="color" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.11"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
         </elements>
-        <elements xsi:type="xtext:Assignment" cardinality="?" feature="label" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.13"/>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value=","/>
+          <elements xsi:type="xtext:Assignment" feature="label" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.14"/>
+          </elements>
         </elements>
-        <elements xsi:type="xtext:Assignment" cardinality="?" feature="border" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.14"/>
+        <elements xsi:type="xtext:Group" cardinality="?">
+          <elements xsi:type="xtext:Keyword" value=","/>
+          <elements xsi:type="xtext:Assignment" feature="border" operator="=">
+            <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.15"/>
+          </elements>
         </elements>
-        <elements xsi:type="xtext:Keyword" value="}"/>
+        <elements xsi:type="xtext:Keyword" value="]"/>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="ContainerType">
@@ -238,7 +264,7 @@
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Keyword" value="color"/>
         <elements xsi:type="xtext:Assignment" feature="color" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.20"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.21"/>
         </elements>
       </alternatives>
     </rules>
@@ -247,8 +273,8 @@
         <classifier xsi:type="ecore:EClass" href="http://www.obeo.fr/dsl/SPrototyper#//ContainerColorDefinition"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives">
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.10"/>
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.12"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.11"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.13"/>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="GradientColorDefinition">
@@ -258,11 +284,11 @@
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Keyword" value="gradient from"/>
         <elements xsi:type="xtext:Assignment" feature="from" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.20"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.21"/>
         </elements>
         <elements xsi:type="xtext:Keyword" value="to"/>
         <elements xsi:type="xtext:Assignment" feature="to" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.20"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.21"/>
         </elements>
       </alternatives>
     </rules>
@@ -273,10 +299,10 @@
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Keyword" value="label"/>
         <elements xsi:type="xtext:Assignment" cardinality="?" feature="expression" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.15"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.16"/>
         </elements>
         <elements xsi:type="xtext:Assignment" feature="color" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.10"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.11"/>
         </elements>
         <elements xsi:type="xtext:Group" cardinality="?">
           <elements xsi:type="xtext:Keyword" value="size"/>
@@ -299,7 +325,7 @@
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Keyword" value="border "/>
         <elements xsi:type="xtext:Assignment" feature="color" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.10"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.11"/>
         </elements>
         <elements xsi:type="xtext:Group" cardinality="?">
           <elements xsi:type="xtext:Keyword" value="size"/>
@@ -314,9 +340,9 @@
         <classifier xsi:type="ecore:EClass" href="http://www.obeo.fr/dsl/SPrototyper#//SPExpression"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives">
-        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.16"/>
         <elements xsi:type="xtext:RuleCall" rule="/0/@rules.17"/>
         <elements xsi:type="xtext:RuleCall" rule="/0/@rules.18"/>
+        <elements xsi:type="xtext:RuleCall" rule="/0/@rules.19"/>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="AcceleoExpression">
@@ -364,42 +390,128 @@
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="Color">
-      <type metamodel="/1/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EClass" href="http://www.obeo.fr/dsl/SPrototyper#//Color"/>
       </type>
-      <alternatives xsi:type="xtext:RuleCall" rule="/0/@rules.21"/>
+      <alternatives xsi:type="xtext:RuleCall" rule="/0/@rules.22"/>
     </rules>
-    <rules xsi:type="xtext:ParserRule" name="PreDefinedColor">
-      <type metamodel="/1/@metamodelDeclarations.0">
-        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <rules xsi:type="xtext:ParserRule" name="PreDefinedColorDefinition">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EClass" href="http://www.obeo.fr/dsl/SPrototyper#//PreDefinedColorDefinition"/>
+      </type>
+      <alternatives xsi:type="xtext:Assignment" feature="color" operator="=">
+        <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.23"/>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:EnumRule" name="PreDefinedColor">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EEnum" href="http://www.obeo.fr/dsl/SPrototyper#//PreDefinedColor"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives">
-        <elements xsi:type="xtext:Keyword" value="white"/>
-        <elements xsi:type="xtext:Keyword" value="black"/>
-        <elements xsi:type="xtext:Keyword" value="blue"/>
-        <elements xsi:type="xtext:Keyword" value="light blue"/>
-        <elements xsi:type="xtext:Keyword" value="dark blue"/>
-        <elements xsi:type="xtext:Keyword" value="chocolate"/>
-        <elements xsi:type="xtext:Keyword" value="light chocolate"/>
-        <elements xsi:type="xtext:Keyword" value="dark chocolate"/>
-        <elements xsi:type="xtext:Keyword" value="gray"/>
-        <elements xsi:type="xtext:Keyword" value="light gray"/>
-        <elements xsi:type="xtext:Keyword" value="dark gray"/>
-        <elements xsi:type="xtext:Keyword" value="green"/>
-        <elements xsi:type="xtext:Keyword" value="light green"/>
-        <elements xsi:type="xtext:Keyword" value="dark green"/>
-        <elements xsi:type="xtext:Keyword" value="orange"/>
-        <elements xsi:type="xtext:Keyword" value="light orange"/>
-        <elements xsi:type="xtext:Keyword" value="dark orange"/>
-        <elements xsi:type="xtext:Keyword" value="purple"/>
-        <elements xsi:type="xtext:Keyword" value="light purple"/>
-        <elements xsi:type="xtext:Keyword" value="dark purple"/>
-        <elements xsi:type="xtext:Keyword" value="red"/>
-        <elements xsi:type="xtext:Keyword" value="light red"/>
-        <elements xsi:type="xtext:Keyword" value="dark red"/>
-        <elements xsi:type="xtext:Keyword" value="yellow"/>
-        <elements xsi:type="xtext:Keyword" value="light yellow"/>
-        <elements xsi:type="xtext:Keyword" value="dark yellow"/>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.obeo.fr/dsl/SPrototyper#//PreDefinedColor/WHITE"/>
+          <literal value="white"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.obeo.fr/dsl/SPrototyper#//PreDefinedColor/BLACK"/>
+          <literal value="black"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.obeo.fr/dsl/SPrototyper#//PreDefinedColor/BLUE"/>
+          <literal value="blue"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.obeo.fr/dsl/SPrototyper#//PreDefinedColor/LIGHT_BLUE"/>
+          <literal value="light blue"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.obeo.fr/dsl/SPrototyper#//PreDefinedColor/DARK_BLUE"/>
+          <literal value="dark blue"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.obeo.fr/dsl/SPrototyper#//PreDefinedColor/CHOCOLATE"/>
+          <literal value="chocolate"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.obeo.fr/dsl/SPrototyper#//PreDefinedColor/LIGHT_CHOCOLATE"/>
+          <literal value="light chocolate"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.obeo.fr/dsl/SPrototyper#//PreDefinedColor/DARK_CHOCOLATE"/>
+          <literal value="dark chocolate"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.obeo.fr/dsl/SPrototyper#//PreDefinedColor/GRAY"/>
+          <literal value="gray"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.obeo.fr/dsl/SPrototyper#//PreDefinedColor/LIGHT_GRAY"/>
+          <literal value="light gray"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.obeo.fr/dsl/SPrototyper#//PreDefinedColor/DARK_GRAY"/>
+          <literal value="dark gray"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.obeo.fr/dsl/SPrototyper#//PreDefinedColor/GREEN"/>
+          <literal value="green"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.obeo.fr/dsl/SPrototyper#//PreDefinedColor/LIGHT_GREEN"/>
+          <literal value="light green"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.obeo.fr/dsl/SPrototyper#//PreDefinedColor/DARK_GREEN"/>
+          <literal value="dark green"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.obeo.fr/dsl/SPrototyper#//PreDefinedColor/ORANGE"/>
+          <literal value="orange"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.obeo.fr/dsl/SPrototyper#//PreDefinedColor/LIGHT_ORANGE"/>
+          <literal value="light orange"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.obeo.fr/dsl/SPrototyper#//PreDefinedColor/DARK_ORANGE"/>
+          <literal value="dark orange"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.obeo.fr/dsl/SPrototyper#//PreDefinedColor/PURPLE"/>
+          <literal value="purple"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.obeo.fr/dsl/SPrototyper#//PreDefinedColor/LIGHT_PURPLE"/>
+          <literal value="light purple"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.obeo.fr/dsl/SPrototyper#//PreDefinedColor/DARK_PURPLE"/>
+          <literal value="dark purple"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.obeo.fr/dsl/SPrototyper#//PreDefinedColor/RED"/>
+          <literal value="red"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.obeo.fr/dsl/SPrototyper#//PreDefinedColor/LIGHT_RED"/>
+          <literal value="light red"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.obeo.fr/dsl/SPrototyper#//PreDefinedColor/DARK_RED"/>
+          <literal value="dark red"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.obeo.fr/dsl/SPrototyper#//PreDefinedColor/YELLOW"/>
+          <literal value="yellow"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.obeo.fr/dsl/SPrototyper#//PreDefinedColor/LIGHT_YELLOW"/>
+          <literal value="light yellow"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.obeo.fr/dsl/SPrototyper#//PreDefinedColor/DARK_YELLOW"/>
+          <literal value="dark yellow"/>
+        </elements>
       </alternatives>
     </rules>
   </xtext:Grammar>

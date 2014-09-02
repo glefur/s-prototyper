@@ -27,13 +27,16 @@ import com.google.common.collect.Maps;
 
 import fr.obeo.dsl.sPrototyper.AcceleoExpression;
 import fr.obeo.dsl.sPrototyper.BorderStyleDefinition;
+import fr.obeo.dsl.sPrototyper.Color;
 import fr.obeo.dsl.sPrototyper.Container;
 import fr.obeo.dsl.sPrototyper.ContainerColorDefinition;
+import fr.obeo.dsl.sPrototyper.ContainerStyleDefinition;
 import fr.obeo.dsl.sPrototyper.DiagramElement;
 import fr.obeo.dsl.sPrototyper.FeatureRef;
 import fr.obeo.dsl.sPrototyper.GradientColorDefinition;
 import fr.obeo.dsl.sPrototyper.LabelStyleDefinition;
 import fr.obeo.dsl.sPrototyper.MetamodelRef;
+import fr.obeo.dsl.sPrototyper.PreDefinedColorDefinition;
 import fr.obeo.dsl.sPrototyper.SPDiagram;
 import fr.obeo.dsl.sPrototyper.SPExpression;
 import fr.obeo.dsl.sPrototyper.SPRepresentation;
@@ -270,6 +273,7 @@ public class Initializer {
 		for (DiagramElement element : spDiagram.getElements()) {
 			if (element instanceof Container) {
 				ContainerMapping mapping = createContainerMapping(spViewpoint, spDiagram, (Container)element, defaultLayer);
+				defaultLayer.getContainerMappings().add(mapping);
 			}
 		}
 		return diagramDescription;
@@ -287,11 +291,31 @@ public class Initializer {
 		if (!Strings.isNullOrEmpty(containerDefinition.getContainerType()) && "list".equals(containerDefinition.getContainerType())) {
 			containerMapping.setChildrenPresentation(ContainerLayout.LIST);
 		}
+		if (containerDefinition.isRecursive()) {
+			containerMapping.getReusedContainerMappings().add(containerMapping);
+		}
+		
+		FlatContainerStyleDescription containerStyle = generateContainerStyle(containerDefinition);
+		containerMapping.setStyle(containerStyle);
+		
+		for (DiagramElement subElement : containerDefinition.getElements()) {
+			if (subElement instanceof Container) {
+				ContainerMapping subMapping = createContainerMapping(spViewpoint, spDiagram, (Container) subElement, containerMapping);
+				containerMapping.getSubContainerMappings().add(subMapping);
+			}
+		}
+		return containerMapping;
+	}
+
+
+	private FlatContainerStyleDescription generateContainerStyle(
+			Container containerDefinition) {
 		FlatContainerStyleDescription containerStyle = StyleFactory.eINSTANCE.createFlatContainerStyleDescription();
 		containerStyle.setLabelFormat(FontFormat.BOLD_LITERAL);
 
+		ContainerStyleDefinition style = containerDefinition.getStyle();
 
-		ContainerColorDefinition colorDefinition = containerDefinition.getColor();
+		ContainerColorDefinition colorDefinition = style.getColor();
 		if (colorDefinition instanceof GradientColorDefinition) {
 			GradientColorDefinition gcd = (GradientColorDefinition) colorDefinition;
 			containerStyle.setBackgroundColor(getColor(gcd.getTo()));
@@ -301,10 +325,8 @@ public class Initializer {
 			containerStyle.setBackgroundColor(getColor(scd.getColor()));
 			containerStyle.setForegroundColor(getColor(scd.getColor()));			
 		}
-
-
-		if (containerDefinition.getLabel() != null) {
-			LabelStyleDefinition labelDefinition = containerDefinition.getLabel(); 
+		if (style.getLabel() != null) {
+			LabelStyleDefinition labelDefinition = style.getLabel(); 
 			if (labelDefinition.getExpression() != null) {
 				containerStyle.setLabelExpression(generateVPExpression(labelDefinition.getExpression()));
 			} else {
@@ -341,18 +363,14 @@ public class Initializer {
 		} else {
 			containerStyle.setLabelExpression(DEFAULT_LABEL_EXPRESSION);
 		}
-		if (containerDefinition.getBorder() != null) {
-			BorderStyleDefinition borderDefinition = containerDefinition.getBorder();
+		if (style.getBorder() != null) {
+			BorderStyleDefinition borderDefinition = style.getBorder();
 			containerStyle.setBorderColor(getColor(borderDefinition.getColor().getColor()));			
 			if (borderDefinition.eIsSet(SPrototyperPackage.Literals.BORDER_STYLE_DEFINITION__SIZE)) {
 				containerStyle.setBorderSizeComputationExpression(String.valueOf(borderDefinition.getSize()));
 			}
 		}
-		containerMapping.setStyle(containerStyle);
-		if (parent instanceof Layer) {
-			((Layer) parent).getContainerMappings().add(containerMapping);
-		}
-		return containerMapping;
+		return containerStyle;
 	}
 
 
@@ -391,12 +409,14 @@ public class Initializer {
 		return prototyperResource.getResourceSet().createResource(resourceURI);
 	}
 
-	private ColorDescription getColor(String color) {
-		Environment env = getEnvironment();
-		String zeColor = color.replaceAll(" ", "_");
-		for (SystemColor sysColor : env.getSystemColors().getEntries()) {
-			if (zeColor.equals(sysColor.getName())) {
-				return sysColor;
+	private ColorDescription getColor(Color colorDef) {
+		if (colorDef instanceof PreDefinedColorDefinition) {
+			Environment env = getEnvironment();
+			String zeColor = ((PreDefinedColorDefinition)colorDef).getColor().getLiteral().replaceAll(" ", "_");
+			for (SystemColor sysColor : env.getSystemColors().getEntries()) {
+				if (zeColor.equals(sysColor.getName())) {
+					return sysColor;
+				}
 			}
 		}
 		return null;

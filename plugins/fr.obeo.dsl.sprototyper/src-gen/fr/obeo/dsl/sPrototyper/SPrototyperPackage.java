@@ -4,6 +4,7 @@ package fr.obeo.dsl.sPrototyper;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -516,13 +517,22 @@ public interface SPrototyperPackage extends EPackage
   int CONTAINER = 8;
 
   /**
+   * The feature id for the '<em><b>Recursive</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONTAINER__RECURSIVE = DIAGRAM_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
    * The feature id for the '<em><b>Container Type</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONTAINER__CONTAINER_TYPE = DIAGRAM_ELEMENT_FEATURE_COUNT + 0;
+  int CONTAINER__CONTAINER_TYPE = DIAGRAM_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>EClass</b></em>' attribute.
@@ -531,7 +541,7 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONTAINER__ECLASS = DIAGRAM_ELEMENT_FEATURE_COUNT + 1;
+  int CONTAINER__ECLASS = DIAGRAM_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -540,34 +550,25 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONTAINER__EXPRESSION = DIAGRAM_ELEMENT_FEATURE_COUNT + 2;
+  int CONTAINER__EXPRESSION = DIAGRAM_ELEMENT_FEATURE_COUNT + 3;
 
   /**
-   * The feature id for the '<em><b>Color</b></em>' containment reference.
+   * The feature id for the '<em><b>Style</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONTAINER__COLOR = DIAGRAM_ELEMENT_FEATURE_COUNT + 3;
+  int CONTAINER__STYLE = DIAGRAM_ELEMENT_FEATURE_COUNT + 4;
 
   /**
-   * The feature id for the '<em><b>Label</b></em>' containment reference.
+   * The feature id for the '<em><b>Elements</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONTAINER__LABEL = DIAGRAM_ELEMENT_FEATURE_COUNT + 4;
-
-  /**
-   * The feature id for the '<em><b>Border</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CONTAINER__BORDER = DIAGRAM_ELEMENT_FEATURE_COUNT + 5;
+  int CONTAINER__ELEMENTS = DIAGRAM_ELEMENT_FEATURE_COUNT + 5;
 
   /**
    * The number of structural features of the '<em>Container</em>' class.
@@ -579,6 +580,52 @@ public interface SPrototyperPackage extends EPackage
   int CONTAINER_FEATURE_COUNT = DIAGRAM_ELEMENT_FEATURE_COUNT + 6;
 
   /**
+   * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.ContainerStyleDefinitionImpl <em>Container Style Definition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.obeo.dsl.sPrototyper.impl.ContainerStyleDefinitionImpl
+   * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getContainerStyleDefinition()
+   * @generated
+   */
+  int CONTAINER_STYLE_DEFINITION = 9;
+
+  /**
+   * The feature id for the '<em><b>Color</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONTAINER_STYLE_DEFINITION__COLOR = 0;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONTAINER_STYLE_DEFINITION__LABEL = 1;
+
+  /**
+   * The feature id for the '<em><b>Border</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONTAINER_STYLE_DEFINITION__BORDER = 2;
+
+  /**
+   * The number of structural features of the '<em>Container Style Definition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONTAINER_STYLE_DEFINITION_FEATURE_COUNT = 3;
+
+  /**
    * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.ContainerColorDefinitionImpl <em>Container Color Definition</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -586,7 +633,7 @@ public interface SPrototyperPackage extends EPackage
    * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getContainerColorDefinition()
    * @generated
    */
-  int CONTAINER_COLOR_DEFINITION = 10;
+  int CONTAINER_COLOR_DEFINITION = 11;
 
   /**
    * The number of structural features of the '<em>Container Color Definition</em>' class.
@@ -605,10 +652,10 @@ public interface SPrototyperPackage extends EPackage
    * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getSolidColorDefinition()
    * @generated
    */
-  int SOLID_COLOR_DEFINITION = 9;
+  int SOLID_COLOR_DEFINITION = 10;
 
   /**
-   * The feature id for the '<em><b>Color</b></em>' attribute.
+   * The feature id for the '<em><b>Color</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -633,10 +680,10 @@ public interface SPrototyperPackage extends EPackage
    * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getGradientColorDefinition()
    * @generated
    */
-  int GRADIENT_COLOR_DEFINITION = 11;
+  int GRADIENT_COLOR_DEFINITION = 12;
 
   /**
-   * The feature id for the '<em><b>From</b></em>' attribute.
+   * The feature id for the '<em><b>From</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -645,7 +692,7 @@ public interface SPrototyperPackage extends EPackage
   int GRADIENT_COLOR_DEFINITION__FROM = CONTAINER_COLOR_DEFINITION_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>To</b></em>' attribute.
+   * The feature id for the '<em><b>To</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -670,7 +717,7 @@ public interface SPrototyperPackage extends EPackage
    * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getLabelStyleDefinition()
    * @generated
    */
-  int LABEL_STYLE_DEFINITION = 12;
+  int LABEL_STYLE_DEFINITION = 13;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -734,7 +781,7 @@ public interface SPrototyperPackage extends EPackage
    * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getBorderStyleDefinition()
    * @generated
    */
-  int BORDER_STYLE_DEFINITION = 13;
+  int BORDER_STYLE_DEFINITION = 14;
 
   /**
    * The feature id for the '<em><b>Color</b></em>' containment reference.
@@ -771,7 +818,7 @@ public interface SPrototyperPackage extends EPackage
    * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getSPExpression()
    * @generated
    */
-  int SP_EXPRESSION = 14;
+  int SP_EXPRESSION = 15;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -799,7 +846,7 @@ public interface SPrototyperPackage extends EPackage
    * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getAcceleoExpression()
    * @generated
    */
-  int ACCELEO_EXPRESSION = 15;
+  int ACCELEO_EXPRESSION = 16;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -827,7 +874,7 @@ public interface SPrototyperPackage extends EPackage
    * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getVarRef()
    * @generated
    */
-  int VAR_REF = 16;
+  int VAR_REF = 17;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -855,7 +902,7 @@ public interface SPrototyperPackage extends EPackage
    * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getFeatureRef()
    * @generated
    */
-  int FEATURE_REF = 17;
+  int FEATURE_REF = 18;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -883,7 +930,7 @@ public interface SPrototyperPackage extends EPackage
    * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getMetamodelRef()
    * @generated
    */
-  int METAMODEL_REF = 18;
+  int METAMODEL_REF = 19;
 
   /**
    * The feature id for the '<em><b>Metamodel</b></em>' attribute.
@@ -902,6 +949,63 @@ public interface SPrototyperPackage extends EPackage
    * @ordered
    */
   int METAMODEL_REF_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.ColorImpl <em>Color</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.obeo.dsl.sPrototyper.impl.ColorImpl
+   * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getColor()
+   * @generated
+   */
+  int COLOR = 20;
+
+  /**
+   * The number of structural features of the '<em>Color</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COLOR_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.PreDefinedColorDefinitionImpl <em>Pre Defined Color Definition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.obeo.dsl.sPrototyper.impl.PreDefinedColorDefinitionImpl
+   * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getPreDefinedColorDefinition()
+   * @generated
+   */
+  int PRE_DEFINED_COLOR_DEFINITION = 21;
+
+  /**
+   * The feature id for the '<em><b>Color</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRE_DEFINED_COLOR_DEFINITION__COLOR = COLOR_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Pre Defined Color Definition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PRE_DEFINED_COLOR_DEFINITION_FEATURE_COUNT = COLOR_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.PreDefinedColor <em>Pre Defined Color</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.obeo.dsl.sPrototyper.PreDefinedColor
+   * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getPreDefinedColor()
+   * @generated
+   */
+  int PRE_DEFINED_COLOR = 22;
 
 
   /**
@@ -1248,6 +1352,17 @@ public interface SPrototyperPackage extends EPackage
   EClass getContainer();
 
   /**
+   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.Container#isRecursive <em>Recursive</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Recursive</em>'.
+   * @see fr.obeo.dsl.sPrototyper.Container#isRecursive()
+   * @see #getContainer()
+   * @generated
+   */
+  EAttribute getContainer_Recursive();
+
+  /**
    * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.Container#getContainerType <em>Container Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1281,37 +1396,69 @@ public interface SPrototyperPackage extends EPackage
   EReference getContainer_Expression();
 
   /**
-   * Returns the meta object for the containment reference '{@link fr.obeo.dsl.sPrototyper.Container#getColor <em>Color</em>}'.
+   * Returns the meta object for the containment reference '{@link fr.obeo.dsl.sPrototyper.Container#getStyle <em>Style</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Style</em>'.
+   * @see fr.obeo.dsl.sPrototyper.Container#getStyle()
+   * @see #getContainer()
+   * @generated
+   */
+  EReference getContainer_Style();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link fr.obeo.dsl.sPrototyper.Container#getElements <em>Elements</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Elements</em>'.
+   * @see fr.obeo.dsl.sPrototyper.Container#getElements()
+   * @see #getContainer()
+   * @generated
+   */
+  EReference getContainer_Elements();
+
+  /**
+   * Returns the meta object for class '{@link fr.obeo.dsl.sPrototyper.ContainerStyleDefinition <em>Container Style Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Container Style Definition</em>'.
+   * @see fr.obeo.dsl.sPrototyper.ContainerStyleDefinition
+   * @generated
+   */
+  EClass getContainerStyleDefinition();
+
+  /**
+   * Returns the meta object for the containment reference '{@link fr.obeo.dsl.sPrototyper.ContainerStyleDefinition#getColor <em>Color</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Color</em>'.
-   * @see fr.obeo.dsl.sPrototyper.Container#getColor()
-   * @see #getContainer()
+   * @see fr.obeo.dsl.sPrototyper.ContainerStyleDefinition#getColor()
+   * @see #getContainerStyleDefinition()
    * @generated
    */
-  EReference getContainer_Color();
+  EReference getContainerStyleDefinition_Color();
 
   /**
-   * Returns the meta object for the containment reference '{@link fr.obeo.dsl.sPrototyper.Container#getLabel <em>Label</em>}'.
+   * Returns the meta object for the containment reference '{@link fr.obeo.dsl.sPrototyper.ContainerStyleDefinition#getLabel <em>Label</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Label</em>'.
-   * @see fr.obeo.dsl.sPrototyper.Container#getLabel()
-   * @see #getContainer()
+   * @see fr.obeo.dsl.sPrototyper.ContainerStyleDefinition#getLabel()
+   * @see #getContainerStyleDefinition()
    * @generated
    */
-  EReference getContainer_Label();
+  EReference getContainerStyleDefinition_Label();
 
   /**
-   * Returns the meta object for the containment reference '{@link fr.obeo.dsl.sPrototyper.Container#getBorder <em>Border</em>}'.
+   * Returns the meta object for the containment reference '{@link fr.obeo.dsl.sPrototyper.ContainerStyleDefinition#getBorder <em>Border</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Border</em>'.
-   * @see fr.obeo.dsl.sPrototyper.Container#getBorder()
-   * @see #getContainer()
+   * @see fr.obeo.dsl.sPrototyper.ContainerStyleDefinition#getBorder()
+   * @see #getContainerStyleDefinition()
    * @generated
    */
-  EReference getContainer_Border();
+  EReference getContainerStyleDefinition_Border();
 
   /**
    * Returns the meta object for class '{@link fr.obeo.dsl.sPrototyper.SolidColorDefinition <em>Solid Color Definition</em>}'.
@@ -1324,15 +1471,15 @@ public interface SPrototyperPackage extends EPackage
   EClass getSolidColorDefinition();
 
   /**
-   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.SolidColorDefinition#getColor <em>Color</em>}'.
+   * Returns the meta object for the containment reference '{@link fr.obeo.dsl.sPrototyper.SolidColorDefinition#getColor <em>Color</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Color</em>'.
+   * @return the meta object for the containment reference '<em>Color</em>'.
    * @see fr.obeo.dsl.sPrototyper.SolidColorDefinition#getColor()
    * @see #getSolidColorDefinition()
    * @generated
    */
-  EAttribute getSolidColorDefinition_Color();
+  EReference getSolidColorDefinition_Color();
 
   /**
    * Returns the meta object for class '{@link fr.obeo.dsl.sPrototyper.ContainerColorDefinition <em>Container Color Definition</em>}'.
@@ -1355,26 +1502,26 @@ public interface SPrototyperPackage extends EPackage
   EClass getGradientColorDefinition();
 
   /**
-   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.GradientColorDefinition#getFrom <em>From</em>}'.
+   * Returns the meta object for the containment reference '{@link fr.obeo.dsl.sPrototyper.GradientColorDefinition#getFrom <em>From</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>From</em>'.
+   * @return the meta object for the containment reference '<em>From</em>'.
    * @see fr.obeo.dsl.sPrototyper.GradientColorDefinition#getFrom()
    * @see #getGradientColorDefinition()
    * @generated
    */
-  EAttribute getGradientColorDefinition_From();
+  EReference getGradientColorDefinition_From();
 
   /**
-   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.GradientColorDefinition#getTo <em>To</em>}'.
+   * Returns the meta object for the containment reference '{@link fr.obeo.dsl.sPrototyper.GradientColorDefinition#getTo <em>To</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>To</em>'.
+   * @return the meta object for the containment reference '<em>To</em>'.
    * @see fr.obeo.dsl.sPrototyper.GradientColorDefinition#getTo()
    * @see #getGradientColorDefinition()
    * @generated
    */
-  EAttribute getGradientColorDefinition_To();
+  EReference getGradientColorDefinition_To();
 
   /**
    * Returns the meta object for class '{@link fr.obeo.dsl.sPrototyper.LabelStyleDefinition <em>Label Style Definition</em>}'.
@@ -1544,6 +1691,47 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    */
   EAttribute getMetamodelRef_Metamodel();
+
+  /**
+   * Returns the meta object for class '{@link fr.obeo.dsl.sPrototyper.Color <em>Color</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Color</em>'.
+   * @see fr.obeo.dsl.sPrototyper.Color
+   * @generated
+   */
+  EClass getColor();
+
+  /**
+   * Returns the meta object for class '{@link fr.obeo.dsl.sPrototyper.PreDefinedColorDefinition <em>Pre Defined Color Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Pre Defined Color Definition</em>'.
+   * @see fr.obeo.dsl.sPrototyper.PreDefinedColorDefinition
+   * @generated
+   */
+  EClass getPreDefinedColorDefinition();
+
+  /**
+   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.PreDefinedColorDefinition#getColor <em>Color</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Color</em>'.
+   * @see fr.obeo.dsl.sPrototyper.PreDefinedColorDefinition#getColor()
+   * @see #getPreDefinedColorDefinition()
+   * @generated
+   */
+  EAttribute getPreDefinedColorDefinition_Color();
+
+  /**
+   * Returns the meta object for enum '{@link fr.obeo.dsl.sPrototyper.PreDefinedColor <em>Pre Defined Color</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>Pre Defined Color</em>'.
+   * @see fr.obeo.dsl.sPrototyper.PreDefinedColor
+   * @generated
+   */
+  EEnum getPreDefinedColor();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -1843,6 +2031,14 @@ public interface SPrototyperPackage extends EPackage
     EClass CONTAINER = eINSTANCE.getContainer();
 
     /**
+     * The meta object literal for the '<em><b>Recursive</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CONTAINER__RECURSIVE = eINSTANCE.getContainer_Recursive();
+
+    /**
      * The meta object literal for the '<em><b>Container Type</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1867,12 +2063,38 @@ public interface SPrototyperPackage extends EPackage
     EReference CONTAINER__EXPRESSION = eINSTANCE.getContainer_Expression();
 
     /**
+     * The meta object literal for the '<em><b>Style</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONTAINER__STYLE = eINSTANCE.getContainer_Style();
+
+    /**
+     * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONTAINER__ELEMENTS = eINSTANCE.getContainer_Elements();
+
+    /**
+     * The meta object literal for the '{@link fr.obeo.dsl.sPrototyper.impl.ContainerStyleDefinitionImpl <em>Container Style Definition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.obeo.dsl.sPrototyper.impl.ContainerStyleDefinitionImpl
+     * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getContainerStyleDefinition()
+     * @generated
+     */
+    EClass CONTAINER_STYLE_DEFINITION = eINSTANCE.getContainerStyleDefinition();
+
+    /**
      * The meta object literal for the '<em><b>Color</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CONTAINER__COLOR = eINSTANCE.getContainer_Color();
+    EReference CONTAINER_STYLE_DEFINITION__COLOR = eINSTANCE.getContainerStyleDefinition_Color();
 
     /**
      * The meta object literal for the '<em><b>Label</b></em>' containment reference feature.
@@ -1880,7 +2102,7 @@ public interface SPrototyperPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CONTAINER__LABEL = eINSTANCE.getContainer_Label();
+    EReference CONTAINER_STYLE_DEFINITION__LABEL = eINSTANCE.getContainerStyleDefinition_Label();
 
     /**
      * The meta object literal for the '<em><b>Border</b></em>' containment reference feature.
@@ -1888,7 +2110,7 @@ public interface SPrototyperPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CONTAINER__BORDER = eINSTANCE.getContainer_Border();
+    EReference CONTAINER_STYLE_DEFINITION__BORDER = eINSTANCE.getContainerStyleDefinition_Border();
 
     /**
      * The meta object literal for the '{@link fr.obeo.dsl.sPrototyper.impl.SolidColorDefinitionImpl <em>Solid Color Definition</em>}' class.
@@ -1901,12 +2123,12 @@ public interface SPrototyperPackage extends EPackage
     EClass SOLID_COLOR_DEFINITION = eINSTANCE.getSolidColorDefinition();
 
     /**
-     * The meta object literal for the '<em><b>Color</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Color</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute SOLID_COLOR_DEFINITION__COLOR = eINSTANCE.getSolidColorDefinition_Color();
+    EReference SOLID_COLOR_DEFINITION__COLOR = eINSTANCE.getSolidColorDefinition_Color();
 
     /**
      * The meta object literal for the '{@link fr.obeo.dsl.sPrototyper.impl.ContainerColorDefinitionImpl <em>Container Color Definition</em>}' class.
@@ -1929,20 +2151,20 @@ public interface SPrototyperPackage extends EPackage
     EClass GRADIENT_COLOR_DEFINITION = eINSTANCE.getGradientColorDefinition();
 
     /**
-     * The meta object literal for the '<em><b>From</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>From</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute GRADIENT_COLOR_DEFINITION__FROM = eINSTANCE.getGradientColorDefinition_From();
+    EReference GRADIENT_COLOR_DEFINITION__FROM = eINSTANCE.getGradientColorDefinition_From();
 
     /**
-     * The meta object literal for the '<em><b>To</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>To</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute GRADIENT_COLOR_DEFINITION__TO = eINSTANCE.getGradientColorDefinition_To();
+    EReference GRADIENT_COLOR_DEFINITION__TO = eINSTANCE.getGradientColorDefinition_To();
 
     /**
      * The meta object literal for the '{@link fr.obeo.dsl.sPrototyper.impl.LabelStyleDefinitionImpl <em>Label Style Definition</em>}' class.
@@ -2085,6 +2307,44 @@ public interface SPrototyperPackage extends EPackage
      * @generated
      */
     EAttribute METAMODEL_REF__METAMODEL = eINSTANCE.getMetamodelRef_Metamodel();
+
+    /**
+     * The meta object literal for the '{@link fr.obeo.dsl.sPrototyper.impl.ColorImpl <em>Color</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.obeo.dsl.sPrototyper.impl.ColorImpl
+     * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getColor()
+     * @generated
+     */
+    EClass COLOR = eINSTANCE.getColor();
+
+    /**
+     * The meta object literal for the '{@link fr.obeo.dsl.sPrototyper.impl.PreDefinedColorDefinitionImpl <em>Pre Defined Color Definition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.obeo.dsl.sPrototyper.impl.PreDefinedColorDefinitionImpl
+     * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getPreDefinedColorDefinition()
+     * @generated
+     */
+    EClass PRE_DEFINED_COLOR_DEFINITION = eINSTANCE.getPreDefinedColorDefinition();
+
+    /**
+     * The meta object literal for the '<em><b>Color</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PRE_DEFINED_COLOR_DEFINITION__COLOR = eINSTANCE.getPreDefinedColorDefinition_Color();
+
+    /**
+     * The meta object literal for the '{@link fr.obeo.dsl.sPrototyper.PreDefinedColor <em>Pre Defined Color</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.obeo.dsl.sPrototyper.PreDefinedColor
+     * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getPreDefinedColor()
+     * @generated
+     */
+    EEnum PRE_DEFINED_COLOR = eINSTANCE.getPreDefinedColor();
 
   }
 

@@ -2,12 +2,15 @@
  */
 package fr.obeo.dsl.sPrototyper.impl;
 
+import fr.obeo.dsl.sPrototyper.Color;
 import fr.obeo.dsl.sPrototyper.GradientColorDefinition;
 import fr.obeo.dsl.sPrototyper.SPrototyperPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -28,44 +31,24 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class GradientColorDefinitionImpl extends ContainerColorDefinitionImpl implements GradientColorDefinition
 {
   /**
-   * The default value of the '{@link #getFrom() <em>From</em>}' attribute.
+   * The cached value of the '{@link #getFrom() <em>From</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getFrom()
    * @generated
    * @ordered
    */
-  protected static final String FROM_EDEFAULT = null;
+  protected Color from;
 
   /**
-   * The cached value of the '{@link #getFrom() <em>From</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getFrom()
-   * @generated
-   * @ordered
-   */
-  protected String from = FROM_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getTo() <em>To</em>}' attribute.
+   * The cached value of the '{@link #getTo() <em>To</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getTo()
    * @generated
    * @ordered
    */
-  protected static final String TO_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getTo() <em>To</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTo()
-   * @generated
-   * @ordered
-   */
-  protected String to = TO_EDEFAULT;
+  protected Color to;
 
   /**
    * <!-- begin-user-doc -->
@@ -93,7 +76,7 @@ public class GradientColorDefinitionImpl extends ContainerColorDefinitionImpl im
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getFrom()
+  public Color getFrom()
   {
     return from;
   }
@@ -103,12 +86,16 @@ public class GradientColorDefinitionImpl extends ContainerColorDefinitionImpl im
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setFrom(String newFrom)
+  public NotificationChain basicSetFrom(Color newFrom, NotificationChain msgs)
   {
-    String oldFrom = from;
+    Color oldFrom = from;
     from = newFrom;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SPrototyperPackage.GRADIENT_COLOR_DEFINITION__FROM, oldFrom, from));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SPrototyperPackage.GRADIENT_COLOR_DEFINITION__FROM, oldFrom, newFrom);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -116,7 +103,28 @@ public class GradientColorDefinitionImpl extends ContainerColorDefinitionImpl im
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getTo()
+  public void setFrom(Color newFrom)
+  {
+    if (newFrom != from)
+    {
+      NotificationChain msgs = null;
+      if (from != null)
+        msgs = ((InternalEObject)from).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SPrototyperPackage.GRADIENT_COLOR_DEFINITION__FROM, null, msgs);
+      if (newFrom != null)
+        msgs = ((InternalEObject)newFrom).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SPrototyperPackage.GRADIENT_COLOR_DEFINITION__FROM, null, msgs);
+      msgs = basicSetFrom(newFrom, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SPrototyperPackage.GRADIENT_COLOR_DEFINITION__FROM, newFrom, newFrom));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Color getTo()
   {
     return to;
   }
@@ -126,12 +134,55 @@ public class GradientColorDefinitionImpl extends ContainerColorDefinitionImpl im
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setTo(String newTo)
+  public NotificationChain basicSetTo(Color newTo, NotificationChain msgs)
   {
-    String oldTo = to;
+    Color oldTo = to;
     to = newTo;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SPrototyperPackage.GRADIENT_COLOR_DEFINITION__TO, oldTo, to));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SPrototyperPackage.GRADIENT_COLOR_DEFINITION__TO, oldTo, newTo);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setTo(Color newTo)
+  {
+    if (newTo != to)
+    {
+      NotificationChain msgs = null;
+      if (to != null)
+        msgs = ((InternalEObject)to).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SPrototyperPackage.GRADIENT_COLOR_DEFINITION__TO, null, msgs);
+      if (newTo != null)
+        msgs = ((InternalEObject)newTo).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SPrototyperPackage.GRADIENT_COLOR_DEFINITION__TO, null, msgs);
+      msgs = basicSetTo(newTo, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SPrototyperPackage.GRADIENT_COLOR_DEFINITION__TO, newTo, newTo));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case SPrototyperPackage.GRADIENT_COLOR_DEFINITION__FROM:
+        return basicSetFrom(null, msgs);
+      case SPrototyperPackage.GRADIENT_COLOR_DEFINITION__TO:
+        return basicSetTo(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -163,10 +214,10 @@ public class GradientColorDefinitionImpl extends ContainerColorDefinitionImpl im
     switch (featureID)
     {
       case SPrototyperPackage.GRADIENT_COLOR_DEFINITION__FROM:
-        setFrom((String)newValue);
+        setFrom((Color)newValue);
         return;
       case SPrototyperPackage.GRADIENT_COLOR_DEFINITION__TO:
-        setTo((String)newValue);
+        setTo((Color)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -183,10 +234,10 @@ public class GradientColorDefinitionImpl extends ContainerColorDefinitionImpl im
     switch (featureID)
     {
       case SPrototyperPackage.GRADIENT_COLOR_DEFINITION__FROM:
-        setFrom(FROM_EDEFAULT);
+        setFrom((Color)null);
         return;
       case SPrototyperPackage.GRADIENT_COLOR_DEFINITION__TO:
-        setTo(TO_EDEFAULT);
+        setTo((Color)null);
         return;
     }
     super.eUnset(featureID);
@@ -203,30 +254,11 @@ public class GradientColorDefinitionImpl extends ContainerColorDefinitionImpl im
     switch (featureID)
     {
       case SPrototyperPackage.GRADIENT_COLOR_DEFINITION__FROM:
-        return FROM_EDEFAULT == null ? from != null : !FROM_EDEFAULT.equals(from);
+        return from != null;
       case SPrototyperPackage.GRADIENT_COLOR_DEFINITION__TO:
-        return TO_EDEFAULT == null ? to != null : !TO_EDEFAULT.equals(to);
+        return to != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (from: ");
-    result.append(from);
-    result.append(", to: ");
-    result.append(to);
-    result.append(')');
-    return result.toString();
   }
 
 } //GradientColorDefinitionImpl

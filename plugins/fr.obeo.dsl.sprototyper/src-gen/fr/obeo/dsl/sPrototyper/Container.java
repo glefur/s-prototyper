@@ -2,6 +2,7 @@
  */
 package fr.obeo.dsl.sPrototyper;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -11,12 +12,12 @@ package fr.obeo.dsl.sPrototyper;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link fr.obeo.dsl.sPrototyper.Container#isRecursive <em>Recursive</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.Container#getContainerType <em>Container Type</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.Container#getEClass <em>EClass</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.Container#getExpression <em>Expression</em>}</li>
- *   <li>{@link fr.obeo.dsl.sPrototyper.Container#getColor <em>Color</em>}</li>
- *   <li>{@link fr.obeo.dsl.sPrototyper.Container#getLabel <em>Label</em>}</li>
- *   <li>{@link fr.obeo.dsl.sPrototyper.Container#getBorder <em>Border</em>}</li>
+ *   <li>{@link fr.obeo.dsl.sPrototyper.Container#getStyle <em>Style</em>}</li>
+ *   <li>{@link fr.obeo.dsl.sPrototyper.Container#getElements <em>Elements</em>}</li>
  * </ul>
  * </p>
  *
@@ -26,6 +27,32 @@ package fr.obeo.dsl.sPrototyper;
  */
 public interface Container extends DiagramElement
 {
+  /**
+   * Returns the value of the '<em><b>Recursive</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Recursive</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Recursive</em>' attribute.
+   * @see #setRecursive(boolean)
+   * @see fr.obeo.dsl.sPrototyper.SPrototyperPackage#getContainer_Recursive()
+   * @model
+   * @generated
+   */
+  boolean isRecursive();
+
+  /**
+   * Sets the value of the '{@link fr.obeo.dsl.sPrototyper.Container#isRecursive <em>Recursive</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Recursive</em>' attribute.
+   * @see #isRecursive()
+   * @generated
+   */
+  void setRecursive(boolean value);
+
   /**
    * Returns the value of the '<em><b>Container Type</b></em>' attribute.
    * <!-- begin-user-doc -->
@@ -105,81 +132,45 @@ public interface Container extends DiagramElement
   void setExpression(SPExpression value);
 
   /**
-   * Returns the value of the '<em><b>Color</b></em>' containment reference.
+   * Returns the value of the '<em><b>Style</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Color</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Style</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Color</em>' containment reference.
-   * @see #setColor(ContainerColorDefinition)
-   * @see fr.obeo.dsl.sPrototyper.SPrototyperPackage#getContainer_Color()
+   * @return the value of the '<em>Style</em>' containment reference.
+   * @see #setStyle(ContainerStyleDefinition)
+   * @see fr.obeo.dsl.sPrototyper.SPrototyperPackage#getContainer_Style()
    * @model containment="true"
    * @generated
    */
-  ContainerColorDefinition getColor();
+  ContainerStyleDefinition getStyle();
 
   /**
-   * Sets the value of the '{@link fr.obeo.dsl.sPrototyper.Container#getColor <em>Color</em>}' containment reference.
+   * Sets the value of the '{@link fr.obeo.dsl.sPrototyper.Container#getStyle <em>Style</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Color</em>' containment reference.
-   * @see #getColor()
+   * @param value the new value of the '<em>Style</em>' containment reference.
+   * @see #getStyle()
    * @generated
    */
-  void setColor(ContainerColorDefinition value);
+  void setStyle(ContainerStyleDefinition value);
 
   /**
-   * Returns the value of the '<em><b>Label</b></em>' containment reference.
+   * Returns the value of the '<em><b>Elements</b></em>' containment reference list.
+   * The list contents are of type {@link fr.obeo.dsl.sPrototyper.DiagramElement}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Label</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Elements</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Label</em>' containment reference.
-   * @see #setLabel(LabelStyleDefinition)
-   * @see fr.obeo.dsl.sPrototyper.SPrototyperPackage#getContainer_Label()
+   * @return the value of the '<em>Elements</em>' containment reference list.
+   * @see fr.obeo.dsl.sPrototyper.SPrototyperPackage#getContainer_Elements()
    * @model containment="true"
    * @generated
    */
-  LabelStyleDefinition getLabel();
-
-  /**
-   * Sets the value of the '{@link fr.obeo.dsl.sPrototyper.Container#getLabel <em>Label</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Label</em>' containment reference.
-   * @see #getLabel()
-   * @generated
-   */
-  void setLabel(LabelStyleDefinition value);
-
-  /**
-   * Returns the value of the '<em><b>Border</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Border</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Border</em>' containment reference.
-   * @see #setBorder(BorderStyleDefinition)
-   * @see fr.obeo.dsl.sPrototyper.SPrototyperPackage#getContainer_Border()
-   * @model containment="true"
-   * @generated
-   */
-  BorderStyleDefinition getBorder();
-
-  /**
-   * Sets the value of the '{@link fr.obeo.dsl.sPrototyper.Container#getBorder <em>Border</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Border</em>' containment reference.
-   * @see #getBorder()
-   * @generated
-   */
-  void setBorder(BorderStyleDefinition value);
+  EList<DiagramElement> getElements();
 
 } // Container

@@ -5,6 +5,7 @@ package fr.obeo.dsl.sPrototyper.impl;
 import fr.obeo.dsl.sPrototyper.*;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -73,6 +74,7 @@ public class SPrototyperFactoryImpl extends EFactoryImpl implements SPrototyperF
       case SPrototyperPackage.SP_DIAGRAM: return createSPDiagram();
       case SPrototyperPackage.DIAGRAM_ELEMENT: return createDiagramElement();
       case SPrototyperPackage.CONTAINER: return createContainer();
+      case SPrototyperPackage.CONTAINER_STYLE_DEFINITION: return createContainerStyleDefinition();
       case SPrototyperPackage.SOLID_COLOR_DEFINITION: return createSolidColorDefinition();
       case SPrototyperPackage.CONTAINER_COLOR_DEFINITION: return createContainerColorDefinition();
       case SPrototyperPackage.GRADIENT_COLOR_DEFINITION: return createGradientColorDefinition();
@@ -83,8 +85,44 @@ public class SPrototyperFactoryImpl extends EFactoryImpl implements SPrototyperF
       case SPrototyperPackage.VAR_REF: return createVarRef();
       case SPrototyperPackage.FEATURE_REF: return createFeatureRef();
       case SPrototyperPackage.METAMODEL_REF: return createMetamodelRef();
+      case SPrototyperPackage.COLOR: return createColor();
+      case SPrototyperPackage.PRE_DEFINED_COLOR_DEFINITION: return createPreDefinedColorDefinition();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+    }
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Object createFromString(EDataType eDataType, String initialValue)
+  {
+    switch (eDataType.getClassifierID())
+    {
+      case SPrototyperPackage.PRE_DEFINED_COLOR:
+        return createPreDefinedColorFromString(eDataType, initialValue);
+      default:
+        throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+    }
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String convertToString(EDataType eDataType, Object instanceValue)
+  {
+    switch (eDataType.getClassifierID())
+    {
+      case SPrototyperPackage.PRE_DEFINED_COLOR:
+        return convertPreDefinedColorToString(eDataType, instanceValue);
+      default:
+        throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
   }
 
@@ -185,6 +223,17 @@ public class SPrototyperFactoryImpl extends EFactoryImpl implements SPrototyperF
   {
     ContainerImpl container = new ContainerImpl();
     return container;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ContainerStyleDefinition createContainerStyleDefinition()
+  {
+    ContainerStyleDefinitionImpl containerStyleDefinition = new ContainerStyleDefinitionImpl();
+    return containerStyleDefinition;
   }
 
   /**
@@ -295,6 +344,50 @@ public class SPrototyperFactoryImpl extends EFactoryImpl implements SPrototyperF
   {
     MetamodelRefImpl metamodelRef = new MetamodelRefImpl();
     return metamodelRef;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Color createColor()
+  {
+    ColorImpl color = new ColorImpl();
+    return color;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PreDefinedColorDefinition createPreDefinedColorDefinition()
+  {
+    PreDefinedColorDefinitionImpl preDefinedColorDefinition = new PreDefinedColorDefinitionImpl();
+    return preDefinedColorDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PreDefinedColor createPreDefinedColorFromString(EDataType eDataType, String initialValue)
+  {
+    PreDefinedColor result = PreDefinedColor.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertPreDefinedColorToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
   }
 
   /**

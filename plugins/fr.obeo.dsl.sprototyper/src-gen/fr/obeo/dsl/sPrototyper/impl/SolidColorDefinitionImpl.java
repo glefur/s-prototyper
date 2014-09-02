@@ -2,12 +2,15 @@
  */
 package fr.obeo.dsl.sPrototyper.impl;
 
+import fr.obeo.dsl.sPrototyper.Color;
 import fr.obeo.dsl.sPrototyper.SPrototyperPackage;
 import fr.obeo.dsl.sPrototyper.SolidColorDefinition;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -27,24 +30,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class SolidColorDefinitionImpl extends ContainerColorDefinitionImpl implements SolidColorDefinition
 {
   /**
-   * The default value of the '{@link #getColor() <em>Color</em>}' attribute.
+   * The cached value of the '{@link #getColor() <em>Color</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getColor()
    * @generated
    * @ordered
    */
-  protected static final String COLOR_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getColor() <em>Color</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getColor()
-   * @generated
-   * @ordered
-   */
-  protected String color = COLOR_EDEFAULT;
+  protected Color color;
 
   /**
    * <!-- begin-user-doc -->
@@ -72,7 +65,7 @@ public class SolidColorDefinitionImpl extends ContainerColorDefinitionImpl imple
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getColor()
+  public Color getColor()
   {
     return color;
   }
@@ -82,12 +75,53 @@ public class SolidColorDefinitionImpl extends ContainerColorDefinitionImpl imple
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setColor(String newColor)
+  public NotificationChain basicSetColor(Color newColor, NotificationChain msgs)
   {
-    String oldColor = color;
+    Color oldColor = color;
     color = newColor;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SPrototyperPackage.SOLID_COLOR_DEFINITION__COLOR, oldColor, color));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SPrototyperPackage.SOLID_COLOR_DEFINITION__COLOR, oldColor, newColor);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setColor(Color newColor)
+  {
+    if (newColor != color)
+    {
+      NotificationChain msgs = null;
+      if (color != null)
+        msgs = ((InternalEObject)color).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SPrototyperPackage.SOLID_COLOR_DEFINITION__COLOR, null, msgs);
+      if (newColor != null)
+        msgs = ((InternalEObject)newColor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SPrototyperPackage.SOLID_COLOR_DEFINITION__COLOR, null, msgs);
+      msgs = basicSetColor(newColor, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SPrototyperPackage.SOLID_COLOR_DEFINITION__COLOR, newColor, newColor));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case SPrototyperPackage.SOLID_COLOR_DEFINITION__COLOR:
+        return basicSetColor(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -117,7 +151,7 @@ public class SolidColorDefinitionImpl extends ContainerColorDefinitionImpl imple
     switch (featureID)
     {
       case SPrototyperPackage.SOLID_COLOR_DEFINITION__COLOR:
-        setColor((String)newValue);
+        setColor((Color)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -134,7 +168,7 @@ public class SolidColorDefinitionImpl extends ContainerColorDefinitionImpl imple
     switch (featureID)
     {
       case SPrototyperPackage.SOLID_COLOR_DEFINITION__COLOR:
-        setColor(COLOR_EDEFAULT);
+        setColor((Color)null);
         return;
     }
     super.eUnset(featureID);
@@ -151,26 +185,9 @@ public class SolidColorDefinitionImpl extends ContainerColorDefinitionImpl imple
     switch (featureID)
     {
       case SPrototyperPackage.SOLID_COLOR_DEFINITION__COLOR:
-        return COLOR_EDEFAULT == null ? color != null : !COLOR_EDEFAULT.equals(color);
+        return color != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (color: ");
-    result.append(color);
-    result.append(')');
-    return result.toString();
   }
 
 } //SolidColorDefinitionImpl

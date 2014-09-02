@@ -22,29 +22,29 @@ package fr.obeo.dsl.sPrototyper;
 public interface SolidColorDefinition extends ContainerColorDefinition
 {
   /**
-   * Returns the value of the '<em><b>Color</b></em>' attribute.
+   * Returns the value of the '<em><b>Color</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Color</em>' attribute isn't clear,
+   * If the meaning of the '<em>Color</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Color</em>' attribute.
-   * @see #setColor(String)
+   * @return the value of the '<em>Color</em>' containment reference.
+   * @see #setColor(Color)
    * @see fr.obeo.dsl.sPrototyper.SPrototyperPackage#getSolidColorDefinition_Color()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  String getColor();
+  Color getColor();
 
   /**
-   * Sets the value of the '{@link fr.obeo.dsl.sPrototyper.SolidColorDefinition#getColor <em>Color</em>}' attribute.
+   * Sets the value of the '{@link fr.obeo.dsl.sPrototyper.SolidColorDefinition#getColor <em>Color</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Color</em>' attribute.
+   * @param value the new value of the '<em>Color</em>' containment reference.
    * @see #getColor()
    * @generated
    */
-  void setColor(String value);
+  void setColor(Color value);
 
 } // SolidColorDefinition

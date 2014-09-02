@@ -120,6 +120,11 @@ public class SPrototyperAdapterFactory extends AdapterFactoryImpl
         return createContainerAdapter();
       }
       @Override
+      public Adapter caseContainerStyleDefinition(ContainerStyleDefinition object)
+      {
+        return createContainerStyleDefinitionAdapter();
+      }
+      @Override
       public Adapter caseSolidColorDefinition(SolidColorDefinition object)
       {
         return createSolidColorDefinitionAdapter();
@@ -168,6 +173,16 @@ public class SPrototyperAdapterFactory extends AdapterFactoryImpl
       public Adapter caseMetamodelRef(MetamodelRef object)
       {
         return createMetamodelRefAdapter();
+      }
+      @Override
+      public Adapter caseColor(Color object)
+      {
+        return createColorAdapter();
+      }
+      @Override
+      public Adapter casePreDefinedColorDefinition(PreDefinedColorDefinition object)
+      {
+        return createPreDefinedColorDefinitionAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -327,6 +342,21 @@ public class SPrototyperAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link fr.obeo.dsl.sPrototyper.ContainerStyleDefinition <em>Container Style Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.obeo.dsl.sPrototyper.ContainerStyleDefinition
+   * @generated
+   */
+  public Adapter createContainerStyleDefinitionAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link fr.obeo.dsl.sPrototyper.SolidColorDefinition <em>Solid Color Definition</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -472,6 +502,36 @@ public class SPrototyperAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createMetamodelRefAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.obeo.dsl.sPrototyper.Color <em>Color</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.obeo.dsl.sPrototyper.Color
+   * @generated
+   */
+  public Adapter createColorAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.obeo.dsl.sPrototyper.PreDefinedColorDefinition <em>Pre Defined Color Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.obeo.dsl.sPrototyper.PreDefinedColorDefinition
+   * @generated
+   */
+  public Adapter createPreDefinedColorDefinitionAdapter()
   {
     return null;
   }

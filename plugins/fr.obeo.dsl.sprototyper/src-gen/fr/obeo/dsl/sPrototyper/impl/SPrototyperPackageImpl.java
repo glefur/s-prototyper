@@ -4,12 +4,16 @@ package fr.obeo.dsl.sPrototyper.impl;
 
 import fr.obeo.dsl.sPrototyper.AcceleoExpression;
 import fr.obeo.dsl.sPrototyper.BorderStyleDefinition;
+import fr.obeo.dsl.sPrototyper.Color;
 import fr.obeo.dsl.sPrototyper.ContainerColorDefinition;
+import fr.obeo.dsl.sPrototyper.ContainerStyleDefinition;
 import fr.obeo.dsl.sPrototyper.DiagramElement;
 import fr.obeo.dsl.sPrototyper.FeatureRef;
 import fr.obeo.dsl.sPrototyper.GradientColorDefinition;
 import fr.obeo.dsl.sPrototyper.LabelStyleDefinition;
 import fr.obeo.dsl.sPrototyper.MetamodelRef;
+import fr.obeo.dsl.sPrototyper.PreDefinedColor;
+import fr.obeo.dsl.sPrototyper.PreDefinedColorDefinition;
 import fr.obeo.dsl.sPrototyper.SPDiagram;
 import fr.obeo.dsl.sPrototyper.SPExpression;
 import fr.obeo.dsl.sPrototyper.SPRepresentation;
@@ -25,6 +29,7 @@ import fr.obeo.dsl.sPrototyper.VarRef;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -106,6 +111,13 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass containerStyleDefinitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass solidColorDefinitionEClass = null;
 
   /**
@@ -170,6 +182,27 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * @generated
    */
   private EClass metamodelRefEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass colorEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass preDefinedColorDefinitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum preDefinedColorEEnum = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -559,7 +592,7 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getContainer_ContainerType()
+  public EAttribute getContainer_Recursive()
   {
     return (EAttribute)containerEClass.getEStructuralFeatures().get(0);
   }
@@ -569,7 +602,7 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getContainer_EClass()
+  public EAttribute getContainer_ContainerType()
   {
     return (EAttribute)containerEClass.getEStructuralFeatures().get(1);
   }
@@ -579,9 +612,9 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getContainer_Expression()
+  public EAttribute getContainer_EClass()
   {
-    return (EReference)containerEClass.getEStructuralFeatures().get(2);
+    return (EAttribute)containerEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -589,7 +622,7 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getContainer_Color()
+  public EReference getContainer_Expression()
   {
     return (EReference)containerEClass.getEStructuralFeatures().get(3);
   }
@@ -599,7 +632,7 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getContainer_Label()
+  public EReference getContainer_Style()
   {
     return (EReference)containerEClass.getEStructuralFeatures().get(4);
   }
@@ -609,9 +642,49 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getContainer_Border()
+  public EReference getContainer_Elements()
   {
     return (EReference)containerEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getContainerStyleDefinition()
+  {
+    return containerStyleDefinitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getContainerStyleDefinition_Color()
+  {
+    return (EReference)containerStyleDefinitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getContainerStyleDefinition_Label()
+  {
+    return (EReference)containerStyleDefinitionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getContainerStyleDefinition_Border()
+  {
+    return (EReference)containerStyleDefinitionEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -629,9 +702,9 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getSolidColorDefinition_Color()
+  public EReference getSolidColorDefinition_Color()
   {
-    return (EAttribute)solidColorDefinitionEClass.getEStructuralFeatures().get(0);
+    return (EReference)solidColorDefinitionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -659,9 +732,9 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getGradientColorDefinition_From()
+  public EReference getGradientColorDefinition_From()
   {
-    return (EAttribute)gradientColorDefinitionEClass.getEStructuralFeatures().get(0);
+    return (EReference)gradientColorDefinitionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -669,9 +742,9 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getGradientColorDefinition_To()
+  public EReference getGradientColorDefinition_To()
   {
-    return (EAttribute)gradientColorDefinitionEClass.getEStructuralFeatures().get(1);
+    return (EReference)gradientColorDefinitionEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -839,6 +912,46 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getColor()
+  {
+    return colorEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getPreDefinedColorDefinition()
+  {
+    return preDefinedColorDefinitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPreDefinedColorDefinition_Color()
+  {
+    return (EAttribute)preDefinedColorDefinitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EEnum getPreDefinedColor()
+  {
+    return preDefinedColorEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public SPrototyperFactory getSPrototyperFactory()
   {
     return (SPrototyperFactory)getEFactoryInstance();
@@ -904,21 +1017,26 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
     diagramElementEClass = createEClass(DIAGRAM_ELEMENT);
 
     containerEClass = createEClass(CONTAINER);
+    createEAttribute(containerEClass, CONTAINER__RECURSIVE);
     createEAttribute(containerEClass, CONTAINER__CONTAINER_TYPE);
     createEAttribute(containerEClass, CONTAINER__ECLASS);
     createEReference(containerEClass, CONTAINER__EXPRESSION);
-    createEReference(containerEClass, CONTAINER__COLOR);
-    createEReference(containerEClass, CONTAINER__LABEL);
-    createEReference(containerEClass, CONTAINER__BORDER);
+    createEReference(containerEClass, CONTAINER__STYLE);
+    createEReference(containerEClass, CONTAINER__ELEMENTS);
+
+    containerStyleDefinitionEClass = createEClass(CONTAINER_STYLE_DEFINITION);
+    createEReference(containerStyleDefinitionEClass, CONTAINER_STYLE_DEFINITION__COLOR);
+    createEReference(containerStyleDefinitionEClass, CONTAINER_STYLE_DEFINITION__LABEL);
+    createEReference(containerStyleDefinitionEClass, CONTAINER_STYLE_DEFINITION__BORDER);
 
     solidColorDefinitionEClass = createEClass(SOLID_COLOR_DEFINITION);
-    createEAttribute(solidColorDefinitionEClass, SOLID_COLOR_DEFINITION__COLOR);
+    createEReference(solidColorDefinitionEClass, SOLID_COLOR_DEFINITION__COLOR);
 
     containerColorDefinitionEClass = createEClass(CONTAINER_COLOR_DEFINITION);
 
     gradientColorDefinitionEClass = createEClass(GRADIENT_COLOR_DEFINITION);
-    createEAttribute(gradientColorDefinitionEClass, GRADIENT_COLOR_DEFINITION__FROM);
-    createEAttribute(gradientColorDefinitionEClass, GRADIENT_COLOR_DEFINITION__TO);
+    createEReference(gradientColorDefinitionEClass, GRADIENT_COLOR_DEFINITION__FROM);
+    createEReference(gradientColorDefinitionEClass, GRADIENT_COLOR_DEFINITION__TO);
 
     labelStyleDefinitionEClass = createEClass(LABEL_STYLE_DEFINITION);
     createEReference(labelStyleDefinitionEClass, LABEL_STYLE_DEFINITION__EXPRESSION);
@@ -942,6 +1060,14 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
 
     metamodelRefEClass = createEClass(METAMODEL_REF);
     createEAttribute(metamodelRefEClass, METAMODEL_REF__METAMODEL);
+
+    colorEClass = createEClass(COLOR);
+
+    preDefinedColorDefinitionEClass = createEClass(PRE_DEFINED_COLOR_DEFINITION);
+    createEAttribute(preDefinedColorDefinitionEClass, PRE_DEFINED_COLOR_DEFINITION__COLOR);
+
+    // Create enums
+    preDefinedColorEEnum = createEEnum(PRE_DEFINED_COLOR);
   }
 
   /**
@@ -981,6 +1107,7 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
     acceleoExpressionEClass.getESuperTypes().add(this.getSPExpression());
     varRefEClass.getESuperTypes().add(this.getSPExpression());
     featureRefEClass.getESuperTypes().add(this.getSPExpression());
+    preDefinedColorDefinitionEClass.getESuperTypes().add(this.getColor());
 
     // Initialize classes and features; add operations and parameters
     initEClass(sPrototyperEClass, SPrototyper.class, "SPrototyper", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1023,21 +1150,26 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
     initEClass(diagramElementEClass, DiagramElement.class, "DiagramElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(containerEClass, fr.obeo.dsl.sPrototyper.Container.class, "Container", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getContainer_Recursive(), ecorePackage.getEBoolean(), "recursive", null, 0, 1, fr.obeo.dsl.sPrototyper.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getContainer_ContainerType(), ecorePackage.getEString(), "containerType", null, 0, 1, fr.obeo.dsl.sPrototyper.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getContainer_EClass(), ecorePackage.getEString(), "eClass", null, 0, 1, fr.obeo.dsl.sPrototyper.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getContainer_Expression(), this.getSPExpression(), null, "expression", null, 0, 1, fr.obeo.dsl.sPrototyper.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getContainer_Color(), this.getContainerColorDefinition(), null, "color", null, 0, 1, fr.obeo.dsl.sPrototyper.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getContainer_Label(), this.getLabelStyleDefinition(), null, "label", null, 0, 1, fr.obeo.dsl.sPrototyper.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getContainer_Border(), this.getBorderStyleDefinition(), null, "border", null, 0, 1, fr.obeo.dsl.sPrototyper.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getContainer_Style(), this.getContainerStyleDefinition(), null, "style", null, 0, 1, fr.obeo.dsl.sPrototyper.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getContainer_Elements(), this.getDiagramElement(), null, "elements", null, 0, -1, fr.obeo.dsl.sPrototyper.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(containerStyleDefinitionEClass, ContainerStyleDefinition.class, "ContainerStyleDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getContainerStyleDefinition_Color(), this.getContainerColorDefinition(), null, "color", null, 0, 1, ContainerStyleDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getContainerStyleDefinition_Label(), this.getLabelStyleDefinition(), null, "label", null, 0, 1, ContainerStyleDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getContainerStyleDefinition_Border(), this.getBorderStyleDefinition(), null, "border", null, 0, 1, ContainerStyleDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(solidColorDefinitionEClass, SolidColorDefinition.class, "SolidColorDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getSolidColorDefinition_Color(), ecorePackage.getEString(), "color", null, 0, 1, SolidColorDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSolidColorDefinition_Color(), this.getColor(), null, "color", null, 0, 1, SolidColorDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(containerColorDefinitionEClass, ContainerColorDefinition.class, "ContainerColorDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(gradientColorDefinitionEClass, GradientColorDefinition.class, "GradientColorDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getGradientColorDefinition_From(), ecorePackage.getEString(), "from", null, 0, 1, GradientColorDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getGradientColorDefinition_To(), ecorePackage.getEString(), "to", null, 0, 1, GradientColorDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getGradientColorDefinition_From(), this.getColor(), null, "from", null, 0, 1, GradientColorDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getGradientColorDefinition_To(), this.getColor(), null, "to", null, 0, 1, GradientColorDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(labelStyleDefinitionEClass, LabelStyleDefinition.class, "LabelStyleDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getLabelStyleDefinition_Expression(), this.getSPExpression(), null, "expression", null, 0, 1, LabelStyleDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1061,6 +1193,40 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
 
     initEClass(metamodelRefEClass, MetamodelRef.class, "MetamodelRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getMetamodelRef_Metamodel(), ecorePackage.getEString(), "metamodel", null, 0, 1, MetamodelRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(colorEClass, Color.class, "Color", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(preDefinedColorDefinitionEClass, PreDefinedColorDefinition.class, "PreDefinedColorDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getPreDefinedColorDefinition_Color(), this.getPreDefinedColor(), "color", null, 0, 1, PreDefinedColorDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    // Initialize enums and add enum literals
+    initEEnum(preDefinedColorEEnum, PreDefinedColor.class, "PreDefinedColor");
+    addEEnumLiteral(preDefinedColorEEnum, PreDefinedColor.WHITE);
+    addEEnumLiteral(preDefinedColorEEnum, PreDefinedColor.BLACK);
+    addEEnumLiteral(preDefinedColorEEnum, PreDefinedColor.BLUE);
+    addEEnumLiteral(preDefinedColorEEnum, PreDefinedColor.LIGHT_BLUE);
+    addEEnumLiteral(preDefinedColorEEnum, PreDefinedColor.DARK_BLUE);
+    addEEnumLiteral(preDefinedColorEEnum, PreDefinedColor.CHOCOLATE);
+    addEEnumLiteral(preDefinedColorEEnum, PreDefinedColor.LIGHT_CHOCOLATE);
+    addEEnumLiteral(preDefinedColorEEnum, PreDefinedColor.DARK_CHOCOLATE);
+    addEEnumLiteral(preDefinedColorEEnum, PreDefinedColor.GRAY);
+    addEEnumLiteral(preDefinedColorEEnum, PreDefinedColor.LIGHT_GRAY);
+    addEEnumLiteral(preDefinedColorEEnum, PreDefinedColor.DARK_GRAY);
+    addEEnumLiteral(preDefinedColorEEnum, PreDefinedColor.GREEN);
+    addEEnumLiteral(preDefinedColorEEnum, PreDefinedColor.LIGHT_GREEN);
+    addEEnumLiteral(preDefinedColorEEnum, PreDefinedColor.DARK_GREEN);
+    addEEnumLiteral(preDefinedColorEEnum, PreDefinedColor.ORANGE);
+    addEEnumLiteral(preDefinedColorEEnum, PreDefinedColor.LIGHT_ORANGE);
+    addEEnumLiteral(preDefinedColorEEnum, PreDefinedColor.DARK_ORANGE);
+    addEEnumLiteral(preDefinedColorEEnum, PreDefinedColor.PURPLE);
+    addEEnumLiteral(preDefinedColorEEnum, PreDefinedColor.LIGHT_PURPLE);
+    addEEnumLiteral(preDefinedColorEEnum, PreDefinedColor.DARK_PURPLE);
+    addEEnumLiteral(preDefinedColorEEnum, PreDefinedColor.RED);
+    addEEnumLiteral(preDefinedColorEEnum, PreDefinedColor.LIGHT_RED);
+    addEEnumLiteral(preDefinedColorEEnum, PreDefinedColor.DARK_RED);
+    addEEnumLiteral(preDefinedColorEEnum, PreDefinedColor.YELLOW);
+    addEEnumLiteral(preDefinedColorEEnum, PreDefinedColor.LIGHT_YELLOW);
+    addEEnumLiteral(preDefinedColorEEnum, PreDefinedColor.DARK_YELLOW);
 
     // Create resource
     createResource(eNS_URI);
