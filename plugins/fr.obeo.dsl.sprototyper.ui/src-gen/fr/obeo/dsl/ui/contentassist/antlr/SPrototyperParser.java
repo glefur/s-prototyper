@@ -59,7 +59,7 @@ public class SPrototyperParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSPDiagramAccess().getGroup_3(), "rule__SPDiagram__Group_3__0");
 					put(grammarAccess.getSPDiagramAccess().getGroup_4(), "rule__SPDiagram__Group_4__0");
 					put(grammarAccess.getContainerAccess().getGroup(), "rule__Container__Group__0");
-					put(grammarAccess.getContainerAccess().getGroup_7(), "rule__Container__Group_7__0");
+					put(grammarAccess.getContainerAccess().getGroup_8(), "rule__Container__Group_8__0");
 					put(grammarAccess.getContainerStyleDefinitionAccess().getGroup(), "rule__ContainerStyleDefinition__Group__0");
 					put(grammarAccess.getContainerStyleDefinitionAccess().getGroup_2(), "rule__ContainerStyleDefinition__Group_2__0");
 					put(grammarAccess.getContainerStyleDefinitionAccess().getGroup_3(), "rule__ContainerStyleDefinition__Group_3__0");
@@ -101,12 +101,13 @@ public class SPrototyperParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSPDiagramAccess().getMetamodelsAssignment_5(), "rule__SPDiagram__MetamodelsAssignment_5");
 					put(grammarAccess.getSPDiagramAccess().getRootAssignment_7(), "rule__SPDiagram__RootAssignment_7");
 					put(grammarAccess.getSPDiagramAccess().getElementsAssignment_8(), "rule__SPDiagram__ElementsAssignment_8");
-					put(grammarAccess.getContainerAccess().getRecursiveAssignment_0(), "rule__Container__RecursiveAssignment_0");
-					put(grammarAccess.getContainerAccess().getContainerTypeAssignment_1(), "rule__Container__ContainerTypeAssignment_1");
-					put(grammarAccess.getContainerAccess().getEClassAssignment_3(), "rule__Container__EClassAssignment_3");
-					put(grammarAccess.getContainerAccess().getExpressionAssignment_5(), "rule__Container__ExpressionAssignment_5");
-					put(grammarAccess.getContainerAccess().getStyleAssignment_6(), "rule__Container__StyleAssignment_6");
-					put(grammarAccess.getContainerAccess().getElementsAssignment_7_1(), "rule__Container__ElementsAssignment_7_1");
+					put(grammarAccess.getContainerAccess().getCreatableAssignment_0(), "rule__Container__CreatableAssignment_0");
+					put(grammarAccess.getContainerAccess().getRecursiveAssignment_1(), "rule__Container__RecursiveAssignment_1");
+					put(grammarAccess.getContainerAccess().getContainerTypeAssignment_2(), "rule__Container__ContainerTypeAssignment_2");
+					put(grammarAccess.getContainerAccess().getEClassAssignment_4(), "rule__Container__EClassAssignment_4");
+					put(grammarAccess.getContainerAccess().getExpressionAssignment_6(), "rule__Container__ExpressionAssignment_6");
+					put(grammarAccess.getContainerAccess().getStyleAssignment_7(), "rule__Container__StyleAssignment_7");
+					put(grammarAccess.getContainerAccess().getElementsAssignment_8_1(), "rule__Container__ElementsAssignment_8_1");
 					put(grammarAccess.getContainerStyleDefinitionAccess().getColorAssignment_1(), "rule__ContainerStyleDefinition__ColorAssignment_1");
 					put(grammarAccess.getContainerStyleDefinitionAccess().getLabelAssignment_2_1(), "rule__ContainerStyleDefinition__LabelAssignment_2_1");
 					put(grammarAccess.getContainerStyleDefinitionAccess().getBorderAssignment_3_1(), "rule__ContainerStyleDefinition__BorderAssignment_3_1");

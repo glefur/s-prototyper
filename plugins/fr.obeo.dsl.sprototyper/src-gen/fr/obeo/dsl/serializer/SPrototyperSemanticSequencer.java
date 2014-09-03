@@ -193,6 +193,7 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 	/**
 	 * Constraint:
 	 *     (
+	 *         creatable?='creatable'? 
 	 *         recursive?='recursive'? 
 	 *         containerType=ContainerType? 
 	 *         eClass=STRING 

@@ -509,83 +509,91 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 	public class ContainerElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Container");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cRecursiveAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cRecursiveRecursiveKeyword_0_0 = (Keyword)cRecursiveAssignment_0.eContents().get(0);
-		private final Assignment cContainerTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cContainerTypeContainerTypeParserRuleCall_1_0 = (RuleCall)cContainerTypeAssignment_1.eContents().get(0);
-		private final Keyword cContainerKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cEClassAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cEClassSTRINGTerminalRuleCall_3_0 = (RuleCall)cEClassAssignment_3.eContents().get(0);
-		private final Keyword cAccessibleThroughKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cExpressionAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cExpressionSPExpressionParserRuleCall_5_0 = (RuleCall)cExpressionAssignment_5.eContents().get(0);
-		private final Assignment cStyleAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cStyleContainerStyleDefinitionParserRuleCall_6_0 = (RuleCall)cStyleAssignment_6.eContents().get(0);
-		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
-		private final Keyword cLeftCurlyBracketKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
-		private final Assignment cElementsAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
-		private final RuleCall cElementsDiagramElementParserRuleCall_7_1_0 = (RuleCall)cElementsAssignment_7_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_7_2 = (Keyword)cGroup_7.eContents().get(2);
+		private final Assignment cCreatableAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cCreatableCreatableKeyword_0_0 = (Keyword)cCreatableAssignment_0.eContents().get(0);
+		private final Assignment cRecursiveAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cRecursiveRecursiveKeyword_1_0 = (Keyword)cRecursiveAssignment_1.eContents().get(0);
+		private final Assignment cContainerTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cContainerTypeContainerTypeParserRuleCall_2_0 = (RuleCall)cContainerTypeAssignment_2.eContents().get(0);
+		private final Keyword cContainerKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cEClassAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cEClassSTRINGTerminalRuleCall_4_0 = (RuleCall)cEClassAssignment_4.eContents().get(0);
+		private final Keyword cAccessibleThroughKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cExpressionAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cExpressionSPExpressionParserRuleCall_6_0 = (RuleCall)cExpressionAssignment_6.eContents().get(0);
+		private final Assignment cStyleAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cStyleContainerStyleDefinitionParserRuleCall_7_0 = (RuleCall)cStyleAssignment_7.eContents().get(0);
+		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
+		private final Keyword cLeftCurlyBracketKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
+		private final Assignment cElementsAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
+		private final RuleCall cElementsDiagramElementParserRuleCall_8_1_0 = (RuleCall)cElementsAssignment_8_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_8_2 = (Keyword)cGroup_8.eContents().get(2);
 		
 		//Container:
-		//	recursive?="recursive"? containerType=ContainerType? "container" eClass=STRING "accessibleThrough"
-		//	expression=SPExpression style=ContainerStyleDefinition? ("{" elements+=DiagramElement+ "}")?;
+		//	creatable?="creatable"? recursive?="recursive"? containerType=ContainerType? "container" eClass=STRING
+		//	"accessibleThrough" expression=SPExpression style=ContainerStyleDefinition? ("{" elements+=DiagramElement+ "}")?;
 		public ParserRule getRule() { return rule; }
 
-		//recursive?="recursive"? containerType=ContainerType? "container" eClass=STRING "accessibleThrough"
-		//expression=SPExpression style=ContainerStyleDefinition? ("{" elements+=DiagramElement+ "}")?
+		//creatable?="creatable"? recursive?="recursive"? containerType=ContainerType? "container" eClass=STRING
+		//"accessibleThrough" expression=SPExpression style=ContainerStyleDefinition? ("{" elements+=DiagramElement+ "}")?
 		public Group getGroup() { return cGroup; }
 
+		//creatable?="creatable"?
+		public Assignment getCreatableAssignment_0() { return cCreatableAssignment_0; }
+
+		//"creatable"
+		public Keyword getCreatableCreatableKeyword_0_0() { return cCreatableCreatableKeyword_0_0; }
+
 		//recursive?="recursive"?
-		public Assignment getRecursiveAssignment_0() { return cRecursiveAssignment_0; }
+		public Assignment getRecursiveAssignment_1() { return cRecursiveAssignment_1; }
 
 		//"recursive"
-		public Keyword getRecursiveRecursiveKeyword_0_0() { return cRecursiveRecursiveKeyword_0_0; }
+		public Keyword getRecursiveRecursiveKeyword_1_0() { return cRecursiveRecursiveKeyword_1_0; }
 
 		//containerType=ContainerType?
-		public Assignment getContainerTypeAssignment_1() { return cContainerTypeAssignment_1; }
+		public Assignment getContainerTypeAssignment_2() { return cContainerTypeAssignment_2; }
 
 		//ContainerType
-		public RuleCall getContainerTypeContainerTypeParserRuleCall_1_0() { return cContainerTypeContainerTypeParserRuleCall_1_0; }
+		public RuleCall getContainerTypeContainerTypeParserRuleCall_2_0() { return cContainerTypeContainerTypeParserRuleCall_2_0; }
 
 		//"container"
-		public Keyword getContainerKeyword_2() { return cContainerKeyword_2; }
+		public Keyword getContainerKeyword_3() { return cContainerKeyword_3; }
 
 		//eClass=STRING
-		public Assignment getEClassAssignment_3() { return cEClassAssignment_3; }
+		public Assignment getEClassAssignment_4() { return cEClassAssignment_4; }
 
 		//STRING
-		public RuleCall getEClassSTRINGTerminalRuleCall_3_0() { return cEClassSTRINGTerminalRuleCall_3_0; }
+		public RuleCall getEClassSTRINGTerminalRuleCall_4_0() { return cEClassSTRINGTerminalRuleCall_4_0; }
 
 		//"accessibleThrough"
-		public Keyword getAccessibleThroughKeyword_4() { return cAccessibleThroughKeyword_4; }
+		public Keyword getAccessibleThroughKeyword_5() { return cAccessibleThroughKeyword_5; }
 
 		//expression=SPExpression
-		public Assignment getExpressionAssignment_5() { return cExpressionAssignment_5; }
+		public Assignment getExpressionAssignment_6() { return cExpressionAssignment_6; }
 
 		//SPExpression
-		public RuleCall getExpressionSPExpressionParserRuleCall_5_0() { return cExpressionSPExpressionParserRuleCall_5_0; }
+		public RuleCall getExpressionSPExpressionParserRuleCall_6_0() { return cExpressionSPExpressionParserRuleCall_6_0; }
 
 		//style=ContainerStyleDefinition?
-		public Assignment getStyleAssignment_6() { return cStyleAssignment_6; }
+		public Assignment getStyleAssignment_7() { return cStyleAssignment_7; }
 
 		//ContainerStyleDefinition
-		public RuleCall getStyleContainerStyleDefinitionParserRuleCall_6_0() { return cStyleContainerStyleDefinitionParserRuleCall_6_0; }
+		public RuleCall getStyleContainerStyleDefinitionParserRuleCall_7_0() { return cStyleContainerStyleDefinitionParserRuleCall_7_0; }
 
 		//("{" elements+=DiagramElement+ "}")?
-		public Group getGroup_7() { return cGroup_7; }
+		public Group getGroup_8() { return cGroup_8; }
 
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_7_0() { return cLeftCurlyBracketKeyword_7_0; }
+		public Keyword getLeftCurlyBracketKeyword_8_0() { return cLeftCurlyBracketKeyword_8_0; }
 
 		//elements+=DiagramElement+
-		public Assignment getElementsAssignment_7_1() { return cElementsAssignment_7_1; }
+		public Assignment getElementsAssignment_8_1() { return cElementsAssignment_8_1; }
 
 		//DiagramElement
-		public RuleCall getElementsDiagramElementParserRuleCall_7_1_0() { return cElementsDiagramElementParserRuleCall_7_1_0; }
+		public RuleCall getElementsDiagramElementParserRuleCall_8_1_0() { return cElementsDiagramElementParserRuleCall_8_1_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_7_2() { return cRightCurlyBracketKeyword_7_2; }
+		public Keyword getRightCurlyBracketKeyword_8_2() { return cRightCurlyBracketKeyword_8_2; }
 	}
 
 	public class ContainerStyleDefinitionElements extends AbstractParserRuleElementFinder {
@@ -1379,8 +1387,8 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Container:
-	//	recursive?="recursive"? containerType=ContainerType? "container" eClass=STRING "accessibleThrough"
-	//	expression=SPExpression style=ContainerStyleDefinition? ("{" elements+=DiagramElement+ "}")?;
+	//	creatable?="creatable"? recursive?="recursive"? containerType=ContainerType? "container" eClass=STRING
+	//	"accessibleThrough" expression=SPExpression style=ContainerStyleDefinition? ("{" elements+=DiagramElement+ "}")?;
 	public ContainerElements getContainerAccess() {
 		return (pContainer != null) ? pContainer : (pContainer = new ContainerElements());
 	}

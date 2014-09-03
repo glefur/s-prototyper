@@ -12,6 +12,7 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link fr.obeo.dsl.sPrototyper.Container#isCreatable <em>Creatable</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.Container#isRecursive <em>Recursive</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.Container#getContainerType <em>Container Type</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.Container#getEClass <em>EClass</em>}</li>
@@ -27,6 +28,32 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Container extends DiagramElement
 {
+  /**
+   * Returns the value of the '<em><b>Creatable</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Creatable</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Creatable</em>' attribute.
+   * @see #setCreatable(boolean)
+   * @see fr.obeo.dsl.sPrototyper.SPrototyperPackage#getContainer_Creatable()
+   * @model
+   * @generated
+   */
+  boolean isCreatable();
+
+  /**
+   * Sets the value of the '{@link fr.obeo.dsl.sPrototyper.Container#isCreatable <em>Creatable</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Creatable</em>' attribute.
+   * @see #isCreatable()
+   * @generated
+   */
+  void setCreatable(boolean value);
+
   /**
    * Returns the value of the '<em><b>Recursive</b></em>' attribute.
    * <!-- begin-user-doc -->

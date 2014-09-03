@@ -8232,7 +8232,7 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
                 int alt25=2;
                 int LA25_0 = input.LA(1);
 
-                if ( ((LA25_0>=11 && LA25_0<=12)||LA25_0==55||LA25_0==69) ) {
+                if ( ((LA25_0>=11 && LA25_0<=12)||LA25_0==55||(LA25_0>=68 && LA25_0<=69)) ) {
                     alt25=1;
                 }
 
@@ -8699,32 +8699,32 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Container__Group__0__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3155:1: rule__Container__Group__0__Impl : ( ( rule__Container__RecursiveAssignment_0 )? ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3155:1: rule__Container__Group__0__Impl : ( ( rule__Container__CreatableAssignment_0 )? ) ;
     public final void rule__Container__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3159:1: ( ( ( rule__Container__RecursiveAssignment_0 )? ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3160:1: ( ( rule__Container__RecursiveAssignment_0 )? )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3159:1: ( ( ( rule__Container__CreatableAssignment_0 )? ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3160:1: ( ( rule__Container__CreatableAssignment_0 )? )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3160:1: ( ( rule__Container__RecursiveAssignment_0 )? )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3161:1: ( rule__Container__RecursiveAssignment_0 )?
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3160:1: ( ( rule__Container__CreatableAssignment_0 )? )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3161:1: ( rule__Container__CreatableAssignment_0 )?
             {
-             before(grammarAccess.getContainerAccess().getRecursiveAssignment_0()); 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3162:1: ( rule__Container__RecursiveAssignment_0 )?
+             before(grammarAccess.getContainerAccess().getCreatableAssignment_0()); 
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3162:1: ( rule__Container__CreatableAssignment_0 )?
             int alt26=2;
             int LA26_0 = input.LA(1);
 
-            if ( (LA26_0==69) ) {
+            if ( (LA26_0==68) ) {
                 alt26=1;
             }
             switch (alt26) {
                 case 1 :
-                    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3162:2: rule__Container__RecursiveAssignment_0
+                    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3162:2: rule__Container__CreatableAssignment_0
                     {
-                    pushFollow(FOLLOW_rule__Container__RecursiveAssignment_0_in_rule__Container__Group__0__Impl6508);
-                    rule__Container__RecursiveAssignment_0();
+                    pushFollow(FOLLOW_rule__Container__CreatableAssignment_0_in_rule__Container__Group__0__Impl6508);
+                    rule__Container__CreatableAssignment_0();
 
                     state._fsp--;
 
@@ -8734,7 +8734,7 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
             }
 
-             after(grammarAccess.getContainerAccess().getRecursiveAssignment_0()); 
+             after(grammarAccess.getContainerAccess().getCreatableAssignment_0()); 
 
             }
 
@@ -8795,32 +8795,32 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Container__Group__1__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3184:1: rule__Container__Group__1__Impl : ( ( rule__Container__ContainerTypeAssignment_1 )? ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3184:1: rule__Container__Group__1__Impl : ( ( rule__Container__RecursiveAssignment_1 )? ) ;
     public final void rule__Container__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3188:1: ( ( ( rule__Container__ContainerTypeAssignment_1 )? ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3189:1: ( ( rule__Container__ContainerTypeAssignment_1 )? )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3188:1: ( ( ( rule__Container__RecursiveAssignment_1 )? ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3189:1: ( ( rule__Container__RecursiveAssignment_1 )? )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3189:1: ( ( rule__Container__ContainerTypeAssignment_1 )? )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3190:1: ( rule__Container__ContainerTypeAssignment_1 )?
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3189:1: ( ( rule__Container__RecursiveAssignment_1 )? )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3190:1: ( rule__Container__RecursiveAssignment_1 )?
             {
-             before(grammarAccess.getContainerAccess().getContainerTypeAssignment_1()); 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3191:1: ( rule__Container__ContainerTypeAssignment_1 )?
+             before(grammarAccess.getContainerAccess().getRecursiveAssignment_1()); 
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3191:1: ( rule__Container__RecursiveAssignment_1 )?
             int alt27=2;
             int LA27_0 = input.LA(1);
 
-            if ( ((LA27_0>=11 && LA27_0<=12)) ) {
+            if ( (LA27_0==69) ) {
                 alt27=1;
             }
             switch (alt27) {
                 case 1 :
-                    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3191:2: rule__Container__ContainerTypeAssignment_1
+                    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3191:2: rule__Container__RecursiveAssignment_1
                     {
-                    pushFollow(FOLLOW_rule__Container__ContainerTypeAssignment_1_in_rule__Container__Group__1__Impl6569);
-                    rule__Container__ContainerTypeAssignment_1();
+                    pushFollow(FOLLOW_rule__Container__RecursiveAssignment_1_in_rule__Container__Group__1__Impl6569);
+                    rule__Container__RecursiveAssignment_1();
 
                     state._fsp--;
 
@@ -8830,7 +8830,7 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
             }
 
-             after(grammarAccess.getContainerAccess().getContainerTypeAssignment_1()); 
+             after(grammarAccess.getContainerAccess().getRecursiveAssignment_1()); 
 
             }
 
@@ -8891,21 +8891,42 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Container__Group__2__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3213:1: rule__Container__Group__2__Impl : ( 'container' ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3213:1: rule__Container__Group__2__Impl : ( ( rule__Container__ContainerTypeAssignment_2 )? ) ;
     public final void rule__Container__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3217:1: ( ( 'container' ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3218:1: ( 'container' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3217:1: ( ( ( rule__Container__ContainerTypeAssignment_2 )? ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3218:1: ( ( rule__Container__ContainerTypeAssignment_2 )? )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3218:1: ( 'container' )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3219:1: 'container'
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3218:1: ( ( rule__Container__ContainerTypeAssignment_2 )? )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3219:1: ( rule__Container__ContainerTypeAssignment_2 )?
             {
-             before(grammarAccess.getContainerAccess().getContainerKeyword_2()); 
-            match(input,55,FOLLOW_55_in_rule__Container__Group__2__Impl6631); 
-             after(grammarAccess.getContainerAccess().getContainerKeyword_2()); 
+             before(grammarAccess.getContainerAccess().getContainerTypeAssignment_2()); 
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3220:1: ( rule__Container__ContainerTypeAssignment_2 )?
+            int alt28=2;
+            int LA28_0 = input.LA(1);
+
+            if ( ((LA28_0>=11 && LA28_0<=12)) ) {
+                alt28=1;
+            }
+            switch (alt28) {
+                case 1 :
+                    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3220:2: rule__Container__ContainerTypeAssignment_2
+                    {
+                    pushFollow(FOLLOW_rule__Container__ContainerTypeAssignment_2_in_rule__Container__Group__2__Impl6630);
+                    rule__Container__ContainerTypeAssignment_2();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getContainerAccess().getContainerTypeAssignment_2()); 
 
             }
 
@@ -8928,21 +8949,21 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Container__Group__3"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3232:1: rule__Container__Group__3 : rule__Container__Group__3__Impl rule__Container__Group__4 ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3230:1: rule__Container__Group__3 : rule__Container__Group__3__Impl rule__Container__Group__4 ;
     public final void rule__Container__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3236:1: ( rule__Container__Group__3__Impl rule__Container__Group__4 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3237:2: rule__Container__Group__3__Impl rule__Container__Group__4
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3234:1: ( rule__Container__Group__3__Impl rule__Container__Group__4 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3235:2: rule__Container__Group__3__Impl rule__Container__Group__4
             {
-            pushFollow(FOLLOW_rule__Container__Group__3__Impl_in_rule__Container__Group__36662);
+            pushFollow(FOLLOW_rule__Container__Group__3__Impl_in_rule__Container__Group__36661);
             rule__Container__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Container__Group__4_in_rule__Container__Group__36665);
+            pushFollow(FOLLOW_rule__Container__Group__4_in_rule__Container__Group__36664);
             rule__Container__Group__4();
 
             state._fsp--;
@@ -8966,31 +8987,21 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Container__Group__3__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3244:1: rule__Container__Group__3__Impl : ( ( rule__Container__EClassAssignment_3 ) ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3242:1: rule__Container__Group__3__Impl : ( 'container' ) ;
     public final void rule__Container__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3248:1: ( ( ( rule__Container__EClassAssignment_3 ) ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3249:1: ( ( rule__Container__EClassAssignment_3 ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3246:1: ( ( 'container' ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3247:1: ( 'container' )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3249:1: ( ( rule__Container__EClassAssignment_3 ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3250:1: ( rule__Container__EClassAssignment_3 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3247:1: ( 'container' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3248:1: 'container'
             {
-             before(grammarAccess.getContainerAccess().getEClassAssignment_3()); 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3251:1: ( rule__Container__EClassAssignment_3 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3251:2: rule__Container__EClassAssignment_3
-            {
-            pushFollow(FOLLOW_rule__Container__EClassAssignment_3_in_rule__Container__Group__3__Impl6692);
-            rule__Container__EClassAssignment_3();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getContainerAccess().getEClassAssignment_3()); 
+             before(grammarAccess.getContainerAccess().getContainerKeyword_3()); 
+            match(input,55,FOLLOW_55_in_rule__Container__Group__3__Impl6692); 
+             after(grammarAccess.getContainerAccess().getContainerKeyword_3()); 
 
             }
 
@@ -9022,12 +9033,12 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
             // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3265:1: ( rule__Container__Group__4__Impl rule__Container__Group__5 )
             // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3266:2: rule__Container__Group__4__Impl rule__Container__Group__5
             {
-            pushFollow(FOLLOW_rule__Container__Group__4__Impl_in_rule__Container__Group__46722);
+            pushFollow(FOLLOW_rule__Container__Group__4__Impl_in_rule__Container__Group__46723);
             rule__Container__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Container__Group__5_in_rule__Container__Group__46725);
+            pushFollow(FOLLOW_rule__Container__Group__5_in_rule__Container__Group__46726);
             rule__Container__Group__5();
 
             state._fsp--;
@@ -9051,21 +9062,31 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Container__Group__4__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3273:1: rule__Container__Group__4__Impl : ( 'accessibleThrough' ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3273:1: rule__Container__Group__4__Impl : ( ( rule__Container__EClassAssignment_4 ) ) ;
     public final void rule__Container__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3277:1: ( ( 'accessibleThrough' ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3278:1: ( 'accessibleThrough' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3277:1: ( ( ( rule__Container__EClassAssignment_4 ) ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3278:1: ( ( rule__Container__EClassAssignment_4 ) )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3278:1: ( 'accessibleThrough' )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3279:1: 'accessibleThrough'
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3278:1: ( ( rule__Container__EClassAssignment_4 ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3279:1: ( rule__Container__EClassAssignment_4 )
             {
-             before(grammarAccess.getContainerAccess().getAccessibleThroughKeyword_4()); 
-            match(input,51,FOLLOW_51_in_rule__Container__Group__4__Impl6753); 
-             after(grammarAccess.getContainerAccess().getAccessibleThroughKeyword_4()); 
+             before(grammarAccess.getContainerAccess().getEClassAssignment_4()); 
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3280:1: ( rule__Container__EClassAssignment_4 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3280:2: rule__Container__EClassAssignment_4
+            {
+            pushFollow(FOLLOW_rule__Container__EClassAssignment_4_in_rule__Container__Group__4__Impl6753);
+            rule__Container__EClassAssignment_4();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getContainerAccess().getEClassAssignment_4()); 
 
             }
 
@@ -9088,21 +9109,21 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Container__Group__5"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3292:1: rule__Container__Group__5 : rule__Container__Group__5__Impl rule__Container__Group__6 ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3290:1: rule__Container__Group__5 : rule__Container__Group__5__Impl rule__Container__Group__6 ;
     public final void rule__Container__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3296:1: ( rule__Container__Group__5__Impl rule__Container__Group__6 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3297:2: rule__Container__Group__5__Impl rule__Container__Group__6
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3294:1: ( rule__Container__Group__5__Impl rule__Container__Group__6 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3295:2: rule__Container__Group__5__Impl rule__Container__Group__6
             {
-            pushFollow(FOLLOW_rule__Container__Group__5__Impl_in_rule__Container__Group__56784);
+            pushFollow(FOLLOW_rule__Container__Group__5__Impl_in_rule__Container__Group__56783);
             rule__Container__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Container__Group__6_in_rule__Container__Group__56787);
+            pushFollow(FOLLOW_rule__Container__Group__6_in_rule__Container__Group__56786);
             rule__Container__Group__6();
 
             state._fsp--;
@@ -9126,31 +9147,21 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Container__Group__5__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3304:1: rule__Container__Group__5__Impl : ( ( rule__Container__ExpressionAssignment_5 ) ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3302:1: rule__Container__Group__5__Impl : ( 'accessibleThrough' ) ;
     public final void rule__Container__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3308:1: ( ( ( rule__Container__ExpressionAssignment_5 ) ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3309:1: ( ( rule__Container__ExpressionAssignment_5 ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3306:1: ( ( 'accessibleThrough' ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3307:1: ( 'accessibleThrough' )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3309:1: ( ( rule__Container__ExpressionAssignment_5 ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3310:1: ( rule__Container__ExpressionAssignment_5 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3307:1: ( 'accessibleThrough' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3308:1: 'accessibleThrough'
             {
-             before(grammarAccess.getContainerAccess().getExpressionAssignment_5()); 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3311:1: ( rule__Container__ExpressionAssignment_5 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3311:2: rule__Container__ExpressionAssignment_5
-            {
-            pushFollow(FOLLOW_rule__Container__ExpressionAssignment_5_in_rule__Container__Group__5__Impl6814);
-            rule__Container__ExpressionAssignment_5();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getContainerAccess().getExpressionAssignment_5()); 
+             before(grammarAccess.getContainerAccess().getAccessibleThroughKeyword_5()); 
+            match(input,51,FOLLOW_51_in_rule__Container__Group__5__Impl6814); 
+             after(grammarAccess.getContainerAccess().getAccessibleThroughKeyword_5()); 
 
             }
 
@@ -9182,12 +9193,12 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
             // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3325:1: ( rule__Container__Group__6__Impl rule__Container__Group__7 )
             // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3326:2: rule__Container__Group__6__Impl rule__Container__Group__7
             {
-            pushFollow(FOLLOW_rule__Container__Group__6__Impl_in_rule__Container__Group__66844);
+            pushFollow(FOLLOW_rule__Container__Group__6__Impl_in_rule__Container__Group__66845);
             rule__Container__Group__6__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Container__Group__7_in_rule__Container__Group__66847);
+            pushFollow(FOLLOW_rule__Container__Group__7_in_rule__Container__Group__66848);
             rule__Container__Group__7();
 
             state._fsp--;
@@ -9211,42 +9222,31 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Container__Group__6__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3333:1: rule__Container__Group__6__Impl : ( ( rule__Container__StyleAssignment_6 )? ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3333:1: rule__Container__Group__6__Impl : ( ( rule__Container__ExpressionAssignment_6 ) ) ;
     public final void rule__Container__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3337:1: ( ( ( rule__Container__StyleAssignment_6 )? ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3338:1: ( ( rule__Container__StyleAssignment_6 )? )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3337:1: ( ( ( rule__Container__ExpressionAssignment_6 ) ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3338:1: ( ( rule__Container__ExpressionAssignment_6 ) )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3338:1: ( ( rule__Container__StyleAssignment_6 )? )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3339:1: ( rule__Container__StyleAssignment_6 )?
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3338:1: ( ( rule__Container__ExpressionAssignment_6 ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3339:1: ( rule__Container__ExpressionAssignment_6 )
             {
-             before(grammarAccess.getContainerAccess().getStyleAssignment_6()); 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3340:1: ( rule__Container__StyleAssignment_6 )?
-            int alt28=2;
-            int LA28_0 = input.LA(1);
+             before(grammarAccess.getContainerAccess().getExpressionAssignment_6()); 
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3340:1: ( rule__Container__ExpressionAssignment_6 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3340:2: rule__Container__ExpressionAssignment_6
+            {
+            pushFollow(FOLLOW_rule__Container__ExpressionAssignment_6_in_rule__Container__Group__6__Impl6875);
+            rule__Container__ExpressionAssignment_6();
 
-            if ( (LA28_0==56) ) {
-                alt28=1;
-            }
-            switch (alt28) {
-                case 1 :
-                    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3340:2: rule__Container__StyleAssignment_6
-                    {
-                    pushFollow(FOLLOW_rule__Container__StyleAssignment_6_in_rule__Container__Group__6__Impl6874);
-                    rule__Container__StyleAssignment_6();
+            state._fsp--;
 
-                    state._fsp--;
-
-
-                    }
-                    break;
 
             }
 
-             after(grammarAccess.getContainerAccess().getStyleAssignment_6()); 
+             after(grammarAccess.getContainerAccess().getExpressionAssignment_6()); 
 
             }
 
@@ -9269,17 +9269,22 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Container__Group__7"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3350:1: rule__Container__Group__7 : rule__Container__Group__7__Impl ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3350:1: rule__Container__Group__7 : rule__Container__Group__7__Impl rule__Container__Group__8 ;
     public final void rule__Container__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3354:1: ( rule__Container__Group__7__Impl )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3355:2: rule__Container__Group__7__Impl
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3354:1: ( rule__Container__Group__7__Impl rule__Container__Group__8 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3355:2: rule__Container__Group__7__Impl rule__Container__Group__8
             {
             pushFollow(FOLLOW_rule__Container__Group__7__Impl_in_rule__Container__Group__76905);
             rule__Container__Group__7__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Container__Group__8_in_rule__Container__Group__76908);
+            rule__Container__Group__8();
 
             state._fsp--;
 
@@ -9302,32 +9307,32 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Container__Group__7__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3361:1: rule__Container__Group__7__Impl : ( ( rule__Container__Group_7__0 )? ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3362:1: rule__Container__Group__7__Impl : ( ( rule__Container__StyleAssignment_7 )? ) ;
     public final void rule__Container__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3365:1: ( ( ( rule__Container__Group_7__0 )? ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3366:1: ( ( rule__Container__Group_7__0 )? )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3366:1: ( ( ( rule__Container__StyleAssignment_7 )? ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3367:1: ( ( rule__Container__StyleAssignment_7 )? )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3366:1: ( ( rule__Container__Group_7__0 )? )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3367:1: ( rule__Container__Group_7__0 )?
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3367:1: ( ( rule__Container__StyleAssignment_7 )? )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3368:1: ( rule__Container__StyleAssignment_7 )?
             {
-             before(grammarAccess.getContainerAccess().getGroup_7()); 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3368:1: ( rule__Container__Group_7__0 )?
+             before(grammarAccess.getContainerAccess().getStyleAssignment_7()); 
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3369:1: ( rule__Container__StyleAssignment_7 )?
             int alt29=2;
             int LA29_0 = input.LA(1);
 
-            if ( (LA29_0==40) ) {
+            if ( (LA29_0==56) ) {
                 alt29=1;
             }
             switch (alt29) {
                 case 1 :
-                    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3368:2: rule__Container__Group_7__0
+                    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3369:2: rule__Container__StyleAssignment_7
                     {
-                    pushFollow(FOLLOW_rule__Container__Group_7__0_in_rule__Container__Group__7__Impl6932);
-                    rule__Container__Group_7__0();
+                    pushFollow(FOLLOW_rule__Container__StyleAssignment_7_in_rule__Container__Group__7__Impl6935);
+                    rule__Container__StyleAssignment_7();
 
                     state._fsp--;
 
@@ -9337,7 +9342,7 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
             }
 
-             after(grammarAccess.getContainerAccess().getGroup_7()); 
+             after(grammarAccess.getContainerAccess().getStyleAssignment_7()); 
 
             }
 
@@ -9359,23 +9364,18 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
     // $ANTLR end "rule__Container__Group__7__Impl"
 
 
-    // $ANTLR start "rule__Container__Group_7__0"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3394:1: rule__Container__Group_7__0 : rule__Container__Group_7__0__Impl rule__Container__Group_7__1 ;
-    public final void rule__Container__Group_7__0() throws RecognitionException {
+    // $ANTLR start "rule__Container__Group__8"
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3379:1: rule__Container__Group__8 : rule__Container__Group__8__Impl ;
+    public final void rule__Container__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3398:1: ( rule__Container__Group_7__0__Impl rule__Container__Group_7__1 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3399:2: rule__Container__Group_7__0__Impl rule__Container__Group_7__1
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3383:1: ( rule__Container__Group__8__Impl )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3384:2: rule__Container__Group__8__Impl
             {
-            pushFollow(FOLLOW_rule__Container__Group_7__0__Impl_in_rule__Container__Group_7__06979);
-            rule__Container__Group_7__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__Container__Group_7__1_in_rule__Container__Group_7__06982);
-            rule__Container__Group_7__1();
+            pushFollow(FOLLOW_rule__Container__Group__8__Impl_in_rule__Container__Group__86966);
+            rule__Container__Group__8__Impl();
 
             state._fsp--;
 
@@ -9394,25 +9394,46 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
         }
         return ;
     }
-    // $ANTLR end "rule__Container__Group_7__0"
+    // $ANTLR end "rule__Container__Group__8"
 
 
-    // $ANTLR start "rule__Container__Group_7__0__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3406:1: rule__Container__Group_7__0__Impl : ( '{' ) ;
-    public final void rule__Container__Group_7__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Container__Group__8__Impl"
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3390:1: rule__Container__Group__8__Impl : ( ( rule__Container__Group_8__0 )? ) ;
+    public final void rule__Container__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3410:1: ( ( '{' ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3411:1: ( '{' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3394:1: ( ( ( rule__Container__Group_8__0 )? ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3395:1: ( ( rule__Container__Group_8__0 )? )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3411:1: ( '{' )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3412:1: '{'
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3395:1: ( ( rule__Container__Group_8__0 )? )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3396:1: ( rule__Container__Group_8__0 )?
             {
-             before(grammarAccess.getContainerAccess().getLeftCurlyBracketKeyword_7_0()); 
-            match(input,40,FOLLOW_40_in_rule__Container__Group_7__0__Impl7010); 
-             after(grammarAccess.getContainerAccess().getLeftCurlyBracketKeyword_7_0()); 
+             before(grammarAccess.getContainerAccess().getGroup_8()); 
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3397:1: ( rule__Container__Group_8__0 )?
+            int alt30=2;
+            int LA30_0 = input.LA(1);
+
+            if ( (LA30_0==40) ) {
+                alt30=1;
+            }
+            switch (alt30) {
+                case 1 :
+                    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3397:2: rule__Container__Group_8__0
+                    {
+                    pushFollow(FOLLOW_rule__Container__Group_8__0_in_rule__Container__Group__8__Impl6993);
+                    rule__Container__Group_8__0();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getContainerAccess().getGroup_8()); 
 
             }
 
@@ -9431,26 +9452,26 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
         }
         return ;
     }
-    // $ANTLR end "rule__Container__Group_7__0__Impl"
+    // $ANTLR end "rule__Container__Group__8__Impl"
 
 
-    // $ANTLR start "rule__Container__Group_7__1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3425:1: rule__Container__Group_7__1 : rule__Container__Group_7__1__Impl rule__Container__Group_7__2 ;
-    public final void rule__Container__Group_7__1() throws RecognitionException {
+    // $ANTLR start "rule__Container__Group_8__0"
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3425:1: rule__Container__Group_8__0 : rule__Container__Group_8__0__Impl rule__Container__Group_8__1 ;
+    public final void rule__Container__Group_8__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3429:1: ( rule__Container__Group_7__1__Impl rule__Container__Group_7__2 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3430:2: rule__Container__Group_7__1__Impl rule__Container__Group_7__2
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3429:1: ( rule__Container__Group_8__0__Impl rule__Container__Group_8__1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3430:2: rule__Container__Group_8__0__Impl rule__Container__Group_8__1
             {
-            pushFollow(FOLLOW_rule__Container__Group_7__1__Impl_in_rule__Container__Group_7__17041);
-            rule__Container__Group_7__1__Impl();
+            pushFollow(FOLLOW_rule__Container__Group_8__0__Impl_in_rule__Container__Group_8__07042);
+            rule__Container__Group_8__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Container__Group_7__2_in_rule__Container__Group_7__17044);
-            rule__Container__Group_7__2();
+            pushFollow(FOLLOW_rule__Container__Group_8__1_in_rule__Container__Group_8__07045);
+            rule__Container__Group_8__1();
 
             state._fsp--;
 
@@ -9469,62 +9490,137 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
         }
         return ;
     }
-    // $ANTLR end "rule__Container__Group_7__1"
+    // $ANTLR end "rule__Container__Group_8__0"
 
 
-    // $ANTLR start "rule__Container__Group_7__1__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3437:1: rule__Container__Group_7__1__Impl : ( ( ( rule__Container__ElementsAssignment_7_1 ) ) ( ( rule__Container__ElementsAssignment_7_1 )* ) ) ;
-    public final void rule__Container__Group_7__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Container__Group_8__0__Impl"
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3437:1: rule__Container__Group_8__0__Impl : ( '{' ) ;
+    public final void rule__Container__Group_8__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3441:1: ( ( ( ( rule__Container__ElementsAssignment_7_1 ) ) ( ( rule__Container__ElementsAssignment_7_1 )* ) ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3442:1: ( ( ( rule__Container__ElementsAssignment_7_1 ) ) ( ( rule__Container__ElementsAssignment_7_1 )* ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3441:1: ( ( '{' ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3442:1: ( '{' )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3442:1: ( ( ( rule__Container__ElementsAssignment_7_1 ) ) ( ( rule__Container__ElementsAssignment_7_1 )* ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3443:1: ( ( rule__Container__ElementsAssignment_7_1 ) ) ( ( rule__Container__ElementsAssignment_7_1 )* )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3442:1: ( '{' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3443:1: '{'
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3443:1: ( ( rule__Container__ElementsAssignment_7_1 ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3444:1: ( rule__Container__ElementsAssignment_7_1 )
+             before(grammarAccess.getContainerAccess().getLeftCurlyBracketKeyword_8_0()); 
+            match(input,40,FOLLOW_40_in_rule__Container__Group_8__0__Impl7073); 
+             after(grammarAccess.getContainerAccess().getLeftCurlyBracketKeyword_8_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Container__Group_8__0__Impl"
+
+
+    // $ANTLR start "rule__Container__Group_8__1"
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3456:1: rule__Container__Group_8__1 : rule__Container__Group_8__1__Impl rule__Container__Group_8__2 ;
+    public final void rule__Container__Group_8__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3460:1: ( rule__Container__Group_8__1__Impl rule__Container__Group_8__2 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3461:2: rule__Container__Group_8__1__Impl rule__Container__Group_8__2
             {
-             before(grammarAccess.getContainerAccess().getElementsAssignment_7_1()); 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3445:1: ( rule__Container__ElementsAssignment_7_1 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3445:2: rule__Container__ElementsAssignment_7_1
-            {
-            pushFollow(FOLLOW_rule__Container__ElementsAssignment_7_1_in_rule__Container__Group_7__1__Impl7073);
-            rule__Container__ElementsAssignment_7_1();
+            pushFollow(FOLLOW_rule__Container__Group_8__1__Impl_in_rule__Container__Group_8__17104);
+            rule__Container__Group_8__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Container__Group_8__2_in_rule__Container__Group_8__17107);
+            rule__Container__Group_8__2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getContainerAccess().getElementsAssignment_7_1()); 
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Container__Group_8__1"
+
+
+    // $ANTLR start "rule__Container__Group_8__1__Impl"
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3468:1: rule__Container__Group_8__1__Impl : ( ( ( rule__Container__ElementsAssignment_8_1 ) ) ( ( rule__Container__ElementsAssignment_8_1 )* ) ) ;
+    public final void rule__Container__Group_8__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3472:1: ( ( ( ( rule__Container__ElementsAssignment_8_1 ) ) ( ( rule__Container__ElementsAssignment_8_1 )* ) ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3473:1: ( ( ( rule__Container__ElementsAssignment_8_1 ) ) ( ( rule__Container__ElementsAssignment_8_1 )* ) )
+            {
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3473:1: ( ( ( rule__Container__ElementsAssignment_8_1 ) ) ( ( rule__Container__ElementsAssignment_8_1 )* ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3474:1: ( ( rule__Container__ElementsAssignment_8_1 ) ) ( ( rule__Container__ElementsAssignment_8_1 )* )
+            {
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3474:1: ( ( rule__Container__ElementsAssignment_8_1 ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3475:1: ( rule__Container__ElementsAssignment_8_1 )
+            {
+             before(grammarAccess.getContainerAccess().getElementsAssignment_8_1()); 
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3476:1: ( rule__Container__ElementsAssignment_8_1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3476:2: rule__Container__ElementsAssignment_8_1
+            {
+            pushFollow(FOLLOW_rule__Container__ElementsAssignment_8_1_in_rule__Container__Group_8__1__Impl7136);
+            rule__Container__ElementsAssignment_8_1();
+
+            state._fsp--;
+
 
             }
 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3448:1: ( ( rule__Container__ElementsAssignment_7_1 )* )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3449:1: ( rule__Container__ElementsAssignment_7_1 )*
+             after(grammarAccess.getContainerAccess().getElementsAssignment_8_1()); 
+
+            }
+
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3479:1: ( ( rule__Container__ElementsAssignment_8_1 )* )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3480:1: ( rule__Container__ElementsAssignment_8_1 )*
             {
-             before(grammarAccess.getContainerAccess().getElementsAssignment_7_1()); 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3450:1: ( rule__Container__ElementsAssignment_7_1 )*
-            loop30:
+             before(grammarAccess.getContainerAccess().getElementsAssignment_8_1()); 
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3481:1: ( rule__Container__ElementsAssignment_8_1 )*
+            loop31:
             do {
-                int alt30=2;
-                int LA30_0 = input.LA(1);
+                int alt31=2;
+                int LA31_0 = input.LA(1);
 
-                if ( ((LA30_0>=11 && LA30_0<=12)||LA30_0==55||LA30_0==69) ) {
-                    alt30=1;
+                if ( ((LA31_0>=11 && LA31_0<=12)||LA31_0==55||(LA31_0>=68 && LA31_0<=69)) ) {
+                    alt31=1;
                 }
 
 
-                switch (alt30) {
+                switch (alt31) {
             	case 1 :
-            	    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3450:2: rule__Container__ElementsAssignment_7_1
+            	    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3481:2: rule__Container__ElementsAssignment_8_1
             	    {
-            	    pushFollow(FOLLOW_rule__Container__ElementsAssignment_7_1_in_rule__Container__Group_7__1__Impl7085);
-            	    rule__Container__ElementsAssignment_7_1();
+            	    pushFollow(FOLLOW_rule__Container__ElementsAssignment_8_1_in_rule__Container__Group_8__1__Impl7148);
+            	    rule__Container__ElementsAssignment_8_1();
 
             	    state._fsp--;
 
@@ -9533,11 +9629,11 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
             	    break;
 
             	default :
-            	    break loop30;
+            	    break loop31;
                 }
             } while (true);
 
-             after(grammarAccess.getContainerAccess().getElementsAssignment_7_1()); 
+             after(grammarAccess.getContainerAccess().getElementsAssignment_8_1()); 
 
             }
 
@@ -9559,21 +9655,21 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
         }
         return ;
     }
-    // $ANTLR end "rule__Container__Group_7__1__Impl"
+    // $ANTLR end "rule__Container__Group_8__1__Impl"
 
 
-    // $ANTLR start "rule__Container__Group_7__2"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3461:1: rule__Container__Group_7__2 : rule__Container__Group_7__2__Impl ;
-    public final void rule__Container__Group_7__2() throws RecognitionException {
+    // $ANTLR start "rule__Container__Group_8__2"
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3492:1: rule__Container__Group_8__2 : rule__Container__Group_8__2__Impl ;
+    public final void rule__Container__Group_8__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3465:1: ( rule__Container__Group_7__2__Impl )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3466:2: rule__Container__Group_7__2__Impl
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3496:1: ( rule__Container__Group_8__2__Impl )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3497:2: rule__Container__Group_8__2__Impl
             {
-            pushFollow(FOLLOW_rule__Container__Group_7__2__Impl_in_rule__Container__Group_7__27118);
-            rule__Container__Group_7__2__Impl();
+            pushFollow(FOLLOW_rule__Container__Group_8__2__Impl_in_rule__Container__Group_8__27181);
+            rule__Container__Group_8__2__Impl();
 
             state._fsp--;
 
@@ -9592,25 +9688,25 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
         }
         return ;
     }
-    // $ANTLR end "rule__Container__Group_7__2"
+    // $ANTLR end "rule__Container__Group_8__2"
 
 
-    // $ANTLR start "rule__Container__Group_7__2__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3472:1: rule__Container__Group_7__2__Impl : ( '}' ) ;
-    public final void rule__Container__Group_7__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Container__Group_8__2__Impl"
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3503:1: rule__Container__Group_8__2__Impl : ( '}' ) ;
+    public final void rule__Container__Group_8__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3476:1: ( ( '}' ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3477:1: ( '}' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3507:1: ( ( '}' ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3508:1: ( '}' )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3477:1: ( '}' )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3478:1: '}'
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3508:1: ( '}' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3509:1: '}'
             {
-             before(grammarAccess.getContainerAccess().getRightCurlyBracketKeyword_7_2()); 
-            match(input,41,FOLLOW_41_in_rule__Container__Group_7__2__Impl7146); 
-             after(grammarAccess.getContainerAccess().getRightCurlyBracketKeyword_7_2()); 
+             before(grammarAccess.getContainerAccess().getRightCurlyBracketKeyword_8_2()); 
+            match(input,41,FOLLOW_41_in_rule__Container__Group_8__2__Impl7209); 
+             after(grammarAccess.getContainerAccess().getRightCurlyBracketKeyword_8_2()); 
 
             }
 
@@ -9629,25 +9725,25 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
         }
         return ;
     }
-    // $ANTLR end "rule__Container__Group_7__2__Impl"
+    // $ANTLR end "rule__Container__Group_8__2__Impl"
 
 
     // $ANTLR start "rule__ContainerStyleDefinition__Group__0"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3497:1: rule__ContainerStyleDefinition__Group__0 : rule__ContainerStyleDefinition__Group__0__Impl rule__ContainerStyleDefinition__Group__1 ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3528:1: rule__ContainerStyleDefinition__Group__0 : rule__ContainerStyleDefinition__Group__0__Impl rule__ContainerStyleDefinition__Group__1 ;
     public final void rule__ContainerStyleDefinition__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3501:1: ( rule__ContainerStyleDefinition__Group__0__Impl rule__ContainerStyleDefinition__Group__1 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3502:2: rule__ContainerStyleDefinition__Group__0__Impl rule__ContainerStyleDefinition__Group__1
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3532:1: ( rule__ContainerStyleDefinition__Group__0__Impl rule__ContainerStyleDefinition__Group__1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3533:2: rule__ContainerStyleDefinition__Group__0__Impl rule__ContainerStyleDefinition__Group__1
             {
-            pushFollow(FOLLOW_rule__ContainerStyleDefinition__Group__0__Impl_in_rule__ContainerStyleDefinition__Group__07183);
+            pushFollow(FOLLOW_rule__ContainerStyleDefinition__Group__0__Impl_in_rule__ContainerStyleDefinition__Group__07246);
             rule__ContainerStyleDefinition__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ContainerStyleDefinition__Group__1_in_rule__ContainerStyleDefinition__Group__07186);
+            pushFollow(FOLLOW_rule__ContainerStyleDefinition__Group__1_in_rule__ContainerStyleDefinition__Group__07249);
             rule__ContainerStyleDefinition__Group__1();
 
             state._fsp--;
@@ -9671,20 +9767,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ContainerStyleDefinition__Group__0__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3509:1: rule__ContainerStyleDefinition__Group__0__Impl : ( '[' ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3540:1: rule__ContainerStyleDefinition__Group__0__Impl : ( '[' ) ;
     public final void rule__ContainerStyleDefinition__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3513:1: ( ( '[' ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3514:1: ( '[' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3544:1: ( ( '[' ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3545:1: ( '[' )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3514:1: ( '[' )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3515:1: '['
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3545:1: ( '[' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3546:1: '['
             {
              before(grammarAccess.getContainerStyleDefinitionAccess().getLeftSquareBracketKeyword_0()); 
-            match(input,56,FOLLOW_56_in_rule__ContainerStyleDefinition__Group__0__Impl7214); 
+            match(input,56,FOLLOW_56_in_rule__ContainerStyleDefinition__Group__0__Impl7277); 
              after(grammarAccess.getContainerStyleDefinitionAccess().getLeftSquareBracketKeyword_0()); 
 
             }
@@ -9708,21 +9804,21 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ContainerStyleDefinition__Group__1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3528:1: rule__ContainerStyleDefinition__Group__1 : rule__ContainerStyleDefinition__Group__1__Impl rule__ContainerStyleDefinition__Group__2 ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3559:1: rule__ContainerStyleDefinition__Group__1 : rule__ContainerStyleDefinition__Group__1__Impl rule__ContainerStyleDefinition__Group__2 ;
     public final void rule__ContainerStyleDefinition__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3532:1: ( rule__ContainerStyleDefinition__Group__1__Impl rule__ContainerStyleDefinition__Group__2 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3533:2: rule__ContainerStyleDefinition__Group__1__Impl rule__ContainerStyleDefinition__Group__2
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3563:1: ( rule__ContainerStyleDefinition__Group__1__Impl rule__ContainerStyleDefinition__Group__2 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3564:2: rule__ContainerStyleDefinition__Group__1__Impl rule__ContainerStyleDefinition__Group__2
             {
-            pushFollow(FOLLOW_rule__ContainerStyleDefinition__Group__1__Impl_in_rule__ContainerStyleDefinition__Group__17245);
+            pushFollow(FOLLOW_rule__ContainerStyleDefinition__Group__1__Impl_in_rule__ContainerStyleDefinition__Group__17308);
             rule__ContainerStyleDefinition__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ContainerStyleDefinition__Group__2_in_rule__ContainerStyleDefinition__Group__17248);
+            pushFollow(FOLLOW_rule__ContainerStyleDefinition__Group__2_in_rule__ContainerStyleDefinition__Group__17311);
             rule__ContainerStyleDefinition__Group__2();
 
             state._fsp--;
@@ -9746,23 +9842,23 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ContainerStyleDefinition__Group__1__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3540:1: rule__ContainerStyleDefinition__Group__1__Impl : ( ( rule__ContainerStyleDefinition__ColorAssignment_1 ) ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3571:1: rule__ContainerStyleDefinition__Group__1__Impl : ( ( rule__ContainerStyleDefinition__ColorAssignment_1 ) ) ;
     public final void rule__ContainerStyleDefinition__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3544:1: ( ( ( rule__ContainerStyleDefinition__ColorAssignment_1 ) ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3545:1: ( ( rule__ContainerStyleDefinition__ColorAssignment_1 ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3575:1: ( ( ( rule__ContainerStyleDefinition__ColorAssignment_1 ) ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3576:1: ( ( rule__ContainerStyleDefinition__ColorAssignment_1 ) )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3545:1: ( ( rule__ContainerStyleDefinition__ColorAssignment_1 ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3546:1: ( rule__ContainerStyleDefinition__ColorAssignment_1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3576:1: ( ( rule__ContainerStyleDefinition__ColorAssignment_1 ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3577:1: ( rule__ContainerStyleDefinition__ColorAssignment_1 )
             {
              before(grammarAccess.getContainerStyleDefinitionAccess().getColorAssignment_1()); 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3547:1: ( rule__ContainerStyleDefinition__ColorAssignment_1 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3547:2: rule__ContainerStyleDefinition__ColorAssignment_1
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3578:1: ( rule__ContainerStyleDefinition__ColorAssignment_1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3578:2: rule__ContainerStyleDefinition__ColorAssignment_1
             {
-            pushFollow(FOLLOW_rule__ContainerStyleDefinition__ColorAssignment_1_in_rule__ContainerStyleDefinition__Group__1__Impl7275);
+            pushFollow(FOLLOW_rule__ContainerStyleDefinition__ColorAssignment_1_in_rule__ContainerStyleDefinition__Group__1__Impl7338);
             rule__ContainerStyleDefinition__ColorAssignment_1();
 
             state._fsp--;
@@ -9793,21 +9889,21 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ContainerStyleDefinition__Group__2"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3557:1: rule__ContainerStyleDefinition__Group__2 : rule__ContainerStyleDefinition__Group__2__Impl rule__ContainerStyleDefinition__Group__3 ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3588:1: rule__ContainerStyleDefinition__Group__2 : rule__ContainerStyleDefinition__Group__2__Impl rule__ContainerStyleDefinition__Group__3 ;
     public final void rule__ContainerStyleDefinition__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3561:1: ( rule__ContainerStyleDefinition__Group__2__Impl rule__ContainerStyleDefinition__Group__3 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3562:2: rule__ContainerStyleDefinition__Group__2__Impl rule__ContainerStyleDefinition__Group__3
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3592:1: ( rule__ContainerStyleDefinition__Group__2__Impl rule__ContainerStyleDefinition__Group__3 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3593:2: rule__ContainerStyleDefinition__Group__2__Impl rule__ContainerStyleDefinition__Group__3
             {
-            pushFollow(FOLLOW_rule__ContainerStyleDefinition__Group__2__Impl_in_rule__ContainerStyleDefinition__Group__27305);
+            pushFollow(FOLLOW_rule__ContainerStyleDefinition__Group__2__Impl_in_rule__ContainerStyleDefinition__Group__27368);
             rule__ContainerStyleDefinition__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ContainerStyleDefinition__Group__3_in_rule__ContainerStyleDefinition__Group__27308);
+            pushFollow(FOLLOW_rule__ContainerStyleDefinition__Group__3_in_rule__ContainerStyleDefinition__Group__27371);
             rule__ContainerStyleDefinition__Group__3();
 
             state._fsp--;
@@ -9831,35 +9927,35 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ContainerStyleDefinition__Group__2__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3569:1: rule__ContainerStyleDefinition__Group__2__Impl : ( ( rule__ContainerStyleDefinition__Group_2__0 )? ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3600:1: rule__ContainerStyleDefinition__Group__2__Impl : ( ( rule__ContainerStyleDefinition__Group_2__0 )? ) ;
     public final void rule__ContainerStyleDefinition__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3573:1: ( ( ( rule__ContainerStyleDefinition__Group_2__0 )? ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3574:1: ( ( rule__ContainerStyleDefinition__Group_2__0 )? )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3604:1: ( ( ( rule__ContainerStyleDefinition__Group_2__0 )? ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3605:1: ( ( rule__ContainerStyleDefinition__Group_2__0 )? )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3574:1: ( ( rule__ContainerStyleDefinition__Group_2__0 )? )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3575:1: ( rule__ContainerStyleDefinition__Group_2__0 )?
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3605:1: ( ( rule__ContainerStyleDefinition__Group_2__0 )? )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3606:1: ( rule__ContainerStyleDefinition__Group_2__0 )?
             {
              before(grammarAccess.getContainerStyleDefinitionAccess().getGroup_2()); 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3576:1: ( rule__ContainerStyleDefinition__Group_2__0 )?
-            int alt31=2;
-            int LA31_0 = input.LA(1);
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3607:1: ( rule__ContainerStyleDefinition__Group_2__0 )?
+            int alt32=2;
+            int LA32_0 = input.LA(1);
 
-            if ( (LA31_0==58) ) {
-                int LA31_1 = input.LA(2);
+            if ( (LA32_0==58) ) {
+                int LA32_1 = input.LA(2);
 
-                if ( (LA31_1==48) ) {
-                    alt31=1;
+                if ( (LA32_1==48) ) {
+                    alt32=1;
                 }
             }
-            switch (alt31) {
+            switch (alt32) {
                 case 1 :
-                    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3576:2: rule__ContainerStyleDefinition__Group_2__0
+                    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3607:2: rule__ContainerStyleDefinition__Group_2__0
                     {
-                    pushFollow(FOLLOW_rule__ContainerStyleDefinition__Group_2__0_in_rule__ContainerStyleDefinition__Group__2__Impl7335);
+                    pushFollow(FOLLOW_rule__ContainerStyleDefinition__Group_2__0_in_rule__ContainerStyleDefinition__Group__2__Impl7398);
                     rule__ContainerStyleDefinition__Group_2__0();
 
                     state._fsp--;
@@ -9893,21 +9989,21 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ContainerStyleDefinition__Group__3"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3586:1: rule__ContainerStyleDefinition__Group__3 : rule__ContainerStyleDefinition__Group__3__Impl rule__ContainerStyleDefinition__Group__4 ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3617:1: rule__ContainerStyleDefinition__Group__3 : rule__ContainerStyleDefinition__Group__3__Impl rule__ContainerStyleDefinition__Group__4 ;
     public final void rule__ContainerStyleDefinition__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3590:1: ( rule__ContainerStyleDefinition__Group__3__Impl rule__ContainerStyleDefinition__Group__4 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3591:2: rule__ContainerStyleDefinition__Group__3__Impl rule__ContainerStyleDefinition__Group__4
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3621:1: ( rule__ContainerStyleDefinition__Group__3__Impl rule__ContainerStyleDefinition__Group__4 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3622:2: rule__ContainerStyleDefinition__Group__3__Impl rule__ContainerStyleDefinition__Group__4
             {
-            pushFollow(FOLLOW_rule__ContainerStyleDefinition__Group__3__Impl_in_rule__ContainerStyleDefinition__Group__37366);
+            pushFollow(FOLLOW_rule__ContainerStyleDefinition__Group__3__Impl_in_rule__ContainerStyleDefinition__Group__37429);
             rule__ContainerStyleDefinition__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ContainerStyleDefinition__Group__4_in_rule__ContainerStyleDefinition__Group__37369);
+            pushFollow(FOLLOW_rule__ContainerStyleDefinition__Group__4_in_rule__ContainerStyleDefinition__Group__37432);
             rule__ContainerStyleDefinition__Group__4();
 
             state._fsp--;
@@ -9931,31 +10027,31 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ContainerStyleDefinition__Group__3__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3598:1: rule__ContainerStyleDefinition__Group__3__Impl : ( ( rule__ContainerStyleDefinition__Group_3__0 )? ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3629:1: rule__ContainerStyleDefinition__Group__3__Impl : ( ( rule__ContainerStyleDefinition__Group_3__0 )? ) ;
     public final void rule__ContainerStyleDefinition__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3602:1: ( ( ( rule__ContainerStyleDefinition__Group_3__0 )? ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3603:1: ( ( rule__ContainerStyleDefinition__Group_3__0 )? )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3633:1: ( ( ( rule__ContainerStyleDefinition__Group_3__0 )? ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3634:1: ( ( rule__ContainerStyleDefinition__Group_3__0 )? )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3603:1: ( ( rule__ContainerStyleDefinition__Group_3__0 )? )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3604:1: ( rule__ContainerStyleDefinition__Group_3__0 )?
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3634:1: ( ( rule__ContainerStyleDefinition__Group_3__0 )? )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3635:1: ( rule__ContainerStyleDefinition__Group_3__0 )?
             {
              before(grammarAccess.getContainerStyleDefinitionAccess().getGroup_3()); 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3605:1: ( rule__ContainerStyleDefinition__Group_3__0 )?
-            int alt32=2;
-            int LA32_0 = input.LA(1);
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3636:1: ( rule__ContainerStyleDefinition__Group_3__0 )?
+            int alt33=2;
+            int LA33_0 = input.LA(1);
 
-            if ( (LA32_0==58) ) {
-                alt32=1;
+            if ( (LA33_0==58) ) {
+                alt33=1;
             }
-            switch (alt32) {
+            switch (alt33) {
                 case 1 :
-                    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3605:2: rule__ContainerStyleDefinition__Group_3__0
+                    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3636:2: rule__ContainerStyleDefinition__Group_3__0
                     {
-                    pushFollow(FOLLOW_rule__ContainerStyleDefinition__Group_3__0_in_rule__ContainerStyleDefinition__Group__3__Impl7396);
+                    pushFollow(FOLLOW_rule__ContainerStyleDefinition__Group_3__0_in_rule__ContainerStyleDefinition__Group__3__Impl7459);
                     rule__ContainerStyleDefinition__Group_3__0();
 
                     state._fsp--;
@@ -9989,16 +10085,16 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ContainerStyleDefinition__Group__4"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3615:1: rule__ContainerStyleDefinition__Group__4 : rule__ContainerStyleDefinition__Group__4__Impl ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3646:1: rule__ContainerStyleDefinition__Group__4 : rule__ContainerStyleDefinition__Group__4__Impl ;
     public final void rule__ContainerStyleDefinition__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3619:1: ( rule__ContainerStyleDefinition__Group__4__Impl )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3620:2: rule__ContainerStyleDefinition__Group__4__Impl
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3650:1: ( rule__ContainerStyleDefinition__Group__4__Impl )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3651:2: rule__ContainerStyleDefinition__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__ContainerStyleDefinition__Group__4__Impl_in_rule__ContainerStyleDefinition__Group__47427);
+            pushFollow(FOLLOW_rule__ContainerStyleDefinition__Group__4__Impl_in_rule__ContainerStyleDefinition__Group__47490);
             rule__ContainerStyleDefinition__Group__4__Impl();
 
             state._fsp--;
@@ -10022,20 +10118,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ContainerStyleDefinition__Group__4__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3626:1: rule__ContainerStyleDefinition__Group__4__Impl : ( ']' ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3657:1: rule__ContainerStyleDefinition__Group__4__Impl : ( ']' ) ;
     public final void rule__ContainerStyleDefinition__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3630:1: ( ( ']' ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3631:1: ( ']' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3661:1: ( ( ']' ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3662:1: ( ']' )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3631:1: ( ']' )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3632:1: ']'
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3662:1: ( ']' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3663:1: ']'
             {
              before(grammarAccess.getContainerStyleDefinitionAccess().getRightSquareBracketKeyword_4()); 
-            match(input,57,FOLLOW_57_in_rule__ContainerStyleDefinition__Group__4__Impl7455); 
+            match(input,57,FOLLOW_57_in_rule__ContainerStyleDefinition__Group__4__Impl7518); 
              after(grammarAccess.getContainerStyleDefinitionAccess().getRightSquareBracketKeyword_4()); 
 
             }
@@ -10059,21 +10155,21 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ContainerStyleDefinition__Group_2__0"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3655:1: rule__ContainerStyleDefinition__Group_2__0 : rule__ContainerStyleDefinition__Group_2__0__Impl rule__ContainerStyleDefinition__Group_2__1 ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3686:1: rule__ContainerStyleDefinition__Group_2__0 : rule__ContainerStyleDefinition__Group_2__0__Impl rule__ContainerStyleDefinition__Group_2__1 ;
     public final void rule__ContainerStyleDefinition__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3659:1: ( rule__ContainerStyleDefinition__Group_2__0__Impl rule__ContainerStyleDefinition__Group_2__1 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3660:2: rule__ContainerStyleDefinition__Group_2__0__Impl rule__ContainerStyleDefinition__Group_2__1
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3690:1: ( rule__ContainerStyleDefinition__Group_2__0__Impl rule__ContainerStyleDefinition__Group_2__1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3691:2: rule__ContainerStyleDefinition__Group_2__0__Impl rule__ContainerStyleDefinition__Group_2__1
             {
-            pushFollow(FOLLOW_rule__ContainerStyleDefinition__Group_2__0__Impl_in_rule__ContainerStyleDefinition__Group_2__07496);
+            pushFollow(FOLLOW_rule__ContainerStyleDefinition__Group_2__0__Impl_in_rule__ContainerStyleDefinition__Group_2__07559);
             rule__ContainerStyleDefinition__Group_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ContainerStyleDefinition__Group_2__1_in_rule__ContainerStyleDefinition__Group_2__07499);
+            pushFollow(FOLLOW_rule__ContainerStyleDefinition__Group_2__1_in_rule__ContainerStyleDefinition__Group_2__07562);
             rule__ContainerStyleDefinition__Group_2__1();
 
             state._fsp--;
@@ -10097,20 +10193,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ContainerStyleDefinition__Group_2__0__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3667:1: rule__ContainerStyleDefinition__Group_2__0__Impl : ( ',' ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3698:1: rule__ContainerStyleDefinition__Group_2__0__Impl : ( ',' ) ;
     public final void rule__ContainerStyleDefinition__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3671:1: ( ( ',' ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3672:1: ( ',' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3702:1: ( ( ',' ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3703:1: ( ',' )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3672:1: ( ',' )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3673:1: ','
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3703:1: ( ',' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3704:1: ','
             {
              before(grammarAccess.getContainerStyleDefinitionAccess().getCommaKeyword_2_0()); 
-            match(input,58,FOLLOW_58_in_rule__ContainerStyleDefinition__Group_2__0__Impl7527); 
+            match(input,58,FOLLOW_58_in_rule__ContainerStyleDefinition__Group_2__0__Impl7590); 
              after(grammarAccess.getContainerStyleDefinitionAccess().getCommaKeyword_2_0()); 
 
             }
@@ -10134,16 +10230,16 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ContainerStyleDefinition__Group_2__1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3686:1: rule__ContainerStyleDefinition__Group_2__1 : rule__ContainerStyleDefinition__Group_2__1__Impl ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3717:1: rule__ContainerStyleDefinition__Group_2__1 : rule__ContainerStyleDefinition__Group_2__1__Impl ;
     public final void rule__ContainerStyleDefinition__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3690:1: ( rule__ContainerStyleDefinition__Group_2__1__Impl )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3691:2: rule__ContainerStyleDefinition__Group_2__1__Impl
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3721:1: ( rule__ContainerStyleDefinition__Group_2__1__Impl )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3722:2: rule__ContainerStyleDefinition__Group_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__ContainerStyleDefinition__Group_2__1__Impl_in_rule__ContainerStyleDefinition__Group_2__17558);
+            pushFollow(FOLLOW_rule__ContainerStyleDefinition__Group_2__1__Impl_in_rule__ContainerStyleDefinition__Group_2__17621);
             rule__ContainerStyleDefinition__Group_2__1__Impl();
 
             state._fsp--;
@@ -10167,23 +10263,23 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ContainerStyleDefinition__Group_2__1__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3697:1: rule__ContainerStyleDefinition__Group_2__1__Impl : ( ( rule__ContainerStyleDefinition__LabelAssignment_2_1 ) ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3728:1: rule__ContainerStyleDefinition__Group_2__1__Impl : ( ( rule__ContainerStyleDefinition__LabelAssignment_2_1 ) ) ;
     public final void rule__ContainerStyleDefinition__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3701:1: ( ( ( rule__ContainerStyleDefinition__LabelAssignment_2_1 ) ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3702:1: ( ( rule__ContainerStyleDefinition__LabelAssignment_2_1 ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3732:1: ( ( ( rule__ContainerStyleDefinition__LabelAssignment_2_1 ) ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3733:1: ( ( rule__ContainerStyleDefinition__LabelAssignment_2_1 ) )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3702:1: ( ( rule__ContainerStyleDefinition__LabelAssignment_2_1 ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3703:1: ( rule__ContainerStyleDefinition__LabelAssignment_2_1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3733:1: ( ( rule__ContainerStyleDefinition__LabelAssignment_2_1 ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3734:1: ( rule__ContainerStyleDefinition__LabelAssignment_2_1 )
             {
              before(grammarAccess.getContainerStyleDefinitionAccess().getLabelAssignment_2_1()); 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3704:1: ( rule__ContainerStyleDefinition__LabelAssignment_2_1 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3704:2: rule__ContainerStyleDefinition__LabelAssignment_2_1
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3735:1: ( rule__ContainerStyleDefinition__LabelAssignment_2_1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3735:2: rule__ContainerStyleDefinition__LabelAssignment_2_1
             {
-            pushFollow(FOLLOW_rule__ContainerStyleDefinition__LabelAssignment_2_1_in_rule__ContainerStyleDefinition__Group_2__1__Impl7585);
+            pushFollow(FOLLOW_rule__ContainerStyleDefinition__LabelAssignment_2_1_in_rule__ContainerStyleDefinition__Group_2__1__Impl7648);
             rule__ContainerStyleDefinition__LabelAssignment_2_1();
 
             state._fsp--;
@@ -10214,21 +10310,21 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ContainerStyleDefinition__Group_3__0"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3718:1: rule__ContainerStyleDefinition__Group_3__0 : rule__ContainerStyleDefinition__Group_3__0__Impl rule__ContainerStyleDefinition__Group_3__1 ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3749:1: rule__ContainerStyleDefinition__Group_3__0 : rule__ContainerStyleDefinition__Group_3__0__Impl rule__ContainerStyleDefinition__Group_3__1 ;
     public final void rule__ContainerStyleDefinition__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3722:1: ( rule__ContainerStyleDefinition__Group_3__0__Impl rule__ContainerStyleDefinition__Group_3__1 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3723:2: rule__ContainerStyleDefinition__Group_3__0__Impl rule__ContainerStyleDefinition__Group_3__1
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3753:1: ( rule__ContainerStyleDefinition__Group_3__0__Impl rule__ContainerStyleDefinition__Group_3__1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3754:2: rule__ContainerStyleDefinition__Group_3__0__Impl rule__ContainerStyleDefinition__Group_3__1
             {
-            pushFollow(FOLLOW_rule__ContainerStyleDefinition__Group_3__0__Impl_in_rule__ContainerStyleDefinition__Group_3__07619);
+            pushFollow(FOLLOW_rule__ContainerStyleDefinition__Group_3__0__Impl_in_rule__ContainerStyleDefinition__Group_3__07682);
             rule__ContainerStyleDefinition__Group_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ContainerStyleDefinition__Group_3__1_in_rule__ContainerStyleDefinition__Group_3__07622);
+            pushFollow(FOLLOW_rule__ContainerStyleDefinition__Group_3__1_in_rule__ContainerStyleDefinition__Group_3__07685);
             rule__ContainerStyleDefinition__Group_3__1();
 
             state._fsp--;
@@ -10252,20 +10348,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ContainerStyleDefinition__Group_3__0__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3730:1: rule__ContainerStyleDefinition__Group_3__0__Impl : ( ',' ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3761:1: rule__ContainerStyleDefinition__Group_3__0__Impl : ( ',' ) ;
     public final void rule__ContainerStyleDefinition__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3734:1: ( ( ',' ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3735:1: ( ',' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3765:1: ( ( ',' ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3766:1: ( ',' )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3735:1: ( ',' )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3736:1: ','
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3766:1: ( ',' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3767:1: ','
             {
              before(grammarAccess.getContainerStyleDefinitionAccess().getCommaKeyword_3_0()); 
-            match(input,58,FOLLOW_58_in_rule__ContainerStyleDefinition__Group_3__0__Impl7650); 
+            match(input,58,FOLLOW_58_in_rule__ContainerStyleDefinition__Group_3__0__Impl7713); 
              after(grammarAccess.getContainerStyleDefinitionAccess().getCommaKeyword_3_0()); 
 
             }
@@ -10289,16 +10385,16 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ContainerStyleDefinition__Group_3__1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3749:1: rule__ContainerStyleDefinition__Group_3__1 : rule__ContainerStyleDefinition__Group_3__1__Impl ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3780:1: rule__ContainerStyleDefinition__Group_3__1 : rule__ContainerStyleDefinition__Group_3__1__Impl ;
     public final void rule__ContainerStyleDefinition__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3753:1: ( rule__ContainerStyleDefinition__Group_3__1__Impl )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3754:2: rule__ContainerStyleDefinition__Group_3__1__Impl
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3784:1: ( rule__ContainerStyleDefinition__Group_3__1__Impl )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3785:2: rule__ContainerStyleDefinition__Group_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__ContainerStyleDefinition__Group_3__1__Impl_in_rule__ContainerStyleDefinition__Group_3__17681);
+            pushFollow(FOLLOW_rule__ContainerStyleDefinition__Group_3__1__Impl_in_rule__ContainerStyleDefinition__Group_3__17744);
             rule__ContainerStyleDefinition__Group_3__1__Impl();
 
             state._fsp--;
@@ -10322,23 +10418,23 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ContainerStyleDefinition__Group_3__1__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3760:1: rule__ContainerStyleDefinition__Group_3__1__Impl : ( ( rule__ContainerStyleDefinition__BorderAssignment_3_1 ) ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3791:1: rule__ContainerStyleDefinition__Group_3__1__Impl : ( ( rule__ContainerStyleDefinition__BorderAssignment_3_1 ) ) ;
     public final void rule__ContainerStyleDefinition__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3764:1: ( ( ( rule__ContainerStyleDefinition__BorderAssignment_3_1 ) ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3765:1: ( ( rule__ContainerStyleDefinition__BorderAssignment_3_1 ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3795:1: ( ( ( rule__ContainerStyleDefinition__BorderAssignment_3_1 ) ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3796:1: ( ( rule__ContainerStyleDefinition__BorderAssignment_3_1 ) )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3765:1: ( ( rule__ContainerStyleDefinition__BorderAssignment_3_1 ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3766:1: ( rule__ContainerStyleDefinition__BorderAssignment_3_1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3796:1: ( ( rule__ContainerStyleDefinition__BorderAssignment_3_1 ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3797:1: ( rule__ContainerStyleDefinition__BorderAssignment_3_1 )
             {
              before(grammarAccess.getContainerStyleDefinitionAccess().getBorderAssignment_3_1()); 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3767:1: ( rule__ContainerStyleDefinition__BorderAssignment_3_1 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3767:2: rule__ContainerStyleDefinition__BorderAssignment_3_1
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3798:1: ( rule__ContainerStyleDefinition__BorderAssignment_3_1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3798:2: rule__ContainerStyleDefinition__BorderAssignment_3_1
             {
-            pushFollow(FOLLOW_rule__ContainerStyleDefinition__BorderAssignment_3_1_in_rule__ContainerStyleDefinition__Group_3__1__Impl7708);
+            pushFollow(FOLLOW_rule__ContainerStyleDefinition__BorderAssignment_3_1_in_rule__ContainerStyleDefinition__Group_3__1__Impl7771);
             rule__ContainerStyleDefinition__BorderAssignment_3_1();
 
             state._fsp--;
@@ -10369,21 +10465,21 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SolidColorDefinition__Group__0"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3781:1: rule__SolidColorDefinition__Group__0 : rule__SolidColorDefinition__Group__0__Impl rule__SolidColorDefinition__Group__1 ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3812:1: rule__SolidColorDefinition__Group__0 : rule__SolidColorDefinition__Group__0__Impl rule__SolidColorDefinition__Group__1 ;
     public final void rule__SolidColorDefinition__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3785:1: ( rule__SolidColorDefinition__Group__0__Impl rule__SolidColorDefinition__Group__1 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3786:2: rule__SolidColorDefinition__Group__0__Impl rule__SolidColorDefinition__Group__1
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3816:1: ( rule__SolidColorDefinition__Group__0__Impl rule__SolidColorDefinition__Group__1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3817:2: rule__SolidColorDefinition__Group__0__Impl rule__SolidColorDefinition__Group__1
             {
-            pushFollow(FOLLOW_rule__SolidColorDefinition__Group__0__Impl_in_rule__SolidColorDefinition__Group__07742);
+            pushFollow(FOLLOW_rule__SolidColorDefinition__Group__0__Impl_in_rule__SolidColorDefinition__Group__07805);
             rule__SolidColorDefinition__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__SolidColorDefinition__Group__1_in_rule__SolidColorDefinition__Group__07745);
+            pushFollow(FOLLOW_rule__SolidColorDefinition__Group__1_in_rule__SolidColorDefinition__Group__07808);
             rule__SolidColorDefinition__Group__1();
 
             state._fsp--;
@@ -10407,20 +10503,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SolidColorDefinition__Group__0__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3793:1: rule__SolidColorDefinition__Group__0__Impl : ( 'color' ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3824:1: rule__SolidColorDefinition__Group__0__Impl : ( 'color' ) ;
     public final void rule__SolidColorDefinition__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3797:1: ( ( 'color' ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3798:1: ( 'color' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3828:1: ( ( 'color' ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3829:1: ( 'color' )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3798:1: ( 'color' )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3799:1: 'color'
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3829:1: ( 'color' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3830:1: 'color'
             {
              before(grammarAccess.getSolidColorDefinitionAccess().getColorKeyword_0()); 
-            match(input,59,FOLLOW_59_in_rule__SolidColorDefinition__Group__0__Impl7773); 
+            match(input,59,FOLLOW_59_in_rule__SolidColorDefinition__Group__0__Impl7836); 
              after(grammarAccess.getSolidColorDefinitionAccess().getColorKeyword_0()); 
 
             }
@@ -10444,16 +10540,16 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SolidColorDefinition__Group__1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3812:1: rule__SolidColorDefinition__Group__1 : rule__SolidColorDefinition__Group__1__Impl ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3843:1: rule__SolidColorDefinition__Group__1 : rule__SolidColorDefinition__Group__1__Impl ;
     public final void rule__SolidColorDefinition__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3816:1: ( rule__SolidColorDefinition__Group__1__Impl )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3817:2: rule__SolidColorDefinition__Group__1__Impl
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3847:1: ( rule__SolidColorDefinition__Group__1__Impl )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3848:2: rule__SolidColorDefinition__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__SolidColorDefinition__Group__1__Impl_in_rule__SolidColorDefinition__Group__17804);
+            pushFollow(FOLLOW_rule__SolidColorDefinition__Group__1__Impl_in_rule__SolidColorDefinition__Group__17867);
             rule__SolidColorDefinition__Group__1__Impl();
 
             state._fsp--;
@@ -10477,23 +10573,23 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SolidColorDefinition__Group__1__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3823:1: rule__SolidColorDefinition__Group__1__Impl : ( ( rule__SolidColorDefinition__ColorAssignment_1 ) ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3854:1: rule__SolidColorDefinition__Group__1__Impl : ( ( rule__SolidColorDefinition__ColorAssignment_1 ) ) ;
     public final void rule__SolidColorDefinition__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3827:1: ( ( ( rule__SolidColorDefinition__ColorAssignment_1 ) ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3828:1: ( ( rule__SolidColorDefinition__ColorAssignment_1 ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3858:1: ( ( ( rule__SolidColorDefinition__ColorAssignment_1 ) ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3859:1: ( ( rule__SolidColorDefinition__ColorAssignment_1 ) )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3828:1: ( ( rule__SolidColorDefinition__ColorAssignment_1 ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3829:1: ( rule__SolidColorDefinition__ColorAssignment_1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3859:1: ( ( rule__SolidColorDefinition__ColorAssignment_1 ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3860:1: ( rule__SolidColorDefinition__ColorAssignment_1 )
             {
              before(grammarAccess.getSolidColorDefinitionAccess().getColorAssignment_1()); 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3830:1: ( rule__SolidColorDefinition__ColorAssignment_1 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3830:2: rule__SolidColorDefinition__ColorAssignment_1
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3861:1: ( rule__SolidColorDefinition__ColorAssignment_1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3861:2: rule__SolidColorDefinition__ColorAssignment_1
             {
-            pushFollow(FOLLOW_rule__SolidColorDefinition__ColorAssignment_1_in_rule__SolidColorDefinition__Group__1__Impl7831);
+            pushFollow(FOLLOW_rule__SolidColorDefinition__ColorAssignment_1_in_rule__SolidColorDefinition__Group__1__Impl7894);
             rule__SolidColorDefinition__ColorAssignment_1();
 
             state._fsp--;
@@ -10524,21 +10620,21 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GradientColorDefinition__Group__0"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3844:1: rule__GradientColorDefinition__Group__0 : rule__GradientColorDefinition__Group__0__Impl rule__GradientColorDefinition__Group__1 ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3875:1: rule__GradientColorDefinition__Group__0 : rule__GradientColorDefinition__Group__0__Impl rule__GradientColorDefinition__Group__1 ;
     public final void rule__GradientColorDefinition__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3848:1: ( rule__GradientColorDefinition__Group__0__Impl rule__GradientColorDefinition__Group__1 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3849:2: rule__GradientColorDefinition__Group__0__Impl rule__GradientColorDefinition__Group__1
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3879:1: ( rule__GradientColorDefinition__Group__0__Impl rule__GradientColorDefinition__Group__1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3880:2: rule__GradientColorDefinition__Group__0__Impl rule__GradientColorDefinition__Group__1
             {
-            pushFollow(FOLLOW_rule__GradientColorDefinition__Group__0__Impl_in_rule__GradientColorDefinition__Group__07865);
+            pushFollow(FOLLOW_rule__GradientColorDefinition__Group__0__Impl_in_rule__GradientColorDefinition__Group__07928);
             rule__GradientColorDefinition__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__GradientColorDefinition__Group__1_in_rule__GradientColorDefinition__Group__07868);
+            pushFollow(FOLLOW_rule__GradientColorDefinition__Group__1_in_rule__GradientColorDefinition__Group__07931);
             rule__GradientColorDefinition__Group__1();
 
             state._fsp--;
@@ -10562,20 +10658,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GradientColorDefinition__Group__0__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3856:1: rule__GradientColorDefinition__Group__0__Impl : ( 'gradient from' ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3887:1: rule__GradientColorDefinition__Group__0__Impl : ( 'gradient from' ) ;
     public final void rule__GradientColorDefinition__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3860:1: ( ( 'gradient from' ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3861:1: ( 'gradient from' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3891:1: ( ( 'gradient from' ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3892:1: ( 'gradient from' )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3861:1: ( 'gradient from' )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3862:1: 'gradient from'
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3892:1: ( 'gradient from' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3893:1: 'gradient from'
             {
              before(grammarAccess.getGradientColorDefinitionAccess().getGradientFromKeyword_0()); 
-            match(input,60,FOLLOW_60_in_rule__GradientColorDefinition__Group__0__Impl7896); 
+            match(input,60,FOLLOW_60_in_rule__GradientColorDefinition__Group__0__Impl7959); 
              after(grammarAccess.getGradientColorDefinitionAccess().getGradientFromKeyword_0()); 
 
             }
@@ -10599,21 +10695,21 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GradientColorDefinition__Group__1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3875:1: rule__GradientColorDefinition__Group__1 : rule__GradientColorDefinition__Group__1__Impl rule__GradientColorDefinition__Group__2 ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3906:1: rule__GradientColorDefinition__Group__1 : rule__GradientColorDefinition__Group__1__Impl rule__GradientColorDefinition__Group__2 ;
     public final void rule__GradientColorDefinition__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3879:1: ( rule__GradientColorDefinition__Group__1__Impl rule__GradientColorDefinition__Group__2 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3880:2: rule__GradientColorDefinition__Group__1__Impl rule__GradientColorDefinition__Group__2
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3910:1: ( rule__GradientColorDefinition__Group__1__Impl rule__GradientColorDefinition__Group__2 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3911:2: rule__GradientColorDefinition__Group__1__Impl rule__GradientColorDefinition__Group__2
             {
-            pushFollow(FOLLOW_rule__GradientColorDefinition__Group__1__Impl_in_rule__GradientColorDefinition__Group__17927);
+            pushFollow(FOLLOW_rule__GradientColorDefinition__Group__1__Impl_in_rule__GradientColorDefinition__Group__17990);
             rule__GradientColorDefinition__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__GradientColorDefinition__Group__2_in_rule__GradientColorDefinition__Group__17930);
+            pushFollow(FOLLOW_rule__GradientColorDefinition__Group__2_in_rule__GradientColorDefinition__Group__17993);
             rule__GradientColorDefinition__Group__2();
 
             state._fsp--;
@@ -10637,23 +10733,23 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GradientColorDefinition__Group__1__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3887:1: rule__GradientColorDefinition__Group__1__Impl : ( ( rule__GradientColorDefinition__FromAssignment_1 ) ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3918:1: rule__GradientColorDefinition__Group__1__Impl : ( ( rule__GradientColorDefinition__FromAssignment_1 ) ) ;
     public final void rule__GradientColorDefinition__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3891:1: ( ( ( rule__GradientColorDefinition__FromAssignment_1 ) ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3892:1: ( ( rule__GradientColorDefinition__FromAssignment_1 ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3922:1: ( ( ( rule__GradientColorDefinition__FromAssignment_1 ) ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3923:1: ( ( rule__GradientColorDefinition__FromAssignment_1 ) )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3892:1: ( ( rule__GradientColorDefinition__FromAssignment_1 ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3893:1: ( rule__GradientColorDefinition__FromAssignment_1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3923:1: ( ( rule__GradientColorDefinition__FromAssignment_1 ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3924:1: ( rule__GradientColorDefinition__FromAssignment_1 )
             {
              before(grammarAccess.getGradientColorDefinitionAccess().getFromAssignment_1()); 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3894:1: ( rule__GradientColorDefinition__FromAssignment_1 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3894:2: rule__GradientColorDefinition__FromAssignment_1
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3925:1: ( rule__GradientColorDefinition__FromAssignment_1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3925:2: rule__GradientColorDefinition__FromAssignment_1
             {
-            pushFollow(FOLLOW_rule__GradientColorDefinition__FromAssignment_1_in_rule__GradientColorDefinition__Group__1__Impl7957);
+            pushFollow(FOLLOW_rule__GradientColorDefinition__FromAssignment_1_in_rule__GradientColorDefinition__Group__1__Impl8020);
             rule__GradientColorDefinition__FromAssignment_1();
 
             state._fsp--;
@@ -10684,21 +10780,21 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GradientColorDefinition__Group__2"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3904:1: rule__GradientColorDefinition__Group__2 : rule__GradientColorDefinition__Group__2__Impl rule__GradientColorDefinition__Group__3 ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3935:1: rule__GradientColorDefinition__Group__2 : rule__GradientColorDefinition__Group__2__Impl rule__GradientColorDefinition__Group__3 ;
     public final void rule__GradientColorDefinition__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3908:1: ( rule__GradientColorDefinition__Group__2__Impl rule__GradientColorDefinition__Group__3 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3909:2: rule__GradientColorDefinition__Group__2__Impl rule__GradientColorDefinition__Group__3
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3939:1: ( rule__GradientColorDefinition__Group__2__Impl rule__GradientColorDefinition__Group__3 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3940:2: rule__GradientColorDefinition__Group__2__Impl rule__GradientColorDefinition__Group__3
             {
-            pushFollow(FOLLOW_rule__GradientColorDefinition__Group__2__Impl_in_rule__GradientColorDefinition__Group__27987);
+            pushFollow(FOLLOW_rule__GradientColorDefinition__Group__2__Impl_in_rule__GradientColorDefinition__Group__28050);
             rule__GradientColorDefinition__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__GradientColorDefinition__Group__3_in_rule__GradientColorDefinition__Group__27990);
+            pushFollow(FOLLOW_rule__GradientColorDefinition__Group__3_in_rule__GradientColorDefinition__Group__28053);
             rule__GradientColorDefinition__Group__3();
 
             state._fsp--;
@@ -10722,20 +10818,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GradientColorDefinition__Group__2__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3916:1: rule__GradientColorDefinition__Group__2__Impl : ( 'to' ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3947:1: rule__GradientColorDefinition__Group__2__Impl : ( 'to' ) ;
     public final void rule__GradientColorDefinition__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3920:1: ( ( 'to' ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3921:1: ( 'to' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3951:1: ( ( 'to' ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3952:1: ( 'to' )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3921:1: ( 'to' )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3922:1: 'to'
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3952:1: ( 'to' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3953:1: 'to'
             {
              before(grammarAccess.getGradientColorDefinitionAccess().getToKeyword_2()); 
-            match(input,61,FOLLOW_61_in_rule__GradientColorDefinition__Group__2__Impl8018); 
+            match(input,61,FOLLOW_61_in_rule__GradientColorDefinition__Group__2__Impl8081); 
              after(grammarAccess.getGradientColorDefinitionAccess().getToKeyword_2()); 
 
             }
@@ -10759,16 +10855,16 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GradientColorDefinition__Group__3"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3935:1: rule__GradientColorDefinition__Group__3 : rule__GradientColorDefinition__Group__3__Impl ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3966:1: rule__GradientColorDefinition__Group__3 : rule__GradientColorDefinition__Group__3__Impl ;
     public final void rule__GradientColorDefinition__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3939:1: ( rule__GradientColorDefinition__Group__3__Impl )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3940:2: rule__GradientColorDefinition__Group__3__Impl
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3970:1: ( rule__GradientColorDefinition__Group__3__Impl )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3971:2: rule__GradientColorDefinition__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__GradientColorDefinition__Group__3__Impl_in_rule__GradientColorDefinition__Group__38049);
+            pushFollow(FOLLOW_rule__GradientColorDefinition__Group__3__Impl_in_rule__GradientColorDefinition__Group__38112);
             rule__GradientColorDefinition__Group__3__Impl();
 
             state._fsp--;
@@ -10792,23 +10888,23 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GradientColorDefinition__Group__3__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3946:1: rule__GradientColorDefinition__Group__3__Impl : ( ( rule__GradientColorDefinition__ToAssignment_3 ) ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3977:1: rule__GradientColorDefinition__Group__3__Impl : ( ( rule__GradientColorDefinition__ToAssignment_3 ) ) ;
     public final void rule__GradientColorDefinition__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3950:1: ( ( ( rule__GradientColorDefinition__ToAssignment_3 ) ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3951:1: ( ( rule__GradientColorDefinition__ToAssignment_3 ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3981:1: ( ( ( rule__GradientColorDefinition__ToAssignment_3 ) ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3982:1: ( ( rule__GradientColorDefinition__ToAssignment_3 ) )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3951:1: ( ( rule__GradientColorDefinition__ToAssignment_3 ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3952:1: ( rule__GradientColorDefinition__ToAssignment_3 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3982:1: ( ( rule__GradientColorDefinition__ToAssignment_3 ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3983:1: ( rule__GradientColorDefinition__ToAssignment_3 )
             {
              before(grammarAccess.getGradientColorDefinitionAccess().getToAssignment_3()); 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3953:1: ( rule__GradientColorDefinition__ToAssignment_3 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3953:2: rule__GradientColorDefinition__ToAssignment_3
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3984:1: ( rule__GradientColorDefinition__ToAssignment_3 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3984:2: rule__GradientColorDefinition__ToAssignment_3
             {
-            pushFollow(FOLLOW_rule__GradientColorDefinition__ToAssignment_3_in_rule__GradientColorDefinition__Group__3__Impl8076);
+            pushFollow(FOLLOW_rule__GradientColorDefinition__ToAssignment_3_in_rule__GradientColorDefinition__Group__3__Impl8139);
             rule__GradientColorDefinition__ToAssignment_3();
 
             state._fsp--;
@@ -10839,21 +10935,21 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LabelStyleDefinition__Group__0"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3971:1: rule__LabelStyleDefinition__Group__0 : rule__LabelStyleDefinition__Group__0__Impl rule__LabelStyleDefinition__Group__1 ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4002:1: rule__LabelStyleDefinition__Group__0 : rule__LabelStyleDefinition__Group__0__Impl rule__LabelStyleDefinition__Group__1 ;
     public final void rule__LabelStyleDefinition__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3975:1: ( rule__LabelStyleDefinition__Group__0__Impl rule__LabelStyleDefinition__Group__1 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3976:2: rule__LabelStyleDefinition__Group__0__Impl rule__LabelStyleDefinition__Group__1
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4006:1: ( rule__LabelStyleDefinition__Group__0__Impl rule__LabelStyleDefinition__Group__1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4007:2: rule__LabelStyleDefinition__Group__0__Impl rule__LabelStyleDefinition__Group__1
             {
-            pushFollow(FOLLOW_rule__LabelStyleDefinition__Group__0__Impl_in_rule__LabelStyleDefinition__Group__08114);
+            pushFollow(FOLLOW_rule__LabelStyleDefinition__Group__0__Impl_in_rule__LabelStyleDefinition__Group__08177);
             rule__LabelStyleDefinition__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__LabelStyleDefinition__Group__1_in_rule__LabelStyleDefinition__Group__08117);
+            pushFollow(FOLLOW_rule__LabelStyleDefinition__Group__1_in_rule__LabelStyleDefinition__Group__08180);
             rule__LabelStyleDefinition__Group__1();
 
             state._fsp--;
@@ -10877,20 +10973,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LabelStyleDefinition__Group__0__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3983:1: rule__LabelStyleDefinition__Group__0__Impl : ( 'label' ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4014:1: rule__LabelStyleDefinition__Group__0__Impl : ( 'label' ) ;
     public final void rule__LabelStyleDefinition__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3987:1: ( ( 'label' ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3988:1: ( 'label' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4018:1: ( ( 'label' ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4019:1: ( 'label' )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3988:1: ( 'label' )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:3989:1: 'label'
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4019:1: ( 'label' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4020:1: 'label'
             {
              before(grammarAccess.getLabelStyleDefinitionAccess().getLabelKeyword_0()); 
-            match(input,48,FOLLOW_48_in_rule__LabelStyleDefinition__Group__0__Impl8145); 
+            match(input,48,FOLLOW_48_in_rule__LabelStyleDefinition__Group__0__Impl8208); 
              after(grammarAccess.getLabelStyleDefinitionAccess().getLabelKeyword_0()); 
 
             }
@@ -10914,21 +11010,21 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LabelStyleDefinition__Group__1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4002:1: rule__LabelStyleDefinition__Group__1 : rule__LabelStyleDefinition__Group__1__Impl rule__LabelStyleDefinition__Group__2 ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4033:1: rule__LabelStyleDefinition__Group__1 : rule__LabelStyleDefinition__Group__1__Impl rule__LabelStyleDefinition__Group__2 ;
     public final void rule__LabelStyleDefinition__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4006:1: ( rule__LabelStyleDefinition__Group__1__Impl rule__LabelStyleDefinition__Group__2 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4007:2: rule__LabelStyleDefinition__Group__1__Impl rule__LabelStyleDefinition__Group__2
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4037:1: ( rule__LabelStyleDefinition__Group__1__Impl rule__LabelStyleDefinition__Group__2 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4038:2: rule__LabelStyleDefinition__Group__1__Impl rule__LabelStyleDefinition__Group__2
             {
-            pushFollow(FOLLOW_rule__LabelStyleDefinition__Group__1__Impl_in_rule__LabelStyleDefinition__Group__18176);
+            pushFollow(FOLLOW_rule__LabelStyleDefinition__Group__1__Impl_in_rule__LabelStyleDefinition__Group__18239);
             rule__LabelStyleDefinition__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__LabelStyleDefinition__Group__2_in_rule__LabelStyleDefinition__Group__18179);
+            pushFollow(FOLLOW_rule__LabelStyleDefinition__Group__2_in_rule__LabelStyleDefinition__Group__18242);
             rule__LabelStyleDefinition__Group__2();
 
             state._fsp--;
@@ -10952,31 +11048,31 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LabelStyleDefinition__Group__1__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4014:1: rule__LabelStyleDefinition__Group__1__Impl : ( ( rule__LabelStyleDefinition__ExpressionAssignment_1 )? ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4045:1: rule__LabelStyleDefinition__Group__1__Impl : ( ( rule__LabelStyleDefinition__ExpressionAssignment_1 )? ) ;
     public final void rule__LabelStyleDefinition__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4018:1: ( ( ( rule__LabelStyleDefinition__ExpressionAssignment_1 )? ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4019:1: ( ( rule__LabelStyleDefinition__ExpressionAssignment_1 )? )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4049:1: ( ( ( rule__LabelStyleDefinition__ExpressionAssignment_1 )? ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4050:1: ( ( rule__LabelStyleDefinition__ExpressionAssignment_1 )? )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4019:1: ( ( rule__LabelStyleDefinition__ExpressionAssignment_1 )? )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4020:1: ( rule__LabelStyleDefinition__ExpressionAssignment_1 )?
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4050:1: ( ( rule__LabelStyleDefinition__ExpressionAssignment_1 )? )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4051:1: ( rule__LabelStyleDefinition__ExpressionAssignment_1 )?
             {
              before(grammarAccess.getLabelStyleDefinitionAccess().getExpressionAssignment_1()); 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4021:1: ( rule__LabelStyleDefinition__ExpressionAssignment_1 )?
-            int alt33=2;
-            int LA33_0 = input.LA(1);
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4052:1: ( rule__LabelStyleDefinition__ExpressionAssignment_1 )?
+            int alt34=2;
+            int LA34_0 = input.LA(1);
 
-            if ( ((LA33_0>=64 && LA33_0<=66)) ) {
-                alt33=1;
+            if ( ((LA34_0>=64 && LA34_0<=66)) ) {
+                alt34=1;
             }
-            switch (alt33) {
+            switch (alt34) {
                 case 1 :
-                    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4021:2: rule__LabelStyleDefinition__ExpressionAssignment_1
+                    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4052:2: rule__LabelStyleDefinition__ExpressionAssignment_1
                     {
-                    pushFollow(FOLLOW_rule__LabelStyleDefinition__ExpressionAssignment_1_in_rule__LabelStyleDefinition__Group__1__Impl8206);
+                    pushFollow(FOLLOW_rule__LabelStyleDefinition__ExpressionAssignment_1_in_rule__LabelStyleDefinition__Group__1__Impl8269);
                     rule__LabelStyleDefinition__ExpressionAssignment_1();
 
                     state._fsp--;
@@ -11010,21 +11106,21 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LabelStyleDefinition__Group__2"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4031:1: rule__LabelStyleDefinition__Group__2 : rule__LabelStyleDefinition__Group__2__Impl rule__LabelStyleDefinition__Group__3 ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4062:1: rule__LabelStyleDefinition__Group__2 : rule__LabelStyleDefinition__Group__2__Impl rule__LabelStyleDefinition__Group__3 ;
     public final void rule__LabelStyleDefinition__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4035:1: ( rule__LabelStyleDefinition__Group__2__Impl rule__LabelStyleDefinition__Group__3 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4036:2: rule__LabelStyleDefinition__Group__2__Impl rule__LabelStyleDefinition__Group__3
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4066:1: ( rule__LabelStyleDefinition__Group__2__Impl rule__LabelStyleDefinition__Group__3 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4067:2: rule__LabelStyleDefinition__Group__2__Impl rule__LabelStyleDefinition__Group__3
             {
-            pushFollow(FOLLOW_rule__LabelStyleDefinition__Group__2__Impl_in_rule__LabelStyleDefinition__Group__28237);
+            pushFollow(FOLLOW_rule__LabelStyleDefinition__Group__2__Impl_in_rule__LabelStyleDefinition__Group__28300);
             rule__LabelStyleDefinition__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__LabelStyleDefinition__Group__3_in_rule__LabelStyleDefinition__Group__28240);
+            pushFollow(FOLLOW_rule__LabelStyleDefinition__Group__3_in_rule__LabelStyleDefinition__Group__28303);
             rule__LabelStyleDefinition__Group__3();
 
             state._fsp--;
@@ -11048,23 +11144,23 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LabelStyleDefinition__Group__2__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4043:1: rule__LabelStyleDefinition__Group__2__Impl : ( ( rule__LabelStyleDefinition__ColorAssignment_2 ) ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4074:1: rule__LabelStyleDefinition__Group__2__Impl : ( ( rule__LabelStyleDefinition__ColorAssignment_2 ) ) ;
     public final void rule__LabelStyleDefinition__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4047:1: ( ( ( rule__LabelStyleDefinition__ColorAssignment_2 ) ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4048:1: ( ( rule__LabelStyleDefinition__ColorAssignment_2 ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4078:1: ( ( ( rule__LabelStyleDefinition__ColorAssignment_2 ) ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4079:1: ( ( rule__LabelStyleDefinition__ColorAssignment_2 ) )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4048:1: ( ( rule__LabelStyleDefinition__ColorAssignment_2 ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4049:1: ( rule__LabelStyleDefinition__ColorAssignment_2 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4079:1: ( ( rule__LabelStyleDefinition__ColorAssignment_2 ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4080:1: ( rule__LabelStyleDefinition__ColorAssignment_2 )
             {
              before(grammarAccess.getLabelStyleDefinitionAccess().getColorAssignment_2()); 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4050:1: ( rule__LabelStyleDefinition__ColorAssignment_2 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4050:2: rule__LabelStyleDefinition__ColorAssignment_2
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4081:1: ( rule__LabelStyleDefinition__ColorAssignment_2 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4081:2: rule__LabelStyleDefinition__ColorAssignment_2
             {
-            pushFollow(FOLLOW_rule__LabelStyleDefinition__ColorAssignment_2_in_rule__LabelStyleDefinition__Group__2__Impl8267);
+            pushFollow(FOLLOW_rule__LabelStyleDefinition__ColorAssignment_2_in_rule__LabelStyleDefinition__Group__2__Impl8330);
             rule__LabelStyleDefinition__ColorAssignment_2();
 
             state._fsp--;
@@ -11095,21 +11191,21 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LabelStyleDefinition__Group__3"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4060:1: rule__LabelStyleDefinition__Group__3 : rule__LabelStyleDefinition__Group__3__Impl rule__LabelStyleDefinition__Group__4 ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4091:1: rule__LabelStyleDefinition__Group__3 : rule__LabelStyleDefinition__Group__3__Impl rule__LabelStyleDefinition__Group__4 ;
     public final void rule__LabelStyleDefinition__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4064:1: ( rule__LabelStyleDefinition__Group__3__Impl rule__LabelStyleDefinition__Group__4 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4065:2: rule__LabelStyleDefinition__Group__3__Impl rule__LabelStyleDefinition__Group__4
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4095:1: ( rule__LabelStyleDefinition__Group__3__Impl rule__LabelStyleDefinition__Group__4 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4096:2: rule__LabelStyleDefinition__Group__3__Impl rule__LabelStyleDefinition__Group__4
             {
-            pushFollow(FOLLOW_rule__LabelStyleDefinition__Group__3__Impl_in_rule__LabelStyleDefinition__Group__38297);
+            pushFollow(FOLLOW_rule__LabelStyleDefinition__Group__3__Impl_in_rule__LabelStyleDefinition__Group__38360);
             rule__LabelStyleDefinition__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__LabelStyleDefinition__Group__4_in_rule__LabelStyleDefinition__Group__38300);
+            pushFollow(FOLLOW_rule__LabelStyleDefinition__Group__4_in_rule__LabelStyleDefinition__Group__38363);
             rule__LabelStyleDefinition__Group__4();
 
             state._fsp--;
@@ -11133,31 +11229,31 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LabelStyleDefinition__Group__3__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4072:1: rule__LabelStyleDefinition__Group__3__Impl : ( ( rule__LabelStyleDefinition__Group_3__0 )? ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4103:1: rule__LabelStyleDefinition__Group__3__Impl : ( ( rule__LabelStyleDefinition__Group_3__0 )? ) ;
     public final void rule__LabelStyleDefinition__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4076:1: ( ( ( rule__LabelStyleDefinition__Group_3__0 )? ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4077:1: ( ( rule__LabelStyleDefinition__Group_3__0 )? )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4107:1: ( ( ( rule__LabelStyleDefinition__Group_3__0 )? ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4108:1: ( ( rule__LabelStyleDefinition__Group_3__0 )? )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4077:1: ( ( rule__LabelStyleDefinition__Group_3__0 )? )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4078:1: ( rule__LabelStyleDefinition__Group_3__0 )?
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4108:1: ( ( rule__LabelStyleDefinition__Group_3__0 )? )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4109:1: ( rule__LabelStyleDefinition__Group_3__0 )?
             {
              before(grammarAccess.getLabelStyleDefinitionAccess().getGroup_3()); 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4079:1: ( rule__LabelStyleDefinition__Group_3__0 )?
-            int alt34=2;
-            int LA34_0 = input.LA(1);
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4110:1: ( rule__LabelStyleDefinition__Group_3__0 )?
+            int alt35=2;
+            int LA35_0 = input.LA(1);
 
-            if ( (LA34_0==62) ) {
-                alt34=1;
+            if ( (LA35_0==62) ) {
+                alt35=1;
             }
-            switch (alt34) {
+            switch (alt35) {
                 case 1 :
-                    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4079:2: rule__LabelStyleDefinition__Group_3__0
+                    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4110:2: rule__LabelStyleDefinition__Group_3__0
                     {
-                    pushFollow(FOLLOW_rule__LabelStyleDefinition__Group_3__0_in_rule__LabelStyleDefinition__Group__3__Impl8327);
+                    pushFollow(FOLLOW_rule__LabelStyleDefinition__Group_3__0_in_rule__LabelStyleDefinition__Group__3__Impl8390);
                     rule__LabelStyleDefinition__Group_3__0();
 
                     state._fsp--;
@@ -11191,21 +11287,21 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LabelStyleDefinition__Group__4"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4089:1: rule__LabelStyleDefinition__Group__4 : rule__LabelStyleDefinition__Group__4__Impl rule__LabelStyleDefinition__Group__5 ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4120:1: rule__LabelStyleDefinition__Group__4 : rule__LabelStyleDefinition__Group__4__Impl rule__LabelStyleDefinition__Group__5 ;
     public final void rule__LabelStyleDefinition__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4093:1: ( rule__LabelStyleDefinition__Group__4__Impl rule__LabelStyleDefinition__Group__5 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4094:2: rule__LabelStyleDefinition__Group__4__Impl rule__LabelStyleDefinition__Group__5
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4124:1: ( rule__LabelStyleDefinition__Group__4__Impl rule__LabelStyleDefinition__Group__5 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4125:2: rule__LabelStyleDefinition__Group__4__Impl rule__LabelStyleDefinition__Group__5
             {
-            pushFollow(FOLLOW_rule__LabelStyleDefinition__Group__4__Impl_in_rule__LabelStyleDefinition__Group__48358);
+            pushFollow(FOLLOW_rule__LabelStyleDefinition__Group__4__Impl_in_rule__LabelStyleDefinition__Group__48421);
             rule__LabelStyleDefinition__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__LabelStyleDefinition__Group__5_in_rule__LabelStyleDefinition__Group__48361);
+            pushFollow(FOLLOW_rule__LabelStyleDefinition__Group__5_in_rule__LabelStyleDefinition__Group__48424);
             rule__LabelStyleDefinition__Group__5();
 
             state._fsp--;
@@ -11229,31 +11325,31 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LabelStyleDefinition__Group__4__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4101:1: rule__LabelStyleDefinition__Group__4__Impl : ( ( rule__LabelStyleDefinition__BoldAssignment_4 )? ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4132:1: rule__LabelStyleDefinition__Group__4__Impl : ( ( rule__LabelStyleDefinition__BoldAssignment_4 )? ) ;
     public final void rule__LabelStyleDefinition__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4105:1: ( ( ( rule__LabelStyleDefinition__BoldAssignment_4 )? ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4106:1: ( ( rule__LabelStyleDefinition__BoldAssignment_4 )? )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4136:1: ( ( ( rule__LabelStyleDefinition__BoldAssignment_4 )? ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4137:1: ( ( rule__LabelStyleDefinition__BoldAssignment_4 )? )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4106:1: ( ( rule__LabelStyleDefinition__BoldAssignment_4 )? )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4107:1: ( rule__LabelStyleDefinition__BoldAssignment_4 )?
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4137:1: ( ( rule__LabelStyleDefinition__BoldAssignment_4 )? )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4138:1: ( rule__LabelStyleDefinition__BoldAssignment_4 )?
             {
              before(grammarAccess.getLabelStyleDefinitionAccess().getBoldAssignment_4()); 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4108:1: ( rule__LabelStyleDefinition__BoldAssignment_4 )?
-            int alt35=2;
-            int LA35_0 = input.LA(1);
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4139:1: ( rule__LabelStyleDefinition__BoldAssignment_4 )?
+            int alt36=2;
+            int LA36_0 = input.LA(1);
 
-            if ( (LA35_0==70) ) {
-                alt35=1;
+            if ( (LA36_0==70) ) {
+                alt36=1;
             }
-            switch (alt35) {
+            switch (alt36) {
                 case 1 :
-                    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4108:2: rule__LabelStyleDefinition__BoldAssignment_4
+                    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4139:2: rule__LabelStyleDefinition__BoldAssignment_4
                     {
-                    pushFollow(FOLLOW_rule__LabelStyleDefinition__BoldAssignment_4_in_rule__LabelStyleDefinition__Group__4__Impl8388);
+                    pushFollow(FOLLOW_rule__LabelStyleDefinition__BoldAssignment_4_in_rule__LabelStyleDefinition__Group__4__Impl8451);
                     rule__LabelStyleDefinition__BoldAssignment_4();
 
                     state._fsp--;
@@ -11287,16 +11383,16 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LabelStyleDefinition__Group__5"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4118:1: rule__LabelStyleDefinition__Group__5 : rule__LabelStyleDefinition__Group__5__Impl ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4149:1: rule__LabelStyleDefinition__Group__5 : rule__LabelStyleDefinition__Group__5__Impl ;
     public final void rule__LabelStyleDefinition__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4122:1: ( rule__LabelStyleDefinition__Group__5__Impl )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4123:2: rule__LabelStyleDefinition__Group__5__Impl
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4153:1: ( rule__LabelStyleDefinition__Group__5__Impl )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4154:2: rule__LabelStyleDefinition__Group__5__Impl
             {
-            pushFollow(FOLLOW_rule__LabelStyleDefinition__Group__5__Impl_in_rule__LabelStyleDefinition__Group__58419);
+            pushFollow(FOLLOW_rule__LabelStyleDefinition__Group__5__Impl_in_rule__LabelStyleDefinition__Group__58482);
             rule__LabelStyleDefinition__Group__5__Impl();
 
             state._fsp--;
@@ -11320,31 +11416,31 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LabelStyleDefinition__Group__5__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4129:1: rule__LabelStyleDefinition__Group__5__Impl : ( ( rule__LabelStyleDefinition__ItalicAssignment_5 )? ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4160:1: rule__LabelStyleDefinition__Group__5__Impl : ( ( rule__LabelStyleDefinition__ItalicAssignment_5 )? ) ;
     public final void rule__LabelStyleDefinition__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4133:1: ( ( ( rule__LabelStyleDefinition__ItalicAssignment_5 )? ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4134:1: ( ( rule__LabelStyleDefinition__ItalicAssignment_5 )? )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4164:1: ( ( ( rule__LabelStyleDefinition__ItalicAssignment_5 )? ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4165:1: ( ( rule__LabelStyleDefinition__ItalicAssignment_5 )? )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4134:1: ( ( rule__LabelStyleDefinition__ItalicAssignment_5 )? )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4135:1: ( rule__LabelStyleDefinition__ItalicAssignment_5 )?
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4165:1: ( ( rule__LabelStyleDefinition__ItalicAssignment_5 )? )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4166:1: ( rule__LabelStyleDefinition__ItalicAssignment_5 )?
             {
              before(grammarAccess.getLabelStyleDefinitionAccess().getItalicAssignment_5()); 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4136:1: ( rule__LabelStyleDefinition__ItalicAssignment_5 )?
-            int alt36=2;
-            int LA36_0 = input.LA(1);
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4167:1: ( rule__LabelStyleDefinition__ItalicAssignment_5 )?
+            int alt37=2;
+            int LA37_0 = input.LA(1);
 
-            if ( (LA36_0==71) ) {
-                alt36=1;
+            if ( (LA37_0==71) ) {
+                alt37=1;
             }
-            switch (alt36) {
+            switch (alt37) {
                 case 1 :
-                    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4136:2: rule__LabelStyleDefinition__ItalicAssignment_5
+                    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4167:2: rule__LabelStyleDefinition__ItalicAssignment_5
                     {
-                    pushFollow(FOLLOW_rule__LabelStyleDefinition__ItalicAssignment_5_in_rule__LabelStyleDefinition__Group__5__Impl8446);
+                    pushFollow(FOLLOW_rule__LabelStyleDefinition__ItalicAssignment_5_in_rule__LabelStyleDefinition__Group__5__Impl8509);
                     rule__LabelStyleDefinition__ItalicAssignment_5();
 
                     state._fsp--;
@@ -11378,21 +11474,21 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LabelStyleDefinition__Group_3__0"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4158:1: rule__LabelStyleDefinition__Group_3__0 : rule__LabelStyleDefinition__Group_3__0__Impl rule__LabelStyleDefinition__Group_3__1 ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4189:1: rule__LabelStyleDefinition__Group_3__0 : rule__LabelStyleDefinition__Group_3__0__Impl rule__LabelStyleDefinition__Group_3__1 ;
     public final void rule__LabelStyleDefinition__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4162:1: ( rule__LabelStyleDefinition__Group_3__0__Impl rule__LabelStyleDefinition__Group_3__1 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4163:2: rule__LabelStyleDefinition__Group_3__0__Impl rule__LabelStyleDefinition__Group_3__1
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4193:1: ( rule__LabelStyleDefinition__Group_3__0__Impl rule__LabelStyleDefinition__Group_3__1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4194:2: rule__LabelStyleDefinition__Group_3__0__Impl rule__LabelStyleDefinition__Group_3__1
             {
-            pushFollow(FOLLOW_rule__LabelStyleDefinition__Group_3__0__Impl_in_rule__LabelStyleDefinition__Group_3__08489);
+            pushFollow(FOLLOW_rule__LabelStyleDefinition__Group_3__0__Impl_in_rule__LabelStyleDefinition__Group_3__08552);
             rule__LabelStyleDefinition__Group_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__LabelStyleDefinition__Group_3__1_in_rule__LabelStyleDefinition__Group_3__08492);
+            pushFollow(FOLLOW_rule__LabelStyleDefinition__Group_3__1_in_rule__LabelStyleDefinition__Group_3__08555);
             rule__LabelStyleDefinition__Group_3__1();
 
             state._fsp--;
@@ -11416,20 +11512,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LabelStyleDefinition__Group_3__0__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4170:1: rule__LabelStyleDefinition__Group_3__0__Impl : ( 'size' ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4201:1: rule__LabelStyleDefinition__Group_3__0__Impl : ( 'size' ) ;
     public final void rule__LabelStyleDefinition__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4174:1: ( ( 'size' ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4175:1: ( 'size' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4205:1: ( ( 'size' ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4206:1: ( 'size' )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4175:1: ( 'size' )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4176:1: 'size'
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4206:1: ( 'size' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4207:1: 'size'
             {
              before(grammarAccess.getLabelStyleDefinitionAccess().getSizeKeyword_3_0()); 
-            match(input,62,FOLLOW_62_in_rule__LabelStyleDefinition__Group_3__0__Impl8520); 
+            match(input,62,FOLLOW_62_in_rule__LabelStyleDefinition__Group_3__0__Impl8583); 
              after(grammarAccess.getLabelStyleDefinitionAccess().getSizeKeyword_3_0()); 
 
             }
@@ -11453,16 +11549,16 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LabelStyleDefinition__Group_3__1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4189:1: rule__LabelStyleDefinition__Group_3__1 : rule__LabelStyleDefinition__Group_3__1__Impl ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4220:1: rule__LabelStyleDefinition__Group_3__1 : rule__LabelStyleDefinition__Group_3__1__Impl ;
     public final void rule__LabelStyleDefinition__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4193:1: ( rule__LabelStyleDefinition__Group_3__1__Impl )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4194:2: rule__LabelStyleDefinition__Group_3__1__Impl
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4224:1: ( rule__LabelStyleDefinition__Group_3__1__Impl )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4225:2: rule__LabelStyleDefinition__Group_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__LabelStyleDefinition__Group_3__1__Impl_in_rule__LabelStyleDefinition__Group_3__18551);
+            pushFollow(FOLLOW_rule__LabelStyleDefinition__Group_3__1__Impl_in_rule__LabelStyleDefinition__Group_3__18614);
             rule__LabelStyleDefinition__Group_3__1__Impl();
 
             state._fsp--;
@@ -11486,23 +11582,23 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LabelStyleDefinition__Group_3__1__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4200:1: rule__LabelStyleDefinition__Group_3__1__Impl : ( ( rule__LabelStyleDefinition__SizeAssignment_3_1 ) ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4231:1: rule__LabelStyleDefinition__Group_3__1__Impl : ( ( rule__LabelStyleDefinition__SizeAssignment_3_1 ) ) ;
     public final void rule__LabelStyleDefinition__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4204:1: ( ( ( rule__LabelStyleDefinition__SizeAssignment_3_1 ) ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4205:1: ( ( rule__LabelStyleDefinition__SizeAssignment_3_1 ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4235:1: ( ( ( rule__LabelStyleDefinition__SizeAssignment_3_1 ) ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4236:1: ( ( rule__LabelStyleDefinition__SizeAssignment_3_1 ) )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4205:1: ( ( rule__LabelStyleDefinition__SizeAssignment_3_1 ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4206:1: ( rule__LabelStyleDefinition__SizeAssignment_3_1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4236:1: ( ( rule__LabelStyleDefinition__SizeAssignment_3_1 ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4237:1: ( rule__LabelStyleDefinition__SizeAssignment_3_1 )
             {
              before(grammarAccess.getLabelStyleDefinitionAccess().getSizeAssignment_3_1()); 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4207:1: ( rule__LabelStyleDefinition__SizeAssignment_3_1 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4207:2: rule__LabelStyleDefinition__SizeAssignment_3_1
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4238:1: ( rule__LabelStyleDefinition__SizeAssignment_3_1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4238:2: rule__LabelStyleDefinition__SizeAssignment_3_1
             {
-            pushFollow(FOLLOW_rule__LabelStyleDefinition__SizeAssignment_3_1_in_rule__LabelStyleDefinition__Group_3__1__Impl8578);
+            pushFollow(FOLLOW_rule__LabelStyleDefinition__SizeAssignment_3_1_in_rule__LabelStyleDefinition__Group_3__1__Impl8641);
             rule__LabelStyleDefinition__SizeAssignment_3_1();
 
             state._fsp--;
@@ -11533,21 +11629,21 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__BorderStyleDefinition__Group__0"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4221:1: rule__BorderStyleDefinition__Group__0 : rule__BorderStyleDefinition__Group__0__Impl rule__BorderStyleDefinition__Group__1 ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4252:1: rule__BorderStyleDefinition__Group__0 : rule__BorderStyleDefinition__Group__0__Impl rule__BorderStyleDefinition__Group__1 ;
     public final void rule__BorderStyleDefinition__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4225:1: ( rule__BorderStyleDefinition__Group__0__Impl rule__BorderStyleDefinition__Group__1 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4226:2: rule__BorderStyleDefinition__Group__0__Impl rule__BorderStyleDefinition__Group__1
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4256:1: ( rule__BorderStyleDefinition__Group__0__Impl rule__BorderStyleDefinition__Group__1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4257:2: rule__BorderStyleDefinition__Group__0__Impl rule__BorderStyleDefinition__Group__1
             {
-            pushFollow(FOLLOW_rule__BorderStyleDefinition__Group__0__Impl_in_rule__BorderStyleDefinition__Group__08612);
+            pushFollow(FOLLOW_rule__BorderStyleDefinition__Group__0__Impl_in_rule__BorderStyleDefinition__Group__08675);
             rule__BorderStyleDefinition__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BorderStyleDefinition__Group__1_in_rule__BorderStyleDefinition__Group__08615);
+            pushFollow(FOLLOW_rule__BorderStyleDefinition__Group__1_in_rule__BorderStyleDefinition__Group__08678);
             rule__BorderStyleDefinition__Group__1();
 
             state._fsp--;
@@ -11571,20 +11667,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__BorderStyleDefinition__Group__0__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4233:1: rule__BorderStyleDefinition__Group__0__Impl : ( 'border ' ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4264:1: rule__BorderStyleDefinition__Group__0__Impl : ( 'border ' ) ;
     public final void rule__BorderStyleDefinition__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4237:1: ( ( 'border ' ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4238:1: ( 'border ' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4268:1: ( ( 'border ' ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4269:1: ( 'border ' )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4238:1: ( 'border ' )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4239:1: 'border '
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4269:1: ( 'border ' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4270:1: 'border '
             {
              before(grammarAccess.getBorderStyleDefinitionAccess().getBorderKeyword_0()); 
-            match(input,63,FOLLOW_63_in_rule__BorderStyleDefinition__Group__0__Impl8643); 
+            match(input,63,FOLLOW_63_in_rule__BorderStyleDefinition__Group__0__Impl8706); 
              after(grammarAccess.getBorderStyleDefinitionAccess().getBorderKeyword_0()); 
 
             }
@@ -11608,21 +11704,21 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__BorderStyleDefinition__Group__1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4252:1: rule__BorderStyleDefinition__Group__1 : rule__BorderStyleDefinition__Group__1__Impl rule__BorderStyleDefinition__Group__2 ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4283:1: rule__BorderStyleDefinition__Group__1 : rule__BorderStyleDefinition__Group__1__Impl rule__BorderStyleDefinition__Group__2 ;
     public final void rule__BorderStyleDefinition__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4256:1: ( rule__BorderStyleDefinition__Group__1__Impl rule__BorderStyleDefinition__Group__2 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4257:2: rule__BorderStyleDefinition__Group__1__Impl rule__BorderStyleDefinition__Group__2
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4287:1: ( rule__BorderStyleDefinition__Group__1__Impl rule__BorderStyleDefinition__Group__2 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4288:2: rule__BorderStyleDefinition__Group__1__Impl rule__BorderStyleDefinition__Group__2
             {
-            pushFollow(FOLLOW_rule__BorderStyleDefinition__Group__1__Impl_in_rule__BorderStyleDefinition__Group__18674);
+            pushFollow(FOLLOW_rule__BorderStyleDefinition__Group__1__Impl_in_rule__BorderStyleDefinition__Group__18737);
             rule__BorderStyleDefinition__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BorderStyleDefinition__Group__2_in_rule__BorderStyleDefinition__Group__18677);
+            pushFollow(FOLLOW_rule__BorderStyleDefinition__Group__2_in_rule__BorderStyleDefinition__Group__18740);
             rule__BorderStyleDefinition__Group__2();
 
             state._fsp--;
@@ -11646,23 +11742,23 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__BorderStyleDefinition__Group__1__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4264:1: rule__BorderStyleDefinition__Group__1__Impl : ( ( rule__BorderStyleDefinition__ColorAssignment_1 ) ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4295:1: rule__BorderStyleDefinition__Group__1__Impl : ( ( rule__BorderStyleDefinition__ColorAssignment_1 ) ) ;
     public final void rule__BorderStyleDefinition__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4268:1: ( ( ( rule__BorderStyleDefinition__ColorAssignment_1 ) ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4269:1: ( ( rule__BorderStyleDefinition__ColorAssignment_1 ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4299:1: ( ( ( rule__BorderStyleDefinition__ColorAssignment_1 ) ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4300:1: ( ( rule__BorderStyleDefinition__ColorAssignment_1 ) )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4269:1: ( ( rule__BorderStyleDefinition__ColorAssignment_1 ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4270:1: ( rule__BorderStyleDefinition__ColorAssignment_1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4300:1: ( ( rule__BorderStyleDefinition__ColorAssignment_1 ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4301:1: ( rule__BorderStyleDefinition__ColorAssignment_1 )
             {
              before(grammarAccess.getBorderStyleDefinitionAccess().getColorAssignment_1()); 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4271:1: ( rule__BorderStyleDefinition__ColorAssignment_1 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4271:2: rule__BorderStyleDefinition__ColorAssignment_1
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4302:1: ( rule__BorderStyleDefinition__ColorAssignment_1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4302:2: rule__BorderStyleDefinition__ColorAssignment_1
             {
-            pushFollow(FOLLOW_rule__BorderStyleDefinition__ColorAssignment_1_in_rule__BorderStyleDefinition__Group__1__Impl8704);
+            pushFollow(FOLLOW_rule__BorderStyleDefinition__ColorAssignment_1_in_rule__BorderStyleDefinition__Group__1__Impl8767);
             rule__BorderStyleDefinition__ColorAssignment_1();
 
             state._fsp--;
@@ -11693,16 +11789,16 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__BorderStyleDefinition__Group__2"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4281:1: rule__BorderStyleDefinition__Group__2 : rule__BorderStyleDefinition__Group__2__Impl ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4312:1: rule__BorderStyleDefinition__Group__2 : rule__BorderStyleDefinition__Group__2__Impl ;
     public final void rule__BorderStyleDefinition__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4285:1: ( rule__BorderStyleDefinition__Group__2__Impl )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4286:2: rule__BorderStyleDefinition__Group__2__Impl
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4316:1: ( rule__BorderStyleDefinition__Group__2__Impl )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4317:2: rule__BorderStyleDefinition__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__BorderStyleDefinition__Group__2__Impl_in_rule__BorderStyleDefinition__Group__28734);
+            pushFollow(FOLLOW_rule__BorderStyleDefinition__Group__2__Impl_in_rule__BorderStyleDefinition__Group__28797);
             rule__BorderStyleDefinition__Group__2__Impl();
 
             state._fsp--;
@@ -11726,31 +11822,31 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__BorderStyleDefinition__Group__2__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4292:1: rule__BorderStyleDefinition__Group__2__Impl : ( ( rule__BorderStyleDefinition__Group_2__0 )? ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4323:1: rule__BorderStyleDefinition__Group__2__Impl : ( ( rule__BorderStyleDefinition__Group_2__0 )? ) ;
     public final void rule__BorderStyleDefinition__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4296:1: ( ( ( rule__BorderStyleDefinition__Group_2__0 )? ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4297:1: ( ( rule__BorderStyleDefinition__Group_2__0 )? )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4327:1: ( ( ( rule__BorderStyleDefinition__Group_2__0 )? ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4328:1: ( ( rule__BorderStyleDefinition__Group_2__0 )? )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4297:1: ( ( rule__BorderStyleDefinition__Group_2__0 )? )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4298:1: ( rule__BorderStyleDefinition__Group_2__0 )?
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4328:1: ( ( rule__BorderStyleDefinition__Group_2__0 )? )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4329:1: ( rule__BorderStyleDefinition__Group_2__0 )?
             {
              before(grammarAccess.getBorderStyleDefinitionAccess().getGroup_2()); 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4299:1: ( rule__BorderStyleDefinition__Group_2__0 )?
-            int alt37=2;
-            int LA37_0 = input.LA(1);
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4330:1: ( rule__BorderStyleDefinition__Group_2__0 )?
+            int alt38=2;
+            int LA38_0 = input.LA(1);
 
-            if ( (LA37_0==62) ) {
-                alt37=1;
+            if ( (LA38_0==62) ) {
+                alt38=1;
             }
-            switch (alt37) {
+            switch (alt38) {
                 case 1 :
-                    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4299:2: rule__BorderStyleDefinition__Group_2__0
+                    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4330:2: rule__BorderStyleDefinition__Group_2__0
                     {
-                    pushFollow(FOLLOW_rule__BorderStyleDefinition__Group_2__0_in_rule__BorderStyleDefinition__Group__2__Impl8761);
+                    pushFollow(FOLLOW_rule__BorderStyleDefinition__Group_2__0_in_rule__BorderStyleDefinition__Group__2__Impl8824);
                     rule__BorderStyleDefinition__Group_2__0();
 
                     state._fsp--;
@@ -11784,21 +11880,21 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__BorderStyleDefinition__Group_2__0"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4315:1: rule__BorderStyleDefinition__Group_2__0 : rule__BorderStyleDefinition__Group_2__0__Impl rule__BorderStyleDefinition__Group_2__1 ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4346:1: rule__BorderStyleDefinition__Group_2__0 : rule__BorderStyleDefinition__Group_2__0__Impl rule__BorderStyleDefinition__Group_2__1 ;
     public final void rule__BorderStyleDefinition__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4319:1: ( rule__BorderStyleDefinition__Group_2__0__Impl rule__BorderStyleDefinition__Group_2__1 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4320:2: rule__BorderStyleDefinition__Group_2__0__Impl rule__BorderStyleDefinition__Group_2__1
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4350:1: ( rule__BorderStyleDefinition__Group_2__0__Impl rule__BorderStyleDefinition__Group_2__1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4351:2: rule__BorderStyleDefinition__Group_2__0__Impl rule__BorderStyleDefinition__Group_2__1
             {
-            pushFollow(FOLLOW_rule__BorderStyleDefinition__Group_2__0__Impl_in_rule__BorderStyleDefinition__Group_2__08798);
+            pushFollow(FOLLOW_rule__BorderStyleDefinition__Group_2__0__Impl_in_rule__BorderStyleDefinition__Group_2__08861);
             rule__BorderStyleDefinition__Group_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BorderStyleDefinition__Group_2__1_in_rule__BorderStyleDefinition__Group_2__08801);
+            pushFollow(FOLLOW_rule__BorderStyleDefinition__Group_2__1_in_rule__BorderStyleDefinition__Group_2__08864);
             rule__BorderStyleDefinition__Group_2__1();
 
             state._fsp--;
@@ -11822,20 +11918,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__BorderStyleDefinition__Group_2__0__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4327:1: rule__BorderStyleDefinition__Group_2__0__Impl : ( 'size' ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4358:1: rule__BorderStyleDefinition__Group_2__0__Impl : ( 'size' ) ;
     public final void rule__BorderStyleDefinition__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4331:1: ( ( 'size' ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4332:1: ( 'size' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4362:1: ( ( 'size' ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4363:1: ( 'size' )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4332:1: ( 'size' )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4333:1: 'size'
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4363:1: ( 'size' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4364:1: 'size'
             {
              before(grammarAccess.getBorderStyleDefinitionAccess().getSizeKeyword_2_0()); 
-            match(input,62,FOLLOW_62_in_rule__BorderStyleDefinition__Group_2__0__Impl8829); 
+            match(input,62,FOLLOW_62_in_rule__BorderStyleDefinition__Group_2__0__Impl8892); 
              after(grammarAccess.getBorderStyleDefinitionAccess().getSizeKeyword_2_0()); 
 
             }
@@ -11859,16 +11955,16 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__BorderStyleDefinition__Group_2__1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4346:1: rule__BorderStyleDefinition__Group_2__1 : rule__BorderStyleDefinition__Group_2__1__Impl ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4377:1: rule__BorderStyleDefinition__Group_2__1 : rule__BorderStyleDefinition__Group_2__1__Impl ;
     public final void rule__BorderStyleDefinition__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4350:1: ( rule__BorderStyleDefinition__Group_2__1__Impl )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4351:2: rule__BorderStyleDefinition__Group_2__1__Impl
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4381:1: ( rule__BorderStyleDefinition__Group_2__1__Impl )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4382:2: rule__BorderStyleDefinition__Group_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__BorderStyleDefinition__Group_2__1__Impl_in_rule__BorderStyleDefinition__Group_2__18860);
+            pushFollow(FOLLOW_rule__BorderStyleDefinition__Group_2__1__Impl_in_rule__BorderStyleDefinition__Group_2__18923);
             rule__BorderStyleDefinition__Group_2__1__Impl();
 
             state._fsp--;
@@ -11892,23 +11988,23 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__BorderStyleDefinition__Group_2__1__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4357:1: rule__BorderStyleDefinition__Group_2__1__Impl : ( ( rule__BorderStyleDefinition__SizeAssignment_2_1 ) ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4388:1: rule__BorderStyleDefinition__Group_2__1__Impl : ( ( rule__BorderStyleDefinition__SizeAssignment_2_1 ) ) ;
     public final void rule__BorderStyleDefinition__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4361:1: ( ( ( rule__BorderStyleDefinition__SizeAssignment_2_1 ) ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4362:1: ( ( rule__BorderStyleDefinition__SizeAssignment_2_1 ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4392:1: ( ( ( rule__BorderStyleDefinition__SizeAssignment_2_1 ) ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4393:1: ( ( rule__BorderStyleDefinition__SizeAssignment_2_1 ) )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4362:1: ( ( rule__BorderStyleDefinition__SizeAssignment_2_1 ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4363:1: ( rule__BorderStyleDefinition__SizeAssignment_2_1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4393:1: ( ( rule__BorderStyleDefinition__SizeAssignment_2_1 ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4394:1: ( rule__BorderStyleDefinition__SizeAssignment_2_1 )
             {
              before(grammarAccess.getBorderStyleDefinitionAccess().getSizeAssignment_2_1()); 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4364:1: ( rule__BorderStyleDefinition__SizeAssignment_2_1 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4364:2: rule__BorderStyleDefinition__SizeAssignment_2_1
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4395:1: ( rule__BorderStyleDefinition__SizeAssignment_2_1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4395:2: rule__BorderStyleDefinition__SizeAssignment_2_1
             {
-            pushFollow(FOLLOW_rule__BorderStyleDefinition__SizeAssignment_2_1_in_rule__BorderStyleDefinition__Group_2__1__Impl8887);
+            pushFollow(FOLLOW_rule__BorderStyleDefinition__SizeAssignment_2_1_in_rule__BorderStyleDefinition__Group_2__1__Impl8950);
             rule__BorderStyleDefinition__SizeAssignment_2_1();
 
             state._fsp--;
@@ -11939,21 +12035,21 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__AcceleoExpression__Group__0"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4378:1: rule__AcceleoExpression__Group__0 : rule__AcceleoExpression__Group__0__Impl rule__AcceleoExpression__Group__1 ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4409:1: rule__AcceleoExpression__Group__0 : rule__AcceleoExpression__Group__0__Impl rule__AcceleoExpression__Group__1 ;
     public final void rule__AcceleoExpression__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4382:1: ( rule__AcceleoExpression__Group__0__Impl rule__AcceleoExpression__Group__1 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4383:2: rule__AcceleoExpression__Group__0__Impl rule__AcceleoExpression__Group__1
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4413:1: ( rule__AcceleoExpression__Group__0__Impl rule__AcceleoExpression__Group__1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4414:2: rule__AcceleoExpression__Group__0__Impl rule__AcceleoExpression__Group__1
             {
-            pushFollow(FOLLOW_rule__AcceleoExpression__Group__0__Impl_in_rule__AcceleoExpression__Group__08921);
+            pushFollow(FOLLOW_rule__AcceleoExpression__Group__0__Impl_in_rule__AcceleoExpression__Group__08984);
             rule__AcceleoExpression__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__AcceleoExpression__Group__1_in_rule__AcceleoExpression__Group__08924);
+            pushFollow(FOLLOW_rule__AcceleoExpression__Group__1_in_rule__AcceleoExpression__Group__08987);
             rule__AcceleoExpression__Group__1();
 
             state._fsp--;
@@ -11977,20 +12073,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__AcceleoExpression__Group__0__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4390:1: rule__AcceleoExpression__Group__0__Impl : ( 'acc:' ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4421:1: rule__AcceleoExpression__Group__0__Impl : ( 'acc:' ) ;
     public final void rule__AcceleoExpression__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4394:1: ( ( 'acc:' ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4395:1: ( 'acc:' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4425:1: ( ( 'acc:' ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4426:1: ( 'acc:' )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4395:1: ( 'acc:' )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4396:1: 'acc:'
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4426:1: ( 'acc:' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4427:1: 'acc:'
             {
              before(grammarAccess.getAcceleoExpressionAccess().getAccKeyword_0()); 
-            match(input,64,FOLLOW_64_in_rule__AcceleoExpression__Group__0__Impl8952); 
+            match(input,64,FOLLOW_64_in_rule__AcceleoExpression__Group__0__Impl9015); 
              after(grammarAccess.getAcceleoExpressionAccess().getAccKeyword_0()); 
 
             }
@@ -12014,16 +12110,16 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__AcceleoExpression__Group__1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4409:1: rule__AcceleoExpression__Group__1 : rule__AcceleoExpression__Group__1__Impl ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4440:1: rule__AcceleoExpression__Group__1 : rule__AcceleoExpression__Group__1__Impl ;
     public final void rule__AcceleoExpression__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4413:1: ( rule__AcceleoExpression__Group__1__Impl )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4414:2: rule__AcceleoExpression__Group__1__Impl
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4444:1: ( rule__AcceleoExpression__Group__1__Impl )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4445:2: rule__AcceleoExpression__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__AcceleoExpression__Group__1__Impl_in_rule__AcceleoExpression__Group__18983);
+            pushFollow(FOLLOW_rule__AcceleoExpression__Group__1__Impl_in_rule__AcceleoExpression__Group__19046);
             rule__AcceleoExpression__Group__1__Impl();
 
             state._fsp--;
@@ -12047,23 +12143,23 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__AcceleoExpression__Group__1__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4420:1: rule__AcceleoExpression__Group__1__Impl : ( ( rule__AcceleoExpression__ValueAssignment_1 ) ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4451:1: rule__AcceleoExpression__Group__1__Impl : ( ( rule__AcceleoExpression__ValueAssignment_1 ) ) ;
     public final void rule__AcceleoExpression__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4424:1: ( ( ( rule__AcceleoExpression__ValueAssignment_1 ) ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4425:1: ( ( rule__AcceleoExpression__ValueAssignment_1 ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4455:1: ( ( ( rule__AcceleoExpression__ValueAssignment_1 ) ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4456:1: ( ( rule__AcceleoExpression__ValueAssignment_1 ) )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4425:1: ( ( rule__AcceleoExpression__ValueAssignment_1 ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4426:1: ( rule__AcceleoExpression__ValueAssignment_1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4456:1: ( ( rule__AcceleoExpression__ValueAssignment_1 ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4457:1: ( rule__AcceleoExpression__ValueAssignment_1 )
             {
              before(grammarAccess.getAcceleoExpressionAccess().getValueAssignment_1()); 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4427:1: ( rule__AcceleoExpression__ValueAssignment_1 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4427:2: rule__AcceleoExpression__ValueAssignment_1
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4458:1: ( rule__AcceleoExpression__ValueAssignment_1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4458:2: rule__AcceleoExpression__ValueAssignment_1
             {
-            pushFollow(FOLLOW_rule__AcceleoExpression__ValueAssignment_1_in_rule__AcceleoExpression__Group__1__Impl9010);
+            pushFollow(FOLLOW_rule__AcceleoExpression__ValueAssignment_1_in_rule__AcceleoExpression__Group__1__Impl9073);
             rule__AcceleoExpression__ValueAssignment_1();
 
             state._fsp--;
@@ -12094,21 +12190,21 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__VarRef__Group__0"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4441:1: rule__VarRef__Group__0 : rule__VarRef__Group__0__Impl rule__VarRef__Group__1 ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4472:1: rule__VarRef__Group__0 : rule__VarRef__Group__0__Impl rule__VarRef__Group__1 ;
     public final void rule__VarRef__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4445:1: ( rule__VarRef__Group__0__Impl rule__VarRef__Group__1 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4446:2: rule__VarRef__Group__0__Impl rule__VarRef__Group__1
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4476:1: ( rule__VarRef__Group__0__Impl rule__VarRef__Group__1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4477:2: rule__VarRef__Group__0__Impl rule__VarRef__Group__1
             {
-            pushFollow(FOLLOW_rule__VarRef__Group__0__Impl_in_rule__VarRef__Group__09044);
+            pushFollow(FOLLOW_rule__VarRef__Group__0__Impl_in_rule__VarRef__Group__09107);
             rule__VarRef__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__VarRef__Group__1_in_rule__VarRef__Group__09047);
+            pushFollow(FOLLOW_rule__VarRef__Group__1_in_rule__VarRef__Group__09110);
             rule__VarRef__Group__1();
 
             state._fsp--;
@@ -12132,20 +12228,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__VarRef__Group__0__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4453:1: rule__VarRef__Group__0__Impl : ( 'var:' ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4484:1: rule__VarRef__Group__0__Impl : ( 'var:' ) ;
     public final void rule__VarRef__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4457:1: ( ( 'var:' ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4458:1: ( 'var:' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4488:1: ( ( 'var:' ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4489:1: ( 'var:' )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4458:1: ( 'var:' )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4459:1: 'var:'
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4489:1: ( 'var:' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4490:1: 'var:'
             {
              before(grammarAccess.getVarRefAccess().getVarKeyword_0()); 
-            match(input,65,FOLLOW_65_in_rule__VarRef__Group__0__Impl9075); 
+            match(input,65,FOLLOW_65_in_rule__VarRef__Group__0__Impl9138); 
              after(grammarAccess.getVarRefAccess().getVarKeyword_0()); 
 
             }
@@ -12169,16 +12265,16 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__VarRef__Group__1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4472:1: rule__VarRef__Group__1 : rule__VarRef__Group__1__Impl ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4503:1: rule__VarRef__Group__1 : rule__VarRef__Group__1__Impl ;
     public final void rule__VarRef__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4476:1: ( rule__VarRef__Group__1__Impl )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4477:2: rule__VarRef__Group__1__Impl
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4507:1: ( rule__VarRef__Group__1__Impl )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4508:2: rule__VarRef__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__VarRef__Group__1__Impl_in_rule__VarRef__Group__19106);
+            pushFollow(FOLLOW_rule__VarRef__Group__1__Impl_in_rule__VarRef__Group__19169);
             rule__VarRef__Group__1__Impl();
 
             state._fsp--;
@@ -12202,23 +12298,23 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__VarRef__Group__1__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4483:1: rule__VarRef__Group__1__Impl : ( ( rule__VarRef__ValueAssignment_1 ) ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4514:1: rule__VarRef__Group__1__Impl : ( ( rule__VarRef__ValueAssignment_1 ) ) ;
     public final void rule__VarRef__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4487:1: ( ( ( rule__VarRef__ValueAssignment_1 ) ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4488:1: ( ( rule__VarRef__ValueAssignment_1 ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4518:1: ( ( ( rule__VarRef__ValueAssignment_1 ) ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4519:1: ( ( rule__VarRef__ValueAssignment_1 ) )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4488:1: ( ( rule__VarRef__ValueAssignment_1 ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4489:1: ( rule__VarRef__ValueAssignment_1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4519:1: ( ( rule__VarRef__ValueAssignment_1 ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4520:1: ( rule__VarRef__ValueAssignment_1 )
             {
              before(grammarAccess.getVarRefAccess().getValueAssignment_1()); 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4490:1: ( rule__VarRef__ValueAssignment_1 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4490:2: rule__VarRef__ValueAssignment_1
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4521:1: ( rule__VarRef__ValueAssignment_1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4521:2: rule__VarRef__ValueAssignment_1
             {
-            pushFollow(FOLLOW_rule__VarRef__ValueAssignment_1_in_rule__VarRef__Group__1__Impl9133);
+            pushFollow(FOLLOW_rule__VarRef__ValueAssignment_1_in_rule__VarRef__Group__1__Impl9196);
             rule__VarRef__ValueAssignment_1();
 
             state._fsp--;
@@ -12249,21 +12345,21 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__FeatureRef__Group__0"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4504:1: rule__FeatureRef__Group__0 : rule__FeatureRef__Group__0__Impl rule__FeatureRef__Group__1 ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4535:1: rule__FeatureRef__Group__0 : rule__FeatureRef__Group__0__Impl rule__FeatureRef__Group__1 ;
     public final void rule__FeatureRef__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4508:1: ( rule__FeatureRef__Group__0__Impl rule__FeatureRef__Group__1 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4509:2: rule__FeatureRef__Group__0__Impl rule__FeatureRef__Group__1
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4539:1: ( rule__FeatureRef__Group__0__Impl rule__FeatureRef__Group__1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4540:2: rule__FeatureRef__Group__0__Impl rule__FeatureRef__Group__1
             {
-            pushFollow(FOLLOW_rule__FeatureRef__Group__0__Impl_in_rule__FeatureRef__Group__09167);
+            pushFollow(FOLLOW_rule__FeatureRef__Group__0__Impl_in_rule__FeatureRef__Group__09230);
             rule__FeatureRef__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__FeatureRef__Group__1_in_rule__FeatureRef__Group__09170);
+            pushFollow(FOLLOW_rule__FeatureRef__Group__1_in_rule__FeatureRef__Group__09233);
             rule__FeatureRef__Group__1();
 
             state._fsp--;
@@ -12287,20 +12383,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__FeatureRef__Group__0__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4516:1: rule__FeatureRef__Group__0__Impl : ( 'feature:' ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4547:1: rule__FeatureRef__Group__0__Impl : ( 'feature:' ) ;
     public final void rule__FeatureRef__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4520:1: ( ( 'feature:' ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4521:1: ( 'feature:' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4551:1: ( ( 'feature:' ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4552:1: ( 'feature:' )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4521:1: ( 'feature:' )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4522:1: 'feature:'
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4552:1: ( 'feature:' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4553:1: 'feature:'
             {
              before(grammarAccess.getFeatureRefAccess().getFeatureKeyword_0()); 
-            match(input,66,FOLLOW_66_in_rule__FeatureRef__Group__0__Impl9198); 
+            match(input,66,FOLLOW_66_in_rule__FeatureRef__Group__0__Impl9261); 
              after(grammarAccess.getFeatureRefAccess().getFeatureKeyword_0()); 
 
             }
@@ -12324,16 +12420,16 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__FeatureRef__Group__1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4535:1: rule__FeatureRef__Group__1 : rule__FeatureRef__Group__1__Impl ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4566:1: rule__FeatureRef__Group__1 : rule__FeatureRef__Group__1__Impl ;
     public final void rule__FeatureRef__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4539:1: ( rule__FeatureRef__Group__1__Impl )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4540:2: rule__FeatureRef__Group__1__Impl
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4570:1: ( rule__FeatureRef__Group__1__Impl )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4571:2: rule__FeatureRef__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__FeatureRef__Group__1__Impl_in_rule__FeatureRef__Group__19229);
+            pushFollow(FOLLOW_rule__FeatureRef__Group__1__Impl_in_rule__FeatureRef__Group__19292);
             rule__FeatureRef__Group__1__Impl();
 
             state._fsp--;
@@ -12357,23 +12453,23 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__FeatureRef__Group__1__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4546:1: rule__FeatureRef__Group__1__Impl : ( ( rule__FeatureRef__ValueAssignment_1 ) ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4577:1: rule__FeatureRef__Group__1__Impl : ( ( rule__FeatureRef__ValueAssignment_1 ) ) ;
     public final void rule__FeatureRef__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4550:1: ( ( ( rule__FeatureRef__ValueAssignment_1 ) ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4551:1: ( ( rule__FeatureRef__ValueAssignment_1 ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4581:1: ( ( ( rule__FeatureRef__ValueAssignment_1 ) ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4582:1: ( ( rule__FeatureRef__ValueAssignment_1 ) )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4551:1: ( ( rule__FeatureRef__ValueAssignment_1 ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4552:1: ( rule__FeatureRef__ValueAssignment_1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4582:1: ( ( rule__FeatureRef__ValueAssignment_1 ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4583:1: ( rule__FeatureRef__ValueAssignment_1 )
             {
              before(grammarAccess.getFeatureRefAccess().getValueAssignment_1()); 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4553:1: ( rule__FeatureRef__ValueAssignment_1 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4553:2: rule__FeatureRef__ValueAssignment_1
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4584:1: ( rule__FeatureRef__ValueAssignment_1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4584:2: rule__FeatureRef__ValueAssignment_1
             {
-            pushFollow(FOLLOW_rule__FeatureRef__ValueAssignment_1_in_rule__FeatureRef__Group__1__Impl9256);
+            pushFollow(FOLLOW_rule__FeatureRef__ValueAssignment_1_in_rule__FeatureRef__Group__1__Impl9319);
             rule__FeatureRef__ValueAssignment_1();
 
             state._fsp--;
@@ -12404,21 +12500,21 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__MetamodelRef__Group__0"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4567:1: rule__MetamodelRef__Group__0 : rule__MetamodelRef__Group__0__Impl rule__MetamodelRef__Group__1 ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4598:1: rule__MetamodelRef__Group__0 : rule__MetamodelRef__Group__0__Impl rule__MetamodelRef__Group__1 ;
     public final void rule__MetamodelRef__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4571:1: ( rule__MetamodelRef__Group__0__Impl rule__MetamodelRef__Group__1 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4572:2: rule__MetamodelRef__Group__0__Impl rule__MetamodelRef__Group__1
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4602:1: ( rule__MetamodelRef__Group__0__Impl rule__MetamodelRef__Group__1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4603:2: rule__MetamodelRef__Group__0__Impl rule__MetamodelRef__Group__1
             {
-            pushFollow(FOLLOW_rule__MetamodelRef__Group__0__Impl_in_rule__MetamodelRef__Group__09290);
+            pushFollow(FOLLOW_rule__MetamodelRef__Group__0__Impl_in_rule__MetamodelRef__Group__09353);
             rule__MetamodelRef__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__MetamodelRef__Group__1_in_rule__MetamodelRef__Group__09293);
+            pushFollow(FOLLOW_rule__MetamodelRef__Group__1_in_rule__MetamodelRef__Group__09356);
             rule__MetamodelRef__Group__1();
 
             state._fsp--;
@@ -12442,20 +12538,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__MetamodelRef__Group__0__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4579:1: rule__MetamodelRef__Group__0__Impl : ( 'use' ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4610:1: rule__MetamodelRef__Group__0__Impl : ( 'use' ) ;
     public final void rule__MetamodelRef__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4583:1: ( ( 'use' ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4584:1: ( 'use' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4614:1: ( ( 'use' ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4615:1: ( 'use' )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4584:1: ( 'use' )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4585:1: 'use'
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4615:1: ( 'use' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4616:1: 'use'
             {
              before(grammarAccess.getMetamodelRefAccess().getUseKeyword_0()); 
-            match(input,67,FOLLOW_67_in_rule__MetamodelRef__Group__0__Impl9321); 
+            match(input,67,FOLLOW_67_in_rule__MetamodelRef__Group__0__Impl9384); 
              after(grammarAccess.getMetamodelRefAccess().getUseKeyword_0()); 
 
             }
@@ -12479,16 +12575,16 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__MetamodelRef__Group__1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4598:1: rule__MetamodelRef__Group__1 : rule__MetamodelRef__Group__1__Impl ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4629:1: rule__MetamodelRef__Group__1 : rule__MetamodelRef__Group__1__Impl ;
     public final void rule__MetamodelRef__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4602:1: ( rule__MetamodelRef__Group__1__Impl )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4603:2: rule__MetamodelRef__Group__1__Impl
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4633:1: ( rule__MetamodelRef__Group__1__Impl )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4634:2: rule__MetamodelRef__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__MetamodelRef__Group__1__Impl_in_rule__MetamodelRef__Group__19352);
+            pushFollow(FOLLOW_rule__MetamodelRef__Group__1__Impl_in_rule__MetamodelRef__Group__19415);
             rule__MetamodelRef__Group__1__Impl();
 
             state._fsp--;
@@ -12512,23 +12608,23 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__MetamodelRef__Group__1__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4609:1: rule__MetamodelRef__Group__1__Impl : ( ( rule__MetamodelRef__MetamodelAssignment_1 ) ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4640:1: rule__MetamodelRef__Group__1__Impl : ( ( rule__MetamodelRef__MetamodelAssignment_1 ) ) ;
     public final void rule__MetamodelRef__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4613:1: ( ( ( rule__MetamodelRef__MetamodelAssignment_1 ) ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4614:1: ( ( rule__MetamodelRef__MetamodelAssignment_1 ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4644:1: ( ( ( rule__MetamodelRef__MetamodelAssignment_1 ) ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4645:1: ( ( rule__MetamodelRef__MetamodelAssignment_1 ) )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4614:1: ( ( rule__MetamodelRef__MetamodelAssignment_1 ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4615:1: ( rule__MetamodelRef__MetamodelAssignment_1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4645:1: ( ( rule__MetamodelRef__MetamodelAssignment_1 ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4646:1: ( rule__MetamodelRef__MetamodelAssignment_1 )
             {
              before(grammarAccess.getMetamodelRefAccess().getMetamodelAssignment_1()); 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4616:1: ( rule__MetamodelRef__MetamodelAssignment_1 )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4616:2: rule__MetamodelRef__MetamodelAssignment_1
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4647:1: ( rule__MetamodelRef__MetamodelAssignment_1 )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4647:2: rule__MetamodelRef__MetamodelAssignment_1
             {
-            pushFollow(FOLLOW_rule__MetamodelRef__MetamodelAssignment_1_in_rule__MetamodelRef__Group__1__Impl9379);
+            pushFollow(FOLLOW_rule__MetamodelRef__MetamodelAssignment_1_in_rule__MetamodelRef__Group__1__Impl9442);
             rule__MetamodelRef__MetamodelAssignment_1();
 
             state._fsp--;
@@ -12559,20 +12655,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SPrototyper__NameAssignment_1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4631:1: rule__SPrototyper__NameAssignment_1 : ( RULE_ID ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4662:1: rule__SPrototyper__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__SPrototyper__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4635:1: ( ( RULE_ID ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4636:1: ( RULE_ID )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4666:1: ( ( RULE_ID ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4667:1: ( RULE_ID )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4636:1: ( RULE_ID )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4637:1: RULE_ID
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4667:1: ( RULE_ID )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4668:1: RULE_ID
             {
              before(grammarAccess.getSPrototyperAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SPrototyper__NameAssignment_19418); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SPrototyper__NameAssignment_19481); 
              after(grammarAccess.getSPrototyperAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -12596,20 +12692,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SPrototyper__QualifierAssignment_3_1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4646:1: rule__SPrototyper__QualifierAssignment_3_1 : ( RULE_STRING ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4677:1: rule__SPrototyper__QualifierAssignment_3_1 : ( RULE_STRING ) ;
     public final void rule__SPrototyper__QualifierAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4650:1: ( ( RULE_STRING ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4651:1: ( RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4681:1: ( ( RULE_STRING ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4682:1: ( RULE_STRING )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4651:1: ( RULE_STRING )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4652:1: RULE_STRING
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4682:1: ( RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4683:1: RULE_STRING
             {
              before(grammarAccess.getSPrototyperAccess().getQualifierSTRINGTerminalRuleCall_3_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__SPrototyper__QualifierAssignment_3_19449); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__SPrototyper__QualifierAssignment_3_19512); 
              after(grammarAccess.getSPrototyperAccess().getQualifierSTRINGTerminalRuleCall_3_1_0()); 
 
             }
@@ -12633,20 +12729,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SPrototyper__ViewpointsAssignment_4"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4661:1: rule__SPrototyper__ViewpointsAssignment_4 : ( ruleSPViewpoint ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4692:1: rule__SPrototyper__ViewpointsAssignment_4 : ( ruleSPViewpoint ) ;
     public final void rule__SPrototyper__ViewpointsAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4665:1: ( ( ruleSPViewpoint ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4666:1: ( ruleSPViewpoint )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4696:1: ( ( ruleSPViewpoint ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4697:1: ( ruleSPViewpoint )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4666:1: ( ruleSPViewpoint )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4667:1: ruleSPViewpoint
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4697:1: ( ruleSPViewpoint )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4698:1: ruleSPViewpoint
             {
              before(grammarAccess.getSPrototyperAccess().getViewpointsSPViewpointParserRuleCall_4_0()); 
-            pushFollow(FOLLOW_ruleSPViewpoint_in_rule__SPrototyper__ViewpointsAssignment_49480);
+            pushFollow(FOLLOW_ruleSPViewpoint_in_rule__SPrototyper__ViewpointsAssignment_49543);
             ruleSPViewpoint();
 
             state._fsp--;
@@ -12674,20 +12770,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SPViewpoint__NameAssignment_1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4676:1: rule__SPViewpoint__NameAssignment_1 : ( RULE_ID ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4707:1: rule__SPViewpoint__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__SPViewpoint__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4680:1: ( ( RULE_ID ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4681:1: ( RULE_ID )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4711:1: ( ( RULE_ID ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4712:1: ( RULE_ID )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4681:1: ( RULE_ID )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4682:1: RULE_ID
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4712:1: ( RULE_ID )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4713:1: RULE_ID
             {
              before(grammarAccess.getSPViewpointAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SPViewpoint__NameAssignment_19511); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SPViewpoint__NameAssignment_19574); 
              after(grammarAccess.getSPViewpointAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -12711,20 +12807,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SPViewpoint__ShortcutAssignment_3_1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4691:1: rule__SPViewpoint__ShortcutAssignment_3_1 : ( RULE_STRING ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4722:1: rule__SPViewpoint__ShortcutAssignment_3_1 : ( RULE_STRING ) ;
     public final void rule__SPViewpoint__ShortcutAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4695:1: ( ( RULE_STRING ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4696:1: ( RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4726:1: ( ( RULE_STRING ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4727:1: ( RULE_STRING )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4696:1: ( RULE_STRING )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4697:1: RULE_STRING
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4727:1: ( RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4728:1: RULE_STRING
             {
              before(grammarAccess.getSPViewpointAccess().getShortcutSTRINGTerminalRuleCall_3_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__SPViewpoint__ShortcutAssignment_3_19542); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__SPViewpoint__ShortcutAssignment_3_19605); 
              after(grammarAccess.getSPViewpointAccess().getShortcutSTRINGTerminalRuleCall_3_1_0()); 
 
             }
@@ -12748,20 +12844,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SPViewpoint__ExtensionAssignment_4_1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4706:1: rule__SPViewpoint__ExtensionAssignment_4_1 : ( RULE_STRING ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4737:1: rule__SPViewpoint__ExtensionAssignment_4_1 : ( RULE_STRING ) ;
     public final void rule__SPViewpoint__ExtensionAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4710:1: ( ( RULE_STRING ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4711:1: ( RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4741:1: ( ( RULE_STRING ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4742:1: ( RULE_STRING )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4711:1: ( RULE_STRING )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4712:1: RULE_STRING
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4742:1: ( RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4743:1: RULE_STRING
             {
              before(grammarAccess.getSPViewpointAccess().getExtensionSTRINGTerminalRuleCall_4_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__SPViewpoint__ExtensionAssignment_4_19573); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__SPViewpoint__ExtensionAssignment_4_19636); 
              after(grammarAccess.getSPViewpointAccess().getExtensionSTRINGTerminalRuleCall_4_1_0()); 
 
             }
@@ -12785,20 +12881,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SPViewpoint__RepresentationsAssignment_5"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4721:1: rule__SPViewpoint__RepresentationsAssignment_5 : ( ruleSPRepresentation ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4752:1: rule__SPViewpoint__RepresentationsAssignment_5 : ( ruleSPRepresentation ) ;
     public final void rule__SPViewpoint__RepresentationsAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4725:1: ( ( ruleSPRepresentation ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4726:1: ( ruleSPRepresentation )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4756:1: ( ( ruleSPRepresentation ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4757:1: ( ruleSPRepresentation )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4726:1: ( ruleSPRepresentation )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4727:1: ruleSPRepresentation
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4757:1: ( ruleSPRepresentation )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4758:1: ruleSPRepresentation
             {
              before(grammarAccess.getSPViewpointAccess().getRepresentationsSPRepresentationParserRuleCall_5_0()); 
-            pushFollow(FOLLOW_ruleSPRepresentation_in_rule__SPViewpoint__RepresentationsAssignment_59604);
+            pushFollow(FOLLOW_ruleSPRepresentation_in_rule__SPViewpoint__RepresentationsAssignment_59667);
             ruleSPRepresentation();
 
             state._fsp--;
@@ -12826,20 +12922,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SPTable__NameAssignment_1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4736:1: rule__SPTable__NameAssignment_1 : ( RULE_ID ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4767:1: rule__SPTable__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__SPTable__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4740:1: ( ( RULE_ID ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4741:1: ( RULE_ID )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4771:1: ( ( RULE_ID ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4772:1: ( RULE_ID )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4741:1: ( RULE_ID )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4742:1: RULE_ID
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4772:1: ( RULE_ID )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4773:1: RULE_ID
             {
              before(grammarAccess.getSPTableAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SPTable__NameAssignment_19635); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SPTable__NameAssignment_19698); 
              after(grammarAccess.getSPTableAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -12863,20 +12959,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SPTable__LabelAssignment_3_1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4751:1: rule__SPTable__LabelAssignment_3_1 : ( RULE_STRING ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4782:1: rule__SPTable__LabelAssignment_3_1 : ( RULE_STRING ) ;
     public final void rule__SPTable__LabelAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4755:1: ( ( RULE_STRING ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4756:1: ( RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4786:1: ( ( RULE_STRING ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4787:1: ( RULE_STRING )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4756:1: ( RULE_STRING )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4757:1: RULE_STRING
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4787:1: ( RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4788:1: RULE_STRING
             {
              before(grammarAccess.getSPTableAccess().getLabelSTRINGTerminalRuleCall_3_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__SPTable__LabelAssignment_3_19666); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__SPTable__LabelAssignment_3_19729); 
              after(grammarAccess.getSPTableAccess().getLabelSTRINGTerminalRuleCall_3_1_0()); 
 
             }
@@ -12900,20 +12996,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SPTable__TitleAssignment_4_1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4766:1: rule__SPTable__TitleAssignment_4_1 : ( RULE_STRING ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4797:1: rule__SPTable__TitleAssignment_4_1 : ( RULE_STRING ) ;
     public final void rule__SPTable__TitleAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4770:1: ( ( RULE_STRING ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4771:1: ( RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4801:1: ( ( RULE_STRING ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4802:1: ( RULE_STRING )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4771:1: ( RULE_STRING )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4772:1: RULE_STRING
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4802:1: ( RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4803:1: RULE_STRING
             {
              before(grammarAccess.getSPTableAccess().getTitleSTRINGTerminalRuleCall_4_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__SPTable__TitleAssignment_4_19697); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__SPTable__TitleAssignment_4_19760); 
              after(grammarAccess.getSPTableAccess().getTitleSTRINGTerminalRuleCall_4_1_0()); 
 
             }
@@ -12937,20 +13033,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SPTable__MetamodelsAssignment_5"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4781:1: rule__SPTable__MetamodelsAssignment_5 : ( ruleMetamodelRef ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4812:1: rule__SPTable__MetamodelsAssignment_5 : ( ruleMetamodelRef ) ;
     public final void rule__SPTable__MetamodelsAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4785:1: ( ( ruleMetamodelRef ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4786:1: ( ruleMetamodelRef )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4816:1: ( ( ruleMetamodelRef ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4817:1: ( ruleMetamodelRef )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4786:1: ( ruleMetamodelRef )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4787:1: ruleMetamodelRef
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4817:1: ( ruleMetamodelRef )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4818:1: ruleMetamodelRef
             {
              before(grammarAccess.getSPTableAccess().getMetamodelsMetamodelRefParserRuleCall_5_0()); 
-            pushFollow(FOLLOW_ruleMetamodelRef_in_rule__SPTable__MetamodelsAssignment_59728);
+            pushFollow(FOLLOW_ruleMetamodelRef_in_rule__SPTable__MetamodelsAssignment_59791);
             ruleMetamodelRef();
 
             state._fsp--;
@@ -12978,20 +13074,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SPTable__RootAssignment_7"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4796:1: rule__SPTable__RootAssignment_7 : ( RULE_STRING ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4827:1: rule__SPTable__RootAssignment_7 : ( RULE_STRING ) ;
     public final void rule__SPTable__RootAssignment_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4800:1: ( ( RULE_STRING ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4801:1: ( RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4831:1: ( ( RULE_STRING ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4832:1: ( RULE_STRING )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4801:1: ( RULE_STRING )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4802:1: RULE_STRING
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4832:1: ( RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4833:1: RULE_STRING
             {
              before(grammarAccess.getSPTableAccess().getRootSTRINGTerminalRuleCall_7_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__SPTable__RootAssignment_79759); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__SPTable__RootAssignment_79822); 
              after(grammarAccess.getSPTableAccess().getRootSTRINGTerminalRuleCall_7_0()); 
 
             }
@@ -13015,20 +13111,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SPTable__ElementsAssignment_8"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4811:1: rule__SPTable__ElementsAssignment_8 : ( ruleTableElement ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4842:1: rule__SPTable__ElementsAssignment_8 : ( ruleTableElement ) ;
     public final void rule__SPTable__ElementsAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4815:1: ( ( ruleTableElement ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4816:1: ( ruleTableElement )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4846:1: ( ( ruleTableElement ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4847:1: ( ruleTableElement )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4816:1: ( ruleTableElement )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4817:1: ruleTableElement
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4847:1: ( ruleTableElement )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4848:1: ruleTableElement
             {
              before(grammarAccess.getSPTableAccess().getElementsTableElementParserRuleCall_8_0()); 
-            pushFollow(FOLLOW_ruleTableElement_in_rule__SPTable__ElementsAssignment_89790);
+            pushFollow(FOLLOW_ruleTableElement_in_rule__SPTable__ElementsAssignment_89853);
             ruleTableElement();
 
             state._fsp--;
@@ -13056,20 +13152,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SPTable__PropertiesAssignment_9"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4826:1: rule__SPTable__PropertiesAssignment_9 : ( ruleTableProperty ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4857:1: rule__SPTable__PropertiesAssignment_9 : ( ruleTableProperty ) ;
     public final void rule__SPTable__PropertiesAssignment_9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4830:1: ( ( ruleTableProperty ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4831:1: ( ruleTableProperty )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4861:1: ( ( ruleTableProperty ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4862:1: ( ruleTableProperty )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4831:1: ( ruleTableProperty )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4832:1: ruleTableProperty
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4862:1: ( ruleTableProperty )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4863:1: ruleTableProperty
             {
              before(grammarAccess.getSPTableAccess().getPropertiesTablePropertyParserRuleCall_9_0()); 
-            pushFollow(FOLLOW_ruleTableProperty_in_rule__SPTable__PropertiesAssignment_99821);
+            pushFollow(FOLLOW_ruleTableProperty_in_rule__SPTable__PropertiesAssignment_99884);
             ruleTableProperty();
 
             state._fsp--;
@@ -13097,24 +13193,24 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TableElement__CreatableAssignment_0"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4841:1: rule__TableElement__CreatableAssignment_0 : ( ( 'creatable' ) ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4872:1: rule__TableElement__CreatableAssignment_0 : ( ( 'creatable' ) ) ;
     public final void rule__TableElement__CreatableAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4845:1: ( ( ( 'creatable' ) ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4846:1: ( ( 'creatable' ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4876:1: ( ( ( 'creatable' ) ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4877:1: ( ( 'creatable' ) )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4846:1: ( ( 'creatable' ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4847:1: ( 'creatable' )
-            {
-             before(grammarAccess.getTableElementAccess().getCreatableCreatableKeyword_0_0()); 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4848:1: ( 'creatable' )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4849:1: 'creatable'
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4877:1: ( ( 'creatable' ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4878:1: ( 'creatable' )
             {
              before(grammarAccess.getTableElementAccess().getCreatableCreatableKeyword_0_0()); 
-            match(input,68,FOLLOW_68_in_rule__TableElement__CreatableAssignment_09857); 
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4879:1: ( 'creatable' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4880:1: 'creatable'
+            {
+             before(grammarAccess.getTableElementAccess().getCreatableCreatableKeyword_0_0()); 
+            match(input,68,FOLLOW_68_in_rule__TableElement__CreatableAssignment_09920); 
              after(grammarAccess.getTableElementAccess().getCreatableCreatableKeyword_0_0()); 
 
             }
@@ -13142,24 +13238,24 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TableElement__RecursiveAssignment_1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4864:1: rule__TableElement__RecursiveAssignment_1 : ( ( 'recursive' ) ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4895:1: rule__TableElement__RecursiveAssignment_1 : ( ( 'recursive' ) ) ;
     public final void rule__TableElement__RecursiveAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4868:1: ( ( ( 'recursive' ) ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4869:1: ( ( 'recursive' ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4899:1: ( ( ( 'recursive' ) ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4900:1: ( ( 'recursive' ) )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4869:1: ( ( 'recursive' ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4870:1: ( 'recursive' )
-            {
-             before(grammarAccess.getTableElementAccess().getRecursiveRecursiveKeyword_1_0()); 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4871:1: ( 'recursive' )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4872:1: 'recursive'
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4900:1: ( ( 'recursive' ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4901:1: ( 'recursive' )
             {
              before(grammarAccess.getTableElementAccess().getRecursiveRecursiveKeyword_1_0()); 
-            match(input,69,FOLLOW_69_in_rule__TableElement__RecursiveAssignment_19901); 
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4902:1: ( 'recursive' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4903:1: 'recursive'
+            {
+             before(grammarAccess.getTableElementAccess().getRecursiveRecursiveKeyword_1_0()); 
+            match(input,69,FOLLOW_69_in_rule__TableElement__RecursiveAssignment_19964); 
              after(grammarAccess.getTableElementAccess().getRecursiveRecursiveKeyword_1_0()); 
 
             }
@@ -13187,20 +13283,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TableElement__EClassAssignment_3"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4887:1: rule__TableElement__EClassAssignment_3 : ( RULE_STRING ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4918:1: rule__TableElement__EClassAssignment_3 : ( RULE_STRING ) ;
     public final void rule__TableElement__EClassAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4891:1: ( ( RULE_STRING ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4892:1: ( RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4922:1: ( ( RULE_STRING ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4923:1: ( RULE_STRING )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4892:1: ( RULE_STRING )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4893:1: RULE_STRING
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4923:1: ( RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4924:1: RULE_STRING
             {
              before(grammarAccess.getTableElementAccess().getEClassSTRINGTerminalRuleCall_3_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TableElement__EClassAssignment_39940); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TableElement__EClassAssignment_310003); 
              after(grammarAccess.getTableElementAccess().getEClassSTRINGTerminalRuleCall_3_0()); 
 
             }
@@ -13224,20 +13320,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TableElement__ExpressionAssignment_5"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4902:1: rule__TableElement__ExpressionAssignment_5 : ( ruleSPExpression ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4933:1: rule__TableElement__ExpressionAssignment_5 : ( ruleSPExpression ) ;
     public final void rule__TableElement__ExpressionAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4906:1: ( ( ruleSPExpression ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4907:1: ( ruleSPExpression )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4937:1: ( ( ruleSPExpression ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4938:1: ( ruleSPExpression )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4907:1: ( ruleSPExpression )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4908:1: ruleSPExpression
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4938:1: ( ruleSPExpression )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4939:1: ruleSPExpression
             {
              before(grammarAccess.getTableElementAccess().getExpressionSPExpressionParserRuleCall_5_0()); 
-            pushFollow(FOLLOW_ruleSPExpression_in_rule__TableElement__ExpressionAssignment_59971);
+            pushFollow(FOLLOW_ruleSPExpression_in_rule__TableElement__ExpressionAssignment_510034);
             ruleSPExpression();
 
             state._fsp--;
@@ -13265,20 +13361,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TableElement__SubElementsAssignment_6_1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4917:1: rule__TableElement__SubElementsAssignment_6_1 : ( ruleTableElement ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4948:1: rule__TableElement__SubElementsAssignment_6_1 : ( ruleTableElement ) ;
     public final void rule__TableElement__SubElementsAssignment_6_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4921:1: ( ( ruleTableElement ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4922:1: ( ruleTableElement )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4952:1: ( ( ruleTableElement ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4953:1: ( ruleTableElement )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4922:1: ( ruleTableElement )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4923:1: ruleTableElement
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4953:1: ( ruleTableElement )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4954:1: ruleTableElement
             {
              before(grammarAccess.getTableElementAccess().getSubElementsTableElementParserRuleCall_6_1_0()); 
-            pushFollow(FOLLOW_ruleTableElement_in_rule__TableElement__SubElementsAssignment_6_110002);
+            pushFollow(FOLLOW_ruleTableElement_in_rule__TableElement__SubElementsAssignment_6_110065);
             ruleTableElement();
 
             state._fsp--;
@@ -13306,20 +13402,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TableProperty__FeatureAssignment_1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4932:1: rule__TableProperty__FeatureAssignment_1 : ( RULE_STRING ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4963:1: rule__TableProperty__FeatureAssignment_1 : ( RULE_STRING ) ;
     public final void rule__TableProperty__FeatureAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4936:1: ( ( RULE_STRING ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4937:1: ( RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4967:1: ( ( RULE_STRING ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4968:1: ( RULE_STRING )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4937:1: ( RULE_STRING )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4938:1: RULE_STRING
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4968:1: ( RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4969:1: RULE_STRING
             {
              before(grammarAccess.getTablePropertyAccess().getFeatureSTRINGTerminalRuleCall_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TableProperty__FeatureAssignment_110033); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TableProperty__FeatureAssignment_110096); 
              after(grammarAccess.getTablePropertyAccess().getFeatureSTRINGTerminalRuleCall_1_0()); 
 
             }
@@ -13343,20 +13439,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TableProperty__LabelAssignment_2_1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4947:1: rule__TableProperty__LabelAssignment_2_1 : ( RULE_STRING ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4978:1: rule__TableProperty__LabelAssignment_2_1 : ( RULE_STRING ) ;
     public final void rule__TableProperty__LabelAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4951:1: ( ( RULE_STRING ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4952:1: ( RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4982:1: ( ( RULE_STRING ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4983:1: ( RULE_STRING )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4952:1: ( RULE_STRING )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4953:1: RULE_STRING
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4983:1: ( RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4984:1: RULE_STRING
             {
              before(grammarAccess.getTablePropertyAccess().getLabelSTRINGTerminalRuleCall_2_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TableProperty__LabelAssignment_2_110064); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__TableProperty__LabelAssignment_2_110127); 
              after(grammarAccess.getTablePropertyAccess().getLabelSTRINGTerminalRuleCall_2_1_0()); 
 
             }
@@ -13380,20 +13476,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TableProperty__ExpressionAssignment_3_1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4962:1: rule__TableProperty__ExpressionAssignment_3_1 : ( ruleSPExpression ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4993:1: rule__TableProperty__ExpressionAssignment_3_1 : ( ruleSPExpression ) ;
     public final void rule__TableProperty__ExpressionAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4966:1: ( ( ruleSPExpression ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4967:1: ( ruleSPExpression )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4997:1: ( ( ruleSPExpression ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4998:1: ( ruleSPExpression )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4967:1: ( ruleSPExpression )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4968:1: ruleSPExpression
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4998:1: ( ruleSPExpression )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4999:1: ruleSPExpression
             {
              before(grammarAccess.getTablePropertyAccess().getExpressionSPExpressionParserRuleCall_3_1_0()); 
-            pushFollow(FOLLOW_ruleSPExpression_in_rule__TableProperty__ExpressionAssignment_3_110095);
+            pushFollow(FOLLOW_ruleSPExpression_in_rule__TableProperty__ExpressionAssignment_3_110158);
             ruleSPExpression();
 
             state._fsp--;
@@ -13421,20 +13517,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SPDiagram__NameAssignment_1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4977:1: rule__SPDiagram__NameAssignment_1 : ( RULE_ID ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5008:1: rule__SPDiagram__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__SPDiagram__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4981:1: ( ( RULE_ID ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4982:1: ( RULE_ID )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5012:1: ( ( RULE_ID ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5013:1: ( RULE_ID )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4982:1: ( RULE_ID )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4983:1: RULE_ID
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5013:1: ( RULE_ID )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5014:1: RULE_ID
             {
              before(grammarAccess.getSPDiagramAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SPDiagram__NameAssignment_110126); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SPDiagram__NameAssignment_110189); 
              after(grammarAccess.getSPDiagramAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -13458,20 +13554,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SPDiagram__LabelAssignment_3_1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4992:1: rule__SPDiagram__LabelAssignment_3_1 : ( RULE_STRING ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5023:1: rule__SPDiagram__LabelAssignment_3_1 : ( RULE_STRING ) ;
     public final void rule__SPDiagram__LabelAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4996:1: ( ( RULE_STRING ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4997:1: ( RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5027:1: ( ( RULE_STRING ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5028:1: ( RULE_STRING )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4997:1: ( RULE_STRING )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:4998:1: RULE_STRING
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5028:1: ( RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5029:1: RULE_STRING
             {
              before(grammarAccess.getSPDiagramAccess().getLabelSTRINGTerminalRuleCall_3_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__SPDiagram__LabelAssignment_3_110157); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__SPDiagram__LabelAssignment_3_110220); 
              after(grammarAccess.getSPDiagramAccess().getLabelSTRINGTerminalRuleCall_3_1_0()); 
 
             }
@@ -13495,20 +13591,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SPDiagram__TitleAssignment_4_1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5007:1: rule__SPDiagram__TitleAssignment_4_1 : ( RULE_STRING ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5038:1: rule__SPDiagram__TitleAssignment_4_1 : ( RULE_STRING ) ;
     public final void rule__SPDiagram__TitleAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5011:1: ( ( RULE_STRING ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5012:1: ( RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5042:1: ( ( RULE_STRING ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5043:1: ( RULE_STRING )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5012:1: ( RULE_STRING )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5013:1: RULE_STRING
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5043:1: ( RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5044:1: RULE_STRING
             {
              before(grammarAccess.getSPDiagramAccess().getTitleSTRINGTerminalRuleCall_4_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__SPDiagram__TitleAssignment_4_110188); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__SPDiagram__TitleAssignment_4_110251); 
              after(grammarAccess.getSPDiagramAccess().getTitleSTRINGTerminalRuleCall_4_1_0()); 
 
             }
@@ -13532,20 +13628,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SPDiagram__MetamodelsAssignment_5"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5022:1: rule__SPDiagram__MetamodelsAssignment_5 : ( ruleMetamodelRef ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5053:1: rule__SPDiagram__MetamodelsAssignment_5 : ( ruleMetamodelRef ) ;
     public final void rule__SPDiagram__MetamodelsAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5026:1: ( ( ruleMetamodelRef ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5027:1: ( ruleMetamodelRef )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5057:1: ( ( ruleMetamodelRef ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5058:1: ( ruleMetamodelRef )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5027:1: ( ruleMetamodelRef )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5028:1: ruleMetamodelRef
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5058:1: ( ruleMetamodelRef )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5059:1: ruleMetamodelRef
             {
              before(grammarAccess.getSPDiagramAccess().getMetamodelsMetamodelRefParserRuleCall_5_0()); 
-            pushFollow(FOLLOW_ruleMetamodelRef_in_rule__SPDiagram__MetamodelsAssignment_510219);
+            pushFollow(FOLLOW_ruleMetamodelRef_in_rule__SPDiagram__MetamodelsAssignment_510282);
             ruleMetamodelRef();
 
             state._fsp--;
@@ -13573,20 +13669,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SPDiagram__RootAssignment_7"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5037:1: rule__SPDiagram__RootAssignment_7 : ( RULE_STRING ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5068:1: rule__SPDiagram__RootAssignment_7 : ( RULE_STRING ) ;
     public final void rule__SPDiagram__RootAssignment_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5041:1: ( ( RULE_STRING ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5042:1: ( RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5072:1: ( ( RULE_STRING ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5073:1: ( RULE_STRING )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5042:1: ( RULE_STRING )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5043:1: RULE_STRING
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5073:1: ( RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5074:1: RULE_STRING
             {
              before(grammarAccess.getSPDiagramAccess().getRootSTRINGTerminalRuleCall_7_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__SPDiagram__RootAssignment_710250); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__SPDiagram__RootAssignment_710313); 
              after(grammarAccess.getSPDiagramAccess().getRootSTRINGTerminalRuleCall_7_0()); 
 
             }
@@ -13610,20 +13706,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SPDiagram__ElementsAssignment_8"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5052:1: rule__SPDiagram__ElementsAssignment_8 : ( ruleDiagramElement ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5083:1: rule__SPDiagram__ElementsAssignment_8 : ( ruleDiagramElement ) ;
     public final void rule__SPDiagram__ElementsAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5056:1: ( ( ruleDiagramElement ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5057:1: ( ruleDiagramElement )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5087:1: ( ( ruleDiagramElement ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5088:1: ( ruleDiagramElement )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5057:1: ( ruleDiagramElement )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5058:1: ruleDiagramElement
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5088:1: ( ruleDiagramElement )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5089:1: ruleDiagramElement
             {
              before(grammarAccess.getSPDiagramAccess().getElementsDiagramElementParserRuleCall_8_0()); 
-            pushFollow(FOLLOW_ruleDiagramElement_in_rule__SPDiagram__ElementsAssignment_810281);
+            pushFollow(FOLLOW_ruleDiagramElement_in_rule__SPDiagram__ElementsAssignment_810344);
             ruleDiagramElement();
 
             state._fsp--;
@@ -13650,30 +13746,30 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
     // $ANTLR end "rule__SPDiagram__ElementsAssignment_8"
 
 
-    // $ANTLR start "rule__Container__RecursiveAssignment_0"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5067:1: rule__Container__RecursiveAssignment_0 : ( ( 'recursive' ) ) ;
-    public final void rule__Container__RecursiveAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__Container__CreatableAssignment_0"
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5098:1: rule__Container__CreatableAssignment_0 : ( ( 'creatable' ) ) ;
+    public final void rule__Container__CreatableAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5071:1: ( ( ( 'recursive' ) ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5072:1: ( ( 'recursive' ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5102:1: ( ( ( 'creatable' ) ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5103:1: ( ( 'creatable' ) )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5072:1: ( ( 'recursive' ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5073:1: ( 'recursive' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5103:1: ( ( 'creatable' ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5104:1: ( 'creatable' )
             {
-             before(grammarAccess.getContainerAccess().getRecursiveRecursiveKeyword_0_0()); 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5074:1: ( 'recursive' )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5075:1: 'recursive'
+             before(grammarAccess.getContainerAccess().getCreatableCreatableKeyword_0_0()); 
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5105:1: ( 'creatable' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5106:1: 'creatable'
             {
-             before(grammarAccess.getContainerAccess().getRecursiveRecursiveKeyword_0_0()); 
-            match(input,69,FOLLOW_69_in_rule__Container__RecursiveAssignment_010317); 
-             after(grammarAccess.getContainerAccess().getRecursiveRecursiveKeyword_0_0()); 
+             before(grammarAccess.getContainerAccess().getCreatableCreatableKeyword_0_0()); 
+            match(input,68,FOLLOW_68_in_rule__Container__CreatableAssignment_010380); 
+             after(grammarAccess.getContainerAccess().getCreatableCreatableKeyword_0_0()); 
 
             }
 
-             after(grammarAccess.getContainerAccess().getRecursiveRecursiveKeyword_0_0()); 
+             after(grammarAccess.getContainerAccess().getCreatableCreatableKeyword_0_0()); 
 
             }
 
@@ -13692,29 +13788,74 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
         }
         return ;
     }
-    // $ANTLR end "rule__Container__RecursiveAssignment_0"
+    // $ANTLR end "rule__Container__CreatableAssignment_0"
 
 
-    // $ANTLR start "rule__Container__ContainerTypeAssignment_1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5090:1: rule__Container__ContainerTypeAssignment_1 : ( ruleContainerType ) ;
-    public final void rule__Container__ContainerTypeAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__Container__RecursiveAssignment_1"
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5121:1: rule__Container__RecursiveAssignment_1 : ( ( 'recursive' ) ) ;
+    public final void rule__Container__RecursiveAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5094:1: ( ( ruleContainerType ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5095:1: ( ruleContainerType )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5125:1: ( ( ( 'recursive' ) ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5126:1: ( ( 'recursive' ) )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5095:1: ( ruleContainerType )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5096:1: ruleContainerType
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5126:1: ( ( 'recursive' ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5127:1: ( 'recursive' )
             {
-             before(grammarAccess.getContainerAccess().getContainerTypeContainerTypeParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleContainerType_in_rule__Container__ContainerTypeAssignment_110356);
+             before(grammarAccess.getContainerAccess().getRecursiveRecursiveKeyword_1_0()); 
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5128:1: ( 'recursive' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5129:1: 'recursive'
+            {
+             before(grammarAccess.getContainerAccess().getRecursiveRecursiveKeyword_1_0()); 
+            match(input,69,FOLLOW_69_in_rule__Container__RecursiveAssignment_110424); 
+             after(grammarAccess.getContainerAccess().getRecursiveRecursiveKeyword_1_0()); 
+
+            }
+
+             after(grammarAccess.getContainerAccess().getRecursiveRecursiveKeyword_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Container__RecursiveAssignment_1"
+
+
+    // $ANTLR start "rule__Container__ContainerTypeAssignment_2"
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5144:1: rule__Container__ContainerTypeAssignment_2 : ( ruleContainerType ) ;
+    public final void rule__Container__ContainerTypeAssignment_2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5148:1: ( ( ruleContainerType ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5149:1: ( ruleContainerType )
+            {
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5149:1: ( ruleContainerType )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5150:1: ruleContainerType
+            {
+             before(grammarAccess.getContainerAccess().getContainerTypeContainerTypeParserRuleCall_2_0()); 
+            pushFollow(FOLLOW_ruleContainerType_in_rule__Container__ContainerTypeAssignment_210463);
             ruleContainerType();
 
             state._fsp--;
 
-             after(grammarAccess.getContainerAccess().getContainerTypeContainerTypeParserRuleCall_1_0()); 
+             after(grammarAccess.getContainerAccess().getContainerTypeContainerTypeParserRuleCall_2_0()); 
 
             }
 
@@ -13733,25 +13874,25 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
         }
         return ;
     }
-    // $ANTLR end "rule__Container__ContainerTypeAssignment_1"
+    // $ANTLR end "rule__Container__ContainerTypeAssignment_2"
 
 
-    // $ANTLR start "rule__Container__EClassAssignment_3"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5105:1: rule__Container__EClassAssignment_3 : ( RULE_STRING ) ;
-    public final void rule__Container__EClassAssignment_3() throws RecognitionException {
+    // $ANTLR start "rule__Container__EClassAssignment_4"
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5159:1: rule__Container__EClassAssignment_4 : ( RULE_STRING ) ;
+    public final void rule__Container__EClassAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5109:1: ( ( RULE_STRING ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5110:1: ( RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5163:1: ( ( RULE_STRING ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5164:1: ( RULE_STRING )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5110:1: ( RULE_STRING )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5111:1: RULE_STRING
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5164:1: ( RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5165:1: RULE_STRING
             {
-             before(grammarAccess.getContainerAccess().getEClassSTRINGTerminalRuleCall_3_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Container__EClassAssignment_310387); 
-             after(grammarAccess.getContainerAccess().getEClassSTRINGTerminalRuleCall_3_0()); 
+             before(grammarAccess.getContainerAccess().getEClassSTRINGTerminalRuleCall_4_0()); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Container__EClassAssignment_410494); 
+             after(grammarAccess.getContainerAccess().getEClassSTRINGTerminalRuleCall_4_0()); 
 
             }
 
@@ -13770,29 +13911,29 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
         }
         return ;
     }
-    // $ANTLR end "rule__Container__EClassAssignment_3"
+    // $ANTLR end "rule__Container__EClassAssignment_4"
 
 
-    // $ANTLR start "rule__Container__ExpressionAssignment_5"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5120:1: rule__Container__ExpressionAssignment_5 : ( ruleSPExpression ) ;
-    public final void rule__Container__ExpressionAssignment_5() throws RecognitionException {
+    // $ANTLR start "rule__Container__ExpressionAssignment_6"
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5174:1: rule__Container__ExpressionAssignment_6 : ( ruleSPExpression ) ;
+    public final void rule__Container__ExpressionAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5124:1: ( ( ruleSPExpression ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5125:1: ( ruleSPExpression )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5178:1: ( ( ruleSPExpression ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5179:1: ( ruleSPExpression )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5125:1: ( ruleSPExpression )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5126:1: ruleSPExpression
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5179:1: ( ruleSPExpression )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5180:1: ruleSPExpression
             {
-             before(grammarAccess.getContainerAccess().getExpressionSPExpressionParserRuleCall_5_0()); 
-            pushFollow(FOLLOW_ruleSPExpression_in_rule__Container__ExpressionAssignment_510418);
+             before(grammarAccess.getContainerAccess().getExpressionSPExpressionParserRuleCall_6_0()); 
+            pushFollow(FOLLOW_ruleSPExpression_in_rule__Container__ExpressionAssignment_610525);
             ruleSPExpression();
 
             state._fsp--;
 
-             after(grammarAccess.getContainerAccess().getExpressionSPExpressionParserRuleCall_5_0()); 
+             after(grammarAccess.getContainerAccess().getExpressionSPExpressionParserRuleCall_6_0()); 
 
             }
 
@@ -13811,29 +13952,29 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
         }
         return ;
     }
-    // $ANTLR end "rule__Container__ExpressionAssignment_5"
+    // $ANTLR end "rule__Container__ExpressionAssignment_6"
 
 
-    // $ANTLR start "rule__Container__StyleAssignment_6"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5135:1: rule__Container__StyleAssignment_6 : ( ruleContainerStyleDefinition ) ;
-    public final void rule__Container__StyleAssignment_6() throws RecognitionException {
+    // $ANTLR start "rule__Container__StyleAssignment_7"
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5189:1: rule__Container__StyleAssignment_7 : ( ruleContainerStyleDefinition ) ;
+    public final void rule__Container__StyleAssignment_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5139:1: ( ( ruleContainerStyleDefinition ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5140:1: ( ruleContainerStyleDefinition )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5193:1: ( ( ruleContainerStyleDefinition ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5194:1: ( ruleContainerStyleDefinition )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5140:1: ( ruleContainerStyleDefinition )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5141:1: ruleContainerStyleDefinition
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5194:1: ( ruleContainerStyleDefinition )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5195:1: ruleContainerStyleDefinition
             {
-             before(grammarAccess.getContainerAccess().getStyleContainerStyleDefinitionParserRuleCall_6_0()); 
-            pushFollow(FOLLOW_ruleContainerStyleDefinition_in_rule__Container__StyleAssignment_610449);
+             before(grammarAccess.getContainerAccess().getStyleContainerStyleDefinitionParserRuleCall_7_0()); 
+            pushFollow(FOLLOW_ruleContainerStyleDefinition_in_rule__Container__StyleAssignment_710556);
             ruleContainerStyleDefinition();
 
             state._fsp--;
 
-             after(grammarAccess.getContainerAccess().getStyleContainerStyleDefinitionParserRuleCall_6_0()); 
+             after(grammarAccess.getContainerAccess().getStyleContainerStyleDefinitionParserRuleCall_7_0()); 
 
             }
 
@@ -13852,29 +13993,29 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
         }
         return ;
     }
-    // $ANTLR end "rule__Container__StyleAssignment_6"
+    // $ANTLR end "rule__Container__StyleAssignment_7"
 
 
-    // $ANTLR start "rule__Container__ElementsAssignment_7_1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5150:1: rule__Container__ElementsAssignment_7_1 : ( ruleDiagramElement ) ;
-    public final void rule__Container__ElementsAssignment_7_1() throws RecognitionException {
+    // $ANTLR start "rule__Container__ElementsAssignment_8_1"
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5204:1: rule__Container__ElementsAssignment_8_1 : ( ruleDiagramElement ) ;
+    public final void rule__Container__ElementsAssignment_8_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5154:1: ( ( ruleDiagramElement ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5155:1: ( ruleDiagramElement )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5208:1: ( ( ruleDiagramElement ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5209:1: ( ruleDiagramElement )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5155:1: ( ruleDiagramElement )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5156:1: ruleDiagramElement
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5209:1: ( ruleDiagramElement )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5210:1: ruleDiagramElement
             {
-             before(grammarAccess.getContainerAccess().getElementsDiagramElementParserRuleCall_7_1_0()); 
-            pushFollow(FOLLOW_ruleDiagramElement_in_rule__Container__ElementsAssignment_7_110480);
+             before(grammarAccess.getContainerAccess().getElementsDiagramElementParserRuleCall_8_1_0()); 
+            pushFollow(FOLLOW_ruleDiagramElement_in_rule__Container__ElementsAssignment_8_110587);
             ruleDiagramElement();
 
             state._fsp--;
 
-             after(grammarAccess.getContainerAccess().getElementsDiagramElementParserRuleCall_7_1_0()); 
+             after(grammarAccess.getContainerAccess().getElementsDiagramElementParserRuleCall_8_1_0()); 
 
             }
 
@@ -13893,24 +14034,24 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
         }
         return ;
     }
-    // $ANTLR end "rule__Container__ElementsAssignment_7_1"
+    // $ANTLR end "rule__Container__ElementsAssignment_8_1"
 
 
     // $ANTLR start "rule__ContainerStyleDefinition__ColorAssignment_1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5165:1: rule__ContainerStyleDefinition__ColorAssignment_1 : ( ruleContainerColorDefinition ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5219:1: rule__ContainerStyleDefinition__ColorAssignment_1 : ( ruleContainerColorDefinition ) ;
     public final void rule__ContainerStyleDefinition__ColorAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5169:1: ( ( ruleContainerColorDefinition ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5170:1: ( ruleContainerColorDefinition )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5223:1: ( ( ruleContainerColorDefinition ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5224:1: ( ruleContainerColorDefinition )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5170:1: ( ruleContainerColorDefinition )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5171:1: ruleContainerColorDefinition
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5224:1: ( ruleContainerColorDefinition )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5225:1: ruleContainerColorDefinition
             {
              before(grammarAccess.getContainerStyleDefinitionAccess().getColorContainerColorDefinitionParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleContainerColorDefinition_in_rule__ContainerStyleDefinition__ColorAssignment_110511);
+            pushFollow(FOLLOW_ruleContainerColorDefinition_in_rule__ContainerStyleDefinition__ColorAssignment_110618);
             ruleContainerColorDefinition();
 
             state._fsp--;
@@ -13938,20 +14079,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ContainerStyleDefinition__LabelAssignment_2_1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5180:1: rule__ContainerStyleDefinition__LabelAssignment_2_1 : ( ruleLabelStyleDefinition ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5234:1: rule__ContainerStyleDefinition__LabelAssignment_2_1 : ( ruleLabelStyleDefinition ) ;
     public final void rule__ContainerStyleDefinition__LabelAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5184:1: ( ( ruleLabelStyleDefinition ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5185:1: ( ruleLabelStyleDefinition )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5238:1: ( ( ruleLabelStyleDefinition ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5239:1: ( ruleLabelStyleDefinition )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5185:1: ( ruleLabelStyleDefinition )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5186:1: ruleLabelStyleDefinition
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5239:1: ( ruleLabelStyleDefinition )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5240:1: ruleLabelStyleDefinition
             {
              before(grammarAccess.getContainerStyleDefinitionAccess().getLabelLabelStyleDefinitionParserRuleCall_2_1_0()); 
-            pushFollow(FOLLOW_ruleLabelStyleDefinition_in_rule__ContainerStyleDefinition__LabelAssignment_2_110542);
+            pushFollow(FOLLOW_ruleLabelStyleDefinition_in_rule__ContainerStyleDefinition__LabelAssignment_2_110649);
             ruleLabelStyleDefinition();
 
             state._fsp--;
@@ -13979,20 +14120,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ContainerStyleDefinition__BorderAssignment_3_1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5195:1: rule__ContainerStyleDefinition__BorderAssignment_3_1 : ( ruleBorderStyleDefinition ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5249:1: rule__ContainerStyleDefinition__BorderAssignment_3_1 : ( ruleBorderStyleDefinition ) ;
     public final void rule__ContainerStyleDefinition__BorderAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5199:1: ( ( ruleBorderStyleDefinition ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5200:1: ( ruleBorderStyleDefinition )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5253:1: ( ( ruleBorderStyleDefinition ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5254:1: ( ruleBorderStyleDefinition )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5200:1: ( ruleBorderStyleDefinition )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5201:1: ruleBorderStyleDefinition
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5254:1: ( ruleBorderStyleDefinition )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5255:1: ruleBorderStyleDefinition
             {
              before(grammarAccess.getContainerStyleDefinitionAccess().getBorderBorderStyleDefinitionParserRuleCall_3_1_0()); 
-            pushFollow(FOLLOW_ruleBorderStyleDefinition_in_rule__ContainerStyleDefinition__BorderAssignment_3_110573);
+            pushFollow(FOLLOW_ruleBorderStyleDefinition_in_rule__ContainerStyleDefinition__BorderAssignment_3_110680);
             ruleBorderStyleDefinition();
 
             state._fsp--;
@@ -14020,20 +14161,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__SolidColorDefinition__ColorAssignment_1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5210:1: rule__SolidColorDefinition__ColorAssignment_1 : ( ruleColor ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5264:1: rule__SolidColorDefinition__ColorAssignment_1 : ( ruleColor ) ;
     public final void rule__SolidColorDefinition__ColorAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5214:1: ( ( ruleColor ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5215:1: ( ruleColor )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5268:1: ( ( ruleColor ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5269:1: ( ruleColor )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5215:1: ( ruleColor )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5216:1: ruleColor
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5269:1: ( ruleColor )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5270:1: ruleColor
             {
              before(grammarAccess.getSolidColorDefinitionAccess().getColorColorParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleColor_in_rule__SolidColorDefinition__ColorAssignment_110604);
+            pushFollow(FOLLOW_ruleColor_in_rule__SolidColorDefinition__ColorAssignment_110711);
             ruleColor();
 
             state._fsp--;
@@ -14061,20 +14202,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GradientColorDefinition__FromAssignment_1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5225:1: rule__GradientColorDefinition__FromAssignment_1 : ( ruleColor ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5279:1: rule__GradientColorDefinition__FromAssignment_1 : ( ruleColor ) ;
     public final void rule__GradientColorDefinition__FromAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5229:1: ( ( ruleColor ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5230:1: ( ruleColor )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5283:1: ( ( ruleColor ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5284:1: ( ruleColor )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5230:1: ( ruleColor )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5231:1: ruleColor
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5284:1: ( ruleColor )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5285:1: ruleColor
             {
              before(grammarAccess.getGradientColorDefinitionAccess().getFromColorParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleColor_in_rule__GradientColorDefinition__FromAssignment_110635);
+            pushFollow(FOLLOW_ruleColor_in_rule__GradientColorDefinition__FromAssignment_110742);
             ruleColor();
 
             state._fsp--;
@@ -14102,20 +14243,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GradientColorDefinition__ToAssignment_3"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5240:1: rule__GradientColorDefinition__ToAssignment_3 : ( ruleColor ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5294:1: rule__GradientColorDefinition__ToAssignment_3 : ( ruleColor ) ;
     public final void rule__GradientColorDefinition__ToAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5244:1: ( ( ruleColor ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5245:1: ( ruleColor )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5298:1: ( ( ruleColor ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5299:1: ( ruleColor )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5245:1: ( ruleColor )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5246:1: ruleColor
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5299:1: ( ruleColor )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5300:1: ruleColor
             {
              before(grammarAccess.getGradientColorDefinitionAccess().getToColorParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleColor_in_rule__GradientColorDefinition__ToAssignment_310666);
+            pushFollow(FOLLOW_ruleColor_in_rule__GradientColorDefinition__ToAssignment_310773);
             ruleColor();
 
             state._fsp--;
@@ -14143,20 +14284,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LabelStyleDefinition__ExpressionAssignment_1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5255:1: rule__LabelStyleDefinition__ExpressionAssignment_1 : ( ruleSPExpression ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5309:1: rule__LabelStyleDefinition__ExpressionAssignment_1 : ( ruleSPExpression ) ;
     public final void rule__LabelStyleDefinition__ExpressionAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5259:1: ( ( ruleSPExpression ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5260:1: ( ruleSPExpression )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5313:1: ( ( ruleSPExpression ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5314:1: ( ruleSPExpression )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5260:1: ( ruleSPExpression )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5261:1: ruleSPExpression
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5314:1: ( ruleSPExpression )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5315:1: ruleSPExpression
             {
              before(grammarAccess.getLabelStyleDefinitionAccess().getExpressionSPExpressionParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleSPExpression_in_rule__LabelStyleDefinition__ExpressionAssignment_110697);
+            pushFollow(FOLLOW_ruleSPExpression_in_rule__LabelStyleDefinition__ExpressionAssignment_110804);
             ruleSPExpression();
 
             state._fsp--;
@@ -14184,20 +14325,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LabelStyleDefinition__ColorAssignment_2"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5270:1: rule__LabelStyleDefinition__ColorAssignment_2 : ( ruleSolidColorDefinition ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5324:1: rule__LabelStyleDefinition__ColorAssignment_2 : ( ruleSolidColorDefinition ) ;
     public final void rule__LabelStyleDefinition__ColorAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5274:1: ( ( ruleSolidColorDefinition ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5275:1: ( ruleSolidColorDefinition )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5328:1: ( ( ruleSolidColorDefinition ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5329:1: ( ruleSolidColorDefinition )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5275:1: ( ruleSolidColorDefinition )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5276:1: ruleSolidColorDefinition
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5329:1: ( ruleSolidColorDefinition )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5330:1: ruleSolidColorDefinition
             {
              before(grammarAccess.getLabelStyleDefinitionAccess().getColorSolidColorDefinitionParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleSolidColorDefinition_in_rule__LabelStyleDefinition__ColorAssignment_210728);
+            pushFollow(FOLLOW_ruleSolidColorDefinition_in_rule__LabelStyleDefinition__ColorAssignment_210835);
             ruleSolidColorDefinition();
 
             state._fsp--;
@@ -14225,20 +14366,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LabelStyleDefinition__SizeAssignment_3_1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5285:1: rule__LabelStyleDefinition__SizeAssignment_3_1 : ( RULE_INT ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5339:1: rule__LabelStyleDefinition__SizeAssignment_3_1 : ( RULE_INT ) ;
     public final void rule__LabelStyleDefinition__SizeAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5289:1: ( ( RULE_INT ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5290:1: ( RULE_INT )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5343:1: ( ( RULE_INT ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5344:1: ( RULE_INT )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5290:1: ( RULE_INT )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5291:1: RULE_INT
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5344:1: ( RULE_INT )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5345:1: RULE_INT
             {
              before(grammarAccess.getLabelStyleDefinitionAccess().getSizeINTTerminalRuleCall_3_1_0()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__LabelStyleDefinition__SizeAssignment_3_110759); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__LabelStyleDefinition__SizeAssignment_3_110866); 
              after(grammarAccess.getLabelStyleDefinitionAccess().getSizeINTTerminalRuleCall_3_1_0()); 
 
             }
@@ -14262,24 +14403,24 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LabelStyleDefinition__BoldAssignment_4"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5300:1: rule__LabelStyleDefinition__BoldAssignment_4 : ( ( 'bold' ) ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5354:1: rule__LabelStyleDefinition__BoldAssignment_4 : ( ( 'bold' ) ) ;
     public final void rule__LabelStyleDefinition__BoldAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5304:1: ( ( ( 'bold' ) ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5305:1: ( ( 'bold' ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5358:1: ( ( ( 'bold' ) ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5359:1: ( ( 'bold' ) )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5305:1: ( ( 'bold' ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5306:1: ( 'bold' )
-            {
-             before(grammarAccess.getLabelStyleDefinitionAccess().getBoldBoldKeyword_4_0()); 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5307:1: ( 'bold' )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5308:1: 'bold'
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5359:1: ( ( 'bold' ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5360:1: ( 'bold' )
             {
              before(grammarAccess.getLabelStyleDefinitionAccess().getBoldBoldKeyword_4_0()); 
-            match(input,70,FOLLOW_70_in_rule__LabelStyleDefinition__BoldAssignment_410795); 
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5361:1: ( 'bold' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5362:1: 'bold'
+            {
+             before(grammarAccess.getLabelStyleDefinitionAccess().getBoldBoldKeyword_4_0()); 
+            match(input,70,FOLLOW_70_in_rule__LabelStyleDefinition__BoldAssignment_410902); 
              after(grammarAccess.getLabelStyleDefinitionAccess().getBoldBoldKeyword_4_0()); 
 
             }
@@ -14307,24 +14448,24 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__LabelStyleDefinition__ItalicAssignment_5"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5323:1: rule__LabelStyleDefinition__ItalicAssignment_5 : ( ( 'italic' ) ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5377:1: rule__LabelStyleDefinition__ItalicAssignment_5 : ( ( 'italic' ) ) ;
     public final void rule__LabelStyleDefinition__ItalicAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5327:1: ( ( ( 'italic' ) ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5328:1: ( ( 'italic' ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5381:1: ( ( ( 'italic' ) ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5382:1: ( ( 'italic' ) )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5328:1: ( ( 'italic' ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5329:1: ( 'italic' )
-            {
-             before(grammarAccess.getLabelStyleDefinitionAccess().getItalicItalicKeyword_5_0()); 
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5330:1: ( 'italic' )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5331:1: 'italic'
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5382:1: ( ( 'italic' ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5383:1: ( 'italic' )
             {
              before(grammarAccess.getLabelStyleDefinitionAccess().getItalicItalicKeyword_5_0()); 
-            match(input,71,FOLLOW_71_in_rule__LabelStyleDefinition__ItalicAssignment_510839); 
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5384:1: ( 'italic' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5385:1: 'italic'
+            {
+             before(grammarAccess.getLabelStyleDefinitionAccess().getItalicItalicKeyword_5_0()); 
+            match(input,71,FOLLOW_71_in_rule__LabelStyleDefinition__ItalicAssignment_510946); 
              after(grammarAccess.getLabelStyleDefinitionAccess().getItalicItalicKeyword_5_0()); 
 
             }
@@ -14352,20 +14493,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__BorderStyleDefinition__ColorAssignment_1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5346:1: rule__BorderStyleDefinition__ColorAssignment_1 : ( ruleSolidColorDefinition ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5400:1: rule__BorderStyleDefinition__ColorAssignment_1 : ( ruleSolidColorDefinition ) ;
     public final void rule__BorderStyleDefinition__ColorAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5350:1: ( ( ruleSolidColorDefinition ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5351:1: ( ruleSolidColorDefinition )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5404:1: ( ( ruleSolidColorDefinition ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5405:1: ( ruleSolidColorDefinition )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5351:1: ( ruleSolidColorDefinition )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5352:1: ruleSolidColorDefinition
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5405:1: ( ruleSolidColorDefinition )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5406:1: ruleSolidColorDefinition
             {
              before(grammarAccess.getBorderStyleDefinitionAccess().getColorSolidColorDefinitionParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleSolidColorDefinition_in_rule__BorderStyleDefinition__ColorAssignment_110878);
+            pushFollow(FOLLOW_ruleSolidColorDefinition_in_rule__BorderStyleDefinition__ColorAssignment_110985);
             ruleSolidColorDefinition();
 
             state._fsp--;
@@ -14393,20 +14534,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__BorderStyleDefinition__SizeAssignment_2_1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5361:1: rule__BorderStyleDefinition__SizeAssignment_2_1 : ( RULE_INT ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5415:1: rule__BorderStyleDefinition__SizeAssignment_2_1 : ( RULE_INT ) ;
     public final void rule__BorderStyleDefinition__SizeAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5365:1: ( ( RULE_INT ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5366:1: ( RULE_INT )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5419:1: ( ( RULE_INT ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5420:1: ( RULE_INT )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5366:1: ( RULE_INT )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5367:1: RULE_INT
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5420:1: ( RULE_INT )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5421:1: RULE_INT
             {
              before(grammarAccess.getBorderStyleDefinitionAccess().getSizeINTTerminalRuleCall_2_1_0()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__BorderStyleDefinition__SizeAssignment_2_110909); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__BorderStyleDefinition__SizeAssignment_2_111016); 
              after(grammarAccess.getBorderStyleDefinitionAccess().getSizeINTTerminalRuleCall_2_1_0()); 
 
             }
@@ -14430,20 +14571,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__AcceleoExpression__ValueAssignment_1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5376:1: rule__AcceleoExpression__ValueAssignment_1 : ( RULE_STRING ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5430:1: rule__AcceleoExpression__ValueAssignment_1 : ( RULE_STRING ) ;
     public final void rule__AcceleoExpression__ValueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5380:1: ( ( RULE_STRING ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5381:1: ( RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5434:1: ( ( RULE_STRING ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5435:1: ( RULE_STRING )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5381:1: ( RULE_STRING )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5382:1: RULE_STRING
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5435:1: ( RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5436:1: RULE_STRING
             {
              before(grammarAccess.getAcceleoExpressionAccess().getValueSTRINGTerminalRuleCall_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__AcceleoExpression__ValueAssignment_110940); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__AcceleoExpression__ValueAssignment_111047); 
              after(grammarAccess.getAcceleoExpressionAccess().getValueSTRINGTerminalRuleCall_1_0()); 
 
             }
@@ -14467,20 +14608,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__VarRef__ValueAssignment_1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5391:1: rule__VarRef__ValueAssignment_1 : ( RULE_STRING ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5445:1: rule__VarRef__ValueAssignment_1 : ( RULE_STRING ) ;
     public final void rule__VarRef__ValueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5395:1: ( ( RULE_STRING ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5396:1: ( RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5449:1: ( ( RULE_STRING ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5450:1: ( RULE_STRING )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5396:1: ( RULE_STRING )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5397:1: RULE_STRING
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5450:1: ( RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5451:1: RULE_STRING
             {
              before(grammarAccess.getVarRefAccess().getValueSTRINGTerminalRuleCall_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__VarRef__ValueAssignment_110971); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__VarRef__ValueAssignment_111078); 
              after(grammarAccess.getVarRefAccess().getValueSTRINGTerminalRuleCall_1_0()); 
 
             }
@@ -14504,20 +14645,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__FeatureRef__ValueAssignment_1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5406:1: rule__FeatureRef__ValueAssignment_1 : ( RULE_STRING ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5460:1: rule__FeatureRef__ValueAssignment_1 : ( RULE_STRING ) ;
     public final void rule__FeatureRef__ValueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5410:1: ( ( RULE_STRING ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5411:1: ( RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5464:1: ( ( RULE_STRING ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5465:1: ( RULE_STRING )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5411:1: ( RULE_STRING )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5412:1: RULE_STRING
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5465:1: ( RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5466:1: RULE_STRING
             {
              before(grammarAccess.getFeatureRefAccess().getValueSTRINGTerminalRuleCall_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__FeatureRef__ValueAssignment_111002); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__FeatureRef__ValueAssignment_111109); 
              after(grammarAccess.getFeatureRefAccess().getValueSTRINGTerminalRuleCall_1_0()); 
 
             }
@@ -14541,20 +14682,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__MetamodelRef__MetamodelAssignment_1"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5421:1: rule__MetamodelRef__MetamodelAssignment_1 : ( RULE_STRING ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5475:1: rule__MetamodelRef__MetamodelAssignment_1 : ( RULE_STRING ) ;
     public final void rule__MetamodelRef__MetamodelAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5425:1: ( ( RULE_STRING ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5426:1: ( RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5479:1: ( ( RULE_STRING ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5480:1: ( RULE_STRING )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5426:1: ( RULE_STRING )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5427:1: RULE_STRING
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5480:1: ( RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5481:1: RULE_STRING
             {
              before(grammarAccess.getMetamodelRefAccess().getMetamodelSTRINGTerminalRuleCall_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__MetamodelRef__MetamodelAssignment_111033); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__MetamodelRef__MetamodelAssignment_111140); 
              after(grammarAccess.getMetamodelRefAccess().getMetamodelSTRINGTerminalRuleCall_1_0()); 
 
             }
@@ -14578,20 +14719,20 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__PreDefinedColorDefinition__ColorAssignment"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5436:1: rule__PreDefinedColorDefinition__ColorAssignment : ( rulePreDefinedColor ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5490:1: rule__PreDefinedColorDefinition__ColorAssignment : ( rulePreDefinedColor ) ;
     public final void rule__PreDefinedColorDefinition__ColorAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5440:1: ( ( rulePreDefinedColor ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5441:1: ( rulePreDefinedColor )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5494:1: ( ( rulePreDefinedColor ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5495:1: ( rulePreDefinedColor )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5441:1: ( rulePreDefinedColor )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5442:1: rulePreDefinedColor
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5495:1: ( rulePreDefinedColor )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5496:1: rulePreDefinedColor
             {
              before(grammarAccess.getPreDefinedColorDefinitionAccess().getColorPreDefinedColorEnumRuleCall_0()); 
-            pushFollow(FOLLOW_rulePreDefinedColor_in_rule__PreDefinedColorDefinition__ColorAssignment11064);
+            pushFollow(FOLLOW_rulePreDefinedColor_in_rule__PreDefinedColorDefinition__ColorAssignment11171);
             rulePreDefinedColor();
 
             state._fsp--;
@@ -14896,13 +15037,13 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
     public static final BitSet FOLLOW_rule__SPDiagram__Group__6__Impl_in_rule__SPDiagram__Group__65954 = new BitSet(new long[]{0x0000000000000020L});
     public static final BitSet FOLLOW_rule__SPDiagram__Group__7_in_rule__SPDiagram__Group__65957 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_47_in_rule__SPDiagram__Group__6__Impl5985 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SPDiagram__Group__7__Impl_in_rule__SPDiagram__Group__76016 = new BitSet(new long[]{0x0080000000001800L,0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__SPDiagram__Group__7__Impl_in_rule__SPDiagram__Group__76016 = new BitSet(new long[]{0x0080000000001800L,0x0000000000000030L});
     public static final BitSet FOLLOW_rule__SPDiagram__Group__8_in_rule__SPDiagram__Group__76019 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__SPDiagram__RootAssignment_7_in_rule__SPDiagram__Group__7__Impl6046 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__SPDiagram__Group__8__Impl_in_rule__SPDiagram__Group__86076 = new BitSet(new long[]{0x0000020000000000L});
     public static final BitSet FOLLOW_rule__SPDiagram__Group__9_in_rule__SPDiagram__Group__86079 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SPDiagram__ElementsAssignment_8_in_rule__SPDiagram__Group__8__Impl6108 = new BitSet(new long[]{0x0080000000001802L,0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__SPDiagram__ElementsAssignment_8_in_rule__SPDiagram__Group__8__Impl6120 = new BitSet(new long[]{0x0080000000001802L,0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__SPDiagram__ElementsAssignment_8_in_rule__SPDiagram__Group__8__Impl6108 = new BitSet(new long[]{0x0080000000001802L,0x0000000000000030L});
+    public static final BitSet FOLLOW_rule__SPDiagram__ElementsAssignment_8_in_rule__SPDiagram__Group__8__Impl6120 = new BitSet(new long[]{0x0080000000001802L,0x0000000000000030L});
     public static final BitSet FOLLOW_rule__SPDiagram__Group__9__Impl_in_rule__SPDiagram__Group__96153 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_41_in_rule__SPDiagram__Group__9__Impl6181 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__SPDiagram__Group_3__0__Impl_in_rule__SPDiagram__Group_3__06232 = new BitSet(new long[]{0x0000000000000020L});
@@ -14915,184 +15056,188 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
     public static final BitSet FOLLOW_49_in_rule__SPDiagram__Group_4__0__Impl6386 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__SPDiagram__Group_4__1__Impl_in_rule__SPDiagram__Group_4__16417 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__SPDiagram__TitleAssignment_4_1_in_rule__SPDiagram__Group_4__1__Impl6444 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Container__Group__0__Impl_in_rule__Container__Group__06478 = new BitSet(new long[]{0x0080000000001800L,0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Container__Group__0__Impl_in_rule__Container__Group__06478 = new BitSet(new long[]{0x0080000000001800L,0x0000000000000030L});
     public static final BitSet FOLLOW_rule__Container__Group__1_in_rule__Container__Group__06481 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Container__RecursiveAssignment_0_in_rule__Container__Group__0__Impl6508 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Container__Group__1__Impl_in_rule__Container__Group__16539 = new BitSet(new long[]{0x0080000000001800L,0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Container__CreatableAssignment_0_in_rule__Container__Group__0__Impl6508 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Container__Group__1__Impl_in_rule__Container__Group__16539 = new BitSet(new long[]{0x0080000000001800L,0x0000000000000030L});
     public static final BitSet FOLLOW_rule__Container__Group__2_in_rule__Container__Group__16542 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Container__ContainerTypeAssignment_1_in_rule__Container__Group__1__Impl6569 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Container__Group__2__Impl_in_rule__Container__Group__26600 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Container__RecursiveAssignment_1_in_rule__Container__Group__1__Impl6569 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Container__Group__2__Impl_in_rule__Container__Group__26600 = new BitSet(new long[]{0x0080000000001800L,0x0000000000000030L});
     public static final BitSet FOLLOW_rule__Container__Group__3_in_rule__Container__Group__26603 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_55_in_rule__Container__Group__2__Impl6631 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Container__Group__3__Impl_in_rule__Container__Group__36662 = new BitSet(new long[]{0x0008000000000000L});
-    public static final BitSet FOLLOW_rule__Container__Group__4_in_rule__Container__Group__36665 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Container__EClassAssignment_3_in_rule__Container__Group__3__Impl6692 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Container__Group__4__Impl_in_rule__Container__Group__46722 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000007L});
-    public static final BitSet FOLLOW_rule__Container__Group__5_in_rule__Container__Group__46725 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_51_in_rule__Container__Group__4__Impl6753 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Container__Group__5__Impl_in_rule__Container__Group__56784 = new BitSet(new long[]{0x0100010000000000L});
-    public static final BitSet FOLLOW_rule__Container__Group__6_in_rule__Container__Group__56787 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Container__ExpressionAssignment_5_in_rule__Container__Group__5__Impl6814 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Container__Group__6__Impl_in_rule__Container__Group__66844 = new BitSet(new long[]{0x0100010000000000L});
-    public static final BitSet FOLLOW_rule__Container__Group__7_in_rule__Container__Group__66847 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Container__StyleAssignment_6_in_rule__Container__Group__6__Impl6874 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Container__Group__7__Impl_in_rule__Container__Group__76905 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Container__Group_7__0_in_rule__Container__Group__7__Impl6932 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Container__Group_7__0__Impl_in_rule__Container__Group_7__06979 = new BitSet(new long[]{0x0080000000001800L,0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Container__Group_7__1_in_rule__Container__Group_7__06982 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_rule__Container__Group_7__0__Impl7010 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Container__Group_7__1__Impl_in_rule__Container__Group_7__17041 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_rule__Container__Group_7__2_in_rule__Container__Group_7__17044 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Container__ElementsAssignment_7_1_in_rule__Container__Group_7__1__Impl7073 = new BitSet(new long[]{0x0080000000001802L,0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Container__ElementsAssignment_7_1_in_rule__Container__Group_7__1__Impl7085 = new BitSet(new long[]{0x0080000000001802L,0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Container__Group_7__2__Impl_in_rule__Container__Group_7__27118 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rule__Container__Group_7__2__Impl7146 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__Group__0__Impl_in_rule__ContainerStyleDefinition__Group__07183 = new BitSet(new long[]{0x1800000000000000L});
-    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__Group__1_in_rule__ContainerStyleDefinition__Group__07186 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_56_in_rule__ContainerStyleDefinition__Group__0__Impl7214 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__Group__1__Impl_in_rule__ContainerStyleDefinition__Group__17245 = new BitSet(new long[]{0x0600000000000000L});
-    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__Group__2_in_rule__ContainerStyleDefinition__Group__17248 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__ColorAssignment_1_in_rule__ContainerStyleDefinition__Group__1__Impl7275 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__Group__2__Impl_in_rule__ContainerStyleDefinition__Group__27305 = new BitSet(new long[]{0x0600000000000000L});
-    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__Group__3_in_rule__ContainerStyleDefinition__Group__27308 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__Group_2__0_in_rule__ContainerStyleDefinition__Group__2__Impl7335 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__Group__3__Impl_in_rule__ContainerStyleDefinition__Group__37366 = new BitSet(new long[]{0x0600000000000000L});
-    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__Group__4_in_rule__ContainerStyleDefinition__Group__37369 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__Group_3__0_in_rule__ContainerStyleDefinition__Group__3__Impl7396 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__Group__4__Impl_in_rule__ContainerStyleDefinition__Group__47427 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_57_in_rule__ContainerStyleDefinition__Group__4__Impl7455 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__Group_2__0__Impl_in_rule__ContainerStyleDefinition__Group_2__07496 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__Group_2__1_in_rule__ContainerStyleDefinition__Group_2__07499 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_58_in_rule__ContainerStyleDefinition__Group_2__0__Impl7527 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__Group_2__1__Impl_in_rule__ContainerStyleDefinition__Group_2__17558 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__LabelAssignment_2_1_in_rule__ContainerStyleDefinition__Group_2__1__Impl7585 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__Group_3__0__Impl_in_rule__ContainerStyleDefinition__Group_3__07619 = new BitSet(new long[]{0x8000000000000000L});
-    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__Group_3__1_in_rule__ContainerStyleDefinition__Group_3__07622 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_58_in_rule__ContainerStyleDefinition__Group_3__0__Impl7650 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__Group_3__1__Impl_in_rule__ContainerStyleDefinition__Group_3__17681 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__BorderAssignment_3_1_in_rule__ContainerStyleDefinition__Group_3__1__Impl7708 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SolidColorDefinition__Group__0__Impl_in_rule__SolidColorDefinition__Group__07742 = new BitSet(new long[]{0x0000007FFFFFE000L});
-    public static final BitSet FOLLOW_rule__SolidColorDefinition__Group__1_in_rule__SolidColorDefinition__Group__07745 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_59_in_rule__SolidColorDefinition__Group__0__Impl7773 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SolidColorDefinition__Group__1__Impl_in_rule__SolidColorDefinition__Group__17804 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SolidColorDefinition__ColorAssignment_1_in_rule__SolidColorDefinition__Group__1__Impl7831 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GradientColorDefinition__Group__0__Impl_in_rule__GradientColorDefinition__Group__07865 = new BitSet(new long[]{0x0000007FFFFFE000L});
-    public static final BitSet FOLLOW_rule__GradientColorDefinition__Group__1_in_rule__GradientColorDefinition__Group__07868 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_60_in_rule__GradientColorDefinition__Group__0__Impl7896 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GradientColorDefinition__Group__1__Impl_in_rule__GradientColorDefinition__Group__17927 = new BitSet(new long[]{0x2000000000000000L});
-    public static final BitSet FOLLOW_rule__GradientColorDefinition__Group__2_in_rule__GradientColorDefinition__Group__17930 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GradientColorDefinition__FromAssignment_1_in_rule__GradientColorDefinition__Group__1__Impl7957 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GradientColorDefinition__Group__2__Impl_in_rule__GradientColorDefinition__Group__27987 = new BitSet(new long[]{0x0000007FFFFFE000L});
-    public static final BitSet FOLLOW_rule__GradientColorDefinition__Group__3_in_rule__GradientColorDefinition__Group__27990 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_61_in_rule__GradientColorDefinition__Group__2__Impl8018 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GradientColorDefinition__Group__3__Impl_in_rule__GradientColorDefinition__Group__38049 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GradientColorDefinition__ToAssignment_3_in_rule__GradientColorDefinition__Group__3__Impl8076 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelStyleDefinition__Group__0__Impl_in_rule__LabelStyleDefinition__Group__08114 = new BitSet(new long[]{0x0800000000000000L,0x0000000000000007L});
-    public static final BitSet FOLLOW_rule__LabelStyleDefinition__Group__1_in_rule__LabelStyleDefinition__Group__08117 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_48_in_rule__LabelStyleDefinition__Group__0__Impl8145 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelStyleDefinition__Group__1__Impl_in_rule__LabelStyleDefinition__Group__18176 = new BitSet(new long[]{0x0800000000000000L,0x0000000000000007L});
-    public static final BitSet FOLLOW_rule__LabelStyleDefinition__Group__2_in_rule__LabelStyleDefinition__Group__18179 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelStyleDefinition__ExpressionAssignment_1_in_rule__LabelStyleDefinition__Group__1__Impl8206 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelStyleDefinition__Group__2__Impl_in_rule__LabelStyleDefinition__Group__28237 = new BitSet(new long[]{0x4000000000000000L,0x00000000000000C0L});
-    public static final BitSet FOLLOW_rule__LabelStyleDefinition__Group__3_in_rule__LabelStyleDefinition__Group__28240 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelStyleDefinition__ColorAssignment_2_in_rule__LabelStyleDefinition__Group__2__Impl8267 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelStyleDefinition__Group__3__Impl_in_rule__LabelStyleDefinition__Group__38297 = new BitSet(new long[]{0x4000000000000000L,0x00000000000000C0L});
-    public static final BitSet FOLLOW_rule__LabelStyleDefinition__Group__4_in_rule__LabelStyleDefinition__Group__38300 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelStyleDefinition__Group_3__0_in_rule__LabelStyleDefinition__Group__3__Impl8327 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelStyleDefinition__Group__4__Impl_in_rule__LabelStyleDefinition__Group__48358 = new BitSet(new long[]{0x4000000000000000L,0x00000000000000C0L});
-    public static final BitSet FOLLOW_rule__LabelStyleDefinition__Group__5_in_rule__LabelStyleDefinition__Group__48361 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelStyleDefinition__BoldAssignment_4_in_rule__LabelStyleDefinition__Group__4__Impl8388 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelStyleDefinition__Group__5__Impl_in_rule__LabelStyleDefinition__Group__58419 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelStyleDefinition__ItalicAssignment_5_in_rule__LabelStyleDefinition__Group__5__Impl8446 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelStyleDefinition__Group_3__0__Impl_in_rule__LabelStyleDefinition__Group_3__08489 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__LabelStyleDefinition__Group_3__1_in_rule__LabelStyleDefinition__Group_3__08492 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_62_in_rule__LabelStyleDefinition__Group_3__0__Impl8520 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelStyleDefinition__Group_3__1__Impl_in_rule__LabelStyleDefinition__Group_3__18551 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__LabelStyleDefinition__SizeAssignment_3_1_in_rule__LabelStyleDefinition__Group_3__1__Impl8578 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BorderStyleDefinition__Group__0__Impl_in_rule__BorderStyleDefinition__Group__08612 = new BitSet(new long[]{0x0800000000000000L});
-    public static final BitSet FOLLOW_rule__BorderStyleDefinition__Group__1_in_rule__BorderStyleDefinition__Group__08615 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_63_in_rule__BorderStyleDefinition__Group__0__Impl8643 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BorderStyleDefinition__Group__1__Impl_in_rule__BorderStyleDefinition__Group__18674 = new BitSet(new long[]{0x4000000000000000L});
-    public static final BitSet FOLLOW_rule__BorderStyleDefinition__Group__2_in_rule__BorderStyleDefinition__Group__18677 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BorderStyleDefinition__ColorAssignment_1_in_rule__BorderStyleDefinition__Group__1__Impl8704 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BorderStyleDefinition__Group__2__Impl_in_rule__BorderStyleDefinition__Group__28734 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BorderStyleDefinition__Group_2__0_in_rule__BorderStyleDefinition__Group__2__Impl8761 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BorderStyleDefinition__Group_2__0__Impl_in_rule__BorderStyleDefinition__Group_2__08798 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__BorderStyleDefinition__Group_2__1_in_rule__BorderStyleDefinition__Group_2__08801 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_62_in_rule__BorderStyleDefinition__Group_2__0__Impl8829 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BorderStyleDefinition__Group_2__1__Impl_in_rule__BorderStyleDefinition__Group_2__18860 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BorderStyleDefinition__SizeAssignment_2_1_in_rule__BorderStyleDefinition__Group_2__1__Impl8887 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AcceleoExpression__Group__0__Impl_in_rule__AcceleoExpression__Group__08921 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__AcceleoExpression__Group__1_in_rule__AcceleoExpression__Group__08924 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_64_in_rule__AcceleoExpression__Group__0__Impl8952 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AcceleoExpression__Group__1__Impl_in_rule__AcceleoExpression__Group__18983 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__AcceleoExpression__ValueAssignment_1_in_rule__AcceleoExpression__Group__1__Impl9010 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__VarRef__Group__0__Impl_in_rule__VarRef__Group__09044 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__VarRef__Group__1_in_rule__VarRef__Group__09047 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_65_in_rule__VarRef__Group__0__Impl9075 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__VarRef__Group__1__Impl_in_rule__VarRef__Group__19106 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__VarRef__ValueAssignment_1_in_rule__VarRef__Group__1__Impl9133 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FeatureRef__Group__0__Impl_in_rule__FeatureRef__Group__09167 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__FeatureRef__Group__1_in_rule__FeatureRef__Group__09170 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_66_in_rule__FeatureRef__Group__0__Impl9198 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FeatureRef__Group__1__Impl_in_rule__FeatureRef__Group__19229 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FeatureRef__ValueAssignment_1_in_rule__FeatureRef__Group__1__Impl9256 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MetamodelRef__Group__0__Impl_in_rule__MetamodelRef__Group__09290 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__MetamodelRef__Group__1_in_rule__MetamodelRef__Group__09293 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_67_in_rule__MetamodelRef__Group__0__Impl9321 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MetamodelRef__Group__1__Impl_in_rule__MetamodelRef__Group__19352 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MetamodelRef__MetamodelAssignment_1_in_rule__MetamodelRef__Group__1__Impl9379 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__SPrototyper__NameAssignment_19418 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__SPrototyper__QualifierAssignment_3_19449 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSPViewpoint_in_rule__SPrototyper__ViewpointsAssignment_49480 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__SPViewpoint__NameAssignment_19511 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__SPViewpoint__ShortcutAssignment_3_19542 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__SPViewpoint__ExtensionAssignment_4_19573 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSPRepresentation_in_rule__SPViewpoint__RepresentationsAssignment_59604 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__SPTable__NameAssignment_19635 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__SPTable__LabelAssignment_3_19666 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__SPTable__TitleAssignment_4_19697 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMetamodelRef_in_rule__SPTable__MetamodelsAssignment_59728 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__SPTable__RootAssignment_79759 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTableElement_in_rule__SPTable__ElementsAssignment_89790 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTableProperty_in_rule__SPTable__PropertiesAssignment_99821 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_68_in_rule__TableElement__CreatableAssignment_09857 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_69_in_rule__TableElement__RecursiveAssignment_19901 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__TableElement__EClassAssignment_39940 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSPExpression_in_rule__TableElement__ExpressionAssignment_59971 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTableElement_in_rule__TableElement__SubElementsAssignment_6_110002 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__TableProperty__FeatureAssignment_110033 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__TableProperty__LabelAssignment_2_110064 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSPExpression_in_rule__TableProperty__ExpressionAssignment_3_110095 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__SPDiagram__NameAssignment_110126 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__SPDiagram__LabelAssignment_3_110157 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__SPDiagram__TitleAssignment_4_110188 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMetamodelRef_in_rule__SPDiagram__MetamodelsAssignment_510219 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__SPDiagram__RootAssignment_710250 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDiagramElement_in_rule__SPDiagram__ElementsAssignment_810281 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_69_in_rule__Container__RecursiveAssignment_010317 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleContainerType_in_rule__Container__ContainerTypeAssignment_110356 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Container__EClassAssignment_310387 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSPExpression_in_rule__Container__ExpressionAssignment_510418 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleContainerStyleDefinition_in_rule__Container__StyleAssignment_610449 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDiagramElement_in_rule__Container__ElementsAssignment_7_110480 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleContainerColorDefinition_in_rule__ContainerStyleDefinition__ColorAssignment_110511 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLabelStyleDefinition_in_rule__ContainerStyleDefinition__LabelAssignment_2_110542 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBorderStyleDefinition_in_rule__ContainerStyleDefinition__BorderAssignment_3_110573 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleColor_in_rule__SolidColorDefinition__ColorAssignment_110604 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleColor_in_rule__GradientColorDefinition__FromAssignment_110635 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleColor_in_rule__GradientColorDefinition__ToAssignment_310666 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSPExpression_in_rule__LabelStyleDefinition__ExpressionAssignment_110697 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSolidColorDefinition_in_rule__LabelStyleDefinition__ColorAssignment_210728 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__LabelStyleDefinition__SizeAssignment_3_110759 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_70_in_rule__LabelStyleDefinition__BoldAssignment_410795 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_71_in_rule__LabelStyleDefinition__ItalicAssignment_510839 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSolidColorDefinition_in_rule__BorderStyleDefinition__ColorAssignment_110878 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__BorderStyleDefinition__SizeAssignment_2_110909 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__AcceleoExpression__ValueAssignment_110940 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__VarRef__ValueAssignment_110971 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__FeatureRef__ValueAssignment_111002 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__MetamodelRef__MetamodelAssignment_111033 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePreDefinedColor_in_rule__PreDefinedColorDefinition__ColorAssignment11064 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Container__ContainerTypeAssignment_2_in_rule__Container__Group__2__Impl6630 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Container__Group__3__Impl_in_rule__Container__Group__36661 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Container__Group__4_in_rule__Container__Group__36664 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_55_in_rule__Container__Group__3__Impl6692 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Container__Group__4__Impl_in_rule__Container__Group__46723 = new BitSet(new long[]{0x0008000000000000L});
+    public static final BitSet FOLLOW_rule__Container__Group__5_in_rule__Container__Group__46726 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Container__EClassAssignment_4_in_rule__Container__Group__4__Impl6753 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Container__Group__5__Impl_in_rule__Container__Group__56783 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000007L});
+    public static final BitSet FOLLOW_rule__Container__Group__6_in_rule__Container__Group__56786 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_51_in_rule__Container__Group__5__Impl6814 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Container__Group__6__Impl_in_rule__Container__Group__66845 = new BitSet(new long[]{0x0100010000000000L});
+    public static final BitSet FOLLOW_rule__Container__Group__7_in_rule__Container__Group__66848 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Container__ExpressionAssignment_6_in_rule__Container__Group__6__Impl6875 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Container__Group__7__Impl_in_rule__Container__Group__76905 = new BitSet(new long[]{0x0100010000000000L});
+    public static final BitSet FOLLOW_rule__Container__Group__8_in_rule__Container__Group__76908 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Container__StyleAssignment_7_in_rule__Container__Group__7__Impl6935 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Container__Group__8__Impl_in_rule__Container__Group__86966 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Container__Group_8__0_in_rule__Container__Group__8__Impl6993 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Container__Group_8__0__Impl_in_rule__Container__Group_8__07042 = new BitSet(new long[]{0x0080000000001800L,0x0000000000000030L});
+    public static final BitSet FOLLOW_rule__Container__Group_8__1_in_rule__Container__Group_8__07045 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_rule__Container__Group_8__0__Impl7073 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Container__Group_8__1__Impl_in_rule__Container__Group_8__17104 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_rule__Container__Group_8__2_in_rule__Container__Group_8__17107 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Container__ElementsAssignment_8_1_in_rule__Container__Group_8__1__Impl7136 = new BitSet(new long[]{0x0080000000001802L,0x0000000000000030L});
+    public static final BitSet FOLLOW_rule__Container__ElementsAssignment_8_1_in_rule__Container__Group_8__1__Impl7148 = new BitSet(new long[]{0x0080000000001802L,0x0000000000000030L});
+    public static final BitSet FOLLOW_rule__Container__Group_8__2__Impl_in_rule__Container__Group_8__27181 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__Container__Group_8__2__Impl7209 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__Group__0__Impl_in_rule__ContainerStyleDefinition__Group__07246 = new BitSet(new long[]{0x1800000000000000L});
+    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__Group__1_in_rule__ContainerStyleDefinition__Group__07249 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_56_in_rule__ContainerStyleDefinition__Group__0__Impl7277 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__Group__1__Impl_in_rule__ContainerStyleDefinition__Group__17308 = new BitSet(new long[]{0x0600000000000000L});
+    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__Group__2_in_rule__ContainerStyleDefinition__Group__17311 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__ColorAssignment_1_in_rule__ContainerStyleDefinition__Group__1__Impl7338 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__Group__2__Impl_in_rule__ContainerStyleDefinition__Group__27368 = new BitSet(new long[]{0x0600000000000000L});
+    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__Group__3_in_rule__ContainerStyleDefinition__Group__27371 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__Group_2__0_in_rule__ContainerStyleDefinition__Group__2__Impl7398 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__Group__3__Impl_in_rule__ContainerStyleDefinition__Group__37429 = new BitSet(new long[]{0x0600000000000000L});
+    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__Group__4_in_rule__ContainerStyleDefinition__Group__37432 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__Group_3__0_in_rule__ContainerStyleDefinition__Group__3__Impl7459 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__Group__4__Impl_in_rule__ContainerStyleDefinition__Group__47490 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_57_in_rule__ContainerStyleDefinition__Group__4__Impl7518 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__Group_2__0__Impl_in_rule__ContainerStyleDefinition__Group_2__07559 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__Group_2__1_in_rule__ContainerStyleDefinition__Group_2__07562 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_58_in_rule__ContainerStyleDefinition__Group_2__0__Impl7590 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__Group_2__1__Impl_in_rule__ContainerStyleDefinition__Group_2__17621 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__LabelAssignment_2_1_in_rule__ContainerStyleDefinition__Group_2__1__Impl7648 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__Group_3__0__Impl_in_rule__ContainerStyleDefinition__Group_3__07682 = new BitSet(new long[]{0x8000000000000000L});
+    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__Group_3__1_in_rule__ContainerStyleDefinition__Group_3__07685 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_58_in_rule__ContainerStyleDefinition__Group_3__0__Impl7713 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__Group_3__1__Impl_in_rule__ContainerStyleDefinition__Group_3__17744 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ContainerStyleDefinition__BorderAssignment_3_1_in_rule__ContainerStyleDefinition__Group_3__1__Impl7771 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SolidColorDefinition__Group__0__Impl_in_rule__SolidColorDefinition__Group__07805 = new BitSet(new long[]{0x0000007FFFFFE000L});
+    public static final BitSet FOLLOW_rule__SolidColorDefinition__Group__1_in_rule__SolidColorDefinition__Group__07808 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_59_in_rule__SolidColorDefinition__Group__0__Impl7836 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SolidColorDefinition__Group__1__Impl_in_rule__SolidColorDefinition__Group__17867 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SolidColorDefinition__ColorAssignment_1_in_rule__SolidColorDefinition__Group__1__Impl7894 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GradientColorDefinition__Group__0__Impl_in_rule__GradientColorDefinition__Group__07928 = new BitSet(new long[]{0x0000007FFFFFE000L});
+    public static final BitSet FOLLOW_rule__GradientColorDefinition__Group__1_in_rule__GradientColorDefinition__Group__07931 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_60_in_rule__GradientColorDefinition__Group__0__Impl7959 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GradientColorDefinition__Group__1__Impl_in_rule__GradientColorDefinition__Group__17990 = new BitSet(new long[]{0x2000000000000000L});
+    public static final BitSet FOLLOW_rule__GradientColorDefinition__Group__2_in_rule__GradientColorDefinition__Group__17993 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GradientColorDefinition__FromAssignment_1_in_rule__GradientColorDefinition__Group__1__Impl8020 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GradientColorDefinition__Group__2__Impl_in_rule__GradientColorDefinition__Group__28050 = new BitSet(new long[]{0x0000007FFFFFE000L});
+    public static final BitSet FOLLOW_rule__GradientColorDefinition__Group__3_in_rule__GradientColorDefinition__Group__28053 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_61_in_rule__GradientColorDefinition__Group__2__Impl8081 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GradientColorDefinition__Group__3__Impl_in_rule__GradientColorDefinition__Group__38112 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GradientColorDefinition__ToAssignment_3_in_rule__GradientColorDefinition__Group__3__Impl8139 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelStyleDefinition__Group__0__Impl_in_rule__LabelStyleDefinition__Group__08177 = new BitSet(new long[]{0x0800000000000000L,0x0000000000000007L});
+    public static final BitSet FOLLOW_rule__LabelStyleDefinition__Group__1_in_rule__LabelStyleDefinition__Group__08180 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_rule__LabelStyleDefinition__Group__0__Impl8208 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelStyleDefinition__Group__1__Impl_in_rule__LabelStyleDefinition__Group__18239 = new BitSet(new long[]{0x0800000000000000L,0x0000000000000007L});
+    public static final BitSet FOLLOW_rule__LabelStyleDefinition__Group__2_in_rule__LabelStyleDefinition__Group__18242 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelStyleDefinition__ExpressionAssignment_1_in_rule__LabelStyleDefinition__Group__1__Impl8269 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelStyleDefinition__Group__2__Impl_in_rule__LabelStyleDefinition__Group__28300 = new BitSet(new long[]{0x4000000000000000L,0x00000000000000C0L});
+    public static final BitSet FOLLOW_rule__LabelStyleDefinition__Group__3_in_rule__LabelStyleDefinition__Group__28303 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelStyleDefinition__ColorAssignment_2_in_rule__LabelStyleDefinition__Group__2__Impl8330 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelStyleDefinition__Group__3__Impl_in_rule__LabelStyleDefinition__Group__38360 = new BitSet(new long[]{0x4000000000000000L,0x00000000000000C0L});
+    public static final BitSet FOLLOW_rule__LabelStyleDefinition__Group__4_in_rule__LabelStyleDefinition__Group__38363 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelStyleDefinition__Group_3__0_in_rule__LabelStyleDefinition__Group__3__Impl8390 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelStyleDefinition__Group__4__Impl_in_rule__LabelStyleDefinition__Group__48421 = new BitSet(new long[]{0x4000000000000000L,0x00000000000000C0L});
+    public static final BitSet FOLLOW_rule__LabelStyleDefinition__Group__5_in_rule__LabelStyleDefinition__Group__48424 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelStyleDefinition__BoldAssignment_4_in_rule__LabelStyleDefinition__Group__4__Impl8451 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelStyleDefinition__Group__5__Impl_in_rule__LabelStyleDefinition__Group__58482 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelStyleDefinition__ItalicAssignment_5_in_rule__LabelStyleDefinition__Group__5__Impl8509 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelStyleDefinition__Group_3__0__Impl_in_rule__LabelStyleDefinition__Group_3__08552 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__LabelStyleDefinition__Group_3__1_in_rule__LabelStyleDefinition__Group_3__08555 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_62_in_rule__LabelStyleDefinition__Group_3__0__Impl8583 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelStyleDefinition__Group_3__1__Impl_in_rule__LabelStyleDefinition__Group_3__18614 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__LabelStyleDefinition__SizeAssignment_3_1_in_rule__LabelStyleDefinition__Group_3__1__Impl8641 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BorderStyleDefinition__Group__0__Impl_in_rule__BorderStyleDefinition__Group__08675 = new BitSet(new long[]{0x0800000000000000L});
+    public static final BitSet FOLLOW_rule__BorderStyleDefinition__Group__1_in_rule__BorderStyleDefinition__Group__08678 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_63_in_rule__BorderStyleDefinition__Group__0__Impl8706 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BorderStyleDefinition__Group__1__Impl_in_rule__BorderStyleDefinition__Group__18737 = new BitSet(new long[]{0x4000000000000000L});
+    public static final BitSet FOLLOW_rule__BorderStyleDefinition__Group__2_in_rule__BorderStyleDefinition__Group__18740 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BorderStyleDefinition__ColorAssignment_1_in_rule__BorderStyleDefinition__Group__1__Impl8767 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BorderStyleDefinition__Group__2__Impl_in_rule__BorderStyleDefinition__Group__28797 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BorderStyleDefinition__Group_2__0_in_rule__BorderStyleDefinition__Group__2__Impl8824 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BorderStyleDefinition__Group_2__0__Impl_in_rule__BorderStyleDefinition__Group_2__08861 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__BorderStyleDefinition__Group_2__1_in_rule__BorderStyleDefinition__Group_2__08864 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_62_in_rule__BorderStyleDefinition__Group_2__0__Impl8892 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BorderStyleDefinition__Group_2__1__Impl_in_rule__BorderStyleDefinition__Group_2__18923 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BorderStyleDefinition__SizeAssignment_2_1_in_rule__BorderStyleDefinition__Group_2__1__Impl8950 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AcceleoExpression__Group__0__Impl_in_rule__AcceleoExpression__Group__08984 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__AcceleoExpression__Group__1_in_rule__AcceleoExpression__Group__08987 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_64_in_rule__AcceleoExpression__Group__0__Impl9015 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AcceleoExpression__Group__1__Impl_in_rule__AcceleoExpression__Group__19046 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AcceleoExpression__ValueAssignment_1_in_rule__AcceleoExpression__Group__1__Impl9073 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__VarRef__Group__0__Impl_in_rule__VarRef__Group__09107 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__VarRef__Group__1_in_rule__VarRef__Group__09110 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_65_in_rule__VarRef__Group__0__Impl9138 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__VarRef__Group__1__Impl_in_rule__VarRef__Group__19169 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__VarRef__ValueAssignment_1_in_rule__VarRef__Group__1__Impl9196 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FeatureRef__Group__0__Impl_in_rule__FeatureRef__Group__09230 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__FeatureRef__Group__1_in_rule__FeatureRef__Group__09233 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_66_in_rule__FeatureRef__Group__0__Impl9261 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FeatureRef__Group__1__Impl_in_rule__FeatureRef__Group__19292 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FeatureRef__ValueAssignment_1_in_rule__FeatureRef__Group__1__Impl9319 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MetamodelRef__Group__0__Impl_in_rule__MetamodelRef__Group__09353 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__MetamodelRef__Group__1_in_rule__MetamodelRef__Group__09356 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_67_in_rule__MetamodelRef__Group__0__Impl9384 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MetamodelRef__Group__1__Impl_in_rule__MetamodelRef__Group__19415 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MetamodelRef__MetamodelAssignment_1_in_rule__MetamodelRef__Group__1__Impl9442 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__SPrototyper__NameAssignment_19481 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__SPrototyper__QualifierAssignment_3_19512 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSPViewpoint_in_rule__SPrototyper__ViewpointsAssignment_49543 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__SPViewpoint__NameAssignment_19574 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__SPViewpoint__ShortcutAssignment_3_19605 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__SPViewpoint__ExtensionAssignment_4_19636 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSPRepresentation_in_rule__SPViewpoint__RepresentationsAssignment_59667 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__SPTable__NameAssignment_19698 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__SPTable__LabelAssignment_3_19729 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__SPTable__TitleAssignment_4_19760 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMetamodelRef_in_rule__SPTable__MetamodelsAssignment_59791 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__SPTable__RootAssignment_79822 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTableElement_in_rule__SPTable__ElementsAssignment_89853 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTableProperty_in_rule__SPTable__PropertiesAssignment_99884 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_68_in_rule__TableElement__CreatableAssignment_09920 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_69_in_rule__TableElement__RecursiveAssignment_19964 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__TableElement__EClassAssignment_310003 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSPExpression_in_rule__TableElement__ExpressionAssignment_510034 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTableElement_in_rule__TableElement__SubElementsAssignment_6_110065 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__TableProperty__FeatureAssignment_110096 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__TableProperty__LabelAssignment_2_110127 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSPExpression_in_rule__TableProperty__ExpressionAssignment_3_110158 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__SPDiagram__NameAssignment_110189 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__SPDiagram__LabelAssignment_3_110220 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__SPDiagram__TitleAssignment_4_110251 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMetamodelRef_in_rule__SPDiagram__MetamodelsAssignment_510282 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__SPDiagram__RootAssignment_710313 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDiagramElement_in_rule__SPDiagram__ElementsAssignment_810344 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_68_in_rule__Container__CreatableAssignment_010380 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_69_in_rule__Container__RecursiveAssignment_110424 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleContainerType_in_rule__Container__ContainerTypeAssignment_210463 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Container__EClassAssignment_410494 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSPExpression_in_rule__Container__ExpressionAssignment_610525 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleContainerStyleDefinition_in_rule__Container__StyleAssignment_710556 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDiagramElement_in_rule__Container__ElementsAssignment_8_110587 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleContainerColorDefinition_in_rule__ContainerStyleDefinition__ColorAssignment_110618 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLabelStyleDefinition_in_rule__ContainerStyleDefinition__LabelAssignment_2_110649 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBorderStyleDefinition_in_rule__ContainerStyleDefinition__BorderAssignment_3_110680 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleColor_in_rule__SolidColorDefinition__ColorAssignment_110711 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleColor_in_rule__GradientColorDefinition__FromAssignment_110742 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleColor_in_rule__GradientColorDefinition__ToAssignment_310773 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSPExpression_in_rule__LabelStyleDefinition__ExpressionAssignment_110804 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSolidColorDefinition_in_rule__LabelStyleDefinition__ColorAssignment_210835 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__LabelStyleDefinition__SizeAssignment_3_110866 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_70_in_rule__LabelStyleDefinition__BoldAssignment_410902 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_71_in_rule__LabelStyleDefinition__ItalicAssignment_510946 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSolidColorDefinition_in_rule__BorderStyleDefinition__ColorAssignment_110985 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__BorderStyleDefinition__SizeAssignment_2_111016 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__AcceleoExpression__ValueAssignment_111047 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__VarRef__ValueAssignment_111078 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__FeatureRef__ValueAssignment_111109 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__MetamodelRef__MetamodelAssignment_111140 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePreDefinedColor_in_rule__PreDefinedColorDefinition__ColorAssignment11171 = new BitSet(new long[]{0x0000000000000002L});
 
 }

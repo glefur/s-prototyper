@@ -198,6 +198,9 @@
         <classifier xsi:type="ecore:EClass" href="http://www.obeo.fr/dsl/SPrototyper#//Container"/>
       </type>
       <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="creatable" operator="?=">
+          <terminal xsi:type="xtext:Keyword" value="creatable"/>
+        </elements>
         <elements xsi:type="xtext:Assignment" cardinality="?" feature="recursive" operator="?=">
           <terminal xsi:type="xtext:Keyword" value="recursive"/>
         </elements>

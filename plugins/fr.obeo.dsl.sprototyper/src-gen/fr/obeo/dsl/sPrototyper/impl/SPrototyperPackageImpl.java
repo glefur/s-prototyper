@@ -592,7 +592,7 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getContainer_Recursive()
+  public EAttribute getContainer_Creatable()
   {
     return (EAttribute)containerEClass.getEStructuralFeatures().get(0);
   }
@@ -602,7 +602,7 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getContainer_ContainerType()
+  public EAttribute getContainer_Recursive()
   {
     return (EAttribute)containerEClass.getEStructuralFeatures().get(1);
   }
@@ -612,7 +612,7 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getContainer_EClass()
+  public EAttribute getContainer_ContainerType()
   {
     return (EAttribute)containerEClass.getEStructuralFeatures().get(2);
   }
@@ -622,9 +622,9 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getContainer_Expression()
+  public EAttribute getContainer_EClass()
   {
-    return (EReference)containerEClass.getEStructuralFeatures().get(3);
+    return (EAttribute)containerEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -632,7 +632,7 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getContainer_Style()
+  public EReference getContainer_Expression()
   {
     return (EReference)containerEClass.getEStructuralFeatures().get(4);
   }
@@ -642,9 +642,19 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getContainer_Elements()
+  public EReference getContainer_Style()
   {
     return (EReference)containerEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getContainer_Elements()
+  {
+    return (EReference)containerEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -1017,6 +1027,7 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
     diagramElementEClass = createEClass(DIAGRAM_ELEMENT);
 
     containerEClass = createEClass(CONTAINER);
+    createEAttribute(containerEClass, CONTAINER__CREATABLE);
     createEAttribute(containerEClass, CONTAINER__RECURSIVE);
     createEAttribute(containerEClass, CONTAINER__CONTAINER_TYPE);
     createEAttribute(containerEClass, CONTAINER__ECLASS);
@@ -1150,6 +1161,7 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
     initEClass(diagramElementEClass, DiagramElement.class, "DiagramElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(containerEClass, fr.obeo.dsl.sPrototyper.Container.class, "Container", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getContainer_Creatable(), ecorePackage.getEBoolean(), "creatable", null, 0, 1, fr.obeo.dsl.sPrototyper.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getContainer_Recursive(), ecorePackage.getEBoolean(), "recursive", null, 0, 1, fr.obeo.dsl.sPrototyper.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getContainer_ContainerType(), ecorePackage.getEString(), "containerType", null, 0, 1, fr.obeo.dsl.sPrototyper.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getContainer_EClass(), ecorePackage.getEString(), "eClass", null, 0, 1, fr.obeo.dsl.sPrototyper.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

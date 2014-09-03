@@ -4,30 +4,23 @@
 package fr.obeo.dsl.sprototyper.initializer.core;
 
 import java.io.IOException;
-import java.util.Collection;
 import java.util.Collections;
-import java.util.Map;
 
 import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.edit.command.CommandParameter;
 import org.eclipse.emf.edit.command.CreateChildCommand;
-import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 
 import com.google.common.base.Splitter;
 import com.google.common.base.Strings;
 import com.google.common.collect.Iterables;
-import com.google.common.collect.Maps;
 
 import fr.obeo.dsl.sPrototyper.AcceleoExpression;
 import fr.obeo.dsl.sPrototyper.BorderStyleDefinition;
-import fr.obeo.dsl.sPrototyper.Color;
 import fr.obeo.dsl.sPrototyper.Container;
 import fr.obeo.dsl.sPrototyper.ContainerColorDefinition;
 import fr.obeo.dsl.sPrototyper.ContainerStyleDefinition;
@@ -36,7 +29,6 @@ import fr.obeo.dsl.sPrototyper.FeatureRef;
 import fr.obeo.dsl.sPrototyper.GradientColorDefinition;
 import fr.obeo.dsl.sPrototyper.LabelStyleDefinition;
 import fr.obeo.dsl.sPrototyper.MetamodelRef;
-import fr.obeo.dsl.sPrototyper.PreDefinedColorDefinition;
 import fr.obeo.dsl.sPrototyper.SPDiagram;
 import fr.obeo.dsl.sPrototyper.SPExpression;
 import fr.obeo.dsl.sPrototyper.SPRepresentation;
@@ -48,23 +40,27 @@ import fr.obeo.dsl.sPrototyper.SolidColorDefinition;
 import fr.obeo.dsl.sPrototyper.TableElement;
 import fr.obeo.dsl.sPrototyper.TableProperty;
 import fr.obeo.dsl.sPrototyper.VarRef;
+import fr.obeo.dsl.sprototyper.initializer.core.services.NamingService;
+import fr.obeo.dsl.sprototyper.initializer.core.services.ToolsService;
+import fr.obeo.dsl.sprototyper.initializer.core.services.VSMService;
 import fr.obeo.dsl.viewpoint.ContainerLayout;
 import fr.obeo.dsl.viewpoint.FontFormat;
-import fr.obeo.dsl.viewpoint.description.ColorDescription;
 import fr.obeo.dsl.viewpoint.description.ContainerMapping;
 import fr.obeo.dsl.viewpoint.description.DescriptionFactory;
 import fr.obeo.dsl.viewpoint.description.DiagramDescription;
-import fr.obeo.dsl.viewpoint.description.Environment;
 import fr.obeo.dsl.viewpoint.description.Group;
 import fr.obeo.dsl.viewpoint.description.Layer;
-import fr.obeo.dsl.viewpoint.description.SystemColor;
 import fr.obeo.dsl.viewpoint.description.Viewpoint;
 import fr.obeo.dsl.viewpoint.description.style.FlatContainerStyleDescription;
 import fr.obeo.dsl.viewpoint.description.style.StyleFactory;
 import fr.obeo.dsl.viewpoint.description.tool.ChangeContext;
-import fr.obeo.dsl.viewpoint.description.tool.CreateInstance;
+import fr.obeo.dsl.viewpoint.description.tool.ContainerCreationDescription;
+import fr.obeo.dsl.viewpoint.description.tool.InitialNodeCreationOperation;
 import fr.obeo.dsl.viewpoint.description.tool.ToolFactory;
+import fr.obeo.dsl.viewpoint.description.tool.ToolPackage;
+import fr.obeo.dsl.viewpoint.description.tool.ToolSection;
 import fr.obeo.dsl.viewpoint.table.metamodel.table.description.CreateLineTool;
+import fr.obeo.dsl.viewpoint.table.metamodel.table.description.DescriptionPackage;
 import fr.obeo.dsl.viewpoint.table.metamodel.table.description.EditionTableDescription;
 import fr.obeo.dsl.viewpoint.table.metamodel.table.description.FeatureColumnMapping;
 import fr.obeo.dsl.viewpoint.table.metamodel.table.description.LineMapping;
@@ -76,11 +72,19 @@ import fr.obeo.dsl.viewpoint.table.metamodel.table.description.LineMapping;
 public class Initializer {
 
 	private static final String DEFAULT_LABEL_EXPRESSION = "feature:name";
+	
+	private NamingService namingService;
+	private ToolsService toolsService;
+	private VSMService vsmService;
+	
 	private EditingDomain editingDomain;
 	private SPrototyper sPrototyper;
-	private Environment environment;
 
-	public Initializer(EditingDomain editingDomain, SPrototyper sPrototyper) {
+
+	public Initializer(NamingService namingService, ToolsService toolsService, VSMService vsmService, EditingDomain editingDomain, SPrototyper sPrototyper) {
+		this.namingService = namingService;
+		this.toolsService = toolsService;
+		this.vsmService = vsmService;
 		this.editingDomain = editingDomain;
 		this.sPrototyper = sPrototyper;
 	}
@@ -95,13 +99,8 @@ public class Initializer {
 			Viewpoint viewpoint = createViewpoint(spViewpoint);
 			group.getOwnedViewpoints().add(viewpoint);
 		}
-		Map<Object, Object> options = Maps.newHashMap();
-		options.put(XMLResource.OPTION_ENCODING, "UTF-8");
-
-		resource.save(options);
 
 	}
-
 
 	private Viewpoint createViewpoint(SPViewpoint spViewpoint) {
 		Viewpoint viewpoint = DescriptionFactory.eINSTANCE.createViewpoint();
@@ -124,7 +123,7 @@ public class Initializer {
 	private EditionTableDescription createEditionTable(SPViewpoint spViewpoint, SPTable spTable) {
 		EditionTableDescription editionTableDescription = fr.obeo.dsl.viewpoint.table.metamodel.table.description.DescriptionFactory.eINSTANCE.createEditionTableDescription();
 		editionTableDescription.setDomainClass(spTable.getRoot());
-		editionTableDescription.setName(sPrototyper.getQualifier() + "." + computeViewpointShortcut(spViewpoint) + ".rep." + spTable.getName());
+		editionTableDescription.setName(sPrototyper.getQualifier() + "." + namingService.computeViewpointShortcut(spViewpoint) + ".rep." + spTable.getName());
 		if (!Strings.isNullOrEmpty(spTable.getLabel())) {
 			editionTableDescription.setLabel(spTable.getLabel());
 		} else {
@@ -158,7 +157,7 @@ public class Initializer {
 		LineMapping lm = fr.obeo.dsl.viewpoint.table.metamodel.table.description.DescriptionFactory.eINSTANCE.createLineMapping();
 		lm.setDomainClass(element.getEClass());
 		String elementName = Iterables.getLast(Splitter.on('.').split(element.getEClass()));
-		String representationQualifier = computeTableQualifier(spViewpoint, spTable);
+		String representationQualifier = namingService.computeTableQualifier(spViewpoint, spTable);
 		String mappingName = representationQualifier  + ".line." + elementName;
 		lm.setName(mappingName);
 		lm.setSemanticCandidatesExpression(generateVPExpression(element.getExpression()));
@@ -168,7 +167,7 @@ public class Initializer {
 
 		if (element.isCreatable()) {
 			if (element.getExpression() instanceof FeatureRef) {
-				CommandParameter creationParameter = getCreateLineToolCreationParameter(parent);
+				CommandParameter creationParameter = toolsService.getToolCreationParameter(DescriptionPackage.Literals.CREATE_LINE_TOOL, parent);
 				if (creationParameter != null) {
 					CreateLineTool tool = (CreateLineTool) creationParameter.getValue();
 					tool.setForceRefresh(true);
@@ -176,20 +175,20 @@ public class Initializer {
 					tool.setName(representationQualifier + ".tool." + elementName);
 					tool.setLabel("new " + elementName);
 
-					ChangeContext changeContext = createToolModelOperation(element);
+					ChangeContext changeContext = toolsService.createToolModelOperation(element);
 					tool.setFirstModelOperation(changeContext);
 					Command cmd = CreateChildCommand.create(editingDomain, parent, creationParameter, Collections.emptyList());
 					editingDomain.getCommandStack().execute(cmd);
 				}
 				if (element.isRecursive()) {
-					CommandParameter subToolCreationParameter = getCreateLineToolCreationParameter(lm);
+					CommandParameter subToolCreationParameter = toolsService.getToolCreationParameter(DescriptionPackage.Literals.CREATE_LINE_TOOL, lm);
 					if (subToolCreationParameter != null) {
 						CreateLineTool subtool = (CreateLineTool) subToolCreationParameter.getValue();
 						subtool.setForceRefresh(true);
 						subtool.setMapping(lm);
 						subtool.setName(representationQualifier + ".subtool." + elementName);
 						subtool.setLabel("new " + elementName);
-						ChangeContext changeContext = createToolModelOperation(element);
+						ChangeContext changeContext = toolsService.createToolModelOperation(element);
 						subtool.setFirstModelOperation(changeContext);
 						Command cmd = CreateChildCommand.create(editingDomain, lm, subToolCreationParameter, Collections.emptyList());
 						editingDomain.getCommandStack().execute(cmd);
@@ -208,34 +207,9 @@ public class Initializer {
 		return lm;
 	}
 
-	private CommandParameter getCreateLineToolCreationParameter(EObject parent) {
-		CommandParameter creationParameter = null;
-		IEditingDomainItemProvider provider = (IEditingDomainItemProvider)((AdapterFactoryEditingDomain)editingDomain).getAdapterFactory().adapt(parent, IEditingDomainItemProvider.class);
-		Collection<?> descriptors = provider.getNewChildDescriptors(parent, editingDomain, Collections.EMPTY_LIST);
-		for (Object object : descriptors) {
-			if (object instanceof CommandParameter) {
-				CommandParameter param = (CommandParameter) object;
-				if (param.getValue() instanceof CreateLineTool) {
-					creationParameter = param;
-				}
-			}
-		}
-		return creationParameter;
-	}
-
-	private ChangeContext createToolModelOperation(TableElement element) {
-		ChangeContext changeContext = ToolFactory.eINSTANCE.createChangeContext();
-		changeContext.setBrowseExpression("var:element");
-		CreateInstance createInstance = ToolFactory.eINSTANCE.createCreateInstance();
-		createInstance.setReferenceName(element.getExpression().getValue());
-		createInstance.setTypeName(element.getEClass());
-		changeContext.getSubModelOperations().add(createInstance);
-		return changeContext;
-	}
-
 	private FeatureColumnMapping createPropertyMapping(SPViewpoint spViewpoint, SPTable spTable, TableProperty property) {
 		FeatureColumnMapping cm = fr.obeo.dsl.viewpoint.table.metamodel.table.description.DescriptionFactory.eINSTANCE.createFeatureColumnMapping();
-		cm.setName(computeTableQualifier(spViewpoint, spTable) + ".column." + property.getFeature().toLowerCase());
+		cm.setName(namingService.computeTableQualifier(spViewpoint, spTable) + ".column." + property.getFeature().toLowerCase());
 		cm.setFeatureName(property.getFeature());
 		if (!Strings.isNullOrEmpty(property.getLabel())) {
 			cm.setHeaderLabelExpression(property.getLabel());
@@ -250,7 +224,7 @@ public class Initializer {
 	private DiagramDescription createDiagram(SPViewpoint spViewpoint, SPDiagram spDiagram) {
 		DiagramDescription diagramDescription = DescriptionFactory.eINSTANCE.createDiagramDescription();
 		diagramDescription.setDomainClass(spDiagram.getRoot());
-		diagramDescription.setName(sPrototyper.getQualifier() + "." + computeViewpointShortcut(spViewpoint) + ".rep." + spDiagram.getName());
+		diagramDescription.setName(sPrototyper.getQualifier() + "." + namingService.computeViewpointShortcut(spViewpoint) + ".rep." + spDiagram.getName());
 		if (!Strings.isNullOrEmpty(spDiagram.getLabel())) {
 			diagramDescription.setLabel(spDiagram.getLabel());
 		} else {
@@ -284,7 +258,7 @@ public class Initializer {
 		ContainerMapping containerMapping = DescriptionFactory.eINSTANCE.createContainerMapping();
 		containerMapping.setDomainClass(containerDefinition.getEClass());
 		String elementName = Iterables.getLast(Splitter.on('.').split(containerDefinition.getEClass()));
-		String representationQualifier = computeDiagramQualifier(spViewpoint, spDiagram);
+		String representationQualifier = namingService.computeDiagramQualifier(spViewpoint, spDiagram);
 		String mappingName = representationQualifier  + ".container." + elementName;
 		containerMapping.setName(mappingName);
 		containerMapping.setSemanticCandidatesExpression(generateVPExpression(containerDefinition.getExpression()));
@@ -293,6 +267,23 @@ public class Initializer {
 		}
 		if (containerDefinition.isRecursive()) {
 			containerMapping.getReusedContainerMappings().add(containerMapping);
+		}
+		if (containerDefinition.isCreatable()) {
+			Layer layer = vsmService.getLayer(parent);
+			ToolSection section = toolsService.getElementsSection(spViewpoint, spDiagram, layer);
+			CommandParameter creationParameter = toolsService.getToolCreationParameter(ToolPackage.Literals.CONTAINER_CREATION_DESCRIPTION, section);
+			ContainerCreationDescription tool = (ContainerCreationDescription) creationParameter.getValue();
+			tool.setForceRefresh(true);
+			tool.getContainerMappings().add(containerMapping);
+			tool.setName(representationQualifier + ".tool.create." + elementName);
+			tool.setLabel("new " + elementName);
+
+			ChangeContext changeContext = toolsService.createToolModelOperation(containerDefinition);
+			InitialNodeCreationOperation operation = ToolFactory.eINSTANCE.createInitialNodeCreationOperation();
+			operation.setFirstModelOperations(changeContext);
+			tool.setInitialOperation(operation);
+			Command cmd = CreateChildCommand.create(editingDomain, section, creationParameter, Collections.emptyList());
+			editingDomain.getCommandStack().execute(cmd);
 		}
 		
 		FlatContainerStyleDescription containerStyle = generateContainerStyle(containerDefinition);
@@ -308,8 +299,9 @@ public class Initializer {
 	}
 
 
-	private FlatContainerStyleDescription generateContainerStyle(
-			Container containerDefinition) {
+
+
+	private FlatContainerStyleDescription generateContainerStyle(Container containerDefinition) {
 		FlatContainerStyleDescription containerStyle = StyleFactory.eINSTANCE.createFlatContainerStyleDescription();
 		containerStyle.setLabelFormat(FontFormat.BOLD_LITERAL);
 
@@ -318,12 +310,12 @@ public class Initializer {
 		ContainerColorDefinition colorDefinition = style.getColor();
 		if (colorDefinition instanceof GradientColorDefinition) {
 			GradientColorDefinition gcd = (GradientColorDefinition) colorDefinition;
-			containerStyle.setBackgroundColor(getColor(gcd.getTo()));
-			containerStyle.setForegroundColor(getColor(gcd.getFrom()));			
+			containerStyle.setBackgroundColor(vsmService.getColor(gcd.getTo()));
+			containerStyle.setForegroundColor(vsmService.getColor(gcd.getFrom()));			
 		} else if (colorDefinition instanceof SolidColorDefinition) {
 			SolidColorDefinition scd = (SolidColorDefinition) colorDefinition;
-			containerStyle.setBackgroundColor(getColor(scd.getColor()));
-			containerStyle.setForegroundColor(getColor(scd.getColor()));			
+			containerStyle.setBackgroundColor(vsmService.getColor(scd.getColor()));
+			containerStyle.setForegroundColor(vsmService.getColor(scd.getColor()));			
 		}
 		if (style.getLabel() != null) {
 			LabelStyleDefinition labelDefinition = style.getLabel(); 
@@ -333,7 +325,7 @@ public class Initializer {
 				containerStyle.setLabelExpression(DEFAULT_LABEL_EXPRESSION);
 			}
 			if (labelDefinition.getColor() != null) {
-				containerStyle.setLabelColor(getColor(labelDefinition.getColor().getColor()));
+				containerStyle.setLabelColor(vsmService.getColor(labelDefinition.getColor().getColor()));
 				if (labelDefinition.eIsSet(SPrototyperPackage.Literals.LABEL_STYLE_DEFINITION__SIZE)) {
 					containerStyle.setLabelSize(labelDefinition.getSize());
 				}
@@ -365,15 +357,14 @@ public class Initializer {
 		}
 		if (style.getBorder() != null) {
 			BorderStyleDefinition borderDefinition = style.getBorder();
-			containerStyle.setBorderColor(getColor(borderDefinition.getColor().getColor()));			
+			containerStyle.setBorderColor(vsmService.getColor(borderDefinition.getColor().getColor()));			
 			if (borderDefinition.eIsSet(SPrototyperPackage.Literals.BORDER_STYLE_DEFINITION__SIZE)) {
 				containerStyle.setBorderSizeComputationExpression(String.valueOf(borderDefinition.getSize()));
 			}
 		}
 		return containerStyle;
 	}
-
-
+	
 	private String generateVPExpression(SPExpression expression) {
 		if (expression instanceof AcceleoExpression) {
 			return '[' + expression.getValue() + "/]";
@@ -386,21 +377,6 @@ public class Initializer {
 	}
 
 
-	private String computeViewpointShortcut(SPViewpoint spViewpoint) {
-		String shortcut = spViewpoint.getShortcut();
-		if (Strings.isNullOrEmpty(shortcut)) {
-			shortcut = spViewpoint.getName().substring(0, 3).toLowerCase();
-		}
-		return shortcut;
-	}
-
-	private String computeDiagramQualifier(SPViewpoint spViewpoint, SPDiagram spDiagram) {
-		return sPrototyper.getQualifier() + "." + computeViewpointShortcut(spViewpoint) + "." + spDiagram.getName().toLowerCase();
-	}
-
-	private String computeTableQualifier(SPViewpoint spViewpoint, SPTable spTable) {
-		return sPrototyper.getQualifier() + "." + computeViewpointShortcut(spViewpoint) + "." + spTable.getName().toLowerCase();
-	}
 
 	private Resource getResource() {
 		Resource prototyperResource = sPrototyper.eResource();
@@ -409,33 +385,5 @@ public class Initializer {
 		return prototyperResource.getResourceSet().createResource(resourceURI);
 	}
 
-	private ColorDescription getColor(Color colorDef) {
-		if (colorDef instanceof PreDefinedColorDefinition) {
-			Environment env = getEnvironment();
-			String zeColor = ((PreDefinedColorDefinition)colorDef).getColor().getLiteral().replaceAll(" ", "_");
-			for (SystemColor sysColor : env.getSystemColors().getEntries()) {
-				if (zeColor.equals(sysColor.getName())) {
-					return sysColor;
-				}
-			}
-		}
-		return null;
-	}
-
-
-	private Environment getEnvironment() {
-		if (environment == null) {
-			Resource viewpointEnvironmentResource = editingDomain.getResourceSet().getResource(URI.createURI("environment:/viewpoint"), true);
-			if (viewpointEnvironmentResource != null 
-					&& viewpointEnvironmentResource.getContents() != null 
-					&& !viewpointEnvironmentResource.getContents().isEmpty() 
-					&& viewpointEnvironmentResource.getContents().get(0) instanceof Environment) {
-				environment = (Environment) viewpointEnvironmentResource.getContents().get(0);
-			} else {
-				//TODO log
-			}
-		}
-		return environment;
-	}
 
 }

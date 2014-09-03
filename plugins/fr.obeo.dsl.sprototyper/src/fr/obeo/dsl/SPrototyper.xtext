@@ -61,7 +61,7 @@ DiagramElement:
 
 
 Container:
-	(recursive ?= 'recursive')? (containerType=ContainerType)? 'container' eClass=STRING 'accessibleThrough' expression=SPExpression (style=ContainerStyleDefinition)? (
+	(creatable ?= 'creatable')? (recursive ?= 'recursive')? (containerType=ContainerType)? 'container' eClass=STRING 'accessibleThrough' expression=SPExpression (style=ContainerStyleDefinition)? (
 		'{'
 			elements+=DiagramElement+
 		'}'

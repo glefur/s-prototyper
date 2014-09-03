@@ -20,6 +20,9 @@ import org.eclipse.ui.IWorkbenchPart;
 
 import fr.obeo.dsl.sPrototyper.SPrototyper;
 import fr.obeo.dsl.sprototyper.initializer.core.Initializer;
+import fr.obeo.dsl.sprototyper.initializer.core.services.NamingService;
+import fr.obeo.dsl.sprototyper.initializer.core.services.ToolsService;
+import fr.obeo.dsl.sprototyper.initializer.core.services.VSMService;
 
 public class InitializerAction implements IObjectActionDelegate {
 
@@ -56,7 +59,10 @@ public class InitializerAction implements IObjectActionDelegate {
 	public void run(IAction action) {
 		if (sPrototyper != null) {
 			try {
-				new Initializer(getEditingDomain(), sPrototyper).run();
+				NamingService namingService = new NamingService(sPrototyper);
+				ToolsService toolsService = new ToolsService(namingService, getEditingDomain());
+				VSMService vsmService = new VSMService();
+				new Initializer(namingService, toolsService, vsmService, getEditingDomain(), sPrototyper).run();
 				MessageDialog.openInformation(
 						shell,
 						"SPrototyper Transformer",

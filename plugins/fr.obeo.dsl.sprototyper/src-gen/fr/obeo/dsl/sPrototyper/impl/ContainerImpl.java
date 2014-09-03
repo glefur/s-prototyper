@@ -29,6 +29,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link fr.obeo.dsl.sPrototyper.impl.ContainerImpl#isCreatable <em>Creatable</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.impl.ContainerImpl#isRecursive <em>Recursive</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.impl.ContainerImpl#getContainerType <em>Container Type</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.impl.ContainerImpl#getEClass <em>EClass</em>}</li>
@@ -42,6 +43,26 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class ContainerImpl extends DiagramElementImpl implements fr.obeo.dsl.sPrototyper.Container
 {
+  /**
+   * The default value of the '{@link #isCreatable() <em>Creatable</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isCreatable()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean CREATABLE_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isCreatable() <em>Creatable</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isCreatable()
+   * @generated
+   * @ordered
+   */
+  protected boolean creatable = CREATABLE_EDEFAULT;
+
   /**
    * The default value of the '{@link #isRecursive() <em>Recursive</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -151,6 +172,29 @@ public class ContainerImpl extends DiagramElementImpl implements fr.obeo.dsl.sPr
   protected EClass eStaticClass()
   {
     return SPrototyperPackage.Literals.CONTAINER;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public boolean isCreatable()
+  {
+    return creatable;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setCreatable(boolean newCreatable)
+  {
+    boolean oldCreatable = creatable;
+    creatable = newCreatable;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SPrototyperPackage.CONTAINER__CREATABLE, oldCreatable, creatable));
   }
 
   /**
@@ -362,6 +406,8 @@ public class ContainerImpl extends DiagramElementImpl implements fr.obeo.dsl.sPr
   {
     switch (featureID)
     {
+      case SPrototyperPackage.CONTAINER__CREATABLE:
+        return isCreatable();
       case SPrototyperPackage.CONTAINER__RECURSIVE:
         return isRecursive();
       case SPrototyperPackage.CONTAINER__CONTAINER_TYPE:
@@ -389,6 +435,9 @@ public class ContainerImpl extends DiagramElementImpl implements fr.obeo.dsl.sPr
   {
     switch (featureID)
     {
+      case SPrototyperPackage.CONTAINER__CREATABLE:
+        setCreatable((Boolean)newValue);
+        return;
       case SPrototyperPackage.CONTAINER__RECURSIVE:
         setRecursive((Boolean)newValue);
         return;
@@ -422,6 +471,9 @@ public class ContainerImpl extends DiagramElementImpl implements fr.obeo.dsl.sPr
   {
     switch (featureID)
     {
+      case SPrototyperPackage.CONTAINER__CREATABLE:
+        setCreatable(CREATABLE_EDEFAULT);
+        return;
       case SPrototyperPackage.CONTAINER__RECURSIVE:
         setRecursive(RECURSIVE_EDEFAULT);
         return;
@@ -454,6 +506,8 @@ public class ContainerImpl extends DiagramElementImpl implements fr.obeo.dsl.sPr
   {
     switch (featureID)
     {
+      case SPrototyperPackage.CONTAINER__CREATABLE:
+        return creatable != CREATABLE_EDEFAULT;
       case SPrototyperPackage.CONTAINER__RECURSIVE:
         return recursive != RECURSIVE_EDEFAULT;
       case SPrototyperPackage.CONTAINER__CONTAINER_TYPE:
@@ -481,7 +535,9 @@ public class ContainerImpl extends DiagramElementImpl implements fr.obeo.dsl.sPr
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (recursive: ");
+    result.append(" (creatable: ");
+    result.append(creatable);
+    result.append(", recursive: ");
     result.append(recursive);
     result.append(", containerType: ");
     result.append(containerType);

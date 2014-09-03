@@ -517,13 +517,22 @@ public interface SPrototyperPackage extends EPackage
   int CONTAINER = 8;
 
   /**
+   * The feature id for the '<em><b>Creatable</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONTAINER__CREATABLE = DIAGRAM_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
    * The feature id for the '<em><b>Recursive</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONTAINER__RECURSIVE = DIAGRAM_ELEMENT_FEATURE_COUNT + 0;
+  int CONTAINER__RECURSIVE = DIAGRAM_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Container Type</b></em>' attribute.
@@ -532,7 +541,7 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONTAINER__CONTAINER_TYPE = DIAGRAM_ELEMENT_FEATURE_COUNT + 1;
+  int CONTAINER__CONTAINER_TYPE = DIAGRAM_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>EClass</b></em>' attribute.
@@ -541,7 +550,7 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONTAINER__ECLASS = DIAGRAM_ELEMENT_FEATURE_COUNT + 2;
+  int CONTAINER__ECLASS = DIAGRAM_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -550,7 +559,7 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONTAINER__EXPRESSION = DIAGRAM_ELEMENT_FEATURE_COUNT + 3;
+  int CONTAINER__EXPRESSION = DIAGRAM_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Style</b></em>' containment reference.
@@ -559,7 +568,7 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONTAINER__STYLE = DIAGRAM_ELEMENT_FEATURE_COUNT + 4;
+  int CONTAINER__STYLE = DIAGRAM_ELEMENT_FEATURE_COUNT + 5;
 
   /**
    * The feature id for the '<em><b>Elements</b></em>' containment reference list.
@@ -568,7 +577,7 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONTAINER__ELEMENTS = DIAGRAM_ELEMENT_FEATURE_COUNT + 5;
+  int CONTAINER__ELEMENTS = DIAGRAM_ELEMENT_FEATURE_COUNT + 6;
 
   /**
    * The number of structural features of the '<em>Container</em>' class.
@@ -577,7 +586,7 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONTAINER_FEATURE_COUNT = DIAGRAM_ELEMENT_FEATURE_COUNT + 6;
+  int CONTAINER_FEATURE_COUNT = DIAGRAM_ELEMENT_FEATURE_COUNT + 7;
 
   /**
    * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.ContainerStyleDefinitionImpl <em>Container Style Definition</em>}' class.
@@ -1352,6 +1361,17 @@ public interface SPrototyperPackage extends EPackage
   EClass getContainer();
 
   /**
+   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.Container#isCreatable <em>Creatable</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Creatable</em>'.
+   * @see fr.obeo.dsl.sPrototyper.Container#isCreatable()
+   * @see #getContainer()
+   * @generated
+   */
+  EAttribute getContainer_Creatable();
+
+  /**
    * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.Container#isRecursive <em>Recursive</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2029,6 +2049,14 @@ public interface SPrototyperPackage extends EPackage
      * @generated
      */
     EClass CONTAINER = eINSTANCE.getContainer();
+
+    /**
+     * The meta object literal for the '<em><b>Creatable</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CONTAINER__CREATABLE = eINSTANCE.getContainer_Creatable();
 
     /**
      * The meta object literal for the '<em><b>Recursive</b></em>' attribute feature.

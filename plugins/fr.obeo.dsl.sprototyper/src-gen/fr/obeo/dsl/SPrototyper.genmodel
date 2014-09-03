@@ -74,6 +74,7 @@
     </genClasses>
     <genClasses ecoreClass="SPrototyper.ecore#//DiagramElement"/>
     <genClasses ecoreClass="SPrototyper.ecore#//Container">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//Container/creatable"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//Container/recursive"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//Container/containerType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//Container/eClass"/>
