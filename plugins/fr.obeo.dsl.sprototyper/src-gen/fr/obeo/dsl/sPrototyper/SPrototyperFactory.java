@@ -113,15 +113,6 @@ public interface SPrototyperFactory extends EFactory
   ContainerStyleDefinition createContainerStyleDefinition();
 
   /**
-   * Returns a new object of class '<em>Solid Color Definition</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Solid Color Definition</em>'.
-   * @generated
-   */
-  SolidColorDefinition createSolidColorDefinition();
-
-  /**
    * Returns a new object of class '<em>Container Color Definition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -129,6 +120,33 @@ public interface SPrototyperFactory extends EFactory
    * @generated
    */
   ContainerColorDefinition createContainerColorDefinition();
+
+  /**
+   * Returns a new object of class '<em>Node</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Node</em>'.
+   * @generated
+   */
+  Node createNode();
+
+  /**
+   * Returns a new object of class '<em>Node Style Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Node Style Definition</em>'.
+   * @generated
+   */
+  NodeStyleDefinition createNodeStyleDefinition();
+
+  /**
+   * Returns a new object of class '<em>Solid Color Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Solid Color Definition</em>'.
+   * @generated
+   */
+  SolidColorDefinition createSolidColorDefinition();
 
   /**
    * Returns a new object of class '<em>Gradient Color Definition</em>'.

@@ -75,8 +75,10 @@ public class SPrototyperFactoryImpl extends EFactoryImpl implements SPrototyperF
       case SPrototyperPackage.DIAGRAM_ELEMENT: return createDiagramElement();
       case SPrototyperPackage.CONTAINER: return createContainer();
       case SPrototyperPackage.CONTAINER_STYLE_DEFINITION: return createContainerStyleDefinition();
-      case SPrototyperPackage.SOLID_COLOR_DEFINITION: return createSolidColorDefinition();
       case SPrototyperPackage.CONTAINER_COLOR_DEFINITION: return createContainerColorDefinition();
+      case SPrototyperPackage.NODE: return createNode();
+      case SPrototyperPackage.NODE_STYLE_DEFINITION: return createNodeStyleDefinition();
+      case SPrototyperPackage.SOLID_COLOR_DEFINITION: return createSolidColorDefinition();
       case SPrototyperPackage.GRADIENT_COLOR_DEFINITION: return createGradientColorDefinition();
       case SPrototyperPackage.LABEL_STYLE_DEFINITION: return createLabelStyleDefinition();
       case SPrototyperPackage.BORDER_STYLE_DEFINITION: return createBorderStyleDefinition();
@@ -241,10 +243,10 @@ public class SPrototyperFactoryImpl extends EFactoryImpl implements SPrototyperF
    * <!-- end-user-doc -->
    * @generated
    */
-  public SolidColorDefinition createSolidColorDefinition()
+  public ContainerColorDefinition createContainerColorDefinition()
   {
-    SolidColorDefinitionImpl solidColorDefinition = new SolidColorDefinitionImpl();
-    return solidColorDefinition;
+    ContainerColorDefinitionImpl containerColorDefinition = new ContainerColorDefinitionImpl();
+    return containerColorDefinition;
   }
 
   /**
@@ -252,10 +254,32 @@ public class SPrototyperFactoryImpl extends EFactoryImpl implements SPrototyperF
    * <!-- end-user-doc -->
    * @generated
    */
-  public ContainerColorDefinition createContainerColorDefinition()
+  public Node createNode()
   {
-    ContainerColorDefinitionImpl containerColorDefinition = new ContainerColorDefinitionImpl();
-    return containerColorDefinition;
+    NodeImpl node = new NodeImpl();
+    return node;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NodeStyleDefinition createNodeStyleDefinition()
+  {
+    NodeStyleDefinitionImpl nodeStyleDefinition = new NodeStyleDefinitionImpl();
+    return nodeStyleDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SolidColorDefinition createSolidColorDefinition()
+  {
+    SolidColorDefinitionImpl solidColorDefinition = new SolidColorDefinitionImpl();
+    return solidColorDefinition;
   }
 
   /**

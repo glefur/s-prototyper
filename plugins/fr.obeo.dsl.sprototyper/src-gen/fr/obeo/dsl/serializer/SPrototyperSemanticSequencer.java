@@ -10,6 +10,8 @@ import fr.obeo.dsl.sPrototyper.FeatureRef;
 import fr.obeo.dsl.sPrototyper.GradientColorDefinition;
 import fr.obeo.dsl.sPrototyper.LabelStyleDefinition;
 import fr.obeo.dsl.sPrototyper.MetamodelRef;
+import fr.obeo.dsl.sPrototyper.Node;
+import fr.obeo.dsl.sPrototyper.NodeStyleDefinition;
 import fr.obeo.dsl.sPrototyper.PreDefinedColorDefinition;
 import fr.obeo.dsl.sPrototyper.SPDiagram;
 import fr.obeo.dsl.sPrototyper.SPTable;
@@ -90,6 +92,19 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 			case SPrototyperPackage.METAMODEL_REF:
 				if(context == grammarAccess.getMetamodelRefRule()) {
 					sequence_MetamodelRef(context, (MetamodelRef) semanticObject); 
+					return; 
+				}
+				else break;
+			case SPrototyperPackage.NODE:
+				if(context == grammarAccess.getDiagramElementRule() ||
+				   context == grammarAccess.getNodeRule()) {
+					sequence_Node(context, (Node) semanticObject); 
+					return; 
+				}
+				else break;
+			case SPrototyperPackage.NODE_STYLE_DEFINITION:
+				if(context == grammarAccess.getNodeStyleDefinitionRule()) {
+					sequence_NodeStyleDefinition(context, (NodeStyleDefinition) semanticObject); 
 					return; 
 				}
 				else break;
@@ -196,6 +211,7 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *         creatable?='creatable'? 
 	 *         recursive?='recursive'? 
 	 *         containerType=ContainerType? 
+	 *         name=ID 
 	 *         eClass=STRING 
 	 *         expression=SPExpression 
 	 *         style=ContainerStyleDefinition? 
@@ -264,6 +280,24 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getMetamodelRefAccess().getMetamodelSTRINGTerminalRuleCall_1_0(), semanticObject.getMetamodel());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (color=SolidColorDefinition label=LabelStyleDefinition? border=BorderStyleDefinition?)
+	 */
+	protected void sequence_NodeStyleDefinition(EObject context, NodeStyleDefinition semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (creatable?='creatable'? name=ID eClass=STRING expression=SPExpression style=NodeStyleDefinition?)
+	 */
+	protected void sequence_Node(EObject context, Node semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

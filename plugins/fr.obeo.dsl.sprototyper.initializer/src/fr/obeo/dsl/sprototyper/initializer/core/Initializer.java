@@ -5,12 +5,14 @@ package fr.obeo.dsl.sprototyper.initializer.core;
 
 import java.io.IOException;
 import java.util.Collections;
+import java.util.Map;
 
 import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.edit.command.CommandParameter;
 import org.eclipse.emf.edit.command.CreateChildCommand;
 import org.eclipse.emf.edit.domain.EditingDomain;
@@ -18,6 +20,7 @@ import org.eclipse.emf.edit.domain.EditingDomain;
 import com.google.common.base.Splitter;
 import com.google.common.base.Strings;
 import com.google.common.collect.Iterables;
+import com.google.common.collect.Maps;
 
 import fr.obeo.dsl.sPrototyper.AcceleoExpression;
 import fr.obeo.dsl.sPrototyper.BorderStyleDefinition;
@@ -99,6 +102,10 @@ public class Initializer {
 			Viewpoint viewpoint = createViewpoint(spViewpoint);
 			group.getOwnedViewpoints().add(viewpoint);
 		}
+		Map<Object, Object> options = Maps.newHashMap();
+		options.put(XMLResource.OPTION_ENCODING, "UTF-8");
+
+		resource.save(options);
 
 	}
 
@@ -246,7 +253,7 @@ public class Initializer {
 		diagramDescription.setDefaultLayer(defaultLayer);
 		for (DiagramElement element : spDiagram.getElements()) {
 			if (element instanceof Container) {
-				ContainerMapping mapping = createContainerMapping(spViewpoint, spDiagram, (Container)element, defaultLayer);
+				ContainerMapping mapping = createContainerMapping(spViewpoint, spDiagram, defaultLayer, (Container)element, defaultLayer);
 				defaultLayer.getContainerMappings().add(mapping);
 			}
 		}
@@ -254,12 +261,12 @@ public class Initializer {
 	}
 
 
-	private ContainerMapping createContainerMapping(SPViewpoint spViewpoint, SPDiagram spDiagram, Container containerDefinition, EObject parent) {
+	private ContainerMapping createContainerMapping(SPViewpoint spViewpoint, SPDiagram spDiagram, Layer workingLayer, Container containerDefinition, EObject parent) {
 		ContainerMapping containerMapping = DescriptionFactory.eINSTANCE.createContainerMapping();
 		containerMapping.setDomainClass(containerDefinition.getEClass());
 		String elementName = Iterables.getLast(Splitter.on('.').split(containerDefinition.getEClass()));
 		String representationQualifier = namingService.computeDiagramQualifier(spViewpoint, spDiagram);
-		String mappingName = representationQualifier  + ".container." + elementName;
+		String mappingName = representationQualifier  + ".container." + containerDefinition.getName();
 		containerMapping.setName(mappingName);
 		containerMapping.setSemanticCandidatesExpression(generateVPExpression(containerDefinition.getExpression()));
 		if (!Strings.isNullOrEmpty(containerDefinition.getContainerType()) && "list".equals(containerDefinition.getContainerType())) {
@@ -269,8 +276,7 @@ public class Initializer {
 			containerMapping.getReusedContainerMappings().add(containerMapping);
 		}
 		if (containerDefinition.isCreatable()) {
-			Layer layer = vsmService.getLayer(parent);
-			ToolSection section = toolsService.getElementsSection(spViewpoint, spDiagram, layer);
+			ToolSection section = toolsService.getElementsSection(spViewpoint, spDiagram, workingLayer);
 			CommandParameter creationParameter = toolsService.getToolCreationParameter(ToolPackage.Literals.CONTAINER_CREATION_DESCRIPTION, section);
 			ContainerCreationDescription tool = (ContainerCreationDescription) creationParameter.getValue();
 			tool.setForceRefresh(true);
@@ -291,15 +297,12 @@ public class Initializer {
 		
 		for (DiagramElement subElement : containerDefinition.getElements()) {
 			if (subElement instanceof Container) {
-				ContainerMapping subMapping = createContainerMapping(spViewpoint, spDiagram, (Container) subElement, containerMapping);
+				ContainerMapping subMapping = createContainerMapping(spViewpoint, spDiagram, workingLayer,(Container) subElement, containerMapping);
 				containerMapping.getSubContainerMappings().add(subMapping);
 			}
 		}
 		return containerMapping;
 	}
-
-
-
 
 	private FlatContainerStyleDescription generateContainerStyle(Container containerDefinition) {
 		FlatContainerStyleDescription containerStyle = StyleFactory.eINSTANCE.createFlatContainerStyleDescription();
@@ -324,6 +327,7 @@ public class Initializer {
 			} else {
 				containerStyle.setLabelExpression(DEFAULT_LABEL_EXPRESSION);
 			}
+			containerStyle.setShowIcon(false);
 			if (labelDefinition.getColor() != null) {
 				containerStyle.setLabelColor(vsmService.getColor(labelDefinition.getColor().getColor()));
 				if (labelDefinition.eIsSet(SPrototyperPackage.Literals.LABEL_STYLE_DEFINITION__SIZE)) {
@@ -365,6 +369,44 @@ public class Initializer {
 		return containerStyle;
 	}
 	
+//	private NodeMapping createNodeMapping(SPViewpoint spViewpoint, SPDiagram spDiagram, Layer workingLayer, Node nodeDefinition, EObject parent) {
+//		NodeMapping nodeMapping = DescriptionFactory.eINSTANCE.createNodeMapping();
+//		nodeMapping.setDomainClass(nodeDefinition.getEClass());
+//		String elementName = Iterables.getLast(Splitter.on('.').split(nodeDefinition.getEClass()));
+//		String representationQualifier = namingService.computeDiagramQualifier(spViewpoint, spDiagram);
+//		String mappingName = representationQualifier  + ".container." + nodeDefinition.getName();
+//		nodeMapping.setName(mappingName);
+//		nodeMapping.setSemanticCandidatesExpression(generateVPExpression(nodeDefinition.getExpression()));
+//
+//		if (nodeDefinition.isCreatable()) {
+//			ToolSection section = toolsService.getElementsSection(spViewpoint, spDiagram, workingLayer);
+//			CommandParameter creationParameter = toolsService.getToolCreationParameter(ToolPackage.Literals.NODE_CREATION_DESCRIPTION, section);
+//			NodeCreationDescription tool = (NodeCreationDescription) creationParameter.getValue();
+//			tool.setForceRefresh(true);
+//			tool.getNodeMappings().add(nodeMapping);
+//			tool.setName(representationQualifier + ".tool.create." + elementName);
+//			tool.setLabel("new " + elementName);
+//
+//			ChangeContext changeContext = toolsService.createToolModelOperation(nodeDefinition);
+//			InitialNodeCreationOperation operation = ToolFactory.eINSTANCE.createInitialNodeCreationOperation();
+//			operation.setFirstModelOperations(changeContext);
+//			tool.setInitialOperation(operation);
+//			Command cmd = CreateChildCommand.create(editingDomain, section, creationParameter, Collections.emptyList());
+//			editingDomain.getCommandStack().execute(cmd);
+//		}
+//		
+//		FlatContainerStyleDescription containerStyle = generateContainerStyle(nodeDefinition);
+//		nodeMapping.setStyle(containerStyle);
+//		
+//		for (DiagramElement subElement : nodeDefinition.getElements()) {
+//			if (subElement instanceof Container) {
+//				ContainerMapping subMapping = createContainerMapping(spViewpoint, spDiagram, workingLayer,(Container) subElement, nodeMapping);
+//				nodeMapping.getSubContainerMappings().add(subMapping);
+//			}
+//		}
+//		return nodeMapping;
+//	}
+
 	private String generateVPExpression(SPExpression expression) {
 		if (expression instanceof AcceleoExpression) {
 			return '[' + expression.getValue() + "/]";

@@ -47,14 +47,16 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
         eType="#//DiagramElement" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DiagramElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Container" eSuperTypes="#//DiagramElement">
+  <eClassifiers xsi:type="ecore:EClass" name="DiagramElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="creatable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="recursive" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="containerType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="eClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//SPExpression"
         containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Container" eSuperTypes="#//DiagramElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="recursive" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="containerType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="style" eType="#//ContainerStyleDefinition"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
@@ -68,11 +70,23 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="border" eType="#//BorderStyleDefinition"
         containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContainerColorDefinition"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Node" eSuperTypes="#//DiagramElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="style" eType="#//NodeStyleDefinition"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NodeStyleDefinition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="color" eType="#//SolidColorDefinition"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="label" eType="#//LabelStyleDefinition"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="border" eType="#//BorderStyleDefinition"
+        containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SolidColorDefinition" eSuperTypes="#//ContainerColorDefinition">
     <eStructuralFeatures xsi:type="ecore:EReference" name="color" eType="#//Color"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ContainerColorDefinition"/>
   <eClassifiers xsi:type="ecore:EClass" name="GradientColorDefinition" eSuperTypes="#//ContainerColorDefinition">
     <eStructuralFeatures xsi:type="ecore:EReference" name="from" eType="#//Color"
         containment="true"/>

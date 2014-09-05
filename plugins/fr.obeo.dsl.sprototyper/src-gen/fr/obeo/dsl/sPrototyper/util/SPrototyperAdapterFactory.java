@@ -125,14 +125,24 @@ public class SPrototyperAdapterFactory extends AdapterFactoryImpl
         return createContainerStyleDefinitionAdapter();
       }
       @Override
-      public Adapter caseSolidColorDefinition(SolidColorDefinition object)
-      {
-        return createSolidColorDefinitionAdapter();
-      }
-      @Override
       public Adapter caseContainerColorDefinition(ContainerColorDefinition object)
       {
         return createContainerColorDefinitionAdapter();
+      }
+      @Override
+      public Adapter caseNode(Node object)
+      {
+        return createNodeAdapter();
+      }
+      @Override
+      public Adapter caseNodeStyleDefinition(NodeStyleDefinition object)
+      {
+        return createNodeStyleDefinitionAdapter();
+      }
+      @Override
+      public Adapter caseSolidColorDefinition(SolidColorDefinition object)
+      {
+        return createSolidColorDefinitionAdapter();
       }
       @Override
       public Adapter caseGradientColorDefinition(GradientColorDefinition object)
@@ -357,21 +367,6 @@ public class SPrototyperAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link fr.obeo.dsl.sPrototyper.SolidColorDefinition <em>Solid Color Definition</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see fr.obeo.dsl.sPrototyper.SolidColorDefinition
-   * @generated
-   */
-  public Adapter createSolidColorDefinitionAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link fr.obeo.dsl.sPrototyper.ContainerColorDefinition <em>Container Color Definition</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -382,6 +377,51 @@ public class SPrototyperAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createContainerColorDefinitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.obeo.dsl.sPrototyper.Node <em>Node</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.obeo.dsl.sPrototyper.Node
+   * @generated
+   */
+  public Adapter createNodeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.obeo.dsl.sPrototyper.NodeStyleDefinition <em>Node Style Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.obeo.dsl.sPrototyper.NodeStyleDefinition
+   * @generated
+   */
+  public Adapter createNodeStyleDefinitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.obeo.dsl.sPrototyper.SolidColorDefinition <em>Solid Color Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.obeo.dsl.sPrototyper.SolidColorDefinition
+   * @generated
+   */
+  public Adapter createSolidColorDefinitionAdapter()
   {
     return null;
   }

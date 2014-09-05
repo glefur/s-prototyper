@@ -56,12 +56,12 @@ SPDiagram:
 ;
 
 DiagramElement:
-	Container
+	Container | Node
 ;
 
 
 Container:
-	(creatable ?= 'creatable')? (recursive ?= 'recursive')? (containerType=ContainerType)? 'container' eClass=STRING 'accessibleThrough' expression=SPExpression (style=ContainerStyleDefinition)? (
+	(creatable ?= 'creatable')? (recursive ?= 'recursive')? (containerType=ContainerType)? 'container' name=ID 'for' eClass=STRING 'accessibleThrough' expression=SPExpression (style=ContainerStyleDefinition)? (
 		'{'
 			elements+=DiagramElement+
 		'}'
@@ -77,12 +77,21 @@ ContainerType:
 	'freeform' | 'list'
 ;
 
-SolidColorDefinition:
-	'color' color=Color
-;
-
 ContainerColorDefinition:
 	SolidColorDefinition | GradientColorDefinition
+;
+
+Node:
+	(creatable ?= 'creatable')? 'node' name=ID 'for' eClass=STRING 'accessibleThrough' expression=SPExpression (style=NodeStyleDefinition)?
+;
+
+NodeStyleDefinition:
+	'[' color=SolidColorDefinition (',' label=LabelStyleDefinition)? (',' border=BorderStyleDefinition)? ']'
+;
+
+
+SolidColorDefinition:
+	'color' color=Color
 ;
 
 GradientColorDefinition:

@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'proto'", "'{'", "'qualifier'", "'}'", "'viewpoint'", "'shortcut'", "'ext'", "'table'", "'label'", "'title'", "'root'", "'creatable'", "'recursive'", "'element'", "'accessibleThrough'", "'property'", "'expression'", "'diagram'", "'container'", "'['", "','", "']'", "'freeform'", "'list'", "'color'", "'gradient from'", "'to'", "'size'", "'bold'", "'italic'", "'border '", "'acc:'", "'var:'", "'feature:'", "'use'", "'white'", "'black'", "'blue'", "'light blue'", "'dark blue'", "'chocolate'", "'light chocolate'", "'dark chocolate'", "'gray'", "'light gray'", "'dark gray'", "'green'", "'light green'", "'dark green'", "'orange'", "'light orange'", "'dark orange'", "'purple'", "'light purple'", "'dark purple'", "'red'", "'light red'", "'dark red'", "'yellow'", "'light yellow'", "'dark yellow'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'proto'", "'{'", "'qualifier'", "'}'", "'viewpoint'", "'shortcut'", "'ext'", "'table'", "'label'", "'title'", "'root'", "'creatable'", "'recursive'", "'element'", "'accessibleThrough'", "'property'", "'expression'", "'diagram'", "'container'", "'for'", "'['", "','", "']'", "'freeform'", "'list'", "'node'", "'color'", "'gradient from'", "'to'", "'size'", "'bold'", "'italic'", "'border '", "'acc:'", "'var:'", "'feature:'", "'use'", "'white'", "'black'", "'blue'", "'light blue'", "'dark blue'", "'chocolate'", "'light chocolate'", "'dark chocolate'", "'gray'", "'light gray'", "'dark gray'", "'green'", "'light green'", "'dark green'", "'orange'", "'light orange'", "'dark orange'", "'purple'", "'light purple'", "'dark purple'", "'red'", "'light red'", "'dark red'", "'yellow'", "'light yellow'", "'dark yellow'"
     };
     public static final int T__68=68;
     public static final int T__69=69;
@@ -85,6 +85,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
     public static final int T__32=32;
     public static final int T__71=71;
     public static final int T__33=33;
+    public static final int T__72=72;
     public static final int T__34=34;
     public static final int T__35=35;
     public static final int T__70=70;
@@ -93,6 +94,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
     public static final int T__38=38;
     public static final int T__39=39;
     public static final int RULE_WS=9;
+    public static final int T__73=73;
 
     // delegates
     // delegators
@@ -934,7 +936,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                 int alt9=2;
                 int LA9_0 = input.LA(1);
 
-                if ( (LA9_0==45) ) {
+                if ( (LA9_0==47) ) {
                     alt9=1;
                 }
 
@@ -1842,7 +1844,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                 int alt20=2;
                 int LA20_0 = input.LA(1);
 
-                if ( (LA20_0==45) ) {
+                if ( (LA20_0==47) ) {
                     alt20=1;
                 }
 
@@ -1926,7 +1928,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                 int alt21=2;
                 int LA21_0 = input.LA(1);
 
-                if ( ((LA21_0>=22 && LA21_0<=23)||LA21_0==29||(LA21_0>=33 && LA21_0<=34)) ) {
+                if ( ((LA21_0>=22 && LA21_0<=23)||LA21_0==29||(LA21_0>=34 && LA21_0<=36)) ) {
                     alt21=1;
                 }
 
@@ -2034,31 +2036,102 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDiagramElement"
-    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:853:1: ruleDiagramElement returns [EObject current=null] : this_Container_0= ruleContainer ;
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:853:1: ruleDiagramElement returns [EObject current=null] : (this_Container_0= ruleContainer | this_Node_1= ruleNode ) ;
     public final EObject ruleDiagramElement() throws RecognitionException {
         EObject current = null;
 
         EObject this_Container_0 = null;
 
+        EObject this_Node_1 = null;
+
 
          enterRule(); 
             
         try {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:856:28: (this_Container_0= ruleContainer )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:858:5: this_Container_0= ruleContainer
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:856:28: ( (this_Container_0= ruleContainer | this_Node_1= ruleNode ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:857:1: (this_Container_0= ruleContainer | this_Node_1= ruleNode )
             {
-             
-                    newCompositeNode(grammarAccess.getDiagramElementAccess().getContainerParserRuleCall()); 
-                
-            pushFollow(FOLLOW_ruleContainer_in_ruleDiagramElement1676);
-            this_Container_0=ruleContainer();
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:857:1: (this_Container_0= ruleContainer | this_Node_1= ruleNode )
+            int alt22=2;
+            switch ( input.LA(1) ) {
+            case 22:
+                {
+                int LA22_1 = input.LA(2);
 
-            state._fsp--;
+                if ( (LA22_1==23||LA22_1==29||(LA22_1>=34 && LA22_1<=35)) ) {
+                    alt22=1;
+                }
+                else if ( (LA22_1==36) ) {
+                    alt22=2;
+                }
+                else {
+                    NoViableAltException nvae =
+                        new NoViableAltException("", 22, 1, input);
 
-             
-                    current = this_Container_0; 
-                    afterParserOrEnumRuleCall();
-                
+                    throw nvae;
+                }
+                }
+                break;
+            case 23:
+            case 29:
+            case 34:
+            case 35:
+                {
+                alt22=1;
+                }
+                break;
+            case 36:
+                {
+                alt22=2;
+                }
+                break;
+            default:
+                NoViableAltException nvae =
+                    new NoViableAltException("", 22, 0, input);
+
+                throw nvae;
+            }
+
+            switch (alt22) {
+                case 1 :
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:858:5: this_Container_0= ruleContainer
+                    {
+                     
+                            newCompositeNode(grammarAccess.getDiagramElementAccess().getContainerParserRuleCall_0()); 
+                        
+                    pushFollow(FOLLOW_ruleContainer_in_ruleDiagramElement1677);
+                    this_Container_0=ruleContainer();
+
+                    state._fsp--;
+
+                     
+                            current = this_Container_0; 
+                            afterParserOrEnumRuleCall();
+                        
+
+                    }
+                    break;
+                case 2 :
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:868:5: this_Node_1= ruleNode
+                    {
+                     
+                            newCompositeNode(grammarAccess.getDiagramElementAccess().getNodeParserRuleCall_1()); 
+                        
+                    pushFollow(FOLLOW_ruleNode_in_ruleDiagramElement1704);
+                    this_Node_1=ruleNode();
+
+                    state._fsp--;
+
+                     
+                            current = this_Node_1; 
+                            afterParserOrEnumRuleCall();
+                        
+
+                    }
+                    break;
+
+            }
+
 
             }
 
@@ -2077,7 +2150,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleContainer"
-    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:874:1: entryRuleContainer returns [EObject current=null] : iv_ruleContainer= ruleContainer EOF ;
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:884:1: entryRuleContainer returns [EObject current=null] : iv_ruleContainer= ruleContainer EOF ;
     public final EObject entryRuleContainer() throws RecognitionException {
         EObject current = null;
 
@@ -2085,17 +2158,17 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:875:2: (iv_ruleContainer= ruleContainer EOF )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:876:2: iv_ruleContainer= ruleContainer EOF
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:885:2: (iv_ruleContainer= ruleContainer EOF )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:886:2: iv_ruleContainer= ruleContainer EOF
             {
              newCompositeNode(grammarAccess.getContainerRule()); 
-            pushFollow(FOLLOW_ruleContainer_in_entryRuleContainer1710);
+            pushFollow(FOLLOW_ruleContainer_in_entryRuleContainer1739);
             iv_ruleContainer=ruleContainer();
 
             state._fsp--;
 
              current =iv_ruleContainer; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleContainer1720); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleContainer1749); 
 
             }
 
@@ -2113,50 +2186,52 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleContainer"
-    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:883:1: ruleContainer returns [EObject current=null] : ( ( (lv_creatable_0_0= 'creatable' ) )? ( (lv_recursive_1_0= 'recursive' ) )? ( (lv_containerType_2_0= ruleContainerType ) )? otherlv_3= 'container' ( (lv_eClass_4_0= RULE_STRING ) ) otherlv_5= 'accessibleThrough' ( (lv_expression_6_0= ruleSPExpression ) ) ( (lv_style_7_0= ruleContainerStyleDefinition ) )? (otherlv_8= '{' ( (lv_elements_9_0= ruleDiagramElement ) )+ otherlv_10= '}' )? ) ;
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:893:1: ruleContainer returns [EObject current=null] : ( ( (lv_creatable_0_0= 'creatable' ) )? ( (lv_recursive_1_0= 'recursive' ) )? ( (lv_containerType_2_0= ruleContainerType ) )? otherlv_3= 'container' ( (lv_name_4_0= RULE_ID ) ) otherlv_5= 'for' ( (lv_eClass_6_0= RULE_STRING ) ) otherlv_7= 'accessibleThrough' ( (lv_expression_8_0= ruleSPExpression ) ) ( (lv_style_9_0= ruleContainerStyleDefinition ) )? (otherlv_10= '{' ( (lv_elements_11_0= ruleDiagramElement ) )+ otherlv_12= '}' )? ) ;
     public final EObject ruleContainer() throws RecognitionException {
         EObject current = null;
 
         Token lv_creatable_0_0=null;
         Token lv_recursive_1_0=null;
         Token otherlv_3=null;
-        Token lv_eClass_4_0=null;
+        Token lv_name_4_0=null;
         Token otherlv_5=null;
-        Token otherlv_8=null;
+        Token lv_eClass_6_0=null;
+        Token otherlv_7=null;
         Token otherlv_10=null;
+        Token otherlv_12=null;
         AntlrDatatypeRuleToken lv_containerType_2_0 = null;
 
-        EObject lv_expression_6_0 = null;
+        EObject lv_expression_8_0 = null;
 
-        EObject lv_style_7_0 = null;
+        EObject lv_style_9_0 = null;
 
-        EObject lv_elements_9_0 = null;
+        EObject lv_elements_11_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:886:28: ( ( ( (lv_creatable_0_0= 'creatable' ) )? ( (lv_recursive_1_0= 'recursive' ) )? ( (lv_containerType_2_0= ruleContainerType ) )? otherlv_3= 'container' ( (lv_eClass_4_0= RULE_STRING ) ) otherlv_5= 'accessibleThrough' ( (lv_expression_6_0= ruleSPExpression ) ) ( (lv_style_7_0= ruleContainerStyleDefinition ) )? (otherlv_8= '{' ( (lv_elements_9_0= ruleDiagramElement ) )+ otherlv_10= '}' )? ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:887:1: ( ( (lv_creatable_0_0= 'creatable' ) )? ( (lv_recursive_1_0= 'recursive' ) )? ( (lv_containerType_2_0= ruleContainerType ) )? otherlv_3= 'container' ( (lv_eClass_4_0= RULE_STRING ) ) otherlv_5= 'accessibleThrough' ( (lv_expression_6_0= ruleSPExpression ) ) ( (lv_style_7_0= ruleContainerStyleDefinition ) )? (otherlv_8= '{' ( (lv_elements_9_0= ruleDiagramElement ) )+ otherlv_10= '}' )? )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:896:28: ( ( ( (lv_creatable_0_0= 'creatable' ) )? ( (lv_recursive_1_0= 'recursive' ) )? ( (lv_containerType_2_0= ruleContainerType ) )? otherlv_3= 'container' ( (lv_name_4_0= RULE_ID ) ) otherlv_5= 'for' ( (lv_eClass_6_0= RULE_STRING ) ) otherlv_7= 'accessibleThrough' ( (lv_expression_8_0= ruleSPExpression ) ) ( (lv_style_9_0= ruleContainerStyleDefinition ) )? (otherlv_10= '{' ( (lv_elements_11_0= ruleDiagramElement ) )+ otherlv_12= '}' )? ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:897:1: ( ( (lv_creatable_0_0= 'creatable' ) )? ( (lv_recursive_1_0= 'recursive' ) )? ( (lv_containerType_2_0= ruleContainerType ) )? otherlv_3= 'container' ( (lv_name_4_0= RULE_ID ) ) otherlv_5= 'for' ( (lv_eClass_6_0= RULE_STRING ) ) otherlv_7= 'accessibleThrough' ( (lv_expression_8_0= ruleSPExpression ) ) ( (lv_style_9_0= ruleContainerStyleDefinition ) )? (otherlv_10= '{' ( (lv_elements_11_0= ruleDiagramElement ) )+ otherlv_12= '}' )? )
             {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:887:1: ( ( (lv_creatable_0_0= 'creatable' ) )? ( (lv_recursive_1_0= 'recursive' ) )? ( (lv_containerType_2_0= ruleContainerType ) )? otherlv_3= 'container' ( (lv_eClass_4_0= RULE_STRING ) ) otherlv_5= 'accessibleThrough' ( (lv_expression_6_0= ruleSPExpression ) ) ( (lv_style_7_0= ruleContainerStyleDefinition ) )? (otherlv_8= '{' ( (lv_elements_9_0= ruleDiagramElement ) )+ otherlv_10= '}' )? )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:887:2: ( (lv_creatable_0_0= 'creatable' ) )? ( (lv_recursive_1_0= 'recursive' ) )? ( (lv_containerType_2_0= ruleContainerType ) )? otherlv_3= 'container' ( (lv_eClass_4_0= RULE_STRING ) ) otherlv_5= 'accessibleThrough' ( (lv_expression_6_0= ruleSPExpression ) ) ( (lv_style_7_0= ruleContainerStyleDefinition ) )? (otherlv_8= '{' ( (lv_elements_9_0= ruleDiagramElement ) )+ otherlv_10= '}' )?
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:897:1: ( ( (lv_creatable_0_0= 'creatable' ) )? ( (lv_recursive_1_0= 'recursive' ) )? ( (lv_containerType_2_0= ruleContainerType ) )? otherlv_3= 'container' ( (lv_name_4_0= RULE_ID ) ) otherlv_5= 'for' ( (lv_eClass_6_0= RULE_STRING ) ) otherlv_7= 'accessibleThrough' ( (lv_expression_8_0= ruleSPExpression ) ) ( (lv_style_9_0= ruleContainerStyleDefinition ) )? (otherlv_10= '{' ( (lv_elements_11_0= ruleDiagramElement ) )+ otherlv_12= '}' )? )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:897:2: ( (lv_creatable_0_0= 'creatable' ) )? ( (lv_recursive_1_0= 'recursive' ) )? ( (lv_containerType_2_0= ruleContainerType ) )? otherlv_3= 'container' ( (lv_name_4_0= RULE_ID ) ) otherlv_5= 'for' ( (lv_eClass_6_0= RULE_STRING ) ) otherlv_7= 'accessibleThrough' ( (lv_expression_8_0= ruleSPExpression ) ) ( (lv_style_9_0= ruleContainerStyleDefinition ) )? (otherlv_10= '{' ( (lv_elements_11_0= ruleDiagramElement ) )+ otherlv_12= '}' )?
             {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:887:2: ( (lv_creatable_0_0= 'creatable' ) )?
-            int alt22=2;
-            int LA22_0 = input.LA(1);
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:897:2: ( (lv_creatable_0_0= 'creatable' ) )?
+            int alt23=2;
+            int LA23_0 = input.LA(1);
 
-            if ( (LA22_0==22) ) {
-                alt22=1;
+            if ( (LA23_0==22) ) {
+                alt23=1;
             }
-            switch (alt22) {
+            switch (alt23) {
                 case 1 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:888:1: (lv_creatable_0_0= 'creatable' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:898:1: (lv_creatable_0_0= 'creatable' )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:888:1: (lv_creatable_0_0= 'creatable' )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:889:3: lv_creatable_0_0= 'creatable'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:898:1: (lv_creatable_0_0= 'creatable' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:899:3: lv_creatable_0_0= 'creatable'
                     {
-                    lv_creatable_0_0=(Token)match(input,22,FOLLOW_22_in_ruleContainer1763); 
+                    lv_creatable_0_0=(Token)match(input,22,FOLLOW_22_in_ruleContainer1792); 
 
                             newLeafNode(lv_creatable_0_0, grammarAccess.getContainerAccess().getCreatableCreatableKeyword_0_0());
                         
@@ -2175,21 +2250,21 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:902:3: ( (lv_recursive_1_0= 'recursive' ) )?
-            int alt23=2;
-            int LA23_0 = input.LA(1);
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:912:3: ( (lv_recursive_1_0= 'recursive' ) )?
+            int alt24=2;
+            int LA24_0 = input.LA(1);
 
-            if ( (LA23_0==23) ) {
-                alt23=1;
+            if ( (LA24_0==23) ) {
+                alt24=1;
             }
-            switch (alt23) {
+            switch (alt24) {
                 case 1 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:903:1: (lv_recursive_1_0= 'recursive' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:913:1: (lv_recursive_1_0= 'recursive' )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:903:1: (lv_recursive_1_0= 'recursive' )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:904:3: lv_recursive_1_0= 'recursive'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:913:1: (lv_recursive_1_0= 'recursive' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:914:3: lv_recursive_1_0= 'recursive'
                     {
-                    lv_recursive_1_0=(Token)match(input,23,FOLLOW_23_in_ruleContainer1795); 
+                    lv_recursive_1_0=(Token)match(input,23,FOLLOW_23_in_ruleContainer1824); 
 
                             newLeafNode(lv_recursive_1_0, grammarAccess.getContainerAccess().getRecursiveRecursiveKeyword_1_0());
                         
@@ -2208,24 +2283,24 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:917:3: ( (lv_containerType_2_0= ruleContainerType ) )?
-            int alt24=2;
-            int LA24_0 = input.LA(1);
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:927:3: ( (lv_containerType_2_0= ruleContainerType ) )?
+            int alt25=2;
+            int LA25_0 = input.LA(1);
 
-            if ( ((LA24_0>=33 && LA24_0<=34)) ) {
-                alt24=1;
+            if ( ((LA25_0>=34 && LA25_0<=35)) ) {
+                alt25=1;
             }
-            switch (alt24) {
+            switch (alt25) {
                 case 1 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:918:1: (lv_containerType_2_0= ruleContainerType )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:928:1: (lv_containerType_2_0= ruleContainerType )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:918:1: (lv_containerType_2_0= ruleContainerType )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:919:3: lv_containerType_2_0= ruleContainerType
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:928:1: (lv_containerType_2_0= ruleContainerType )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:929:3: lv_containerType_2_0= ruleContainerType
                     {
                      
                     	        newCompositeNode(grammarAccess.getContainerAccess().getContainerTypeContainerTypeParserRuleCall_2_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleContainerType_in_ruleContainer1830);
+                    pushFollow(FOLLOW_ruleContainerType_in_ruleContainer1859);
                     lv_containerType_2_0=ruleContainerType();
 
                     state._fsp--;
@@ -2250,19 +2325,49 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,29,FOLLOW_29_in_ruleContainer1843); 
+            otherlv_3=(Token)match(input,29,FOLLOW_29_in_ruleContainer1872); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getContainerAccess().getContainerKeyword_3());
                 
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:939:1: ( (lv_eClass_4_0= RULE_STRING ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:940:1: (lv_eClass_4_0= RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:949:1: ( (lv_name_4_0= RULE_ID ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:950:1: (lv_name_4_0= RULE_ID )
             {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:940:1: (lv_eClass_4_0= RULE_STRING )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:941:3: lv_eClass_4_0= RULE_STRING
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:950:1: (lv_name_4_0= RULE_ID )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:951:3: lv_name_4_0= RULE_ID
             {
-            lv_eClass_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleContainer1860); 
+            lv_name_4_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleContainer1889); 
 
-            			newLeafNode(lv_eClass_4_0, grammarAccess.getContainerAccess().getEClassSTRINGTerminalRuleCall_4_0()); 
+            			newLeafNode(lv_name_4_0, grammarAccess.getContainerAccess().getNameIDTerminalRuleCall_4_0()); 
+            		
+
+            	        if (current==null) {
+            	            current = createModelElement(grammarAccess.getContainerRule());
+            	        }
+                   		setWithLastConsumed(
+                   			current, 
+                   			"name",
+                    		lv_name_4_0, 
+                    		"ID");
+            	    
+
+            }
+
+
+            }
+
+            otherlv_5=(Token)match(input,30,FOLLOW_30_in_ruleContainer1906); 
+
+                	newLeafNode(otherlv_5, grammarAccess.getContainerAccess().getForKeyword_5());
+                
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:971:1: ( (lv_eClass_6_0= RULE_STRING ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:972:1: (lv_eClass_6_0= RULE_STRING )
+            {
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:972:1: (lv_eClass_6_0= RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:973:3: lv_eClass_6_0= RULE_STRING
+            {
+            lv_eClass_6_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleContainer1923); 
+
+            			newLeafNode(lv_eClass_6_0, grammarAccess.getContainerAccess().getEClassSTRINGTerminalRuleCall_6_0()); 
             		
 
             	        if (current==null) {
@@ -2271,7 +2376,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                    		setWithLastConsumed(
                    			current, 
                    			"eClass",
-                    		lv_eClass_4_0, 
+                    		lv_eClass_6_0, 
                     		"STRING");
             	    
 
@@ -2280,21 +2385,21 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,25,FOLLOW_25_in_ruleContainer1877); 
+            otherlv_7=(Token)match(input,25,FOLLOW_25_in_ruleContainer1940); 
 
-                	newLeafNode(otherlv_5, grammarAccess.getContainerAccess().getAccessibleThroughKeyword_5());
+                	newLeafNode(otherlv_7, grammarAccess.getContainerAccess().getAccessibleThroughKeyword_7());
                 
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:961:1: ( (lv_expression_6_0= ruleSPExpression ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:962:1: (lv_expression_6_0= ruleSPExpression )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:993:1: ( (lv_expression_8_0= ruleSPExpression ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:994:1: (lv_expression_8_0= ruleSPExpression )
             {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:962:1: (lv_expression_6_0= ruleSPExpression )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:963:3: lv_expression_6_0= ruleSPExpression
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:994:1: (lv_expression_8_0= ruleSPExpression )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:995:3: lv_expression_8_0= ruleSPExpression
             {
              
-            	        newCompositeNode(grammarAccess.getContainerAccess().getExpressionSPExpressionParserRuleCall_6_0()); 
+            	        newCompositeNode(grammarAccess.getContainerAccess().getExpressionSPExpressionParserRuleCall_8_0()); 
             	    
-            pushFollow(FOLLOW_ruleSPExpression_in_ruleContainer1898);
-            lv_expression_6_0=ruleSPExpression();
+            pushFollow(FOLLOW_ruleSPExpression_in_ruleContainer1961);
+            lv_expression_8_0=ruleSPExpression();
 
             state._fsp--;
 
@@ -2305,7 +2410,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                    		set(
                    			current, 
                    			"expression",
-                    		lv_expression_6_0, 
+                    		lv_expression_8_0, 
                     		"SPExpression");
             	        afterParserOrEnumRuleCall();
             	    
@@ -2315,25 +2420,25 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:979:2: ( (lv_style_7_0= ruleContainerStyleDefinition ) )?
-            int alt25=2;
-            int LA25_0 = input.LA(1);
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1011:2: ( (lv_style_9_0= ruleContainerStyleDefinition ) )?
+            int alt26=2;
+            int LA26_0 = input.LA(1);
 
-            if ( (LA25_0==30) ) {
-                alt25=1;
+            if ( (LA26_0==31) ) {
+                alt26=1;
             }
-            switch (alt25) {
+            switch (alt26) {
                 case 1 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:980:1: (lv_style_7_0= ruleContainerStyleDefinition )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1012:1: (lv_style_9_0= ruleContainerStyleDefinition )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:980:1: (lv_style_7_0= ruleContainerStyleDefinition )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:981:3: lv_style_7_0= ruleContainerStyleDefinition
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1012:1: (lv_style_9_0= ruleContainerStyleDefinition )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1013:3: lv_style_9_0= ruleContainerStyleDefinition
                     {
                      
-                    	        newCompositeNode(grammarAccess.getContainerAccess().getStyleContainerStyleDefinitionParserRuleCall_7_0()); 
+                    	        newCompositeNode(grammarAccess.getContainerAccess().getStyleContainerStyleDefinitionParserRuleCall_9_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleContainerStyleDefinition_in_ruleContainer1919);
-                    lv_style_7_0=ruleContainerStyleDefinition();
+                    pushFollow(FOLLOW_ruleContainerStyleDefinition_in_ruleContainer1982);
+                    lv_style_9_0=ruleContainerStyleDefinition();
 
                     state._fsp--;
 
@@ -2344,7 +2449,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                            		set(
                            			current, 
                            			"style",
-                            		lv_style_7_0, 
+                            		lv_style_9_0, 
                             		"ContainerStyleDefinition");
                     	        afterParserOrEnumRuleCall();
                     	    
@@ -2357,45 +2462,45 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:997:3: (otherlv_8= '{' ( (lv_elements_9_0= ruleDiagramElement ) )+ otherlv_10= '}' )?
-            int alt27=2;
-            int LA27_0 = input.LA(1);
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1029:3: (otherlv_10= '{' ( (lv_elements_11_0= ruleDiagramElement ) )+ otherlv_12= '}' )?
+            int alt28=2;
+            int LA28_0 = input.LA(1);
 
-            if ( (LA27_0==12) ) {
-                alt27=1;
+            if ( (LA28_0==12) ) {
+                alt28=1;
             }
-            switch (alt27) {
+            switch (alt28) {
                 case 1 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:997:5: otherlv_8= '{' ( (lv_elements_9_0= ruleDiagramElement ) )+ otherlv_10= '}'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1029:5: otherlv_10= '{' ( (lv_elements_11_0= ruleDiagramElement ) )+ otherlv_12= '}'
                     {
-                    otherlv_8=(Token)match(input,12,FOLLOW_12_in_ruleContainer1933); 
+                    otherlv_10=(Token)match(input,12,FOLLOW_12_in_ruleContainer1996); 
 
-                        	newLeafNode(otherlv_8, grammarAccess.getContainerAccess().getLeftCurlyBracketKeyword_8_0());
+                        	newLeafNode(otherlv_10, grammarAccess.getContainerAccess().getLeftCurlyBracketKeyword_10_0());
                         
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1001:1: ( (lv_elements_9_0= ruleDiagramElement ) )+
-                    int cnt26=0;
-                    loop26:
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1033:1: ( (lv_elements_11_0= ruleDiagramElement ) )+
+                    int cnt27=0;
+                    loop27:
                     do {
-                        int alt26=2;
-                        int LA26_0 = input.LA(1);
+                        int alt27=2;
+                        int LA27_0 = input.LA(1);
 
-                        if ( ((LA26_0>=22 && LA26_0<=23)||LA26_0==29||(LA26_0>=33 && LA26_0<=34)) ) {
-                            alt26=1;
+                        if ( ((LA27_0>=22 && LA27_0<=23)||LA27_0==29||(LA27_0>=34 && LA27_0<=36)) ) {
+                            alt27=1;
                         }
 
 
-                        switch (alt26) {
+                        switch (alt27) {
                     	case 1 :
-                    	    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1002:1: (lv_elements_9_0= ruleDiagramElement )
+                    	    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1034:1: (lv_elements_11_0= ruleDiagramElement )
                     	    {
-                    	    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1002:1: (lv_elements_9_0= ruleDiagramElement )
-                    	    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1003:3: lv_elements_9_0= ruleDiagramElement
+                    	    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1034:1: (lv_elements_11_0= ruleDiagramElement )
+                    	    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1035:3: lv_elements_11_0= ruleDiagramElement
                     	    {
                     	     
-                    	    	        newCompositeNode(grammarAccess.getContainerAccess().getElementsDiagramElementParserRuleCall_8_1_0()); 
+                    	    	        newCompositeNode(grammarAccess.getContainerAccess().getElementsDiagramElementParserRuleCall_10_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleDiagramElement_in_ruleContainer1954);
-                    	    lv_elements_9_0=ruleDiagramElement();
+                    	    pushFollow(FOLLOW_ruleDiagramElement_in_ruleContainer2017);
+                    	    lv_elements_11_0=ruleDiagramElement();
 
                     	    state._fsp--;
 
@@ -2406,7 +2511,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                     	           		add(
                     	           			current, 
                     	           			"elements",
-                    	            		lv_elements_9_0, 
+                    	            		lv_elements_11_0, 
                     	            		"DiagramElement");
                     	    	        afterParserOrEnumRuleCall();
                     	    	    
@@ -2418,17 +2523,17 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    if ( cnt26 >= 1 ) break loop26;
+                    	    if ( cnt27 >= 1 ) break loop27;
                                 EarlyExitException eee =
-                                    new EarlyExitException(26, input);
+                                    new EarlyExitException(27, input);
                                 throw eee;
                         }
-                        cnt26++;
+                        cnt27++;
                     } while (true);
 
-                    otherlv_10=(Token)match(input,14,FOLLOW_14_in_ruleContainer1967); 
+                    otherlv_12=(Token)match(input,14,FOLLOW_14_in_ruleContainer2030); 
 
-                        	newLeafNode(otherlv_10, grammarAccess.getContainerAccess().getRightCurlyBracketKeyword_8_2());
+                        	newLeafNode(otherlv_12, grammarAccess.getContainerAccess().getRightCurlyBracketKeyword_10_2());
                         
 
                     }
@@ -2457,7 +2562,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleContainerStyleDefinition"
-    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1031:1: entryRuleContainerStyleDefinition returns [EObject current=null] : iv_ruleContainerStyleDefinition= ruleContainerStyleDefinition EOF ;
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1063:1: entryRuleContainerStyleDefinition returns [EObject current=null] : iv_ruleContainerStyleDefinition= ruleContainerStyleDefinition EOF ;
     public final EObject entryRuleContainerStyleDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -2465,17 +2570,17 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1032:2: (iv_ruleContainerStyleDefinition= ruleContainerStyleDefinition EOF )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1033:2: iv_ruleContainerStyleDefinition= ruleContainerStyleDefinition EOF
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1064:2: (iv_ruleContainerStyleDefinition= ruleContainerStyleDefinition EOF )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1065:2: iv_ruleContainerStyleDefinition= ruleContainerStyleDefinition EOF
             {
              newCompositeNode(grammarAccess.getContainerStyleDefinitionRule()); 
-            pushFollow(FOLLOW_ruleContainerStyleDefinition_in_entryRuleContainerStyleDefinition2005);
+            pushFollow(FOLLOW_ruleContainerStyleDefinition_in_entryRuleContainerStyleDefinition2068);
             iv_ruleContainerStyleDefinition=ruleContainerStyleDefinition();
 
             state._fsp--;
 
              current =iv_ruleContainerStyleDefinition; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleContainerStyleDefinition2015); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleContainerStyleDefinition2078); 
 
             }
 
@@ -2493,7 +2598,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleContainerStyleDefinition"
-    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1040:1: ruleContainerStyleDefinition returns [EObject current=null] : (otherlv_0= '[' ( (lv_color_1_0= ruleContainerColorDefinition ) ) (otherlv_2= ',' ( (lv_label_3_0= ruleLabelStyleDefinition ) ) )? (otherlv_4= ',' ( (lv_border_5_0= ruleBorderStyleDefinition ) ) )? otherlv_6= ']' ) ;
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1072:1: ruleContainerStyleDefinition returns [EObject current=null] : (otherlv_0= '[' ( (lv_color_1_0= ruleContainerColorDefinition ) ) (otherlv_2= ',' ( (lv_label_3_0= ruleLabelStyleDefinition ) ) )? (otherlv_4= ',' ( (lv_border_5_0= ruleBorderStyleDefinition ) ) )? otherlv_6= ']' ) ;
     public final EObject ruleContainerStyleDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -2511,26 +2616,26 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1043:28: ( (otherlv_0= '[' ( (lv_color_1_0= ruleContainerColorDefinition ) ) (otherlv_2= ',' ( (lv_label_3_0= ruleLabelStyleDefinition ) ) )? (otherlv_4= ',' ( (lv_border_5_0= ruleBorderStyleDefinition ) ) )? otherlv_6= ']' ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1044:1: (otherlv_0= '[' ( (lv_color_1_0= ruleContainerColorDefinition ) ) (otherlv_2= ',' ( (lv_label_3_0= ruleLabelStyleDefinition ) ) )? (otherlv_4= ',' ( (lv_border_5_0= ruleBorderStyleDefinition ) ) )? otherlv_6= ']' )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1075:28: ( (otherlv_0= '[' ( (lv_color_1_0= ruleContainerColorDefinition ) ) (otherlv_2= ',' ( (lv_label_3_0= ruleLabelStyleDefinition ) ) )? (otherlv_4= ',' ( (lv_border_5_0= ruleBorderStyleDefinition ) ) )? otherlv_6= ']' ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1076:1: (otherlv_0= '[' ( (lv_color_1_0= ruleContainerColorDefinition ) ) (otherlv_2= ',' ( (lv_label_3_0= ruleLabelStyleDefinition ) ) )? (otherlv_4= ',' ( (lv_border_5_0= ruleBorderStyleDefinition ) ) )? otherlv_6= ']' )
             {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1044:1: (otherlv_0= '[' ( (lv_color_1_0= ruleContainerColorDefinition ) ) (otherlv_2= ',' ( (lv_label_3_0= ruleLabelStyleDefinition ) ) )? (otherlv_4= ',' ( (lv_border_5_0= ruleBorderStyleDefinition ) ) )? otherlv_6= ']' )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1044:3: otherlv_0= '[' ( (lv_color_1_0= ruleContainerColorDefinition ) ) (otherlv_2= ',' ( (lv_label_3_0= ruleLabelStyleDefinition ) ) )? (otherlv_4= ',' ( (lv_border_5_0= ruleBorderStyleDefinition ) ) )? otherlv_6= ']'
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1076:1: (otherlv_0= '[' ( (lv_color_1_0= ruleContainerColorDefinition ) ) (otherlv_2= ',' ( (lv_label_3_0= ruleLabelStyleDefinition ) ) )? (otherlv_4= ',' ( (lv_border_5_0= ruleBorderStyleDefinition ) ) )? otherlv_6= ']' )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1076:3: otherlv_0= '[' ( (lv_color_1_0= ruleContainerColorDefinition ) ) (otherlv_2= ',' ( (lv_label_3_0= ruleLabelStyleDefinition ) ) )? (otherlv_4= ',' ( (lv_border_5_0= ruleBorderStyleDefinition ) ) )? otherlv_6= ']'
             {
-            otherlv_0=(Token)match(input,30,FOLLOW_30_in_ruleContainerStyleDefinition2052); 
+            otherlv_0=(Token)match(input,31,FOLLOW_31_in_ruleContainerStyleDefinition2115); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getContainerStyleDefinitionAccess().getLeftSquareBracketKeyword_0());
                 
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1048:1: ( (lv_color_1_0= ruleContainerColorDefinition ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1049:1: (lv_color_1_0= ruleContainerColorDefinition )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1080:1: ( (lv_color_1_0= ruleContainerColorDefinition ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1081:1: (lv_color_1_0= ruleContainerColorDefinition )
             {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1049:1: (lv_color_1_0= ruleContainerColorDefinition )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1050:3: lv_color_1_0= ruleContainerColorDefinition
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1081:1: (lv_color_1_0= ruleContainerColorDefinition )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1082:3: lv_color_1_0= ruleContainerColorDefinition
             {
              
             	        newCompositeNode(grammarAccess.getContainerStyleDefinitionAccess().getColorContainerColorDefinitionParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleContainerColorDefinition_in_ruleContainerStyleDefinition2073);
+            pushFollow(FOLLOW_ruleContainerColorDefinition_in_ruleContainerStyleDefinition2136);
             lv_color_1_0=ruleContainerColorDefinition();
 
             state._fsp--;
@@ -2552,35 +2657,35 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1066:2: (otherlv_2= ',' ( (lv_label_3_0= ruleLabelStyleDefinition ) ) )?
-            int alt28=2;
-            int LA28_0 = input.LA(1);
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1098:2: (otherlv_2= ',' ( (lv_label_3_0= ruleLabelStyleDefinition ) ) )?
+            int alt29=2;
+            int LA29_0 = input.LA(1);
 
-            if ( (LA28_0==31) ) {
-                int LA28_1 = input.LA(2);
+            if ( (LA29_0==32) ) {
+                int LA29_1 = input.LA(2);
 
-                if ( (LA28_1==19) ) {
-                    alt28=1;
+                if ( (LA29_1==19) ) {
+                    alt29=1;
                 }
             }
-            switch (alt28) {
+            switch (alt29) {
                 case 1 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1066:4: otherlv_2= ',' ( (lv_label_3_0= ruleLabelStyleDefinition ) )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1098:4: otherlv_2= ',' ( (lv_label_3_0= ruleLabelStyleDefinition ) )
                     {
-                    otherlv_2=(Token)match(input,31,FOLLOW_31_in_ruleContainerStyleDefinition2086); 
+                    otherlv_2=(Token)match(input,32,FOLLOW_32_in_ruleContainerStyleDefinition2149); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getContainerStyleDefinitionAccess().getCommaKeyword_2_0());
                         
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1070:1: ( (lv_label_3_0= ruleLabelStyleDefinition ) )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1071:1: (lv_label_3_0= ruleLabelStyleDefinition )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1102:1: ( (lv_label_3_0= ruleLabelStyleDefinition ) )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1103:1: (lv_label_3_0= ruleLabelStyleDefinition )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1071:1: (lv_label_3_0= ruleLabelStyleDefinition )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1072:3: lv_label_3_0= ruleLabelStyleDefinition
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1103:1: (lv_label_3_0= ruleLabelStyleDefinition )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1104:3: lv_label_3_0= ruleLabelStyleDefinition
                     {
                      
                     	        newCompositeNode(grammarAccess.getContainerStyleDefinitionAccess().getLabelLabelStyleDefinitionParserRuleCall_2_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleLabelStyleDefinition_in_ruleContainerStyleDefinition2107);
+                    pushFollow(FOLLOW_ruleLabelStyleDefinition_in_ruleContainerStyleDefinition2170);
                     lv_label_3_0=ruleLabelStyleDefinition();
 
                     state._fsp--;
@@ -2608,31 +2713,31 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1088:4: (otherlv_4= ',' ( (lv_border_5_0= ruleBorderStyleDefinition ) ) )?
-            int alt29=2;
-            int LA29_0 = input.LA(1);
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1120:4: (otherlv_4= ',' ( (lv_border_5_0= ruleBorderStyleDefinition ) ) )?
+            int alt30=2;
+            int LA30_0 = input.LA(1);
 
-            if ( (LA29_0==31) ) {
-                alt29=1;
+            if ( (LA30_0==32) ) {
+                alt30=1;
             }
-            switch (alt29) {
+            switch (alt30) {
                 case 1 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1088:6: otherlv_4= ',' ( (lv_border_5_0= ruleBorderStyleDefinition ) )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1120:6: otherlv_4= ',' ( (lv_border_5_0= ruleBorderStyleDefinition ) )
                     {
-                    otherlv_4=(Token)match(input,31,FOLLOW_31_in_ruleContainerStyleDefinition2122); 
+                    otherlv_4=(Token)match(input,32,FOLLOW_32_in_ruleContainerStyleDefinition2185); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getContainerStyleDefinitionAccess().getCommaKeyword_3_0());
                         
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1092:1: ( (lv_border_5_0= ruleBorderStyleDefinition ) )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1093:1: (lv_border_5_0= ruleBorderStyleDefinition )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1124:1: ( (lv_border_5_0= ruleBorderStyleDefinition ) )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1125:1: (lv_border_5_0= ruleBorderStyleDefinition )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1093:1: (lv_border_5_0= ruleBorderStyleDefinition )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1094:3: lv_border_5_0= ruleBorderStyleDefinition
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1125:1: (lv_border_5_0= ruleBorderStyleDefinition )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1126:3: lv_border_5_0= ruleBorderStyleDefinition
                     {
                      
                     	        newCompositeNode(grammarAccess.getContainerStyleDefinitionAccess().getBorderBorderStyleDefinitionParserRuleCall_3_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleBorderStyleDefinition_in_ruleContainerStyleDefinition2143);
+                    pushFollow(FOLLOW_ruleBorderStyleDefinition_in_ruleContainerStyleDefinition2206);
                     lv_border_5_0=ruleBorderStyleDefinition();
 
                     state._fsp--;
@@ -2660,7 +2765,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,32,FOLLOW_32_in_ruleContainerStyleDefinition2157); 
+            otherlv_6=(Token)match(input,33,FOLLOW_33_in_ruleContainerStyleDefinition2220); 
 
                 	newLeafNode(otherlv_6, grammarAccess.getContainerStyleDefinitionAccess().getRightSquareBracketKeyword_4());
                 
@@ -2685,7 +2790,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleContainerType"
-    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1122:1: entryRuleContainerType returns [String current=null] : iv_ruleContainerType= ruleContainerType EOF ;
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1154:1: entryRuleContainerType returns [String current=null] : iv_ruleContainerType= ruleContainerType EOF ;
     public final String entryRuleContainerType() throws RecognitionException {
         String current = null;
 
@@ -2693,17 +2798,17 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1123:2: (iv_ruleContainerType= ruleContainerType EOF )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1124:2: iv_ruleContainerType= ruleContainerType EOF
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1155:2: (iv_ruleContainerType= ruleContainerType EOF )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1156:2: iv_ruleContainerType= ruleContainerType EOF
             {
              newCompositeNode(grammarAccess.getContainerTypeRule()); 
-            pushFollow(FOLLOW_ruleContainerType_in_entryRuleContainerType2194);
+            pushFollow(FOLLOW_ruleContainerType_in_entryRuleContainerType2257);
             iv_ruleContainerType=ruleContainerType();
 
             state._fsp--;
 
              current =iv_ruleContainerType.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleContainerType2205); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleContainerType2268); 
 
             }
 
@@ -2721,7 +2826,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleContainerType"
-    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1131:1: ruleContainerType returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'freeform' | kw= 'list' ) ;
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1163:1: ruleContainerType returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'freeform' | kw= 'list' ) ;
     public final AntlrDatatypeRuleToken ruleContainerType() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2730,30 +2835,30 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1134:28: ( (kw= 'freeform' | kw= 'list' ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1135:1: (kw= 'freeform' | kw= 'list' )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1166:28: ( (kw= 'freeform' | kw= 'list' ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1167:1: (kw= 'freeform' | kw= 'list' )
             {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1135:1: (kw= 'freeform' | kw= 'list' )
-            int alt30=2;
-            int LA30_0 = input.LA(1);
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1167:1: (kw= 'freeform' | kw= 'list' )
+            int alt31=2;
+            int LA31_0 = input.LA(1);
 
-            if ( (LA30_0==33) ) {
-                alt30=1;
+            if ( (LA31_0==34) ) {
+                alt31=1;
             }
-            else if ( (LA30_0==34) ) {
-                alt30=2;
+            else if ( (LA31_0==35) ) {
+                alt31=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 30, 0, input);
+                    new NoViableAltException("", 31, 0, input);
 
                 throw nvae;
             }
-            switch (alt30) {
+            switch (alt31) {
                 case 1 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1136:2: kw= 'freeform'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1168:2: kw= 'freeform'
                     {
-                    kw=(Token)match(input,33,FOLLOW_33_in_ruleContainerType2243); 
+                    kw=(Token)match(input,34,FOLLOW_34_in_ruleContainerType2306); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getContainerTypeAccess().getFreeformKeyword_0()); 
@@ -2762,9 +2867,9 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1143:2: kw= 'list'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1175:2: kw= 'list'
                     {
-                    kw=(Token)match(input,34,FOLLOW_34_in_ruleContainerType2262); 
+                    kw=(Token)match(input,35,FOLLOW_35_in_ruleContainerType2325); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getContainerTypeAccess().getListKeyword_1()); 
@@ -2792,8 +2897,612 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleContainerType"
 
 
+    // $ANTLR start "entryRuleContainerColorDefinition"
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1188:1: entryRuleContainerColorDefinition returns [EObject current=null] : iv_ruleContainerColorDefinition= ruleContainerColorDefinition EOF ;
+    public final EObject entryRuleContainerColorDefinition() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleContainerColorDefinition = null;
+
+
+        try {
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1189:2: (iv_ruleContainerColorDefinition= ruleContainerColorDefinition EOF )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1190:2: iv_ruleContainerColorDefinition= ruleContainerColorDefinition EOF
+            {
+             newCompositeNode(grammarAccess.getContainerColorDefinitionRule()); 
+            pushFollow(FOLLOW_ruleContainerColorDefinition_in_entryRuleContainerColorDefinition2365);
+            iv_ruleContainerColorDefinition=ruleContainerColorDefinition();
+
+            state._fsp--;
+
+             current =iv_ruleContainerColorDefinition; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleContainerColorDefinition2375); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleContainerColorDefinition"
+
+
+    // $ANTLR start "ruleContainerColorDefinition"
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1197:1: ruleContainerColorDefinition returns [EObject current=null] : (this_SolidColorDefinition_0= ruleSolidColorDefinition | this_GradientColorDefinition_1= ruleGradientColorDefinition ) ;
+    public final EObject ruleContainerColorDefinition() throws RecognitionException {
+        EObject current = null;
+
+        EObject this_SolidColorDefinition_0 = null;
+
+        EObject this_GradientColorDefinition_1 = null;
+
+
+         enterRule(); 
+            
+        try {
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1200:28: ( (this_SolidColorDefinition_0= ruleSolidColorDefinition | this_GradientColorDefinition_1= ruleGradientColorDefinition ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1201:1: (this_SolidColorDefinition_0= ruleSolidColorDefinition | this_GradientColorDefinition_1= ruleGradientColorDefinition )
+            {
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1201:1: (this_SolidColorDefinition_0= ruleSolidColorDefinition | this_GradientColorDefinition_1= ruleGradientColorDefinition )
+            int alt32=2;
+            int LA32_0 = input.LA(1);
+
+            if ( (LA32_0==37) ) {
+                alt32=1;
+            }
+            else if ( (LA32_0==38) ) {
+                alt32=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 32, 0, input);
+
+                throw nvae;
+            }
+            switch (alt32) {
+                case 1 :
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1202:5: this_SolidColorDefinition_0= ruleSolidColorDefinition
+                    {
+                     
+                            newCompositeNode(grammarAccess.getContainerColorDefinitionAccess().getSolidColorDefinitionParserRuleCall_0()); 
+                        
+                    pushFollow(FOLLOW_ruleSolidColorDefinition_in_ruleContainerColorDefinition2422);
+                    this_SolidColorDefinition_0=ruleSolidColorDefinition();
+
+                    state._fsp--;
+
+                     
+                            current = this_SolidColorDefinition_0; 
+                            afterParserOrEnumRuleCall();
+                        
+
+                    }
+                    break;
+                case 2 :
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1212:5: this_GradientColorDefinition_1= ruleGradientColorDefinition
+                    {
+                     
+                            newCompositeNode(grammarAccess.getContainerColorDefinitionAccess().getGradientColorDefinitionParserRuleCall_1()); 
+                        
+                    pushFollow(FOLLOW_ruleGradientColorDefinition_in_ruleContainerColorDefinition2449);
+                    this_GradientColorDefinition_1=ruleGradientColorDefinition();
+
+                    state._fsp--;
+
+                     
+                            current = this_GradientColorDefinition_1; 
+                            afterParserOrEnumRuleCall();
+                        
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleContainerColorDefinition"
+
+
+    // $ANTLR start "entryRuleNode"
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1228:1: entryRuleNode returns [EObject current=null] : iv_ruleNode= ruleNode EOF ;
+    public final EObject entryRuleNode() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleNode = null;
+
+
+        try {
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1229:2: (iv_ruleNode= ruleNode EOF )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1230:2: iv_ruleNode= ruleNode EOF
+            {
+             newCompositeNode(grammarAccess.getNodeRule()); 
+            pushFollow(FOLLOW_ruleNode_in_entryRuleNode2484);
+            iv_ruleNode=ruleNode();
+
+            state._fsp--;
+
+             current =iv_ruleNode; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNode2494); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleNode"
+
+
+    // $ANTLR start "ruleNode"
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1237:1: ruleNode returns [EObject current=null] : ( ( (lv_creatable_0_0= 'creatable' ) )? otherlv_1= 'node' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'for' ( (lv_eClass_4_0= RULE_STRING ) ) otherlv_5= 'accessibleThrough' ( (lv_expression_6_0= ruleSPExpression ) ) ( (lv_style_7_0= ruleNodeStyleDefinition ) )? ) ;
+    public final EObject ruleNode() throws RecognitionException {
+        EObject current = null;
+
+        Token lv_creatable_0_0=null;
+        Token otherlv_1=null;
+        Token lv_name_2_0=null;
+        Token otherlv_3=null;
+        Token lv_eClass_4_0=null;
+        Token otherlv_5=null;
+        EObject lv_expression_6_0 = null;
+
+        EObject lv_style_7_0 = null;
+
+
+         enterRule(); 
+            
+        try {
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1240:28: ( ( ( (lv_creatable_0_0= 'creatable' ) )? otherlv_1= 'node' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'for' ( (lv_eClass_4_0= RULE_STRING ) ) otherlv_5= 'accessibleThrough' ( (lv_expression_6_0= ruleSPExpression ) ) ( (lv_style_7_0= ruleNodeStyleDefinition ) )? ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1241:1: ( ( (lv_creatable_0_0= 'creatable' ) )? otherlv_1= 'node' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'for' ( (lv_eClass_4_0= RULE_STRING ) ) otherlv_5= 'accessibleThrough' ( (lv_expression_6_0= ruleSPExpression ) ) ( (lv_style_7_0= ruleNodeStyleDefinition ) )? )
+            {
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1241:1: ( ( (lv_creatable_0_0= 'creatable' ) )? otherlv_1= 'node' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'for' ( (lv_eClass_4_0= RULE_STRING ) ) otherlv_5= 'accessibleThrough' ( (lv_expression_6_0= ruleSPExpression ) ) ( (lv_style_7_0= ruleNodeStyleDefinition ) )? )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1241:2: ( (lv_creatable_0_0= 'creatable' ) )? otherlv_1= 'node' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'for' ( (lv_eClass_4_0= RULE_STRING ) ) otherlv_5= 'accessibleThrough' ( (lv_expression_6_0= ruleSPExpression ) ) ( (lv_style_7_0= ruleNodeStyleDefinition ) )?
+            {
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1241:2: ( (lv_creatable_0_0= 'creatable' ) )?
+            int alt33=2;
+            int LA33_0 = input.LA(1);
+
+            if ( (LA33_0==22) ) {
+                alt33=1;
+            }
+            switch (alt33) {
+                case 1 :
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1242:1: (lv_creatable_0_0= 'creatable' )
+                    {
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1242:1: (lv_creatable_0_0= 'creatable' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1243:3: lv_creatable_0_0= 'creatable'
+                    {
+                    lv_creatable_0_0=(Token)match(input,22,FOLLOW_22_in_ruleNode2537); 
+
+                            newLeafNode(lv_creatable_0_0, grammarAccess.getNodeAccess().getCreatableCreatableKeyword_0_0());
+                        
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getNodeRule());
+                    	        }
+                           		setWithLastConsumed(current, "creatable", true, "creatable");
+                    	    
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+            otherlv_1=(Token)match(input,36,FOLLOW_36_in_ruleNode2563); 
+
+                	newLeafNode(otherlv_1, grammarAccess.getNodeAccess().getNodeKeyword_1());
+                
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1260:1: ( (lv_name_2_0= RULE_ID ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1261:1: (lv_name_2_0= RULE_ID )
+            {
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1261:1: (lv_name_2_0= RULE_ID )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1262:3: lv_name_2_0= RULE_ID
+            {
+            lv_name_2_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleNode2580); 
+
+            			newLeafNode(lv_name_2_0, grammarAccess.getNodeAccess().getNameIDTerminalRuleCall_2_0()); 
+            		
+
+            	        if (current==null) {
+            	            current = createModelElement(grammarAccess.getNodeRule());
+            	        }
+                   		setWithLastConsumed(
+                   			current, 
+                   			"name",
+                    		lv_name_2_0, 
+                    		"ID");
+            	    
+
+            }
+
+
+            }
+
+            otherlv_3=(Token)match(input,30,FOLLOW_30_in_ruleNode2597); 
+
+                	newLeafNode(otherlv_3, grammarAccess.getNodeAccess().getForKeyword_3());
+                
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1282:1: ( (lv_eClass_4_0= RULE_STRING ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1283:1: (lv_eClass_4_0= RULE_STRING )
+            {
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1283:1: (lv_eClass_4_0= RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1284:3: lv_eClass_4_0= RULE_STRING
+            {
+            lv_eClass_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleNode2614); 
+
+            			newLeafNode(lv_eClass_4_0, grammarAccess.getNodeAccess().getEClassSTRINGTerminalRuleCall_4_0()); 
+            		
+
+            	        if (current==null) {
+            	            current = createModelElement(grammarAccess.getNodeRule());
+            	        }
+                   		setWithLastConsumed(
+                   			current, 
+                   			"eClass",
+                    		lv_eClass_4_0, 
+                    		"STRING");
+            	    
+
+            }
+
+
+            }
+
+            otherlv_5=(Token)match(input,25,FOLLOW_25_in_ruleNode2631); 
+
+                	newLeafNode(otherlv_5, grammarAccess.getNodeAccess().getAccessibleThroughKeyword_5());
+                
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1304:1: ( (lv_expression_6_0= ruleSPExpression ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1305:1: (lv_expression_6_0= ruleSPExpression )
+            {
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1305:1: (lv_expression_6_0= ruleSPExpression )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1306:3: lv_expression_6_0= ruleSPExpression
+            {
+             
+            	        newCompositeNode(grammarAccess.getNodeAccess().getExpressionSPExpressionParserRuleCall_6_0()); 
+            	    
+            pushFollow(FOLLOW_ruleSPExpression_in_ruleNode2652);
+            lv_expression_6_0=ruleSPExpression();
+
+            state._fsp--;
+
+
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getNodeRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"expression",
+                    		lv_expression_6_0, 
+                    		"SPExpression");
+            	        afterParserOrEnumRuleCall();
+            	    
+
+            }
+
+
+            }
+
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1322:2: ( (lv_style_7_0= ruleNodeStyleDefinition ) )?
+            int alt34=2;
+            int LA34_0 = input.LA(1);
+
+            if ( (LA34_0==31) ) {
+                alt34=1;
+            }
+            switch (alt34) {
+                case 1 :
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1323:1: (lv_style_7_0= ruleNodeStyleDefinition )
+                    {
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1323:1: (lv_style_7_0= ruleNodeStyleDefinition )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1324:3: lv_style_7_0= ruleNodeStyleDefinition
+                    {
+                     
+                    	        newCompositeNode(grammarAccess.getNodeAccess().getStyleNodeStyleDefinitionParserRuleCall_7_0()); 
+                    	    
+                    pushFollow(FOLLOW_ruleNodeStyleDefinition_in_ruleNode2673);
+                    lv_style_7_0=ruleNodeStyleDefinition();
+
+                    state._fsp--;
+
+
+                    	        if (current==null) {
+                    	            current = createModelElementForParent(grammarAccess.getNodeRule());
+                    	        }
+                           		set(
+                           			current, 
+                           			"style",
+                            		lv_style_7_0, 
+                            		"NodeStyleDefinition");
+                    	        afterParserOrEnumRuleCall();
+                    	    
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleNode"
+
+
+    // $ANTLR start "entryRuleNodeStyleDefinition"
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1348:1: entryRuleNodeStyleDefinition returns [EObject current=null] : iv_ruleNodeStyleDefinition= ruleNodeStyleDefinition EOF ;
+    public final EObject entryRuleNodeStyleDefinition() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleNodeStyleDefinition = null;
+
+
+        try {
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1349:2: (iv_ruleNodeStyleDefinition= ruleNodeStyleDefinition EOF )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1350:2: iv_ruleNodeStyleDefinition= ruleNodeStyleDefinition EOF
+            {
+             newCompositeNode(grammarAccess.getNodeStyleDefinitionRule()); 
+            pushFollow(FOLLOW_ruleNodeStyleDefinition_in_entryRuleNodeStyleDefinition2710);
+            iv_ruleNodeStyleDefinition=ruleNodeStyleDefinition();
+
+            state._fsp--;
+
+             current =iv_ruleNodeStyleDefinition; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNodeStyleDefinition2720); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleNodeStyleDefinition"
+
+
+    // $ANTLR start "ruleNodeStyleDefinition"
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1357:1: ruleNodeStyleDefinition returns [EObject current=null] : (otherlv_0= '[' ( (lv_color_1_0= ruleSolidColorDefinition ) ) (otherlv_2= ',' ( (lv_label_3_0= ruleLabelStyleDefinition ) ) )? (otherlv_4= ',' ( (lv_border_5_0= ruleBorderStyleDefinition ) ) )? otherlv_6= ']' ) ;
+    public final EObject ruleNodeStyleDefinition() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        Token otherlv_2=null;
+        Token otherlv_4=null;
+        Token otherlv_6=null;
+        EObject lv_color_1_0 = null;
+
+        EObject lv_label_3_0 = null;
+
+        EObject lv_border_5_0 = null;
+
+
+         enterRule(); 
+            
+        try {
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1360:28: ( (otherlv_0= '[' ( (lv_color_1_0= ruleSolidColorDefinition ) ) (otherlv_2= ',' ( (lv_label_3_0= ruleLabelStyleDefinition ) ) )? (otherlv_4= ',' ( (lv_border_5_0= ruleBorderStyleDefinition ) ) )? otherlv_6= ']' ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1361:1: (otherlv_0= '[' ( (lv_color_1_0= ruleSolidColorDefinition ) ) (otherlv_2= ',' ( (lv_label_3_0= ruleLabelStyleDefinition ) ) )? (otherlv_4= ',' ( (lv_border_5_0= ruleBorderStyleDefinition ) ) )? otherlv_6= ']' )
+            {
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1361:1: (otherlv_0= '[' ( (lv_color_1_0= ruleSolidColorDefinition ) ) (otherlv_2= ',' ( (lv_label_3_0= ruleLabelStyleDefinition ) ) )? (otherlv_4= ',' ( (lv_border_5_0= ruleBorderStyleDefinition ) ) )? otherlv_6= ']' )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1361:3: otherlv_0= '[' ( (lv_color_1_0= ruleSolidColorDefinition ) ) (otherlv_2= ',' ( (lv_label_3_0= ruleLabelStyleDefinition ) ) )? (otherlv_4= ',' ( (lv_border_5_0= ruleBorderStyleDefinition ) ) )? otherlv_6= ']'
+            {
+            otherlv_0=(Token)match(input,31,FOLLOW_31_in_ruleNodeStyleDefinition2757); 
+
+                	newLeafNode(otherlv_0, grammarAccess.getNodeStyleDefinitionAccess().getLeftSquareBracketKeyword_0());
+                
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1365:1: ( (lv_color_1_0= ruleSolidColorDefinition ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1366:1: (lv_color_1_0= ruleSolidColorDefinition )
+            {
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1366:1: (lv_color_1_0= ruleSolidColorDefinition )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1367:3: lv_color_1_0= ruleSolidColorDefinition
+            {
+             
+            	        newCompositeNode(grammarAccess.getNodeStyleDefinitionAccess().getColorSolidColorDefinitionParserRuleCall_1_0()); 
+            	    
+            pushFollow(FOLLOW_ruleSolidColorDefinition_in_ruleNodeStyleDefinition2778);
+            lv_color_1_0=ruleSolidColorDefinition();
+
+            state._fsp--;
+
+
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getNodeStyleDefinitionRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"color",
+                    		lv_color_1_0, 
+                    		"SolidColorDefinition");
+            	        afterParserOrEnumRuleCall();
+            	    
+
+            }
+
+
+            }
+
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1383:2: (otherlv_2= ',' ( (lv_label_3_0= ruleLabelStyleDefinition ) ) )?
+            int alt35=2;
+            int LA35_0 = input.LA(1);
+
+            if ( (LA35_0==32) ) {
+                int LA35_1 = input.LA(2);
+
+                if ( (LA35_1==19) ) {
+                    alt35=1;
+                }
+            }
+            switch (alt35) {
+                case 1 :
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1383:4: otherlv_2= ',' ( (lv_label_3_0= ruleLabelStyleDefinition ) )
+                    {
+                    otherlv_2=(Token)match(input,32,FOLLOW_32_in_ruleNodeStyleDefinition2791); 
+
+                        	newLeafNode(otherlv_2, grammarAccess.getNodeStyleDefinitionAccess().getCommaKeyword_2_0());
+                        
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1387:1: ( (lv_label_3_0= ruleLabelStyleDefinition ) )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1388:1: (lv_label_3_0= ruleLabelStyleDefinition )
+                    {
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1388:1: (lv_label_3_0= ruleLabelStyleDefinition )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1389:3: lv_label_3_0= ruleLabelStyleDefinition
+                    {
+                     
+                    	        newCompositeNode(grammarAccess.getNodeStyleDefinitionAccess().getLabelLabelStyleDefinitionParserRuleCall_2_1_0()); 
+                    	    
+                    pushFollow(FOLLOW_ruleLabelStyleDefinition_in_ruleNodeStyleDefinition2812);
+                    lv_label_3_0=ruleLabelStyleDefinition();
+
+                    state._fsp--;
+
+
+                    	        if (current==null) {
+                    	            current = createModelElementForParent(grammarAccess.getNodeStyleDefinitionRule());
+                    	        }
+                           		set(
+                           			current, 
+                           			"label",
+                            		lv_label_3_0, 
+                            		"LabelStyleDefinition");
+                    	        afterParserOrEnumRuleCall();
+                    	    
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1405:4: (otherlv_4= ',' ( (lv_border_5_0= ruleBorderStyleDefinition ) ) )?
+            int alt36=2;
+            int LA36_0 = input.LA(1);
+
+            if ( (LA36_0==32) ) {
+                alt36=1;
+            }
+            switch (alt36) {
+                case 1 :
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1405:6: otherlv_4= ',' ( (lv_border_5_0= ruleBorderStyleDefinition ) )
+                    {
+                    otherlv_4=(Token)match(input,32,FOLLOW_32_in_ruleNodeStyleDefinition2827); 
+
+                        	newLeafNode(otherlv_4, grammarAccess.getNodeStyleDefinitionAccess().getCommaKeyword_3_0());
+                        
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1409:1: ( (lv_border_5_0= ruleBorderStyleDefinition ) )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1410:1: (lv_border_5_0= ruleBorderStyleDefinition )
+                    {
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1410:1: (lv_border_5_0= ruleBorderStyleDefinition )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1411:3: lv_border_5_0= ruleBorderStyleDefinition
+                    {
+                     
+                    	        newCompositeNode(grammarAccess.getNodeStyleDefinitionAccess().getBorderBorderStyleDefinitionParserRuleCall_3_1_0()); 
+                    	    
+                    pushFollow(FOLLOW_ruleBorderStyleDefinition_in_ruleNodeStyleDefinition2848);
+                    lv_border_5_0=ruleBorderStyleDefinition();
+
+                    state._fsp--;
+
+
+                    	        if (current==null) {
+                    	            current = createModelElementForParent(grammarAccess.getNodeStyleDefinitionRule());
+                    	        }
+                           		set(
+                           			current, 
+                           			"border",
+                            		lv_border_5_0, 
+                            		"BorderStyleDefinition");
+                    	        afterParserOrEnumRuleCall();
+                    	    
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+            otherlv_6=(Token)match(input,33,FOLLOW_33_in_ruleNodeStyleDefinition2862); 
+
+                	newLeafNode(otherlv_6, grammarAccess.getNodeStyleDefinitionAccess().getRightSquareBracketKeyword_4());
+                
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleNodeStyleDefinition"
+
+
     // $ANTLR start "entryRuleSolidColorDefinition"
-    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1156:1: entryRuleSolidColorDefinition returns [EObject current=null] : iv_ruleSolidColorDefinition= ruleSolidColorDefinition EOF ;
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1439:1: entryRuleSolidColorDefinition returns [EObject current=null] : iv_ruleSolidColorDefinition= ruleSolidColorDefinition EOF ;
     public final EObject entryRuleSolidColorDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -2801,17 +3510,17 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1157:2: (iv_ruleSolidColorDefinition= ruleSolidColorDefinition EOF )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1158:2: iv_ruleSolidColorDefinition= ruleSolidColorDefinition EOF
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1440:2: (iv_ruleSolidColorDefinition= ruleSolidColorDefinition EOF )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1441:2: iv_ruleSolidColorDefinition= ruleSolidColorDefinition EOF
             {
              newCompositeNode(grammarAccess.getSolidColorDefinitionRule()); 
-            pushFollow(FOLLOW_ruleSolidColorDefinition_in_entryRuleSolidColorDefinition2302);
+            pushFollow(FOLLOW_ruleSolidColorDefinition_in_entryRuleSolidColorDefinition2898);
             iv_ruleSolidColorDefinition=ruleSolidColorDefinition();
 
             state._fsp--;
 
              current =iv_ruleSolidColorDefinition; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSolidColorDefinition2312); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSolidColorDefinition2908); 
 
             }
 
@@ -2829,7 +3538,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSolidColorDefinition"
-    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1165:1: ruleSolidColorDefinition returns [EObject current=null] : (otherlv_0= 'color' ( (lv_color_1_0= ruleColor ) ) ) ;
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1448:1: ruleSolidColorDefinition returns [EObject current=null] : (otherlv_0= 'color' ( (lv_color_1_0= ruleColor ) ) ) ;
     public final EObject ruleSolidColorDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -2840,26 +3549,26 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1168:28: ( (otherlv_0= 'color' ( (lv_color_1_0= ruleColor ) ) ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1169:1: (otherlv_0= 'color' ( (lv_color_1_0= ruleColor ) ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1451:28: ( (otherlv_0= 'color' ( (lv_color_1_0= ruleColor ) ) ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1452:1: (otherlv_0= 'color' ( (lv_color_1_0= ruleColor ) ) )
             {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1169:1: (otherlv_0= 'color' ( (lv_color_1_0= ruleColor ) ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1169:3: otherlv_0= 'color' ( (lv_color_1_0= ruleColor ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1452:1: (otherlv_0= 'color' ( (lv_color_1_0= ruleColor ) ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1452:3: otherlv_0= 'color' ( (lv_color_1_0= ruleColor ) )
             {
-            otherlv_0=(Token)match(input,35,FOLLOW_35_in_ruleSolidColorDefinition2349); 
+            otherlv_0=(Token)match(input,37,FOLLOW_37_in_ruleSolidColorDefinition2945); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getSolidColorDefinitionAccess().getColorKeyword_0());
                 
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1173:1: ( (lv_color_1_0= ruleColor ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1174:1: (lv_color_1_0= ruleColor )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1456:1: ( (lv_color_1_0= ruleColor ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1457:1: (lv_color_1_0= ruleColor )
             {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1174:1: (lv_color_1_0= ruleColor )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1175:3: lv_color_1_0= ruleColor
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1457:1: (lv_color_1_0= ruleColor )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1458:3: lv_color_1_0= ruleColor
             {
              
             	        newCompositeNode(grammarAccess.getSolidColorDefinitionAccess().getColorColorParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleColor_in_ruleSolidColorDefinition2370);
+            pushFollow(FOLLOW_ruleColor_in_ruleSolidColorDefinition2966);
             lv_color_1_0=ruleColor();
 
             state._fsp--;
@@ -2901,133 +3610,8 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleSolidColorDefinition"
 
 
-    // $ANTLR start "entryRuleContainerColorDefinition"
-    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1199:1: entryRuleContainerColorDefinition returns [EObject current=null] : iv_ruleContainerColorDefinition= ruleContainerColorDefinition EOF ;
-    public final EObject entryRuleContainerColorDefinition() throws RecognitionException {
-        EObject current = null;
-
-        EObject iv_ruleContainerColorDefinition = null;
-
-
-        try {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1200:2: (iv_ruleContainerColorDefinition= ruleContainerColorDefinition EOF )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1201:2: iv_ruleContainerColorDefinition= ruleContainerColorDefinition EOF
-            {
-             newCompositeNode(grammarAccess.getContainerColorDefinitionRule()); 
-            pushFollow(FOLLOW_ruleContainerColorDefinition_in_entryRuleContainerColorDefinition2406);
-            iv_ruleContainerColorDefinition=ruleContainerColorDefinition();
-
-            state._fsp--;
-
-             current =iv_ruleContainerColorDefinition; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleContainerColorDefinition2416); 
-
-            }
-
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleContainerColorDefinition"
-
-
-    // $ANTLR start "ruleContainerColorDefinition"
-    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1208:1: ruleContainerColorDefinition returns [EObject current=null] : (this_SolidColorDefinition_0= ruleSolidColorDefinition | this_GradientColorDefinition_1= ruleGradientColorDefinition ) ;
-    public final EObject ruleContainerColorDefinition() throws RecognitionException {
-        EObject current = null;
-
-        EObject this_SolidColorDefinition_0 = null;
-
-        EObject this_GradientColorDefinition_1 = null;
-
-
-         enterRule(); 
-            
-        try {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1211:28: ( (this_SolidColorDefinition_0= ruleSolidColorDefinition | this_GradientColorDefinition_1= ruleGradientColorDefinition ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1212:1: (this_SolidColorDefinition_0= ruleSolidColorDefinition | this_GradientColorDefinition_1= ruleGradientColorDefinition )
-            {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1212:1: (this_SolidColorDefinition_0= ruleSolidColorDefinition | this_GradientColorDefinition_1= ruleGradientColorDefinition )
-            int alt31=2;
-            int LA31_0 = input.LA(1);
-
-            if ( (LA31_0==35) ) {
-                alt31=1;
-            }
-            else if ( (LA31_0==36) ) {
-                alt31=2;
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 31, 0, input);
-
-                throw nvae;
-            }
-            switch (alt31) {
-                case 1 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1213:5: this_SolidColorDefinition_0= ruleSolidColorDefinition
-                    {
-                     
-                            newCompositeNode(grammarAccess.getContainerColorDefinitionAccess().getSolidColorDefinitionParserRuleCall_0()); 
-                        
-                    pushFollow(FOLLOW_ruleSolidColorDefinition_in_ruleContainerColorDefinition2463);
-                    this_SolidColorDefinition_0=ruleSolidColorDefinition();
-
-                    state._fsp--;
-
-                     
-                            current = this_SolidColorDefinition_0; 
-                            afterParserOrEnumRuleCall();
-                        
-
-                    }
-                    break;
-                case 2 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1223:5: this_GradientColorDefinition_1= ruleGradientColorDefinition
-                    {
-                     
-                            newCompositeNode(grammarAccess.getContainerColorDefinitionAccess().getGradientColorDefinitionParserRuleCall_1()); 
-                        
-                    pushFollow(FOLLOW_ruleGradientColorDefinition_in_ruleContainerColorDefinition2490);
-                    this_GradientColorDefinition_1=ruleGradientColorDefinition();
-
-                    state._fsp--;
-
-                     
-                            current = this_GradientColorDefinition_1; 
-                            afterParserOrEnumRuleCall();
-                        
-
-                    }
-                    break;
-
-            }
-
-
-            }
-
-             leaveRule(); 
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleContainerColorDefinition"
-
-
     // $ANTLR start "entryRuleGradientColorDefinition"
-    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1239:1: entryRuleGradientColorDefinition returns [EObject current=null] : iv_ruleGradientColorDefinition= ruleGradientColorDefinition EOF ;
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1482:1: entryRuleGradientColorDefinition returns [EObject current=null] : iv_ruleGradientColorDefinition= ruleGradientColorDefinition EOF ;
     public final EObject entryRuleGradientColorDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -3035,17 +3619,17 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1240:2: (iv_ruleGradientColorDefinition= ruleGradientColorDefinition EOF )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1241:2: iv_ruleGradientColorDefinition= ruleGradientColorDefinition EOF
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1483:2: (iv_ruleGradientColorDefinition= ruleGradientColorDefinition EOF )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1484:2: iv_ruleGradientColorDefinition= ruleGradientColorDefinition EOF
             {
              newCompositeNode(grammarAccess.getGradientColorDefinitionRule()); 
-            pushFollow(FOLLOW_ruleGradientColorDefinition_in_entryRuleGradientColorDefinition2525);
+            pushFollow(FOLLOW_ruleGradientColorDefinition_in_entryRuleGradientColorDefinition3002);
             iv_ruleGradientColorDefinition=ruleGradientColorDefinition();
 
             state._fsp--;
 
              current =iv_ruleGradientColorDefinition; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleGradientColorDefinition2535); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleGradientColorDefinition3012); 
 
             }
 
@@ -3063,7 +3647,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGradientColorDefinition"
-    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1248:1: ruleGradientColorDefinition returns [EObject current=null] : (otherlv_0= 'gradient from' ( (lv_from_1_0= ruleColor ) ) otherlv_2= 'to' ( (lv_to_3_0= ruleColor ) ) ) ;
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1491:1: ruleGradientColorDefinition returns [EObject current=null] : (otherlv_0= 'gradient from' ( (lv_from_1_0= ruleColor ) ) otherlv_2= 'to' ( (lv_to_3_0= ruleColor ) ) ) ;
     public final EObject ruleGradientColorDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -3077,26 +3661,26 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1251:28: ( (otherlv_0= 'gradient from' ( (lv_from_1_0= ruleColor ) ) otherlv_2= 'to' ( (lv_to_3_0= ruleColor ) ) ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1252:1: (otherlv_0= 'gradient from' ( (lv_from_1_0= ruleColor ) ) otherlv_2= 'to' ( (lv_to_3_0= ruleColor ) ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1494:28: ( (otherlv_0= 'gradient from' ( (lv_from_1_0= ruleColor ) ) otherlv_2= 'to' ( (lv_to_3_0= ruleColor ) ) ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1495:1: (otherlv_0= 'gradient from' ( (lv_from_1_0= ruleColor ) ) otherlv_2= 'to' ( (lv_to_3_0= ruleColor ) ) )
             {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1252:1: (otherlv_0= 'gradient from' ( (lv_from_1_0= ruleColor ) ) otherlv_2= 'to' ( (lv_to_3_0= ruleColor ) ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1252:3: otherlv_0= 'gradient from' ( (lv_from_1_0= ruleColor ) ) otherlv_2= 'to' ( (lv_to_3_0= ruleColor ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1495:1: (otherlv_0= 'gradient from' ( (lv_from_1_0= ruleColor ) ) otherlv_2= 'to' ( (lv_to_3_0= ruleColor ) ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1495:3: otherlv_0= 'gradient from' ( (lv_from_1_0= ruleColor ) ) otherlv_2= 'to' ( (lv_to_3_0= ruleColor ) )
             {
-            otherlv_0=(Token)match(input,36,FOLLOW_36_in_ruleGradientColorDefinition2572); 
+            otherlv_0=(Token)match(input,38,FOLLOW_38_in_ruleGradientColorDefinition3049); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getGradientColorDefinitionAccess().getGradientFromKeyword_0());
                 
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1256:1: ( (lv_from_1_0= ruleColor ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1257:1: (lv_from_1_0= ruleColor )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1499:1: ( (lv_from_1_0= ruleColor ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1500:1: (lv_from_1_0= ruleColor )
             {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1257:1: (lv_from_1_0= ruleColor )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1258:3: lv_from_1_0= ruleColor
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1500:1: (lv_from_1_0= ruleColor )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1501:3: lv_from_1_0= ruleColor
             {
              
             	        newCompositeNode(grammarAccess.getGradientColorDefinitionAccess().getFromColorParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleColor_in_ruleGradientColorDefinition2593);
+            pushFollow(FOLLOW_ruleColor_in_ruleGradientColorDefinition3070);
             lv_from_1_0=ruleColor();
 
             state._fsp--;
@@ -3118,20 +3702,20 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,37,FOLLOW_37_in_ruleGradientColorDefinition2605); 
+            otherlv_2=(Token)match(input,39,FOLLOW_39_in_ruleGradientColorDefinition3082); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getGradientColorDefinitionAccess().getToKeyword_2());
                 
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1278:1: ( (lv_to_3_0= ruleColor ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1279:1: (lv_to_3_0= ruleColor )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1521:1: ( (lv_to_3_0= ruleColor ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1522:1: (lv_to_3_0= ruleColor )
             {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1279:1: (lv_to_3_0= ruleColor )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1280:3: lv_to_3_0= ruleColor
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1522:1: (lv_to_3_0= ruleColor )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1523:3: lv_to_3_0= ruleColor
             {
              
             	        newCompositeNode(grammarAccess.getGradientColorDefinitionAccess().getToColorParserRuleCall_3_0()); 
             	    
-            pushFollow(FOLLOW_ruleColor_in_ruleGradientColorDefinition2626);
+            pushFollow(FOLLOW_ruleColor_in_ruleGradientColorDefinition3103);
             lv_to_3_0=ruleColor();
 
             state._fsp--;
@@ -3174,7 +3758,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLabelStyleDefinition"
-    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1304:1: entryRuleLabelStyleDefinition returns [EObject current=null] : iv_ruleLabelStyleDefinition= ruleLabelStyleDefinition EOF ;
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1547:1: entryRuleLabelStyleDefinition returns [EObject current=null] : iv_ruleLabelStyleDefinition= ruleLabelStyleDefinition EOF ;
     public final EObject entryRuleLabelStyleDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -3182,17 +3766,17 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1305:2: (iv_ruleLabelStyleDefinition= ruleLabelStyleDefinition EOF )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1306:2: iv_ruleLabelStyleDefinition= ruleLabelStyleDefinition EOF
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1548:2: (iv_ruleLabelStyleDefinition= ruleLabelStyleDefinition EOF )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1549:2: iv_ruleLabelStyleDefinition= ruleLabelStyleDefinition EOF
             {
              newCompositeNode(grammarAccess.getLabelStyleDefinitionRule()); 
-            pushFollow(FOLLOW_ruleLabelStyleDefinition_in_entryRuleLabelStyleDefinition2662);
+            pushFollow(FOLLOW_ruleLabelStyleDefinition_in_entryRuleLabelStyleDefinition3139);
             iv_ruleLabelStyleDefinition=ruleLabelStyleDefinition();
 
             state._fsp--;
 
              current =iv_ruleLabelStyleDefinition; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLabelStyleDefinition2672); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLabelStyleDefinition3149); 
 
             }
 
@@ -3210,7 +3794,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLabelStyleDefinition"
-    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1313:1: ruleLabelStyleDefinition returns [EObject current=null] : (otherlv_0= 'label' ( (lv_expression_1_0= ruleSPExpression ) )? ( (lv_color_2_0= ruleSolidColorDefinition ) ) (otherlv_3= 'size' ( (lv_size_4_0= RULE_INT ) ) )? ( (lv_bold_5_0= 'bold' ) )? ( (lv_italic_6_0= 'italic' ) )? ) ;
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1556:1: ruleLabelStyleDefinition returns [EObject current=null] : (otherlv_0= 'label' ( (lv_expression_1_0= ruleSPExpression ) )? ( (lv_color_2_0= ruleSolidColorDefinition ) ) (otherlv_3= 'size' ( (lv_size_4_0= RULE_INT ) ) )? ( (lv_bold_5_0= 'bold' ) )? ( (lv_italic_6_0= 'italic' ) )? ) ;
     public final EObject ruleLabelStyleDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -3227,34 +3811,34 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1316:28: ( (otherlv_0= 'label' ( (lv_expression_1_0= ruleSPExpression ) )? ( (lv_color_2_0= ruleSolidColorDefinition ) ) (otherlv_3= 'size' ( (lv_size_4_0= RULE_INT ) ) )? ( (lv_bold_5_0= 'bold' ) )? ( (lv_italic_6_0= 'italic' ) )? ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1317:1: (otherlv_0= 'label' ( (lv_expression_1_0= ruleSPExpression ) )? ( (lv_color_2_0= ruleSolidColorDefinition ) ) (otherlv_3= 'size' ( (lv_size_4_0= RULE_INT ) ) )? ( (lv_bold_5_0= 'bold' ) )? ( (lv_italic_6_0= 'italic' ) )? )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1559:28: ( (otherlv_0= 'label' ( (lv_expression_1_0= ruleSPExpression ) )? ( (lv_color_2_0= ruleSolidColorDefinition ) ) (otherlv_3= 'size' ( (lv_size_4_0= RULE_INT ) ) )? ( (lv_bold_5_0= 'bold' ) )? ( (lv_italic_6_0= 'italic' ) )? ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1560:1: (otherlv_0= 'label' ( (lv_expression_1_0= ruleSPExpression ) )? ( (lv_color_2_0= ruleSolidColorDefinition ) ) (otherlv_3= 'size' ( (lv_size_4_0= RULE_INT ) ) )? ( (lv_bold_5_0= 'bold' ) )? ( (lv_italic_6_0= 'italic' ) )? )
             {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1317:1: (otherlv_0= 'label' ( (lv_expression_1_0= ruleSPExpression ) )? ( (lv_color_2_0= ruleSolidColorDefinition ) ) (otherlv_3= 'size' ( (lv_size_4_0= RULE_INT ) ) )? ( (lv_bold_5_0= 'bold' ) )? ( (lv_italic_6_0= 'italic' ) )? )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1317:3: otherlv_0= 'label' ( (lv_expression_1_0= ruleSPExpression ) )? ( (lv_color_2_0= ruleSolidColorDefinition ) ) (otherlv_3= 'size' ( (lv_size_4_0= RULE_INT ) ) )? ( (lv_bold_5_0= 'bold' ) )? ( (lv_italic_6_0= 'italic' ) )?
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1560:1: (otherlv_0= 'label' ( (lv_expression_1_0= ruleSPExpression ) )? ( (lv_color_2_0= ruleSolidColorDefinition ) ) (otherlv_3= 'size' ( (lv_size_4_0= RULE_INT ) ) )? ( (lv_bold_5_0= 'bold' ) )? ( (lv_italic_6_0= 'italic' ) )? )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1560:3: otherlv_0= 'label' ( (lv_expression_1_0= ruleSPExpression ) )? ( (lv_color_2_0= ruleSolidColorDefinition ) ) (otherlv_3= 'size' ( (lv_size_4_0= RULE_INT ) ) )? ( (lv_bold_5_0= 'bold' ) )? ( (lv_italic_6_0= 'italic' ) )?
             {
-            otherlv_0=(Token)match(input,19,FOLLOW_19_in_ruleLabelStyleDefinition2709); 
+            otherlv_0=(Token)match(input,19,FOLLOW_19_in_ruleLabelStyleDefinition3186); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getLabelStyleDefinitionAccess().getLabelKeyword_0());
                 
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1321:1: ( (lv_expression_1_0= ruleSPExpression ) )?
-            int alt32=2;
-            int LA32_0 = input.LA(1);
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1564:1: ( (lv_expression_1_0= ruleSPExpression ) )?
+            int alt37=2;
+            int LA37_0 = input.LA(1);
 
-            if ( ((LA32_0>=42 && LA32_0<=44)) ) {
-                alt32=1;
+            if ( ((LA37_0>=44 && LA37_0<=46)) ) {
+                alt37=1;
             }
-            switch (alt32) {
+            switch (alt37) {
                 case 1 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1322:1: (lv_expression_1_0= ruleSPExpression )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1565:1: (lv_expression_1_0= ruleSPExpression )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1322:1: (lv_expression_1_0= ruleSPExpression )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1323:3: lv_expression_1_0= ruleSPExpression
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1565:1: (lv_expression_1_0= ruleSPExpression )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1566:3: lv_expression_1_0= ruleSPExpression
                     {
                      
                     	        newCompositeNode(grammarAccess.getLabelStyleDefinitionAccess().getExpressionSPExpressionParserRuleCall_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleSPExpression_in_ruleLabelStyleDefinition2730);
+                    pushFollow(FOLLOW_ruleSPExpression_in_ruleLabelStyleDefinition3207);
                     lv_expression_1_0=ruleSPExpression();
 
                     state._fsp--;
@@ -3279,16 +3863,16 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1339:3: ( (lv_color_2_0= ruleSolidColorDefinition ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1340:1: (lv_color_2_0= ruleSolidColorDefinition )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1582:3: ( (lv_color_2_0= ruleSolidColorDefinition ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1583:1: (lv_color_2_0= ruleSolidColorDefinition )
             {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1340:1: (lv_color_2_0= ruleSolidColorDefinition )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1341:3: lv_color_2_0= ruleSolidColorDefinition
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1583:1: (lv_color_2_0= ruleSolidColorDefinition )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1584:3: lv_color_2_0= ruleSolidColorDefinition
             {
              
             	        newCompositeNode(grammarAccess.getLabelStyleDefinitionAccess().getColorSolidColorDefinitionParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleSolidColorDefinition_in_ruleLabelStyleDefinition2752);
+            pushFollow(FOLLOW_ruleSolidColorDefinition_in_ruleLabelStyleDefinition3229);
             lv_color_2_0=ruleSolidColorDefinition();
 
             state._fsp--;
@@ -3310,28 +3894,28 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1357:2: (otherlv_3= 'size' ( (lv_size_4_0= RULE_INT ) ) )?
-            int alt33=2;
-            int LA33_0 = input.LA(1);
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1600:2: (otherlv_3= 'size' ( (lv_size_4_0= RULE_INT ) ) )?
+            int alt38=2;
+            int LA38_0 = input.LA(1);
 
-            if ( (LA33_0==38) ) {
-                alt33=1;
+            if ( (LA38_0==40) ) {
+                alt38=1;
             }
-            switch (alt33) {
+            switch (alt38) {
                 case 1 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1357:4: otherlv_3= 'size' ( (lv_size_4_0= RULE_INT ) )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1600:4: otherlv_3= 'size' ( (lv_size_4_0= RULE_INT ) )
                     {
-                    otherlv_3=(Token)match(input,38,FOLLOW_38_in_ruleLabelStyleDefinition2765); 
+                    otherlv_3=(Token)match(input,40,FOLLOW_40_in_ruleLabelStyleDefinition3242); 
 
                         	newLeafNode(otherlv_3, grammarAccess.getLabelStyleDefinitionAccess().getSizeKeyword_3_0());
                         
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1361:1: ( (lv_size_4_0= RULE_INT ) )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1362:1: (lv_size_4_0= RULE_INT )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1604:1: ( (lv_size_4_0= RULE_INT ) )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1605:1: (lv_size_4_0= RULE_INT )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1362:1: (lv_size_4_0= RULE_INT )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1363:3: lv_size_4_0= RULE_INT
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1605:1: (lv_size_4_0= RULE_INT )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1606:3: lv_size_4_0= RULE_INT
                     {
-                    lv_size_4_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleLabelStyleDefinition2782); 
+                    lv_size_4_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleLabelStyleDefinition3259); 
 
                     			newLeafNode(lv_size_4_0, grammarAccess.getLabelStyleDefinitionAccess().getSizeINTTerminalRuleCall_3_1_0()); 
                     		
@@ -3357,21 +3941,21 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1379:4: ( (lv_bold_5_0= 'bold' ) )?
-            int alt34=2;
-            int LA34_0 = input.LA(1);
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1622:4: ( (lv_bold_5_0= 'bold' ) )?
+            int alt39=2;
+            int LA39_0 = input.LA(1);
 
-            if ( (LA34_0==39) ) {
-                alt34=1;
+            if ( (LA39_0==41) ) {
+                alt39=1;
             }
-            switch (alt34) {
+            switch (alt39) {
                 case 1 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1380:1: (lv_bold_5_0= 'bold' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1623:1: (lv_bold_5_0= 'bold' )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1380:1: (lv_bold_5_0= 'bold' )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1381:3: lv_bold_5_0= 'bold'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1623:1: (lv_bold_5_0= 'bold' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1624:3: lv_bold_5_0= 'bold'
                     {
-                    lv_bold_5_0=(Token)match(input,39,FOLLOW_39_in_ruleLabelStyleDefinition2807); 
+                    lv_bold_5_0=(Token)match(input,41,FOLLOW_41_in_ruleLabelStyleDefinition3284); 
 
                             newLeafNode(lv_bold_5_0, grammarAccess.getLabelStyleDefinitionAccess().getBoldBoldKeyword_4_0());
                         
@@ -3390,21 +3974,21 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1394:3: ( (lv_italic_6_0= 'italic' ) )?
-            int alt35=2;
-            int LA35_0 = input.LA(1);
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1637:3: ( (lv_italic_6_0= 'italic' ) )?
+            int alt40=2;
+            int LA40_0 = input.LA(1);
 
-            if ( (LA35_0==40) ) {
-                alt35=1;
+            if ( (LA40_0==42) ) {
+                alt40=1;
             }
-            switch (alt35) {
+            switch (alt40) {
                 case 1 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1395:1: (lv_italic_6_0= 'italic' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1638:1: (lv_italic_6_0= 'italic' )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1395:1: (lv_italic_6_0= 'italic' )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1396:3: lv_italic_6_0= 'italic'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1638:1: (lv_italic_6_0= 'italic' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1639:3: lv_italic_6_0= 'italic'
                     {
-                    lv_italic_6_0=(Token)match(input,40,FOLLOW_40_in_ruleLabelStyleDefinition2839); 
+                    lv_italic_6_0=(Token)match(input,42,FOLLOW_42_in_ruleLabelStyleDefinition3316); 
 
                             newLeafNode(lv_italic_6_0, grammarAccess.getLabelStyleDefinitionAccess().getItalicItalicKeyword_5_0());
                         
@@ -3444,7 +4028,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBorderStyleDefinition"
-    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1417:1: entryRuleBorderStyleDefinition returns [EObject current=null] : iv_ruleBorderStyleDefinition= ruleBorderStyleDefinition EOF ;
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1660:1: entryRuleBorderStyleDefinition returns [EObject current=null] : iv_ruleBorderStyleDefinition= ruleBorderStyleDefinition EOF ;
     public final EObject entryRuleBorderStyleDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -3452,17 +4036,17 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1418:2: (iv_ruleBorderStyleDefinition= ruleBorderStyleDefinition EOF )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1419:2: iv_ruleBorderStyleDefinition= ruleBorderStyleDefinition EOF
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1661:2: (iv_ruleBorderStyleDefinition= ruleBorderStyleDefinition EOF )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1662:2: iv_ruleBorderStyleDefinition= ruleBorderStyleDefinition EOF
             {
              newCompositeNode(grammarAccess.getBorderStyleDefinitionRule()); 
-            pushFollow(FOLLOW_ruleBorderStyleDefinition_in_entryRuleBorderStyleDefinition2889);
+            pushFollow(FOLLOW_ruleBorderStyleDefinition_in_entryRuleBorderStyleDefinition3366);
             iv_ruleBorderStyleDefinition=ruleBorderStyleDefinition();
 
             state._fsp--;
 
              current =iv_ruleBorderStyleDefinition; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBorderStyleDefinition2899); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBorderStyleDefinition3376); 
 
             }
 
@@ -3480,7 +4064,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBorderStyleDefinition"
-    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1426:1: ruleBorderStyleDefinition returns [EObject current=null] : (otherlv_0= 'border ' ( (lv_color_1_0= ruleSolidColorDefinition ) ) (otherlv_2= 'size' ( (lv_size_3_0= RULE_INT ) ) )? ) ;
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1669:1: ruleBorderStyleDefinition returns [EObject current=null] : (otherlv_0= 'border ' ( (lv_color_1_0= ruleSolidColorDefinition ) ) (otherlv_2= 'size' ( (lv_size_3_0= RULE_INT ) ) )? ) ;
     public final EObject ruleBorderStyleDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -3493,26 +4077,26 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1429:28: ( (otherlv_0= 'border ' ( (lv_color_1_0= ruleSolidColorDefinition ) ) (otherlv_2= 'size' ( (lv_size_3_0= RULE_INT ) ) )? ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1430:1: (otherlv_0= 'border ' ( (lv_color_1_0= ruleSolidColorDefinition ) ) (otherlv_2= 'size' ( (lv_size_3_0= RULE_INT ) ) )? )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1672:28: ( (otherlv_0= 'border ' ( (lv_color_1_0= ruleSolidColorDefinition ) ) (otherlv_2= 'size' ( (lv_size_3_0= RULE_INT ) ) )? ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1673:1: (otherlv_0= 'border ' ( (lv_color_1_0= ruleSolidColorDefinition ) ) (otherlv_2= 'size' ( (lv_size_3_0= RULE_INT ) ) )? )
             {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1430:1: (otherlv_0= 'border ' ( (lv_color_1_0= ruleSolidColorDefinition ) ) (otherlv_2= 'size' ( (lv_size_3_0= RULE_INT ) ) )? )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1430:3: otherlv_0= 'border ' ( (lv_color_1_0= ruleSolidColorDefinition ) ) (otherlv_2= 'size' ( (lv_size_3_0= RULE_INT ) ) )?
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1673:1: (otherlv_0= 'border ' ( (lv_color_1_0= ruleSolidColorDefinition ) ) (otherlv_2= 'size' ( (lv_size_3_0= RULE_INT ) ) )? )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1673:3: otherlv_0= 'border ' ( (lv_color_1_0= ruleSolidColorDefinition ) ) (otherlv_2= 'size' ( (lv_size_3_0= RULE_INT ) ) )?
             {
-            otherlv_0=(Token)match(input,41,FOLLOW_41_in_ruleBorderStyleDefinition2936); 
+            otherlv_0=(Token)match(input,43,FOLLOW_43_in_ruleBorderStyleDefinition3413); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getBorderStyleDefinitionAccess().getBorderKeyword_0());
                 
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1434:1: ( (lv_color_1_0= ruleSolidColorDefinition ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1435:1: (lv_color_1_0= ruleSolidColorDefinition )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1677:1: ( (lv_color_1_0= ruleSolidColorDefinition ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1678:1: (lv_color_1_0= ruleSolidColorDefinition )
             {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1435:1: (lv_color_1_0= ruleSolidColorDefinition )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1436:3: lv_color_1_0= ruleSolidColorDefinition
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1678:1: (lv_color_1_0= ruleSolidColorDefinition )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1679:3: lv_color_1_0= ruleSolidColorDefinition
             {
              
             	        newCompositeNode(grammarAccess.getBorderStyleDefinitionAccess().getColorSolidColorDefinitionParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleSolidColorDefinition_in_ruleBorderStyleDefinition2957);
+            pushFollow(FOLLOW_ruleSolidColorDefinition_in_ruleBorderStyleDefinition3434);
             lv_color_1_0=ruleSolidColorDefinition();
 
             state._fsp--;
@@ -3534,28 +4118,28 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1452:2: (otherlv_2= 'size' ( (lv_size_3_0= RULE_INT ) ) )?
-            int alt36=2;
-            int LA36_0 = input.LA(1);
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1695:2: (otherlv_2= 'size' ( (lv_size_3_0= RULE_INT ) ) )?
+            int alt41=2;
+            int LA41_0 = input.LA(1);
 
-            if ( (LA36_0==38) ) {
-                alt36=1;
+            if ( (LA41_0==40) ) {
+                alt41=1;
             }
-            switch (alt36) {
+            switch (alt41) {
                 case 1 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1452:4: otherlv_2= 'size' ( (lv_size_3_0= RULE_INT ) )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1695:4: otherlv_2= 'size' ( (lv_size_3_0= RULE_INT ) )
                     {
-                    otherlv_2=(Token)match(input,38,FOLLOW_38_in_ruleBorderStyleDefinition2970); 
+                    otherlv_2=(Token)match(input,40,FOLLOW_40_in_ruleBorderStyleDefinition3447); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getBorderStyleDefinitionAccess().getSizeKeyword_2_0());
                         
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1456:1: ( (lv_size_3_0= RULE_INT ) )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1457:1: (lv_size_3_0= RULE_INT )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1699:1: ( (lv_size_3_0= RULE_INT ) )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1700:1: (lv_size_3_0= RULE_INT )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1457:1: (lv_size_3_0= RULE_INT )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1458:3: lv_size_3_0= RULE_INT
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1700:1: (lv_size_3_0= RULE_INT )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1701:3: lv_size_3_0= RULE_INT
                     {
-                    lv_size_3_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleBorderStyleDefinition2987); 
+                    lv_size_3_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleBorderStyleDefinition3464); 
 
                     			newLeafNode(lv_size_3_0, grammarAccess.getBorderStyleDefinitionAccess().getSizeINTTerminalRuleCall_2_1_0()); 
                     		
@@ -3602,7 +4186,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSPExpression"
-    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1482:1: entryRuleSPExpression returns [EObject current=null] : iv_ruleSPExpression= ruleSPExpression EOF ;
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1725:1: entryRuleSPExpression returns [EObject current=null] : iv_ruleSPExpression= ruleSPExpression EOF ;
     public final EObject entryRuleSPExpression() throws RecognitionException {
         EObject current = null;
 
@@ -3610,17 +4194,17 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1483:2: (iv_ruleSPExpression= ruleSPExpression EOF )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1484:2: iv_ruleSPExpression= ruleSPExpression EOF
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1726:2: (iv_ruleSPExpression= ruleSPExpression EOF )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1727:2: iv_ruleSPExpression= ruleSPExpression EOF
             {
              newCompositeNode(grammarAccess.getSPExpressionRule()); 
-            pushFollow(FOLLOW_ruleSPExpression_in_entryRuleSPExpression3030);
+            pushFollow(FOLLOW_ruleSPExpression_in_entryRuleSPExpression3507);
             iv_ruleSPExpression=ruleSPExpression();
 
             state._fsp--;
 
              current =iv_ruleSPExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSPExpression3040); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSPExpression3517); 
 
             }
 
@@ -3638,7 +4222,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSPExpression"
-    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1491:1: ruleSPExpression returns [EObject current=null] : (this_AcceleoExpression_0= ruleAcceleoExpression | this_VarRef_1= ruleVarRef | this_FeatureRef_2= ruleFeatureRef ) ;
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1734:1: ruleSPExpression returns [EObject current=null] : (this_AcceleoExpression_0= ruleAcceleoExpression | this_VarRef_1= ruleVarRef | this_FeatureRef_2= ruleFeatureRef ) ;
     public final EObject ruleSPExpression() throws RecognitionException {
         EObject current = null;
 
@@ -3652,42 +4236,42 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1494:28: ( (this_AcceleoExpression_0= ruleAcceleoExpression | this_VarRef_1= ruleVarRef | this_FeatureRef_2= ruleFeatureRef ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1495:1: (this_AcceleoExpression_0= ruleAcceleoExpression | this_VarRef_1= ruleVarRef | this_FeatureRef_2= ruleFeatureRef )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1737:28: ( (this_AcceleoExpression_0= ruleAcceleoExpression | this_VarRef_1= ruleVarRef | this_FeatureRef_2= ruleFeatureRef ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1738:1: (this_AcceleoExpression_0= ruleAcceleoExpression | this_VarRef_1= ruleVarRef | this_FeatureRef_2= ruleFeatureRef )
             {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1495:1: (this_AcceleoExpression_0= ruleAcceleoExpression | this_VarRef_1= ruleVarRef | this_FeatureRef_2= ruleFeatureRef )
-            int alt37=3;
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1738:1: (this_AcceleoExpression_0= ruleAcceleoExpression | this_VarRef_1= ruleVarRef | this_FeatureRef_2= ruleFeatureRef )
+            int alt42=3;
             switch ( input.LA(1) ) {
-            case 42:
-                {
-                alt37=1;
-                }
-                break;
-            case 43:
-                {
-                alt37=2;
-                }
-                break;
             case 44:
                 {
-                alt37=3;
+                alt42=1;
+                }
+                break;
+            case 45:
+                {
+                alt42=2;
+                }
+                break;
+            case 46:
+                {
+                alt42=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 37, 0, input);
+                    new NoViableAltException("", 42, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt37) {
+            switch (alt42) {
                 case 1 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1496:5: this_AcceleoExpression_0= ruleAcceleoExpression
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1739:5: this_AcceleoExpression_0= ruleAcceleoExpression
                     {
                      
                             newCompositeNode(grammarAccess.getSPExpressionAccess().getAcceleoExpressionParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleAcceleoExpression_in_ruleSPExpression3087);
+                    pushFollow(FOLLOW_ruleAcceleoExpression_in_ruleSPExpression3564);
                     this_AcceleoExpression_0=ruleAcceleoExpression();
 
                     state._fsp--;
@@ -3700,12 +4284,12 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1506:5: this_VarRef_1= ruleVarRef
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1749:5: this_VarRef_1= ruleVarRef
                     {
                      
                             newCompositeNode(grammarAccess.getSPExpressionAccess().getVarRefParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleVarRef_in_ruleSPExpression3114);
+                    pushFollow(FOLLOW_ruleVarRef_in_ruleSPExpression3591);
                     this_VarRef_1=ruleVarRef();
 
                     state._fsp--;
@@ -3718,12 +4302,12 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1516:5: this_FeatureRef_2= ruleFeatureRef
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1759:5: this_FeatureRef_2= ruleFeatureRef
                     {
                      
                             newCompositeNode(grammarAccess.getSPExpressionAccess().getFeatureRefParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleFeatureRef_in_ruleSPExpression3141);
+                    pushFollow(FOLLOW_ruleFeatureRef_in_ruleSPExpression3618);
                     this_FeatureRef_2=ruleFeatureRef();
 
                     state._fsp--;
@@ -3756,7 +4340,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAcceleoExpression"
-    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1532:1: entryRuleAcceleoExpression returns [EObject current=null] : iv_ruleAcceleoExpression= ruleAcceleoExpression EOF ;
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1775:1: entryRuleAcceleoExpression returns [EObject current=null] : iv_ruleAcceleoExpression= ruleAcceleoExpression EOF ;
     public final EObject entryRuleAcceleoExpression() throws RecognitionException {
         EObject current = null;
 
@@ -3764,17 +4348,17 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1533:2: (iv_ruleAcceleoExpression= ruleAcceleoExpression EOF )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1534:2: iv_ruleAcceleoExpression= ruleAcceleoExpression EOF
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1776:2: (iv_ruleAcceleoExpression= ruleAcceleoExpression EOF )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1777:2: iv_ruleAcceleoExpression= ruleAcceleoExpression EOF
             {
              newCompositeNode(grammarAccess.getAcceleoExpressionRule()); 
-            pushFollow(FOLLOW_ruleAcceleoExpression_in_entryRuleAcceleoExpression3176);
+            pushFollow(FOLLOW_ruleAcceleoExpression_in_entryRuleAcceleoExpression3653);
             iv_ruleAcceleoExpression=ruleAcceleoExpression();
 
             state._fsp--;
 
              current =iv_ruleAcceleoExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAcceleoExpression3186); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAcceleoExpression3663); 
 
             }
 
@@ -3792,7 +4376,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAcceleoExpression"
-    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1541:1: ruleAcceleoExpression returns [EObject current=null] : (otherlv_0= 'acc:' ( (lv_value_1_0= RULE_STRING ) ) ) ;
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1784:1: ruleAcceleoExpression returns [EObject current=null] : (otherlv_0= 'acc:' ( (lv_value_1_0= RULE_STRING ) ) ) ;
     public final EObject ruleAcceleoExpression() throws RecognitionException {
         EObject current = null;
 
@@ -3802,23 +4386,23 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1544:28: ( (otherlv_0= 'acc:' ( (lv_value_1_0= RULE_STRING ) ) ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1545:1: (otherlv_0= 'acc:' ( (lv_value_1_0= RULE_STRING ) ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1787:28: ( (otherlv_0= 'acc:' ( (lv_value_1_0= RULE_STRING ) ) ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1788:1: (otherlv_0= 'acc:' ( (lv_value_1_0= RULE_STRING ) ) )
             {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1545:1: (otherlv_0= 'acc:' ( (lv_value_1_0= RULE_STRING ) ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1545:3: otherlv_0= 'acc:' ( (lv_value_1_0= RULE_STRING ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1788:1: (otherlv_0= 'acc:' ( (lv_value_1_0= RULE_STRING ) ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1788:3: otherlv_0= 'acc:' ( (lv_value_1_0= RULE_STRING ) )
             {
-            otherlv_0=(Token)match(input,42,FOLLOW_42_in_ruleAcceleoExpression3223); 
+            otherlv_0=(Token)match(input,44,FOLLOW_44_in_ruleAcceleoExpression3700); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getAcceleoExpressionAccess().getAccKeyword_0());
                 
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1549:1: ( (lv_value_1_0= RULE_STRING ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1550:1: (lv_value_1_0= RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1792:1: ( (lv_value_1_0= RULE_STRING ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1793:1: (lv_value_1_0= RULE_STRING )
             {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1550:1: (lv_value_1_0= RULE_STRING )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1551:3: lv_value_1_0= RULE_STRING
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1793:1: (lv_value_1_0= RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1794:3: lv_value_1_0= RULE_STRING
             {
-            lv_value_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleAcceleoExpression3240); 
+            lv_value_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleAcceleoExpression3717); 
 
             			newLeafNode(lv_value_1_0, grammarAccess.getAcceleoExpressionAccess().getValueSTRINGTerminalRuleCall_1_0()); 
             		
@@ -3859,7 +4443,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVarRef"
-    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1575:1: entryRuleVarRef returns [EObject current=null] : iv_ruleVarRef= ruleVarRef EOF ;
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1818:1: entryRuleVarRef returns [EObject current=null] : iv_ruleVarRef= ruleVarRef EOF ;
     public final EObject entryRuleVarRef() throws RecognitionException {
         EObject current = null;
 
@@ -3867,17 +4451,17 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1576:2: (iv_ruleVarRef= ruleVarRef EOF )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1577:2: iv_ruleVarRef= ruleVarRef EOF
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1819:2: (iv_ruleVarRef= ruleVarRef EOF )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1820:2: iv_ruleVarRef= ruleVarRef EOF
             {
              newCompositeNode(grammarAccess.getVarRefRule()); 
-            pushFollow(FOLLOW_ruleVarRef_in_entryRuleVarRef3281);
+            pushFollow(FOLLOW_ruleVarRef_in_entryRuleVarRef3758);
             iv_ruleVarRef=ruleVarRef();
 
             state._fsp--;
 
              current =iv_ruleVarRef; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleVarRef3291); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleVarRef3768); 
 
             }
 
@@ -3895,7 +4479,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVarRef"
-    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1584:1: ruleVarRef returns [EObject current=null] : (otherlv_0= 'var:' ( (lv_value_1_0= RULE_STRING ) ) ) ;
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1827:1: ruleVarRef returns [EObject current=null] : (otherlv_0= 'var:' ( (lv_value_1_0= RULE_STRING ) ) ) ;
     public final EObject ruleVarRef() throws RecognitionException {
         EObject current = null;
 
@@ -3905,23 +4489,23 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1587:28: ( (otherlv_0= 'var:' ( (lv_value_1_0= RULE_STRING ) ) ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1588:1: (otherlv_0= 'var:' ( (lv_value_1_0= RULE_STRING ) ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1830:28: ( (otherlv_0= 'var:' ( (lv_value_1_0= RULE_STRING ) ) ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1831:1: (otherlv_0= 'var:' ( (lv_value_1_0= RULE_STRING ) ) )
             {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1588:1: (otherlv_0= 'var:' ( (lv_value_1_0= RULE_STRING ) ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1588:3: otherlv_0= 'var:' ( (lv_value_1_0= RULE_STRING ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1831:1: (otherlv_0= 'var:' ( (lv_value_1_0= RULE_STRING ) ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1831:3: otherlv_0= 'var:' ( (lv_value_1_0= RULE_STRING ) )
             {
-            otherlv_0=(Token)match(input,43,FOLLOW_43_in_ruleVarRef3328); 
+            otherlv_0=(Token)match(input,45,FOLLOW_45_in_ruleVarRef3805); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getVarRefAccess().getVarKeyword_0());
                 
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1592:1: ( (lv_value_1_0= RULE_STRING ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1593:1: (lv_value_1_0= RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1835:1: ( (lv_value_1_0= RULE_STRING ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1836:1: (lv_value_1_0= RULE_STRING )
             {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1593:1: (lv_value_1_0= RULE_STRING )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1594:3: lv_value_1_0= RULE_STRING
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1836:1: (lv_value_1_0= RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1837:3: lv_value_1_0= RULE_STRING
             {
-            lv_value_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleVarRef3345); 
+            lv_value_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleVarRef3822); 
 
             			newLeafNode(lv_value_1_0, grammarAccess.getVarRefAccess().getValueSTRINGTerminalRuleCall_1_0()); 
             		
@@ -3962,7 +4546,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFeatureRef"
-    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1618:1: entryRuleFeatureRef returns [EObject current=null] : iv_ruleFeatureRef= ruleFeatureRef EOF ;
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1861:1: entryRuleFeatureRef returns [EObject current=null] : iv_ruleFeatureRef= ruleFeatureRef EOF ;
     public final EObject entryRuleFeatureRef() throws RecognitionException {
         EObject current = null;
 
@@ -3970,17 +4554,17 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1619:2: (iv_ruleFeatureRef= ruleFeatureRef EOF )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1620:2: iv_ruleFeatureRef= ruleFeatureRef EOF
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1862:2: (iv_ruleFeatureRef= ruleFeatureRef EOF )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1863:2: iv_ruleFeatureRef= ruleFeatureRef EOF
             {
              newCompositeNode(grammarAccess.getFeatureRefRule()); 
-            pushFollow(FOLLOW_ruleFeatureRef_in_entryRuleFeatureRef3386);
+            pushFollow(FOLLOW_ruleFeatureRef_in_entryRuleFeatureRef3863);
             iv_ruleFeatureRef=ruleFeatureRef();
 
             state._fsp--;
 
              current =iv_ruleFeatureRef; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFeatureRef3396); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFeatureRef3873); 
 
             }
 
@@ -3998,7 +4582,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFeatureRef"
-    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1627:1: ruleFeatureRef returns [EObject current=null] : (otherlv_0= 'feature:' ( (lv_value_1_0= RULE_STRING ) ) ) ;
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1870:1: ruleFeatureRef returns [EObject current=null] : (otherlv_0= 'feature:' ( (lv_value_1_0= RULE_STRING ) ) ) ;
     public final EObject ruleFeatureRef() throws RecognitionException {
         EObject current = null;
 
@@ -4008,23 +4592,23 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1630:28: ( (otherlv_0= 'feature:' ( (lv_value_1_0= RULE_STRING ) ) ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1631:1: (otherlv_0= 'feature:' ( (lv_value_1_0= RULE_STRING ) ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1873:28: ( (otherlv_0= 'feature:' ( (lv_value_1_0= RULE_STRING ) ) ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1874:1: (otherlv_0= 'feature:' ( (lv_value_1_0= RULE_STRING ) ) )
             {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1631:1: (otherlv_0= 'feature:' ( (lv_value_1_0= RULE_STRING ) ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1631:3: otherlv_0= 'feature:' ( (lv_value_1_0= RULE_STRING ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1874:1: (otherlv_0= 'feature:' ( (lv_value_1_0= RULE_STRING ) ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1874:3: otherlv_0= 'feature:' ( (lv_value_1_0= RULE_STRING ) )
             {
-            otherlv_0=(Token)match(input,44,FOLLOW_44_in_ruleFeatureRef3433); 
+            otherlv_0=(Token)match(input,46,FOLLOW_46_in_ruleFeatureRef3910); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getFeatureRefAccess().getFeatureKeyword_0());
                 
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1635:1: ( (lv_value_1_0= RULE_STRING ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1636:1: (lv_value_1_0= RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1878:1: ( (lv_value_1_0= RULE_STRING ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1879:1: (lv_value_1_0= RULE_STRING )
             {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1636:1: (lv_value_1_0= RULE_STRING )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1637:3: lv_value_1_0= RULE_STRING
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1879:1: (lv_value_1_0= RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1880:3: lv_value_1_0= RULE_STRING
             {
-            lv_value_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleFeatureRef3450); 
+            lv_value_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleFeatureRef3927); 
 
             			newLeafNode(lv_value_1_0, grammarAccess.getFeatureRefAccess().getValueSTRINGTerminalRuleCall_1_0()); 
             		
@@ -4065,7 +4649,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMetamodelRef"
-    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1661:1: entryRuleMetamodelRef returns [EObject current=null] : iv_ruleMetamodelRef= ruleMetamodelRef EOF ;
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1904:1: entryRuleMetamodelRef returns [EObject current=null] : iv_ruleMetamodelRef= ruleMetamodelRef EOF ;
     public final EObject entryRuleMetamodelRef() throws RecognitionException {
         EObject current = null;
 
@@ -4073,17 +4657,17 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1662:2: (iv_ruleMetamodelRef= ruleMetamodelRef EOF )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1663:2: iv_ruleMetamodelRef= ruleMetamodelRef EOF
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1905:2: (iv_ruleMetamodelRef= ruleMetamodelRef EOF )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1906:2: iv_ruleMetamodelRef= ruleMetamodelRef EOF
             {
              newCompositeNode(grammarAccess.getMetamodelRefRule()); 
-            pushFollow(FOLLOW_ruleMetamodelRef_in_entryRuleMetamodelRef3491);
+            pushFollow(FOLLOW_ruleMetamodelRef_in_entryRuleMetamodelRef3968);
             iv_ruleMetamodelRef=ruleMetamodelRef();
 
             state._fsp--;
 
              current =iv_ruleMetamodelRef; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMetamodelRef3501); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMetamodelRef3978); 
 
             }
 
@@ -4101,7 +4685,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMetamodelRef"
-    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1670:1: ruleMetamodelRef returns [EObject current=null] : (otherlv_0= 'use' ( (lv_metamodel_1_0= RULE_STRING ) ) ) ;
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1913:1: ruleMetamodelRef returns [EObject current=null] : (otherlv_0= 'use' ( (lv_metamodel_1_0= RULE_STRING ) ) ) ;
     public final EObject ruleMetamodelRef() throws RecognitionException {
         EObject current = null;
 
@@ -4111,23 +4695,23 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1673:28: ( (otherlv_0= 'use' ( (lv_metamodel_1_0= RULE_STRING ) ) ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1674:1: (otherlv_0= 'use' ( (lv_metamodel_1_0= RULE_STRING ) ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1916:28: ( (otherlv_0= 'use' ( (lv_metamodel_1_0= RULE_STRING ) ) ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1917:1: (otherlv_0= 'use' ( (lv_metamodel_1_0= RULE_STRING ) ) )
             {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1674:1: (otherlv_0= 'use' ( (lv_metamodel_1_0= RULE_STRING ) ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1674:3: otherlv_0= 'use' ( (lv_metamodel_1_0= RULE_STRING ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1917:1: (otherlv_0= 'use' ( (lv_metamodel_1_0= RULE_STRING ) ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1917:3: otherlv_0= 'use' ( (lv_metamodel_1_0= RULE_STRING ) )
             {
-            otherlv_0=(Token)match(input,45,FOLLOW_45_in_ruleMetamodelRef3538); 
+            otherlv_0=(Token)match(input,47,FOLLOW_47_in_ruleMetamodelRef4015); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getMetamodelRefAccess().getUseKeyword_0());
                 
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1678:1: ( (lv_metamodel_1_0= RULE_STRING ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1679:1: (lv_metamodel_1_0= RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1921:1: ( (lv_metamodel_1_0= RULE_STRING ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1922:1: (lv_metamodel_1_0= RULE_STRING )
             {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1679:1: (lv_metamodel_1_0= RULE_STRING )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1680:3: lv_metamodel_1_0= RULE_STRING
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1922:1: (lv_metamodel_1_0= RULE_STRING )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1923:3: lv_metamodel_1_0= RULE_STRING
             {
-            lv_metamodel_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleMetamodelRef3555); 
+            lv_metamodel_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleMetamodelRef4032); 
 
             			newLeafNode(lv_metamodel_1_0, grammarAccess.getMetamodelRefAccess().getMetamodelSTRINGTerminalRuleCall_1_0()); 
             		
@@ -4168,7 +4752,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleColor"
-    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1704:1: entryRuleColor returns [EObject current=null] : iv_ruleColor= ruleColor EOF ;
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1947:1: entryRuleColor returns [EObject current=null] : iv_ruleColor= ruleColor EOF ;
     public final EObject entryRuleColor() throws RecognitionException {
         EObject current = null;
 
@@ -4176,17 +4760,17 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1705:2: (iv_ruleColor= ruleColor EOF )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1706:2: iv_ruleColor= ruleColor EOF
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1948:2: (iv_ruleColor= ruleColor EOF )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1949:2: iv_ruleColor= ruleColor EOF
             {
              newCompositeNode(grammarAccess.getColorRule()); 
-            pushFollow(FOLLOW_ruleColor_in_entryRuleColor3596);
+            pushFollow(FOLLOW_ruleColor_in_entryRuleColor4073);
             iv_ruleColor=ruleColor();
 
             state._fsp--;
 
              current =iv_ruleColor; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleColor3606); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleColor4083); 
 
             }
 
@@ -4204,7 +4788,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleColor"
-    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1713:1: ruleColor returns [EObject current=null] : this_PreDefinedColorDefinition_0= rulePreDefinedColorDefinition ;
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1956:1: ruleColor returns [EObject current=null] : this_PreDefinedColorDefinition_0= rulePreDefinedColorDefinition ;
     public final EObject ruleColor() throws RecognitionException {
         EObject current = null;
 
@@ -4214,13 +4798,13 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1716:28: (this_PreDefinedColorDefinition_0= rulePreDefinedColorDefinition )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1718:5: this_PreDefinedColorDefinition_0= rulePreDefinedColorDefinition
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1959:28: (this_PreDefinedColorDefinition_0= rulePreDefinedColorDefinition )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1961:5: this_PreDefinedColorDefinition_0= rulePreDefinedColorDefinition
             {
              
                     newCompositeNode(grammarAccess.getColorAccess().getPreDefinedColorDefinitionParserRuleCall()); 
                 
-            pushFollow(FOLLOW_rulePreDefinedColorDefinition_in_ruleColor3652);
+            pushFollow(FOLLOW_rulePreDefinedColorDefinition_in_ruleColor4129);
             this_PreDefinedColorDefinition_0=rulePreDefinedColorDefinition();
 
             state._fsp--;
@@ -4247,7 +4831,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePreDefinedColorDefinition"
-    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1734:1: entryRulePreDefinedColorDefinition returns [EObject current=null] : iv_rulePreDefinedColorDefinition= rulePreDefinedColorDefinition EOF ;
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1977:1: entryRulePreDefinedColorDefinition returns [EObject current=null] : iv_rulePreDefinedColorDefinition= rulePreDefinedColorDefinition EOF ;
     public final EObject entryRulePreDefinedColorDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -4255,17 +4839,17 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1735:2: (iv_rulePreDefinedColorDefinition= rulePreDefinedColorDefinition EOF )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1736:2: iv_rulePreDefinedColorDefinition= rulePreDefinedColorDefinition EOF
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1978:2: (iv_rulePreDefinedColorDefinition= rulePreDefinedColorDefinition EOF )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1979:2: iv_rulePreDefinedColorDefinition= rulePreDefinedColorDefinition EOF
             {
              newCompositeNode(grammarAccess.getPreDefinedColorDefinitionRule()); 
-            pushFollow(FOLLOW_rulePreDefinedColorDefinition_in_entryRulePreDefinedColorDefinition3686);
+            pushFollow(FOLLOW_rulePreDefinedColorDefinition_in_entryRulePreDefinedColorDefinition4163);
             iv_rulePreDefinedColorDefinition=rulePreDefinedColorDefinition();
 
             state._fsp--;
 
              current =iv_rulePreDefinedColorDefinition; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulePreDefinedColorDefinition3696); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulePreDefinedColorDefinition4173); 
 
             }
 
@@ -4283,7 +4867,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePreDefinedColorDefinition"
-    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1743:1: rulePreDefinedColorDefinition returns [EObject current=null] : ( (lv_color_0_0= rulePreDefinedColor ) ) ;
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1986:1: rulePreDefinedColorDefinition returns [EObject current=null] : ( (lv_color_0_0= rulePreDefinedColor ) ) ;
     public final EObject rulePreDefinedColorDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -4293,19 +4877,19 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1746:28: ( ( (lv_color_0_0= rulePreDefinedColor ) ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1747:1: ( (lv_color_0_0= rulePreDefinedColor ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1989:28: ( ( (lv_color_0_0= rulePreDefinedColor ) ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1990:1: ( (lv_color_0_0= rulePreDefinedColor ) )
             {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1747:1: ( (lv_color_0_0= rulePreDefinedColor ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1748:1: (lv_color_0_0= rulePreDefinedColor )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1990:1: ( (lv_color_0_0= rulePreDefinedColor ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1991:1: (lv_color_0_0= rulePreDefinedColor )
             {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1748:1: (lv_color_0_0= rulePreDefinedColor )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1749:3: lv_color_0_0= rulePreDefinedColor
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1991:1: (lv_color_0_0= rulePreDefinedColor )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1992:3: lv_color_0_0= rulePreDefinedColor
             {
              
             	        newCompositeNode(grammarAccess.getPreDefinedColorDefinitionAccess().getColorPreDefinedColorEnumRuleCall_0()); 
             	    
-            pushFollow(FOLLOW_rulePreDefinedColor_in_rulePreDefinedColorDefinition3741);
+            pushFollow(FOLLOW_rulePreDefinedColor_in_rulePreDefinedColorDefinition4218);
             lv_color_0_0=rulePreDefinedColor();
 
             state._fsp--;
@@ -4345,7 +4929,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePreDefinedColor"
-    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1773:1: rulePreDefinedColor returns [Enumerator current=null] : ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'black' ) | (enumLiteral_2= 'blue' ) | (enumLiteral_3= 'light blue' ) | (enumLiteral_4= 'dark blue' ) | (enumLiteral_5= 'chocolate' ) | (enumLiteral_6= 'light chocolate' ) | (enumLiteral_7= 'dark chocolate' ) | (enumLiteral_8= 'gray' ) | (enumLiteral_9= 'light gray' ) | (enumLiteral_10= 'dark gray' ) | (enumLiteral_11= 'green' ) | (enumLiteral_12= 'light green' ) | (enumLiteral_13= 'dark green' ) | (enumLiteral_14= 'orange' ) | (enumLiteral_15= 'light orange' ) | (enumLiteral_16= 'dark orange' ) | (enumLiteral_17= 'purple' ) | (enumLiteral_18= 'light purple' ) | (enumLiteral_19= 'dark purple' ) | (enumLiteral_20= 'red' ) | (enumLiteral_21= 'light red' ) | (enumLiteral_22= 'dark red' ) | (enumLiteral_23= 'yellow' ) | (enumLiteral_24= 'light yellow' ) | (enumLiteral_25= 'dark yellow' ) ) ;
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2016:1: rulePreDefinedColor returns [Enumerator current=null] : ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'black' ) | (enumLiteral_2= 'blue' ) | (enumLiteral_3= 'light blue' ) | (enumLiteral_4= 'dark blue' ) | (enumLiteral_5= 'chocolate' ) | (enumLiteral_6= 'light chocolate' ) | (enumLiteral_7= 'dark chocolate' ) | (enumLiteral_8= 'gray' ) | (enumLiteral_9= 'light gray' ) | (enumLiteral_10= 'dark gray' ) | (enumLiteral_11= 'green' ) | (enumLiteral_12= 'light green' ) | (enumLiteral_13= 'dark green' ) | (enumLiteral_14= 'orange' ) | (enumLiteral_15= 'light orange' ) | (enumLiteral_16= 'dark orange' ) | (enumLiteral_17= 'purple' ) | (enumLiteral_18= 'light purple' ) | (enumLiteral_19= 'dark purple' ) | (enumLiteral_20= 'red' ) | (enumLiteral_21= 'light red' ) | (enumLiteral_22= 'dark red' ) | (enumLiteral_23= 'yellow' ) | (enumLiteral_24= 'light yellow' ) | (enumLiteral_25= 'dark yellow' ) ) ;
     public final Enumerator rulePreDefinedColor() throws RecognitionException {
         Enumerator current = null;
 
@@ -4378,157 +4962,157 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1775:28: ( ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'black' ) | (enumLiteral_2= 'blue' ) | (enumLiteral_3= 'light blue' ) | (enumLiteral_4= 'dark blue' ) | (enumLiteral_5= 'chocolate' ) | (enumLiteral_6= 'light chocolate' ) | (enumLiteral_7= 'dark chocolate' ) | (enumLiteral_8= 'gray' ) | (enumLiteral_9= 'light gray' ) | (enumLiteral_10= 'dark gray' ) | (enumLiteral_11= 'green' ) | (enumLiteral_12= 'light green' ) | (enumLiteral_13= 'dark green' ) | (enumLiteral_14= 'orange' ) | (enumLiteral_15= 'light orange' ) | (enumLiteral_16= 'dark orange' ) | (enumLiteral_17= 'purple' ) | (enumLiteral_18= 'light purple' ) | (enumLiteral_19= 'dark purple' ) | (enumLiteral_20= 'red' ) | (enumLiteral_21= 'light red' ) | (enumLiteral_22= 'dark red' ) | (enumLiteral_23= 'yellow' ) | (enumLiteral_24= 'light yellow' ) | (enumLiteral_25= 'dark yellow' ) ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1776:1: ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'black' ) | (enumLiteral_2= 'blue' ) | (enumLiteral_3= 'light blue' ) | (enumLiteral_4= 'dark blue' ) | (enumLiteral_5= 'chocolate' ) | (enumLiteral_6= 'light chocolate' ) | (enumLiteral_7= 'dark chocolate' ) | (enumLiteral_8= 'gray' ) | (enumLiteral_9= 'light gray' ) | (enumLiteral_10= 'dark gray' ) | (enumLiteral_11= 'green' ) | (enumLiteral_12= 'light green' ) | (enumLiteral_13= 'dark green' ) | (enumLiteral_14= 'orange' ) | (enumLiteral_15= 'light orange' ) | (enumLiteral_16= 'dark orange' ) | (enumLiteral_17= 'purple' ) | (enumLiteral_18= 'light purple' ) | (enumLiteral_19= 'dark purple' ) | (enumLiteral_20= 'red' ) | (enumLiteral_21= 'light red' ) | (enumLiteral_22= 'dark red' ) | (enumLiteral_23= 'yellow' ) | (enumLiteral_24= 'light yellow' ) | (enumLiteral_25= 'dark yellow' ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2018:28: ( ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'black' ) | (enumLiteral_2= 'blue' ) | (enumLiteral_3= 'light blue' ) | (enumLiteral_4= 'dark blue' ) | (enumLiteral_5= 'chocolate' ) | (enumLiteral_6= 'light chocolate' ) | (enumLiteral_7= 'dark chocolate' ) | (enumLiteral_8= 'gray' ) | (enumLiteral_9= 'light gray' ) | (enumLiteral_10= 'dark gray' ) | (enumLiteral_11= 'green' ) | (enumLiteral_12= 'light green' ) | (enumLiteral_13= 'dark green' ) | (enumLiteral_14= 'orange' ) | (enumLiteral_15= 'light orange' ) | (enumLiteral_16= 'dark orange' ) | (enumLiteral_17= 'purple' ) | (enumLiteral_18= 'light purple' ) | (enumLiteral_19= 'dark purple' ) | (enumLiteral_20= 'red' ) | (enumLiteral_21= 'light red' ) | (enumLiteral_22= 'dark red' ) | (enumLiteral_23= 'yellow' ) | (enumLiteral_24= 'light yellow' ) | (enumLiteral_25= 'dark yellow' ) ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2019:1: ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'black' ) | (enumLiteral_2= 'blue' ) | (enumLiteral_3= 'light blue' ) | (enumLiteral_4= 'dark blue' ) | (enumLiteral_5= 'chocolate' ) | (enumLiteral_6= 'light chocolate' ) | (enumLiteral_7= 'dark chocolate' ) | (enumLiteral_8= 'gray' ) | (enumLiteral_9= 'light gray' ) | (enumLiteral_10= 'dark gray' ) | (enumLiteral_11= 'green' ) | (enumLiteral_12= 'light green' ) | (enumLiteral_13= 'dark green' ) | (enumLiteral_14= 'orange' ) | (enumLiteral_15= 'light orange' ) | (enumLiteral_16= 'dark orange' ) | (enumLiteral_17= 'purple' ) | (enumLiteral_18= 'light purple' ) | (enumLiteral_19= 'dark purple' ) | (enumLiteral_20= 'red' ) | (enumLiteral_21= 'light red' ) | (enumLiteral_22= 'dark red' ) | (enumLiteral_23= 'yellow' ) | (enumLiteral_24= 'light yellow' ) | (enumLiteral_25= 'dark yellow' ) )
             {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1776:1: ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'black' ) | (enumLiteral_2= 'blue' ) | (enumLiteral_3= 'light blue' ) | (enumLiteral_4= 'dark blue' ) | (enumLiteral_5= 'chocolate' ) | (enumLiteral_6= 'light chocolate' ) | (enumLiteral_7= 'dark chocolate' ) | (enumLiteral_8= 'gray' ) | (enumLiteral_9= 'light gray' ) | (enumLiteral_10= 'dark gray' ) | (enumLiteral_11= 'green' ) | (enumLiteral_12= 'light green' ) | (enumLiteral_13= 'dark green' ) | (enumLiteral_14= 'orange' ) | (enumLiteral_15= 'light orange' ) | (enumLiteral_16= 'dark orange' ) | (enumLiteral_17= 'purple' ) | (enumLiteral_18= 'light purple' ) | (enumLiteral_19= 'dark purple' ) | (enumLiteral_20= 'red' ) | (enumLiteral_21= 'light red' ) | (enumLiteral_22= 'dark red' ) | (enumLiteral_23= 'yellow' ) | (enumLiteral_24= 'light yellow' ) | (enumLiteral_25= 'dark yellow' ) )
-            int alt38=26;
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2019:1: ( (enumLiteral_0= 'white' ) | (enumLiteral_1= 'black' ) | (enumLiteral_2= 'blue' ) | (enumLiteral_3= 'light blue' ) | (enumLiteral_4= 'dark blue' ) | (enumLiteral_5= 'chocolate' ) | (enumLiteral_6= 'light chocolate' ) | (enumLiteral_7= 'dark chocolate' ) | (enumLiteral_8= 'gray' ) | (enumLiteral_9= 'light gray' ) | (enumLiteral_10= 'dark gray' ) | (enumLiteral_11= 'green' ) | (enumLiteral_12= 'light green' ) | (enumLiteral_13= 'dark green' ) | (enumLiteral_14= 'orange' ) | (enumLiteral_15= 'light orange' ) | (enumLiteral_16= 'dark orange' ) | (enumLiteral_17= 'purple' ) | (enumLiteral_18= 'light purple' ) | (enumLiteral_19= 'dark purple' ) | (enumLiteral_20= 'red' ) | (enumLiteral_21= 'light red' ) | (enumLiteral_22= 'dark red' ) | (enumLiteral_23= 'yellow' ) | (enumLiteral_24= 'light yellow' ) | (enumLiteral_25= 'dark yellow' ) )
+            int alt43=26;
             switch ( input.LA(1) ) {
-            case 46:
-                {
-                alt38=1;
-                }
-                break;
-            case 47:
-                {
-                alt38=2;
-                }
-                break;
             case 48:
                 {
-                alt38=3;
+                alt43=1;
                 }
                 break;
             case 49:
                 {
-                alt38=4;
+                alt43=2;
                 }
                 break;
             case 50:
                 {
-                alt38=5;
+                alt43=3;
                 }
                 break;
             case 51:
                 {
-                alt38=6;
+                alt43=4;
                 }
                 break;
             case 52:
                 {
-                alt38=7;
+                alt43=5;
                 }
                 break;
             case 53:
                 {
-                alt38=8;
+                alt43=6;
                 }
                 break;
             case 54:
                 {
-                alt38=9;
+                alt43=7;
                 }
                 break;
             case 55:
                 {
-                alt38=10;
+                alt43=8;
                 }
                 break;
             case 56:
                 {
-                alt38=11;
+                alt43=9;
                 }
                 break;
             case 57:
                 {
-                alt38=12;
+                alt43=10;
                 }
                 break;
             case 58:
                 {
-                alt38=13;
+                alt43=11;
                 }
                 break;
             case 59:
                 {
-                alt38=14;
+                alt43=12;
                 }
                 break;
             case 60:
                 {
-                alt38=15;
+                alt43=13;
                 }
                 break;
             case 61:
                 {
-                alt38=16;
+                alt43=14;
                 }
                 break;
             case 62:
                 {
-                alt38=17;
+                alt43=15;
                 }
                 break;
             case 63:
                 {
-                alt38=18;
+                alt43=16;
                 }
                 break;
             case 64:
                 {
-                alt38=19;
+                alt43=17;
                 }
                 break;
             case 65:
                 {
-                alt38=20;
+                alt43=18;
                 }
                 break;
             case 66:
                 {
-                alt38=21;
+                alt43=19;
                 }
                 break;
             case 67:
                 {
-                alt38=22;
+                alt43=20;
                 }
                 break;
             case 68:
                 {
-                alt38=23;
+                alt43=21;
                 }
                 break;
             case 69:
                 {
-                alt38=24;
+                alt43=22;
                 }
                 break;
             case 70:
                 {
-                alt38=25;
+                alt43=23;
                 }
                 break;
             case 71:
                 {
-                alt38=26;
+                alt43=24;
+                }
+                break;
+            case 72:
+                {
+                alt43=25;
+                }
+                break;
+            case 73:
+                {
+                alt43=26;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 38, 0, input);
+                    new NoViableAltException("", 43, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt38) {
+            switch (alt43) {
                 case 1 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1776:2: (enumLiteral_0= 'white' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2019:2: (enumLiteral_0= 'white' )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1776:2: (enumLiteral_0= 'white' )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1776:4: enumLiteral_0= 'white'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2019:2: (enumLiteral_0= 'white' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2019:4: enumLiteral_0= 'white'
                     {
-                    enumLiteral_0=(Token)match(input,46,FOLLOW_46_in_rulePreDefinedColor3790); 
+                    enumLiteral_0=(Token)match(input,48,FOLLOW_48_in_rulePreDefinedColor4267); 
 
                             current = grammarAccess.getPreDefinedColorAccess().getWHITEEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_0, grammarAccess.getPreDefinedColorAccess().getWHITEEnumLiteralDeclaration_0()); 
@@ -4540,12 +5124,12 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1782:6: (enumLiteral_1= 'black' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2025:6: (enumLiteral_1= 'black' )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1782:6: (enumLiteral_1= 'black' )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1782:8: enumLiteral_1= 'black'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2025:6: (enumLiteral_1= 'black' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2025:8: enumLiteral_1= 'black'
                     {
-                    enumLiteral_1=(Token)match(input,47,FOLLOW_47_in_rulePreDefinedColor3807); 
+                    enumLiteral_1=(Token)match(input,49,FOLLOW_49_in_rulePreDefinedColor4284); 
 
                             current = grammarAccess.getPreDefinedColorAccess().getBLACKEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_1, grammarAccess.getPreDefinedColorAccess().getBLACKEnumLiteralDeclaration_1()); 
@@ -4557,12 +5141,12 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1788:6: (enumLiteral_2= 'blue' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2031:6: (enumLiteral_2= 'blue' )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1788:6: (enumLiteral_2= 'blue' )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1788:8: enumLiteral_2= 'blue'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2031:6: (enumLiteral_2= 'blue' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2031:8: enumLiteral_2= 'blue'
                     {
-                    enumLiteral_2=(Token)match(input,48,FOLLOW_48_in_rulePreDefinedColor3824); 
+                    enumLiteral_2=(Token)match(input,50,FOLLOW_50_in_rulePreDefinedColor4301); 
 
                             current = grammarAccess.getPreDefinedColorAccess().getBLUEEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_2, grammarAccess.getPreDefinedColorAccess().getBLUEEnumLiteralDeclaration_2()); 
@@ -4574,12 +5158,12 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1794:6: (enumLiteral_3= 'light blue' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2037:6: (enumLiteral_3= 'light blue' )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1794:6: (enumLiteral_3= 'light blue' )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1794:8: enumLiteral_3= 'light blue'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2037:6: (enumLiteral_3= 'light blue' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2037:8: enumLiteral_3= 'light blue'
                     {
-                    enumLiteral_3=(Token)match(input,49,FOLLOW_49_in_rulePreDefinedColor3841); 
+                    enumLiteral_3=(Token)match(input,51,FOLLOW_51_in_rulePreDefinedColor4318); 
 
                             current = grammarAccess.getPreDefinedColorAccess().getLIGHT_BLUEEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_3, grammarAccess.getPreDefinedColorAccess().getLIGHT_BLUEEnumLiteralDeclaration_3()); 
@@ -4591,12 +5175,12 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1800:6: (enumLiteral_4= 'dark blue' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2043:6: (enumLiteral_4= 'dark blue' )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1800:6: (enumLiteral_4= 'dark blue' )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1800:8: enumLiteral_4= 'dark blue'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2043:6: (enumLiteral_4= 'dark blue' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2043:8: enumLiteral_4= 'dark blue'
                     {
-                    enumLiteral_4=(Token)match(input,50,FOLLOW_50_in_rulePreDefinedColor3858); 
+                    enumLiteral_4=(Token)match(input,52,FOLLOW_52_in_rulePreDefinedColor4335); 
 
                             current = grammarAccess.getPreDefinedColorAccess().getDARK_BLUEEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_4, grammarAccess.getPreDefinedColorAccess().getDARK_BLUEEnumLiteralDeclaration_4()); 
@@ -4608,12 +5192,12 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1806:6: (enumLiteral_5= 'chocolate' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2049:6: (enumLiteral_5= 'chocolate' )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1806:6: (enumLiteral_5= 'chocolate' )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1806:8: enumLiteral_5= 'chocolate'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2049:6: (enumLiteral_5= 'chocolate' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2049:8: enumLiteral_5= 'chocolate'
                     {
-                    enumLiteral_5=(Token)match(input,51,FOLLOW_51_in_rulePreDefinedColor3875); 
+                    enumLiteral_5=(Token)match(input,53,FOLLOW_53_in_rulePreDefinedColor4352); 
 
                             current = grammarAccess.getPreDefinedColorAccess().getCHOCOLATEEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_5, grammarAccess.getPreDefinedColorAccess().getCHOCOLATEEnumLiteralDeclaration_5()); 
@@ -4625,12 +5209,12 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1812:6: (enumLiteral_6= 'light chocolate' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2055:6: (enumLiteral_6= 'light chocolate' )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1812:6: (enumLiteral_6= 'light chocolate' )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1812:8: enumLiteral_6= 'light chocolate'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2055:6: (enumLiteral_6= 'light chocolate' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2055:8: enumLiteral_6= 'light chocolate'
                     {
-                    enumLiteral_6=(Token)match(input,52,FOLLOW_52_in_rulePreDefinedColor3892); 
+                    enumLiteral_6=(Token)match(input,54,FOLLOW_54_in_rulePreDefinedColor4369); 
 
                             current = grammarAccess.getPreDefinedColorAccess().getLIGHT_CHOCOLATEEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_6, grammarAccess.getPreDefinedColorAccess().getLIGHT_CHOCOLATEEnumLiteralDeclaration_6()); 
@@ -4642,12 +5226,12 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1818:6: (enumLiteral_7= 'dark chocolate' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2061:6: (enumLiteral_7= 'dark chocolate' )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1818:6: (enumLiteral_7= 'dark chocolate' )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1818:8: enumLiteral_7= 'dark chocolate'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2061:6: (enumLiteral_7= 'dark chocolate' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2061:8: enumLiteral_7= 'dark chocolate'
                     {
-                    enumLiteral_7=(Token)match(input,53,FOLLOW_53_in_rulePreDefinedColor3909); 
+                    enumLiteral_7=(Token)match(input,55,FOLLOW_55_in_rulePreDefinedColor4386); 
 
                             current = grammarAccess.getPreDefinedColorAccess().getDARK_CHOCOLATEEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_7, grammarAccess.getPreDefinedColorAccess().getDARK_CHOCOLATEEnumLiteralDeclaration_7()); 
@@ -4659,12 +5243,12 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1824:6: (enumLiteral_8= 'gray' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2067:6: (enumLiteral_8= 'gray' )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1824:6: (enumLiteral_8= 'gray' )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1824:8: enumLiteral_8= 'gray'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2067:6: (enumLiteral_8= 'gray' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2067:8: enumLiteral_8= 'gray'
                     {
-                    enumLiteral_8=(Token)match(input,54,FOLLOW_54_in_rulePreDefinedColor3926); 
+                    enumLiteral_8=(Token)match(input,56,FOLLOW_56_in_rulePreDefinedColor4403); 
 
                             current = grammarAccess.getPreDefinedColorAccess().getGRAYEnumLiteralDeclaration_8().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_8, grammarAccess.getPreDefinedColorAccess().getGRAYEnumLiteralDeclaration_8()); 
@@ -4676,12 +5260,12 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1830:6: (enumLiteral_9= 'light gray' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2073:6: (enumLiteral_9= 'light gray' )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1830:6: (enumLiteral_9= 'light gray' )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1830:8: enumLiteral_9= 'light gray'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2073:6: (enumLiteral_9= 'light gray' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2073:8: enumLiteral_9= 'light gray'
                     {
-                    enumLiteral_9=(Token)match(input,55,FOLLOW_55_in_rulePreDefinedColor3943); 
+                    enumLiteral_9=(Token)match(input,57,FOLLOW_57_in_rulePreDefinedColor4420); 
 
                             current = grammarAccess.getPreDefinedColorAccess().getLIGHT_GRAYEnumLiteralDeclaration_9().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_9, grammarAccess.getPreDefinedColorAccess().getLIGHT_GRAYEnumLiteralDeclaration_9()); 
@@ -4693,12 +5277,12 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 11 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1836:6: (enumLiteral_10= 'dark gray' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2079:6: (enumLiteral_10= 'dark gray' )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1836:6: (enumLiteral_10= 'dark gray' )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1836:8: enumLiteral_10= 'dark gray'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2079:6: (enumLiteral_10= 'dark gray' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2079:8: enumLiteral_10= 'dark gray'
                     {
-                    enumLiteral_10=(Token)match(input,56,FOLLOW_56_in_rulePreDefinedColor3960); 
+                    enumLiteral_10=(Token)match(input,58,FOLLOW_58_in_rulePreDefinedColor4437); 
 
                             current = grammarAccess.getPreDefinedColorAccess().getDARK_GRAYEnumLiteralDeclaration_10().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_10, grammarAccess.getPreDefinedColorAccess().getDARK_GRAYEnumLiteralDeclaration_10()); 
@@ -4710,12 +5294,12 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 12 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1842:6: (enumLiteral_11= 'green' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2085:6: (enumLiteral_11= 'green' )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1842:6: (enumLiteral_11= 'green' )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1842:8: enumLiteral_11= 'green'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2085:6: (enumLiteral_11= 'green' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2085:8: enumLiteral_11= 'green'
                     {
-                    enumLiteral_11=(Token)match(input,57,FOLLOW_57_in_rulePreDefinedColor3977); 
+                    enumLiteral_11=(Token)match(input,59,FOLLOW_59_in_rulePreDefinedColor4454); 
 
                             current = grammarAccess.getPreDefinedColorAccess().getGREENEnumLiteralDeclaration_11().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_11, grammarAccess.getPreDefinedColorAccess().getGREENEnumLiteralDeclaration_11()); 
@@ -4727,12 +5311,12 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 13 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1848:6: (enumLiteral_12= 'light green' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2091:6: (enumLiteral_12= 'light green' )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1848:6: (enumLiteral_12= 'light green' )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1848:8: enumLiteral_12= 'light green'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2091:6: (enumLiteral_12= 'light green' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2091:8: enumLiteral_12= 'light green'
                     {
-                    enumLiteral_12=(Token)match(input,58,FOLLOW_58_in_rulePreDefinedColor3994); 
+                    enumLiteral_12=(Token)match(input,60,FOLLOW_60_in_rulePreDefinedColor4471); 
 
                             current = grammarAccess.getPreDefinedColorAccess().getLIGHT_GREENEnumLiteralDeclaration_12().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_12, grammarAccess.getPreDefinedColorAccess().getLIGHT_GREENEnumLiteralDeclaration_12()); 
@@ -4744,12 +5328,12 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 14 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1854:6: (enumLiteral_13= 'dark green' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2097:6: (enumLiteral_13= 'dark green' )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1854:6: (enumLiteral_13= 'dark green' )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1854:8: enumLiteral_13= 'dark green'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2097:6: (enumLiteral_13= 'dark green' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2097:8: enumLiteral_13= 'dark green'
                     {
-                    enumLiteral_13=(Token)match(input,59,FOLLOW_59_in_rulePreDefinedColor4011); 
+                    enumLiteral_13=(Token)match(input,61,FOLLOW_61_in_rulePreDefinedColor4488); 
 
                             current = grammarAccess.getPreDefinedColorAccess().getDARK_GREENEnumLiteralDeclaration_13().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_13, grammarAccess.getPreDefinedColorAccess().getDARK_GREENEnumLiteralDeclaration_13()); 
@@ -4761,12 +5345,12 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 15 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1860:6: (enumLiteral_14= 'orange' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2103:6: (enumLiteral_14= 'orange' )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1860:6: (enumLiteral_14= 'orange' )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1860:8: enumLiteral_14= 'orange'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2103:6: (enumLiteral_14= 'orange' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2103:8: enumLiteral_14= 'orange'
                     {
-                    enumLiteral_14=(Token)match(input,60,FOLLOW_60_in_rulePreDefinedColor4028); 
+                    enumLiteral_14=(Token)match(input,62,FOLLOW_62_in_rulePreDefinedColor4505); 
 
                             current = grammarAccess.getPreDefinedColorAccess().getORANGEEnumLiteralDeclaration_14().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_14, grammarAccess.getPreDefinedColorAccess().getORANGEEnumLiteralDeclaration_14()); 
@@ -4778,12 +5362,12 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 16 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1866:6: (enumLiteral_15= 'light orange' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2109:6: (enumLiteral_15= 'light orange' )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1866:6: (enumLiteral_15= 'light orange' )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1866:8: enumLiteral_15= 'light orange'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2109:6: (enumLiteral_15= 'light orange' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2109:8: enumLiteral_15= 'light orange'
                     {
-                    enumLiteral_15=(Token)match(input,61,FOLLOW_61_in_rulePreDefinedColor4045); 
+                    enumLiteral_15=(Token)match(input,63,FOLLOW_63_in_rulePreDefinedColor4522); 
 
                             current = grammarAccess.getPreDefinedColorAccess().getLIGHT_ORANGEEnumLiteralDeclaration_15().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_15, grammarAccess.getPreDefinedColorAccess().getLIGHT_ORANGEEnumLiteralDeclaration_15()); 
@@ -4795,12 +5379,12 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 17 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1872:6: (enumLiteral_16= 'dark orange' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2115:6: (enumLiteral_16= 'dark orange' )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1872:6: (enumLiteral_16= 'dark orange' )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1872:8: enumLiteral_16= 'dark orange'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2115:6: (enumLiteral_16= 'dark orange' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2115:8: enumLiteral_16= 'dark orange'
                     {
-                    enumLiteral_16=(Token)match(input,62,FOLLOW_62_in_rulePreDefinedColor4062); 
+                    enumLiteral_16=(Token)match(input,64,FOLLOW_64_in_rulePreDefinedColor4539); 
 
                             current = grammarAccess.getPreDefinedColorAccess().getDARK_ORANGEEnumLiteralDeclaration_16().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_16, grammarAccess.getPreDefinedColorAccess().getDARK_ORANGEEnumLiteralDeclaration_16()); 
@@ -4812,12 +5396,12 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 18 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1878:6: (enumLiteral_17= 'purple' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2121:6: (enumLiteral_17= 'purple' )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1878:6: (enumLiteral_17= 'purple' )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1878:8: enumLiteral_17= 'purple'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2121:6: (enumLiteral_17= 'purple' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2121:8: enumLiteral_17= 'purple'
                     {
-                    enumLiteral_17=(Token)match(input,63,FOLLOW_63_in_rulePreDefinedColor4079); 
+                    enumLiteral_17=(Token)match(input,65,FOLLOW_65_in_rulePreDefinedColor4556); 
 
                             current = grammarAccess.getPreDefinedColorAccess().getPURPLEEnumLiteralDeclaration_17().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_17, grammarAccess.getPreDefinedColorAccess().getPURPLEEnumLiteralDeclaration_17()); 
@@ -4829,12 +5413,12 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 19 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1884:6: (enumLiteral_18= 'light purple' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2127:6: (enumLiteral_18= 'light purple' )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1884:6: (enumLiteral_18= 'light purple' )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1884:8: enumLiteral_18= 'light purple'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2127:6: (enumLiteral_18= 'light purple' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2127:8: enumLiteral_18= 'light purple'
                     {
-                    enumLiteral_18=(Token)match(input,64,FOLLOW_64_in_rulePreDefinedColor4096); 
+                    enumLiteral_18=(Token)match(input,66,FOLLOW_66_in_rulePreDefinedColor4573); 
 
                             current = grammarAccess.getPreDefinedColorAccess().getLIGHT_PURPLEEnumLiteralDeclaration_18().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_18, grammarAccess.getPreDefinedColorAccess().getLIGHT_PURPLEEnumLiteralDeclaration_18()); 
@@ -4846,12 +5430,12 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 20 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1890:6: (enumLiteral_19= 'dark purple' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2133:6: (enumLiteral_19= 'dark purple' )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1890:6: (enumLiteral_19= 'dark purple' )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1890:8: enumLiteral_19= 'dark purple'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2133:6: (enumLiteral_19= 'dark purple' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2133:8: enumLiteral_19= 'dark purple'
                     {
-                    enumLiteral_19=(Token)match(input,65,FOLLOW_65_in_rulePreDefinedColor4113); 
+                    enumLiteral_19=(Token)match(input,67,FOLLOW_67_in_rulePreDefinedColor4590); 
 
                             current = grammarAccess.getPreDefinedColorAccess().getDARK_PURPLEEnumLiteralDeclaration_19().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_19, grammarAccess.getPreDefinedColorAccess().getDARK_PURPLEEnumLiteralDeclaration_19()); 
@@ -4863,12 +5447,12 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 21 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1896:6: (enumLiteral_20= 'red' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2139:6: (enumLiteral_20= 'red' )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1896:6: (enumLiteral_20= 'red' )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1896:8: enumLiteral_20= 'red'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2139:6: (enumLiteral_20= 'red' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2139:8: enumLiteral_20= 'red'
                     {
-                    enumLiteral_20=(Token)match(input,66,FOLLOW_66_in_rulePreDefinedColor4130); 
+                    enumLiteral_20=(Token)match(input,68,FOLLOW_68_in_rulePreDefinedColor4607); 
 
                             current = grammarAccess.getPreDefinedColorAccess().getREDEnumLiteralDeclaration_20().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_20, grammarAccess.getPreDefinedColorAccess().getREDEnumLiteralDeclaration_20()); 
@@ -4880,12 +5464,12 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 22 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1902:6: (enumLiteral_21= 'light red' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2145:6: (enumLiteral_21= 'light red' )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1902:6: (enumLiteral_21= 'light red' )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1902:8: enumLiteral_21= 'light red'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2145:6: (enumLiteral_21= 'light red' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2145:8: enumLiteral_21= 'light red'
                     {
-                    enumLiteral_21=(Token)match(input,67,FOLLOW_67_in_rulePreDefinedColor4147); 
+                    enumLiteral_21=(Token)match(input,69,FOLLOW_69_in_rulePreDefinedColor4624); 
 
                             current = grammarAccess.getPreDefinedColorAccess().getLIGHT_REDEnumLiteralDeclaration_21().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_21, grammarAccess.getPreDefinedColorAccess().getLIGHT_REDEnumLiteralDeclaration_21()); 
@@ -4897,12 +5481,12 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 23 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1908:6: (enumLiteral_22= 'dark red' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2151:6: (enumLiteral_22= 'dark red' )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1908:6: (enumLiteral_22= 'dark red' )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1908:8: enumLiteral_22= 'dark red'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2151:6: (enumLiteral_22= 'dark red' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2151:8: enumLiteral_22= 'dark red'
                     {
-                    enumLiteral_22=(Token)match(input,68,FOLLOW_68_in_rulePreDefinedColor4164); 
+                    enumLiteral_22=(Token)match(input,70,FOLLOW_70_in_rulePreDefinedColor4641); 
 
                             current = grammarAccess.getPreDefinedColorAccess().getDARK_REDEnumLiteralDeclaration_22().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_22, grammarAccess.getPreDefinedColorAccess().getDARK_REDEnumLiteralDeclaration_22()); 
@@ -4914,12 +5498,12 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 24 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1914:6: (enumLiteral_23= 'yellow' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2157:6: (enumLiteral_23= 'yellow' )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1914:6: (enumLiteral_23= 'yellow' )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1914:8: enumLiteral_23= 'yellow'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2157:6: (enumLiteral_23= 'yellow' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2157:8: enumLiteral_23= 'yellow'
                     {
-                    enumLiteral_23=(Token)match(input,69,FOLLOW_69_in_rulePreDefinedColor4181); 
+                    enumLiteral_23=(Token)match(input,71,FOLLOW_71_in_rulePreDefinedColor4658); 
 
                             current = grammarAccess.getPreDefinedColorAccess().getYELLOWEnumLiteralDeclaration_23().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_23, grammarAccess.getPreDefinedColorAccess().getYELLOWEnumLiteralDeclaration_23()); 
@@ -4931,12 +5515,12 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 25 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1920:6: (enumLiteral_24= 'light yellow' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2163:6: (enumLiteral_24= 'light yellow' )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1920:6: (enumLiteral_24= 'light yellow' )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1920:8: enumLiteral_24= 'light yellow'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2163:6: (enumLiteral_24= 'light yellow' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2163:8: enumLiteral_24= 'light yellow'
                     {
-                    enumLiteral_24=(Token)match(input,70,FOLLOW_70_in_rulePreDefinedColor4198); 
+                    enumLiteral_24=(Token)match(input,72,FOLLOW_72_in_rulePreDefinedColor4675); 
 
                             current = grammarAccess.getPreDefinedColorAccess().getLIGHT_YELLOWEnumLiteralDeclaration_24().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_24, grammarAccess.getPreDefinedColorAccess().getLIGHT_YELLOWEnumLiteralDeclaration_24()); 
@@ -4948,12 +5532,12 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 26 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1926:6: (enumLiteral_25= 'dark yellow' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2169:6: (enumLiteral_25= 'dark yellow' )
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1926:6: (enumLiteral_25= 'dark yellow' )
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1926:8: enumLiteral_25= 'dark yellow'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2169:6: (enumLiteral_25= 'dark yellow' )
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2169:8: enumLiteral_25= 'dark yellow'
                     {
-                    enumLiteral_25=(Token)match(input,71,FOLLOW_71_in_rulePreDefinedColor4215); 
+                    enumLiteral_25=(Token)match(input,73,FOLLOW_73_in_rulePreDefinedColor4692); 
 
                             current = grammarAccess.getPreDefinedColorAccess().getDARK_YELLOWEnumLiteralDeclaration_25().getEnumLiteral().getInstance();
                             newLeafNode(enumLiteral_25, grammarAccess.getPreDefinedColorAccess().getDARK_YELLOWEnumLiteralDeclaration_25()); 
@@ -5016,12 +5600,12 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_EOF_in_entryRuleSPTable617 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_18_in_ruleSPTable654 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleSPTable671 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleSPTable688 = new BitSet(new long[]{0x0000200000180000L});
+    public static final BitSet FOLLOW_12_in_ruleSPTable688 = new BitSet(new long[]{0x0000800000180000L});
     public static final BitSet FOLLOW_19_in_ruleSPTable701 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleSPTable718 = new BitSet(new long[]{0x0000200000180000L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleSPTable718 = new BitSet(new long[]{0x0000800000180000L});
     public static final BitSet FOLLOW_20_in_ruleSPTable738 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleSPTable755 = new BitSet(new long[]{0x0000200000180000L});
-    public static final BitSet FOLLOW_ruleMetamodelRef_in_ruleSPTable783 = new BitSet(new long[]{0x0000200000380000L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleSPTable755 = new BitSet(new long[]{0x0000800000180000L});
+    public static final BitSet FOLLOW_ruleMetamodelRef_in_ruleSPTable783 = new BitSet(new long[]{0x0000800000380000L});
     public static final BitSet FOLLOW_21_in_ruleSPTable796 = new BitSet(new long[]{0x0000000000000020L});
     public static final BitSet FOLLOW_RULE_STRING_in_ruleSPTable813 = new BitSet(new long[]{0x0000000001C00000L});
     public static final BitSet FOLLOW_ruleTableElement_in_ruleSPTable839 = new BitSet(new long[]{0x0000000005C00000L});
@@ -5033,7 +5617,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_23_in_ruleTableElement995 = new BitSet(new long[]{0x0000000001000000L});
     public static final BitSet FOLLOW_24_in_ruleTableElement1021 = new BitSet(new long[]{0x0000000000000020L});
     public static final BitSet FOLLOW_RULE_STRING_in_ruleTableElement1038 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_25_in_ruleTableElement1055 = new BitSet(new long[]{0x00001C0000000000L});
+    public static final BitSet FOLLOW_25_in_ruleTableElement1055 = new BitSet(new long[]{0x0000700000000000L});
     public static final BitSet FOLLOW_ruleSPExpression_in_ruleTableElement1076 = new BitSet(new long[]{0x0000000000001002L});
     public static final BitSet FOLLOW_12_in_ruleTableElement1089 = new BitSet(new long[]{0x0000000001C00000L});
     public static final BitSet FOLLOW_ruleTableElement_in_ruleTableElement1110 = new BitSet(new long[]{0x0000000001C04000L});
@@ -5044,132 +5628,154 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_RULE_STRING_in_ruleTableProperty1225 = new BitSet(new long[]{0x0000000008080002L});
     public static final BitSet FOLLOW_19_in_ruleTableProperty1243 = new BitSet(new long[]{0x0000000000000020L});
     public static final BitSet FOLLOW_RULE_STRING_in_ruleTableProperty1260 = new BitSet(new long[]{0x0000000008000002L});
-    public static final BitSet FOLLOW_27_in_ruleTableProperty1280 = new BitSet(new long[]{0x00001C0000000000L});
+    public static final BitSet FOLLOW_27_in_ruleTableProperty1280 = new BitSet(new long[]{0x0000700000000000L});
     public static final BitSet FOLLOW_ruleSPExpression_in_ruleTableProperty1301 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSPDiagram_in_entryRuleSPDiagram1339 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleSPDiagram1349 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_28_in_ruleSPDiagram1386 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleSPDiagram1403 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleSPDiagram1420 = new BitSet(new long[]{0x0000200000180000L});
+    public static final BitSet FOLLOW_12_in_ruleSPDiagram1420 = new BitSet(new long[]{0x0000800000180000L});
     public static final BitSet FOLLOW_19_in_ruleSPDiagram1433 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleSPDiagram1450 = new BitSet(new long[]{0x0000200000180000L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleSPDiagram1450 = new BitSet(new long[]{0x0000800000180000L});
     public static final BitSet FOLLOW_20_in_ruleSPDiagram1470 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleSPDiagram1487 = new BitSet(new long[]{0x0000200000180000L});
-    public static final BitSet FOLLOW_ruleMetamodelRef_in_ruleSPDiagram1515 = new BitSet(new long[]{0x0000200000380000L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleSPDiagram1487 = new BitSet(new long[]{0x0000800000180000L});
+    public static final BitSet FOLLOW_ruleMetamodelRef_in_ruleSPDiagram1515 = new BitSet(new long[]{0x0000800000380000L});
     public static final BitSet FOLLOW_21_in_ruleSPDiagram1528 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleSPDiagram1545 = new BitSet(new long[]{0x0000000620C00000L});
-    public static final BitSet FOLLOW_ruleDiagramElement_in_ruleSPDiagram1571 = new BitSet(new long[]{0x0000000620C04000L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleSPDiagram1545 = new BitSet(new long[]{0x0000001C20C00000L});
+    public static final BitSet FOLLOW_ruleDiagramElement_in_ruleSPDiagram1571 = new BitSet(new long[]{0x0000001C20C04000L});
     public static final BitSet FOLLOW_14_in_ruleSPDiagram1584 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleDiagramElement_in_entryRuleDiagramElement1620 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleDiagramElement1630 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleContainer_in_ruleDiagramElement1676 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleContainer_in_entryRuleContainer1710 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleContainer1720 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_ruleContainer1763 = new BitSet(new long[]{0x0000000620800000L});
-    public static final BitSet FOLLOW_23_in_ruleContainer1795 = new BitSet(new long[]{0x0000000620000000L});
-    public static final BitSet FOLLOW_ruleContainerType_in_ruleContainer1830 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_ruleContainer1843 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleContainer1860 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_25_in_ruleContainer1877 = new BitSet(new long[]{0x00001C0000000000L});
-    public static final BitSet FOLLOW_ruleSPExpression_in_ruleContainer1898 = new BitSet(new long[]{0x0000000040001002L});
-    public static final BitSet FOLLOW_ruleContainerStyleDefinition_in_ruleContainer1919 = new BitSet(new long[]{0x0000000000001002L});
-    public static final BitSet FOLLOW_12_in_ruleContainer1933 = new BitSet(new long[]{0x0000000620C00000L});
-    public static final BitSet FOLLOW_ruleDiagramElement_in_ruleContainer1954 = new BitSet(new long[]{0x0000000620C04000L});
-    public static final BitSet FOLLOW_14_in_ruleContainer1967 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleContainerStyleDefinition_in_entryRuleContainerStyleDefinition2005 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleContainerStyleDefinition2015 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_ruleContainerStyleDefinition2052 = new BitSet(new long[]{0x0000001800000000L});
-    public static final BitSet FOLLOW_ruleContainerColorDefinition_in_ruleContainerStyleDefinition2073 = new BitSet(new long[]{0x0000000180000000L});
-    public static final BitSet FOLLOW_31_in_ruleContainerStyleDefinition2086 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_ruleLabelStyleDefinition_in_ruleContainerStyleDefinition2107 = new BitSet(new long[]{0x0000000180000000L});
-    public static final BitSet FOLLOW_31_in_ruleContainerStyleDefinition2122 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_ruleBorderStyleDefinition_in_ruleContainerStyleDefinition2143 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleContainerStyleDefinition2157 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleContainerType_in_entryRuleContainerType2194 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleContainerType2205 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_ruleContainerType2243 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_ruleContainerType2262 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSolidColorDefinition_in_entryRuleSolidColorDefinition2302 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSolidColorDefinition2312 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_ruleSolidColorDefinition2349 = new BitSet(new long[]{0xFFFFC00000000000L,0x00000000000000FFL});
-    public static final BitSet FOLLOW_ruleColor_in_ruleSolidColorDefinition2370 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleContainerColorDefinition_in_entryRuleContainerColorDefinition2406 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleContainerColorDefinition2416 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSolidColorDefinition_in_ruleContainerColorDefinition2463 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGradientColorDefinition_in_ruleContainerColorDefinition2490 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGradientColorDefinition_in_entryRuleGradientColorDefinition2525 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleGradientColorDefinition2535 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_ruleGradientColorDefinition2572 = new BitSet(new long[]{0xFFFFC00000000000L,0x00000000000000FFL});
-    public static final BitSet FOLLOW_ruleColor_in_ruleGradientColorDefinition2593 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_ruleGradientColorDefinition2605 = new BitSet(new long[]{0xFFFFC00000000000L,0x00000000000000FFL});
-    public static final BitSet FOLLOW_ruleColor_in_ruleGradientColorDefinition2626 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLabelStyleDefinition_in_entryRuleLabelStyleDefinition2662 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLabelStyleDefinition2672 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_ruleLabelStyleDefinition2709 = new BitSet(new long[]{0x00001C0800000000L});
-    public static final BitSet FOLLOW_ruleSPExpression_in_ruleLabelStyleDefinition2730 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_ruleSolidColorDefinition_in_ruleLabelStyleDefinition2752 = new BitSet(new long[]{0x000001C000000002L});
-    public static final BitSet FOLLOW_38_in_ruleLabelStyleDefinition2765 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleLabelStyleDefinition2782 = new BitSet(new long[]{0x0000018000000002L});
-    public static final BitSet FOLLOW_39_in_ruleLabelStyleDefinition2807 = new BitSet(new long[]{0x0000010000000002L});
-    public static final BitSet FOLLOW_40_in_ruleLabelStyleDefinition2839 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBorderStyleDefinition_in_entryRuleBorderStyleDefinition2889 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBorderStyleDefinition2899 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_ruleBorderStyleDefinition2936 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_ruleSolidColorDefinition_in_ruleBorderStyleDefinition2957 = new BitSet(new long[]{0x0000004000000002L});
-    public static final BitSet FOLLOW_38_in_ruleBorderStyleDefinition2970 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleBorderStyleDefinition2987 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSPExpression_in_entryRuleSPExpression3030 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSPExpression3040 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAcceleoExpression_in_ruleSPExpression3087 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVarRef_in_ruleSPExpression3114 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFeatureRef_in_ruleSPExpression3141 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAcceleoExpression_in_entryRuleAcceleoExpression3176 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAcceleoExpression3186 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_ruleAcceleoExpression3223 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleAcceleoExpression3240 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVarRef_in_entryRuleVarRef3281 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleVarRef3291 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_ruleVarRef3328 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleVarRef3345 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFeatureRef_in_entryRuleFeatureRef3386 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFeatureRef3396 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_ruleFeatureRef3433 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleFeatureRef3450 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMetamodelRef_in_entryRuleMetamodelRef3491 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMetamodelRef3501 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_45_in_ruleMetamodelRef3538 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleMetamodelRef3555 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleColor_in_entryRuleColor3596 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleColor3606 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePreDefinedColorDefinition_in_ruleColor3652 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePreDefinedColorDefinition_in_entryRulePreDefinedColorDefinition3686 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePreDefinedColorDefinition3696 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePreDefinedColor_in_rulePreDefinedColorDefinition3741 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_46_in_rulePreDefinedColor3790 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_rulePreDefinedColor3807 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_48_in_rulePreDefinedColor3824 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_rulePreDefinedColor3841 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_50_in_rulePreDefinedColor3858 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_51_in_rulePreDefinedColor3875 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_rulePreDefinedColor3892 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_53_in_rulePreDefinedColor3909 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_54_in_rulePreDefinedColor3926 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_55_in_rulePreDefinedColor3943 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_56_in_rulePreDefinedColor3960 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_57_in_rulePreDefinedColor3977 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_58_in_rulePreDefinedColor3994 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_59_in_rulePreDefinedColor4011 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_60_in_rulePreDefinedColor4028 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_61_in_rulePreDefinedColor4045 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_62_in_rulePreDefinedColor4062 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_63_in_rulePreDefinedColor4079 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_64_in_rulePreDefinedColor4096 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_65_in_rulePreDefinedColor4113 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_66_in_rulePreDefinedColor4130 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_67_in_rulePreDefinedColor4147 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_68_in_rulePreDefinedColor4164 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_69_in_rulePreDefinedColor4181 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_70_in_rulePreDefinedColor4198 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_71_in_rulePreDefinedColor4215 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleContainer_in_ruleDiagramElement1677 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNode_in_ruleDiagramElement1704 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleContainer_in_entryRuleContainer1739 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleContainer1749 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_ruleContainer1792 = new BitSet(new long[]{0x0000000C20800000L});
+    public static final BitSet FOLLOW_23_in_ruleContainer1824 = new BitSet(new long[]{0x0000000C20000000L});
+    public static final BitSet FOLLOW_ruleContainerType_in_ruleContainer1859 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_ruleContainer1872 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleContainer1889 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_ruleContainer1906 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleContainer1923 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_ruleContainer1940 = new BitSet(new long[]{0x0000700000000000L});
+    public static final BitSet FOLLOW_ruleSPExpression_in_ruleContainer1961 = new BitSet(new long[]{0x0000000080001002L});
+    public static final BitSet FOLLOW_ruleContainerStyleDefinition_in_ruleContainer1982 = new BitSet(new long[]{0x0000000000001002L});
+    public static final BitSet FOLLOW_12_in_ruleContainer1996 = new BitSet(new long[]{0x0000001C20C00000L});
+    public static final BitSet FOLLOW_ruleDiagramElement_in_ruleContainer2017 = new BitSet(new long[]{0x0000001C20C04000L});
+    public static final BitSet FOLLOW_14_in_ruleContainer2030 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleContainerStyleDefinition_in_entryRuleContainerStyleDefinition2068 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleContainerStyleDefinition2078 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_ruleContainerStyleDefinition2115 = new BitSet(new long[]{0x0000006000000000L});
+    public static final BitSet FOLLOW_ruleContainerColorDefinition_in_ruleContainerStyleDefinition2136 = new BitSet(new long[]{0x0000000300000000L});
+    public static final BitSet FOLLOW_32_in_ruleContainerStyleDefinition2149 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_ruleLabelStyleDefinition_in_ruleContainerStyleDefinition2170 = new BitSet(new long[]{0x0000000300000000L});
+    public static final BitSet FOLLOW_32_in_ruleContainerStyleDefinition2185 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_ruleBorderStyleDefinition_in_ruleContainerStyleDefinition2206 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_33_in_ruleContainerStyleDefinition2220 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleContainerType_in_entryRuleContainerType2257 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleContainerType2268 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_ruleContainerType2306 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_ruleContainerType2325 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleContainerColorDefinition_in_entryRuleContainerColorDefinition2365 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleContainerColorDefinition2375 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSolidColorDefinition_in_ruleContainerColorDefinition2422 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGradientColorDefinition_in_ruleContainerColorDefinition2449 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNode_in_entryRuleNode2484 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNode2494 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_ruleNode2537 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_ruleNode2563 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleNode2580 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_ruleNode2597 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleNode2614 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_25_in_ruleNode2631 = new BitSet(new long[]{0x0000700000000000L});
+    public static final BitSet FOLLOW_ruleSPExpression_in_ruleNode2652 = new BitSet(new long[]{0x0000000080000002L});
+    public static final BitSet FOLLOW_ruleNodeStyleDefinition_in_ruleNode2673 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNodeStyleDefinition_in_entryRuleNodeStyleDefinition2710 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNodeStyleDefinition2720 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_ruleNodeStyleDefinition2757 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_ruleSolidColorDefinition_in_ruleNodeStyleDefinition2778 = new BitSet(new long[]{0x0000000300000000L});
+    public static final BitSet FOLLOW_32_in_ruleNodeStyleDefinition2791 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_ruleLabelStyleDefinition_in_ruleNodeStyleDefinition2812 = new BitSet(new long[]{0x0000000300000000L});
+    public static final BitSet FOLLOW_32_in_ruleNodeStyleDefinition2827 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_ruleBorderStyleDefinition_in_ruleNodeStyleDefinition2848 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_33_in_ruleNodeStyleDefinition2862 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSolidColorDefinition_in_entryRuleSolidColorDefinition2898 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSolidColorDefinition2908 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_ruleSolidColorDefinition2945 = new BitSet(new long[]{0xFFFF000000000000L,0x00000000000003FFL});
+    public static final BitSet FOLLOW_ruleColor_in_ruleSolidColorDefinition2966 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGradientColorDefinition_in_entryRuleGradientColorDefinition3002 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleGradientColorDefinition3012 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_ruleGradientColorDefinition3049 = new BitSet(new long[]{0xFFFF000000000000L,0x00000000000003FFL});
+    public static final BitSet FOLLOW_ruleColor_in_ruleGradientColorDefinition3070 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_ruleGradientColorDefinition3082 = new BitSet(new long[]{0xFFFF000000000000L,0x00000000000003FFL});
+    public static final BitSet FOLLOW_ruleColor_in_ruleGradientColorDefinition3103 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLabelStyleDefinition_in_entryRuleLabelStyleDefinition3139 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLabelStyleDefinition3149 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_ruleLabelStyleDefinition3186 = new BitSet(new long[]{0x0000702000000000L});
+    public static final BitSet FOLLOW_ruleSPExpression_in_ruleLabelStyleDefinition3207 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_ruleSolidColorDefinition_in_ruleLabelStyleDefinition3229 = new BitSet(new long[]{0x0000070000000002L});
+    public static final BitSet FOLLOW_40_in_ruleLabelStyleDefinition3242 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleLabelStyleDefinition3259 = new BitSet(new long[]{0x0000060000000002L});
+    public static final BitSet FOLLOW_41_in_ruleLabelStyleDefinition3284 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_42_in_ruleLabelStyleDefinition3316 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBorderStyleDefinition_in_entryRuleBorderStyleDefinition3366 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBorderStyleDefinition3376 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_ruleBorderStyleDefinition3413 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_ruleSolidColorDefinition_in_ruleBorderStyleDefinition3434 = new BitSet(new long[]{0x0000010000000002L});
+    public static final BitSet FOLLOW_40_in_ruleBorderStyleDefinition3447 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleBorderStyleDefinition3464 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSPExpression_in_entryRuleSPExpression3507 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSPExpression3517 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAcceleoExpression_in_ruleSPExpression3564 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVarRef_in_ruleSPExpression3591 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFeatureRef_in_ruleSPExpression3618 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAcceleoExpression_in_entryRuleAcceleoExpression3653 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAcceleoExpression3663 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_44_in_ruleAcceleoExpression3700 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleAcceleoExpression3717 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVarRef_in_entryRuleVarRef3758 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleVarRef3768 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_45_in_ruleVarRef3805 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleVarRef3822 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFeatureRef_in_entryRuleFeatureRef3863 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFeatureRef3873 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_46_in_ruleFeatureRef3910 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleFeatureRef3927 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMetamodelRef_in_entryRuleMetamodelRef3968 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMetamodelRef3978 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_ruleMetamodelRef4015 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleMetamodelRef4032 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleColor_in_entryRuleColor4073 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleColor4083 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePreDefinedColorDefinition_in_ruleColor4129 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePreDefinedColorDefinition_in_entryRulePreDefinedColorDefinition4163 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePreDefinedColorDefinition4173 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePreDefinedColor_in_rulePreDefinedColorDefinition4218 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_rulePreDefinedColor4267 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_49_in_rulePreDefinedColor4284 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_50_in_rulePreDefinedColor4301 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_51_in_rulePreDefinedColor4318 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_rulePreDefinedColor4335 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_53_in_rulePreDefinedColor4352 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_54_in_rulePreDefinedColor4369 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_55_in_rulePreDefinedColor4386 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_56_in_rulePreDefinedColor4403 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_57_in_rulePreDefinedColor4420 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_58_in_rulePreDefinedColor4437 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_59_in_rulePreDefinedColor4454 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_60_in_rulePreDefinedColor4471 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_61_in_rulePreDefinedColor4488 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_62_in_rulePreDefinedColor4505 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_63_in_rulePreDefinedColor4522 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_64_in_rulePreDefinedColor4539 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_65_in_rulePreDefinedColor4556 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_66_in_rulePreDefinedColor4573 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_67_in_rulePreDefinedColor4590 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_68_in_rulePreDefinedColor4607 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_69_in_rulePreDefinedColor4624 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_70_in_rulePreDefinedColor4641 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_71_in_rulePreDefinedColor4658 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_72_in_rulePreDefinedColor4675 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_73_in_rulePreDefinedColor4692 = new BitSet(new long[]{0x0000000000000002L});
 
 }
