@@ -3,6 +3,7 @@
 package fr.obeo.dsl.sPrototyper.impl;
 
 import fr.obeo.dsl.sPrototyper.DiagramElement;
+import fr.obeo.dsl.sPrototyper.MetamodelRef;
 import fr.obeo.dsl.sPrototyper.SPDiagram;
 import fr.obeo.dsl.sPrototyper.SPrototyperPackage;
 
@@ -25,6 +26,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link fr.obeo.dsl.sPrototyper.impl.SPDiagramImpl#getMetamodels <em>Metamodels</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.impl.SPDiagramImpl#getElements <em>Elements</em>}</li>
  * </ul>
  * </p>
@@ -33,6 +35,16 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class SPDiagramImpl extends SPRepresentationImpl implements SPDiagram
 {
+  /**
+   * The cached value of the '{@link #getMetamodels() <em>Metamodels</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMetamodels()
+   * @generated
+   * @ordered
+   */
+  protected EList<MetamodelRef> metamodels;
+
   /**
    * The cached value of the '{@link #getElements() <em>Elements</em>}' containment reference list.
    * <!-- begin-user-doc -->
@@ -69,6 +81,20 @@ public class SPDiagramImpl extends SPRepresentationImpl implements SPDiagram
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<MetamodelRef> getMetamodels()
+  {
+    if (metamodels == null)
+    {
+      metamodels = new EObjectContainmentEList<MetamodelRef>(MetamodelRef.class, this, SPrototyperPackage.SP_DIAGRAM__METAMODELS);
+    }
+    return metamodels;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<DiagramElement> getElements()
   {
     if (elements == null)
@@ -88,6 +114,8 @@ public class SPDiagramImpl extends SPRepresentationImpl implements SPDiagram
   {
     switch (featureID)
     {
+      case SPrototyperPackage.SP_DIAGRAM__METAMODELS:
+        return ((InternalEList<?>)getMetamodels()).basicRemove(otherEnd, msgs);
       case SPrototyperPackage.SP_DIAGRAM__ELEMENTS:
         return ((InternalEList<?>)getElements()).basicRemove(otherEnd, msgs);
     }
@@ -104,6 +132,8 @@ public class SPDiagramImpl extends SPRepresentationImpl implements SPDiagram
   {
     switch (featureID)
     {
+      case SPrototyperPackage.SP_DIAGRAM__METAMODELS:
+        return getMetamodels();
       case SPrototyperPackage.SP_DIAGRAM__ELEMENTS:
         return getElements();
     }
@@ -121,6 +151,10 @@ public class SPDiagramImpl extends SPRepresentationImpl implements SPDiagram
   {
     switch (featureID)
     {
+      case SPrototyperPackage.SP_DIAGRAM__METAMODELS:
+        getMetamodels().clear();
+        getMetamodels().addAll((Collection<? extends MetamodelRef>)newValue);
+        return;
       case SPrototyperPackage.SP_DIAGRAM__ELEMENTS:
         getElements().clear();
         getElements().addAll((Collection<? extends DiagramElement>)newValue);
@@ -139,6 +173,9 @@ public class SPDiagramImpl extends SPRepresentationImpl implements SPDiagram
   {
     switch (featureID)
     {
+      case SPrototyperPackage.SP_DIAGRAM__METAMODELS:
+        getMetamodels().clear();
+        return;
       case SPrototyperPackage.SP_DIAGRAM__ELEMENTS:
         getElements().clear();
         return;
@@ -156,6 +193,8 @@ public class SPDiagramImpl extends SPRepresentationImpl implements SPDiagram
   {
     switch (featureID)
     {
+      case SPrototyperPackage.SP_DIAGRAM__METAMODELS:
+        return metamodels != null && !metamodels.isEmpty();
       case SPrototyperPackage.SP_DIAGRAM__ELEMENTS:
         return elements != null && !elements.isEmpty();
     }

@@ -395,17 +395,17 @@ ruleSPTable returns [EObject current=null]
 ))?(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getSPTableAccess().getMetamodelsMetamodelRefParserRuleCall_5_0()); 
+	        newCompositeNode(grammarAccess.getSPTableAccess().getUsagesMetamodelUsageParserRuleCall_5_0()); 
 	    }
-		lv_metamodels_7_0=ruleMetamodelRef		{
+		lv_usages_7_0=ruleMetamodelUsage		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getSPTableRule());
 	        }
        		add(
        			$current, 
-       			"metamodels",
-        		lv_metamodels_7_0, 
-        		"MetamodelRef");
+       			"usages",
+        		lv_usages_7_0, 
+        		"MetamodelUsage");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2006,6 +2006,44 @@ rulePreDefinedColorDefinition returns [EObject current=null]
 
 )
 )
+;
+
+
+
+
+
+// Entry rule entryRuleMetamodelUsage
+entryRuleMetamodelUsage returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getMetamodelUsageRule()); }
+	 iv_ruleMetamodelUsage=ruleMetamodelUsage 
+	 { $current=$iv_ruleMetamodelUsage.current; } 
+	 EOF 
+;
+
+// Rule MetamodelUsage
+ruleMetamodelUsage returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='use' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getMetamodelUsageAccess().getUseKeyword_0());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getMetamodelUsageRule());
+	        }
+        }
+	otherlv_1=RULE_ID
+	{
+		newLeafNode(otherlv_1, grammarAccess.getMetamodelUsageAccess().getUsageEPackageCrossReference_1_0()); 
+	}
+
+)
+))
 ;
 
 

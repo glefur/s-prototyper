@@ -50,10 +50,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//SPRepresentation/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//SPRepresentation/label"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//SPRepresentation/title"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//SPRepresentation/metamodels"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//SPRepresentation/root"/>
     </genClasses>
     <genClasses ecoreClass="SPrototyper.ecore#//SPTable">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//SPTable/usages"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//SPTable/elements"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//SPTable/properties"/>
     </genClasses>
@@ -70,6 +70,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//TableProperty/expression"/>
     </genClasses>
     <genClasses ecoreClass="SPrototyper.ecore#//SPDiagram">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//SPDiagram/metamodels"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//SPDiagram/elements"/>
     </genClasses>
     <genClasses ecoreClass="SPrototyper.ecore#//DiagramElement">
@@ -128,6 +129,9 @@
     <genClasses ecoreClass="SPrototyper.ecore#//Color"/>
     <genClasses ecoreClass="SPrototyper.ecore#//PreDefinedColorDefinition">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//PreDefinedColorDefinition/color"/>
+    </genClasses>
+    <genClasses ecoreClass="SPrototyper.ecore#//MetamodelUsage">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//MetamodelUsage/usage"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

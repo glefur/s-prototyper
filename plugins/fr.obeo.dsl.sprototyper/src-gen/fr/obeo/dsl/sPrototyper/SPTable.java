@@ -12,6 +12,7 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link fr.obeo.dsl.sPrototyper.SPTable#getUsages <em>Usages</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.SPTable#getElements <em>Elements</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.SPTable#getProperties <em>Properties</em>}</li>
  * </ul>
@@ -23,6 +24,22 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface SPTable extends SPRepresentation
 {
+  /**
+   * Returns the value of the '<em><b>Usages</b></em>' containment reference list.
+   * The list contents are of type {@link fr.obeo.dsl.sPrototyper.MetamodelUsage}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Usages</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Usages</em>' containment reference list.
+   * @see fr.obeo.dsl.sPrototyper.SPrototyperPackage#getSPTable_Usages()
+   * @model containment="true"
+   * @generated
+   */
+  EList<MetamodelUsage> getUsages();
+
   /**
    * Returns the value of the '<em><b>Elements</b></em>' containment reference list.
    * The list contents are of type {@link fr.obeo.dsl.sPrototyper.TableElement}.

@@ -239,6 +239,15 @@ public interface SPrototyperFactory extends EFactory
   PreDefinedColorDefinition createPreDefinedColorDefinition();
 
   /**
+   * Returns a new object of class '<em>Metamodel Usage</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Metamodel Usage</em>'.
+   * @generated
+   */
+  MetamodelUsage createMetamodelUsage();
+
+  /**
    * Returns the package supported by this factory.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

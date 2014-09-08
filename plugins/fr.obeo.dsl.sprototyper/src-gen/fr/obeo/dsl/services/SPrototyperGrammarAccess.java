@@ -183,8 +183,8 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cTitleKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
 		private final Assignment cTitleAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
 		private final RuleCall cTitleSTRINGTerminalRuleCall_4_1_0 = (RuleCall)cTitleAssignment_4_1.eContents().get(0);
-		private final Assignment cMetamodelsAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cMetamodelsMetamodelRefParserRuleCall_5_0 = (RuleCall)cMetamodelsAssignment_5.eContents().get(0);
+		private final Assignment cUsagesAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cUsagesMetamodelUsageParserRuleCall_5_0 = (RuleCall)cUsagesAssignment_5.eContents().get(0);
 		private final Keyword cRootKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		private final Assignment cRootAssignment_7 = (Assignment)cGroup.eContents().get(7);
 		private final RuleCall cRootSTRINGTerminalRuleCall_7_0 = (RuleCall)cRootAssignment_7.eContents().get(0);
@@ -195,11 +195,11 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
 		//SPTable:
-		//	"table" name=ID "{" ("label" label=STRING)? ("title" title=STRING)? metamodels+=MetamodelRef+ "root" root=STRING
+		//	"table" name=ID "{" ("label" label=STRING)? ("title" title=STRING)? usages+=MetamodelUsage+ "root" root=STRING
 		//	elements+=TableElement+ properties+=TableProperty+ "}";
 		public ParserRule getRule() { return rule; }
 
-		//"table" name=ID "{" ("label" label=STRING)? ("title" title=STRING)? metamodels+=MetamodelRef+ "root" root=STRING
+		//"table" name=ID "{" ("label" label=STRING)? ("title" title=STRING)? usages+=MetamodelUsage+ "root" root=STRING
 		//elements+=TableElement+ properties+=TableProperty+ "}"
 		public Group getGroup() { return cGroup; }
 
@@ -239,11 +239,11 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getTitleSTRINGTerminalRuleCall_4_1_0() { return cTitleSTRINGTerminalRuleCall_4_1_0; }
 
-		//metamodels+=MetamodelRef+
-		public Assignment getMetamodelsAssignment_5() { return cMetamodelsAssignment_5; }
+		//usages+=MetamodelUsage+
+		public Assignment getUsagesAssignment_5() { return cUsagesAssignment_5; }
 
-		//MetamodelRef
-		public RuleCall getMetamodelsMetamodelRefParserRuleCall_5_0() { return cMetamodelsMetamodelRefParserRuleCall_5_0; }
+		//MetamodelUsage
+		public RuleCall getUsagesMetamodelUsageParserRuleCall_5_0() { return cUsagesMetamodelUsageParserRuleCall_5_0; }
 
 		//"root"
 		public Keyword getRootKeyword_6() { return cRootKeyword_6; }
@@ -1153,6 +1153,34 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 		//PreDefinedColor
 		public RuleCall getColorPreDefinedColorEnumRuleCall_0() { return cColorPreDefinedColorEnumRuleCall_0; }
 	}
+
+	public class MetamodelUsageElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MetamodelUsage");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cUseKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cUsageAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final CrossReference cUsageEPackageCrossReference_1_0 = (CrossReference)cUsageAssignment_1.eContents().get(0);
+		private final RuleCall cUsageEPackageIDTerminalRuleCall_1_0_1 = (RuleCall)cUsageEPackageCrossReference_1_0.eContents().get(1);
+		
+		//MetamodelUsage:
+		//	"use" usage=[ecore::EPackage];
+		public ParserRule getRule() { return rule; }
+
+		//"use" usage=[ecore::EPackage]
+		public Group getGroup() { return cGroup; }
+
+		//"use"
+		public Keyword getUseKeyword_0() { return cUseKeyword_0; }
+
+		//usage=[ecore::EPackage]
+		public Assignment getUsageAssignment_1() { return cUsageAssignment_1; }
+
+		//[ecore::EPackage]
+		public CrossReference getUsageEPackageCrossReference_1_0() { return cUsageEPackageCrossReference_1_0; }
+
+		//ID
+		public RuleCall getUsageEPackageIDTerminalRuleCall_1_0_1() { return cUsageEPackageIDTerminalRuleCall_1_0_1; }
+	}
 	
 	
 	public class PreDefinedColorElements extends AbstractEnumRuleElementFinder {
@@ -1411,6 +1439,7 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 	private ColorElements pColor;
 	private PreDefinedColorDefinitionElements pPreDefinedColorDefinition;
 	private PreDefinedColorElements unknownRulePreDefinedColor;
+	private MetamodelUsageElements pMetamodelUsage;
 	
 	private final Grammar grammar;
 
@@ -1482,7 +1511,7 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//SPTable:
-	//	"table" name=ID "{" ("label" label=STRING)? ("title" title=STRING)? metamodels+=MetamodelRef+ "root" root=STRING
+	//	"table" name=ID "{" ("label" label=STRING)? ("title" title=STRING)? usages+=MetamodelUsage+ "root" root=STRING
 	//	elements+=TableElement+ properties+=TableProperty+ "}";
 	public SPTableElements getSPTableAccess() {
 		return (pSPTable != null) ? pSPTable : (pSPTable = new SPTableElements());
@@ -1719,6 +1748,16 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public EnumRule getPreDefinedColorRule() {
 		return getPreDefinedColorAccess().getRule();
+	}
+
+	//MetamodelUsage:
+	//	"use" usage=[ecore::EPackage];
+	public MetamodelUsageElements getMetamodelUsageAccess() {
+		return (pMetamodelUsage != null) ? pMetamodelUsage : (pMetamodelUsage = new MetamodelUsageElements());
+	}
+	
+	public ParserRule getMetamodelUsageRule() {
+		return getMetamodelUsageAccess().getRule();
 	}
 
 	//terminal ID:

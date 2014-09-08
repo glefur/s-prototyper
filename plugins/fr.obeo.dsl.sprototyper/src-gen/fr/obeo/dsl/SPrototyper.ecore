@@ -18,11 +18,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="metamodels" upperBound="-1"
-        eType="#//MetamodelRef" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="root" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SPTable" eSuperTypes="#//SPRepresentation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="usages" upperBound="-1"
+        eType="#//MetamodelUsage" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
         eType="#//TableElement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
@@ -44,6 +44,8 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SPDiagram" eSuperTypes="#//SPRepresentation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="metamodels" upperBound="-1"
+        eType="#//MetamodelRef" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
         eType="#//DiagramElement" containment="true"/>
   </eClassifiers>
@@ -146,5 +148,8 @@
     <eLiterals name="YELLOW" value="23" literal="yellow"/>
     <eLiterals name="LIGHT_YELLOW" value="24" literal="light yellow"/>
     <eLiterals name="DARK_YELLOW" value="25" literal="dark yellow"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MetamodelUsage">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="usage" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EPackage"/>
   </eClassifiers>
 </ecore:EPackage>

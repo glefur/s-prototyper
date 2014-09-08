@@ -4,6 +4,9 @@
     <metamodelDeclarations xsi:type="xtext:GeneratedMetamodel" name="sPrototyper">
       <ePackage href="http://www.obeo.fr/dsl/SPrototyper#/"/>
     </metamodelDeclarations>
+    <metamodelDeclarations xsi:type="xtext:ReferencedMetamodel" alias="ecore">
+      <ePackage href="http://www.eclipse.org/emf/2002/Ecore#/"/>
+    </metamodelDeclarations>
     <rules xsi:type="xtext:ParserRule" name="SPrototyper">
       <type metamodel="/0/@metamodelDeclarations.0">
         <classifier xsi:type="ecore:EClass" href="http://www.obeo.fr/dsl/SPrototyper#//SPrototyper"/>
@@ -85,8 +88,8 @@
             <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
           </elements>
         </elements>
-        <elements xsi:type="xtext:Assignment" cardinality="+" feature="metamodels" operator="+=">
-          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.22"/>
+        <elements xsi:type="xtext:Assignment" cardinality="+" feature="usages" operator="+=">
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.26"/>
         </elements>
         <elements xsi:type="xtext:Keyword" value="root"/>
         <elements xsi:type="xtext:Assignment" feature="root" operator="=">
@@ -259,7 +262,7 @@
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="ContainerType">
-      <type metamodel="/1/@metamodelDeclarations.0">
+      <type metamodel="/0/@metamodelDeclarations.1">
         <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </type>
       <alternatives xsi:type="xtext:Alternatives">
@@ -570,6 +573,22 @@
         <elements xsi:type="xtext:EnumLiteralDeclaration">
           <enumLiteral href="http://www.obeo.fr/dsl/SPrototyper#//PreDefinedColor/DARK_YELLOW"/>
           <literal value="dark yellow"/>
+        </elements>
+      </alternatives>
+    </rules>
+    <rules xsi:type="xtext:ParserRule" name="MetamodelUsage">
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EClass" href="http://www.obeo.fr/dsl/SPrototyper#//MetamodelUsage"/>
+      </type>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Keyword" value="use"/>
+        <elements xsi:type="xtext:Assignment" feature="usage" operator="=">
+          <terminal xsi:type="xtext:CrossReference">
+            <type metamodel="/0/@metamodelDeclarations.1">
+              <classifier xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EPackage"/>
+            </type>
+            <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+          </terminal>
         </elements>
       </alternatives>
     </rules>

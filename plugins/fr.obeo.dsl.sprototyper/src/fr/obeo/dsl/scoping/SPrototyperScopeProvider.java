@@ -3,7 +3,16 @@
  */
 package fr.obeo.dsl.scoping;
 
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EcoreFactory;
+import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
+import org.eclipse.xtext.scoping.impl.SimpleScope;
+
+import com.google.common.collect.Iterables;
+import com.google.common.collect.Lists;
+
+import fr.obeo.dsl.sPrototyper.SPTable;
 
 /**
  * This class contains custom scoping description.
@@ -13,5 +22,10 @@ import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
  *
  */
 public class SPrototyperScopeProvider extends AbstractDeclarativeScopeProvider {
+
+	IScope scope_EPackage(SPTable context, EReference ref) {
+		IScope result = new SimpleScope();
+		return null;
+	}
 
 }

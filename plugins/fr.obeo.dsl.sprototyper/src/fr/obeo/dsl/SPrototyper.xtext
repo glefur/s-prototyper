@@ -2,6 +2,8 @@ grammar fr.obeo.dsl.SPrototyper with org.eclipse.xtext.common.Terminals
 
 generate sPrototyper "http://www.obeo.fr/dsl/SPrototyper"
 
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
 SPrototyper:
 	'proto' name=ID '{'
 		('qualifier' qualifier=STRING)?
@@ -25,7 +27,7 @@ SPTable:
 	'table' name=ID '{'
 		('label' label=STRING)? 
 		('title' title=STRING)? 
-		metamodels+=MetamodelRef+
+		usages+=MetamodelUsage+
 		'root' root=STRING
 		elements+=TableElement+
 		properties+=TableProperty+
@@ -145,4 +147,8 @@ enum PreDefinedColor:
 	| PURPLE='purple' | LIGHT_PURPLE='light purple' | DARK_PURPLE='dark purple'
 	| RED='red' | LIGHT_RED='light red' | DARK_RED='dark red'
 	| YELLOW='yellow' | LIGHT_YELLOW='light yellow' | DARK_YELLOW='dark yellow'
+;
+
+MetamodelUsage:
+	'use' usage=[ecore::EPackage]
 ;

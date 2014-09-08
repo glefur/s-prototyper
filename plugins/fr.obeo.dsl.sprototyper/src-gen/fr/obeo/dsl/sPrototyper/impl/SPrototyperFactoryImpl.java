@@ -89,6 +89,7 @@ public class SPrototyperFactoryImpl extends EFactoryImpl implements SPrototyperF
       case SPrototyperPackage.METAMODEL_REF: return createMetamodelRef();
       case SPrototyperPackage.COLOR: return createColor();
       case SPrototyperPackage.PRE_DEFINED_COLOR_DEFINITION: return createPreDefinedColorDefinition();
+      case SPrototyperPackage.METAMODEL_USAGE: return createMetamodelUsage();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -390,6 +391,17 @@ public class SPrototyperFactoryImpl extends EFactoryImpl implements SPrototyperF
   {
     PreDefinedColorDefinitionImpl preDefinedColorDefinition = new PreDefinedColorDefinitionImpl();
     return preDefinedColorDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MetamodelUsage createMetamodelUsage()
+  {
+    MetamodelUsageImpl metamodelUsage = new MetamodelUsageImpl();
+    return metamodelUsage;
   }
 
   /**

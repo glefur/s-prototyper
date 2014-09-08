@@ -10,6 +10,7 @@ import fr.obeo.dsl.sPrototyper.FeatureRef;
 import fr.obeo.dsl.sPrototyper.GradientColorDefinition;
 import fr.obeo.dsl.sPrototyper.LabelStyleDefinition;
 import fr.obeo.dsl.sPrototyper.MetamodelRef;
+import fr.obeo.dsl.sPrototyper.MetamodelUsage;
 import fr.obeo.dsl.sPrototyper.Node;
 import fr.obeo.dsl.sPrototyper.NodeStyleDefinition;
 import fr.obeo.dsl.sPrototyper.PreDefinedColorDefinition;
@@ -92,6 +93,12 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 			case SPrototyperPackage.METAMODEL_REF:
 				if(context == grammarAccess.getMetamodelRefRule()) {
 					sequence_MetamodelRef(context, (MetamodelRef) semanticObject); 
+					return; 
+				}
+				else break;
+			case SPrototyperPackage.METAMODEL_USAGE:
+				if(context == grammarAccess.getMetamodelUsageRule()) {
+					sequence_MetamodelUsage(context, (MetamodelUsage) semanticObject); 
 					return; 
 				}
 				else break;
@@ -285,6 +292,22 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 	
 	/**
 	 * Constraint:
+	 *     usage=[EPackage|ID]
+	 */
+	protected void sequence_MetamodelUsage(EObject context, MetamodelUsage semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, SPrototyperPackage.Literals.METAMODEL_USAGE__USAGE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SPrototyperPackage.Literals.METAMODEL_USAGE__USAGE));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getMetamodelUsageAccess().getUsageEPackageIDTerminalRuleCall_1_0_1(), semanticObject.getUsage());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (color=SolidColorDefinition label=LabelStyleDefinition? border=BorderStyleDefinition?)
 	 */
 	protected void sequence_NodeStyleDefinition(EObject context, NodeStyleDefinition semanticObject) {
@@ -339,7 +362,7 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *         name=ID 
 	 *         label=STRING? 
 	 *         title=STRING? 
-	 *         metamodels+=MetamodelRef+ 
+	 *         usages+=MetamodelUsage+ 
 	 *         root=STRING 
 	 *         elements+=TableElement+ 
 	 *         properties+=TableProperty+

@@ -78,6 +78,7 @@ public class SPrototyperParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVarRefAccess().getGroup(), "rule__VarRef__Group__0");
 					put(grammarAccess.getFeatureRefAccess().getGroup(), "rule__FeatureRef__Group__0");
 					put(grammarAccess.getMetamodelRefAccess().getGroup(), "rule__MetamodelRef__Group__0");
+					put(grammarAccess.getMetamodelUsageAccess().getGroup(), "rule__MetamodelUsage__Group__0");
 					put(grammarAccess.getSPrototyperAccess().getNameAssignment_1(), "rule__SPrototyper__NameAssignment_1");
 					put(grammarAccess.getSPrototyperAccess().getQualifierAssignment_3_1(), "rule__SPrototyper__QualifierAssignment_3_1");
 					put(grammarAccess.getSPrototyperAccess().getViewpointsAssignment_4(), "rule__SPrototyper__ViewpointsAssignment_4");
@@ -88,7 +89,7 @@ public class SPrototyperParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSPTableAccess().getNameAssignment_1(), "rule__SPTable__NameAssignment_1");
 					put(grammarAccess.getSPTableAccess().getLabelAssignment_3_1(), "rule__SPTable__LabelAssignment_3_1");
 					put(grammarAccess.getSPTableAccess().getTitleAssignment_4_1(), "rule__SPTable__TitleAssignment_4_1");
-					put(grammarAccess.getSPTableAccess().getMetamodelsAssignment_5(), "rule__SPTable__MetamodelsAssignment_5");
+					put(grammarAccess.getSPTableAccess().getUsagesAssignment_5(), "rule__SPTable__UsagesAssignment_5");
 					put(grammarAccess.getSPTableAccess().getRootAssignment_7(), "rule__SPTable__RootAssignment_7");
 					put(grammarAccess.getSPTableAccess().getElementsAssignment_8(), "rule__SPTable__ElementsAssignment_8");
 					put(grammarAccess.getSPTableAccess().getPropertiesAssignment_9(), "rule__SPTable__PropertiesAssignment_9");
@@ -140,6 +141,7 @@ public class SPrototyperParser extends AbstractContentAssistParser {
 					put(grammarAccess.getFeatureRefAccess().getValueAssignment_1(), "rule__FeatureRef__ValueAssignment_1");
 					put(grammarAccess.getMetamodelRefAccess().getMetamodelAssignment_1(), "rule__MetamodelRef__MetamodelAssignment_1");
 					put(grammarAccess.getPreDefinedColorDefinitionAccess().getColorAssignment(), "rule__PreDefinedColorDefinition__ColorAssignment");
+					put(grammarAccess.getMetamodelUsageAccess().getUsageAssignment_1(), "rule__MetamodelUsage__UsageAssignment_1");
 				}
 			};
 		}

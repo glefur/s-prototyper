@@ -2,25 +2,15 @@
  */
 package fr.obeo.dsl.sPrototyper.impl;
 
-import fr.obeo.dsl.sPrototyper.MetamodelRef;
 import fr.obeo.dsl.sPrototyper.SPRepresentation;
 import fr.obeo.dsl.sPrototyper.SPrototyperPackage;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,7 +22,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link fr.obeo.dsl.sPrototyper.impl.SPRepresentationImpl#getName <em>Name</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.impl.SPRepresentationImpl#getLabel <em>Label</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.impl.SPRepresentationImpl#getTitle <em>Title</em>}</li>
- *   <li>{@link fr.obeo.dsl.sPrototyper.impl.SPRepresentationImpl#getMetamodels <em>Metamodels</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.impl.SPRepresentationImpl#getRoot <em>Root</em>}</li>
  * </ul>
  * </p>
@@ -100,16 +89,6 @@ public class SPRepresentationImpl extends MinimalEObjectImpl.Container implement
    * @ordered
    */
   protected String title = TITLE_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getMetamodels() <em>Metamodels</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getMetamodels()
-   * @generated
-   * @ordered
-   */
-  protected EList<MetamodelRef> metamodels;
 
   /**
    * The default value of the '{@link #getRoot() <em>Root</em>}' attribute.
@@ -226,20 +205,6 @@ public class SPRepresentationImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<MetamodelRef> getMetamodels()
-  {
-    if (metamodels == null)
-    {
-      metamodels = new EObjectContainmentEList<MetamodelRef>(MetamodelRef.class, this, SPrototyperPackage.SP_REPRESENTATION__METAMODELS);
-    }
-    return metamodels;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public String getRoot()
   {
     return root;
@@ -264,22 +229,6 @@ public class SPRepresentationImpl extends MinimalEObjectImpl.Container implement
    * @generated
    */
   @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case SPrototyperPackage.SP_REPRESENTATION__METAMODELS:
-        return ((InternalEList<?>)getMetamodels()).basicRemove(otherEnd, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
     switch (featureID)
@@ -290,8 +239,6 @@ public class SPRepresentationImpl extends MinimalEObjectImpl.Container implement
         return getLabel();
       case SPrototyperPackage.SP_REPRESENTATION__TITLE:
         return getTitle();
-      case SPrototyperPackage.SP_REPRESENTATION__METAMODELS:
-        return getMetamodels();
       case SPrototyperPackage.SP_REPRESENTATION__ROOT:
         return getRoot();
     }
@@ -303,7 +250,6 @@ public class SPRepresentationImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -317,10 +263,6 @@ public class SPRepresentationImpl extends MinimalEObjectImpl.Container implement
         return;
       case SPrototyperPackage.SP_REPRESENTATION__TITLE:
         setTitle((String)newValue);
-        return;
-      case SPrototyperPackage.SP_REPRESENTATION__METAMODELS:
-        getMetamodels().clear();
-        getMetamodels().addAll((Collection<? extends MetamodelRef>)newValue);
         return;
       case SPrototyperPackage.SP_REPRESENTATION__ROOT:
         setRoot((String)newValue);
@@ -348,9 +290,6 @@ public class SPRepresentationImpl extends MinimalEObjectImpl.Container implement
       case SPrototyperPackage.SP_REPRESENTATION__TITLE:
         setTitle(TITLE_EDEFAULT);
         return;
-      case SPrototyperPackage.SP_REPRESENTATION__METAMODELS:
-        getMetamodels().clear();
-        return;
       case SPrototyperPackage.SP_REPRESENTATION__ROOT:
         setRoot(ROOT_EDEFAULT);
         return;
@@ -374,8 +313,6 @@ public class SPRepresentationImpl extends MinimalEObjectImpl.Container implement
         return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
       case SPrototyperPackage.SP_REPRESENTATION__TITLE:
         return TITLE_EDEFAULT == null ? title != null : !TITLE_EDEFAULT.equals(title);
-      case SPrototyperPackage.SP_REPRESENTATION__METAMODELS:
-        return metamodels != null && !metamodels.isEmpty();
       case SPrototyperPackage.SP_REPRESENTATION__ROOT:
         return ROOT_EDEFAULT == null ? root != null : !ROOT_EDEFAULT.equals(root);
     }
