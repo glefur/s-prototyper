@@ -18,11 +18,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="root" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SPTable" eSuperTypes="#//SPRepresentation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="usages" upperBound="-1"
         eType="#//MetamodelUsage" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="root" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
         eType="#//TableElement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
@@ -31,7 +31,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="TableElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="creatable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="recursive" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eClass" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//SPExpression"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="subElements" upperBound="-1"
@@ -45,7 +45,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SPDiagram" eSuperTypes="#//SPRepresentation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="metamodels" upperBound="-1"
-        eType="#//MetamodelRef" containment="true"/>
+        eType="#//MetamodelUsage" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="root" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
         eType="#//DiagramElement" containment="true"/>
   </eClassifiers>
@@ -114,8 +115,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="AcceleoExpression" eSuperTypes="#//SPExpression"/>
   <eClassifiers xsi:type="ecore:EClass" name="VarRef" eSuperTypes="#//SPExpression"/>
   <eClassifiers xsi:type="ecore:EClass" name="FeatureRef" eSuperTypes="#//SPExpression"/>
-  <eClassifiers xsi:type="ecore:EClass" name="MetamodelRef">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="metamodel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MetamodelUsage">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="usage" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EPackage"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Color"/>
   <eClassifiers xsi:type="ecore:EClass" name="PreDefinedColorDefinition" eSuperTypes="#//Color">
@@ -148,8 +149,5 @@
     <eLiterals name="YELLOW" value="23" literal="yellow"/>
     <eLiterals name="LIGHT_YELLOW" value="24" literal="light yellow"/>
     <eLiterals name="DARK_YELLOW" value="25" literal="dark yellow"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MetamodelUsage">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="usage" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EPackage"/>
   </eClassifiers>
 </ecore:EPackage>

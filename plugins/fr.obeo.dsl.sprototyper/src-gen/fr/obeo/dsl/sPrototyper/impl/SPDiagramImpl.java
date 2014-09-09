@@ -3,18 +3,21 @@
 package fr.obeo.dsl.sPrototyper.impl;
 
 import fr.obeo.dsl.sPrototyper.DiagramElement;
-import fr.obeo.dsl.sPrototyper.MetamodelRef;
+import fr.obeo.dsl.sPrototyper.MetamodelUsage;
 import fr.obeo.dsl.sPrototyper.SPDiagram;
 import fr.obeo.dsl.sPrototyper.SPrototyperPackage;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -27,6 +30,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link fr.obeo.dsl.sPrototyper.impl.SPDiagramImpl#getMetamodels <em>Metamodels</em>}</li>
+ *   <li>{@link fr.obeo.dsl.sPrototyper.impl.SPDiagramImpl#getRoot <em>Root</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.impl.SPDiagramImpl#getElements <em>Elements</em>}</li>
  * </ul>
  * </p>
@@ -43,7 +47,27 @@ public class SPDiagramImpl extends SPRepresentationImpl implements SPDiagram
    * @generated
    * @ordered
    */
-  protected EList<MetamodelRef> metamodels;
+  protected EList<MetamodelUsage> metamodels;
+
+  /**
+   * The default value of the '{@link #getRoot() <em>Root</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRoot()
+   * @generated
+   * @ordered
+   */
+  protected static final String ROOT_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getRoot() <em>Root</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRoot()
+   * @generated
+   * @ordered
+   */
+  protected String root = ROOT_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getElements() <em>Elements</em>}' containment reference list.
@@ -81,13 +105,36 @@ public class SPDiagramImpl extends SPRepresentationImpl implements SPDiagram
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<MetamodelRef> getMetamodels()
+  public EList<MetamodelUsage> getMetamodels()
   {
     if (metamodels == null)
     {
-      metamodels = new EObjectContainmentEList<MetamodelRef>(MetamodelRef.class, this, SPrototyperPackage.SP_DIAGRAM__METAMODELS);
+      metamodels = new EObjectContainmentEList<MetamodelUsage>(MetamodelUsage.class, this, SPrototyperPackage.SP_DIAGRAM__METAMODELS);
     }
     return metamodels;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getRoot()
+  {
+    return root;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setRoot(String newRoot)
+  {
+    String oldRoot = root;
+    root = newRoot;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SPrototyperPackage.SP_DIAGRAM__ROOT, oldRoot, root));
   }
 
   /**
@@ -134,6 +181,8 @@ public class SPDiagramImpl extends SPRepresentationImpl implements SPDiagram
     {
       case SPrototyperPackage.SP_DIAGRAM__METAMODELS:
         return getMetamodels();
+      case SPrototyperPackage.SP_DIAGRAM__ROOT:
+        return getRoot();
       case SPrototyperPackage.SP_DIAGRAM__ELEMENTS:
         return getElements();
     }
@@ -153,7 +202,10 @@ public class SPDiagramImpl extends SPRepresentationImpl implements SPDiagram
     {
       case SPrototyperPackage.SP_DIAGRAM__METAMODELS:
         getMetamodels().clear();
-        getMetamodels().addAll((Collection<? extends MetamodelRef>)newValue);
+        getMetamodels().addAll((Collection<? extends MetamodelUsage>)newValue);
+        return;
+      case SPrototyperPackage.SP_DIAGRAM__ROOT:
+        setRoot((String)newValue);
         return;
       case SPrototyperPackage.SP_DIAGRAM__ELEMENTS:
         getElements().clear();
@@ -176,6 +228,9 @@ public class SPDiagramImpl extends SPRepresentationImpl implements SPDiagram
       case SPrototyperPackage.SP_DIAGRAM__METAMODELS:
         getMetamodels().clear();
         return;
+      case SPrototyperPackage.SP_DIAGRAM__ROOT:
+        setRoot(ROOT_EDEFAULT);
+        return;
       case SPrototyperPackage.SP_DIAGRAM__ELEMENTS:
         getElements().clear();
         return;
@@ -195,10 +250,29 @@ public class SPDiagramImpl extends SPRepresentationImpl implements SPDiagram
     {
       case SPrototyperPackage.SP_DIAGRAM__METAMODELS:
         return metamodels != null && !metamodels.isEmpty();
+      case SPrototyperPackage.SP_DIAGRAM__ROOT:
+        return ROOT_EDEFAULT == null ? root != null : !ROOT_EDEFAULT.equals(root);
       case SPrototyperPackage.SP_DIAGRAM__ELEMENTS:
         return elements != null && !elements.isEmpty();
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (root: ");
+    result.append(root);
+    result.append(')');
+    return result.toString();
   }
 
 } //SPDiagramImpl

@@ -9,7 +9,6 @@ import fr.obeo.dsl.sPrototyper.ContainerStyleDefinition;
 import fr.obeo.dsl.sPrototyper.FeatureRef;
 import fr.obeo.dsl.sPrototyper.GradientColorDefinition;
 import fr.obeo.dsl.sPrototyper.LabelStyleDefinition;
-import fr.obeo.dsl.sPrototyper.MetamodelRef;
 import fr.obeo.dsl.sPrototyper.MetamodelUsage;
 import fr.obeo.dsl.sPrototyper.Node;
 import fr.obeo.dsl.sPrototyper.NodeStyleDefinition;
@@ -87,12 +86,6 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 			case SPrototyperPackage.LABEL_STYLE_DEFINITION:
 				if(context == grammarAccess.getLabelStyleDefinitionRule()) {
 					sequence_LabelStyleDefinition(context, (LabelStyleDefinition) semanticObject); 
-					return; 
-				}
-				else break;
-			case SPrototyperPackage.METAMODEL_REF:
-				if(context == grammarAccess.getMetamodelRefRule()) {
-					sequence_MetamodelRef(context, (MetamodelRef) semanticObject); 
 					return; 
 				}
 				else break;
@@ -232,7 +225,7 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     value=STRING
+	 *     value=ID
 	 */
 	protected void sequence_FeatureRef(EObject context, FeatureRef semanticObject) {
 		if(errorAcceptor != null) {
@@ -241,7 +234,7 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getFeatureRefAccess().getValueSTRINGTerminalRuleCall_1_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getFeatureRefAccess().getValueIDTerminalRuleCall_1_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
@@ -276,23 +269,7 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     metamodel=STRING
-	 */
-	protected void sequence_MetamodelRef(EObject context, MetamodelRef semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, SPrototyperPackage.Literals.METAMODEL_REF__METAMODEL) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SPrototyperPackage.Literals.METAMODEL_REF__METAMODEL));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getMetamodelRefAccess().getMetamodelSTRINGTerminalRuleCall_1_0(), semanticObject.getMetamodel());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     usage=[EPackage|ID]
+	 *     usage=[EPackage|STRING]
 	 */
 	protected void sequence_MetamodelUsage(EObject context, MetamodelUsage semanticObject) {
 		if(errorAcceptor != null) {
@@ -301,7 +278,7 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getMetamodelUsageAccess().getUsageEPackageIDTerminalRuleCall_1_0_1(), semanticObject.getUsage());
+		feeder.accept(grammarAccess.getMetamodelUsageAccess().getUsageEPackageSTRINGTerminalRuleCall_1_0_1(), semanticObject.getUsage());
 		feeder.finish();
 	}
 	
@@ -346,7 +323,7 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *         name=ID 
 	 *         label=STRING? 
 	 *         title=STRING? 
-	 *         metamodels+=MetamodelRef+ 
+	 *         metamodels+=MetamodelUsage+ 
 	 *         root=STRING 
 	 *         elements+=DiagramElement+
 	 *     )
@@ -363,7 +340,7 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *         label=STRING? 
 	 *         title=STRING? 
 	 *         usages+=MetamodelUsage+ 
-	 *         root=STRING 
+	 *         root=[EClass|ID] 
 	 *         elements+=TableElement+ 
 	 *         properties+=TableProperty+
 	 *     )
@@ -409,7 +386,7 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     (creatable?='creatable'? recursive?='recursive'? eClass=STRING expression=SPExpression subElements+=TableElement*)
+	 *     (creatable?='creatable'? recursive?='recursive'? eClass=[EClass|ID] expression=SPExpression subElements+=TableElement*)
 	 */
 	protected void sequence_TableElement(EObject context, TableElement semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

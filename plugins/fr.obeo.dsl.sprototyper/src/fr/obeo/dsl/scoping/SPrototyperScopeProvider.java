@@ -3,16 +3,25 @@
  */
 package fr.obeo.dsl.scoping;
 
+import java.util.Collection;
+import java.util.List;
+
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EClassifier;
+import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.emf.ecore.EcoreFactory;
+import org.eclipse.xtext.naming.IQualifiedNameProvider;
 import org.eclipse.xtext.scoping.IScope;
+import org.eclipse.xtext.scoping.Scopes;
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
-import org.eclipse.xtext.scoping.impl.SimpleScope;
 
-import com.google.common.collect.Iterables;
 import com.google.common.collect.Lists;
+import com.google.inject.Inject;
 
+import fr.obeo.dsl.sPrototyper.MetamodelUsage;
 import fr.obeo.dsl.sPrototyper.SPTable;
+import fr.obeo.dsl.sPrototyper.TableElement;
 
 /**
  * This class contains custom scoping description.
@@ -23,9 +32,51 @@ import fr.obeo.dsl.sPrototyper.SPTable;
  */
 public class SPrototyperScopeProvider extends AbstractDeclarativeScopeProvider {
 
-	IScope scope_EPackage(SPTable context, EReference ref) {
-		IScope result = new SimpleScope();
-		return null;
+	@Inject
+	private IQualifiedNameProvider qualifiedNameProvider;
+	
+	public IScope scope_MetamodelUsage_usage(MetamodelUsage context, EReference ref) {
+		List<EPackage> allEPackages = Lists.newArrayList();
+		Collection<Object> values = EPackage.Registry.INSTANCE.values();
+		for (Object object : values) {
+			if (object instanceof EPackage.Descriptor) {
+				EPackage ePackage = ((EPackage.Descriptor)object).getEPackage();
+				if (ePackage != null) 
+					allEPackages.add(ePackage);
+			} else if (object instanceof EPackage){
+				allEPackages.add((EPackage) object);
+			}
+		}
+		return Scopes.scopeFor(allEPackages, qualifiedNameProvider, IScope.NULLSCOPE);
 	}
-
+	
+	public IScope scope_SPTable_root(SPTable context, EReference ref) {
+		EList<MetamodelUsage> usages = context.getUsages();
+		List<EClass> accessibleClasses = Lists.newArrayList();
+		for (MetamodelUsage metamodelUsage : usages) {
+			EPackage usage = metamodelUsage.getUsage();
+			for (EClassifier eClassifier : usage.getEClassifiers()) {
+				if (eClassifier instanceof EClass) {
+					accessibleClasses.add((EClass) eClassifier);
+				}
+			}
+		}
+		return Scopes.scopeFor(accessibleClasses);
+	}
+	
+	public IScope scope_TableElement_eClass(TableElement context, EReference ref) {
+		SPTable table = (SPTable) context.eContainer();
+		EList<MetamodelUsage> usages = table.getUsages();
+		List<EClass> accessibleClasses = Lists.newArrayList();
+		for (MetamodelUsage metamodelUsage : usages) {
+			EPackage usage = metamodelUsage.getUsage();
+			for (EClassifier eClassifier : usage.getEClassifiers()) {
+				if (eClassifier instanceof EClass) {
+					accessibleClasses.add((EClass) eClassifier);
+				}
+			}
+		}
+		return Scopes.scopeFor(accessibleClasses);
+	}
+		
 }

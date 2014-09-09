@@ -4,6 +4,7 @@ package fr.obeo.dsl.sPrototyper;
 
 import org.eclipse.emf.common.util.EList;
 
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -81,30 +82,30 @@ public interface TableElement extends EObject
   void setRecursive(boolean value);
 
   /**
-   * Returns the value of the '<em><b>EClass</b></em>' attribute.
+   * Returns the value of the '<em><b>EClass</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>EClass</em>' attribute isn't clear,
+   * If the meaning of the '<em>EClass</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>EClass</em>' attribute.
-   * @see #setEClass(String)
+   * @return the value of the '<em>EClass</em>' reference.
+   * @see #setEClass(EClass)
    * @see fr.obeo.dsl.sPrototyper.SPrototyperPackage#getTableElement_EClass()
    * @model
    * @generated
    */
-  String getEClass();
+  EClass getEClass();
 
   /**
-   * Sets the value of the '{@link fr.obeo.dsl.sPrototyper.TableElement#getEClass <em>EClass</em>}' attribute.
+   * Sets the value of the '{@link fr.obeo.dsl.sPrototyper.TableElement#getEClass <em>EClass</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>EClass</em>' attribute.
+   * @param value the new value of the '<em>EClass</em>' reference.
    * @see #getEClass()
    * @generated
    */
-  void setEClass(String value);
+  void setEClass(EClass value);
 
   /**
    * Returns the value of the '<em><b>Expression</b></em>' containment reference.

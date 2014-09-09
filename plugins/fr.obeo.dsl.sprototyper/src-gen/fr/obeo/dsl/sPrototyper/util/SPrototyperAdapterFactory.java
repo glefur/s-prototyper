@@ -180,9 +180,9 @@ public class SPrototyperAdapterFactory extends AdapterFactoryImpl
         return createFeatureRefAdapter();
       }
       @Override
-      public Adapter caseMetamodelRef(MetamodelRef object)
+      public Adapter caseMetamodelUsage(MetamodelUsage object)
       {
-        return createMetamodelRefAdapter();
+        return createMetamodelUsageAdapter();
       }
       @Override
       public Adapter caseColor(Color object)
@@ -193,11 +193,6 @@ public class SPrototyperAdapterFactory extends AdapterFactoryImpl
       public Adapter casePreDefinedColorDefinition(PreDefinedColorDefinition object)
       {
         return createPreDefinedColorDefinitionAdapter();
-      }
-      @Override
-      public Adapter caseMetamodelUsage(MetamodelUsage object)
-      {
-        return createMetamodelUsageAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -537,16 +532,16 @@ public class SPrototyperAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link fr.obeo.dsl.sPrototyper.MetamodelRef <em>Metamodel Ref</em>}'.
+   * Creates a new adapter for an object of class '{@link fr.obeo.dsl.sPrototyper.MetamodelUsage <em>Metamodel Usage</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see fr.obeo.dsl.sPrototyper.MetamodelRef
+   * @see fr.obeo.dsl.sPrototyper.MetamodelUsage
    * @generated
    */
-  public Adapter createMetamodelRefAdapter()
+  public Adapter createMetamodelUsageAdapter()
   {
     return null;
   }
@@ -577,21 +572,6 @@ public class SPrototyperAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createPreDefinedColorDefinitionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link fr.obeo.dsl.sPrototyper.MetamodelUsage <em>Metamodel Usage</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see fr.obeo.dsl.sPrototyper.MetamodelUsage
-   * @generated
-   */
-  public Adapter createMetamodelUsageAdapter()
   {
     return null;
   }

@@ -212,13 +212,13 @@ public interface SPrototyperFactory extends EFactory
   FeatureRef createFeatureRef();
 
   /**
-   * Returns a new object of class '<em>Metamodel Ref</em>'.
+   * Returns a new object of class '<em>Metamodel Usage</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Metamodel Ref</em>'.
+   * @return a new object of class '<em>Metamodel Usage</em>'.
    * @generated
    */
-  MetamodelRef createMetamodelRef();
+  MetamodelUsage createMetamodelUsage();
 
   /**
    * Returns a new object of class '<em>Color</em>'.
@@ -237,15 +237,6 @@ public interface SPrototyperFactory extends EFactory
    * @generated
    */
   PreDefinedColorDefinition createPreDefinedColorDefinition();
-
-  /**
-   * Returns a new object of class '<em>Metamodel Usage</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Metamodel Usage</em>'.
-   * @generated
-   */
-  MetamodelUsage createMetamodelUsage();
 
   /**
    * Returns the package supported by this factory.

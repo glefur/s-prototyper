@@ -4,7 +4,7 @@
     editorDirectory="/fr.obeo.dsl.sprototyper.editor/src" modelPluginID="fr.obeo.dsl.sprototyper"
     forceOverwrite="true" modelName="SPrototyper" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     complianceLevel="5.0" copyrightFields="false" editPluginID="fr.obeo.dsl.sprototyper.edit"
-    editorPluginID="fr.obeo.dsl.sprototyper.editor" runtimeVersion="2.8">
+    editorPluginID="fr.obeo.dsl.sprototyper.editor" runtimeVersion="2.10">
   <genPackages prefix="SPrototyper" basePackage="fr.obeo.dsl" disposableProviderFactory="true"
       ecorePackage="SPrototyper.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="SPrototyper.ecore#//PreDefinedColor">
@@ -50,17 +50,17 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//SPRepresentation/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//SPRepresentation/label"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//SPRepresentation/title"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//SPRepresentation/root"/>
     </genClasses>
     <genClasses ecoreClass="SPrototyper.ecore#//SPTable">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//SPTable/usages"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//SPTable/root"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//SPTable/elements"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//SPTable/properties"/>
     </genClasses>
     <genClasses ecoreClass="SPrototyper.ecore#//TableElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//TableElement/creatable"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//TableElement/recursive"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//TableElement/eClass"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//TableElement/eClass"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//TableElement/expression"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//TableElement/subElements"/>
     </genClasses>
@@ -71,6 +71,7 @@
     </genClasses>
     <genClasses ecoreClass="SPrototyper.ecore#//SPDiagram">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//SPDiagram/metamodels"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//SPDiagram/root"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//SPDiagram/elements"/>
     </genClasses>
     <genClasses ecoreClass="SPrototyper.ecore#//DiagramElement">
@@ -123,15 +124,12 @@
     <genClasses ecoreClass="SPrototyper.ecore#//AcceleoExpression"/>
     <genClasses ecoreClass="SPrototyper.ecore#//VarRef"/>
     <genClasses ecoreClass="SPrototyper.ecore#//FeatureRef"/>
-    <genClasses ecoreClass="SPrototyper.ecore#//MetamodelRef">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//MetamodelRef/metamodel"/>
+    <genClasses ecoreClass="SPrototyper.ecore#//MetamodelUsage">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//MetamodelUsage/usage"/>
     </genClasses>
     <genClasses ecoreClass="SPrototyper.ecore#//Color"/>
     <genClasses ecoreClass="SPrototyper.ecore#//PreDefinedColorDefinition">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//PreDefinedColorDefinition/color"/>
-    </genClasses>
-    <genClasses ecoreClass="SPrototyper.ecore#//MetamodelUsage">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//MetamodelUsage/usage"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

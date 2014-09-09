@@ -73,12 +73,14 @@ public class ToolsService {
 	}
 	
 	private String extractEClass(EObject element) {
+		EClass eClass = null;
 		if (element instanceof TableElement) {
-			return ((TableElement) element).getEClass();
+			eClass = ((TableElement) element).getEClass();
 		} else if (element instanceof Container) {
-			return ((Container) element).getEClass();
+//			eClass = ((Container) element).getEClass();
+			//TODO
 		}
-		return null;
+		return eClass != null ? (eClass.getEPackage().getName() + "." + eClass.getName()):"";
 	}
 	
 	public CommandParameter getToolCreationParameter(EClass toolKind, EObject parent) {

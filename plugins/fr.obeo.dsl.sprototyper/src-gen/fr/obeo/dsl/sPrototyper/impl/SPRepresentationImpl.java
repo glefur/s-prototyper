@@ -22,7 +22,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link fr.obeo.dsl.sPrototyper.impl.SPRepresentationImpl#getName <em>Name</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.impl.SPRepresentationImpl#getLabel <em>Label</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.impl.SPRepresentationImpl#getTitle <em>Title</em>}</li>
- *   <li>{@link fr.obeo.dsl.sPrototyper.impl.SPRepresentationImpl#getRoot <em>Root</em>}</li>
  * </ul>
  * </p>
  *
@@ -89,26 +88,6 @@ public class SPRepresentationImpl extends MinimalEObjectImpl.Container implement
    * @ordered
    */
   protected String title = TITLE_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getRoot() <em>Root</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getRoot()
-   * @generated
-   * @ordered
-   */
-  protected static final String ROOT_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getRoot() <em>Root</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getRoot()
-   * @generated
-   * @ordered
-   */
-  protected String root = ROOT_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -205,29 +184,6 @@ public class SPRepresentationImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getRoot()
-  {
-    return root;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setRoot(String newRoot)
-  {
-    String oldRoot = root;
-    root = newRoot;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SPrototyperPackage.SP_REPRESENTATION__ROOT, oldRoot, root));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -239,8 +195,6 @@ public class SPRepresentationImpl extends MinimalEObjectImpl.Container implement
         return getLabel();
       case SPrototyperPackage.SP_REPRESENTATION__TITLE:
         return getTitle();
-      case SPrototyperPackage.SP_REPRESENTATION__ROOT:
-        return getRoot();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -263,9 +217,6 @@ public class SPRepresentationImpl extends MinimalEObjectImpl.Container implement
         return;
       case SPrototyperPackage.SP_REPRESENTATION__TITLE:
         setTitle((String)newValue);
-        return;
-      case SPrototyperPackage.SP_REPRESENTATION__ROOT:
-        setRoot((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -290,9 +241,6 @@ public class SPRepresentationImpl extends MinimalEObjectImpl.Container implement
       case SPrototyperPackage.SP_REPRESENTATION__TITLE:
         setTitle(TITLE_EDEFAULT);
         return;
-      case SPrototyperPackage.SP_REPRESENTATION__ROOT:
-        setRoot(ROOT_EDEFAULT);
-        return;
     }
     super.eUnset(featureID);
   }
@@ -313,8 +261,6 @@ public class SPRepresentationImpl extends MinimalEObjectImpl.Container implement
         return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
       case SPrototyperPackage.SP_REPRESENTATION__TITLE:
         return TITLE_EDEFAULT == null ? title != null : !TITLE_EDEFAULT.equals(title);
-      case SPrototyperPackage.SP_REPRESENTATION__ROOT:
-        return ROOT_EDEFAULT == null ? root != null : !ROOT_EDEFAULT.equals(root);
     }
     return super.eIsSet(featureID);
   }
@@ -336,8 +282,6 @@ public class SPRepresentationImpl extends MinimalEObjectImpl.Container implement
     result.append(label);
     result.append(", title: ");
     result.append(title);
-    result.append(", root: ");
-    result.append(root);
     result.append(')');
     return result.toString();
   }

@@ -77,7 +77,6 @@ public class SPrototyperParser extends AbstractContentAssistParser {
 					put(grammarAccess.getAcceleoExpressionAccess().getGroup(), "rule__AcceleoExpression__Group__0");
 					put(grammarAccess.getVarRefAccess().getGroup(), "rule__VarRef__Group__0");
 					put(grammarAccess.getFeatureRefAccess().getGroup(), "rule__FeatureRef__Group__0");
-					put(grammarAccess.getMetamodelRefAccess().getGroup(), "rule__MetamodelRef__Group__0");
 					put(grammarAccess.getMetamodelUsageAccess().getGroup(), "rule__MetamodelUsage__Group__0");
 					put(grammarAccess.getSPrototyperAccess().getNameAssignment_1(), "rule__SPrototyper__NameAssignment_1");
 					put(grammarAccess.getSPrototyperAccess().getQualifierAssignment_3_1(), "rule__SPrototyper__QualifierAssignment_3_1");
@@ -139,9 +138,8 @@ public class SPrototyperParser extends AbstractContentAssistParser {
 					put(grammarAccess.getAcceleoExpressionAccess().getValueAssignment_1(), "rule__AcceleoExpression__ValueAssignment_1");
 					put(grammarAccess.getVarRefAccess().getValueAssignment_1(), "rule__VarRef__ValueAssignment_1");
 					put(grammarAccess.getFeatureRefAccess().getValueAssignment_1(), "rule__FeatureRef__ValueAssignment_1");
-					put(grammarAccess.getMetamodelRefAccess().getMetamodelAssignment_1(), "rule__MetamodelRef__MetamodelAssignment_1");
-					put(grammarAccess.getPreDefinedColorDefinitionAccess().getColorAssignment(), "rule__PreDefinedColorDefinition__ColorAssignment");
 					put(grammarAccess.getMetamodelUsageAccess().getUsageAssignment_1(), "rule__MetamodelUsage__UsageAssignment_1");
+					put(grammarAccess.getPreDefinedColorDefinitionAccess().getColorAssignment(), "rule__PreDefinedColorDefinition__ColorAssignment");
 				}
 			};
 		}

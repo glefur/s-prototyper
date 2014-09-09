@@ -1420,10 +1420,10 @@ public class InternalSPrototyperLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2216:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2216:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2163:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2163:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2216:11: ( '^' )?
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2163:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -1432,7 +1432,7 @@ public class InternalSPrototyperLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2216:11: '^'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2163:11: '^'
                     {
                     match('^'); 
 
@@ -1450,7 +1450,7 @@ public class InternalSPrototyperLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2216:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2163:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -1499,10 +1499,10 @@ public class InternalSPrototyperLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2218:10: ( ( '0' .. '9' )+ )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2218:12: ( '0' .. '9' )+
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2165:10: ( ( '0' .. '9' )+ )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2165:12: ( '0' .. '9' )+
             {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2218:12: ( '0' .. '9' )+
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2165:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -1516,7 +1516,7 @@ public class InternalSPrototyperLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2218:13: '0' .. '9'
+            	    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2165:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -1548,10 +1548,10 @@ public class InternalSPrototyperLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2220:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2220:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2167:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2167:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2220:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2167:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -1569,10 +1569,10 @@ public class InternalSPrototyperLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2220:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2167:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2220:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2167:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -1588,23 +1588,15 @@ public class InternalSPrototyperLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2220:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2167:21: '\\\\' .
                     	    {
                     	    match('\\'); 
-                    	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
-                    	        input.consume();
-
-                    	    }
-                    	    else {
-                    	        MismatchedSetException mse = new MismatchedSetException(null,input);
-                    	        recover(mse);
-                    	        throw mse;}
-
+                    	    matchAny(); 
 
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2220:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2167:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1629,10 +1621,10 @@ public class InternalSPrototyperLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2220:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2167:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2220:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2167:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -1648,23 +1640,15 @@ public class InternalSPrototyperLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2220:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2167:54: '\\\\' .
                     	    {
                     	    match('\\'); 
-                    	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
-                    	        input.consume();
-
-                    	    }
-                    	    else {
-                    	        MismatchedSetException mse = new MismatchedSetException(null,input);
-                    	        recover(mse);
-                    	        throw mse;}
-
+                    	    matchAny(); 
 
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2220:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2167:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1707,12 +1691,12 @@ public class InternalSPrototyperLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2222:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2222:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2169:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2169:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2222:24: ( options {greedy=false; } : . )*
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2169:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -1737,7 +1721,7 @@ public class InternalSPrototyperLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2222:52: .
+            	    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2169:52: .
             	    {
             	    matchAny(); 
 
@@ -1767,12 +1751,12 @@ public class InternalSPrototyperLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2224:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2224:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2171:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2171:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2224:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2171:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -1785,7 +1769,7 @@ public class InternalSPrototyperLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2224:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2171:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1805,7 +1789,7 @@ public class InternalSPrototyperLexer extends Lexer {
                 }
             } while (true);
 
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2224:40: ( ( '\\r' )? '\\n' )?
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2171:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1814,9 +1798,9 @@ public class InternalSPrototyperLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2224:41: ( '\\r' )? '\\n'
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2171:41: ( '\\r' )? '\\n'
                     {
-                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2224:41: ( '\\r' )?
+                    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2171:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -1825,7 +1809,7 @@ public class InternalSPrototyperLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2224:41: '\\r'
+                            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2171:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1857,10 +1841,10 @@ public class InternalSPrototyperLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2226:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2226:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2173:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2173:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2226:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2173:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -1914,8 +1898,8 @@ public class InternalSPrototyperLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2228:16: ( . )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2228:18: .
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2175:16: ( . )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:2175:18: .
             {
             matchAny(); 
 
@@ -2432,98 +2416,19 @@ public class InternalSPrototyperLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\1\44\1\uffff\1\44\1\uffff\12\44\3\uffff\10\44\1\41\2\uffff"+
-        "\3\41\2\uffff\2\44\2\uffff\1\44\1\uffff\10\44\1\133\15\44\3\uffff"+
-        "\11\44\5\uffff\7\44\1\u0080\4\44\1\uffff\5\44\1\u008a\7\44\1\u0093"+
-        "\12\44\1\u009f\10\44\1\uffff\1\44\1\u00a9\1\uffff\5\44\1\u00af\1"+
-        "\44\1\u00b1\1\44\1\uffff\5\44\1\uffff\2\44\1\uffff\2\44\1\u00bc"+
-        "\1\44\1\u00be\1\44\1\u00c0\2\44\1\u00c3\1\44\1\uffff\3\44\1\u00c8"+
-        "\5\44\1\uffff\2\44\1\u00d0\1\u00d1\1\u00d2\1\uffff\1\44\1\uffff"+
-        "\3\44\1\u00d7\3\44\1\uffff\2\44\1\uffff\1\44\1\uffff\1\u00e5\1\uffff"+
-        "\1\44\1\u00e7\1\uffff\1\44\1\u00e9\2\44\1\uffff\1\44\1\u00ed\5\44"+
-        "\4\uffff\3\44\1\uffff\3\44\7\uffff\3\44\1\uffff\1\44\1\uffff\1\u0105"+
-        "\1\uffff\1\u0106\1\u0107\1\44\1\uffff\4\44\1\u010d\7\uffff\5\44"+
-        "\1\u0114\1\uffff\3\44\4\uffff\1\u011a\2\44\1\u011d\1\44\2\uffff"+
-        "\5\44\3\uffff\1\u0126\1\uffff\1\44\1\uffff\1\u0128\1\u0129\1\uffff"+
-        "\1\44\2\uffff\1\u012b\1\u012c\1\u012d\1\u012e\1\44\4\uffff\1\u0130"+
-        "\4\uffff\1\44\1\uffff\6\44\1\u0138\1\uffff";
+        "\1\uffff\1\44\1\uffff\1\44\1\uffff\12\44\3\uffff\10\44\1\41\2\uffff\3\41\2\uffff\2\44\2\uffff\1\44\1\uffff\10\44\1\133\15\44\3\uffff\11\44\5\uffff\7\44\1\u0080\4\44\1\uffff\5\44\1\u008a\7\44\1\u0093\12\44\1\u009f\10\44\1\uffff\1\44\1\u00a9\1\uffff\5\44\1\u00af\1\44\1\u00b1\1\44\1\uffff\5\44\1\uffff\2\44\1\uffff\2\44\1\u00bc\1\44\1\u00be\1\44\1\u00c0\2\44\1\u00c3\1\44\1\uffff\3\44\1\u00c8\5\44\1\uffff\2\44\1\u00d0\1\u00d1\1\u00d2\1\uffff\1\44\1\uffff\3\44\1\u00d7\3\44\1\uffff\2\44\1\uffff\1\44\1\uffff\1\u00e5\1\uffff\1\44\1\u00e7\1\uffff\1\44\1\u00e9\2\44\1\uffff\1\44\1\u00ed\5\44\4\uffff\3\44\1\uffff\3\44\7\uffff\3\44\1\uffff\1\44\1\uffff\1\u0105\1\uffff\1\u0106\1\u0107\1\44\1\uffff\4\44\1\u010d\7\uffff\5\44\1\u0114\1\uffff\3\44\4\uffff\1\u011a\2\44\1\u011d\1\44\2\uffff\5\44\3\uffff\1\u0126\1\uffff\1\44\1\uffff\1\u0128\1\u0129\1\uffff\1\44\2\uffff\1\u012b\1\u012c\1\u012d\1\u012e\1\44\4\uffff\1\u0130\4\uffff\1\44\1\uffff\6\44\1\u0138\1\uffff";
     static final String DFA12_eofS =
         "\u0139\uffff";
     static final String DFA12_minS =
-        "\1\0\1\162\1\uffff\1\165\1\uffff\1\141\1\150\1\154\2\141\1\145\1"+
-        "\150\1\143\1\141\1\145\3\uffff\1\157\1\162\1\154\1\164\1\163\1\150"+
-        "\1\162\1\145\1\101\2\uffff\2\0\1\52\2\uffff\1\157\1\162\2\uffff"+
-        "\1\141\1\uffff\1\145\1\162\1\157\1\172\1\160\1\145\1\142\1\164\1"+
-        "\60\1\142\1\147\1\157\1\143\1\145\1\154\1\157\1\143\1\141\2\162"+
-        "\1\145\1\141\3\uffff\1\144\1\141\1\154\2\141\1\145\1\151\1\141\1"+
-        "\154\5\uffff\2\160\1\154\1\167\1\72\1\162\1\145\1\60\1\162\1\155"+
-        "\2\154\1\uffff\1\145\1\164\1\150\1\164\1\165\1\60\1\141\1\164\1"+
-        "\157\1\143\1\72\1\147\1\153\1\60\1\145\1\164\1\145\1\144\1\145\2"+
-        "\144\1\143\1\145\1\154\1\60\1\164\1\156\1\154\1\157\1\145\1\154"+
-        "\1\151\1\160\1\uffff\1\164\1\60\1\uffff\4\145\1\154\1\60\1\164\1"+
-        "\60\1\162\1\uffff\1\164\1\141\1\162\1\157\1\163\1\uffff\1\162\1"+
-        "\40\1\uffff\1\146\1\165\1\60\1\151\1\60\1\156\1\60\1\145\1\153\1"+
-        "\60\1\151\1\uffff\1\145\1\147\1\157\1\60\1\162\1\145\1\146\1\157"+
-        "\1\143\1\uffff\1\163\1\156\3\60\1\uffff\1\40\1\uffff\1\163\1\141"+
-        "\1\151\1\60\1\154\1\163\1\141\1\142\1\157\1\162\1\uffff\1\145\1"+
-        "\uffff\1\60\1\uffff\1\162\1\60\1\uffff\1\143\1\60\1\145\1\167\1"+
-        "\uffff\1\164\1\60\2\151\1\165\1\163\1\164\3\uffff\1\142\1\151\1"+
-        "\142\1\156\1\uffff\1\141\1\151\1\155\2\uffff\1\162\4\uffff\1\162"+
-        "\1\145\1\156\1\uffff\1\40\1\uffff\1\60\1\uffff\2\60\1\171\1\uffff"+
-        "\1\145\1\156\1\164\1\151\1\60\2\uffff\1\162\4\uffff\1\166\1\154"+
-        "\1\145\1\164\1\142\1\60\1\141\1\155\1\72\1\164\4\uffff\1\60\1\162"+
-        "\1\164\1\60\1\157\1\uffff\1\141\2\145\1\162\1\145\1\154\3\uffff"+
-        "\1\60\1\uffff\1\40\1\uffff\2\60\1\uffff\1\156\2\uffff\4\60\1\145"+
-        "\4\uffff\1\60\4\uffff\1\124\1\uffff\1\150\1\162\1\157\1\165\1\147"+
-        "\1\150\1\60\1\uffff";
+        "\1\0\1\162\1\uffff\1\165\1\uffff\1\141\1\150\1\154\2\141\1\145\1\150\1\143\1\141\1\145\3\uffff\1\157\1\162\1\154\1\164\1\163\1\150\1\162\1\145\1\101\2\uffff\2\0\1\52\2\uffff\1\157\1\162\2\uffff\1\141\1\uffff\1\145\1\162\1\157\1\172\1\160\1\145\1\142\1\164\1\60\1\142\1\147\1\157\1\143\1\145\1\154\1\157\1\143\1\141\2\162\1\145\1\141\3\uffff\1\144\1\141\1\154\2\141\1\145\1\151\1\141\1\154\5\uffff\2\160\1\154\1\167\1\72\1\162\1\145\1\60\1\162\1\155\2\154\1\uffff\1\145\1\164\1\150\1\164\1\165\1\60\1\141\1\164\1\157\1\143\1\72\1\147\1\153\1\60\1\145\1\164\1\145\1\144\1\145\2\144\1\143\1\145\1\154\1\60\1\164\1\156\1\154\1\157\1\145\1\154\1\151\1\160\1\uffff\1\164\1\60\1\uffff\4\145\1\154\1\60\1\164\1\60\1\162\1\uffff\1\164\1\141\1\162\1\157\1\163\1\uffff\1\162\1\40\1\uffff\1\146\1\165\1\60\1\151\1\60\1\156\1\60\1\145\1\153\1\60\1\151\1\uffff\1\145\1\147\1\157\1\60\1\162\1\145\1\146\1\157\1\143\1\uffff\1\163\1\156\3\60\1\uffff\1\40\1\uffff\1\163\1\141\1\151\1\60\1\154\1\163\1\141\1\142\1\157\1\162\1\uffff\1\145\1\uffff\1\60\1\uffff\1\162\1\60\1\uffff\1\143\1\60\1\145\1\167\1\uffff\1\164\1\60\2\151\1\165\1\163\1\164\3\uffff\1\142\1\151\1\142\1\156\1\uffff\1\141\1\151\1\155\2\uffff\1\162\4\uffff\1\162\1\145\1\156\1\uffff\1\40\1\uffff\1\60\1\uffff\2\60\1\171\1\uffff\1\145\1\156\1\164\1\151\1\60\2\uffff\1\162\4\uffff\1\166\1\154\1\145\1\164\1\142\1\60\1\141\1\155\1\72\1\164\4\uffff\1\60\1\162\1\164\1\60\1\157\1\uffff\1\141\2\145\1\162\1\145\1\154\3\uffff\1\60\1\uffff\1\40\1\uffff\2\60\1\uffff\1\156\2\uffff\4\60\1\145\4\uffff\1\60\4\uffff\1\124\1\uffff\1\150\1\162\1\157\1\165\1\147\1\150\1\60\1\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\165\1\uffff\1\165\1\uffff\2\151\1\170\1\157\1\151\1\157"+
-        "\1\162\1\143\1\151\1\162\3\uffff\1\157\1\162\1\157\1\164\1\163\1"+
-        "\150\1\162\1\145\1\172\2\uffff\2\uffff\1\57\2\uffff\1\157\1\162"+
-        "\2\uffff\1\141\1\uffff\1\145\1\162\1\157\1\172\1\164\1\145\1\142"+
-        "\1\164\1\172\1\142\1\163\1\157\1\144\1\145\1\156\1\157\1\143\1\141"+
-        "\2\162\1\145\1\141\3\uffff\1\144\1\145\1\162\1\165\1\141\1\145\1"+
-        "\151\1\141\1\154\5\uffff\1\164\1\160\1\154\1\167\1\72\1\162\1\145"+
-        "\1\172\1\162\1\155\2\154\1\uffff\1\145\1\164\1\150\1\164\1\165\1"+
-        "\172\1\141\1\164\1\157\1\143\1\145\1\147\1\153\1\172\1\145\1\164"+
-        "\1\145\1\171\1\145\2\144\1\143\1\145\1\154\1\172\1\164\1\156\1\154"+
-        "\1\157\1\145\1\154\1\151\1\160\1\uffff\1\164\1\172\1\uffff\4\145"+
-        "\1\154\1\172\1\164\1\172\1\162\1\uffff\1\164\1\141\1\162\1\157\1"+
-        "\163\1\uffff\1\162\1\40\1\uffff\1\146\1\165\1\172\1\151\1\172\1"+
-        "\156\1\172\1\145\1\153\1\172\1\151\1\uffff\1\145\1\147\1\157\1\172"+
-        "\1\162\1\145\1\146\1\157\1\143\1\uffff\1\163\1\156\3\172\1\uffff"+
-        "\1\40\1\uffff\1\163\1\141\1\151\1\172\1\154\1\163\1\141\1\171\1"+
-        "\157\1\162\1\uffff\1\145\1\uffff\1\172\1\uffff\1\162\1\172\1\uffff"+
-        "\1\143\1\172\1\145\1\167\1\uffff\1\164\1\172\2\151\1\165\1\163\1"+
-        "\164\3\uffff\1\171\1\151\1\142\1\156\1\uffff\1\141\1\151\1\155\2"+
-        "\uffff\1\162\4\uffff\1\162\1\145\1\156\1\uffff\1\40\1\uffff\1\172"+
-        "\1\uffff\2\172\1\171\1\uffff\1\145\1\156\1\164\1\151\1\172\2\uffff"+
-        "\1\162\4\uffff\1\166\1\154\1\145\1\164\1\142\1\172\1\145\1\155\1"+
-        "\72\1\164\4\uffff\1\172\1\162\1\164\1\172\1\157\1\uffff\3\145\1"+
-        "\162\1\145\1\154\3\uffff\1\172\1\uffff\1\40\1\uffff\2\172\1\uffff"+
-        "\1\156\2\uffff\4\172\1\145\4\uffff\1\172\4\uffff\1\124\1\uffff\1"+
-        "\150\1\162\1\157\1\165\1\147\1\150\1\172\1\uffff";
+        "\1\uffff\1\165\1\uffff\1\165\1\uffff\2\151\1\170\1\157\1\151\1\157\1\162\1\143\1\151\1\162\3\uffff\1\157\1\162\1\157\1\164\1\163\1\150\1\162\1\145\1\172\2\uffff\2\uffff\1\57\2\uffff\1\157\1\162\2\uffff\1\141\1\uffff\1\145\1\162\1\157\1\172\1\164\1\145\1\142\1\164\1\172\1\142\1\163\1\157\1\144\1\145\1\156\1\157\1\143\1\141\2\162\1\145\1\141\3\uffff\1\144\1\145\1\162\1\165\1\141\1\145\1\151\1\141\1\154\5\uffff\1\164\1\160\1\154\1\167\1\72\1\162\1\145\1\172\1\162\1\155\2\154\1\uffff\1\145\1\164\1\150\1\164\1\165\1\172\1\141\1\164\1\157\1\143\1\145\1\147\1\153\1\172\1\145\1\164\1\145\1\171\1\145\2\144\1\143\1\145\1\154\1\172\1\164\1\156\1\154\1\157\1\145\1\154\1\151\1\160\1\uffff\1\164\1\172\1\uffff\4\145\1\154\1\172\1\164\1\172\1\162\1\uffff\1\164\1\141\1\162\1\157\1\163\1\uffff\1\162\1\40\1\uffff\1\146\1\165\1\172\1\151\1\172\1\156\1\172\1\145\1\153\1\172\1\151\1\uffff\1\145\1\147\1\157\1\172\1\162\1\145\1\146\1\157\1\143\1\uffff\1\163\1\156\3\172\1\uffff\1\40\1\uffff\1\163\1\141\1\151\1\172\1\154\1\163\1\141\1\171\1\157\1\162\1\uffff\1\145\1\uffff\1\172\1\uffff\1\162\1\172\1\uffff\1\143\1\172\1\145\1\167\1\uffff\1\164\1\172\2\151\1\165\1\163\1\164\3\uffff\1\171\1\151\1\142\1\156\1\uffff\1\141\1\151\1\155\2\uffff\1\162\4\uffff\1\162\1\145\1\156\1\uffff\1\40\1\uffff\1\172\1\uffff\2\172\1\171\1\uffff\1\145\1\156\1\164\1\151\1\172\2\uffff\1\162\4\uffff\1\166\1\154\1\145\1\164\1\142\1\172\1\145\1\155\1\72\1\164\4\uffff\1\172\1\162\1\164\1\172\1\157\1\uffff\3\145\1\162\1\145\1\154\3\uffff\1\172\1\uffff\1\40\1\uffff\2\172\1\uffff\1\156\2\uffff\4\172\1\145\4\uffff\1\172\4\uffff\1\124\1\uffff\1\150\1\162\1\157\1\165\1\147\1\150\1\172\1\uffff";
     static final String DFA12_acceptS =
-        "\2\uffff\1\2\1\uffff\1\4\12\uffff\1\25\1\26\1\27\11\uffff\1\100"+
-        "\1\101\3\uffff\1\105\1\106\2\uffff\1\100\1\2\1\uffff\1\4\26\uffff"+
-        "\1\25\1\26\1\27\11\uffff\1\101\1\102\1\103\1\104\1\105\14\uffff"+
-        "\1\35\41\uffff\1\43\2\uffff\1\7\11\uffff\1\72\5\uffff\1\42\2\uffff"+
-        "\1\24\13\uffff\1\45\11\uffff\1\36\5\uffff\1\31\1\uffff\1\13\12\uffff"+
-        "\1\32\1\uffff\1\56\1\uffff\1\37\2\uffff\1\50\4\uffff\1\1\7\uffff"+
-        "\1\10\1\12\1\11\4\uffff\1\33\3\uffff\1\52\1\55\1\uffff\1\66\1\71"+
-        "\1\74\1\77\3\uffff\1\61\1\uffff\1\47\1\uffff\1\46\3\uffff\1\67\5"+
-        "\uffff\1\51\1\54\1\uffff\1\65\1\70\1\73\1\76\12\uffff\1\41\1\40"+
-        "\1\64\1\75\5\uffff\1\16\6\uffff\1\22\1\60\1\63\1\uffff\1\44\1\uffff"+
-        "\1\20\2\uffff\1\6\1\uffff\1\57\1\62\5\uffff\1\30\1\34\1\3\1\5\1"+
-        "\uffff\1\15\1\14\1\23\1\53\1\uffff\1\21\7\uffff\1\17";
+        "\2\uffff\1\2\1\uffff\1\4\12\uffff\1\25\1\26\1\27\11\uffff\1\100\1\101\3\uffff\1\105\1\106\2\uffff\1\100\1\2\1\uffff\1\4\26\uffff\1\25\1\26\1\27\11\uffff\1\101\1\102\1\103\1\104\1\105\14\uffff\1\35\41\uffff\1\43\2\uffff\1\7\11\uffff\1\72\5\uffff\1\42\2\uffff\1\24\13\uffff\1\45\11\uffff\1\36\5\uffff\1\31\1\uffff\1\13\12\uffff\1\32\1\uffff\1\56\1\uffff\1\37\2\uffff\1\50\4\uffff\1\1\7\uffff\1\10\1\12\1\11\4\uffff\1\33\3\uffff\1\52\1\55\1\uffff\1\66\1\71\1\74\1\77\3\uffff\1\61\1\uffff\1\47\1\uffff\1\46\3\uffff\1\67\5\uffff\1\51\1\54\1\uffff\1\65\1\70\1\73\1\76\12\uffff\1\41\1\40\1\64\1\75\5\uffff\1\16\6\uffff\1\22\1\60\1\63\1\uffff\1\44\1\uffff\1\20\2\uffff\1\6\1\uffff\1\57\1\62\5\uffff\1\30\1\34\1\3\1\5\1\uffff\1\15\1\14\1\23\1\53\1\uffff\1\21\7\uffff\1\17";
     static final String DFA12_specialS =
         "\1\2\34\uffff\1\0\1\1\u011a\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\41\2\40\2\41\1\40\22\41\1\40\1\41\1\35\4\41\1\36\4\41\1"+
-            "\20\2\41\1\37\12\34\7\41\32\33\1\17\1\41\1\21\1\32\1\33\1\41"+
-            "\1\14\1\24\1\13\1\15\1\7\1\16\1\23\1\33\1\25\2\33\1\11\1\33"+
-            "\1\22\1\30\1\1\1\3\1\12\1\6\1\10\1\26\1\5\1\27\1\33\1\31\1\33"+
-            "\1\2\1\41\1\4\uff82\41",
+            "\11\41\2\40\2\41\1\40\22\41\1\40\1\41\1\35\4\41\1\36\4\41\1\20\2\41\1\37\12\34\7\41\32\33\1\17\1\41\1\21\1\32\1\33\1\41\1\14\1\24\1\13\1\15\1\7\1\16\1\23\1\33\1\25\2\33\1\11\1\33\1\22\1\30\1\1\1\3\1\12\1\6\1\10\1\26\1\5\1\27\1\33\1\31\1\33\1\2\1\41\1\4\uff82\41",
             "\1\42\2\uffff\1\43",
             "",
             "\1\46",
@@ -2708,8 +2613,7 @@ public class InternalSPrototyperLexer extends Lexer {
             "\1\u00d8",
             "\1\u00d9",
             "\1\u00da",
-            "\1\u00db\1\u00dc\3\uffff\1\u00dd\7\uffff\1\u00de\1\u00df\1"+
-            "\uffff\1\u00e0\6\uffff\1\u00e1",
+            "\1\u00db\1\u00dc\3\uffff\1\u00dd\7\uffff\1\u00de\1\u00df\1\uffff\1\u00e0\6\uffff\1\u00e1",
             "\1\u00e2",
             "\1\u00e3",
             "",
@@ -2735,8 +2639,7 @@ public class InternalSPrototyperLexer extends Lexer {
             "",
             "",
             "",
-            "\1\u00f3\1\u00f4\3\uffff\1\u00f5\7\uffff\1\u00f6\1\u00f7\1"+
-            "\uffff\1\u00f8\6\uffff\1\u00f9",
+            "\1\u00f3\1\u00f4\3\uffff\1\u00f5\7\uffff\1\u00f6\1\u00f7\1\uffff\1\u00f8\6\uffff\1\u00f9",
             "\1\u00fa",
             "\1\u00fb",
             "\1\u00fc",

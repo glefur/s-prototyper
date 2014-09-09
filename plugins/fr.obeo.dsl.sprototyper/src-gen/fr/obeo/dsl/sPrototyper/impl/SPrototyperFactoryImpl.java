@@ -31,7 +31,7 @@ public class SPrototyperFactoryImpl extends EFactoryImpl implements SPrototyperF
   {
     try
     {
-      SPrototyperFactory theSPrototyperFactory = (SPrototyperFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.obeo.fr/dsl/SPrototyper"); 
+      SPrototyperFactory theSPrototyperFactory = (SPrototyperFactory)EPackage.Registry.INSTANCE.getEFactory(SPrototyperPackage.eNS_URI);
       if (theSPrototyperFactory != null)
       {
         return theSPrototyperFactory;
@@ -86,10 +86,9 @@ public class SPrototyperFactoryImpl extends EFactoryImpl implements SPrototyperF
       case SPrototyperPackage.ACCELEO_EXPRESSION: return createAcceleoExpression();
       case SPrototyperPackage.VAR_REF: return createVarRef();
       case SPrototyperPackage.FEATURE_REF: return createFeatureRef();
-      case SPrototyperPackage.METAMODEL_REF: return createMetamodelRef();
+      case SPrototyperPackage.METAMODEL_USAGE: return createMetamodelUsage();
       case SPrototyperPackage.COLOR: return createColor();
       case SPrototyperPackage.PRE_DEFINED_COLOR_DEFINITION: return createPreDefinedColorDefinition();
-      case SPrototyperPackage.METAMODEL_USAGE: return createMetamodelUsage();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -365,10 +364,10 @@ public class SPrototyperFactoryImpl extends EFactoryImpl implements SPrototyperF
    * <!-- end-user-doc -->
    * @generated
    */
-  public MetamodelRef createMetamodelRef()
+  public MetamodelUsage createMetamodelUsage()
   {
-    MetamodelRefImpl metamodelRef = new MetamodelRefImpl();
-    return metamodelRef;
+    MetamodelUsageImpl metamodelUsage = new MetamodelUsageImpl();
+    return metamodelUsage;
   }
 
   /**
@@ -391,17 +390,6 @@ public class SPrototyperFactoryImpl extends EFactoryImpl implements SPrototyperF
   {
     PreDefinedColorDefinitionImpl preDefinedColorDefinition = new PreDefinedColorDefinitionImpl();
     return preDefinedColorDefinition;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public MetamodelUsage createMetamodelUsage()
-  {
-    MetamodelUsageImpl metamodelUsage = new MetamodelUsageImpl();
-    return metamodelUsage;
   }
 
   /**

@@ -82,24 +82,14 @@ public class TableElementImpl extends MinimalEObjectImpl.Container implements Ta
   protected boolean recursive = RECURSIVE_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getEClass() <em>EClass</em>}' attribute.
+   * The cached value of the '{@link #getEClass() <em>EClass</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getEClass()
    * @generated
    * @ordered
    */
-  protected static final String ECLASS_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getEClass() <em>EClass</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getEClass()
-   * @generated
-   * @ordered
-   */
-  protected String eClass = ECLASS_EDEFAULT;
+  protected EClass eClass;
 
   /**
    * The cached value of the '{@link #getExpression() <em>Expression</em>}' containment reference.
@@ -193,7 +183,27 @@ public class TableElementImpl extends MinimalEObjectImpl.Container implements Ta
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getEClass()
+  public EClass getEClass()
+  {
+    if (eClass != null && eClass.eIsProxy())
+    {
+      InternalEObject oldEClass = (InternalEObject)eClass;
+      eClass = (EClass)eResolveProxy(oldEClass);
+      if (eClass != oldEClass)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, SPrototyperPackage.TABLE_ELEMENT__ECLASS, oldEClass, eClass));
+      }
+    }
+    return eClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass basicGetEClass()
   {
     return eClass;
   }
@@ -203,9 +213,9 @@ public class TableElementImpl extends MinimalEObjectImpl.Container implements Ta
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setEClass(String newEClass)
+  public void setEClass(EClass newEClass)
   {
-    String oldEClass = eClass;
+    EClass oldEClass = eClass;
     eClass = newEClass;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, SPrototyperPackage.TABLE_ELEMENT__ECLASS, oldEClass, eClass));
@@ -306,7 +316,8 @@ public class TableElementImpl extends MinimalEObjectImpl.Container implements Ta
       case SPrototyperPackage.TABLE_ELEMENT__RECURSIVE:
         return isRecursive();
       case SPrototyperPackage.TABLE_ELEMENT__ECLASS:
-        return getEClass();
+        if (resolve) return getEClass();
+        return basicGetEClass();
       case SPrototyperPackage.TABLE_ELEMENT__EXPRESSION:
         return getExpression();
       case SPrototyperPackage.TABLE_ELEMENT__SUB_ELEMENTS:
@@ -333,7 +344,7 @@ public class TableElementImpl extends MinimalEObjectImpl.Container implements Ta
         setRecursive((Boolean)newValue);
         return;
       case SPrototyperPackage.TABLE_ELEMENT__ECLASS:
-        setEClass((String)newValue);
+        setEClass((EClass)newValue);
         return;
       case SPrototyperPackage.TABLE_ELEMENT__EXPRESSION:
         setExpression((SPExpression)newValue);
@@ -363,7 +374,7 @@ public class TableElementImpl extends MinimalEObjectImpl.Container implements Ta
         setRecursive(RECURSIVE_EDEFAULT);
         return;
       case SPrototyperPackage.TABLE_ELEMENT__ECLASS:
-        setEClass(ECLASS_EDEFAULT);
+        setEClass((EClass)null);
         return;
       case SPrototyperPackage.TABLE_ELEMENT__EXPRESSION:
         setExpression((SPExpression)null);
@@ -390,7 +401,7 @@ public class TableElementImpl extends MinimalEObjectImpl.Container implements Ta
       case SPrototyperPackage.TABLE_ELEMENT__RECURSIVE:
         return recursive != RECURSIVE_EDEFAULT;
       case SPrototyperPackage.TABLE_ELEMENT__ECLASS:
-        return ECLASS_EDEFAULT == null ? eClass != null : !ECLASS_EDEFAULT.equals(eClass);
+        return eClass != null;
       case SPrototyperPackage.TABLE_ELEMENT__EXPRESSION:
         return expression != null;
       case SPrototyperPackage.TABLE_ELEMENT__SUB_ELEMENTS:
@@ -414,8 +425,6 @@ public class TableElementImpl extends MinimalEObjectImpl.Container implements Ta
     result.append(creatable);
     result.append(", recursive: ");
     result.append(recursive);
-    result.append(", eClass: ");
-    result.append(eClass);
     result.append(')');
     return result.toString();
   }

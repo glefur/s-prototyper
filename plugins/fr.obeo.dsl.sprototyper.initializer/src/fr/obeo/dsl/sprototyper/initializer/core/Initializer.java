@@ -9,8 +9,8 @@ import java.util.Map;
 
 import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.edit.command.CommandParameter;
@@ -31,7 +31,7 @@ import fr.obeo.dsl.sPrototyper.DiagramElement;
 import fr.obeo.dsl.sPrototyper.FeatureRef;
 import fr.obeo.dsl.sPrototyper.GradientColorDefinition;
 import fr.obeo.dsl.sPrototyper.LabelStyleDefinition;
-import fr.obeo.dsl.sPrototyper.MetamodelRef;
+import fr.obeo.dsl.sPrototyper.MetamodelUsage;
 import fr.obeo.dsl.sPrototyper.SPDiagram;
 import fr.obeo.dsl.sPrototyper.SPExpression;
 import fr.obeo.dsl.sPrototyper.SPRepresentation;
@@ -129,7 +129,8 @@ public class Initializer {
 
 	private EditionTableDescription createEditionTable(SPViewpoint spViewpoint, SPTable spTable) {
 		EditionTableDescription editionTableDescription = fr.obeo.dsl.viewpoint.table.metamodel.table.description.DescriptionFactory.eINSTANCE.createEditionTableDescription();
-		editionTableDescription.setDomainClass(spTable.getRoot());
+		EClass root = spTable.getRoot();
+		editionTableDescription.setDomainClass(root.getEPackage().getName() + "." + root.getName());
 		editionTableDescription.setName(sPrototyper.getQualifier() + "." + namingService.computeViewpointShortcut(spViewpoint) + ".rep." + spTable.getName());
 		if (!Strings.isNullOrEmpty(spTable.getLabel())) {
 			editionTableDescription.setLabel(spTable.getLabel());
@@ -139,13 +140,8 @@ public class Initializer {
 		if (!Strings.isNullOrEmpty(spTable.getTitle())) {
 			editionTableDescription.setTitleExpression(spTable.getTitle());
 		}
-		for (MetamodelRef mmRef : spTable.getMetamodels()) {
-			EPackage ePackage = EPackage.Registry.INSTANCE.getEPackage(mmRef.getMetamodel());
-			if (ePackage != null) {
-				editionTableDescription.getMetamodel().add(ePackage);
-			} else {
-				//TODO log
-			}
+		for (MetamodelUsage usage : spTable.getUsages()) {
+			editionTableDescription.getMetamodel().add(usage.getUsage());
 		}
 		for (TableElement element : spTable.getElements()) {
 			LineMapping lm = createLineMapping(spViewpoint, spTable, element, editionTableDescription);
@@ -162,8 +158,10 @@ public class Initializer {
 
 	private LineMapping createLineMapping(SPViewpoint spViewpoint, SPTable spTable, TableElement element, EObject parent) {
 		LineMapping lm = fr.obeo.dsl.viewpoint.table.metamodel.table.description.DescriptionFactory.eINSTANCE.createLineMapping();
-		lm.setDomainClass(element.getEClass());
-		String elementName = Iterables.getLast(Splitter.on('.').split(element.getEClass()));
+		EClass eClass = element.getEClass();
+		String elementName = eClass.getName();
+		String domainClass = eClass.getEPackage().getName() + "." + eClass.getName();
+		lm.setDomainClass(domainClass);
 		String representationQualifier = namingService.computeTableQualifier(spViewpoint, spTable);
 		String mappingName = representationQualifier  + ".line." + elementName;
 		lm.setName(mappingName);
@@ -240,13 +238,8 @@ public class Initializer {
 		if (!Strings.isNullOrEmpty(spDiagram.getTitle())) {
 			diagramDescription.setTitleExpression(spDiagram.getTitle());
 		}
-		for (MetamodelRef mmRef : spDiagram.getMetamodels()) {
-			EPackage ePackage = EPackage.Registry.INSTANCE.getEPackage(mmRef.getMetamodel());
-			if (ePackage != null) {
-				diagramDescription.getMetamodel().add(ePackage);
-			} else {
-				//TODO log
-			}
+		for (MetamodelUsage usage : spDiagram.getMetamodels()) {
+			diagramDescription.getMetamodel().add(usage.getUsage());
 		}
 		Layer defaultLayer = DescriptionFactory.eINSTANCE.createLayer();
 		defaultLayer.setName("default");

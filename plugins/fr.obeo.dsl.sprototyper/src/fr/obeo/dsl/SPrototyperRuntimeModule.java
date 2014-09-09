@@ -3,11 +3,18 @@
  */
 package fr.obeo.dsl;
 
+import org.eclipse.xtext.naming.IQualifiedNameProvider;
+
+import fr.obeo.dsl.naming.SPrototyperQualifiedNameProvider;
 
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
  */
 public class SPrototyperRuntimeModule extends fr.obeo.dsl.AbstractSPrototyperRuntimeModule {
 
-
+	@Override
+	public Class<? extends IQualifiedNameProvider> bindIQualifiedNameProvider() {
+		return SPrototyperQualifiedNameProvider.class;
+	}
+	
 }

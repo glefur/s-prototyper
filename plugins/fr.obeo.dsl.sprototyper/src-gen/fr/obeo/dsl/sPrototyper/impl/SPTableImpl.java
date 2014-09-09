@@ -10,12 +10,15 @@ import fr.obeo.dsl.sPrototyper.TableProperty;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -28,6 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link fr.obeo.dsl.sPrototyper.impl.SPTableImpl#getUsages <em>Usages</em>}</li>
+ *   <li>{@link fr.obeo.dsl.sPrototyper.impl.SPTableImpl#getRoot <em>Root</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.impl.SPTableImpl#getElements <em>Elements</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.impl.SPTableImpl#getProperties <em>Properties</em>}</li>
  * </ul>
@@ -46,6 +50,16 @@ public class SPTableImpl extends SPRepresentationImpl implements SPTable
    * @ordered
    */
   protected EList<MetamodelUsage> usages;
+
+  /**
+   * The cached value of the '{@link #getRoot() <em>Root</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRoot()
+   * @generated
+   * @ordered
+   */
+  protected EClass root;
 
   /**
    * The cached value of the '{@link #getElements() <em>Elements</em>}' containment reference list.
@@ -100,6 +114,49 @@ public class SPTableImpl extends SPRepresentationImpl implements SPTable
       usages = new EObjectContainmentEList<MetamodelUsage>(MetamodelUsage.class, this, SPrototyperPackage.SP_TABLE__USAGES);
     }
     return usages;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getRoot()
+  {
+    if (root != null && root.eIsProxy())
+    {
+      InternalEObject oldRoot = (InternalEObject)root;
+      root = (EClass)eResolveProxy(oldRoot);
+      if (root != oldRoot)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, SPrototyperPackage.SP_TABLE__ROOT, oldRoot, root));
+      }
+    }
+    return root;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass basicGetRoot()
+  {
+    return root;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setRoot(EClass newRoot)
+  {
+    EClass oldRoot = root;
+    root = newRoot;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SPrototyperPackage.SP_TABLE__ROOT, oldRoot, root));
   }
 
   /**
@@ -162,6 +219,9 @@ public class SPTableImpl extends SPRepresentationImpl implements SPTable
     {
       case SPrototyperPackage.SP_TABLE__USAGES:
         return getUsages();
+      case SPrototyperPackage.SP_TABLE__ROOT:
+        if (resolve) return getRoot();
+        return basicGetRoot();
       case SPrototyperPackage.SP_TABLE__ELEMENTS:
         return getElements();
       case SPrototyperPackage.SP_TABLE__PROPERTIES:
@@ -184,6 +244,9 @@ public class SPTableImpl extends SPRepresentationImpl implements SPTable
       case SPrototyperPackage.SP_TABLE__USAGES:
         getUsages().clear();
         getUsages().addAll((Collection<? extends MetamodelUsage>)newValue);
+        return;
+      case SPrototyperPackage.SP_TABLE__ROOT:
+        setRoot((EClass)newValue);
         return;
       case SPrototyperPackage.SP_TABLE__ELEMENTS:
         getElements().clear();
@@ -210,6 +273,9 @@ public class SPTableImpl extends SPRepresentationImpl implements SPTable
       case SPrototyperPackage.SP_TABLE__USAGES:
         getUsages().clear();
         return;
+      case SPrototyperPackage.SP_TABLE__ROOT:
+        setRoot((EClass)null);
+        return;
       case SPrototyperPackage.SP_TABLE__ELEMENTS:
         getElements().clear();
         return;
@@ -232,6 +298,8 @@ public class SPTableImpl extends SPRepresentationImpl implements SPTable
     {
       case SPrototyperPackage.SP_TABLE__USAGES:
         return usages != null && !usages.isEmpty();
+      case SPrototyperPackage.SP_TABLE__ROOT:
+        return root != null;
       case SPrototyperPackage.SP_TABLE__ELEMENTS:
         return elements != null && !elements.isEmpty();
       case SPrototyperPackage.SP_TABLE__PROPERTIES:

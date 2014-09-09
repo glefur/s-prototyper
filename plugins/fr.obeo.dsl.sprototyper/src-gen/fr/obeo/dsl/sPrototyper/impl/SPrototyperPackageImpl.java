@@ -11,7 +11,6 @@ import fr.obeo.dsl.sPrototyper.DiagramElement;
 import fr.obeo.dsl.sPrototyper.FeatureRef;
 import fr.obeo.dsl.sPrototyper.GradientColorDefinition;
 import fr.obeo.dsl.sPrototyper.LabelStyleDefinition;
-import fr.obeo.dsl.sPrototyper.MetamodelRef;
 import fr.obeo.dsl.sPrototyper.MetamodelUsage;
 import fr.obeo.dsl.sPrototyper.Node;
 import fr.obeo.dsl.sPrototyper.NodeStyleDefinition;
@@ -198,7 +197,7 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass metamodelRefEClass = null;
+  private EClass metamodelUsageEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -213,13 +212,6 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * @generated
    */
   private EClass preDefinedColorDefinitionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass metamodelUsageEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -426,16 +418,6 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getSPRepresentation_Root()
-  {
-    return (EAttribute)spRepresentationEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getSPTable()
   {
     return spTableEClass;
@@ -456,7 +438,7 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getSPTable_Elements()
+  public EReference getSPTable_Root()
   {
     return (EReference)spTableEClass.getEStructuralFeatures().get(1);
   }
@@ -466,9 +448,19 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getSPTable_Properties()
+  public EReference getSPTable_Elements()
   {
     return (EReference)spTableEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getSPTable_Properties()
+  {
+    return (EReference)spTableEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -506,9 +498,9 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getTableElement_EClass()
+  public EReference getTableElement_EClass()
   {
-    return (EAttribute)tableElementEClass.getEStructuralFeatures().get(2);
+    return (EReference)tableElementEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -596,9 +588,19 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getSPDiagram_Root()
+  {
+    return (EAttribute)spDiagramEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getSPDiagram_Elements()
   {
-    return (EReference)spDiagramEClass.getEStructuralFeatures().get(1);
+    return (EReference)spDiagramEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1006,9 +1008,9 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getMetamodelRef()
+  public EClass getMetamodelUsage()
   {
-    return metamodelRefEClass;
+    return metamodelUsageEClass;
   }
 
   /**
@@ -1016,9 +1018,9 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getMetamodelRef_Metamodel()
+  public EReference getMetamodelUsage_Usage()
   {
-    return (EAttribute)metamodelRefEClass.getEStructuralFeatures().get(0);
+    return (EReference)metamodelUsageEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1049,26 +1051,6 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
   public EAttribute getPreDefinedColorDefinition_Color()
   {
     return (EAttribute)preDefinedColorDefinitionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getMetamodelUsage()
-  {
-    return metamodelUsageEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getMetamodelUsage_Usage()
-  {
-    return (EReference)metamodelUsageEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1126,17 +1108,17 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
     createEAttribute(spRepresentationEClass, SP_REPRESENTATION__NAME);
     createEAttribute(spRepresentationEClass, SP_REPRESENTATION__LABEL);
     createEAttribute(spRepresentationEClass, SP_REPRESENTATION__TITLE);
-    createEAttribute(spRepresentationEClass, SP_REPRESENTATION__ROOT);
 
     spTableEClass = createEClass(SP_TABLE);
     createEReference(spTableEClass, SP_TABLE__USAGES);
+    createEReference(spTableEClass, SP_TABLE__ROOT);
     createEReference(spTableEClass, SP_TABLE__ELEMENTS);
     createEReference(spTableEClass, SP_TABLE__PROPERTIES);
 
     tableElementEClass = createEClass(TABLE_ELEMENT);
     createEAttribute(tableElementEClass, TABLE_ELEMENT__CREATABLE);
     createEAttribute(tableElementEClass, TABLE_ELEMENT__RECURSIVE);
-    createEAttribute(tableElementEClass, TABLE_ELEMENT__ECLASS);
+    createEReference(tableElementEClass, TABLE_ELEMENT__ECLASS);
     createEReference(tableElementEClass, TABLE_ELEMENT__EXPRESSION);
     createEReference(tableElementEClass, TABLE_ELEMENT__SUB_ELEMENTS);
 
@@ -1147,6 +1129,7 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
 
     spDiagramEClass = createEClass(SP_DIAGRAM);
     createEReference(spDiagramEClass, SP_DIAGRAM__METAMODELS);
+    createEAttribute(spDiagramEClass, SP_DIAGRAM__ROOT);
     createEReference(spDiagramEClass, SP_DIAGRAM__ELEMENTS);
 
     diagramElementEClass = createEClass(DIAGRAM_ELEMENT);
@@ -1203,16 +1186,13 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
 
     featureRefEClass = createEClass(FEATURE_REF);
 
-    metamodelRefEClass = createEClass(METAMODEL_REF);
-    createEAttribute(metamodelRefEClass, METAMODEL_REF__METAMODEL);
+    metamodelUsageEClass = createEClass(METAMODEL_USAGE);
+    createEReference(metamodelUsageEClass, METAMODEL_USAGE__USAGE);
 
     colorEClass = createEClass(COLOR);
 
     preDefinedColorDefinitionEClass = createEClass(PRE_DEFINED_COLOR_DEFINITION);
     createEAttribute(preDefinedColorDefinitionEClass, PRE_DEFINED_COLOR_DEFINITION__COLOR);
-
-    metamodelUsageEClass = createEClass(METAMODEL_USAGE);
-    createEReference(metamodelUsageEClass, METAMODEL_USAGE__USAGE);
 
     // Create enums
     preDefinedColorEEnum = createEEnum(PRE_DEFINED_COLOR);
@@ -1274,17 +1254,17 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
     initEAttribute(getSPRepresentation_Name(), ecorePackage.getEString(), "name", null, 0, 1, SPRepresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getSPRepresentation_Label(), ecorePackage.getEString(), "label", null, 0, 1, SPRepresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getSPRepresentation_Title(), ecorePackage.getEString(), "title", null, 0, 1, SPRepresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getSPRepresentation_Root(), ecorePackage.getEString(), "root", null, 0, 1, SPRepresentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(spTableEClass, SPTable.class, "SPTable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getSPTable_Usages(), this.getMetamodelUsage(), null, "usages", null, 0, -1, SPTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSPTable_Root(), ecorePackage.getEClass(), null, "root", null, 0, 1, SPTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getSPTable_Elements(), this.getTableElement(), null, "elements", null, 0, -1, SPTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getSPTable_Properties(), this.getTableProperty(), null, "properties", null, 0, -1, SPTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(tableElementEClass, TableElement.class, "TableElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getTableElement_Creatable(), ecorePackage.getEBoolean(), "creatable", null, 0, 1, TableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTableElement_Recursive(), ecorePackage.getEBoolean(), "recursive", null, 0, 1, TableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTableElement_EClass(), ecorePackage.getEString(), "eClass", null, 0, 1, TableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTableElement_EClass(), ecorePackage.getEClass(), null, "eClass", null, 0, 1, TableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTableElement_Expression(), this.getSPExpression(), null, "expression", null, 0, 1, TableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTableElement_SubElements(), this.getTableElement(), null, "subElements", null, 0, -1, TableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1294,7 +1274,8 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
     initEReference(getTableProperty_Expression(), this.getSPExpression(), null, "expression", null, 0, 1, TableProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(spDiagramEClass, SPDiagram.class, "SPDiagram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getSPDiagram_Metamodels(), this.getMetamodelRef(), null, "metamodels", null, 0, -1, SPDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSPDiagram_Metamodels(), this.getMetamodelUsage(), null, "metamodels", null, 0, -1, SPDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getSPDiagram_Root(), ecorePackage.getEString(), "root", null, 0, 1, SPDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getSPDiagram_Elements(), this.getDiagramElement(), null, "elements", null, 0, -1, SPDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(diagramElementEClass, DiagramElement.class, "DiagramElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1351,16 +1332,13 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
 
     initEClass(featureRefEClass, FeatureRef.class, "FeatureRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(metamodelRefEClass, MetamodelRef.class, "MetamodelRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getMetamodelRef_Metamodel(), ecorePackage.getEString(), "metamodel", null, 0, 1, MetamodelRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(metamodelUsageEClass, MetamodelUsage.class, "MetamodelUsage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getMetamodelUsage_Usage(), ecorePackage.getEPackage(), null, "usage", null, 0, 1, MetamodelUsage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(colorEClass, Color.class, "Color", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(preDefinedColorDefinitionEClass, PreDefinedColorDefinition.class, "PreDefinedColorDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getPreDefinedColorDefinition_Color(), this.getPreDefinedColor(), "color", null, 0, 1, PreDefinedColorDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(metamodelUsageEClass, MetamodelUsage.class, "MetamodelUsage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getMetamodelUsage_Usage(), ecorePackage.getEPackage(), null, "usage", null, 0, 1, MetamodelUsage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
     initEEnum(preDefinedColorEEnum, PreDefinedColor.class, "PreDefinedColor");

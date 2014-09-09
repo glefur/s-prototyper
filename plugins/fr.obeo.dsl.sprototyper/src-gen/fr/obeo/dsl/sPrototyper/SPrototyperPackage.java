@@ -196,22 +196,13 @@ public interface SPrototyperPackage extends EPackage
   int SP_REPRESENTATION__TITLE = 2;
 
   /**
-   * The feature id for the '<em><b>Root</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SP_REPRESENTATION__ROOT = 3;
-
-  /**
    * The number of structural features of the '<em>SP Representation</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SP_REPRESENTATION_FEATURE_COUNT = 4;
+  int SP_REPRESENTATION_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.SPTableImpl <em>SP Table</em>}' class.
@@ -251,15 +242,6 @@ public interface SPrototyperPackage extends EPackage
   int SP_TABLE__TITLE = SP_REPRESENTATION__TITLE;
 
   /**
-   * The feature id for the '<em><b>Root</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SP_TABLE__ROOT = SP_REPRESENTATION__ROOT;
-
-  /**
    * The feature id for the '<em><b>Usages</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -269,13 +251,22 @@ public interface SPrototyperPackage extends EPackage
   int SP_TABLE__USAGES = SP_REPRESENTATION_FEATURE_COUNT + 0;
 
   /**
+   * The feature id for the '<em><b>Root</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SP_TABLE__ROOT = SP_REPRESENTATION_FEATURE_COUNT + 1;
+
+  /**
    * The feature id for the '<em><b>Elements</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SP_TABLE__ELEMENTS = SP_REPRESENTATION_FEATURE_COUNT + 1;
+  int SP_TABLE__ELEMENTS = SP_REPRESENTATION_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -284,7 +275,7 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SP_TABLE__PROPERTIES = SP_REPRESENTATION_FEATURE_COUNT + 2;
+  int SP_TABLE__PROPERTIES = SP_REPRESENTATION_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>SP Table</em>' class.
@@ -293,7 +284,7 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SP_TABLE_FEATURE_COUNT = SP_REPRESENTATION_FEATURE_COUNT + 3;
+  int SP_TABLE_FEATURE_COUNT = SP_REPRESENTATION_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.TableElementImpl <em>Table Element</em>}' class.
@@ -324,7 +315,7 @@ public interface SPrototyperPackage extends EPackage
   int TABLE_ELEMENT__RECURSIVE = 1;
 
   /**
-   * The feature id for the '<em><b>EClass</b></em>' attribute.
+   * The feature id for the '<em><b>EClass</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -443,15 +434,6 @@ public interface SPrototyperPackage extends EPackage
   int SP_DIAGRAM__TITLE = SP_REPRESENTATION__TITLE;
 
   /**
-   * The feature id for the '<em><b>Root</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SP_DIAGRAM__ROOT = SP_REPRESENTATION__ROOT;
-
-  /**
    * The feature id for the '<em><b>Metamodels</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -461,13 +443,22 @@ public interface SPrototyperPackage extends EPackage
   int SP_DIAGRAM__METAMODELS = SP_REPRESENTATION_FEATURE_COUNT + 0;
 
   /**
+   * The feature id for the '<em><b>Root</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SP_DIAGRAM__ROOT = SP_REPRESENTATION_FEATURE_COUNT + 1;
+
+  /**
    * The feature id for the '<em><b>Elements</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SP_DIAGRAM__ELEMENTS = SP_REPRESENTATION_FEATURE_COUNT + 1;
+  int SP_DIAGRAM__ELEMENTS = SP_REPRESENTATION_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>SP Diagram</em>' class.
@@ -476,7 +467,7 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SP_DIAGRAM_FEATURE_COUNT = SP_REPRESENTATION_FEATURE_COUNT + 2;
+  int SP_DIAGRAM_FEATURE_COUNT = SP_REPRESENTATION_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.DiagramElementImpl <em>Diagram Element</em>}' class.
@@ -1078,32 +1069,32 @@ public interface SPrototyperPackage extends EPackage
   int FEATURE_REF_FEATURE_COUNT = SP_EXPRESSION_FEATURE_COUNT + 0;
 
   /**
-   * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.MetamodelRefImpl <em>Metamodel Ref</em>}' class.
+   * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.MetamodelUsageImpl <em>Metamodel Usage</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see fr.obeo.dsl.sPrototyper.impl.MetamodelRefImpl
-   * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getMetamodelRef()
+   * @see fr.obeo.dsl.sPrototyper.impl.MetamodelUsageImpl
+   * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getMetamodelUsage()
    * @generated
    */
-  int METAMODEL_REF = 21;
+  int METAMODEL_USAGE = 21;
 
   /**
-   * The feature id for the '<em><b>Metamodel</b></em>' attribute.
+   * The feature id for the '<em><b>Usage</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int METAMODEL_REF__METAMODEL = 0;
+  int METAMODEL_USAGE__USAGE = 0;
 
   /**
-   * The number of structural features of the '<em>Metamodel Ref</em>' class.
+   * The number of structural features of the '<em>Metamodel Usage</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int METAMODEL_REF_FEATURE_COUNT = 1;
+  int METAMODEL_USAGE_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.ColorImpl <em>Color</em>}' class.
@@ -1153,34 +1144,6 @@ public interface SPrototyperPackage extends EPackage
   int PRE_DEFINED_COLOR_DEFINITION_FEATURE_COUNT = COLOR_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.MetamodelUsageImpl <em>Metamodel Usage</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see fr.obeo.dsl.sPrototyper.impl.MetamodelUsageImpl
-   * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getMetamodelUsage()
-   * @generated
-   */
-  int METAMODEL_USAGE = 24;
-
-  /**
-   * The feature id for the '<em><b>Usage</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int METAMODEL_USAGE__USAGE = 0;
-
-  /**
-   * The number of structural features of the '<em>Metamodel Usage</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int METAMODEL_USAGE_FEATURE_COUNT = 1;
-
-  /**
    * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.PreDefinedColor <em>Pre Defined Color</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1188,7 +1151,7 @@ public interface SPrototyperPackage extends EPackage
    * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getPreDefinedColor()
    * @generated
    */
-  int PRE_DEFINED_COLOR = 25;
+  int PRE_DEFINED_COLOR = 24;
 
 
   /**
@@ -1332,17 +1295,6 @@ public interface SPrototyperPackage extends EPackage
   EAttribute getSPRepresentation_Title();
 
   /**
-   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.SPRepresentation#getRoot <em>Root</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Root</em>'.
-   * @see fr.obeo.dsl.sPrototyper.SPRepresentation#getRoot()
-   * @see #getSPRepresentation()
-   * @generated
-   */
-  EAttribute getSPRepresentation_Root();
-
-  /**
    * Returns the meta object for class '{@link fr.obeo.dsl.sPrototyper.SPTable <em>SP Table</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1362,6 +1314,17 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    */
   EReference getSPTable_Usages();
+
+  /**
+   * Returns the meta object for the reference '{@link fr.obeo.dsl.sPrototyper.SPTable#getRoot <em>Root</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Root</em>'.
+   * @see fr.obeo.dsl.sPrototyper.SPTable#getRoot()
+   * @see #getSPTable()
+   * @generated
+   */
+  EReference getSPTable_Root();
 
   /**
    * Returns the meta object for the containment reference list '{@link fr.obeo.dsl.sPrototyper.SPTable#getElements <em>Elements</em>}'.
@@ -1418,15 +1381,15 @@ public interface SPrototyperPackage extends EPackage
   EAttribute getTableElement_Recursive();
 
   /**
-   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.TableElement#getEClass <em>EClass</em>}'.
+   * Returns the meta object for the reference '{@link fr.obeo.dsl.sPrototyper.TableElement#getEClass <em>EClass</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>EClass</em>'.
+   * @return the meta object for the reference '<em>EClass</em>'.
    * @see fr.obeo.dsl.sPrototyper.TableElement#getEClass()
    * @see #getTableElement()
    * @generated
    */
-  EAttribute getTableElement_EClass();
+  EReference getTableElement_EClass();
 
   /**
    * Returns the meta object for the containment reference '{@link fr.obeo.dsl.sPrototyper.TableElement#getExpression <em>Expression</em>}'.
@@ -1513,6 +1476,17 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    */
   EReference getSPDiagram_Metamodels();
+
+  /**
+   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.SPDiagram#getRoot <em>Root</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Root</em>'.
+   * @see fr.obeo.dsl.sPrototyper.SPDiagram#getRoot()
+   * @see #getSPDiagram()
+   * @generated
+   */
+  EAttribute getSPDiagram_Root();
 
   /**
    * Returns the meta object for the containment reference list '{@link fr.obeo.dsl.sPrototyper.SPDiagram#getElements <em>Elements</em>}'.
@@ -1952,25 +1926,25 @@ public interface SPrototyperPackage extends EPackage
   EClass getFeatureRef();
 
   /**
-   * Returns the meta object for class '{@link fr.obeo.dsl.sPrototyper.MetamodelRef <em>Metamodel Ref</em>}'.
+   * Returns the meta object for class '{@link fr.obeo.dsl.sPrototyper.MetamodelUsage <em>Metamodel Usage</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Metamodel Ref</em>'.
-   * @see fr.obeo.dsl.sPrototyper.MetamodelRef
+   * @return the meta object for class '<em>Metamodel Usage</em>'.
+   * @see fr.obeo.dsl.sPrototyper.MetamodelUsage
    * @generated
    */
-  EClass getMetamodelRef();
+  EClass getMetamodelUsage();
 
   /**
-   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.MetamodelRef#getMetamodel <em>Metamodel</em>}'.
+   * Returns the meta object for the reference '{@link fr.obeo.dsl.sPrototyper.MetamodelUsage#getUsage <em>Usage</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Metamodel</em>'.
-   * @see fr.obeo.dsl.sPrototyper.MetamodelRef#getMetamodel()
-   * @see #getMetamodelRef()
+   * @return the meta object for the reference '<em>Usage</em>'.
+   * @see fr.obeo.dsl.sPrototyper.MetamodelUsage#getUsage()
+   * @see #getMetamodelUsage()
    * @generated
    */
-  EAttribute getMetamodelRef_Metamodel();
+  EReference getMetamodelUsage_Usage();
 
   /**
    * Returns the meta object for class '{@link fr.obeo.dsl.sPrototyper.Color <em>Color</em>}'.
@@ -2002,27 +1976,6 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    */
   EAttribute getPreDefinedColorDefinition_Color();
-
-  /**
-   * Returns the meta object for class '{@link fr.obeo.dsl.sPrototyper.MetamodelUsage <em>Metamodel Usage</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Metamodel Usage</em>'.
-   * @see fr.obeo.dsl.sPrototyper.MetamodelUsage
-   * @generated
-   */
-  EClass getMetamodelUsage();
-
-  /**
-   * Returns the meta object for the reference '{@link fr.obeo.dsl.sPrototyper.MetamodelUsage#getUsage <em>Usage</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Usage</em>'.
-   * @see fr.obeo.dsl.sPrototyper.MetamodelUsage#getUsage()
-   * @see #getMetamodelUsage()
-   * @generated
-   */
-  EReference getMetamodelUsage_Usage();
 
   /**
    * Returns the meta object for enum '{@link fr.obeo.dsl.sPrototyper.PreDefinedColor <em>Pre Defined Color</em>}'.
@@ -2168,14 +2121,6 @@ public interface SPrototyperPackage extends EPackage
     EAttribute SP_REPRESENTATION__TITLE = eINSTANCE.getSPRepresentation_Title();
 
     /**
-     * The meta object literal for the '<em><b>Root</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute SP_REPRESENTATION__ROOT = eINSTANCE.getSPRepresentation_Root();
-
-    /**
      * The meta object literal for the '{@link fr.obeo.dsl.sPrototyper.impl.SPTableImpl <em>SP Table</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2192,6 +2137,14 @@ public interface SPrototyperPackage extends EPackage
      * @generated
      */
     EReference SP_TABLE__USAGES = eINSTANCE.getSPTable_Usages();
+
+    /**
+     * The meta object literal for the '<em><b>Root</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SP_TABLE__ROOT = eINSTANCE.getSPTable_Root();
 
     /**
      * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
@@ -2236,12 +2189,12 @@ public interface SPrototyperPackage extends EPackage
     EAttribute TABLE_ELEMENT__RECURSIVE = eINSTANCE.getTableElement_Recursive();
 
     /**
-     * The meta object literal for the '<em><b>EClass</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>EClass</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TABLE_ELEMENT__ECLASS = eINSTANCE.getTableElement_EClass();
+    EReference TABLE_ELEMENT__ECLASS = eINSTANCE.getTableElement_EClass();
 
     /**
      * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
@@ -2310,6 +2263,14 @@ public interface SPrototyperPackage extends EPackage
      * @generated
      */
     EReference SP_DIAGRAM__METAMODELS = eINSTANCE.getSPDiagram_Metamodels();
+
+    /**
+     * The meta object literal for the '<em><b>Root</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SP_DIAGRAM__ROOT = eINSTANCE.getSPDiagram_Root();
 
     /**
      * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
@@ -2668,22 +2629,22 @@ public interface SPrototyperPackage extends EPackage
     EClass FEATURE_REF = eINSTANCE.getFeatureRef();
 
     /**
-     * The meta object literal for the '{@link fr.obeo.dsl.sPrototyper.impl.MetamodelRefImpl <em>Metamodel Ref</em>}' class.
+     * The meta object literal for the '{@link fr.obeo.dsl.sPrototyper.impl.MetamodelUsageImpl <em>Metamodel Usage</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see fr.obeo.dsl.sPrototyper.impl.MetamodelRefImpl
-     * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getMetamodelRef()
+     * @see fr.obeo.dsl.sPrototyper.impl.MetamodelUsageImpl
+     * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getMetamodelUsage()
      * @generated
      */
-    EClass METAMODEL_REF = eINSTANCE.getMetamodelRef();
+    EClass METAMODEL_USAGE = eINSTANCE.getMetamodelUsage();
 
     /**
-     * The meta object literal for the '<em><b>Metamodel</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Usage</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute METAMODEL_REF__METAMODEL = eINSTANCE.getMetamodelRef_Metamodel();
+    EReference METAMODEL_USAGE__USAGE = eINSTANCE.getMetamodelUsage_Usage();
 
     /**
      * The meta object literal for the '{@link fr.obeo.dsl.sPrototyper.impl.ColorImpl <em>Color</em>}' class.
@@ -2712,24 +2673,6 @@ public interface SPrototyperPackage extends EPackage
      * @generated
      */
     EAttribute PRE_DEFINED_COLOR_DEFINITION__COLOR = eINSTANCE.getPreDefinedColorDefinition_Color();
-
-    /**
-     * The meta object literal for the '{@link fr.obeo.dsl.sPrototyper.impl.MetamodelUsageImpl <em>Metamodel Usage</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see fr.obeo.dsl.sPrototyper.impl.MetamodelUsageImpl
-     * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getMetamodelUsage()
-     * @generated
-     */
-    EClass METAMODEL_USAGE = eINSTANCE.getMetamodelUsage();
-
-    /**
-     * The meta object literal for the '<em><b>Usage</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference METAMODEL_USAGE__USAGE = eINSTANCE.getMetamodelUsage_Usage();
 
     /**
      * The meta object literal for the '{@link fr.obeo.dsl.sPrototyper.PreDefinedColor <em>Pre Defined Color</em>}' enum.

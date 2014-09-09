@@ -28,14 +28,14 @@ SPTable:
 		('label' label=STRING)? 
 		('title' title=STRING)? 
 		usages+=MetamodelUsage+
-		'root' root=STRING
+		'root' root=[ecore::EClass | ID]
 		elements+=TableElement+
 		properties+=TableProperty+
 	'}'
 ;
 
 TableElement:
-	(creatable ?= 'creatable')? (recursive ?= 'recursive')? 'element' eClass=STRING 'accessibleThrough' expression=SPExpression ('{'
+	(creatable ?= 'creatable')? (recursive ?= 'recursive')? 'element' eClass=[ecore::EClass | ID] 'accessibleThrough' expression=SPExpression ('{'
 		subElements +=TableElement+
 	'}')?
 ;
@@ -51,7 +51,7 @@ SPDiagram:
 	'diagram' name=ID '{'
 		('label' label=STRING)? 
 		('title' title=STRING)? 
-		metamodels+=MetamodelRef+
+		metamodels+=MetamodelUsage+
 		'root' root=STRING
 		elements+=DiagramElement+	
 	'}'
@@ -121,11 +121,11 @@ VarRef:
 ;
 
 FeatureRef:
-	'feature:' value=STRING
+	'feature:' value=ID
 ;
 
-MetamodelRef:
-	'use' metamodel=STRING
+MetamodelUsage:
+	'use' usage=[ecore::EPackage|STRING]
 ;
 
 Color:
@@ -149,6 +149,3 @@ enum PreDefinedColor:
 	| YELLOW='yellow' | LIGHT_YELLOW='light yellow' | DARK_YELLOW='dark yellow'
 ;
 
-MetamodelUsage:
-	'use' usage=[ecore::EPackage]
-;

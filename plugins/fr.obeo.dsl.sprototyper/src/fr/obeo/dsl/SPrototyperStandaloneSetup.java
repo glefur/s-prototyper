@@ -2,7 +2,6 @@
 package fr.obeo.dsl;
 
 /**
- * Initialization support for running Xtext languages 
  * without equinox extension registry
  */
 public class SPrototyperStandaloneSetup extends SPrototyperStandaloneSetupGenerated{
