@@ -180,9 +180,19 @@ public class SPrototyperAdapterFactory extends AdapterFactoryImpl
         return createFeatureRefAdapter();
       }
       @Override
+      public Adapter caseServiceRef(ServiceRef object)
+      {
+        return createServiceRefAdapter();
+      }
+      @Override
       public Adapter caseMetamodelUsage(MetamodelUsage object)
       {
         return createMetamodelUsageAdapter();
+      }
+      @Override
+      public Adapter caseJavaServiceClassReference(JavaServiceClassReference object)
+      {
+        return createJavaServiceClassReferenceAdapter();
       }
       @Override
       public Adapter caseColor(Color object)
@@ -532,6 +542,21 @@ public class SPrototyperAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link fr.obeo.dsl.sPrototyper.ServiceRef <em>Service Ref</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.obeo.dsl.sPrototyper.ServiceRef
+   * @generated
+   */
+  public Adapter createServiceRefAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link fr.obeo.dsl.sPrototyper.MetamodelUsage <em>Metamodel Usage</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -542,6 +567,21 @@ public class SPrototyperAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createMetamodelUsageAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.obeo.dsl.sPrototyper.JavaServiceClassReference <em>Java Service Class Reference</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.obeo.dsl.sPrototyper.JavaServiceClassReference
+   * @generated
+   */
+  public Adapter createJavaServiceClassReferenceAdapter()
   {
     return null;
   }

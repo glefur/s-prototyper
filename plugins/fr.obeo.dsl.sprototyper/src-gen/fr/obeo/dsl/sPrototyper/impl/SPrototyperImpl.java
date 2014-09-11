@@ -31,6 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link fr.obeo.dsl.sPrototyper.impl.SPrototyperImpl#getName <em>Name</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.impl.SPrototyperImpl#getQualifier <em>Qualifier</em>}</li>
+ *   <li>{@link fr.obeo.dsl.sPrototyper.impl.SPrototyperImpl#getTargetURI <em>Target URI</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.impl.SPrototyperImpl#getViewpoints <em>Viewpoints</em>}</li>
  * </ul>
  * </p>
@@ -78,6 +79,26 @@ public class SPrototyperImpl extends MinimalEObjectImpl.Container implements SPr
    * @ordered
    */
   protected String qualifier = QUALIFIER_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getTargetURI() <em>Target URI</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTargetURI()
+   * @generated
+   * @ordered
+   */
+  protected static final String TARGET_URI_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getTargetURI() <em>Target URI</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getTargetURI()
+   * @generated
+   * @ordered
+   */
+  protected String targetURI = TARGET_URI_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getViewpoints() <em>Viewpoints</em>}' containment reference list.
@@ -161,6 +182,29 @@ public class SPrototyperImpl extends MinimalEObjectImpl.Container implements SPr
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getTargetURI()
+  {
+    return targetURI;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setTargetURI(String newTargetURI)
+  {
+    String oldTargetURI = targetURI;
+    targetURI = newTargetURI;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SPrototyperPackage.SPROTOTYPER__TARGET_URI, oldTargetURI, targetURI));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<SPViewpoint> getViewpoints()
   {
     if (viewpoints == null)
@@ -200,6 +244,8 @@ public class SPrototyperImpl extends MinimalEObjectImpl.Container implements SPr
         return getName();
       case SPrototyperPackage.SPROTOTYPER__QUALIFIER:
         return getQualifier();
+      case SPrototyperPackage.SPROTOTYPER__TARGET_URI:
+        return getTargetURI();
       case SPrototyperPackage.SPROTOTYPER__VIEWPOINTS:
         return getViewpoints();
     }
@@ -222,6 +268,9 @@ public class SPrototyperImpl extends MinimalEObjectImpl.Container implements SPr
         return;
       case SPrototyperPackage.SPROTOTYPER__QUALIFIER:
         setQualifier((String)newValue);
+        return;
+      case SPrototyperPackage.SPROTOTYPER__TARGET_URI:
+        setTargetURI((String)newValue);
         return;
       case SPrototyperPackage.SPROTOTYPER__VIEWPOINTS:
         getViewpoints().clear();
@@ -247,6 +296,9 @@ public class SPrototyperImpl extends MinimalEObjectImpl.Container implements SPr
       case SPrototyperPackage.SPROTOTYPER__QUALIFIER:
         setQualifier(QUALIFIER_EDEFAULT);
         return;
+      case SPrototyperPackage.SPROTOTYPER__TARGET_URI:
+        setTargetURI(TARGET_URI_EDEFAULT);
+        return;
       case SPrototyperPackage.SPROTOTYPER__VIEWPOINTS:
         getViewpoints().clear();
         return;
@@ -268,6 +320,8 @@ public class SPrototyperImpl extends MinimalEObjectImpl.Container implements SPr
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case SPrototyperPackage.SPROTOTYPER__QUALIFIER:
         return QUALIFIER_EDEFAULT == null ? qualifier != null : !QUALIFIER_EDEFAULT.equals(qualifier);
+      case SPrototyperPackage.SPROTOTYPER__TARGET_URI:
+        return TARGET_URI_EDEFAULT == null ? targetURI != null : !TARGET_URI_EDEFAULT.equals(targetURI);
       case SPrototyperPackage.SPROTOTYPER__VIEWPOINTS:
         return viewpoints != null && !viewpoints.isEmpty();
     }
@@ -289,6 +343,8 @@ public class SPrototyperImpl extends MinimalEObjectImpl.Container implements SPr
     result.append(name);
     result.append(", qualifier: ");
     result.append(qualifier);
+    result.append(", targetURI: ");
+    result.append(targetURI);
     result.append(')');
     return result.toString();
   }

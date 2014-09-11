@@ -29,15 +29,18 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cQualifierKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
 		private final Assignment cQualifierAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
 		private final RuleCall cQualifierSTRINGTerminalRuleCall_3_1_0 = (RuleCall)cQualifierAssignment_3_1.eContents().get(0);
-		private final Assignment cViewpointsAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cViewpointsSPViewpointParserRuleCall_4_0 = (RuleCall)cViewpointsAssignment_4.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cGenerateKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cTargetURIAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cTargetURISTRINGTerminalRuleCall_5_0 = (RuleCall)cTargetURIAssignment_5.eContents().get(0);
+		private final Assignment cViewpointsAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cViewpointsSPViewpointParserRuleCall_6_0 = (RuleCall)cViewpointsAssignment_6.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//SPrototyper:
-		//	"proto" name=ID "{" ("qualifier" qualifier=STRING)? viewpoints+=SPViewpoint* "}";
+		//	"proto" name=ID "{" ("qualifier" qualifier=STRING)? "generate" targetURI=STRING viewpoints+=SPViewpoint* "}";
 		public ParserRule getRule() { return rule; }
 
-		//"proto" name=ID "{" ("qualifier" qualifier=STRING)? viewpoints+=SPViewpoint* "}"
+		//"proto" name=ID "{" ("qualifier" qualifier=STRING)? "generate" targetURI=STRING viewpoints+=SPViewpoint* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"proto"
@@ -64,14 +67,23 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getQualifierSTRINGTerminalRuleCall_3_1_0() { return cQualifierSTRINGTerminalRuleCall_3_1_0; }
 
+		//"generate"
+		public Keyword getGenerateKeyword_4() { return cGenerateKeyword_4; }
+
+		//targetURI=STRING
+		public Assignment getTargetURIAssignment_5() { return cTargetURIAssignment_5; }
+
+		//STRING
+		public RuleCall getTargetURISTRINGTerminalRuleCall_5_0() { return cTargetURISTRINGTerminalRuleCall_5_0; }
+
 		//viewpoints+=SPViewpoint*
-		public Assignment getViewpointsAssignment_4() { return cViewpointsAssignment_4; }
+		public Assignment getViewpointsAssignment_6() { return cViewpointsAssignment_6; }
 
 		//SPViewpoint
-		public RuleCall getViewpointsSPViewpointParserRuleCall_4_0() { return cViewpointsSPViewpointParserRuleCall_4_0; }
+		public RuleCall getViewpointsSPViewpointParserRuleCall_6_0() { return cViewpointsSPViewpointParserRuleCall_6_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 
 	public class SPViewpointElements extends AbstractParserRuleElementFinder {
@@ -89,16 +101,19 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cExtKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
 		private final Assignment cExtensionAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
 		private final RuleCall cExtensionSTRINGTerminalRuleCall_4_1_0 = (RuleCall)cExtensionAssignment_4_1.eContents().get(0);
-		private final Assignment cRepresentationsAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cRepresentationsSPRepresentationParserRuleCall_5_0 = (RuleCall)cRepresentationsAssignment_5.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Assignment cServiceClassAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cServiceClassJavaServiceClassReferenceParserRuleCall_5_0 = (RuleCall)cServiceClassAssignment_5.eContents().get(0);
+		private final Assignment cRepresentationsAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cRepresentationsSPRepresentationParserRuleCall_6_0 = (RuleCall)cRepresentationsAssignment_6.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//SPViewpoint:
-		//	"viewpoint" name=ID "{" ("shortcut" shortcut=STRING)? ("ext" extension=STRING)? representations+=SPRepresentation*
-		//	"}";
+		//	"viewpoint" name=ID "{" ("shortcut" shortcut=STRING)? ("ext" extension=STRING)?
+		//	serviceClass+=JavaServiceClassReference* representations+=SPRepresentation* "}";
 		public ParserRule getRule() { return rule; }
 
-		//"viewpoint" name=ID "{" ("shortcut" shortcut=STRING)? ("ext" extension=STRING)? representations+=SPRepresentation* "}"
+		//"viewpoint" name=ID "{" ("shortcut" shortcut=STRING)? ("ext" extension=STRING)? serviceClass+=JavaServiceClassReference*
+		//representations+=SPRepresentation* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"viewpoint"
@@ -137,14 +152,20 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getExtensionSTRINGTerminalRuleCall_4_1_0() { return cExtensionSTRINGTerminalRuleCall_4_1_0; }
 
+		//serviceClass+=JavaServiceClassReference*
+		public Assignment getServiceClassAssignment_5() { return cServiceClassAssignment_5; }
+
+		//JavaServiceClassReference
+		public RuleCall getServiceClassJavaServiceClassReferenceParserRuleCall_5_0() { return cServiceClassJavaServiceClassReferenceParserRuleCall_5_0; }
+
 		//representations+=SPRepresentation*
-		public Assignment getRepresentationsAssignment_5() { return cRepresentationsAssignment_5; }
+		public Assignment getRepresentationsAssignment_6() { return cRepresentationsAssignment_6; }
 
 		//SPRepresentation
-		public RuleCall getRepresentationsSPRepresentationParserRuleCall_5_0() { return cRepresentationsSPRepresentationParserRuleCall_5_0; }
+		public RuleCall getRepresentationsSPRepresentationParserRuleCall_6_0() { return cRepresentationsSPRepresentationParserRuleCall_6_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 
 	public class SPRepresentationElements extends AbstractParserRuleElementFinder {
@@ -276,17 +297,22 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 	public class TableElementElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TableElement");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cCreatableAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cCreatableCreatableKeyword_0_0 = (Keyword)cCreatableAssignment_0.eContents().get(0);
-		private final Assignment cRecursiveAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final Keyword cRecursiveRecursiveKeyword_1_0 = (Keyword)cRecursiveAssignment_1.eContents().get(0);
-		private final Keyword cElementKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cEClassAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final CrossReference cEClassEClassCrossReference_3_0 = (CrossReference)cEClassAssignment_3.eContents().get(0);
-		private final RuleCall cEClassEClassIDTerminalRuleCall_3_0_1 = (RuleCall)cEClassEClassCrossReference_3_0.eContents().get(1);
-		private final Keyword cAccessibleThroughKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cExpressionAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cExpressionSPExpressionParserRuleCall_5_0 = (RuleCall)cExpressionAssignment_5.eContents().get(0);
+		private final Assignment cRecursiveAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cRecursiveRecursiveKeyword_0_0 = (Keyword)cRecursiveAssignment_0.eContents().get(0);
+		private final Keyword cElementKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cEClassAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cEClassEClassCrossReference_2_0 = (CrossReference)cEClassAssignment_2.eContents().get(0);
+		private final RuleCall cEClassEClassIDTerminalRuleCall_2_0_1 = (RuleCall)cEClassEClassCrossReference_2_0.eContents().get(1);
+		private final Keyword cAccessibleThroughKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cExpressionAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cExpressionSPExpressionParserRuleCall_4_0 = (RuleCall)cExpressionAssignment_4.eContents().get(0);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Assignment cCreatableAssignment_5_0 = (Assignment)cGroup_5.eContents().get(0);
+		private final Keyword cCreatableCreatableKeyword_5_0_0 = (Keyword)cCreatableAssignment_5_0.eContents().get(0);
+		private final Group cGroup_5_1 = (Group)cGroup_5.eContents().get(1);
+		private final Keyword cViaKeyword_5_1_0 = (Keyword)cGroup_5_1.eContents().get(0);
+		private final Assignment cCreateExpressionAssignment_5_1_1 = (Assignment)cGroup_5_1.eContents().get(1);
+		private final RuleCall cCreateExpressionSPExpressionParserRuleCall_5_1_1_0 = (RuleCall)cCreateExpressionAssignment_5_1_1.eContents().get(0);
 		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
 		private final Keyword cLeftCurlyBracketKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
 		private final Assignment cSubElementsAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
@@ -294,46 +320,61 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_6_2 = (Keyword)cGroup_6.eContents().get(2);
 		
 		//TableElement:
-		//	creatable?="creatable"? recursive?="recursive"? "element" eClass=[ecore::EClass] "accessibleThrough"
-		//	expression=SPExpression ("{" subElements+=TableElement+ "}")?;
+		//	recursive?="recursive"? "element" eClass=[ecore::EClass] "accessibleThrough" expression=SPExpression
+		//	(creatable?="creatable" ("via" createExpression=SPExpression)?)? ("{" subElements+=TableElement+ "}")?;
 		public ParserRule getRule() { return rule; }
 
-		//creatable?="creatable"? recursive?="recursive"? "element" eClass=[ecore::EClass] "accessibleThrough"
-		//expression=SPExpression ("{" subElements+=TableElement+ "}")?
+		//recursive?="recursive"? "element" eClass=[ecore::EClass] "accessibleThrough" expression=SPExpression
+		//(creatable?="creatable" ("via" createExpression=SPExpression)?)? ("{" subElements+=TableElement+ "}")?
 		public Group getGroup() { return cGroup; }
 
-		//creatable?="creatable"?
-		public Assignment getCreatableAssignment_0() { return cCreatableAssignment_0; }
-
-		//"creatable"
-		public Keyword getCreatableCreatableKeyword_0_0() { return cCreatableCreatableKeyword_0_0; }
-
 		//recursive?="recursive"?
-		public Assignment getRecursiveAssignment_1() { return cRecursiveAssignment_1; }
+		public Assignment getRecursiveAssignment_0() { return cRecursiveAssignment_0; }
 
 		//"recursive"
-		public Keyword getRecursiveRecursiveKeyword_1_0() { return cRecursiveRecursiveKeyword_1_0; }
+		public Keyword getRecursiveRecursiveKeyword_0_0() { return cRecursiveRecursiveKeyword_0_0; }
 
 		//"element"
-		public Keyword getElementKeyword_2() { return cElementKeyword_2; }
+		public Keyword getElementKeyword_1() { return cElementKeyword_1; }
 
 		//eClass=[ecore::EClass]
-		public Assignment getEClassAssignment_3() { return cEClassAssignment_3; }
+		public Assignment getEClassAssignment_2() { return cEClassAssignment_2; }
 
 		//[ecore::EClass]
-		public CrossReference getEClassEClassCrossReference_3_0() { return cEClassEClassCrossReference_3_0; }
+		public CrossReference getEClassEClassCrossReference_2_0() { return cEClassEClassCrossReference_2_0; }
 
 		//ID
-		public RuleCall getEClassEClassIDTerminalRuleCall_3_0_1() { return cEClassEClassIDTerminalRuleCall_3_0_1; }
+		public RuleCall getEClassEClassIDTerminalRuleCall_2_0_1() { return cEClassEClassIDTerminalRuleCall_2_0_1; }
 
 		//"accessibleThrough"
-		public Keyword getAccessibleThroughKeyword_4() { return cAccessibleThroughKeyword_4; }
+		public Keyword getAccessibleThroughKeyword_3() { return cAccessibleThroughKeyword_3; }
 
 		//expression=SPExpression
-		public Assignment getExpressionAssignment_5() { return cExpressionAssignment_5; }
+		public Assignment getExpressionAssignment_4() { return cExpressionAssignment_4; }
 
 		//SPExpression
-		public RuleCall getExpressionSPExpressionParserRuleCall_5_0() { return cExpressionSPExpressionParserRuleCall_5_0; }
+		public RuleCall getExpressionSPExpressionParserRuleCall_4_0() { return cExpressionSPExpressionParserRuleCall_4_0; }
+
+		//(creatable?="creatable" ("via" createExpression=SPExpression)?)?
+		public Group getGroup_5() { return cGroup_5; }
+
+		//creatable?="creatable"
+		public Assignment getCreatableAssignment_5_0() { return cCreatableAssignment_5_0; }
+
+		//"creatable"
+		public Keyword getCreatableCreatableKeyword_5_0_0() { return cCreatableCreatableKeyword_5_0_0; }
+
+		//("via" createExpression=SPExpression)?
+		public Group getGroup_5_1() { return cGroup_5_1; }
+
+		//"via"
+		public Keyword getViaKeyword_5_1_0() { return cViaKeyword_5_1_0; }
+
+		//createExpression=SPExpression
+		public Assignment getCreateExpressionAssignment_5_1_1() { return cCreateExpressionAssignment_5_1_1; }
+
+		//SPExpression
+		public RuleCall getCreateExpressionSPExpressionParserRuleCall_5_1_1_0() { return cCreateExpressionSPExpressionParserRuleCall_5_1_1_0; }
 
 		//("{" subElements+=TableElement+ "}")?
 		public Group getGroup_6() { return cGroup_6; }
@@ -1019,12 +1060,13 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cAcceleoExpressionParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cVarRefParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cFeatureRefParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cServiceRefParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		
 		//SPExpression:
-		//	AcceleoExpression | VarRef | FeatureRef;
+		//	AcceleoExpression | VarRef | FeatureRef | ServiceRef;
 		public ParserRule getRule() { return rule; }
 
-		//AcceleoExpression | VarRef | FeatureRef
+		//AcceleoExpression | VarRef | FeatureRef | ServiceRef
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//AcceleoExpression
@@ -1035,6 +1077,9 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 
 		//FeatureRef
 		public RuleCall getFeatureRefParserRuleCall_2() { return cFeatureRefParserRuleCall_2; }
+
+		//ServiceRef
+		public RuleCall getServiceRefParserRuleCall_3() { return cServiceRefParserRuleCall_3; }
 	}
 
 	public class AcceleoExpressionElements extends AbstractParserRuleElementFinder {
@@ -1109,6 +1154,30 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getValueIDTerminalRuleCall_1_0() { return cValueIDTerminalRuleCall_1_0; }
 	}
 
+	public class ServiceRefElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ServiceRef");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cServiceKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cValueIDTerminalRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
+		
+		//ServiceRef:
+		//	"service:" value=ID;
+		public ParserRule getRule() { return rule; }
+
+		//"service:" value=ID
+		public Group getGroup() { return cGroup; }
+
+		//"service:"
+		public Keyword getServiceKeyword_0() { return cServiceKeyword_0; }
+
+		//value=ID
+		public Assignment getValueAssignment_1() { return cValueAssignment_1; }
+
+		//ID
+		public RuleCall getValueIDTerminalRuleCall_1_0() { return cValueIDTerminalRuleCall_1_0; }
+	}
+
 	public class MetamodelUsageElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MetamodelUsage");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -1137,6 +1206,30 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getUsageEPackageSTRINGTerminalRuleCall_1_0_1() { return cUsageEPackageSTRINGTerminalRuleCall_1_0_1; }
 	}
 
+	public class JavaServiceClassReferenceElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "JavaServiceClassReference");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cUseKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cJavaClassAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cJavaClassQualifiedNameParserRuleCall_1_0 = (RuleCall)cJavaClassAssignment_1.eContents().get(0);
+		
+		//JavaServiceClassReference:
+		//	"use" javaClass=QualifiedName;
+		public ParserRule getRule() { return rule; }
+
+		//"use" javaClass=QualifiedName
+		public Group getGroup() { return cGroup; }
+
+		//"use"
+		public Keyword getUseKeyword_0() { return cUseKeyword_0; }
+
+		//javaClass=QualifiedName
+		public Assignment getJavaClassAssignment_1() { return cJavaClassAssignment_1; }
+
+		//QualifiedName
+		public RuleCall getJavaClassQualifiedNameParserRuleCall_1_0() { return cJavaClassQualifiedNameParserRuleCall_1_0; }
+	}
+
 	public class ColorElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Color");
 		private final RuleCall cPreDefinedColorDefinitionParserRuleCall = (RuleCall)rule.eContents().get(1);
@@ -1163,6 +1256,34 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 
 		//PreDefinedColor
 		public RuleCall getColorPreDefinedColorEnumRuleCall_0() { return cColorPreDefinedColorEnumRuleCall_0; }
+	}
+
+	public class QualifiedNameElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "QualifiedName");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cFullStopKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		
+		//QualifiedName:
+		//	ID ("." ID)*;
+		public ParserRule getRule() { return rule; }
+
+		//ID ("." ID)*
+		public Group getGroup() { return cGroup; }
+
+		//ID
+		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
+
+		//("." ID)*
+		public Group getGroup_1() { return cGroup_1; }
+
+		//"."
+		public Keyword getFullStopKeyword_1_0() { return cFullStopKeyword_1_0; }
+
+		//ID
+		public RuleCall getIDTerminalRuleCall_1_1() { return cIDTerminalRuleCall_1_1; }
 	}
 	
 	
@@ -1418,10 +1539,13 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 	private final AcceleoExpressionElements pAcceleoExpression;
 	private final VarRefElements pVarRef;
 	private final FeatureRefElements pFeatureRef;
+	private final ServiceRefElements pServiceRef;
 	private final MetamodelUsageElements pMetamodelUsage;
+	private final JavaServiceClassReferenceElements pJavaServiceClassReference;
 	private final ColorElements pColor;
 	private final PreDefinedColorDefinitionElements pPreDefinedColorDefinition;
 	private final PreDefinedColorElements unknownRulePreDefinedColor;
+	private final QualifiedNameElements pQualifiedName;
 	
 	private final Grammar grammar;
 
@@ -1454,10 +1578,13 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 		this.pAcceleoExpression = new AcceleoExpressionElements();
 		this.pVarRef = new VarRefElements();
 		this.pFeatureRef = new FeatureRefElements();
+		this.pServiceRef = new ServiceRefElements();
 		this.pMetamodelUsage = new MetamodelUsageElements();
+		this.pJavaServiceClassReference = new JavaServiceClassReferenceElements();
 		this.pColor = new ColorElements();
 		this.pPreDefinedColorDefinition = new PreDefinedColorDefinitionElements();
 		this.unknownRulePreDefinedColor = new PreDefinedColorElements();
+		this.pQualifiedName = new QualifiedNameElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -1488,7 +1615,7 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//SPrototyper:
-	//	"proto" name=ID "{" ("qualifier" qualifier=STRING)? viewpoints+=SPViewpoint* "}";
+	//	"proto" name=ID "{" ("qualifier" qualifier=STRING)? "generate" targetURI=STRING viewpoints+=SPViewpoint* "}";
 	public SPrototyperElements getSPrototyperAccess() {
 		return pSPrototyper;
 	}
@@ -1498,8 +1625,8 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//SPViewpoint:
-	//	"viewpoint" name=ID "{" ("shortcut" shortcut=STRING)? ("ext" extension=STRING)? representations+=SPRepresentation*
-	//	"}";
+	//	"viewpoint" name=ID "{" ("shortcut" shortcut=STRING)? ("ext" extension=STRING)?
+	//	serviceClass+=JavaServiceClassReference* representations+=SPRepresentation* "}";
 	public SPViewpointElements getSPViewpointAccess() {
 		return pSPViewpoint;
 	}
@@ -1530,8 +1657,8 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//TableElement:
-	//	creatable?="creatable"? recursive?="recursive"? "element" eClass=[ecore::EClass] "accessibleThrough"
-	//	expression=SPExpression ("{" subElements+=TableElement+ "}")?;
+	//	recursive?="recursive"? "element" eClass=[ecore::EClass] "accessibleThrough" expression=SPExpression
+	//	(creatable?="creatable" ("via" createExpression=SPExpression)?)? ("{" subElements+=TableElement+ "}")?;
 	public TableElementElements getTableElementAccess() {
 		return pTableElement;
 	}
@@ -1674,7 +1801,7 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//SPExpression:
-	//	AcceleoExpression | VarRef | FeatureRef;
+	//	AcceleoExpression | VarRef | FeatureRef | ServiceRef;
 	public SPExpressionElements getSPExpressionAccess() {
 		return pSPExpression;
 	}
@@ -1713,6 +1840,16 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 		return getFeatureRefAccess().getRule();
 	}
 
+	//ServiceRef:
+	//	"service:" value=ID;
+	public ServiceRefElements getServiceRefAccess() {
+		return pServiceRef;
+	}
+	
+	public ParserRule getServiceRefRule() {
+		return getServiceRefAccess().getRule();
+	}
+
 	//MetamodelUsage:
 	//	"metamodel" usage=[ecore::EPackage|STRING];
 	public MetamodelUsageElements getMetamodelUsageAccess() {
@@ -1721,6 +1858,16 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getMetamodelUsageRule() {
 		return getMetamodelUsageAccess().getRule();
+	}
+
+	//JavaServiceClassReference:
+	//	"use" javaClass=QualifiedName;
+	public JavaServiceClassReferenceElements getJavaServiceClassReferenceAccess() {
+		return pJavaServiceClassReference;
+	}
+	
+	public ParserRule getJavaServiceClassReferenceRule() {
+		return getJavaServiceClassReferenceAccess().getRule();
 	}
 
 	//Color:
@@ -1756,6 +1903,16 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public EnumRule getPreDefinedColorRule() {
 		return getPreDefinedColorAccess().getRule();
+	}
+
+	//QualifiedName:
+	//	ID ("." ID)*;
+	public QualifiedNameElements getQualifiedNameAccess() {
+		return pQualifiedName;
+	}
+	
+	public ParserRule getQualifiedNameRule() {
+		return getQualifiedNameAccess().getRule();
 	}
 
 	//terminal ID:

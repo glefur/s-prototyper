@@ -228,10 +228,25 @@ public class SPrototyperSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case SPrototyperPackage.SERVICE_REF:
+      {
+        ServiceRef serviceRef = (ServiceRef)theEObject;
+        T result = caseServiceRef(serviceRef);
+        if (result == null) result = caseSPExpression(serviceRef);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case SPrototyperPackage.METAMODEL_USAGE:
       {
         MetamodelUsage metamodelUsage = (MetamodelUsage)theEObject;
         T result = caseMetamodelUsage(metamodelUsage);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SPrototyperPackage.JAVA_SERVICE_CLASS_REFERENCE:
+      {
+        JavaServiceClassReference javaServiceClassReference = (JavaServiceClassReference)theEObject;
+        T result = caseJavaServiceClassReference(javaServiceClassReference);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -591,6 +606,22 @@ public class SPrototyperSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Service Ref</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Service Ref</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseServiceRef(ServiceRef object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Metamodel Usage</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -602,6 +633,22 @@ public class SPrototyperSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseMetamodelUsage(MetamodelUsage object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Java Service Class Reference</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Java Service Class Reference</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseJavaServiceClassReference(JavaServiceClassReference object)
   {
     return null;
   }

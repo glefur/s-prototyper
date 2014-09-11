@@ -60,8 +60,8 @@ public class InitializerAction implements IObjectActionDelegate {
 		if (sPrototyper != null) {
 			try {
 				NamingService namingService = new NamingService(sPrototyper);
-				ToolsService toolsService = new ToolsService(namingService, getEditingDomain());
 				VSMService vsmService = new VSMService(getEditingDomain());
+				ToolsService toolsService = new ToolsService(namingService, vsmService, getEditingDomain());
 				new Initializer(namingService, toolsService, vsmService, getEditingDomain(), sPrototyper).run();
 				MessageDialog.openInformation(
 						shell,

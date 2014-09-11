@@ -21,6 +21,7 @@ import fr.obeo.dsl.sPrototyper.TableElement;
 import fr.obeo.dsl.viewpoint.description.Layer;
 import fr.obeo.dsl.viewpoint.description.tool.ChangeContext;
 import fr.obeo.dsl.viewpoint.description.tool.CreateInstance;
+import fr.obeo.dsl.viewpoint.description.tool.ModelOperation;
 import fr.obeo.dsl.viewpoint.description.tool.ToolFactory;
 import fr.obeo.dsl.viewpoint.description.tool.ToolSection;
 
@@ -32,9 +33,11 @@ public class ToolsService {
 	
 	private EditingDomain editingDomain;
 	private NamingService namingService;
+	private VSMService vsmService;
 	
-	public ToolsService(NamingService namingService, EditingDomain editingDomain) {
+	public ToolsService(NamingService namingService, VSMService vsmService, EditingDomain editingDomain) {
 		this.namingService = namingService;
+		this.vsmService = vsmService;
 		this.editingDomain = editingDomain;
 	}
 
@@ -55,14 +58,24 @@ public class ToolsService {
 	
 	public ChangeContext createToolModelOperation(EObject element) {
 		ChangeContext changeContext = ToolFactory.eINSTANCE.createChangeContext();
-		changeContext.setBrowseExpression("var:container");
-		CreateInstance createInstance = ToolFactory.eINSTANCE.createCreateInstance();
-		createInstance.setReferenceName(extractExpression(element).getValue());
-		createInstance.setTypeName(extractEClass(element));
-		changeContext.getSubModelOperations().add(createInstance);
+		String browseExpression = "var:element";
+		if (element instanceof Container) {
+			browseExpression = "var:container";
+		}
+		changeContext.setBrowseExpression(browseExpression);
+		ModelOperation subOperation;
+		if (element instanceof TableElement && ((TableElement) element).getCreateExpression() != null) {
+			subOperation = ToolFactory.eINSTANCE.createChangeContext();
+			((ChangeContext)subOperation).setBrowseExpression(vsmService.generateVPExpression(((TableElement) element).getCreateExpression()));
+		} else {
+			subOperation = ToolFactory.eINSTANCE.createCreateInstance();
+			((CreateInstance)subOperation).setReferenceName(extractExpression(element).getValue());
+			((CreateInstance)subOperation).setTypeName(extractEClass(element));
+		}
+		changeContext.getSubModelOperations().add(subOperation);
 		return changeContext;
 	}
-
+	
 	private SPExpression extractExpression(EObject element) {
 		if (element instanceof TableElement) {
 			return ((TableElement) element).getExpression();

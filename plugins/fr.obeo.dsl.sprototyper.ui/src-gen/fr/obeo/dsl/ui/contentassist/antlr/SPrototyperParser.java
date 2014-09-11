@@ -52,6 +52,8 @@ public class SPrototyperParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSPTableAccess().getGroup_3(), "rule__SPTable__Group_3__0");
 					put(grammarAccess.getSPTableAccess().getGroup_4(), "rule__SPTable__Group_4__0");
 					put(grammarAccess.getTableElementAccess().getGroup(), "rule__TableElement__Group__0");
+					put(grammarAccess.getTableElementAccess().getGroup_5(), "rule__TableElement__Group_5__0");
+					put(grammarAccess.getTableElementAccess().getGroup_5_1(), "rule__TableElement__Group_5_1__0");
 					put(grammarAccess.getTableElementAccess().getGroup_6(), "rule__TableElement__Group_6__0");
 					put(grammarAccess.getTablePropertyAccess().getGroup(), "rule__TableProperty__Group__0");
 					put(grammarAccess.getTablePropertyAccess().getGroup_2(), "rule__TableProperty__Group_2__0");
@@ -77,14 +79,20 @@ public class SPrototyperParser extends AbstractContentAssistParser {
 					put(grammarAccess.getAcceleoExpressionAccess().getGroup(), "rule__AcceleoExpression__Group__0");
 					put(grammarAccess.getVarRefAccess().getGroup(), "rule__VarRef__Group__0");
 					put(grammarAccess.getFeatureRefAccess().getGroup(), "rule__FeatureRef__Group__0");
+					put(grammarAccess.getServiceRefAccess().getGroup(), "rule__ServiceRef__Group__0");
 					put(grammarAccess.getMetamodelUsageAccess().getGroup(), "rule__MetamodelUsage__Group__0");
+					put(grammarAccess.getJavaServiceClassReferenceAccess().getGroup(), "rule__JavaServiceClassReference__Group__0");
+					put(grammarAccess.getQualifiedNameAccess().getGroup(), "rule__QualifiedName__Group__0");
+					put(grammarAccess.getQualifiedNameAccess().getGroup_1(), "rule__QualifiedName__Group_1__0");
 					put(grammarAccess.getSPrototyperAccess().getNameAssignment_1(), "rule__SPrototyper__NameAssignment_1");
 					put(grammarAccess.getSPrototyperAccess().getQualifierAssignment_3_1(), "rule__SPrototyper__QualifierAssignment_3_1");
-					put(grammarAccess.getSPrototyperAccess().getViewpointsAssignment_4(), "rule__SPrototyper__ViewpointsAssignment_4");
+					put(grammarAccess.getSPrototyperAccess().getTargetURIAssignment_5(), "rule__SPrototyper__TargetURIAssignment_5");
+					put(grammarAccess.getSPrototyperAccess().getViewpointsAssignment_6(), "rule__SPrototyper__ViewpointsAssignment_6");
 					put(grammarAccess.getSPViewpointAccess().getNameAssignment_1(), "rule__SPViewpoint__NameAssignment_1");
 					put(grammarAccess.getSPViewpointAccess().getShortcutAssignment_3_1(), "rule__SPViewpoint__ShortcutAssignment_3_1");
 					put(grammarAccess.getSPViewpointAccess().getExtensionAssignment_4_1(), "rule__SPViewpoint__ExtensionAssignment_4_1");
-					put(grammarAccess.getSPViewpointAccess().getRepresentationsAssignment_5(), "rule__SPViewpoint__RepresentationsAssignment_5");
+					put(grammarAccess.getSPViewpointAccess().getServiceClassAssignment_5(), "rule__SPViewpoint__ServiceClassAssignment_5");
+					put(grammarAccess.getSPViewpointAccess().getRepresentationsAssignment_6(), "rule__SPViewpoint__RepresentationsAssignment_6");
 					put(grammarAccess.getSPTableAccess().getNameAssignment_1(), "rule__SPTable__NameAssignment_1");
 					put(grammarAccess.getSPTableAccess().getLabelAssignment_3_1(), "rule__SPTable__LabelAssignment_3_1");
 					put(grammarAccess.getSPTableAccess().getTitleAssignment_4_1(), "rule__SPTable__TitleAssignment_4_1");
@@ -92,10 +100,11 @@ public class SPrototyperParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSPTableAccess().getRootAssignment_7(), "rule__SPTable__RootAssignment_7");
 					put(grammarAccess.getSPTableAccess().getElementsAssignment_8(), "rule__SPTable__ElementsAssignment_8");
 					put(grammarAccess.getSPTableAccess().getPropertiesAssignment_9(), "rule__SPTable__PropertiesAssignment_9");
-					put(grammarAccess.getTableElementAccess().getCreatableAssignment_0(), "rule__TableElement__CreatableAssignment_0");
-					put(grammarAccess.getTableElementAccess().getRecursiveAssignment_1(), "rule__TableElement__RecursiveAssignment_1");
-					put(grammarAccess.getTableElementAccess().getEClassAssignment_3(), "rule__TableElement__EClassAssignment_3");
-					put(grammarAccess.getTableElementAccess().getExpressionAssignment_5(), "rule__TableElement__ExpressionAssignment_5");
+					put(grammarAccess.getTableElementAccess().getRecursiveAssignment_0(), "rule__TableElement__RecursiveAssignment_0");
+					put(grammarAccess.getTableElementAccess().getEClassAssignment_2(), "rule__TableElement__EClassAssignment_2");
+					put(grammarAccess.getTableElementAccess().getExpressionAssignment_4(), "rule__TableElement__ExpressionAssignment_4");
+					put(grammarAccess.getTableElementAccess().getCreatableAssignment_5_0(), "rule__TableElement__CreatableAssignment_5_0");
+					put(grammarAccess.getTableElementAccess().getCreateExpressionAssignment_5_1_1(), "rule__TableElement__CreateExpressionAssignment_5_1_1");
 					put(grammarAccess.getTableElementAccess().getSubElementsAssignment_6_1(), "rule__TableElement__SubElementsAssignment_6_1");
 					put(grammarAccess.getTablePropertyAccess().getFeatureAssignment_1(), "rule__TableProperty__FeatureAssignment_1");
 					put(grammarAccess.getTablePropertyAccess().getLabelAssignment_2_1(), "rule__TableProperty__LabelAssignment_2_1");
@@ -138,7 +147,9 @@ public class SPrototyperParser extends AbstractContentAssistParser {
 					put(grammarAccess.getAcceleoExpressionAccess().getValueAssignment_1(), "rule__AcceleoExpression__ValueAssignment_1");
 					put(grammarAccess.getVarRefAccess().getValueAssignment_1(), "rule__VarRef__ValueAssignment_1");
 					put(grammarAccess.getFeatureRefAccess().getValueAssignment_1(), "rule__FeatureRef__ValueAssignment_1");
+					put(grammarAccess.getServiceRefAccess().getValueAssignment_1(), "rule__ServiceRef__ValueAssignment_1");
 					put(grammarAccess.getMetamodelUsageAccess().getUsageAssignment_1(), "rule__MetamodelUsage__UsageAssignment_1");
+					put(grammarAccess.getJavaServiceClassReferenceAccess().getJavaClassAssignment_1(), "rule__JavaServiceClassReference__JavaClassAssignment_1");
 					put(grammarAccess.getPreDefinedColorDefinitionAccess().getColorAssignment(), "rule__PreDefinedColorDefinition__ColorAssignment");
 				}
 			};

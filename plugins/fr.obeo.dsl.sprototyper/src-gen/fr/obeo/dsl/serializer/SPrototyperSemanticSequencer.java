@@ -8,6 +8,7 @@ import fr.obeo.dsl.sPrototyper.Container;
 import fr.obeo.dsl.sPrototyper.ContainerStyleDefinition;
 import fr.obeo.dsl.sPrototyper.FeatureRef;
 import fr.obeo.dsl.sPrototyper.GradientColorDefinition;
+import fr.obeo.dsl.sPrototyper.JavaServiceClassReference;
 import fr.obeo.dsl.sPrototyper.LabelStyleDefinition;
 import fr.obeo.dsl.sPrototyper.MetamodelUsage;
 import fr.obeo.dsl.sPrototyper.Node;
@@ -18,6 +19,7 @@ import fr.obeo.dsl.sPrototyper.SPTable;
 import fr.obeo.dsl.sPrototyper.SPViewpoint;
 import fr.obeo.dsl.sPrototyper.SPrototyper;
 import fr.obeo.dsl.sPrototyper.SPrototyperPackage;
+import fr.obeo.dsl.sPrototyper.ServiceRef;
 import fr.obeo.dsl.sPrototyper.SolidColorDefinition;
 import fr.obeo.dsl.sPrototyper.TableElement;
 import fr.obeo.dsl.sPrototyper.TableProperty;
@@ -83,6 +85,12 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 					return; 
 				}
 				else break;
+			case SPrototyperPackage.JAVA_SERVICE_CLASS_REFERENCE:
+				if(context == grammarAccess.getJavaServiceClassReferenceRule()) {
+					sequence_JavaServiceClassReference(context, (JavaServiceClassReference) semanticObject); 
+					return; 
+				}
+				else break;
 			case SPrototyperPackage.LABEL_STYLE_DEFINITION:
 				if(context == grammarAccess.getLabelStyleDefinitionRule()) {
 					sequence_LabelStyleDefinition(context, (LabelStyleDefinition) semanticObject); 
@@ -138,6 +146,13 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 			case SPrototyperPackage.SPROTOTYPER:
 				if(context == grammarAccess.getSPrototyperRule()) {
 					sequence_SPrototyper(context, (SPrototyper) semanticObject); 
+					return; 
+				}
+				else break;
+			case SPrototyperPackage.SERVICE_REF:
+				if(context == grammarAccess.getSPExpressionRule() ||
+				   context == grammarAccess.getServiceRefRule()) {
+					sequence_ServiceRef(context, (ServiceRef) semanticObject); 
 					return; 
 				}
 				else break;
@@ -260,6 +275,22 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 	
 	/**
 	 * Constraint:
+	 *     javaClass=QualifiedName
+	 */
+	protected void sequence_JavaServiceClassReference(EObject context, JavaServiceClassReference semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, SPrototyperPackage.Literals.JAVA_SERVICE_CLASS_REFERENCE__JAVA_CLASS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SPrototyperPackage.Literals.JAVA_SERVICE_CLASS_REFERENCE__JAVA_CLASS));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getJavaServiceClassReferenceAccess().getJavaClassQualifiedNameParserRuleCall_1_0(), semanticObject.getJavaClass());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (expression=SPExpression? color=SolidColorDefinition size=INT? bold?='bold'? italic?='italic'?)
 	 */
 	protected void sequence_LabelStyleDefinition(EObject context, LabelStyleDefinition semanticObject) {
@@ -352,7 +383,7 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     (name=ID shortcut=STRING? extension=STRING? representations+=SPRepresentation*)
+	 *     (name=ID shortcut=STRING? extension=STRING? serviceClass+=JavaServiceClassReference* representations+=SPRepresentation*)
 	 */
 	protected void sequence_SPViewpoint(EObject context, SPViewpoint semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -361,10 +392,26 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     (name=ID qualifier=STRING? viewpoints+=SPViewpoint*)
+	 *     (name=ID qualifier=STRING? targetURI=STRING viewpoints+=SPViewpoint*)
 	 */
 	protected void sequence_SPrototyper(EObject context, SPrototyper semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     value=ID
+	 */
+	protected void sequence_ServiceRef(EObject context, ServiceRef semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, SPrototyperPackage.Literals.SP_EXPRESSION__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SPrototyperPackage.Literals.SP_EXPRESSION__VALUE));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getServiceRefAccess().getValueIDTerminalRuleCall_1_0(), semanticObject.getValue());
+		feeder.finish();
 	}
 	
 	
@@ -386,7 +433,13 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     (creatable?='creatable'? recursive?='recursive'? eClass=[EClass|ID] expression=SPExpression subElements+=TableElement*)
+	 *     (
+	 *         recursive?='recursive'? 
+	 *         eClass=[EClass|ID] 
+	 *         expression=SPExpression 
+	 *         (creatable?='creatable' createExpression=SPExpression?)? 
+	 *         subElements+=TableElement*
+	 *     )
 	 */
 	protected void sequence_TableElement(EObject context, TableElement semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

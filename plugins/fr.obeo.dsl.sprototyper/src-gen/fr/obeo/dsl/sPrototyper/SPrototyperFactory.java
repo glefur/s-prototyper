@@ -212,6 +212,15 @@ public interface SPrototyperFactory extends EFactory
   FeatureRef createFeatureRef();
 
   /**
+   * Returns a new object of class '<em>Service Ref</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Service Ref</em>'.
+   * @generated
+   */
+  ServiceRef createServiceRef();
+
+  /**
    * Returns a new object of class '<em>Metamodel Usage</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -219,6 +228,15 @@ public interface SPrototyperFactory extends EFactory
    * @generated
    */
   MetamodelUsage createMetamodelUsage();
+
+  /**
+   * Returns a new object of class '<em>Java Service Class Reference</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Java Service Class Reference</em>'.
+   * @generated
+   */
+  JavaServiceClassReference createJavaServiceClassReference();
 
   /**
    * Returns a new object of class '<em>Color</em>'.

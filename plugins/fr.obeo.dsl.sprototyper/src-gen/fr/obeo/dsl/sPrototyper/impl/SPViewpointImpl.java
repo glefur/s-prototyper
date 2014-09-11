@@ -2,6 +2,7 @@
  */
 package fr.obeo.dsl.sPrototyper.impl;
 
+import fr.obeo.dsl.sPrototyper.JavaServiceClassReference;
 import fr.obeo.dsl.sPrototyper.SPRepresentation;
 import fr.obeo.dsl.sPrototyper.SPViewpoint;
 import fr.obeo.dsl.sPrototyper.SPrototyperPackage;
@@ -32,6 +33,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link fr.obeo.dsl.sPrototyper.impl.SPViewpointImpl#getName <em>Name</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.impl.SPViewpointImpl#getShortcut <em>Shortcut</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.impl.SPViewpointImpl#getExtension <em>Extension</em>}</li>
+ *   <li>{@link fr.obeo.dsl.sPrototyper.impl.SPViewpointImpl#getServiceClass <em>Service Class</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.impl.SPViewpointImpl#getRepresentations <em>Representations</em>}</li>
  * </ul>
  * </p>
@@ -99,6 +101,16 @@ public class SPViewpointImpl extends MinimalEObjectImpl.Container implements SPV
    * @ordered
    */
   protected String extension = EXTENSION_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getServiceClass() <em>Service Class</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getServiceClass()
+   * @generated
+   * @ordered
+   */
+  protected EList<JavaServiceClassReference> serviceClass;
 
   /**
    * The cached value of the '{@link #getRepresentations() <em>Representations</em>}' containment reference list.
@@ -205,6 +217,20 @@ public class SPViewpointImpl extends MinimalEObjectImpl.Container implements SPV
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<JavaServiceClassReference> getServiceClass()
+  {
+    if (serviceClass == null)
+    {
+      serviceClass = new EObjectContainmentEList<JavaServiceClassReference>(JavaServiceClassReference.class, this, SPrototyperPackage.SP_VIEWPOINT__SERVICE_CLASS);
+    }
+    return serviceClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<SPRepresentation> getRepresentations()
   {
     if (representations == null)
@@ -224,6 +250,8 @@ public class SPViewpointImpl extends MinimalEObjectImpl.Container implements SPV
   {
     switch (featureID)
     {
+      case SPrototyperPackage.SP_VIEWPOINT__SERVICE_CLASS:
+        return ((InternalEList<?>)getServiceClass()).basicRemove(otherEnd, msgs);
       case SPrototyperPackage.SP_VIEWPOINT__REPRESENTATIONS:
         return ((InternalEList<?>)getRepresentations()).basicRemove(otherEnd, msgs);
     }
@@ -246,6 +274,8 @@ public class SPViewpointImpl extends MinimalEObjectImpl.Container implements SPV
         return getShortcut();
       case SPrototyperPackage.SP_VIEWPOINT__EXTENSION:
         return getExtension();
+      case SPrototyperPackage.SP_VIEWPOINT__SERVICE_CLASS:
+        return getServiceClass();
       case SPrototyperPackage.SP_VIEWPOINT__REPRESENTATIONS:
         return getRepresentations();
     }
@@ -271,6 +301,10 @@ public class SPViewpointImpl extends MinimalEObjectImpl.Container implements SPV
         return;
       case SPrototyperPackage.SP_VIEWPOINT__EXTENSION:
         setExtension((String)newValue);
+        return;
+      case SPrototyperPackage.SP_VIEWPOINT__SERVICE_CLASS:
+        getServiceClass().clear();
+        getServiceClass().addAll((Collection<? extends JavaServiceClassReference>)newValue);
         return;
       case SPrototyperPackage.SP_VIEWPOINT__REPRESENTATIONS:
         getRepresentations().clear();
@@ -299,6 +333,9 @@ public class SPViewpointImpl extends MinimalEObjectImpl.Container implements SPV
       case SPrototyperPackage.SP_VIEWPOINT__EXTENSION:
         setExtension(EXTENSION_EDEFAULT);
         return;
+      case SPrototyperPackage.SP_VIEWPOINT__SERVICE_CLASS:
+        getServiceClass().clear();
+        return;
       case SPrototyperPackage.SP_VIEWPOINT__REPRESENTATIONS:
         getRepresentations().clear();
         return;
@@ -322,6 +359,8 @@ public class SPViewpointImpl extends MinimalEObjectImpl.Container implements SPV
         return SHORTCUT_EDEFAULT == null ? shortcut != null : !SHORTCUT_EDEFAULT.equals(shortcut);
       case SPrototyperPackage.SP_VIEWPOINT__EXTENSION:
         return EXTENSION_EDEFAULT == null ? extension != null : !EXTENSION_EDEFAULT.equals(extension);
+      case SPrototyperPackage.SP_VIEWPOINT__SERVICE_CLASS:
+        return serviceClass != null && !serviceClass.isEmpty();
       case SPrototyperPackage.SP_VIEWPOINT__REPRESENTATIONS:
         return representations != null && !representations.isEmpty();
     }

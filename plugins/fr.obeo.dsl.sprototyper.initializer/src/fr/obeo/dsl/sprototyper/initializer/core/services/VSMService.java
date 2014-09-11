@@ -8,8 +8,13 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.edit.domain.EditingDomain;
 
+import fr.obeo.dsl.sPrototyper.AcceleoExpression;
 import fr.obeo.dsl.sPrototyper.Color;
+import fr.obeo.dsl.sPrototyper.FeatureRef;
 import fr.obeo.dsl.sPrototyper.PreDefinedColorDefinition;
+import fr.obeo.dsl.sPrototyper.SPExpression;
+import fr.obeo.dsl.sPrototyper.ServiceRef;
+import fr.obeo.dsl.sPrototyper.VarRef;
 import fr.obeo.dsl.viewpoint.description.ColorDescription;
 import fr.obeo.dsl.viewpoint.description.Environment;
 import fr.obeo.dsl.viewpoint.description.Layer;
@@ -28,7 +33,7 @@ public class VSMService {
 	public VSMService(EditingDomain editingDomain) {
 		this.editingDomain = editingDomain;
 	}
-
+	
 	public Layer getLayer(EObject parent) {
 		if (parent instanceof Layer) {
 			return (Layer) parent;
@@ -66,6 +71,19 @@ public class VSMService {
 			}
 		}
 		return environment;
+	}
+
+	public String generateVPExpression(SPExpression expression) {
+		if (expression instanceof AcceleoExpression) {
+			return '[' + expression.getValue() + "/]";
+		} else if (expression instanceof FeatureRef) {
+			return "feature:" + expression.getValue();
+		} else if (expression instanceof VarRef) {
+			return "var:" + expression.getValue();
+		} else if (expression instanceof ServiceRef) {
+			return "service:" + expression.getValue();
+		}
+		return expression.toString();
 	}
 
 }

@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link fr.obeo.dsl.sPrototyper.SPrototyper#getName <em>Name</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.SPrototyper#getQualifier <em>Qualifier</em>}</li>
+ *   <li>{@link fr.obeo.dsl.sPrototyper.SPrototyper#getTargetURI <em>Target URI</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.SPrototyper#getViewpoints <em>Viewpoints</em>}</li>
  * </ul>
  * </p>
@@ -77,6 +78,32 @@ public interface SPrototyper extends EObject
    * @generated
    */
   void setQualifier(String value);
+
+  /**
+   * Returns the value of the '<em><b>Target URI</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Target URI</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Target URI</em>' attribute.
+   * @see #setTargetURI(String)
+   * @see fr.obeo.dsl.sPrototyper.SPrototyperPackage#getSPrototyper_TargetURI()
+   * @model
+   * @generated
+   */
+  String getTargetURI();
+
+  /**
+   * Sets the value of the '{@link fr.obeo.dsl.sPrototyper.SPrototyper#getTargetURI <em>Target URI</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Target URI</em>' attribute.
+   * @see #getTargetURI()
+   * @generated
+   */
+  void setTargetURI(String value);
 
   /**
    * Returns the value of the '<em><b>Viewpoints</b></em>' containment reference list.

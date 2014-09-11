@@ -10,6 +10,7 @@ import fr.obeo.dsl.sPrototyper.ContainerStyleDefinition;
 import fr.obeo.dsl.sPrototyper.DiagramElement;
 import fr.obeo.dsl.sPrototyper.FeatureRef;
 import fr.obeo.dsl.sPrototyper.GradientColorDefinition;
+import fr.obeo.dsl.sPrototyper.JavaServiceClassReference;
 import fr.obeo.dsl.sPrototyper.LabelStyleDefinition;
 import fr.obeo.dsl.sPrototyper.MetamodelUsage;
 import fr.obeo.dsl.sPrototyper.Node;
@@ -24,6 +25,7 @@ import fr.obeo.dsl.sPrototyper.SPViewpoint;
 import fr.obeo.dsl.sPrototyper.SPrototyper;
 import fr.obeo.dsl.sPrototyper.SPrototyperFactory;
 import fr.obeo.dsl.sPrototyper.SPrototyperPackage;
+import fr.obeo.dsl.sPrototyper.ServiceRef;
 import fr.obeo.dsl.sPrototyper.SolidColorDefinition;
 import fr.obeo.dsl.sPrototyper.TableElement;
 import fr.obeo.dsl.sPrototyper.TableProperty;
@@ -197,7 +199,21 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass serviceRefEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass metamodelUsageEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass javaServiceClassReferenceEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -318,9 +334,19 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getSPrototyper_TargetURI()
+  {
+    return (EAttribute)sPrototyperEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getSPrototyper_Viewpoints()
   {
-    return (EReference)sPrototyperEClass.getEStructuralFeatures().get(2);
+    return (EReference)sPrototyperEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -368,9 +394,19 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getSPViewpoint_Representations()
+  public EReference getSPViewpoint_ServiceClass()
   {
     return (EReference)spViewpointEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getSPViewpoint_Representations()
+  {
+    return (EReference)spViewpointEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -478,7 +514,7 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getTableElement_Creatable()
+  public EAttribute getTableElement_Recursive()
   {
     return (EAttribute)tableElementEClass.getEStructuralFeatures().get(0);
   }
@@ -488,19 +524,9 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getTableElement_Recursive()
-  {
-    return (EAttribute)tableElementEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getTableElement_EClass()
   {
-    return (EReference)tableElementEClass.getEStructuralFeatures().get(2);
+    return (EReference)tableElementEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -510,7 +536,27 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    */
   public EReference getTableElement_Expression()
   {
-    return (EReference)tableElementEClass.getEStructuralFeatures().get(3);
+    return (EReference)tableElementEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTableElement_Creatable()
+  {
+    return (EAttribute)tableElementEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTableElement_CreateExpression()
+  {
+    return (EReference)tableElementEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -520,7 +566,7 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    */
   public EReference getTableElement_SubElements()
   {
-    return (EReference)tableElementEClass.getEStructuralFeatures().get(4);
+    return (EReference)tableElementEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -1008,6 +1054,16 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getServiceRef()
+  {
+    return serviceRefEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getMetamodelUsage()
   {
     return metamodelUsageEClass;
@@ -1021,6 +1077,26 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
   public EReference getMetamodelUsage_Usage()
   {
     return (EReference)metamodelUsageEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getJavaServiceClassReference()
+  {
+    return javaServiceClassReferenceEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getJavaServiceClassReference_JavaClass()
+  {
+    return (EAttribute)javaServiceClassReferenceEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1096,12 +1172,14 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
     sPrototyperEClass = createEClass(SPROTOTYPER);
     createEAttribute(sPrototyperEClass, SPROTOTYPER__NAME);
     createEAttribute(sPrototyperEClass, SPROTOTYPER__QUALIFIER);
+    createEAttribute(sPrototyperEClass, SPROTOTYPER__TARGET_URI);
     createEReference(sPrototyperEClass, SPROTOTYPER__VIEWPOINTS);
 
     spViewpointEClass = createEClass(SP_VIEWPOINT);
     createEAttribute(spViewpointEClass, SP_VIEWPOINT__NAME);
     createEAttribute(spViewpointEClass, SP_VIEWPOINT__SHORTCUT);
     createEAttribute(spViewpointEClass, SP_VIEWPOINT__EXTENSION);
+    createEReference(spViewpointEClass, SP_VIEWPOINT__SERVICE_CLASS);
     createEReference(spViewpointEClass, SP_VIEWPOINT__REPRESENTATIONS);
 
     spRepresentationEClass = createEClass(SP_REPRESENTATION);
@@ -1116,10 +1194,11 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
     createEReference(spTableEClass, SP_TABLE__PROPERTIES);
 
     tableElementEClass = createEClass(TABLE_ELEMENT);
-    createEAttribute(tableElementEClass, TABLE_ELEMENT__CREATABLE);
     createEAttribute(tableElementEClass, TABLE_ELEMENT__RECURSIVE);
     createEReference(tableElementEClass, TABLE_ELEMENT__ECLASS);
     createEReference(tableElementEClass, TABLE_ELEMENT__EXPRESSION);
+    createEAttribute(tableElementEClass, TABLE_ELEMENT__CREATABLE);
+    createEReference(tableElementEClass, TABLE_ELEMENT__CREATE_EXPRESSION);
     createEReference(tableElementEClass, TABLE_ELEMENT__SUB_ELEMENTS);
 
     tablePropertyEClass = createEClass(TABLE_PROPERTY);
@@ -1186,8 +1265,13 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
 
     featureRefEClass = createEClass(FEATURE_REF);
 
+    serviceRefEClass = createEClass(SERVICE_REF);
+
     metamodelUsageEClass = createEClass(METAMODEL_USAGE);
     createEReference(metamodelUsageEClass, METAMODEL_USAGE__USAGE);
+
+    javaServiceClassReferenceEClass = createEClass(JAVA_SERVICE_CLASS_REFERENCE);
+    createEAttribute(javaServiceClassReferenceEClass, JAVA_SERVICE_CLASS_REFERENCE__JAVA_CLASS);
 
     colorEClass = createEClass(COLOR);
 
@@ -1236,18 +1320,21 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
     acceleoExpressionEClass.getESuperTypes().add(this.getSPExpression());
     varRefEClass.getESuperTypes().add(this.getSPExpression());
     featureRefEClass.getESuperTypes().add(this.getSPExpression());
+    serviceRefEClass.getESuperTypes().add(this.getSPExpression());
     preDefinedColorDefinitionEClass.getESuperTypes().add(this.getColor());
 
     // Initialize classes and features; add operations and parameters
     initEClass(sPrototyperEClass, SPrototyper.class, "SPrototyper", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getSPrototyper_Name(), ecorePackage.getEString(), "name", null, 0, 1, SPrototyper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getSPrototyper_Qualifier(), ecorePackage.getEString(), "qualifier", null, 0, 1, SPrototyper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getSPrototyper_TargetURI(), ecorePackage.getEString(), "targetURI", null, 0, 1, SPrototyper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getSPrototyper_Viewpoints(), this.getSPViewpoint(), null, "viewpoints", null, 0, -1, SPrototyper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(spViewpointEClass, SPViewpoint.class, "SPViewpoint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getSPViewpoint_Name(), ecorePackage.getEString(), "name", null, 0, 1, SPViewpoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getSPViewpoint_Shortcut(), ecorePackage.getEString(), "shortcut", null, 0, 1, SPViewpoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getSPViewpoint_Extension(), ecorePackage.getEString(), "extension", null, 0, 1, SPViewpoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSPViewpoint_ServiceClass(), this.getJavaServiceClassReference(), null, "serviceClass", null, 0, -1, SPViewpoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getSPViewpoint_Representations(), this.getSPRepresentation(), null, "representations", null, 0, -1, SPViewpoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(spRepresentationEClass, SPRepresentation.class, "SPRepresentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1262,10 +1349,11 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
     initEReference(getSPTable_Properties(), this.getTableProperty(), null, "properties", null, 0, -1, SPTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(tableElementEClass, TableElement.class, "TableElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getTableElement_Creatable(), ecorePackage.getEBoolean(), "creatable", null, 0, 1, TableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTableElement_Recursive(), ecorePackage.getEBoolean(), "recursive", null, 0, 1, TableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTableElement_EClass(), ecorePackage.getEClass(), null, "eClass", null, 0, 1, TableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTableElement_Expression(), this.getSPExpression(), null, "expression", null, 0, 1, TableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTableElement_Creatable(), ecorePackage.getEBoolean(), "creatable", null, 0, 1, TableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTableElement_CreateExpression(), this.getSPExpression(), null, "createExpression", null, 0, 1, TableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTableElement_SubElements(), this.getTableElement(), null, "subElements", null, 0, -1, TableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(tablePropertyEClass, TableProperty.class, "TableProperty", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1332,8 +1420,13 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
 
     initEClass(featureRefEClass, FeatureRef.class, "FeatureRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+    initEClass(serviceRefEClass, ServiceRef.class, "ServiceRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
     initEClass(metamodelUsageEClass, MetamodelUsage.class, "MetamodelUsage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getMetamodelUsage_Usage(), ecorePackage.getEPackage(), null, "usage", null, 0, 1, MetamodelUsage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(javaServiceClassReferenceEClass, JavaServiceClassReference.class, "JavaServiceClassReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getJavaServiceClassReference_JavaClass(), ecorePackage.getEString(), "javaClass", null, 0, 1, JavaServiceClassReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(colorEClass, Color.class, "Color", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

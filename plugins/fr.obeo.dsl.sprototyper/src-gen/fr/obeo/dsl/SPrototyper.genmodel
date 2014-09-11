@@ -38,12 +38,14 @@
     <genClasses ecoreClass="SPrototyper.ecore#//SPrototyper">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//SPrototyper/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//SPrototyper/qualifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//SPrototyper/targetURI"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//SPrototyper/viewpoints"/>
     </genClasses>
     <genClasses ecoreClass="SPrototyper.ecore#//SPViewpoint">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//SPViewpoint/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//SPViewpoint/shortcut"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//SPViewpoint/extension"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//SPViewpoint/serviceClass"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//SPViewpoint/representations"/>
     </genClasses>
     <genClasses ecoreClass="SPrototyper.ecore#//SPRepresentation">
@@ -58,10 +60,11 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//SPTable/properties"/>
     </genClasses>
     <genClasses ecoreClass="SPrototyper.ecore#//TableElement">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//TableElement/creatable"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//TableElement/recursive"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//TableElement/eClass"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//TableElement/expression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//TableElement/creatable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//TableElement/createExpression"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//TableElement/subElements"/>
     </genClasses>
     <genClasses ecoreClass="SPrototyper.ecore#//TableProperty">
@@ -124,8 +127,12 @@
     <genClasses ecoreClass="SPrototyper.ecore#//AcceleoExpression"/>
     <genClasses ecoreClass="SPrototyper.ecore#//VarRef"/>
     <genClasses ecoreClass="SPrototyper.ecore#//FeatureRef"/>
+    <genClasses ecoreClass="SPrototyper.ecore#//ServiceRef"/>
     <genClasses ecoreClass="SPrototyper.ecore#//MetamodelUsage">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//MetamodelUsage/usage"/>
+    </genClasses>
+    <genClasses ecoreClass="SPrototyper.ecore#//JavaServiceClassReference">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SPrototyper.ecore#//JavaServiceClassReference/javaClass"/>
     </genClasses>
     <genClasses ecoreClass="SPrototyper.ecore#//Color"/>
     <genClasses ecoreClass="SPrototyper.ecore#//PreDefinedColorDefinition">

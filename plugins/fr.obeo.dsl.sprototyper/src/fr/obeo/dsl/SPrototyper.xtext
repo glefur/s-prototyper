@@ -7,6 +7,7 @@ import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 SPrototyper:
 	'proto' name=ID '{'
 		('qualifier' qualifier=STRING)?
+		'generate' targetURI=STRING
 		viewpoints+=SPViewpoint*
 	'}'
 ;
@@ -15,6 +16,7 @@ SPViewpoint:
 	'viewpoint' name=ID  '{'
 		('shortcut' shortcut=STRING)?
 		('ext' extension=STRING)?
+		(serviceClass+=JavaServiceClassReference)*
 		representations+=SPRepresentation*	
 	'}'
 ;
@@ -35,7 +37,7 @@ SPTable:
 ;
 
 TableElement:
-	(creatable ?= 'creatable')? (recursive ?= 'recursive')? 'element' eClass=[ecore::EClass | ID] 'accessibleThrough' expression=SPExpression ('{'
+	 (recursive ?= 'recursive')? 'element' eClass=[ecore::EClass | ID] 'accessibleThrough' expression=SPExpression (creatable ?= 'creatable' ('via' createExpression=RequestOrCreateExpression)?)? ('{' 
 		subElements +=TableElement+
 	'}')?
 ;
@@ -109,7 +111,15 @@ BorderStyleDefinition:
 ;
 
 SPExpression:
-	AcceleoExpression | VarRef | FeatureRef
+	RequestExpression | RequestOrCreateExpression 
+;
+
+RequestExpression:
+	VarRef | FeatureRef
+;
+
+RequestOrCreateExpression:
+	AcceleoExpression | ServiceRef
 ;
 
 AcceleoExpression:
@@ -124,8 +134,16 @@ FeatureRef:
 	'feature:' value=ID
 ;
 
+ServiceRef:
+	'service:' value=ID
+;
+
 MetamodelUsage:
 	'metamodel' usage=[ecore::EPackage|STRING]
+;
+
+JavaServiceClassReference:
+	'use' javaClass=QualifiedName
 ;
 
 Color:
@@ -149,3 +167,6 @@ enum PreDefinedColor:
 	| YELLOW='yellow' | LIGHT_YELLOW='light yellow' | DARK_YELLOW='dark yellow'
 ;
 
+QualifiedName:
+	ID ('.' ID)*
+;

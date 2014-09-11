@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link fr.obeo.dsl.sPrototyper.SPViewpoint#getName <em>Name</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.SPViewpoint#getShortcut <em>Shortcut</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.SPViewpoint#getExtension <em>Extension</em>}</li>
+ *   <li>{@link fr.obeo.dsl.sPrototyper.SPViewpoint#getServiceClass <em>Service Class</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.SPViewpoint#getRepresentations <em>Representations</em>}</li>
  * </ul>
  * </p>
@@ -104,6 +105,22 @@ public interface SPViewpoint extends EObject
    * @generated
    */
   void setExtension(String value);
+
+  /**
+   * Returns the value of the '<em><b>Service Class</b></em>' containment reference list.
+   * The list contents are of type {@link fr.obeo.dsl.sPrototyper.JavaServiceClassReference}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Service Class</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Service Class</em>' containment reference list.
+   * @see fr.obeo.dsl.sPrototyper.SPrototyperPackage#getSPViewpoint_ServiceClass()
+   * @model containment="true"
+   * @generated
+   */
+  EList<JavaServiceClassReference> getServiceClass();
 
   /**
    * Returns the value of the '<em><b>Representations</b></em>' containment reference list.

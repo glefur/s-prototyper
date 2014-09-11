@@ -29,10 +29,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link fr.obeo.dsl.sPrototyper.impl.TableElementImpl#isCreatable <em>Creatable</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.impl.TableElementImpl#isRecursive <em>Recursive</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.impl.TableElementImpl#getEClass <em>EClass</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.impl.TableElementImpl#getExpression <em>Expression</em>}</li>
+ *   <li>{@link fr.obeo.dsl.sPrototyper.impl.TableElementImpl#isCreatable <em>Creatable</em>}</li>
+ *   <li>{@link fr.obeo.dsl.sPrototyper.impl.TableElementImpl#getCreateExpression <em>Create Expression</em>}</li>
  *   <li>{@link fr.obeo.dsl.sPrototyper.impl.TableElementImpl#getSubElements <em>Sub Elements</em>}</li>
  * </ul>
  * </p>
@@ -41,26 +42,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class TableElementImpl extends MinimalEObjectImpl.Container implements TableElement
 {
-  /**
-   * The default value of the '{@link #isCreatable() <em>Creatable</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isCreatable()
-   * @generated
-   * @ordered
-   */
-  protected static final boolean CREATABLE_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isCreatable() <em>Creatable</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isCreatable()
-   * @generated
-   * @ordered
-   */
-  protected boolean creatable = CREATABLE_EDEFAULT;
-
   /**
    * The default value of the '{@link #isRecursive() <em>Recursive</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -102,6 +83,36 @@ public class TableElementImpl extends MinimalEObjectImpl.Container implements Ta
   protected SPExpression expression;
 
   /**
+   * The default value of the '{@link #isCreatable() <em>Creatable</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isCreatable()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean CREATABLE_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isCreatable() <em>Creatable</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isCreatable()
+   * @generated
+   * @ordered
+   */
+  protected boolean creatable = CREATABLE_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getCreateExpression() <em>Create Expression</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCreateExpression()
+   * @generated
+   * @ordered
+   */
+  protected SPExpression createExpression;
+
+  /**
    * The cached value of the '{@link #getSubElements() <em>Sub Elements</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -130,29 +141,6 @@ public class TableElementImpl extends MinimalEObjectImpl.Container implements Ta
   protected EClass eStaticClass()
   {
     return SPrototyperPackage.Literals.TABLE_ELEMENT;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public boolean isCreatable()
-  {
-    return creatable;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setCreatable(boolean newCreatable)
-  {
-    boolean oldCreatable = creatable;
-    creatable = newCreatable;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SPrototyperPackage.TABLE_ELEMENT__CREATABLE, oldCreatable, creatable));
   }
 
   /**
@@ -274,6 +262,77 @@ public class TableElementImpl extends MinimalEObjectImpl.Container implements Ta
    * <!-- end-user-doc -->
    * @generated
    */
+  public boolean isCreatable()
+  {
+    return creatable;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setCreatable(boolean newCreatable)
+  {
+    boolean oldCreatable = creatable;
+    creatable = newCreatable;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SPrototyperPackage.TABLE_ELEMENT__CREATABLE, oldCreatable, creatable));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SPExpression getCreateExpression()
+  {
+    return createExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetCreateExpression(SPExpression newCreateExpression, NotificationChain msgs)
+  {
+    SPExpression oldCreateExpression = createExpression;
+    createExpression = newCreateExpression;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SPrototyperPackage.TABLE_ELEMENT__CREATE_EXPRESSION, oldCreateExpression, newCreateExpression);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setCreateExpression(SPExpression newCreateExpression)
+  {
+    if (newCreateExpression != createExpression)
+    {
+      NotificationChain msgs = null;
+      if (createExpression != null)
+        msgs = ((InternalEObject)createExpression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SPrototyperPackage.TABLE_ELEMENT__CREATE_EXPRESSION, null, msgs);
+      if (newCreateExpression != null)
+        msgs = ((InternalEObject)newCreateExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SPrototyperPackage.TABLE_ELEMENT__CREATE_EXPRESSION, null, msgs);
+      msgs = basicSetCreateExpression(newCreateExpression, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SPrototyperPackage.TABLE_ELEMENT__CREATE_EXPRESSION, newCreateExpression, newCreateExpression));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<TableElement> getSubElements()
   {
     if (subElements == null)
@@ -295,6 +354,8 @@ public class TableElementImpl extends MinimalEObjectImpl.Container implements Ta
     {
       case SPrototyperPackage.TABLE_ELEMENT__EXPRESSION:
         return basicSetExpression(null, msgs);
+      case SPrototyperPackage.TABLE_ELEMENT__CREATE_EXPRESSION:
+        return basicSetCreateExpression(null, msgs);
       case SPrototyperPackage.TABLE_ELEMENT__SUB_ELEMENTS:
         return ((InternalEList<?>)getSubElements()).basicRemove(otherEnd, msgs);
     }
@@ -311,8 +372,6 @@ public class TableElementImpl extends MinimalEObjectImpl.Container implements Ta
   {
     switch (featureID)
     {
-      case SPrototyperPackage.TABLE_ELEMENT__CREATABLE:
-        return isCreatable();
       case SPrototyperPackage.TABLE_ELEMENT__RECURSIVE:
         return isRecursive();
       case SPrototyperPackage.TABLE_ELEMENT__ECLASS:
@@ -320,6 +379,10 @@ public class TableElementImpl extends MinimalEObjectImpl.Container implements Ta
         return basicGetEClass();
       case SPrototyperPackage.TABLE_ELEMENT__EXPRESSION:
         return getExpression();
+      case SPrototyperPackage.TABLE_ELEMENT__CREATABLE:
+        return isCreatable();
+      case SPrototyperPackage.TABLE_ELEMENT__CREATE_EXPRESSION:
+        return getCreateExpression();
       case SPrototyperPackage.TABLE_ELEMENT__SUB_ELEMENTS:
         return getSubElements();
     }
@@ -337,9 +400,6 @@ public class TableElementImpl extends MinimalEObjectImpl.Container implements Ta
   {
     switch (featureID)
     {
-      case SPrototyperPackage.TABLE_ELEMENT__CREATABLE:
-        setCreatable((Boolean)newValue);
-        return;
       case SPrototyperPackage.TABLE_ELEMENT__RECURSIVE:
         setRecursive((Boolean)newValue);
         return;
@@ -348,6 +408,12 @@ public class TableElementImpl extends MinimalEObjectImpl.Container implements Ta
         return;
       case SPrototyperPackage.TABLE_ELEMENT__EXPRESSION:
         setExpression((SPExpression)newValue);
+        return;
+      case SPrototyperPackage.TABLE_ELEMENT__CREATABLE:
+        setCreatable((Boolean)newValue);
+        return;
+      case SPrototyperPackage.TABLE_ELEMENT__CREATE_EXPRESSION:
+        setCreateExpression((SPExpression)newValue);
         return;
       case SPrototyperPackage.TABLE_ELEMENT__SUB_ELEMENTS:
         getSubElements().clear();
@@ -367,9 +433,6 @@ public class TableElementImpl extends MinimalEObjectImpl.Container implements Ta
   {
     switch (featureID)
     {
-      case SPrototyperPackage.TABLE_ELEMENT__CREATABLE:
-        setCreatable(CREATABLE_EDEFAULT);
-        return;
       case SPrototyperPackage.TABLE_ELEMENT__RECURSIVE:
         setRecursive(RECURSIVE_EDEFAULT);
         return;
@@ -378,6 +441,12 @@ public class TableElementImpl extends MinimalEObjectImpl.Container implements Ta
         return;
       case SPrototyperPackage.TABLE_ELEMENT__EXPRESSION:
         setExpression((SPExpression)null);
+        return;
+      case SPrototyperPackage.TABLE_ELEMENT__CREATABLE:
+        setCreatable(CREATABLE_EDEFAULT);
+        return;
+      case SPrototyperPackage.TABLE_ELEMENT__CREATE_EXPRESSION:
+        setCreateExpression((SPExpression)null);
         return;
       case SPrototyperPackage.TABLE_ELEMENT__SUB_ELEMENTS:
         getSubElements().clear();
@@ -396,14 +465,16 @@ public class TableElementImpl extends MinimalEObjectImpl.Container implements Ta
   {
     switch (featureID)
     {
-      case SPrototyperPackage.TABLE_ELEMENT__CREATABLE:
-        return creatable != CREATABLE_EDEFAULT;
       case SPrototyperPackage.TABLE_ELEMENT__RECURSIVE:
         return recursive != RECURSIVE_EDEFAULT;
       case SPrototyperPackage.TABLE_ELEMENT__ECLASS:
         return eClass != null;
       case SPrototyperPackage.TABLE_ELEMENT__EXPRESSION:
         return expression != null;
+      case SPrototyperPackage.TABLE_ELEMENT__CREATABLE:
+        return creatable != CREATABLE_EDEFAULT;
+      case SPrototyperPackage.TABLE_ELEMENT__CREATE_EXPRESSION:
+        return createExpression != null;
       case SPrototyperPackage.TABLE_ELEMENT__SUB_ELEMENTS:
         return subElements != null && !subElements.isEmpty();
     }
@@ -421,10 +492,10 @@ public class TableElementImpl extends MinimalEObjectImpl.Container implements Ta
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (creatable: ");
-    result.append(creatable);
-    result.append(", recursive: ");
+    result.append(" (recursive: ");
     result.append(recursive);
+    result.append(", creatable: ");
+    result.append(creatable);
     result.append(')');
     return result.toString();
   }

@@ -86,13 +86,22 @@ public interface SPrototyperPackage extends EPackage
   int SPROTOTYPER__QUALIFIER = 1;
 
   /**
+   * The feature id for the '<em><b>Target URI</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SPROTOTYPER__TARGET_URI = 2;
+
+  /**
    * The feature id for the '<em><b>Viewpoints</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SPROTOTYPER__VIEWPOINTS = 2;
+  int SPROTOTYPER__VIEWPOINTS = 3;
 
   /**
    * The number of structural features of the '<em>SPrototyper</em>' class.
@@ -101,7 +110,7 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SPROTOTYPER_FEATURE_COUNT = 3;
+  int SPROTOTYPER_FEATURE_COUNT = 4;
 
   /**
    * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.SPViewpointImpl <em>SP Viewpoint</em>}' class.
@@ -141,13 +150,22 @@ public interface SPrototyperPackage extends EPackage
   int SP_VIEWPOINT__EXTENSION = 2;
 
   /**
+   * The feature id for the '<em><b>Service Class</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SP_VIEWPOINT__SERVICE_CLASS = 3;
+
+  /**
    * The feature id for the '<em><b>Representations</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SP_VIEWPOINT__REPRESENTATIONS = 3;
+  int SP_VIEWPOINT__REPRESENTATIONS = 4;
 
   /**
    * The number of structural features of the '<em>SP Viewpoint</em>' class.
@@ -156,7 +174,7 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SP_VIEWPOINT_FEATURE_COUNT = 4;
+  int SP_VIEWPOINT_FEATURE_COUNT = 5;
 
   /**
    * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.SPRepresentationImpl <em>SP Representation</em>}' class.
@@ -297,22 +315,13 @@ public interface SPrototyperPackage extends EPackage
   int TABLE_ELEMENT = 4;
 
   /**
-   * The feature id for the '<em><b>Creatable</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TABLE_ELEMENT__CREATABLE = 0;
-
-  /**
    * The feature id for the '<em><b>Recursive</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TABLE_ELEMENT__RECURSIVE = 1;
+  int TABLE_ELEMENT__RECURSIVE = 0;
 
   /**
    * The feature id for the '<em><b>EClass</b></em>' reference.
@@ -321,7 +330,7 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TABLE_ELEMENT__ECLASS = 2;
+  int TABLE_ELEMENT__ECLASS = 1;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -330,7 +339,25 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TABLE_ELEMENT__EXPRESSION = 3;
+  int TABLE_ELEMENT__EXPRESSION = 2;
+
+  /**
+   * The feature id for the '<em><b>Creatable</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TABLE_ELEMENT__CREATABLE = 3;
+
+  /**
+   * The feature id for the '<em><b>Create Expression</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TABLE_ELEMENT__CREATE_EXPRESSION = 4;
 
   /**
    * The feature id for the '<em><b>Sub Elements</b></em>' containment reference list.
@@ -339,7 +366,7 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TABLE_ELEMENT__SUB_ELEMENTS = 4;
+  int TABLE_ELEMENT__SUB_ELEMENTS = 5;
 
   /**
    * The number of structural features of the '<em>Table Element</em>' class.
@@ -348,7 +375,7 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TABLE_ELEMENT_FEATURE_COUNT = 5;
+  int TABLE_ELEMENT_FEATURE_COUNT = 6;
 
   /**
    * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.TablePropertyImpl <em>Table Property</em>}' class.
@@ -1069,6 +1096,34 @@ public interface SPrototyperPackage extends EPackage
   int FEATURE_REF_FEATURE_COUNT = SP_EXPRESSION_FEATURE_COUNT + 0;
 
   /**
+   * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.ServiceRefImpl <em>Service Ref</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.obeo.dsl.sPrototyper.impl.ServiceRefImpl
+   * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getServiceRef()
+   * @generated
+   */
+  int SERVICE_REF = 21;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SERVICE_REF__VALUE = SP_EXPRESSION__VALUE;
+
+  /**
+   * The number of structural features of the '<em>Service Ref</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SERVICE_REF_FEATURE_COUNT = SP_EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
    * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.MetamodelUsageImpl <em>Metamodel Usage</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1076,7 +1131,7 @@ public interface SPrototyperPackage extends EPackage
    * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getMetamodelUsage()
    * @generated
    */
-  int METAMODEL_USAGE = 21;
+  int METAMODEL_USAGE = 22;
 
   /**
    * The feature id for the '<em><b>Usage</b></em>' reference.
@@ -1097,6 +1152,34 @@ public interface SPrototyperPackage extends EPackage
   int METAMODEL_USAGE_FEATURE_COUNT = 1;
 
   /**
+   * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.JavaServiceClassReferenceImpl <em>Java Service Class Reference</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.obeo.dsl.sPrototyper.impl.JavaServiceClassReferenceImpl
+   * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getJavaServiceClassReference()
+   * @generated
+   */
+  int JAVA_SERVICE_CLASS_REFERENCE = 23;
+
+  /**
+   * The feature id for the '<em><b>Java Class</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int JAVA_SERVICE_CLASS_REFERENCE__JAVA_CLASS = 0;
+
+  /**
+   * The number of structural features of the '<em>Java Service Class Reference</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int JAVA_SERVICE_CLASS_REFERENCE_FEATURE_COUNT = 1;
+
+  /**
    * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.ColorImpl <em>Color</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1104,7 +1187,7 @@ public interface SPrototyperPackage extends EPackage
    * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getColor()
    * @generated
    */
-  int COLOR = 22;
+  int COLOR = 24;
 
   /**
    * The number of structural features of the '<em>Color</em>' class.
@@ -1123,7 +1206,7 @@ public interface SPrototyperPackage extends EPackage
    * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getPreDefinedColorDefinition()
    * @generated
    */
-  int PRE_DEFINED_COLOR_DEFINITION = 23;
+  int PRE_DEFINED_COLOR_DEFINITION = 25;
 
   /**
    * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -1151,7 +1234,7 @@ public interface SPrototyperPackage extends EPackage
    * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getPreDefinedColor()
    * @generated
    */
-  int PRE_DEFINED_COLOR = 24;
+  int PRE_DEFINED_COLOR = 26;
 
 
   /**
@@ -1185,6 +1268,17 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    */
   EAttribute getSPrototyper_Qualifier();
+
+  /**
+   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.SPrototyper#getTargetURI <em>Target URI</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Target URI</em>'.
+   * @see fr.obeo.dsl.sPrototyper.SPrototyper#getTargetURI()
+   * @see #getSPrototyper()
+   * @generated
+   */
+  EAttribute getSPrototyper_TargetURI();
 
   /**
    * Returns the meta object for the containment reference list '{@link fr.obeo.dsl.sPrototyper.SPrototyper#getViewpoints <em>Viewpoints</em>}'.
@@ -1239,6 +1333,17 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    */
   EAttribute getSPViewpoint_Extension();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link fr.obeo.dsl.sPrototyper.SPViewpoint#getServiceClass <em>Service Class</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Service Class</em>'.
+   * @see fr.obeo.dsl.sPrototyper.SPViewpoint#getServiceClass()
+   * @see #getSPViewpoint()
+   * @generated
+   */
+  EReference getSPViewpoint_ServiceClass();
 
   /**
    * Returns the meta object for the containment reference list '{@link fr.obeo.dsl.sPrototyper.SPViewpoint#getRepresentations <em>Representations</em>}'.
@@ -1359,17 +1464,6 @@ public interface SPrototyperPackage extends EPackage
   EClass getTableElement();
 
   /**
-   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.TableElement#isCreatable <em>Creatable</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Creatable</em>'.
-   * @see fr.obeo.dsl.sPrototyper.TableElement#isCreatable()
-   * @see #getTableElement()
-   * @generated
-   */
-  EAttribute getTableElement_Creatable();
-
-  /**
    * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.TableElement#isRecursive <em>Recursive</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1401,6 +1495,28 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    */
   EReference getTableElement_Expression();
+
+  /**
+   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.TableElement#isCreatable <em>Creatable</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Creatable</em>'.
+   * @see fr.obeo.dsl.sPrototyper.TableElement#isCreatable()
+   * @see #getTableElement()
+   * @generated
+   */
+  EAttribute getTableElement_Creatable();
+
+  /**
+   * Returns the meta object for the containment reference '{@link fr.obeo.dsl.sPrototyper.TableElement#getCreateExpression <em>Create Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Create Expression</em>'.
+   * @see fr.obeo.dsl.sPrototyper.TableElement#getCreateExpression()
+   * @see #getTableElement()
+   * @generated
+   */
+  EReference getTableElement_CreateExpression();
 
   /**
    * Returns the meta object for the containment reference list '{@link fr.obeo.dsl.sPrototyper.TableElement#getSubElements <em>Sub Elements</em>}'.
@@ -1926,6 +2042,16 @@ public interface SPrototyperPackage extends EPackage
   EClass getFeatureRef();
 
   /**
+   * Returns the meta object for class '{@link fr.obeo.dsl.sPrototyper.ServiceRef <em>Service Ref</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Service Ref</em>'.
+   * @see fr.obeo.dsl.sPrototyper.ServiceRef
+   * @generated
+   */
+  EClass getServiceRef();
+
+  /**
    * Returns the meta object for class '{@link fr.obeo.dsl.sPrototyper.MetamodelUsage <em>Metamodel Usage</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1945,6 +2071,27 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    */
   EReference getMetamodelUsage_Usage();
+
+  /**
+   * Returns the meta object for class '{@link fr.obeo.dsl.sPrototyper.JavaServiceClassReference <em>Java Service Class Reference</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Java Service Class Reference</em>'.
+   * @see fr.obeo.dsl.sPrototyper.JavaServiceClassReference
+   * @generated
+   */
+  EClass getJavaServiceClassReference();
+
+  /**
+   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.JavaServiceClassReference#getJavaClass <em>Java Class</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Java Class</em>'.
+   * @see fr.obeo.dsl.sPrototyper.JavaServiceClassReference#getJavaClass()
+   * @see #getJavaServiceClassReference()
+   * @generated
+   */
+  EAttribute getJavaServiceClassReference_JavaClass();
 
   /**
    * Returns the meta object for class '{@link fr.obeo.dsl.sPrototyper.Color <em>Color</em>}'.
@@ -2037,6 +2184,14 @@ public interface SPrototyperPackage extends EPackage
     EAttribute SPROTOTYPER__QUALIFIER = eINSTANCE.getSPrototyper_Qualifier();
 
     /**
+     * The meta object literal for the '<em><b>Target URI</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SPROTOTYPER__TARGET_URI = eINSTANCE.getSPrototyper_TargetURI();
+
+    /**
      * The meta object literal for the '<em><b>Viewpoints</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2077,6 +2232,14 @@ public interface SPrototyperPackage extends EPackage
      * @generated
      */
     EAttribute SP_VIEWPOINT__EXTENSION = eINSTANCE.getSPViewpoint_Extension();
+
+    /**
+     * The meta object literal for the '<em><b>Service Class</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SP_VIEWPOINT__SERVICE_CLASS = eINSTANCE.getSPViewpoint_ServiceClass();
 
     /**
      * The meta object literal for the '<em><b>Representations</b></em>' containment reference list feature.
@@ -2173,14 +2336,6 @@ public interface SPrototyperPackage extends EPackage
     EClass TABLE_ELEMENT = eINSTANCE.getTableElement();
 
     /**
-     * The meta object literal for the '<em><b>Creatable</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TABLE_ELEMENT__CREATABLE = eINSTANCE.getTableElement_Creatable();
-
-    /**
      * The meta object literal for the '<em><b>Recursive</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2203,6 +2358,22 @@ public interface SPrototyperPackage extends EPackage
      * @generated
      */
     EReference TABLE_ELEMENT__EXPRESSION = eINSTANCE.getTableElement_Expression();
+
+    /**
+     * The meta object literal for the '<em><b>Creatable</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TABLE_ELEMENT__CREATABLE = eINSTANCE.getTableElement_Creatable();
+
+    /**
+     * The meta object literal for the '<em><b>Create Expression</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TABLE_ELEMENT__CREATE_EXPRESSION = eINSTANCE.getTableElement_CreateExpression();
 
     /**
      * The meta object literal for the '<em><b>Sub Elements</b></em>' containment reference list feature.
@@ -2629,6 +2800,16 @@ public interface SPrototyperPackage extends EPackage
     EClass FEATURE_REF = eINSTANCE.getFeatureRef();
 
     /**
+     * The meta object literal for the '{@link fr.obeo.dsl.sPrototyper.impl.ServiceRefImpl <em>Service Ref</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.obeo.dsl.sPrototyper.impl.ServiceRefImpl
+     * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getServiceRef()
+     * @generated
+     */
+    EClass SERVICE_REF = eINSTANCE.getServiceRef();
+
+    /**
      * The meta object literal for the '{@link fr.obeo.dsl.sPrototyper.impl.MetamodelUsageImpl <em>Metamodel Usage</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2645,6 +2826,24 @@ public interface SPrototyperPackage extends EPackage
      * @generated
      */
     EReference METAMODEL_USAGE__USAGE = eINSTANCE.getMetamodelUsage_Usage();
+
+    /**
+     * The meta object literal for the '{@link fr.obeo.dsl.sPrototyper.impl.JavaServiceClassReferenceImpl <em>Java Service Class Reference</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.obeo.dsl.sPrototyper.impl.JavaServiceClassReferenceImpl
+     * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getJavaServiceClassReference()
+     * @generated
+     */
+    EClass JAVA_SERVICE_CLASS_REFERENCE = eINSTANCE.getJavaServiceClassReference();
+
+    /**
+     * The meta object literal for the '<em><b>Java Class</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute JAVA_SERVICE_CLASS_REFERENCE__JAVA_CLASS = eINSTANCE.getJavaServiceClassReference_JavaClass();
 
     /**
      * The meta object literal for the '{@link fr.obeo.dsl.sPrototyper.impl.ColorImpl <em>Color</em>}' class.

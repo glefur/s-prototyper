@@ -86,7 +86,9 @@ public class SPrototyperFactoryImpl extends EFactoryImpl implements SPrototyperF
       case SPrototyperPackage.ACCELEO_EXPRESSION: return createAcceleoExpression();
       case SPrototyperPackage.VAR_REF: return createVarRef();
       case SPrototyperPackage.FEATURE_REF: return createFeatureRef();
+      case SPrototyperPackage.SERVICE_REF: return createServiceRef();
       case SPrototyperPackage.METAMODEL_USAGE: return createMetamodelUsage();
+      case SPrototyperPackage.JAVA_SERVICE_CLASS_REFERENCE: return createJavaServiceClassReference();
       case SPrototyperPackage.COLOR: return createColor();
       case SPrototyperPackage.PRE_DEFINED_COLOR_DEFINITION: return createPreDefinedColorDefinition();
       default:
@@ -364,10 +366,32 @@ public class SPrototyperFactoryImpl extends EFactoryImpl implements SPrototyperF
    * <!-- end-user-doc -->
    * @generated
    */
+  public ServiceRef createServiceRef()
+  {
+    ServiceRefImpl serviceRef = new ServiceRefImpl();
+    return serviceRef;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public MetamodelUsage createMetamodelUsage()
   {
     MetamodelUsageImpl metamodelUsage = new MetamodelUsageImpl();
     return metamodelUsage;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public JavaServiceClassReference createJavaServiceClassReference()
+  {
+    JavaServiceClassReferenceImpl javaServiceClassReference = new JavaServiceClassReferenceImpl();
+    return javaServiceClassReference;
   }
 
   /**
