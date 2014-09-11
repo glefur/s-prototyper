@@ -125,7 +125,7 @@ FeatureRef:
 ;
 
 MetamodelUsage:
-	'use' usage=[ecore::EPackage|STRING]
+	'metamodel' usage=[ecore::EPackage|STRING]
 ;
 
 Color:

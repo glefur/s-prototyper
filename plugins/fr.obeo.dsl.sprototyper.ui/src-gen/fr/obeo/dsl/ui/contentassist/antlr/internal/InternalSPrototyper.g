@@ -5292,11 +5292,11 @@ rule__MetamodelUsage__Group__0__Impl
     }
 :
 (
-{ before(grammarAccess.getMetamodelUsageAccess().getUseKeyword_0()); }
+{ before(grammarAccess.getMetamodelUsageAccess().getMetamodelKeyword_0()); }
 
-	'use' 
+	'metamodel' 
 
-{ after(grammarAccess.getMetamodelUsageAccess().getUseKeyword_0()); }
+{ after(grammarAccess.getMetamodelUsageAccess().getMetamodelKeyword_0()); }
 )
 
 ;

@@ -1112,20 +1112,20 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 	public class MetamodelUsageElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MetamodelUsage");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cUseKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cMetamodelKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cUsageAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final CrossReference cUsageEPackageCrossReference_1_0 = (CrossReference)cUsageAssignment_1.eContents().get(0);
 		private final RuleCall cUsageEPackageSTRINGTerminalRuleCall_1_0_1 = (RuleCall)cUsageEPackageCrossReference_1_0.eContents().get(1);
 		
 		//MetamodelUsage:
-		//	"use" usage=[ecore::EPackage|STRING];
+		//	"metamodel" usage=[ecore::EPackage|STRING];
 		public ParserRule getRule() { return rule; }
 
-		//"use" usage=[ecore::EPackage|STRING]
+		//"metamodel" usage=[ecore::EPackage|STRING]
 		public Group getGroup() { return cGroup; }
 
-		//"use"
-		public Keyword getUseKeyword_0() { return cUseKeyword_0; }
+		//"metamodel"
+		public Keyword getMetamodelKeyword_0() { return cMetamodelKeyword_0; }
 
 		//usage=[ecore::EPackage|STRING]
 		public Assignment getUsageAssignment_1() { return cUsageAssignment_1; }
@@ -1714,7 +1714,7 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//MetamodelUsage:
-	//	"use" usage=[ecore::EPackage|STRING];
+	//	"metamodel" usage=[ecore::EPackage|STRING];
 	public MetamodelUsageElements getMetamodelUsageAccess() {
 		return pMetamodelUsage;
 	}

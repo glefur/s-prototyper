@@ -1904,9 +1904,9 @@ ruleMetamodelUsage returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='use' 
+(	otherlv_0='metamodel' 
     {
-    	newLeafNode(otherlv_0, grammarAccess.getMetamodelUsageAccess().getUseKeyword_0());
+    	newLeafNode(otherlv_0, grammarAccess.getMetamodelUsageAccess().getMetamodelKeyword_0());
     }
 (
 (

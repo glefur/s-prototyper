@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'proto'", "'{'", "'qualifier'", "'}'", "'viewpoint'", "'shortcut'", "'ext'", "'table'", "'label'", "'title'", "'root'", "'creatable'", "'recursive'", "'element'", "'accessibleThrough'", "'property'", "'expression'", "'diagram'", "'container'", "'for'", "'['", "','", "']'", "'freeform'", "'list'", "'node'", "'color'", "'gradient from'", "'to'", "'size'", "'bold'", "'italic'", "'border '", "'acc:'", "'var:'", "'feature:'", "'use'", "'white'", "'black'", "'blue'", "'light blue'", "'dark blue'", "'chocolate'", "'light chocolate'", "'dark chocolate'", "'gray'", "'light gray'", "'dark gray'", "'green'", "'light green'", "'dark green'", "'orange'", "'light orange'", "'dark orange'", "'purple'", "'light purple'", "'dark purple'", "'red'", "'light red'", "'dark red'", "'yellow'", "'light yellow'", "'dark yellow'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'proto'", "'{'", "'qualifier'", "'}'", "'viewpoint'", "'shortcut'", "'ext'", "'table'", "'label'", "'title'", "'root'", "'creatable'", "'recursive'", "'element'", "'accessibleThrough'", "'property'", "'expression'", "'diagram'", "'container'", "'for'", "'['", "','", "']'", "'freeform'", "'list'", "'node'", "'color'", "'gradient from'", "'to'", "'size'", "'bold'", "'italic'", "'border '", "'acc:'", "'var:'", "'feature:'", "'metamodel'", "'white'", "'black'", "'blue'", "'light blue'", "'dark blue'", "'chocolate'", "'light chocolate'", "'dark chocolate'", "'gray'", "'light gray'", "'dark gray'", "'green'", "'light green'", "'dark green'", "'orange'", "'light orange'", "'dark orange'", "'purple'", "'light purple'", "'dark purple'", "'red'", "'light red'", "'dark red'", "'yellow'", "'light yellow'", "'dark yellow'"
     };
     public static final int T__68=68;
     public static final int T__69=69;
@@ -4675,7 +4675,7 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMetamodelUsage"
-    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1903:1: ruleMetamodelUsage returns [EObject current=null] : (otherlv_0= 'use' ( (otherlv_1= RULE_STRING ) ) ) ;
+    // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1903:1: ruleMetamodelUsage returns [EObject current=null] : (otherlv_0= 'metamodel' ( (otherlv_1= RULE_STRING ) ) ) ;
     public final EObject ruleMetamodelUsage() throws RecognitionException {
         EObject current = null;
 
@@ -4685,15 +4685,15 @@ public class InternalSPrototyperParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1906:28: ( (otherlv_0= 'use' ( (otherlv_1= RULE_STRING ) ) ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1907:1: (otherlv_0= 'use' ( (otherlv_1= RULE_STRING ) ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1906:28: ( (otherlv_0= 'metamodel' ( (otherlv_1= RULE_STRING ) ) ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1907:1: (otherlv_0= 'metamodel' ( (otherlv_1= RULE_STRING ) ) )
             {
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1907:1: (otherlv_0= 'use' ( (otherlv_1= RULE_STRING ) ) )
-            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1907:3: otherlv_0= 'use' ( (otherlv_1= RULE_STRING ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1907:1: (otherlv_0= 'metamodel' ( (otherlv_1= RULE_STRING ) ) )
+            // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1907:3: otherlv_0= 'metamodel' ( (otherlv_1= RULE_STRING ) )
             {
             otherlv_0=(Token)match(input,47,FOLLOW_47_in_ruleMetamodelUsage4011); 
 
-                	newLeafNode(otherlv_0, grammarAccess.getMetamodelUsageAccess().getUseKeyword_0());
+                	newLeafNode(otherlv_0, grammarAccess.getMetamodelUsageAccess().getMetamodelKeyword_0());
                 
             // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1911:1: ( (otherlv_1= RULE_STRING ) )
             // ../fr.obeo.dsl.sprototyper/src-gen/fr/obeo/dsl/parser/antlr/internal/InternalSPrototyper.g:1912:1: (otherlv_1= RULE_STRING )

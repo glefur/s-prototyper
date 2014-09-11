@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalSPrototyperParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'freeform'", "'list'", "'white'", "'black'", "'blue'", "'light blue'", "'dark blue'", "'chocolate'", "'light chocolate'", "'dark chocolate'", "'gray'", "'light gray'", "'dark gray'", "'green'", "'light green'", "'dark green'", "'orange'", "'light orange'", "'dark orange'", "'purple'", "'light purple'", "'dark purple'", "'red'", "'light red'", "'dark red'", "'yellow'", "'light yellow'", "'dark yellow'", "'proto'", "'{'", "'}'", "'qualifier'", "'viewpoint'", "'shortcut'", "'ext'", "'table'", "'root'", "'label'", "'title'", "'element'", "'accessibleThrough'", "'property'", "'expression'", "'diagram'", "'container'", "'for'", "'['", "']'", "','", "'node'", "'color'", "'gradient from'", "'to'", "'size'", "'border '", "'acc:'", "'var:'", "'feature:'", "'use'", "'creatable'", "'recursive'", "'bold'", "'italic'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'freeform'", "'list'", "'white'", "'black'", "'blue'", "'light blue'", "'dark blue'", "'chocolate'", "'light chocolate'", "'dark chocolate'", "'gray'", "'light gray'", "'dark gray'", "'green'", "'light green'", "'dark green'", "'orange'", "'light orange'", "'dark orange'", "'purple'", "'light purple'", "'dark purple'", "'red'", "'light red'", "'dark red'", "'yellow'", "'light yellow'", "'dark yellow'", "'proto'", "'{'", "'}'", "'qualifier'", "'viewpoint'", "'shortcut'", "'ext'", "'table'", "'root'", "'label'", "'title'", "'element'", "'accessibleThrough'", "'property'", "'expression'", "'diagram'", "'container'", "'for'", "'['", "']'", "','", "'node'", "'color'", "'gradient from'", "'to'", "'size'", "'border '", "'acc:'", "'var:'", "'feature:'", "'metamodel'", "'creatable'", "'recursive'", "'bold'", "'italic'"
     };
     public static final int T__68=68;
     public static final int T__69=69;
@@ -14367,21 +14367,21 @@ public class InternalSPrototyperParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__MetamodelUsage__Group__0__Impl"
-    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5289:1: rule__MetamodelUsage__Group__0__Impl : ( 'use' ) ;
+    // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5289:1: rule__MetamodelUsage__Group__0__Impl : ( 'metamodel' ) ;
     public final void rule__MetamodelUsage__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5293:1: ( ( 'use' ) )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5294:1: ( 'use' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5293:1: ( ( 'metamodel' ) )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5294:1: ( 'metamodel' )
             {
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5294:1: ( 'use' )
-            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5295:1: 'use'
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5294:1: ( 'metamodel' )
+            // ../fr.obeo.dsl.sprototyper.ui/src-gen/fr/obeo/dsl/ui/contentassist/antlr/internal/InternalSPrototyper.g:5295:1: 'metamodel'
             {
-             before(grammarAccess.getMetamodelUsageAccess().getUseKeyword_0()); 
+             before(grammarAccess.getMetamodelUsageAccess().getMetamodelKeyword_0()); 
             match(input,69,FOLLOW_69_in_rule__MetamodelUsage__Group__0__Impl10740); 
-             after(grammarAccess.getMetamodelUsageAccess().getUseKeyword_0()); 
+             after(grammarAccess.getMetamodelUsageAccess().getMetamodelKeyword_0()); 
 
             }
 
