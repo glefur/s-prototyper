@@ -604,9 +604,9 @@ ruleTableElement returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getTableElementAccess().getCreateExpressionSPExpressionParserRuleCall_5_1_1_0()); 
+	        newCompositeNode(grammarAccess.getTableElementAccess().getCreateExpressionRequestOrCreateExpressionParserRuleCall_5_1_1_0()); 
 	    }
-		lv_createExpression_7_0=ruleSPExpression		{
+		lv_createExpression_7_0=ruleRequestOrCreateExpression		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getTableElementRule());
 	        }
@@ -614,7 +614,7 @@ ruleTableElement returns [EObject current=null]
        			$current, 
        			"createExpression",
         		lv_createExpression_7_0, 
-        		"SPExpression");
+        		"RequestOrCreateExpression");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1789,7 +1789,87 @@ ruleSPExpression returns [EObject current=null]
     @after { leaveRule(); }:
 (
     { 
-        newCompositeNode(grammarAccess.getSPExpressionAccess().getAcceleoExpressionParserRuleCall_0()); 
+        newCompositeNode(grammarAccess.getSPExpressionAccess().getRequestExpressionParserRuleCall_0()); 
+    }
+    this_RequestExpression_0=ruleRequestExpression
+    { 
+        $current = $this_RequestExpression_0.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getSPExpressionAccess().getRequestOrCreateExpressionParserRuleCall_1()); 
+    }
+    this_RequestOrCreateExpression_1=ruleRequestOrCreateExpression
+    { 
+        $current = $this_RequestOrCreateExpression_1.current; 
+        afterParserOrEnumRuleCall();
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleRequestExpression
+entryRuleRequestExpression returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getRequestExpressionRule()); }
+	 iv_ruleRequestExpression=ruleRequestExpression 
+	 { $current=$iv_ruleRequestExpression.current; } 
+	 EOF 
+;
+
+// Rule RequestExpression
+ruleRequestExpression returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(
+    { 
+        newCompositeNode(grammarAccess.getRequestExpressionAccess().getVarRefParserRuleCall_0()); 
+    }
+    this_VarRef_0=ruleVarRef
+    { 
+        $current = $this_VarRef_0.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getRequestExpressionAccess().getFeatureRefParserRuleCall_1()); 
+    }
+    this_FeatureRef_1=ruleFeatureRef
+    { 
+        $current = $this_FeatureRef_1.current; 
+        afterParserOrEnumRuleCall();
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleRequestOrCreateExpression
+entryRuleRequestOrCreateExpression returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getRequestOrCreateExpressionRule()); }
+	 iv_ruleRequestOrCreateExpression=ruleRequestOrCreateExpression 
+	 { $current=$iv_ruleRequestOrCreateExpression.current; } 
+	 EOF 
+;
+
+// Rule RequestOrCreateExpression
+ruleRequestOrCreateExpression returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(
+    { 
+        newCompositeNode(grammarAccess.getRequestOrCreateExpressionAccess().getAcceleoExpressionParserRuleCall_0()); 
     }
     this_AcceleoExpression_0=ruleAcceleoExpression
     { 
@@ -1799,31 +1879,11 @@ ruleSPExpression returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getSPExpressionAccess().getVarRefParserRuleCall_1()); 
+        newCompositeNode(grammarAccess.getRequestOrCreateExpressionAccess().getServiceRefParserRuleCall_1()); 
     }
-    this_VarRef_1=ruleVarRef
+    this_ServiceRef_1=ruleServiceRef
     { 
-        $current = $this_VarRef_1.current; 
-        afterParserOrEnumRuleCall();
-    }
-
-    |
-    { 
-        newCompositeNode(grammarAccess.getSPExpressionAccess().getFeatureRefParserRuleCall_2()); 
-    }
-    this_FeatureRef_2=ruleFeatureRef
-    { 
-        $current = $this_FeatureRef_2.current; 
-        afterParserOrEnumRuleCall();
-    }
-
-    |
-    { 
-        newCompositeNode(grammarAccess.getSPExpressionAccess().getServiceRefParserRuleCall_3()); 
-    }
-    this_ServiceRef_3=ruleServiceRef
-    { 
-        $current = $this_ServiceRef_3.current; 
+        $current = $this_ServiceRef_1.current; 
         afterParserOrEnumRuleCall();
     }
 )
@@ -2063,18 +2123,15 @@ ruleJavaServiceClassReference returns [EObject current=null]
     }
 (
 (
-		{ 
-	        newCompositeNode(grammarAccess.getJavaServiceClassReferenceAccess().getJavaClassQualifiedNameParserRuleCall_1_0()); 
-	    }
-		lv_javaClass_1_0=ruleQualifiedName		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getJavaServiceClassReferenceRule());
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getJavaServiceClassReferenceRule());
 	        }
-       		set(
-       			$current, 
-       			"javaClass",
-        		lv_javaClass_1_0, 
-        		"QualifiedName");
+        }
+		{ 
+	        newCompositeNode(grammarAccess.getJavaServiceClassReferenceAccess().getJavaClassJvmTypeCrossReference_1_0()); 
+	    }
+		ruleQualifiedName		{ 
 	        afterParserOrEnumRuleCall();
 	    }
 

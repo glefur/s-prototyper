@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class FeatureRefImpl extends SPExpressionImpl implements FeatureRef
+public class FeatureRefImpl extends RequestExpressionImpl implements FeatureRef
 {
   /**
    * <!-- begin-user-doc -->

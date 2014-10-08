@@ -114,7 +114,7 @@ public class Initializer {
 		
 		for (JavaServiceClassReference ref : spViewpoint.getServiceClass()) {
 			JavaExtension ext = DescriptionFactory.eINSTANCE.createJavaExtension();
-			ext.setQualifiedClassName(ref.getJavaClass());
+			ext.setQualifiedClassName(ref.getJavaClass().getQualifiedName());
 			viewpoint.getOwnedJavaExtensions().add(ext);
 		}
 		

@@ -13,6 +13,6 @@ package fr.obeo.dsl.sPrototyper;
  * @model
  * @generated
  */
-public interface VarRef extends SPExpression
+public interface VarRef extends RequestExpression
 {
 } // VarRef

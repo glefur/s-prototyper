@@ -2,6 +2,7 @@
  */
 package fr.obeo.dsl.sPrototyper.impl;
 
+import fr.obeo.dsl.sPrototyper.RequestOrCreateExpression;
 import fr.obeo.dsl.sPrototyper.SPExpression;
 import fr.obeo.dsl.sPrototyper.SPrototyperPackage;
 import fr.obeo.dsl.sPrototyper.TableElement;
@@ -110,7 +111,7 @@ public class TableElementImpl extends MinimalEObjectImpl.Container implements Ta
    * @generated
    * @ordered
    */
-  protected SPExpression createExpression;
+  protected RequestOrCreateExpression createExpression;
 
   /**
    * The cached value of the '{@link #getSubElements() <em>Sub Elements</em>}' containment reference list.
@@ -285,7 +286,7 @@ public class TableElementImpl extends MinimalEObjectImpl.Container implements Ta
    * <!-- end-user-doc -->
    * @generated
    */
-  public SPExpression getCreateExpression()
+  public RequestOrCreateExpression getCreateExpression()
   {
     return createExpression;
   }
@@ -295,9 +296,9 @@ public class TableElementImpl extends MinimalEObjectImpl.Container implements Ta
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetCreateExpression(SPExpression newCreateExpression, NotificationChain msgs)
+  public NotificationChain basicSetCreateExpression(RequestOrCreateExpression newCreateExpression, NotificationChain msgs)
   {
-    SPExpression oldCreateExpression = createExpression;
+    RequestOrCreateExpression oldCreateExpression = createExpression;
     createExpression = newCreateExpression;
     if (eNotificationRequired())
     {
@@ -312,7 +313,7 @@ public class TableElementImpl extends MinimalEObjectImpl.Container implements Ta
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setCreateExpression(SPExpression newCreateExpression)
+  public void setCreateExpression(RequestOrCreateExpression newCreateExpression)
   {
     if (newCreateExpression != createExpression)
     {
@@ -413,7 +414,7 @@ public class TableElementImpl extends MinimalEObjectImpl.Container implements Ta
         setCreatable((Boolean)newValue);
         return;
       case SPrototyperPackage.TABLE_ELEMENT__CREATE_EXPRESSION:
-        setCreateExpression((SPExpression)newValue);
+        setCreateExpression((RequestOrCreateExpression)newValue);
         return;
       case SPrototyperPackage.TABLE_ELEMENT__SUB_ELEMENTS:
         getSubElements().clear();
@@ -446,7 +447,7 @@ public class TableElementImpl extends MinimalEObjectImpl.Container implements Ta
         setCreatable(CREATABLE_EDEFAULT);
         return;
       case SPrototyperPackage.TABLE_ELEMENT__CREATE_EXPRESSION:
-        setCreateExpression((SPExpression)null);
+        setCreateExpression((RequestOrCreateExpression)null);
         return;
       case SPrototyperPackage.TABLE_ELEMENT__SUB_ELEMENTS:
         getSubElements().clear();

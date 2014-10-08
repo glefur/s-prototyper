@@ -13,6 +13,6 @@ package fr.obeo.dsl.sPrototyper;
  * @model
  * @generated
  */
-public interface ServiceRef extends SPExpression
+public interface ServiceRef extends RequestOrCreateExpression
 {
 } // ServiceRef

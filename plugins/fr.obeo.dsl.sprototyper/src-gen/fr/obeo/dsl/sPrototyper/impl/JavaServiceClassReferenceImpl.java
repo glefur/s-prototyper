@@ -8,9 +8,12 @@ import fr.obeo.dsl.sPrototyper.SPrototyperPackage;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.xtext.common.types.JvmType;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,24 +31,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class JavaServiceClassReferenceImpl extends MinimalEObjectImpl.Container implements JavaServiceClassReference
 {
   /**
-   * The default value of the '{@link #getJavaClass() <em>Java Class</em>}' attribute.
+   * The cached value of the '{@link #getJavaClass() <em>Java Class</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getJavaClass()
    * @generated
    * @ordered
    */
-  protected static final String JAVA_CLASS_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getJavaClass() <em>Java Class</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getJavaClass()
-   * @generated
-   * @ordered
-   */
-  protected String javaClass = JAVA_CLASS_EDEFAULT;
+  protected JvmType javaClass;
 
   /**
    * <!-- begin-user-doc -->
@@ -73,7 +66,27 @@ public class JavaServiceClassReferenceImpl extends MinimalEObjectImpl.Container 
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getJavaClass()
+  public JvmType getJavaClass()
+  {
+    if (javaClass != null && javaClass.eIsProxy())
+    {
+      InternalEObject oldJavaClass = (InternalEObject)javaClass;
+      javaClass = (JvmType)eResolveProxy(oldJavaClass);
+      if (javaClass != oldJavaClass)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, SPrototyperPackage.JAVA_SERVICE_CLASS_REFERENCE__JAVA_CLASS, oldJavaClass, javaClass));
+      }
+    }
+    return javaClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public JvmType basicGetJavaClass()
   {
     return javaClass;
   }
@@ -83,9 +96,9 @@ public class JavaServiceClassReferenceImpl extends MinimalEObjectImpl.Container 
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setJavaClass(String newJavaClass)
+  public void setJavaClass(JvmType newJavaClass)
   {
-    String oldJavaClass = javaClass;
+    JvmType oldJavaClass = javaClass;
     javaClass = newJavaClass;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, SPrototyperPackage.JAVA_SERVICE_CLASS_REFERENCE__JAVA_CLASS, oldJavaClass, javaClass));
@@ -102,7 +115,8 @@ public class JavaServiceClassReferenceImpl extends MinimalEObjectImpl.Container 
     switch (featureID)
     {
       case SPrototyperPackage.JAVA_SERVICE_CLASS_REFERENCE__JAVA_CLASS:
-        return getJavaClass();
+        if (resolve) return getJavaClass();
+        return basicGetJavaClass();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -118,7 +132,7 @@ public class JavaServiceClassReferenceImpl extends MinimalEObjectImpl.Container 
     switch (featureID)
     {
       case SPrototyperPackage.JAVA_SERVICE_CLASS_REFERENCE__JAVA_CLASS:
-        setJavaClass((String)newValue);
+        setJavaClass((JvmType)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -135,7 +149,7 @@ public class JavaServiceClassReferenceImpl extends MinimalEObjectImpl.Container 
     switch (featureID)
     {
       case SPrototyperPackage.JAVA_SERVICE_CLASS_REFERENCE__JAVA_CLASS:
-        setJavaClass(JAVA_CLASS_EDEFAULT);
+        setJavaClass((JvmType)null);
         return;
     }
     super.eUnset(featureID);
@@ -152,26 +166,9 @@ public class JavaServiceClassReferenceImpl extends MinimalEObjectImpl.Container 
     switch (featureID)
     {
       case SPrototyperPackage.JAVA_SERVICE_CLASS_REFERENCE__JAVA_CLASS:
-        return JAVA_CLASS_EDEFAULT == null ? javaClass != null : !JAVA_CLASS_EDEFAULT.equals(javaClass);
+        return javaClass != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (javaClass: ");
-    result.append(javaClass);
-    result.append(')');
-    return result.toString();
   }
 
 } //JavaServiceClassReferenceImpl

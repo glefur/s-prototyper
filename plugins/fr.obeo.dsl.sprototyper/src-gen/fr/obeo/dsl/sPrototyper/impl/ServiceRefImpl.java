@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class ServiceRefImpl extends SPExpressionImpl implements ServiceRef
+public class ServiceRefImpl extends RequestOrCreateExpressionImpl implements ServiceRef
 {
   /**
    * <!-- begin-user-doc -->

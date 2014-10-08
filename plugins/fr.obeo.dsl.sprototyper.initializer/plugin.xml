@@ -18,7 +18,7 @@
          </menu>
          <action
                label="Initialize ODesign"
-               class="fr.obeo.dsl.sprototyper.initializer.actions.InitializerAction"
+               class="fr.obeo.dsl.sprototyper.initializer.actions.SPrototyperExecutableExtensionFactory:fr.obeo.dsl.sprototyper.initializer.actions.InitializerAction"
                menubarPath="fr.obeo.dsl.sprototyper.initializer.menu1/group1"
                enablesFor="1"
                id="fr.obeo.dsl.sprototyper.initializer.newAction">

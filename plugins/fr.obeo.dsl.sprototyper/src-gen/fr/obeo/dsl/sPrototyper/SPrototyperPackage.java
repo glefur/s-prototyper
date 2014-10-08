@@ -1012,14 +1012,14 @@ public interface SPrototyperPackage extends EPackage
   int SP_EXPRESSION_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.AcceleoExpressionImpl <em>Acceleo Expression</em>}' class.
+   * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.RequestExpressionImpl <em>Request Expression</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see fr.obeo.dsl.sPrototyper.impl.AcceleoExpressionImpl
-   * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getAcceleoExpression()
+   * @see fr.obeo.dsl.sPrototyper.impl.RequestExpressionImpl
+   * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getRequestExpression()
    * @generated
    */
-  int ACCELEO_EXPRESSION = 18;
+  int REQUEST_EXPRESSION = 18;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1028,7 +1028,63 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ACCELEO_EXPRESSION__VALUE = SP_EXPRESSION__VALUE;
+  int REQUEST_EXPRESSION__VALUE = SP_EXPRESSION__VALUE;
+
+  /**
+   * The number of structural features of the '<em>Request Expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REQUEST_EXPRESSION_FEATURE_COUNT = SP_EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.RequestOrCreateExpressionImpl <em>Request Or Create Expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.obeo.dsl.sPrototyper.impl.RequestOrCreateExpressionImpl
+   * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getRequestOrCreateExpression()
+   * @generated
+   */
+  int REQUEST_OR_CREATE_EXPRESSION = 19;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REQUEST_OR_CREATE_EXPRESSION__VALUE = SP_EXPRESSION__VALUE;
+
+  /**
+   * The number of structural features of the '<em>Request Or Create Expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REQUEST_OR_CREATE_EXPRESSION_FEATURE_COUNT = SP_EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.AcceleoExpressionImpl <em>Acceleo Expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.obeo.dsl.sPrototyper.impl.AcceleoExpressionImpl
+   * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getAcceleoExpression()
+   * @generated
+   */
+  int ACCELEO_EXPRESSION = 20;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACCELEO_EXPRESSION__VALUE = REQUEST_OR_CREATE_EXPRESSION__VALUE;
 
   /**
    * The number of structural features of the '<em>Acceleo Expression</em>' class.
@@ -1037,7 +1093,7 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ACCELEO_EXPRESSION_FEATURE_COUNT = SP_EXPRESSION_FEATURE_COUNT + 0;
+  int ACCELEO_EXPRESSION_FEATURE_COUNT = REQUEST_OR_CREATE_EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.VarRefImpl <em>Var Ref</em>}' class.
@@ -1047,7 +1103,7 @@ public interface SPrototyperPackage extends EPackage
    * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getVarRef()
    * @generated
    */
-  int VAR_REF = 19;
+  int VAR_REF = 21;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1056,7 +1112,7 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VAR_REF__VALUE = SP_EXPRESSION__VALUE;
+  int VAR_REF__VALUE = REQUEST_EXPRESSION__VALUE;
 
   /**
    * The number of structural features of the '<em>Var Ref</em>' class.
@@ -1065,7 +1121,7 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VAR_REF_FEATURE_COUNT = SP_EXPRESSION_FEATURE_COUNT + 0;
+  int VAR_REF_FEATURE_COUNT = REQUEST_EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.FeatureRefImpl <em>Feature Ref</em>}' class.
@@ -1075,7 +1131,7 @@ public interface SPrototyperPackage extends EPackage
    * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getFeatureRef()
    * @generated
    */
-  int FEATURE_REF = 20;
+  int FEATURE_REF = 22;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1084,7 +1140,7 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FEATURE_REF__VALUE = SP_EXPRESSION__VALUE;
+  int FEATURE_REF__VALUE = REQUEST_EXPRESSION__VALUE;
 
   /**
    * The number of structural features of the '<em>Feature Ref</em>' class.
@@ -1093,7 +1149,7 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FEATURE_REF_FEATURE_COUNT = SP_EXPRESSION_FEATURE_COUNT + 0;
+  int FEATURE_REF_FEATURE_COUNT = REQUEST_EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.ServiceRefImpl <em>Service Ref</em>}' class.
@@ -1103,7 +1159,7 @@ public interface SPrototyperPackage extends EPackage
    * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getServiceRef()
    * @generated
    */
-  int SERVICE_REF = 21;
+  int SERVICE_REF = 23;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1112,7 +1168,7 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SERVICE_REF__VALUE = SP_EXPRESSION__VALUE;
+  int SERVICE_REF__VALUE = REQUEST_OR_CREATE_EXPRESSION__VALUE;
 
   /**
    * The number of structural features of the '<em>Service Ref</em>' class.
@@ -1121,7 +1177,7 @@ public interface SPrototyperPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SERVICE_REF_FEATURE_COUNT = SP_EXPRESSION_FEATURE_COUNT + 0;
+  int SERVICE_REF_FEATURE_COUNT = REQUEST_OR_CREATE_EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link fr.obeo.dsl.sPrototyper.impl.MetamodelUsageImpl <em>Metamodel Usage</em>}' class.
@@ -1131,7 +1187,7 @@ public interface SPrototyperPackage extends EPackage
    * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getMetamodelUsage()
    * @generated
    */
-  int METAMODEL_USAGE = 22;
+  int METAMODEL_USAGE = 24;
 
   /**
    * The feature id for the '<em><b>Usage</b></em>' reference.
@@ -1159,10 +1215,10 @@ public interface SPrototyperPackage extends EPackage
    * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getJavaServiceClassReference()
    * @generated
    */
-  int JAVA_SERVICE_CLASS_REFERENCE = 23;
+  int JAVA_SERVICE_CLASS_REFERENCE = 25;
 
   /**
-   * The feature id for the '<em><b>Java Class</b></em>' attribute.
+   * The feature id for the '<em><b>Java Class</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1187,7 +1243,7 @@ public interface SPrototyperPackage extends EPackage
    * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getColor()
    * @generated
    */
-  int COLOR = 24;
+  int COLOR = 26;
 
   /**
    * The number of structural features of the '<em>Color</em>' class.
@@ -1206,7 +1262,7 @@ public interface SPrototyperPackage extends EPackage
    * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getPreDefinedColorDefinition()
    * @generated
    */
-  int PRE_DEFINED_COLOR_DEFINITION = 25;
+  int PRE_DEFINED_COLOR_DEFINITION = 27;
 
   /**
    * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -1234,7 +1290,7 @@ public interface SPrototyperPackage extends EPackage
    * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getPreDefinedColor()
    * @generated
    */
-  int PRE_DEFINED_COLOR = 26;
+  int PRE_DEFINED_COLOR = 28;
 
 
   /**
@@ -2012,6 +2068,26 @@ public interface SPrototyperPackage extends EPackage
   EAttribute getSPExpression_Value();
 
   /**
+   * Returns the meta object for class '{@link fr.obeo.dsl.sPrototyper.RequestExpression <em>Request Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Request Expression</em>'.
+   * @see fr.obeo.dsl.sPrototyper.RequestExpression
+   * @generated
+   */
+  EClass getRequestExpression();
+
+  /**
+   * Returns the meta object for class '{@link fr.obeo.dsl.sPrototyper.RequestOrCreateExpression <em>Request Or Create Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Request Or Create Expression</em>'.
+   * @see fr.obeo.dsl.sPrototyper.RequestOrCreateExpression
+   * @generated
+   */
+  EClass getRequestOrCreateExpression();
+
+  /**
    * Returns the meta object for class '{@link fr.obeo.dsl.sPrototyper.AcceleoExpression <em>Acceleo Expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2083,15 +2159,15 @@ public interface SPrototyperPackage extends EPackage
   EClass getJavaServiceClassReference();
 
   /**
-   * Returns the meta object for the attribute '{@link fr.obeo.dsl.sPrototyper.JavaServiceClassReference#getJavaClass <em>Java Class</em>}'.
+   * Returns the meta object for the reference '{@link fr.obeo.dsl.sPrototyper.JavaServiceClassReference#getJavaClass <em>Java Class</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Java Class</em>'.
+   * @return the meta object for the reference '<em>Java Class</em>'.
    * @see fr.obeo.dsl.sPrototyper.JavaServiceClassReference#getJavaClass()
    * @see #getJavaServiceClassReference()
    * @generated
    */
-  EAttribute getJavaServiceClassReference_JavaClass();
+  EReference getJavaServiceClassReference_JavaClass();
 
   /**
    * Returns the meta object for class '{@link fr.obeo.dsl.sPrototyper.Color <em>Color</em>}'.
@@ -2770,6 +2846,26 @@ public interface SPrototyperPackage extends EPackage
     EAttribute SP_EXPRESSION__VALUE = eINSTANCE.getSPExpression_Value();
 
     /**
+     * The meta object literal for the '{@link fr.obeo.dsl.sPrototyper.impl.RequestExpressionImpl <em>Request Expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.obeo.dsl.sPrototyper.impl.RequestExpressionImpl
+     * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getRequestExpression()
+     * @generated
+     */
+    EClass REQUEST_EXPRESSION = eINSTANCE.getRequestExpression();
+
+    /**
+     * The meta object literal for the '{@link fr.obeo.dsl.sPrototyper.impl.RequestOrCreateExpressionImpl <em>Request Or Create Expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.obeo.dsl.sPrototyper.impl.RequestOrCreateExpressionImpl
+     * @see fr.obeo.dsl.sPrototyper.impl.SPrototyperPackageImpl#getRequestOrCreateExpression()
+     * @generated
+     */
+    EClass REQUEST_OR_CREATE_EXPRESSION = eINSTANCE.getRequestOrCreateExpression();
+
+    /**
      * The meta object literal for the '{@link fr.obeo.dsl.sPrototyper.impl.AcceleoExpressionImpl <em>Acceleo Expression</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2838,12 +2934,12 @@ public interface SPrototyperPackage extends EPackage
     EClass JAVA_SERVICE_CLASS_REFERENCE = eINSTANCE.getJavaServiceClassReference();
 
     /**
-     * The meta object literal for the '<em><b>Java Class</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Java Class</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute JAVA_SERVICE_CLASS_REFERENCE__JAVA_CLASS = eINSTANCE.getJavaServiceClassReference_JavaClass();
+    EReference JAVA_SERVICE_CLASS_REFERENCE__JAVA_CLASS = eINSTANCE.getJavaServiceClassReference_JavaClass();
 
     /**
      * The meta object literal for the '{@link fr.obeo.dsl.sPrototyper.impl.ColorImpl <em>Color</em>}' class.

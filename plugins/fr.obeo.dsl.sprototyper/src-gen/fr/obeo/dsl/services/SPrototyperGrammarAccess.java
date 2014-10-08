@@ -312,7 +312,7 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_5_1 = (Group)cGroup_5.eContents().get(1);
 		private final Keyword cViaKeyword_5_1_0 = (Keyword)cGroup_5_1.eContents().get(0);
 		private final Assignment cCreateExpressionAssignment_5_1_1 = (Assignment)cGroup_5_1.eContents().get(1);
-		private final RuleCall cCreateExpressionSPExpressionParserRuleCall_5_1_1_0 = (RuleCall)cCreateExpressionAssignment_5_1_1.eContents().get(0);
+		private final RuleCall cCreateExpressionRequestOrCreateExpressionParserRuleCall_5_1_1_0 = (RuleCall)cCreateExpressionAssignment_5_1_1.eContents().get(0);
 		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
 		private final Keyword cLeftCurlyBracketKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
 		private final Assignment cSubElementsAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
@@ -321,11 +321,11 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//TableElement:
 		//	recursive?="recursive"? "element" eClass=[ecore::EClass] "accessibleThrough" expression=SPExpression
-		//	(creatable?="creatable" ("via" createExpression=SPExpression)?)? ("{" subElements+=TableElement+ "}")?;
+		//	(creatable?="creatable" ("via" createExpression=RequestOrCreateExpression)?)? ("{" subElements+=TableElement+ "}")?;
 		public ParserRule getRule() { return rule; }
 
 		//recursive?="recursive"? "element" eClass=[ecore::EClass] "accessibleThrough" expression=SPExpression
-		//(creatable?="creatable" ("via" createExpression=SPExpression)?)? ("{" subElements+=TableElement+ "}")?
+		//(creatable?="creatable" ("via" createExpression=RequestOrCreateExpression)?)? ("{" subElements+=TableElement+ "}")?
 		public Group getGroup() { return cGroup; }
 
 		//recursive?="recursive"?
@@ -355,7 +355,7 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 		//SPExpression
 		public RuleCall getExpressionSPExpressionParserRuleCall_4_0() { return cExpressionSPExpressionParserRuleCall_4_0; }
 
-		//(creatable?="creatable" ("via" createExpression=SPExpression)?)?
+		//(creatable?="creatable" ("via" createExpression=RequestOrCreateExpression)?)?
 		public Group getGroup_5() { return cGroup_5; }
 
 		//creatable?="creatable"
@@ -364,17 +364,17 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 		//"creatable"
 		public Keyword getCreatableCreatableKeyword_5_0_0() { return cCreatableCreatableKeyword_5_0_0; }
 
-		//("via" createExpression=SPExpression)?
+		//("via" createExpression=RequestOrCreateExpression)?
 		public Group getGroup_5_1() { return cGroup_5_1; }
 
 		//"via"
 		public Keyword getViaKeyword_5_1_0() { return cViaKeyword_5_1_0; }
 
-		//createExpression=SPExpression
+		//createExpression=RequestOrCreateExpression
 		public Assignment getCreateExpressionAssignment_5_1_1() { return cCreateExpressionAssignment_5_1_1; }
 
-		//SPExpression
-		public RuleCall getCreateExpressionSPExpressionParserRuleCall_5_1_1_0() { return cCreateExpressionSPExpressionParserRuleCall_5_1_1_0; }
+		//RequestOrCreateExpression
+		public RuleCall getCreateExpressionRequestOrCreateExpressionParserRuleCall_5_1_1_0() { return cCreateExpressionRequestOrCreateExpressionParserRuleCall_5_1_1_0; }
 
 		//("{" subElements+=TableElement+ "}")?
 		public Group getGroup_6() { return cGroup_6; }
@@ -1057,29 +1057,61 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 	public class SPExpressionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SPExpression");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cAcceleoExpressionParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cVarRefParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cFeatureRefParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cServiceRefParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cRequestExpressionParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cRequestOrCreateExpressionParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//SPExpression:
-		//	AcceleoExpression | VarRef | FeatureRef | ServiceRef;
+		//	RequestExpression | RequestOrCreateExpression;
 		public ParserRule getRule() { return rule; }
 
-		//AcceleoExpression | VarRef | FeatureRef | ServiceRef
+		//RequestExpression | RequestOrCreateExpression
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//RequestExpression
+		public RuleCall getRequestExpressionParserRuleCall_0() { return cRequestExpressionParserRuleCall_0; }
+
+		//RequestOrCreateExpression
+		public RuleCall getRequestOrCreateExpressionParserRuleCall_1() { return cRequestOrCreateExpressionParserRuleCall_1; }
+	}
+
+	public class RequestExpressionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RequestExpression");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cVarRefParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cFeatureRefParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//RequestExpression:
+		//	VarRef | FeatureRef;
+		public ParserRule getRule() { return rule; }
+
+		//VarRef | FeatureRef
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//VarRef
+		public RuleCall getVarRefParserRuleCall_0() { return cVarRefParserRuleCall_0; }
+
+		//FeatureRef
+		public RuleCall getFeatureRefParserRuleCall_1() { return cFeatureRefParserRuleCall_1; }
+	}
+
+	public class RequestOrCreateExpressionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RequestOrCreateExpression");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cAcceleoExpressionParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cServiceRefParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//RequestOrCreateExpression:
+		//	AcceleoExpression | ServiceRef;
+		public ParserRule getRule() { return rule; }
+
+		//AcceleoExpression | ServiceRef
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//AcceleoExpression
 		public RuleCall getAcceleoExpressionParserRuleCall_0() { return cAcceleoExpressionParserRuleCall_0; }
 
-		//VarRef
-		public RuleCall getVarRefParserRuleCall_1() { return cVarRefParserRuleCall_1; }
-
-		//FeatureRef
-		public RuleCall getFeatureRefParserRuleCall_2() { return cFeatureRefParserRuleCall_2; }
-
 		//ServiceRef
-		public RuleCall getServiceRefParserRuleCall_3() { return cServiceRefParserRuleCall_3; }
+		public RuleCall getServiceRefParserRuleCall_1() { return cServiceRefParserRuleCall_1; }
 	}
 
 	public class AcceleoExpressionElements extends AbstractParserRuleElementFinder {
@@ -1211,23 +1243,27 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cUseKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cJavaClassAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cJavaClassQualifiedNameParserRuleCall_1_0 = (RuleCall)cJavaClassAssignment_1.eContents().get(0);
+		private final CrossReference cJavaClassJvmTypeCrossReference_1_0 = (CrossReference)cJavaClassAssignment_1.eContents().get(0);
+		private final RuleCall cJavaClassJvmTypeQualifiedNameParserRuleCall_1_0_1 = (RuleCall)cJavaClassJvmTypeCrossReference_1_0.eContents().get(1);
 		
 		//JavaServiceClassReference:
-		//	"use" javaClass=QualifiedName;
+		//	"use" javaClass=[jvmtypes::JvmType|QualifiedName];
 		public ParserRule getRule() { return rule; }
 
-		//"use" javaClass=QualifiedName
+		//"use" javaClass=[jvmtypes::JvmType|QualifiedName]
 		public Group getGroup() { return cGroup; }
 
 		//"use"
 		public Keyword getUseKeyword_0() { return cUseKeyword_0; }
 
-		//javaClass=QualifiedName
+		//javaClass=[jvmtypes::JvmType|QualifiedName]
 		public Assignment getJavaClassAssignment_1() { return cJavaClassAssignment_1; }
 
+		//[jvmtypes::JvmType|QualifiedName]
+		public CrossReference getJavaClassJvmTypeCrossReference_1_0() { return cJavaClassJvmTypeCrossReference_1_0; }
+
 		//QualifiedName
-		public RuleCall getJavaClassQualifiedNameParserRuleCall_1_0() { return cJavaClassQualifiedNameParserRuleCall_1_0; }
+		public RuleCall getJavaClassJvmTypeQualifiedNameParserRuleCall_1_0_1() { return cJavaClassJvmTypeQualifiedNameParserRuleCall_1_0_1; }
 	}
 
 	public class ColorElements extends AbstractParserRuleElementFinder {
@@ -1536,6 +1572,8 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 	private final LabelStyleDefinitionElements pLabelStyleDefinition;
 	private final BorderStyleDefinitionElements pBorderStyleDefinition;
 	private final SPExpressionElements pSPExpression;
+	private final RequestExpressionElements pRequestExpression;
+	private final RequestOrCreateExpressionElements pRequestOrCreateExpression;
 	private final AcceleoExpressionElements pAcceleoExpression;
 	private final VarRefElements pVarRef;
 	private final FeatureRefElements pFeatureRef;
@@ -1575,6 +1613,8 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 		this.pLabelStyleDefinition = new LabelStyleDefinitionElements();
 		this.pBorderStyleDefinition = new BorderStyleDefinitionElements();
 		this.pSPExpression = new SPExpressionElements();
+		this.pRequestExpression = new RequestExpressionElements();
+		this.pRequestOrCreateExpression = new RequestOrCreateExpressionElements();
 		this.pAcceleoExpression = new AcceleoExpressionElements();
 		this.pVarRef = new VarRefElements();
 		this.pFeatureRef = new FeatureRefElements();
@@ -1658,7 +1698,7 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 
 	//TableElement:
 	//	recursive?="recursive"? "element" eClass=[ecore::EClass] "accessibleThrough" expression=SPExpression
-	//	(creatable?="creatable" ("via" createExpression=SPExpression)?)? ("{" subElements+=TableElement+ "}")?;
+	//	(creatable?="creatable" ("via" createExpression=RequestOrCreateExpression)?)? ("{" subElements+=TableElement+ "}")?;
 	public TableElementElements getTableElementAccess() {
 		return pTableElement;
 	}
@@ -1801,13 +1841,33 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//SPExpression:
-	//	AcceleoExpression | VarRef | FeatureRef | ServiceRef;
+	//	RequestExpression | RequestOrCreateExpression;
 	public SPExpressionElements getSPExpressionAccess() {
 		return pSPExpression;
 	}
 	
 	public ParserRule getSPExpressionRule() {
 		return getSPExpressionAccess().getRule();
+	}
+
+	//RequestExpression:
+	//	VarRef | FeatureRef;
+	public RequestExpressionElements getRequestExpressionAccess() {
+		return pRequestExpression;
+	}
+	
+	public ParserRule getRequestExpressionRule() {
+		return getRequestExpressionAccess().getRule();
+	}
+
+	//RequestOrCreateExpression:
+	//	AcceleoExpression | ServiceRef;
+	public RequestOrCreateExpressionElements getRequestOrCreateExpressionAccess() {
+		return pRequestOrCreateExpression;
+	}
+	
+	public ParserRule getRequestOrCreateExpressionRule() {
+		return getRequestOrCreateExpressionAccess().getRule();
 	}
 
 	//AcceleoExpression:
@@ -1861,7 +1921,7 @@ public class SPrototyperGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//JavaServiceClassReference:
-	//	"use" javaClass=QualifiedName;
+	//	"use" javaClass=[jvmtypes::JvmType|QualifiedName];
 	public JavaServiceClassReferenceElements getJavaServiceClassReferenceAccess() {
 		return pJavaServiceClassReference;
 	}

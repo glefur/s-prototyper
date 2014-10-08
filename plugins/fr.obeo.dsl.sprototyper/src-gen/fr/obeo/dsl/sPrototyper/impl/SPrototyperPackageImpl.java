@@ -17,6 +17,8 @@ import fr.obeo.dsl.sPrototyper.Node;
 import fr.obeo.dsl.sPrototyper.NodeStyleDefinition;
 import fr.obeo.dsl.sPrototyper.PreDefinedColor;
 import fr.obeo.dsl.sPrototyper.PreDefinedColorDefinition;
+import fr.obeo.dsl.sPrototyper.RequestExpression;
+import fr.obeo.dsl.sPrototyper.RequestOrCreateExpression;
 import fr.obeo.dsl.sPrototyper.SPDiagram;
 import fr.obeo.dsl.sPrototyper.SPExpression;
 import fr.obeo.dsl.sPrototyper.SPRepresentation;
@@ -38,6 +40,8 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+import org.eclipse.xtext.common.types.TypesPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -178,6 +182,20 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass requestExpressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass requestOrCreateExpressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass acceleoExpressionEClass = null;
 
   /**
@@ -283,6 +301,9 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
     SPrototyperPackageImpl theSPrototyperPackage = (SPrototyperPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof SPrototyperPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new SPrototyperPackageImpl());
 
     isInited = true;
+
+    // Initialize simple dependencies
+    TypesPackage.eINSTANCE.eClass();
 
     // Create package meta-data objects
     theSPrototyperPackage.createPackageContents();
@@ -1024,6 +1045,26 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getRequestExpression()
+  {
+    return requestExpressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getRequestOrCreateExpression()
+  {
+    return requestOrCreateExpressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getAcceleoExpression()
   {
     return acceleoExpressionEClass;
@@ -1094,9 +1135,9 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getJavaServiceClassReference_JavaClass()
+  public EReference getJavaServiceClassReference_JavaClass()
   {
-    return (EAttribute)javaServiceClassReferenceEClass.getEStructuralFeatures().get(0);
+    return (EReference)javaServiceClassReferenceEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1259,6 +1300,10 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
     spExpressionEClass = createEClass(SP_EXPRESSION);
     createEAttribute(spExpressionEClass, SP_EXPRESSION__VALUE);
 
+    requestExpressionEClass = createEClass(REQUEST_EXPRESSION);
+
+    requestOrCreateExpressionEClass = createEClass(REQUEST_OR_CREATE_EXPRESSION);
+
     acceleoExpressionEClass = createEClass(ACCELEO_EXPRESSION);
 
     varRefEClass = createEClass(VAR_REF);
@@ -1271,7 +1316,7 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
     createEReference(metamodelUsageEClass, METAMODEL_USAGE__USAGE);
 
     javaServiceClassReferenceEClass = createEClass(JAVA_SERVICE_CLASS_REFERENCE);
-    createEAttribute(javaServiceClassReferenceEClass, JAVA_SERVICE_CLASS_REFERENCE__JAVA_CLASS);
+    createEReference(javaServiceClassReferenceEClass, JAVA_SERVICE_CLASS_REFERENCE__JAVA_CLASS);
 
     colorEClass = createEClass(COLOR);
 
@@ -1306,6 +1351,9 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
     setNsPrefix(eNS_PREFIX);
     setNsURI(eNS_URI);
 
+    // Obtain other dependent packages
+    TypesPackage theTypesPackage = (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
+
     // Create type parameters
 
     // Set bounds for type parameters
@@ -1317,10 +1365,12 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
     nodeEClass.getESuperTypes().add(this.getDiagramElement());
     solidColorDefinitionEClass.getESuperTypes().add(this.getContainerColorDefinition());
     gradientColorDefinitionEClass.getESuperTypes().add(this.getContainerColorDefinition());
-    acceleoExpressionEClass.getESuperTypes().add(this.getSPExpression());
-    varRefEClass.getESuperTypes().add(this.getSPExpression());
-    featureRefEClass.getESuperTypes().add(this.getSPExpression());
-    serviceRefEClass.getESuperTypes().add(this.getSPExpression());
+    requestExpressionEClass.getESuperTypes().add(this.getSPExpression());
+    requestOrCreateExpressionEClass.getESuperTypes().add(this.getSPExpression());
+    acceleoExpressionEClass.getESuperTypes().add(this.getRequestOrCreateExpression());
+    varRefEClass.getESuperTypes().add(this.getRequestExpression());
+    featureRefEClass.getESuperTypes().add(this.getRequestExpression());
+    serviceRefEClass.getESuperTypes().add(this.getRequestOrCreateExpression());
     preDefinedColorDefinitionEClass.getESuperTypes().add(this.getColor());
 
     // Initialize classes and features; add operations and parameters
@@ -1353,7 +1403,7 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
     initEReference(getTableElement_EClass(), ecorePackage.getEClass(), null, "eClass", null, 0, 1, TableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTableElement_Expression(), this.getSPExpression(), null, "expression", null, 0, 1, TableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTableElement_Creatable(), ecorePackage.getEBoolean(), "creatable", null, 0, 1, TableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getTableElement_CreateExpression(), this.getSPExpression(), null, "createExpression", null, 0, 1, TableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTableElement_CreateExpression(), this.getRequestOrCreateExpression(), null, "createExpression", null, 0, 1, TableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTableElement_SubElements(), this.getTableElement(), null, "subElements", null, 0, -1, TableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(tablePropertyEClass, TableProperty.class, "TableProperty", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1414,6 +1464,10 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
     initEClass(spExpressionEClass, SPExpression.class, "SPExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getSPExpression_Value(), ecorePackage.getEString(), "value", null, 0, 1, SPExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(requestExpressionEClass, RequestExpression.class, "RequestExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(requestOrCreateExpressionEClass, RequestOrCreateExpression.class, "RequestOrCreateExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
     initEClass(acceleoExpressionEClass, AcceleoExpression.class, "AcceleoExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(varRefEClass, VarRef.class, "VarRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1426,7 +1480,7 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
     initEReference(getMetamodelUsage_Usage(), ecorePackage.getEPackage(), null, "usage", null, 0, 1, MetamodelUsage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(javaServiceClassReferenceEClass, JavaServiceClassReference.class, "JavaServiceClassReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getJavaServiceClassReference_JavaClass(), ecorePackage.getEString(), "javaClass", null, 0, 1, JavaServiceClassReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getJavaServiceClassReference_JavaClass(), theTypesPackage.getJvmType(), null, "javaClass", null, 0, 1, JavaServiceClassReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(colorEClass, Color.class, "Color", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

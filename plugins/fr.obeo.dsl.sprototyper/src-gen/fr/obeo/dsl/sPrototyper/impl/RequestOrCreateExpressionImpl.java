@@ -2,28 +2,28 @@
  */
 package fr.obeo.dsl.sPrototyper.impl;
 
-import fr.obeo.dsl.sPrototyper.AcceleoExpression;
+import fr.obeo.dsl.sPrototyper.RequestOrCreateExpression;
 import fr.obeo.dsl.sPrototyper.SPrototyperPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Acceleo Expression</b></em>'.
+ * An implementation of the model object '<em><b>Request Or Create Expression</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class AcceleoExpressionImpl extends RequestOrCreateExpressionImpl implements AcceleoExpression
+public class RequestOrCreateExpressionImpl extends SPExpressionImpl implements RequestOrCreateExpression
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected AcceleoExpressionImpl()
+  protected RequestOrCreateExpressionImpl()
   {
     super();
   }
@@ -36,7 +36,7 @@ public class AcceleoExpressionImpl extends RequestOrCreateExpressionImpl impleme
   @Override
   protected EClass eStaticClass()
   {
-    return SPrototyperPackage.Literals.ACCELEO_EXPRESSION;
+    return SPrototyperPackage.Literals.REQUEST_OR_CREATE_EXPRESSION;
   }
 
-} //AcceleoExpressionImpl
+} //RequestOrCreateExpressionImpl

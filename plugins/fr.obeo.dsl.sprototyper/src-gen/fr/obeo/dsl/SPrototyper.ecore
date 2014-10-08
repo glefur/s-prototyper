@@ -37,7 +37,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//SPExpression"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="creatable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="createExpression" eType="#//SPExpression"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="createExpression" eType="#//RequestOrCreateExpression"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="subElements" upperBound="-1"
         eType="#//TableElement" containment="true"/>
@@ -117,15 +117,17 @@
   <eClassifiers xsi:type="ecore:EClass" name="SPExpression">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AcceleoExpression" eSuperTypes="#//SPExpression"/>
-  <eClassifiers xsi:type="ecore:EClass" name="VarRef" eSuperTypes="#//SPExpression"/>
-  <eClassifiers xsi:type="ecore:EClass" name="FeatureRef" eSuperTypes="#//SPExpression"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ServiceRef" eSuperTypes="#//SPExpression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RequestExpression" eSuperTypes="#//SPExpression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RequestOrCreateExpression" eSuperTypes="#//SPExpression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AcceleoExpression" eSuperTypes="#//RequestOrCreateExpression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VarRef" eSuperTypes="#//RequestExpression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FeatureRef" eSuperTypes="#//RequestExpression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceRef" eSuperTypes="#//RequestOrCreateExpression"/>
   <eClassifiers xsi:type="ecore:EClass" name="MetamodelUsage">
     <eStructuralFeatures xsi:type="ecore:EReference" name="usage" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EPackage"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="JavaServiceClassReference">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="javaClass" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="javaClass" eType="ecore:EClass platform:/resource/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Color"/>
   <eClassifiers xsi:type="ecore:EClass" name="PreDefinedColorDefinition" eSuperTypes="#//Color">

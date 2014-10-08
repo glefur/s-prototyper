@@ -42,6 +42,8 @@ public class SPrototyperParser extends AbstractContentAssistParser {
 					put(grammarAccess.getContainerTypeAccess().getAlternatives(), "rule__ContainerType__Alternatives");
 					put(grammarAccess.getContainerColorDefinitionAccess().getAlternatives(), "rule__ContainerColorDefinition__Alternatives");
 					put(grammarAccess.getSPExpressionAccess().getAlternatives(), "rule__SPExpression__Alternatives");
+					put(grammarAccess.getRequestExpressionAccess().getAlternatives(), "rule__RequestExpression__Alternatives");
+					put(grammarAccess.getRequestOrCreateExpressionAccess().getAlternatives(), "rule__RequestOrCreateExpression__Alternatives");
 					put(grammarAccess.getPreDefinedColorAccess().getAlternatives(), "rule__PreDefinedColor__Alternatives");
 					put(grammarAccess.getSPrototyperAccess().getGroup(), "rule__SPrototyper__Group__0");
 					put(grammarAccess.getSPrototyperAccess().getGroup_3(), "rule__SPrototyper__Group_3__0");

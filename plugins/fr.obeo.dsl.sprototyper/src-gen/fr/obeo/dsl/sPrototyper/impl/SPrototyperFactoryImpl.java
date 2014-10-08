@@ -83,6 +83,8 @@ public class SPrototyperFactoryImpl extends EFactoryImpl implements SPrototyperF
       case SPrototyperPackage.LABEL_STYLE_DEFINITION: return createLabelStyleDefinition();
       case SPrototyperPackage.BORDER_STYLE_DEFINITION: return createBorderStyleDefinition();
       case SPrototyperPackage.SP_EXPRESSION: return createSPExpression();
+      case SPrototyperPackage.REQUEST_EXPRESSION: return createRequestExpression();
+      case SPrototyperPackage.REQUEST_OR_CREATE_EXPRESSION: return createRequestOrCreateExpression();
       case SPrototyperPackage.ACCELEO_EXPRESSION: return createAcceleoExpression();
       case SPrototyperPackage.VAR_REF: return createVarRef();
       case SPrototyperPackage.FEATURE_REF: return createFeatureRef();
@@ -326,6 +328,28 @@ public class SPrototyperFactoryImpl extends EFactoryImpl implements SPrototyperF
   {
     SPExpressionImpl spExpression = new SPExpressionImpl();
     return spExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public RequestExpression createRequestExpression()
+  {
+    RequestExpressionImpl requestExpression = new RequestExpressionImpl();
+    return requestExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public RequestOrCreateExpression createRequestOrCreateExpression()
+  {
+    RequestOrCreateExpressionImpl requestOrCreateExpression = new RequestOrCreateExpressionImpl();
+    return requestOrCreateExpression;
   }
 
   /**

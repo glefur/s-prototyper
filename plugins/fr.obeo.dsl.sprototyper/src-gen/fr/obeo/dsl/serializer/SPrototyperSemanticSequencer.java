@@ -47,6 +47,7 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 		if(semanticObject.eClass().getEPackage() == SPrototyperPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
 			case SPrototyperPackage.ACCELEO_EXPRESSION:
 				if(context == grammarAccess.getAcceleoExpressionRule() ||
+				   context == grammarAccess.getRequestOrCreateExpressionRule() ||
 				   context == grammarAccess.getSPExpressionRule()) {
 					sequence_AcceleoExpression(context, (AcceleoExpression) semanticObject); 
 					return; 
@@ -73,6 +74,7 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 				else break;
 			case SPrototyperPackage.FEATURE_REF:
 				if(context == grammarAccess.getFeatureRefRule() ||
+				   context == grammarAccess.getRequestExpressionRule() ||
 				   context == grammarAccess.getSPExpressionRule()) {
 					sequence_FeatureRef(context, (FeatureRef) semanticObject); 
 					return; 
@@ -150,7 +152,8 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 				}
 				else break;
 			case SPrototyperPackage.SERVICE_REF:
-				if(context == grammarAccess.getSPExpressionRule() ||
+				if(context == grammarAccess.getRequestOrCreateExpressionRule() ||
+				   context == grammarAccess.getSPExpressionRule() ||
 				   context == grammarAccess.getServiceRefRule()) {
 					sequence_ServiceRef(context, (ServiceRef) semanticObject); 
 					return; 
@@ -176,7 +179,8 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 				}
 				else break;
 			case SPrototyperPackage.VAR_REF:
-				if(context == grammarAccess.getSPExpressionRule() ||
+				if(context == grammarAccess.getRequestExpressionRule() ||
+				   context == grammarAccess.getSPExpressionRule() ||
 				   context == grammarAccess.getVarRefRule()) {
 					sequence_VarRef(context, (VarRef) semanticObject); 
 					return; 
@@ -275,7 +279,7 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 	
 	/**
 	 * Constraint:
-	 *     javaClass=QualifiedName
+	 *     javaClass=[JvmType|QualifiedName]
 	 */
 	protected void sequence_JavaServiceClassReference(EObject context, JavaServiceClassReference semanticObject) {
 		if(errorAcceptor != null) {
@@ -284,7 +288,7 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getJavaServiceClassReferenceAccess().getJavaClassQualifiedNameParserRuleCall_1_0(), semanticObject.getJavaClass());
+		feeder.accept(grammarAccess.getJavaServiceClassReferenceAccess().getJavaClassJvmTypeQualifiedNameParserRuleCall_1_0_1(), semanticObject.getJavaClass());
 		feeder.finish();
 	}
 	
@@ -437,7 +441,7 @@ public class SPrototyperSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *         recursive?='recursive'? 
 	 *         eClass=[EClass|ID] 
 	 *         expression=SPExpression 
-	 *         (creatable?='creatable' createExpression=SPExpression?)? 
+	 *         (creatable?='creatable' createExpression=RequestOrCreateExpression?)? 
 	 *         subElements+=TableElement*
 	 *     )
 	 */

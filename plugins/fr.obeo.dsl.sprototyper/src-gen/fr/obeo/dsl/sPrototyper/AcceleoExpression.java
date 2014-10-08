@@ -13,6 +13,6 @@ package fr.obeo.dsl.sPrototyper;
  * @model
  * @generated
  */
-public interface AcceleoExpression extends SPExpression
+public interface AcceleoExpression extends RequestOrCreateExpression
 {
 } // AcceleoExpression

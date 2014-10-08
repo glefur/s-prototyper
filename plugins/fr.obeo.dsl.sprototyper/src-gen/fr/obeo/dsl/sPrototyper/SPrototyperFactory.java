@@ -185,6 +185,24 @@ public interface SPrototyperFactory extends EFactory
   SPExpression createSPExpression();
 
   /**
+   * Returns a new object of class '<em>Request Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Request Expression</em>'.
+   * @generated
+   */
+  RequestExpression createRequestExpression();
+
+  /**
+   * Returns a new object of class '<em>Request Or Create Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Request Or Create Expression</em>'.
+   * @generated
+   */
+  RequestOrCreateExpression createRequestOrCreateExpression();
+
+  /**
    * Returns a new object of class '<em>Acceleo Expression</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

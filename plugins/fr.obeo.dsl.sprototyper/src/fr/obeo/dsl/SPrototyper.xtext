@@ -3,6 +3,7 @@ grammar fr.obeo.dsl.SPrototyper with org.eclipse.xtext.common.Terminals
 generate sPrototyper "http://www.obeo.fr/dsl/SPrototyper"
 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+import "http://www.eclipse.org/xtext/common/JavaVMTypes" as jvmtypes
 
 SPrototyper:
 	'proto' name=ID '{'
@@ -143,7 +144,7 @@ MetamodelUsage:
 ;
 
 JavaServiceClassReference:
-	'use' javaClass=QualifiedName
+	'use' javaClass=[jvmtypes::JvmType | QualifiedName]
 ;
 
 Color:

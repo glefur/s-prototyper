@@ -143,12 +143,12 @@ public interface TableElement extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Create Expression</em>' containment reference.
-   * @see #setCreateExpression(SPExpression)
+   * @see #setCreateExpression(RequestOrCreateExpression)
    * @see fr.obeo.dsl.sPrototyper.SPrototyperPackage#getTableElement_CreateExpression()
    * @model containment="true"
    * @generated
    */
-  SPExpression getCreateExpression();
+  RequestOrCreateExpression getCreateExpression();
 
   /**
    * Sets the value of the '{@link fr.obeo.dsl.sPrototyper.TableElement#getCreateExpression <em>Create Expression</em>}' containment reference.
@@ -158,7 +158,7 @@ public interface TableElement extends EObject
    * @see #getCreateExpression()
    * @generated
    */
-  void setCreateExpression(SPExpression value);
+  void setCreateExpression(RequestOrCreateExpression value);
 
   /**
    * Returns the value of the '<em><b>Sub Elements</b></em>' containment reference list.

@@ -204,10 +204,27 @@ public class SPrototyperSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case SPrototyperPackage.REQUEST_EXPRESSION:
+      {
+        RequestExpression requestExpression = (RequestExpression)theEObject;
+        T result = caseRequestExpression(requestExpression);
+        if (result == null) result = caseSPExpression(requestExpression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SPrototyperPackage.REQUEST_OR_CREATE_EXPRESSION:
+      {
+        RequestOrCreateExpression requestOrCreateExpression = (RequestOrCreateExpression)theEObject;
+        T result = caseRequestOrCreateExpression(requestOrCreateExpression);
+        if (result == null) result = caseSPExpression(requestOrCreateExpression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case SPrototyperPackage.ACCELEO_EXPRESSION:
       {
         AcceleoExpression acceleoExpression = (AcceleoExpression)theEObject;
         T result = caseAcceleoExpression(acceleoExpression);
+        if (result == null) result = caseRequestOrCreateExpression(acceleoExpression);
         if (result == null) result = caseSPExpression(acceleoExpression);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -216,6 +233,7 @@ public class SPrototyperSwitch<T> extends Switch<T>
       {
         VarRef varRef = (VarRef)theEObject;
         T result = caseVarRef(varRef);
+        if (result == null) result = caseRequestExpression(varRef);
         if (result == null) result = caseSPExpression(varRef);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -224,6 +242,7 @@ public class SPrototyperSwitch<T> extends Switch<T>
       {
         FeatureRef featureRef = (FeatureRef)theEObject;
         T result = caseFeatureRef(featureRef);
+        if (result == null) result = caseRequestExpression(featureRef);
         if (result == null) result = caseSPExpression(featureRef);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -232,6 +251,7 @@ public class SPrototyperSwitch<T> extends Switch<T>
       {
         ServiceRef serviceRef = (ServiceRef)theEObject;
         T result = caseServiceRef(serviceRef);
+        if (result == null) result = caseRequestOrCreateExpression(serviceRef);
         if (result == null) result = caseSPExpression(serviceRef);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -553,6 +573,38 @@ public class SPrototyperSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseSPExpression(SPExpression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Request Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Request Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRequestExpression(RequestExpression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Request Or Create Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Request Or Create Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRequestOrCreateExpression(RequestOrCreateExpression object)
   {
     return null;
   }

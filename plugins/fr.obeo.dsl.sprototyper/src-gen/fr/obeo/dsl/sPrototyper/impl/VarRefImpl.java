@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class VarRefImpl extends SPExpressionImpl implements VarRef
+public class VarRefImpl extends RequestExpressionImpl implements VarRef
 {
   /**
    * <!-- begin-user-doc -->

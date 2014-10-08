@@ -13,6 +13,6 @@ package fr.obeo.dsl.sPrototyper;
  * @model
  * @generated
  */
-public interface FeatureRef extends SPExpression
+public interface FeatureRef extends RequestExpression
 {
 } // FeatureRef

@@ -165,6 +165,16 @@ public class SPrototyperAdapterFactory extends AdapterFactoryImpl
         return createSPExpressionAdapter();
       }
       @Override
+      public Adapter caseRequestExpression(RequestExpression object)
+      {
+        return createRequestExpressionAdapter();
+      }
+      @Override
+      public Adapter caseRequestOrCreateExpression(RequestOrCreateExpression object)
+      {
+        return createRequestOrCreateExpressionAdapter();
+      }
+      @Override
       public Adapter caseAcceleoExpression(AcceleoExpression object)
       {
         return createAcceleoExpressionAdapter();
@@ -492,6 +502,36 @@ public class SPrototyperAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createSPExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.obeo.dsl.sPrototyper.RequestExpression <em>Request Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.obeo.dsl.sPrototyper.RequestExpression
+   * @generated
+   */
+  public Adapter createRequestExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.obeo.dsl.sPrototyper.RequestOrCreateExpression <em>Request Or Create Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.obeo.dsl.sPrototyper.RequestOrCreateExpression
+   * @generated
+   */
+  public Adapter createRequestOrCreateExpressionAdapter()
   {
     return null;
   }
