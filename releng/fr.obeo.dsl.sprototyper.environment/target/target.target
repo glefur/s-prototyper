@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde?>
+<!-- generated with https://github.com/mbarbero/fr.obeo.releng.targetplatform -->
+<target name="S-Prototyper" sequenceNumber="1413211376">
+  <locations>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.sdk" version="4.2.2.v201302041200"/>
+      <unit id="org.eclipse.jdt.feature.group" version="3.8.2.v20130116-090414-8-8nFu3FNOfwKLRuqgXKIy9z0I83"/>
+      <repository location="http://download.eclipse.org/releases/juno"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="fr.obeo.dsl.viewpoint.specifier.ide.ui.feature.group" version="6.8.1.201401161816"/>
+      <unit id="fr.obeo.mda.license.feature.group" version="1.0.0.201104040800"/>
+      <repository location="http://www.obeo.fr/download/release/designer/6.2/latest/juno3/update/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.xtext.sdk.feature.group" version="2.7.2.v201409160908"/>
+      <repository location="http://download.eclipse.org/modeling/tmf/xtext/updates/releases/maintenance/R201409160908/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.emf.sdk.feature.group" version="2.10.0.v20140519-0339"/>
+      <repository location="http://download.eclipse.org/modeling/emf/emf/updates/2.10/core/R201405190339/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.emf.mwe.sdk.feature.group" version="1.3.4.v201409021027"/>
+      <repository location="http://download.eclipse.org/modeling/emft/mwe/updates/releases/R201409021027/mwe/"/>
+    </location>
+  </locations>
+</target>

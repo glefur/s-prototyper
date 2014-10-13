@@ -1,0 +1,26 @@
+target "S-Prototyper"
+
+with requirements source
+
+location "http://download.eclipse.org/releases/juno" {
+	org.eclipse.sdk
+	org.eclipse.jdt.feature.group
+}
+
+location "http://www.obeo.fr/download/release/designer/6.2/latest/juno3/update/" {
+	fr.obeo.dsl.viewpoint.specifier.ide.ui.feature.group
+	fr.obeo.mda.license.feature.group
+}
+
+// composite root = http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/
+location "http://download.eclipse.org/modeling/tmf/xtext/updates/releases/maintenance/R201409160908/" {
+	org.eclipse.xtext.sdk.feature.group [2.7.2,2.7.3)
+}
+
+location "http://download.eclipse.org/modeling/emf/emf/updates/2.10/core/R201405190339/" {
+	org.eclipse.emf.sdk.feature.group [2.10.0,2.10.1)
+}
+
+location "http://download.eclipse.org/modeling/emft/mwe/updates/releases/R201409021027/mwe/" {
+	org.eclipse.emf.mwe.sdk.feature.group [1.3.4,1.3.5)
+}
