@@ -8,7 +8,7 @@ location "http://download.eclipse.org/releases/juno" {
 }
 
 location "http://www.obeo.fr/download/release/designer/6.2/latest/juno3/update/" {
-	fr.obeo.dsl.viewpoint.specifier.ide.ui.feature.group
+	fr.obeo.dsl.feature.designer.architect.feature.group
 	fr.obeo.mda.license.feature.group
 }
 
@@ -17,10 +17,15 @@ location "http://download.eclipse.org/modeling/tmf/xtext/updates/releases/mainte
 	org.eclipse.xtext.sdk.feature.group [2.7.2,2.7.3)
 }
 
+location "http://download.itemis.de/updates/releases/2.1.1" {
+	de.itemis.xtext.antlr.sdk.feature.group
+}
+
 location "http://download.eclipse.org/modeling/emf/emf/updates/2.10/core/R201405190339/" {
 	org.eclipse.emf.sdk.feature.group [2.10.0,2.10.1)
 }
 
-location "http://download.eclipse.org/modeling/emft/mwe/updates/releases/R201409021027/mwe/" {
-	org.eclipse.emf.mwe.sdk.feature.group [1.3.4,1.3.5)
-}
+location "http://download.eclipse.org/modeling/emft/mwe/updates/releases/R201409021027/mwe/"
+location "http://download.eclipse.org/modeling/emft/mwe/updates/releases/R201409021051/mwe2lang/"
+location "http://download.eclipse.org/modeling/m2t/xpand/updates/releases/R201406030414"
+
