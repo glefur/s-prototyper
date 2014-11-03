@@ -1218,7 +1218,7 @@ public interface SPrototyperPackage extends EPackage
   int JAVA_SERVICE_CLASS_REFERENCE = 25;
 
   /**
-   * The feature id for the '<em><b>Java Class</b></em>' reference.
+   * The feature id for the '<em><b>Java Class</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -2159,10 +2159,10 @@ public interface SPrototyperPackage extends EPackage
   EClass getJavaServiceClassReference();
 
   /**
-   * Returns the meta object for the reference '{@link fr.obeo.dsl.sPrototyper.JavaServiceClassReference#getJavaClass <em>Java Class</em>}'.
+   * Returns the meta object for the containment reference '{@link fr.obeo.dsl.sPrototyper.JavaServiceClassReference#getJavaClass <em>Java Class</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Java Class</em>'.
+   * @return the meta object for the containment reference '<em>Java Class</em>'.
    * @see fr.obeo.dsl.sPrototyper.JavaServiceClassReference#getJavaClass()
    * @see #getJavaServiceClassReference()
    * @generated
@@ -2934,7 +2934,7 @@ public interface SPrototyperPackage extends EPackage
     EClass JAVA_SERVICE_CLASS_REFERENCE = eINSTANCE.getJavaServiceClassReference();
 
     /**
-     * The meta object literal for the '<em><b>Java Class</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Java Class</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated

@@ -34,4 +34,5 @@ Export-Package: fr.obeo.dsl,
  fr.obeo.dsl.validation,
  fr.obeo.dsl.scoping,
  fr.obeo.dsl.generator,
- fr.obeo.dsl.formatting
+ fr.obeo.dsl.formatting,
+ fr.obeo.dsl.jvmmodel

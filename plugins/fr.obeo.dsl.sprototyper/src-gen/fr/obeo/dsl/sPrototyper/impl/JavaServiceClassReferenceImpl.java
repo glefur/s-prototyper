@@ -6,6 +6,7 @@ import fr.obeo.dsl.sPrototyper.JavaServiceClassReference;
 import fr.obeo.dsl.sPrototyper.SPrototyperPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -13,7 +14,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.xtext.common.types.JvmType;
+import org.eclipse.xtext.common.types.JvmTypeReference;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,14 +32,14 @@ import org.eclipse.xtext.common.types.JvmType;
 public class JavaServiceClassReferenceImpl extends MinimalEObjectImpl.Container implements JavaServiceClassReference
 {
   /**
-   * The cached value of the '{@link #getJavaClass() <em>Java Class</em>}' reference.
+   * The cached value of the '{@link #getJavaClass() <em>Java Class</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getJavaClass()
    * @generated
    * @ordered
    */
-  protected JvmType javaClass;
+  protected JvmTypeReference javaClass;
 
   /**
    * <!-- begin-user-doc -->
@@ -66,27 +67,7 @@ public class JavaServiceClassReferenceImpl extends MinimalEObjectImpl.Container 
    * <!-- end-user-doc -->
    * @generated
    */
-  public JvmType getJavaClass()
-  {
-    if (javaClass != null && javaClass.eIsProxy())
-    {
-      InternalEObject oldJavaClass = (InternalEObject)javaClass;
-      javaClass = (JvmType)eResolveProxy(oldJavaClass);
-      if (javaClass != oldJavaClass)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, SPrototyperPackage.JAVA_SERVICE_CLASS_REFERENCE__JAVA_CLASS, oldJavaClass, javaClass));
-      }
-    }
-    return javaClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public JvmType basicGetJavaClass()
+  public JvmTypeReference getJavaClass()
   {
     return javaClass;
   }
@@ -96,12 +77,53 @@ public class JavaServiceClassReferenceImpl extends MinimalEObjectImpl.Container 
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setJavaClass(JvmType newJavaClass)
+  public NotificationChain basicSetJavaClass(JvmTypeReference newJavaClass, NotificationChain msgs)
   {
-    JvmType oldJavaClass = javaClass;
+    JvmTypeReference oldJavaClass = javaClass;
     javaClass = newJavaClass;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SPrototyperPackage.JAVA_SERVICE_CLASS_REFERENCE__JAVA_CLASS, oldJavaClass, javaClass));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SPrototyperPackage.JAVA_SERVICE_CLASS_REFERENCE__JAVA_CLASS, oldJavaClass, newJavaClass);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setJavaClass(JvmTypeReference newJavaClass)
+  {
+    if (newJavaClass != javaClass)
+    {
+      NotificationChain msgs = null;
+      if (javaClass != null)
+        msgs = ((InternalEObject)javaClass).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SPrototyperPackage.JAVA_SERVICE_CLASS_REFERENCE__JAVA_CLASS, null, msgs);
+      if (newJavaClass != null)
+        msgs = ((InternalEObject)newJavaClass).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SPrototyperPackage.JAVA_SERVICE_CLASS_REFERENCE__JAVA_CLASS, null, msgs);
+      msgs = basicSetJavaClass(newJavaClass, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SPrototyperPackage.JAVA_SERVICE_CLASS_REFERENCE__JAVA_CLASS, newJavaClass, newJavaClass));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case SPrototyperPackage.JAVA_SERVICE_CLASS_REFERENCE__JAVA_CLASS:
+        return basicSetJavaClass(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -115,8 +137,7 @@ public class JavaServiceClassReferenceImpl extends MinimalEObjectImpl.Container 
     switch (featureID)
     {
       case SPrototyperPackage.JAVA_SERVICE_CLASS_REFERENCE__JAVA_CLASS:
-        if (resolve) return getJavaClass();
-        return basicGetJavaClass();
+        return getJavaClass();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -132,7 +153,7 @@ public class JavaServiceClassReferenceImpl extends MinimalEObjectImpl.Container 
     switch (featureID)
     {
       case SPrototyperPackage.JAVA_SERVICE_CLASS_REFERENCE__JAVA_CLASS:
-        setJavaClass((JvmType)newValue);
+        setJavaClass((JvmTypeReference)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -149,7 +170,7 @@ public class JavaServiceClassReferenceImpl extends MinimalEObjectImpl.Container 
     switch (featureID)
     {
       case SPrototyperPackage.JAVA_SERVICE_CLASS_REFERENCE__JAVA_CLASS:
-        setJavaClass((JvmType)null);
+        setJavaClass((JvmTypeReference)null);
         return;
     }
     super.eUnset(featureID);

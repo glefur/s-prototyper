@@ -127,7 +127,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="usage" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EPackage"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="JavaServiceClassReference">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="javaClass" eType="ecore:EClass platform:/resource/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="javaClass" eType="ecore:EClass platform:/resource/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmTypeReference"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Color"/>
   <eClassifiers xsi:type="ecore:EClass" name="PreDefinedColorDefinition" eSuperTypes="#//Color">
