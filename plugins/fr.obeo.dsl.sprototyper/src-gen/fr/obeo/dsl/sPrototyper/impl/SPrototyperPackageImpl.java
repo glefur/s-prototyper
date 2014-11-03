@@ -1480,7 +1480,7 @@ public class SPrototyperPackageImpl extends EPackageImpl implements SPrototyperP
     initEReference(getMetamodelUsage_Usage(), ecorePackage.getEPackage(), null, "usage", null, 0, 1, MetamodelUsage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(javaServiceClassReferenceEClass, JavaServiceClassReference.class, "JavaServiceClassReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getJavaServiceClassReference_JavaClass(), theTypesPackage.getJvmType(), null, "javaClass", null, 0, 1, JavaServiceClassReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getJavaServiceClassReference_JavaClass(), theTypesPackage.getJvmTypeReference(), null, "javaClass", null, 0, 1, JavaServiceClassReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(colorEClass, Color.class, "Color", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

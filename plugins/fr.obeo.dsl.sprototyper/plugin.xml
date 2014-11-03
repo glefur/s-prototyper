@@ -7,9 +7,10 @@
     <package 
        uri = "http://www.obeo.fr/dsl/SPrototyper" 
        class = "fr.obeo.dsl.sPrototyper.SPrototyperPackage"
-       genModel = "fr/obeo/dsl/SPrototyper.genmodel" /> 
+       genModel = "model/generated/SPrototyper.genmodel" /> 
 	
   </extension>
+
 
 
 

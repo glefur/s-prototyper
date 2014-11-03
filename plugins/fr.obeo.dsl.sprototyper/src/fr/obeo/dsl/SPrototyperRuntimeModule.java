@@ -3,15 +3,29 @@
  */
 package fr.obeo.dsl;
 
+import org.eclipse.xtext.linking.ILinkingService;
 import org.eclipse.xtext.naming.IQualifiedNameProvider;
 
+import com.google.inject.name.Names;
+
+import fr.obeo.dsl.linking.SPrototyperLinkingService;
 import fr.obeo.dsl.naming.SPrototyperQualifiedNameProvider;
+import fr.obeo.dsl.scoping.SPrototyperScopeProvider;
 
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
  */
 public class SPrototyperRuntimeModule extends fr.obeo.dsl.AbstractSPrototyperRuntimeModule {
 
+	@Override
+	public Class<? extends ILinkingService> bindILinkingService() {
+		return SPrototyperLinkingService.class;
+	}
+	
+	public void configureIScopeProviderDelegate(com.google.inject.Binder binder) {
+		binder.bind(org.eclipse.xtext.scoping.IScopeProvider.class).annotatedWith(Names.named(org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider.NAMED_DELEGATE)).to(SPrototyperScopeProvider.class);
+	}
+	
 	@Override
 	public Class<? extends IQualifiedNameProvider> bindIQualifiedNameProvider() {
 		return SPrototyperQualifiedNameProvider.class;

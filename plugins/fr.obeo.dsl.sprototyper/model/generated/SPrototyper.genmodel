@@ -134,7 +134,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//MetamodelUsage/usage"/>
     </genClasses>
     <genClasses ecoreClass="SPrototyper.ecore#//JavaServiceClassReference">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//JavaServiceClassReference/javaClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SPrototyper.ecore#//JavaServiceClassReference/javaClass"/>
     </genClasses>
     <genClasses ecoreClass="SPrototyper.ecore#//Color"/>
     <genClasses ecoreClass="SPrototyper.ecore#//PreDefinedColorDefinition">
