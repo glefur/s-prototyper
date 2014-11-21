@@ -40,7 +40,7 @@ public class SPrototyperLinkingService extends DefaultLinkingService {
 		if (nsUri == null)
 			return Collections.emptyList();
 		if (EPackage.Registry.INSTANCE.getEPackage(nsUri) != null) {
-			return Lists.newArrayList(EPackage.Registry.INSTANCE.getEPackage(nsUri));
+			return Lists.newArrayList((EObject)EPackage.Registry.INSTANCE.getEPackage(nsUri));
 		}
 		return Collections.emptyList();
 	}

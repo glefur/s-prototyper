@@ -16,7 +16,6 @@ import org.eclipse.xtext.naming.IQualifiedNameProvider;
 import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.Scopes;
 import org.eclipse.xtext.xbase.scoping.XImportSectionNamespaceScopeProvider;
-import org.eclipse.xtext.xbase.scoping.XbaseImportedNamespaceScopeProvider;
 
 import com.google.common.collect.Lists;
 import com.google.inject.Inject;
@@ -82,20 +81,32 @@ public class SPrototyperScopeProvider extends XImportSectionNamespaceScopeProvid
 	}
 	
 	public IScope scope_TableElement_eClass(TableElement context, EReference ref) {
-		SPTable table = (SPTable) context.eContainer();
-		EList<MetamodelUsage> usages = table.getUsages();
-		List<EClass> accessibleClasses = Lists.newArrayList();
-		for (MetamodelUsage metamodelUsage : usages) {
-			EPackage usage = metamodelUsage.getUsage();
-			if (usage != null) {
-				for (EClassifier eClassifier : usage.getEClassifiers()) {
-					if (eClassifier instanceof EClass) {
-						accessibleClasses.add((EClass) eClassifier);
+		SPTable table = null;
+		EObject container = context.eContainer();
+		while (table == null && container != null) {
+			if (container instanceof SPTable) {
+				table = (SPTable) container;
+			} else {
+				container = container.eContainer();
+			}
+		}
+		if (table != null){
+			EList<MetamodelUsage> usages = table.getUsages();
+			List<EClass> accessibleClasses = Lists.newArrayList();
+			for (MetamodelUsage metamodelUsage : usages) {
+				EPackage usage = metamodelUsage.getUsage();
+				if (usage != null) {
+					for (EClassifier eClassifier : usage.getEClassifiers()) {
+						if (eClassifier instanceof EClass) {
+							accessibleClasses.add((EClass) eClassifier);
+						}
 					}
 				}
 			}
+			return Scopes.scopeFor(accessibleClasses);
+		} else {
+			return IScope.NULLSCOPE;
 		}
-		return Scopes.scopeFor(accessibleClasses);
 	}
 		
 }

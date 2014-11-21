@@ -10,10 +10,6 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
-import org.eclipse.jdt.core.IJavaModel;
-import org.eclipse.jdt.core.IJavaProject;
-import org.eclipse.jdt.core.JavaCore;
-import org.eclipse.jdt.internal.core.JavaModel;
 import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.viewers.ISelection;
@@ -22,17 +18,11 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.IActionDelegate;
 import org.eclipse.ui.IObjectActionDelegate;
 import org.eclipse.ui.IWorkbenchPart;
-import org.eclipse.xtext.common.types.access.jdt.IJavaProjectProvider;
 import org.eclipse.xtext.resource.XtextResourceSet;
 import org.eclipse.xtext.ui.resource.IResourceSetProvider;
-import org.osgi.framework.Bundle;
-import org.osgi.framework.FrameworkUtil;
-import org.osgi.framework.wiring.BundleWiring;
 
 import com.google.inject.Inject;
-import com.google.inject.Injector;
 
-import fr.obeo.dsl.SPrototyperStandaloneSetup;
 import fr.obeo.dsl.sPrototyper.SPrototyper;
 import fr.obeo.dsl.sprototyper.initializer.core.Initializer;
 import fr.obeo.dsl.sprototyper.initializer.core.services.NamingService;
@@ -43,10 +33,10 @@ public class InitializerAction implements IObjectActionDelegate {
 
 	private Shell shell;
 	private EditingDomain editingDomain;
-	
+
 	@Inject
 	private IResourceSetProvider resourceSetProvider;
-	
+
 	private SPrototyper sPrototyper;
 
 	/**
@@ -99,49 +89,19 @@ public class InitializerAction implements IObjectActionDelegate {
 	 * @see IActionDelegate#selectionChanged(IAction, ISelection)
 	 */
 	public void selectionChanged(IAction action, ISelection selection) {
-//		try {
-			if (selection instanceof IStructuredSelection) {
-				IFile selectedFile = (IFile) ((IStructuredSelection) selection).getFirstElement();
-				URI uri = URI.createPlatformResourceURI(selectedFile.getFullPath().toString(), true);
-				new org.eclipse.emf.mwe.utils.StandaloneSetup().setPlatformUri(selectedFile.getWorkspace().getRoot().getLocation().toOSString());
-				SPrototyperStandaloneSetup sPrototyperStandaloneSetup = new SPrototyperStandaloneSetup();
-				Injector injector = sPrototyperStandaloneSetup.createInjectorAndDoEMFRegistration();
-				IProject project = selectedFile.getProject();
-				XtextResourceSet resourceSet = (XtextResourceSet) resourceSetProvider.get(project);
-//				ClassLoader classLoader;
-//				classLoader = getClassLoader(sPrototyperStandaloneSetup);
-				
-				///Test
-//				IJvmTypeProvider.Factory jdtTPF = new JdtTypeProviderFactory(new XtextResourceSetBasedProjectProvider());
-//				
-//				///
-//				IJvmTypeProvider.Factory classpathTypeProviderFactory = new ClasspathTypeProviderFactory(classLoader);
-//				IJvmTypeProvider createTypeProvider = jdtTPF.createTypeProvider(resourceSet);
-				IJavaProject iJavaProject = JavaCore.create(project);
-				resourceSet.setClasspathURIContext(iJavaProject);
-//				resourceSet.addLoadOption(XtextResource.OPTION_RESOLVE_ALL, Boolean.TRUE);
-				Resource resource = resourceSet.getResource(uri, true);
-				//			Resource resource = getEditingDomain().getResourceSet().getResource(uri, true);
-				if (resource.getContents() != null && !resource.getContents().isEmpty()) {
-					if (resource.getContents().get(0) instanceof SPrototyper) {
-						sPrototyper = (SPrototyper) resource.getContents().get(0);
-					}
+		if (selection instanceof IStructuredSelection) {
+			IFile selectedFile = (IFile) ((IStructuredSelection) selection).getFirstElement();
+			URI uri = URI.createPlatformResourceURI(selectedFile.getFullPath().toString(), true);
+			new org.eclipse.emf.mwe.utils.StandaloneSetup().setPlatformUri(selectedFile.getWorkspace().getRoot().getLocation().toOSString());
+			IProject project = selectedFile.getProject();
+			XtextResourceSet resourceSet = (XtextResourceSet) resourceSetProvider.get(project);
+			Resource resource = resourceSet.getResource(uri, true);
+			if (resource.getContents() != null && !resource.getContents().isEmpty()) {
+				if (resource.getContents().get(0) instanceof SPrototyper) {
+					sPrototyper = (SPrototyper) resource.getContents().get(0);
 				}
 			}
-//		} catch (ClassNotFoundException e) {
-//			e.printStackTrace();
-//		}
+		}
 	}
 
-	private ClassLoader getClassLoader(Object source) throws ClassNotFoundException {
-		//		Bundle bundle = Activator.getDefault().getBundle();
-		//		// Activator is the activator class of the bundle containing the MyDsl file.
-		//		/*
-		//		 * Where plug-in is the activator class of the bundle containing the
-		//		 * MyDsl file.
-		//		 */
-		Bundle bundle = FrameworkUtil.getBundle(source.getClass());
-		final BundleWiring adapt = bundle.adapt(BundleWiring.class);
-		return adapt.getClassLoader();
-	}
 }
